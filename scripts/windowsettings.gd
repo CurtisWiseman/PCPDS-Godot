@@ -35,6 +35,7 @@ func fullscreen():
 func screensetting():
 	usersettings.open("user://usersettings.tres", File.READ_WRITE) # Open the usersettings file for reading and writing.
 	settings = usersettings.get_as_text() # Store the file as a string in settings variable.
+	usersettings.close() # Close user settings.
 	
 	# If no default screen size is set then set it to windowed.
 	if settings.find('screen:', 0) == -1:
@@ -53,5 +54,3 @@ func screensetting():
 	elif screen == 'f':
 		fullscreen()
 		return
-		
-	usersettings.close() # Close user settings.
