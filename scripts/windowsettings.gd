@@ -21,6 +21,7 @@ func borderless():
 	# I DONT KNOW WHY RESETING IT TO GLOBAL.SIZE FIRST FIXES IT BUT DON'T TOUCH IT!
 	OS.window_size = global.size # Needed for some stupid reason.
 	
+	OS.window_position = Vector2(0,0) # Make sure window starts at top-left corner.
 	OS.window_size = OS.get_screen_size() # Set the window size to the screen size.
 
 

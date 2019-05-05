@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://mainmenu/fullscreenoption.gd" type="Script" id=1]
+[ext_resource path="res://scripts/exitgame.gd" type="Script" id=2]
 
 [node name="Settings" type="Control"]
 anchor_right = 1.0
@@ -14,4 +15,12 @@ margin_top = 28.0
 margin_right = -30.0
 margin_bottom = 73.0
 script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 30.0
+margin_top = 28.0
+margin_right = 140.0
+margin_bottom = 73.0
+text = "Exit"
+script = ExtResource( 2 )
 
