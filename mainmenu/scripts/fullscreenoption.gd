@@ -1,9 +1,9 @@
 extends OptionButton
 
 var lastselected # Variable to know what fullscreen option was last selected.
-var window = load("res://scripts/windowsettings.gd").new() # Variable to use function calls from windowsettings.
 var usersettings = File.new() # Define usersettings as a File type.
 var settings # usersettings as a string.
+var systems # Define systems for use globally.
 
 # Intialization.
 func _ready():
@@ -11,8 +11,9 @@ func _ready():
 	add_item('Windowed', 0)
 	add_item('Borderless', 1)
 	add_item('Fullscreen', 2)
-
-	window.screensetting() # Uses the user's default window size.
+	
+	systems = get_node('../../Systems') # Load systems with the Systems node.
+	systems.window.screensetting() # Uses the user's default window size.
 	
 	usersettings.open("user://usersettings.tres", File.READ_WRITE) # Open the usersettings file for reading and writing.
 	settings = usersettings.get_as_text() # Store the file as a string in settings variable.
@@ -71,20 +72,20 @@ func _process(delta):
 	# If 0 is selected and was not selected last time then window the game.
 	if selected == 0:
 		if lastselected != 0:
-			window.windowed() # Make window windowed.
+			systems.window.windowed() # Make window windowed.
 			rewrite('windowed') # Replace the default screen setting.
 			lastselected = 0 # Set 0 as lastselected so it is not run again while selected is 0.
 	
 	# If 1 is selected and was not selected last time then borderless and maximize the game.
 	elif selected == 1:
 		if lastselected != 1:
-			window.borderless() # Make window borderless.
+			systems.window.borderless() # Make window borderless.
 			rewrite('borderless') # Replace the default screen setting.
 			lastselected = 1 # Set 1 as lastselected so it is not run again while selected is 1.
 	
 	# If 2 is selected and was not selected last time then fullscreen the game.
 	elif selected == 2:
 		if lastselected != 2:
-			window.fullscreen() # Make window fullscreen.
+			systems.window.fullscreen() # Make window fullscreen.
 			rewrite('fullscreen') # Replace the default screen setting.
 			lastselected = 2 # Set 2 as lastselected so it is not run again while selected is 2.
