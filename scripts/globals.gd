@@ -11,4 +11,4 @@ func _ready():
 	var filepath = OS.get_user_data_dir() + '/usersettings.tres'
 	if file.file_exists(filepath) == false:
 		file.open("user://usersettings.tres", File.WRITE)
-		file.close
+		file.close()
