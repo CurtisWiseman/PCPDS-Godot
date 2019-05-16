@@ -9,16 +9,15 @@ func background(bg, type):
 	# If a background is already set then remove it.
 	if layers.size() > 0:
 		if layers[layers.size() - 1]['name'] == 'BG':
-			pass
-	
-	
+			remove('BG')
+			
 	var info = layersetup(bg, 0) # Get info from the layersetup() function.
 	
 	# If of type image make the background a sprite.
 	if type == 'image':
 		bgnode = Sprite.new() # Create a new sprite node.
 		bgnode.set_name('BG') # Give the node the name BG.
-		layers[info[1]]['node'] = bgnode
+		layers[info[1]]['node'] = bgnode # Set node to bgnode.
 		nodelayers(info[1]) # Add BG below all layers.
 		
 		bgnode.texture = info[2] # Give bgnode the 'bg' image.
@@ -29,7 +28,7 @@ func background(bg, type):
 	elif type == 'video':
 		bgnode = VideoPlayer.new() # Create a new videoplayer node.
 		bgnode.set_name('BG') # Give it the name BG.
-		layers[info[1]]['node'] = bgnode
+		layers[info[1]]['node'] = bgnode # Set node to bgnode.
 		nodelayers(info[1]) # Add BG below all layers.
 		
 		bgnode.stream = info[2] # Make the background the video.
@@ -70,6 +69,8 @@ class SortDictsDescending:
 func layernames(path):
 	
 	var layname = '' # Appended to to create a unique name.
+	
+	path = path.left(path.find_last('.')) # Remove the file extension.
 	
 	# Use the fact that '/' cannot be in file names to find the last slash, and thus the image name after it.
 	for i in range(path.find_last('/') + 1, path.length()):
@@ -131,7 +132,7 @@ func nodelayers(index):
 
 
 
-#
+# A function to do the repetitive tasks needed when adding a new layer.
 func layersetup(path, z):
 	
 	var content = load(path) # Load the content using it's path.
@@ -188,3 +189,38 @@ func video(vidpath, z):
 	vidnode.rect_size = global.size # Set the size to the global size.
 	vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 	vidnode.play() # Play the video.
+
+
+
+# Remove a layer based on it's name.
+func remove(cname):
+	
+	var index # The index cname is in layers.
+	var parent # The parent of the cname node.
+	
+	# Find the index of then content using cname.
+	for i in range(layers.size()):
+		
+		if layers[i]['name'] == cname:
+			index = i
+			break
+	
+	# If cname was not found then print an error and exit the function.
+	if index == null:
+		print('Error: ' + cname + ' is not a valid layer name to remove.')
+		return
+	
+	# If index is 0 then remove the cname node off the end then return.
+	if index == 0:
+		parent = layers[index]['node'].get_parent()
+		parent.remove_child(layers[index]['node'])
+		layers.remove(index)
+		return
+	
+	# Else remove cname node's child, remove cname node, and add cname node's child to cname's parent node.
+	parent = layers[index]['node'].get_parent()
+	layers[index]['node'].remove_child(layers[index - 1]['node'])
+	parent.remove_child(layers[index]['node'])
+	parent.add_child(layers[index - 1]['node'])
+	layers.remove(index)
+		
