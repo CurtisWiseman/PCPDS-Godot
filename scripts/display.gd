@@ -1,7 +1,8 @@
 extends Node
 
 var bgnode # The background image node.
-var layers = [] # Arrays for storing images and videos via dictionaries containing their z-layer.
+var layers = [] # Array for storing images and videos via dictionaries containing their z-layer.
+var masks = [] # Array for stroring Light2D nodes used as masks.
 
 # Make the given image 'bg' a background.
 func background(bg, type):
@@ -10,7 +11,7 @@ func background(bg, type):
 	if layers.size() > 0:
 		if layers[layers.size() - 1]['name'] == 'BG':
 			remove('BG')
-			
+	
 	var info = layersetup(bg, 0) # Get info from the layersetup() function.
 	
 	# If of type image make the background a sprite.
@@ -23,7 +24,7 @@ func background(bg, type):
 		bgnode.texture = info[2] # Give bgnode the 'bg' image.
 		bgnode.centered = false # Uncenter the background.
 		bgnode.scale = Vector2(global.size.x/1920, global.size.y/1080) # Scale the backgrund to the global size.
-		
+	
 	# If of type video make the background a videoplayer.
 	elif type == 'video':
 		bgnode = VideoPlayer.new() # Create a new videoplayer node.
@@ -35,7 +36,7 @@ func background(bg, type):
 		bgnode.rect_size = global.size # Set the size to the global size.
 		bgnode.connect("finished", self, "loopvideo", [bgnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		bgnode.play() # Begin playing the video.
-		
+	
 	# Otherwise print an error that an incorrect type was given.
 	else:
 		print('ERROR: In display.background(). ' + type + ' is not a valid type.')
@@ -60,7 +61,7 @@ class SortDictsDescending:
 			d2['index'] = tmp
 			# Returns true so that the elements are switched.
 			return true
-			
+		
 		return false # Returns false so that nothing happends.
 
 
@@ -90,7 +91,7 @@ func layernames(path):
 				layname += '[' + str(int(x[x.length() - 2]) + 1) + ']' 
 			else:
 				layname += '[1]'
-				
+	
 	return layname # Return the name.
 
 
@@ -122,7 +123,7 @@ func nodelayers(index):
 		global.rootnode.remove_child(layers[lastel['index'] - 1]['node'])
 		lastel['node'].add_child(layers[lastel['index'] - 1]['node'])
 		return
-		
+	
 	# If index is not at the ends of layer then add it as a child to the layer below it,
 	# then remove the child that is the layer above it from the layer below it,
 	# and then add the layer above it as a child.
@@ -165,6 +166,11 @@ func layersetup(path, z):
 # Display the given image on the scene on the given layer.
 func image(imgpath, z):
 	
+	# If z is less than 1 print error then exit function.
+	if z < 1:
+		print('Error: Images cannot have a layer index less than 1. Attempted to give "' + imgpath + '" the index layer ' + str(z) + '.')
+		return
+	
 	var info = layersetup(imgpath, z) # Get info from the layersetup() function.
 	
 	var imgnode = Sprite.new() # Create a new sprite node.
@@ -179,12 +185,17 @@ func image(imgpath, z):
 # Display the given video on the scene on the given layer.
 func video(vidpath, z):
 	
+	# If z is less than 1 print error then exit function.
+	if z < 1:
+		print('Error: Videos cannot have a layer index less than 1. Attempted to give "' + vidpath + '" the index layer ' + str(z) + '.')
+		return
+	
 	var info = layersetup(vidpath, z) # Get info from the layersetup() function.
 	
 	var vidnode = VideoPlayer.new() # Create a new videoplayer node.
 	vidnode.set_name(info[0]) # Give the node vidname as its node name.
 	layers[info[1]]['node'] = vidnode # Add the node under the node key.
-	nodelayers(info[1])
+	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 	vidnode.stream = info[2] # Set the node's video steam to video.
 	vidnode.rect_size = global.size # Set the size to the global size.
 	vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
@@ -210,6 +221,13 @@ func remove(cname):
 		print('Error: ' + cname + ' is not a valid layer name to remove.')
 		return
 	
+	# If the node to be removed has a mask then remove it from masks.
+	if layers[index].get('mask') != null:
+		for i in range(layers.size()):
+			if masks[i]['name'] == layers[index]['mask'].name:
+				masks.remove(i)
+				break
+	
 	# If index is 0 then remove the cname node off the end then return.
 	if index == 0:
 		parent = layers[index]['node'].get_parent()
@@ -223,4 +241,53 @@ func remove(cname):
 	parent.remove_child(layers[index]['node'])
 	parent.add_child(layers[index - 1]['node'])
 	layers.remove(index)
+
+
+
+# Create a mask
+func mask(mask, path, type, z):
+	
+	var lightlayer = 2 # The default mask layer.
+	var info # Results of layersetup().
+	
+	# If masks size is > 0 then determine a free lightlayer for masking.
+	if masks.size() != 0:
+		for i in range(masks.size()):
+			if lightlayer < masks[i]['lightlayer']:
+				lightlayer = masks[i]['lightlayer']
+		lightlayer += 1
+	
+	
+	if type == 'image':
+		info = layersetup(path, z) # Get info from the layersetup() function.
 		
+		var imgnode = Sprite.new() # Create a new sprite node.
+		imgnode.set_name(info[0]) # Give the sprite node the image name for a node name.
+		layers[info[1]]['node'] = imgnode # Add the node under the node key.
+		imgnode.centered = false # Uncenter the node.
+		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
+		imgnode.texture = info[2] # Set the node's texture to the image.
+		imgnode.light_mask = lightlayer # Set the light_mask to a free layer for masking.
+	
+	elif type == 'video':
+		info = layersetup(path, z) # Get info from the layersetup() function.
+		
+		var vidnode = VideoPlayer.new() # Create a new videoplayer node.
+		vidnode.set_name(info[0]) # Give the node vidname as its node name.
+		layers[info[1]]['node'] = vidnode # Add the node under the node key.
+		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
+		vidnode.stream = info[2] # Set the node's video steam to video.
+		vidnode.rect_size = global.size # Set the size to the global size.
+		vidnode.light_mask = lightlayer # Set the light_mask to a free layer for masking.
+		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
+		vidnode.play() # Play the video.
+	
+	var masknode = Light2D.new() # Create a new Light2D node.
+	masknode.set_name(layernames(mask) + '(Mask)') # Set the node name to layernames() + (Mask)
+	masknode.position = Vector2(960,540) # Position it on screen.
+	masknode.range_item_cull_mask = lightlayer # Set the lightlayer for the mask.
+	masknode.texture = load(mask) # Load the image to mask with.
+	masknode.mode = 3 # Set the Light2D node's mode to masking.
+	masks.append({"name": masknode.name, "path": masknode.get_path(), "content": masknode.texture, "layer": z}) # Dict info.
+	layers[info[1]]['node'].add_child(masknode) # Add as a child of the node it is masking.
+	layers[info[1]]['mask'] = masknode # Add to the node it is masking's dictionary the masknode under the mask key.
