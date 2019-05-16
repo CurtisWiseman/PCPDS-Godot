@@ -9,6 +9,9 @@ var window = load("res://scripts/windowsettings.gd").new() # Variable to use fun
 # Load nodes for all game systems.
 func _ready():
 	
+	# Set the global rootnode to the root of the current scene.
+	global.rootnode = get_node('.').owner
+	
 	# Load the image system under the display variable.
 	display = Sprite.new() # Create a new sprite node.
 	display.set_name('Display') # Give it the name Display.

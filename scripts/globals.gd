@@ -1,7 +1,8 @@
 extends Node
 
 # Variables to be used across all files.
-var size = Vector2(1024,576)
+var size = Vector2(1920,1080)
+var rootnode
 
 # Set dynamic variables + do startup functions.
 func _ready():
