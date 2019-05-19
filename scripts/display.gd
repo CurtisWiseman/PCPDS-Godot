@@ -2,7 +2,6 @@ extends Node
 
 var bgnode # The background image node.
 var layers = [] # Array for storing images and videos via dictionaries containing their z-layer.
-var masks = [] # Array for stroring Light2D nodes used as masks.
 
 # Make the given image 'bg' a background.
 func background(bg, type):
@@ -19,22 +18,24 @@ func background(bg, type):
 		bgnode = Sprite.new() # Create a new sprite node.
 		bgnode.set_name('BG') # Give the node the name BG.
 		layers[info[1]]['node'] = bgnode # Set node to bgnode.
-		nodelayers(info[1]) # Add BG below all layers.
 		
 		bgnode.texture = info[2] # Give bgnode the 'bg' image.
 		bgnode.centered = false # Uncenter the background.
 		bgnode.scale = Vector2(global.size.x/1920, global.size.y/1080) # Scale the backgrund to the global size.
+		
+		nodelayers(info[1]) # Add BG below all layers.
 	
 	# If of type video make the background a videoplayer.
 	elif type == 'video':
 		bgnode = VideoPlayer.new() # Create a new videoplayer node.
 		bgnode.set_name('BG') # Give it the name BG.
 		layers[info[1]]['node'] = bgnode # Set node to bgnode.
-		nodelayers(info[1]) # Add BG below all layers.
 		
 		bgnode.stream = info[2] # Make the background the video.
 		bgnode.rect_size = global.size # Set the size to the global size.
 		bgnode.connect("finished", self, "loopvideo", [bgnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
+		
+		nodelayers(info[1]) # Add BG below all layers.
 		bgnode.play() # Begin playing the video.
 	
 	# Otherwise print an error that an incorrect type was given.
@@ -101,7 +102,7 @@ func nodelayers(index):
 	
 	var lastel = layers[layers.size() - 1] # Variable containing the last dictionary in the layers array.
 	
-	# Print an error if the layers array is not populated then  exit.
+	# Print an error if the layers array is not populated then exit.
 	if layers.size() == 0:
 		print('The layers array is empty. Incorrect use of function: The layers array must be of size >= 1.')
 		return
@@ -117,7 +118,7 @@ func nodelayers(index):
 		layers[1]['node'].add_child(layers[0]['node'])
 		return
 	
-	# If index is the last in the array then add lastel to the roo node, remove the 2nd to last node
+	# If index is the last in the array then add lastel to the root node, remove the 2nd to last node
 	if index == lastel['index']:
 		global.rootnode.add_child(lastel['node'])
 		global.rootnode.remove_child(layers[lastel['index'] - 1]['node'])
@@ -177,8 +178,8 @@ func image(imgpath, z):
 	imgnode.set_name(info[0]) # Give the sprite node the image name for a node name.
 	layers[info[1]]['node'] = imgnode # Add the node under the node key.
 	imgnode.centered = false # Uncenter the node.
-	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 	imgnode.texture = info[2] # Set the node's texture to the image.
+	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 
 
 
@@ -195,10 +196,10 @@ func video(vidpath, z):
 	var vidnode = VideoPlayer.new() # Create a new videoplayer node.
 	vidnode.set_name(info[0]) # Give the node vidname as its node name.
 	layers[info[1]]['node'] = vidnode # Add the node under the node key.
-	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 	vidnode.stream = info[2] # Set the node's video steam to video.
 	vidnode.rect_size = global.size # Set the size to the global size.
 	vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
+	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 	vidnode.play() # Play the video.
 
 
@@ -221,13 +222,6 @@ func remove(cname):
 		print('Error: ' + cname + ' is not a valid layer name to remove.')
 		return
 	
-	# If the node to be removed has a mask then remove it from masks.
-	if layers[index].get('mask') != null:
-		for i in range(layers.size()):
-			if masks[i]['name'] == layers[index]['mask'].name:
-				masks.remove(i)
-				break
-	
 	# If index is 0 then remove the cname node off the end then return.
 	if index == 0:
 		parent = layers[index]['node'].get_parent()
@@ -247,47 +241,57 @@ func remove(cname):
 # Create a mask
 func mask(mask, path, type, z):
 	
-	var lightlayer = 2 # The default mask layer.
+	# If z is less than 1 print error then exit function.
+	if z < 1:
+		print('Error: Masked ' + type  + 's cannot have a layer index less than 1. Attempted to give "' + mask + '" the index layer ' + str(z) + '.')
+		return
+	
 	var info # Results of layersetup().
+	var maskname = layernames(mask) # The name of the node.
 	
-	# If masks size is > 0 then determine a free lightlayer for masking.
-	if masks.size() != 0:
-		for i in range(masks.size()):
-			if lightlayer < masks[i]['lightlayer']:
-				lightlayer = masks[i]['lightlayer']
-		lightlayer += 1
+	# The code to mask using a shader.
+	var code = """shader_type canvas_item;
+		uniform sampler2D mask_texture;
+		void fragment() {  
+		vec4 colour = texture(TEXTURE, UV); 
+		colour.a *= texture(mask_texture, UV).a; 
+		COLOR = colour; 
+		}"""
 	
-	
+	# If of type image the create mask over the image.
 	if type == 'image':
 		info = layersetup(path, z) # Get info from the layersetup() function.
 		
 		var imgnode = Sprite.new() # Create a new sprite node.
-		imgnode.set_name(info[0]) # Give the sprite node the image name for a node name.
+		imgnode.set_name(maskname) # Give the node the mask's name.
+		layers[info[1]]['name'] = maskname # Change the name in layers.
 		layers[info[1]]['node'] = imgnode # Add the node under the node key.
 		imgnode.centered = false # Uncenter the node.
-		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 		imgnode.texture = info[2] # Set the node's texture to the image.
-		imgnode.light_mask = lightlayer # Set the light_mask to a free layer for masking.
+		
+		imgnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
+		imgnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
+		imgnode.material.shader.code = code # Set the shader's code to code.
+		imgnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
+		
+		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 	
+	# If of type video the create mask over the video.
 	elif type == 'video':
 		info = layersetup(path, z) # Get info from the layersetup() function.
 		
 		var vidnode = VideoPlayer.new() # Create a new videoplayer node.
-		vidnode.set_name(info[0]) # Give the node vidname as its node name.
+		vidnode.set_name(maskname) # Give the node the mask's name.
+		layers[info[1]]['name'] = maskname # Change the name in layers.
 		layers[info[1]]['node'] = vidnode # Add the node under the node key.
-		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 		vidnode.stream = info[2] # Set the node's video steam to video.
 		vidnode.rect_size = global.size # Set the size to the global size.
-		vidnode.light_mask = lightlayer # Set the light_mask to a free layer for masking.
 		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
+		
+		vidnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
+		vidnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
+		vidnode.material.shader.code = code # Set the shader's code to code.
+		vidnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
+		
+		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 		vidnode.play() # Play the video.
-	
-	var masknode = Light2D.new() # Create a new Light2D node.
-	masknode.set_name(layernames(mask) + '(Mask)') # Set the node name to layernames() + (Mask)
-	masknode.position = Vector2(960,540) # Position it on screen.
-	masknode.range_item_cull_mask = lightlayer # Set the lightlayer for the mask.
-	masknode.texture = load(mask) # Load the image to mask with.
-	masknode.mode = 3 # Set the Light2D node's mode to masking.
-	masks.append({"name": masknode.name, "path": masknode.get_path(), "content": masknode.texture, "layer": z}) # Dict info.
-	layers[info[1]]['node'].add_child(masknode) # Add as a child of the node it is masking.
-	layers[info[1]]['mask'] = masknode # Add to the node it is masking's dictionary the masknode under the mask key.
