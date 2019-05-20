@@ -18,6 +18,7 @@ func background(bg, type):
 		bgnode = Sprite.new() # Create a new sprite node.
 		bgnode.set_name('BG') # Give the node the name BG.
 		layers[info[1]]['node'] = bgnode # Set node to bgnode.
+		layers[info[1]]['type'] = 'image' # The node's type.
 		
 		bgnode.texture = info[2] # Give bgnode the 'bg' image.
 		bgnode.centered = false # Uncenter the background.
@@ -30,6 +31,7 @@ func background(bg, type):
 		bgnode = VideoPlayer.new() # Create a new videoplayer node.
 		bgnode.set_name('BG') # Give it the name BG.
 		layers[info[1]]['node'] = bgnode # Set node to bgnode.
+		layers[info[1]]['type'] = 'video' # The node's type.
 		
 		bgnode.stream = info[2] # Make the background the video.
 		bgnode.rect_size = global.size # Set the size to the global size.
@@ -177,6 +179,7 @@ func image(imgpath, z):
 	var imgnode = Sprite.new() # Create a new sprite node.
 	imgnode.set_name(info[0]) # Give the sprite node the image name for a node name.
 	layers[info[1]]['node'] = imgnode # Add the node under the node key.
+	layers[info[1]]['type'] = 'image' # The node's type.
 	imgnode.centered = false # Uncenter the node.
 	imgnode.texture = info[2] # Set the node's texture to the image.
 	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
@@ -196,6 +199,7 @@ func video(vidpath, z):
 	var vidnode = VideoPlayer.new() # Create a new videoplayer node.
 	vidnode.set_name(info[0]) # Give the node vidname as its node name.
 	layers[info[1]]['node'] = vidnode # Add the node under the node key.
+	layers[info[1]]['type'] = 'video' # The node's type.
 	vidnode.stream = info[2] # Set the node's video steam to video.
 	vidnode.rect_size = global.size # Set the size to the global size.
 	vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
@@ -266,6 +270,7 @@ func mask(mask, path, type, z):
 		imgnode.set_name(maskname) # Give the node the mask's name.
 		layers[info[1]]['name'] = maskname # Change the name in layers.
 		layers[info[1]]['node'] = imgnode # Add the node under the node key.
+		layers[info[1]]['type'] = 'image' # The node's type.
 		imgnode.centered = false # Uncenter the node.
 		imgnode.texture = info[2] # Set the node's texture to the image.
 		
@@ -284,6 +289,7 @@ func mask(mask, path, type, z):
 		vidnode.set_name(maskname) # Give the node the mask's name.
 		layers[info[1]]['name'] = maskname # Change the name in layers.
 		layers[info[1]]['node'] = vidnode # Add the node under the node key.
+		layers[info[1]]['type'] = 'video' # The node's type.
 		vidnode.stream = info[2] # Set the node's video steam to video.
 		vidnode.rect_size = global.size # Set the size to the global size.
 		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
@@ -295,3 +301,75 @@ func mask(mask, path, type, z):
 		
 		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 		vidnode.play() # Play the video.
+
+
+
+#
+func position(cname, x, y=0):
+	
+	var index # The index of the given node.
+	var node # The given node.
+	var childnode # The child node.
+	var type # The type of node given: img/vid.
+	var childtype # The type of the child node.
+	var haschild = false # True if the node has a child.
+	var mv # Will be set to y if y is a string.
+	
+	# Find the index of the given node.
+	for i in range(layers.size()):
+		
+		if layers[i]['name'] == cname:
+			index = i
+			break
+	
+	# If index not found then print an error and return.
+	if index == null:
+		print("Error: No node named " + cname + " exists!")
+		return
+	
+	type = layers[index]['type'] # The node type.
+	node = layers[index]['node'] # The node.
+	
+	# If the node has a child then get it's node, type, and set haschild to true.
+	if index - 1 >= 0:
+		childtype = layers[index - 1]['type']
+		childnode = layers[index - 1]['node']
+		haschild = true
+	
+	# If y is a string then set mv to y, and y to 0.
+	if typeof(y) == TYPE_STRING:
+		mv = y
+		y = 0
+		
+	# If y is not a string or int then print and error and exit.
+	elif typeof(y) != TYPE_INT:
+		print("Error: The position function for " + cname + " has an incorrect type as it's 3rd argument. Only int and string are accepted.")
+		return
+	
+	# If x is of type integer then give the node it's new position using x and y.
+	if typeof(x) == TYPE_INT:
+		
+		if type== 'image':
+			node.position = Vector2(node.position.x + x, node.position.y + y)
+			print(node.texture.get_size())
+		
+		elif type == 'video':
+			node.rect_position = Vector2(node.rect_position.x + x, node.rect_position.y + y)
+		
+		# If the node has a child then determine the child's new position so it doesn't move.
+		if haschild:
+			
+			if childtype == 'image':
+				childnode.position = Vector2(childnode.position.x - x, childnode.position.y - y)
+			
+			elif childtype == 'video':
+				childnode.rect_position = Vector2(childnode.rect_position.x - x, childnode.rect_position.y - y)
+	
+	# If x is not an interger then print an error and return.
+	else:
+		print("Error: The position function for " + cname + " has an incorrect type as it's 2nd argument. Only int is accepted.")
+		return
+		
+#	if typeof(y) == TYPE_STRING:
+#
+#		if
