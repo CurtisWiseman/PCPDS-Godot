@@ -6,7 +6,7 @@ var collider = null # The node doing the colliding.
 signal position_finish # Emitted when collider has reached dest.
 
 # Called by display.gd with the dest, speed, and colliding node.
-func move(x, s, c):
+func move(s, c, x=null):
 	dest = x
 	speed = s
 	collider = c
@@ -20,13 +20,19 @@ func _physics_process(delta):
 		
 		get_parent().position(collider.name, int(speed.x + speed.x * delta)) # Move collider at speed.x.
 		
-		# Check if the destination has been reached then emit the 'position_finish' signal.
-		if speed.x < 0:
-			if collider.position.x <= dest - collider.get_parent().position.x:
-				emit_signal('position_finish')
-		else:
-			if collider.position.x >= dest - collider.get_parent().position.x:
-				emit_signal('position_finish')
+		# If dest is null then ignore ending movement.
+		if dest != null:
+			# Else check if the destination has been reached then emit the 'position_finish' signal.
+			if speed.x < 0:
+				if collider.position.x <= dest - collider.get_parent().position.x:
+					emit_signal('position_finish')
+			else:
+				if collider.position.x >= dest - collider.get_parent().position.x:
+					emit_signal('position_finish')
+
+# Function so that other nodes can end position movement.
+func finish():
+	emit_signal('position_finish')
 
 # Called after 'position_finish' is emitted.
 # Deletes the node to free memory.

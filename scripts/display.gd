@@ -58,12 +58,18 @@ func image(imgpath, z):
 		return
 	
 	var info = layersetup(imgpath, z) # Get info from the layersetup() function.
+	var copy = '' # Used if their if their is a copy node.
+	
+	# If a copy of an existing node then temporarily remove the [#] on the end to check if model exists.
+	if info[0].find_last(']') == info[0].length() - 1:
+		copy = info[0].right(info[0].find_last('['))
+		info[0] = info[0].left(info[0].find_last('[')) # Remove the file extension.
 	
 	# If a mesh model exists for the image then make a MeshInstance2D.
 	if model.file_exists('res://models/' + info[0] + '.tres'):
-		
+
 		var meshnode = MeshInstance2D.new() # Create a new MeshInstance2D.
-		meshnode.name = info[0] # Name the node info[0].
+		meshnode.name = info[0] + copy # Name the node info[0].
 		layers[info[1]]['node'] = meshnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'image' # The node's type.
 		meshnode.texture = info[2] # Set the node's texture to the image.
@@ -77,12 +83,12 @@ func image(imgpath, z):
 		AddMeshShape(areanode, meshnode) # Create a Shape for CP2D to use out of the mesh.
 		meshnode.add_child(areanode) # Add the Area2D as a child of meshnode.
 		layers[info[1]]['area'] = areanode # Add the Area2D as a key for meshnode to access.
-		
+
 		nodelayers(info[1]) # Put the meshnode into the appropriate spot based on z.
-	
+
 	# Else if no model exists for the image then make a Sprite.
 	else:
-		
+
 		var imgnode = Sprite.new() # Create a new sprite node.
 		imgnode.set_name(info[0]) # Give the sprite node the image name for a node name.
 		layers[info[1]]['node'] = imgnode # Add the node under the node key.
@@ -333,11 +339,18 @@ func position(cname, x, y=0, s=4):
 			position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
 			position.set_name(cname + '(Position)') # Give it the image name + (Position)
 			add_child(position) # Add it as a child of Display.
-			get_node(cname + '(Position)').move(x, Vector2(s,0), node) # Call position's move function.
+			get_node(cname + '(Position)').move(Vector2(s,0), node, x) # Call position's move function.
+		
+		if mv == 'collide':
+			var position = Node.new() # Creates a new Node node for positioning the image.
+			position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
+			position.set_name(cname + '(Position)') # Give it the image name + (Position)
+			add_child(position) # Add it as a child of Display.
+			get_node(cname + '(Position)').move(Vector2(s,0), node, x) # Call position's move function.
 			
-#			# Set the speed and collider globally for collision purposes.
-#			speed = Vector2(s, 0)
-#			collider = node
+			# Set the speed and collider globally so collision happens.
+			speed = Vector2(s, 0)
+			collider = node
 
 
 
@@ -438,15 +451,21 @@ func layersetup(path, z):
 
 
 
-# Called when a character touches another. (NOT STARTED)
+# Called when a character touches another.
 func _character_entered(area, ogarea):
-	pass
+	if ogarea.get_parent() == collider:
+		var position = Node.new() # Creates a new Node node for positioning the area's parent node.
+		position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
+		position.set_name(area.get_parent().name + '(Position)') # Give it the area parent name + (Position)
+		add_child(position) # Add position as a child of Display.
+		get_node(area.get_parent().name + '(Position)').move(speed, area.get_parent()) # Call position's move function with collider's speed.
 
 
 
-# Called when a character stops touching another. (NOT STARTED)
-func _character_exited(ogarea, area):
-	pass
+# Called when a character stops touching another.
+func _character_exited(area, ogarea):
+	if ogarea.get_parent() == collider:
+		get_node(area.get_parent().name + '(Position)').finish() # Ends node movement when the collider leaves the area.
 
 
 
