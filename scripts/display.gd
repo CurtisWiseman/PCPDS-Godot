@@ -4,7 +4,6 @@ var bgnode # The background image node.
 var layers = [] # Array for storing images and videos via dictionaries containing their z-layer.
 var model = File.new() # Use to check if model files exist.	
 var speed # The speed and direction to move.
-var dest # The destination  of an image when sliding/colliding.
 var collider = null # The node told to move.
 
 # Make the given image 'bg' a background.
@@ -225,8 +224,7 @@ func remove(cname):
 	
 	# If index is 0 then remove the cname node off the end then return.
 	if index == 0:
-		parent = layers[index]['node'].get_parent()
-		parent.remove_child(layers[index]['node'])
+		layers[index]['node'].queue_free()
 		layers.remove(index)
 		return
 	
@@ -248,6 +246,7 @@ func remove(cname):
 			layers[index - 1]['node'].rect_position += layers[index]['node'].rect_position
 	
 	parent.add_child(layers[index - 1]['node'])
+	layers[index]['node'].queue_free()
 	layers.remove(index)
 
 
@@ -330,10 +329,17 @@ func position(cname, x, y=0, s=4):
 		
 		# If slide then do not interact with any characters on the way to destination.
 		if mv == 'slide':
-			dest = x
-			speed = Vector2(s, 0)
-			layers[index]['collider'] = true
-			collider = node
+			var position = Node.new() # Creates a new Node node for positioning the image.
+			position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
+			position.set_name(cname + '(Position)') # Give it the image name + (Position)
+			add_child(position) # Add it as a child of Display.
+			get_node(cname + '(Position)').move(x, Vector2(s,0), node) # Call position's move function.
+			
+#			# Set the speed and collider globally for collision purposes.
+#			speed = Vector2(s, 0)
+#			collider = node
+
+
 
 # Function to get a unique node name for an image/video layer.
 func layernames(path):
@@ -494,25 +500,3 @@ class SortDictsDescending:
 			return true
 		
 		return false # Returns false so that nothing happends.
-
-
-
-# Function to preform the sliding action of sprites.
-func _physics_process(delta):
-	
-	# If collider is not null then move the collider node to dest.
-	if collider != null:
-		
-		position(collider.name, int(speed.x + speed.x * delta)) # Move collider at speed.x.
-		
-		# Check if the destination has been reached then set all values to null.
-		if speed.x < 0:
-			if collider.position.x <= dest - collider.get_parent().position.x:
-				collider = null
-				dest = null
-				speed = null
-		else:
-			if collider.position.x >= dest - collider.get_parent().position.x:
-				collider = null
-				dest = null
-				speed = null
