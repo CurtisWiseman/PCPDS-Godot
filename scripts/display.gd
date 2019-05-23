@@ -4,7 +4,9 @@ var bgnode # The background image node.
 var layers = [] # Array for storing images and videos via dictionaries containing their z-layer.
 var model = File.new() # Use to check if model files exist.	
 var speed # The speed and direction to move.
+var timer # How long it takes a character to stop.
 var collider = null # The node told to move.
+var collidee = null # The node that get's collided.
 
 # Make the given image 'bg' a background.
 func background(bg, type):
@@ -52,9 +54,9 @@ func background(bg, type):
 # Display the given image on the scene on the given layer.
 func image(imgpath, z):
 	
-	# If z is less than 1 print error then exit function.
-	if z < 1:
-		print('Error: Images cannot have a layer index less than 1. Attempted to give "' + imgpath + '" the index layer ' + str(z) + '.')
+	# If z is 0 print error then exit function.
+	if z == 0:
+		print('Error: Images cannot have a layer index of 0. Attempted to give "' + imgpath + '" the index layer 0.')
 		return
 	
 	var info = layersetup(imgpath, z) # Get info from the layersetup() function.
@@ -74,7 +76,7 @@ func image(imgpath, z):
 		layers[info[1]]['type'] = 'image' # The node's type.
 		meshnode.texture = info[2] # Set the node's texture to the image.
 		meshnode.mesh = load('res://models/' + info[0] + '.tres') # Load the mesh model.
-
+		
 		var areanode = Area2D.new() # Create a new Area2D.
 		var shapenode = CollisionPolygon2D.new() # Create a new Collision
 		areanode.connect('area_entered', self, '_character_entered', [areanode]) # Connect the Area2D to a signal for when other areas enter it.
@@ -102,9 +104,9 @@ func image(imgpath, z):
 # Display the given video on the scene on the given layer.
 func video(vidpath, z):
 	
-	# If z is less than 1 print error then exit function.
-	if z < 1:
-		print('Error: Videos cannot have a layer index less than 1. Attempted to give "' + vidpath + '" the index layer ' + str(z) + '.')
+	# If z is 0 print error then exit function.
+	if z == 0:
+		print('Error: Videos cannot have a layer index of 0. Attempted to give "' + vidpath + '" the index layer 0.')
 		return
 	
 	var info = layersetup(vidpath, z) # Get info from the layersetup() function.
@@ -124,9 +126,9 @@ func video(vidpath, z):
 # Create a mask
 func mask(mask, path, type, z):
 	
-	# If z is less than 1 print error then exit function.
-	if z < 1:
-		print('Error: Masked ' + type  + 's cannot have a layer index less than 1. Attempted to give "' + mask + '" the index layer ' + str(z) + '.')
+	# If z is 0 print error then exit function.
+	if z == 0:
+		print('Error: Masked ' + type  + 's cannot have a layer of 0. Attempted to give "' + mask + '" the index layer 0.')
 		return
 	
 	var info # Results of layersetup().
@@ -151,6 +153,7 @@ func mask(mask, path, type, z):
 		layers[info[1]]['name'] = maskname # Change the name in layers.
 		layers[info[1]]['node'] = imgnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'image' # The node's type.
+		layers[info[1]]['mask'] = true # State the it is indeed a mask.
 		imgnode.centered = false # Uncenter the node.
 		imgnode.texture = info[2] # Set the node's texture to the image.
 		
@@ -158,6 +161,10 @@ func mask(mask, path, type, z):
 		imgnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
 		imgnode.material.shader.code = code # Set the shader's code to code.
 		imgnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
+		
+		# Check for a mesh.
+		if model.file_exists('res://models/' + maskname + '.tres'):
+			maskmesh(info, imgnode, maskname)
 		
 		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 	
@@ -170,6 +177,7 @@ func mask(mask, path, type, z):
 		layers[info[1]]['name'] = maskname # Change the name in layers.
 		layers[info[1]]['node'] = vidnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'video' # The node's type.
+		layers[info[1]]['mask'] = true # State the it is indeed a mask.
 		vidnode.stream = info[2] # Set the node's video steam to video.
 		vidnode.rect_size = global.size # Set the size to the global size.
 		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
@@ -178,6 +186,10 @@ func mask(mask, path, type, z):
 		vidnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
 		vidnode.material.shader.code = code # Set the shader's code to code.
 		vidnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
+		
+		# Check for a mesh.
+		if model.file_exists('res://models/' + maskname + '.tres'):
+			maskmesh(info, vidnode, maskname)
 		
 		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 		vidnode.play() # Play the video.
@@ -207,6 +219,7 @@ func face(facepath, body, x=0, y=0):
 	facenode.texture = load(facepath) # Set the node's texture to the face image.
 	facenode.position = Vector2(x,y) # Set the face's position to x and y.
 	layers[index]['node'].add_child(facenode) # Add as a child of the body node.
+	layers[index]['face'] = facenode # Add the face node the dictionary.
 
 
 
@@ -258,7 +271,7 @@ func remove(cname):
 
 
 # Function to move characters to specified positions.
-func position(cname, x, y=0, s=4):
+func position(cname, x, y=0, s=4, t=0, n='all'):
 	
 	var index # The index of the given node.
 	var node # The given node.
@@ -294,13 +307,42 @@ func position(cname, x, y=0, s=4):
 		mv = y
 		y = 0
 		
-	# If y is not a string or int then print and error and exit.
+	# Else if y is not a string or int then print an error and exit.
 	elif typeof(y) != TYPE_INT:
 		print("Error: The position function for " + cname + " has an incorrect type as it's 3rd argument. Only int and string are accepted.")
 		return
 	
 	# If x is of type integer then give the node it's new position using x and y.
 	elif typeof(x) == TYPE_INT:
+		
+		# If the node has been positioned once before then prepare it for repositioning.
+		if layers[index].get('posreset') != null:
+			#Set the node position to the negative of it's parents position.
+			if type == 'image':
+				if index == layers.size() - 1:
+					node.position = Vector2(0,0)
+				else:
+					node.position = -layers[index + 1]['position']
+			
+			#Set the node position to the negative of it's parents position.
+			if type == 'video':
+				if index == layers.size() - 1:
+					node.rect_position = Vector2(0,0)
+				else:
+					node.rect_position = -layers[index + 1]['position']
+			
+			# If thier is a child set it's position to it's 'ideal' position.
+			if haschild:
+				if childtype == 'image':
+					childnode.position = layers[index - 1]['position']
+				if childtype == 'video':
+					childnode.rect_position = layers[index - 1]['position']
+					
+		# If the first time being position then set 'posreset' to true.
+		else:
+			layers[index]['posreset'] = true
+		
+		layers[index]['position'] = Vector2(x, y) # The new 'ideal' position of node.
 		
 		if type== 'image':
 			node.position = Vector2(node.position.x + x, node.position.y + y)
@@ -326,11 +368,11 @@ func position(cname, x, y=0, s=4):
 	if mv != null:
 		
 		# If the node position is the same as the destination do nothing and return.
-		if node.position.x + node.get_parent().position.x == x:
+		if layers[index]['position'].x == x:
 			return
 		
 		# If the destination is negative then make the speed negative.
-		if x < node.position.x:
+		if x < layers[index]['position'].x:
 			s *= -1
 		
 		# If slide then do not interact with any characters on the way to destination.
@@ -339,18 +381,209 @@ func position(cname, x, y=0, s=4):
 			position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
 			position.set_name(cname + '(Position)') # Give it the image name + (Position)
 			add_child(position) # Add it as a child of Display.
-			get_node(cname + '(Position)').move(Vector2(s,0), node, x) # Call position's move function.
+			get_node(cname + '(Position)').move(Vector2(s,0), node, 0, x) # Call position's move function.
 		
 		if mv == 'collide':
+			
+			# If n is a specific node then set it as collidee.
+			if n != 'all':
+				
+				index = null # Reset index to null.
+				
+				# Find the index of n.
+				for i in range(layers.size()):
+				
+					if layers[i]['name'] == n:
+						index = i
+						break
+	
+				# If n not found then print an error and return.
+				if index == null:
+					print("Error: No node named " + n + " exists as a target for collision!")
+					return
+				
+				# Else if the collider and collidee are the same, error then return.
+				elif node == layers[index]['node']:
+					print("Error: Node " + n + " cannot collide with itself!")
+					return
+				
+				# Else make the collidee the node reffered to by n.
+				else:
+					collidee = layers[index]['node']
+			
+			if layers[index].get('mask') != null:
+				node = node.get_node(node.name)
+			
 			var position = Node.new() # Creates a new Node node for positioning the image.
 			position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
 			position.set_name(cname + '(Position)') # Give it the image name + (Position)
 			add_child(position) # Add it as a child of Display.
-			get_node(cname + '(Position)').move(Vector2(s,0), node, x) # Call position's move function.
+			get_node(cname + '(Position)').move(Vector2(s,0), node, 0, x) # Call position's move function.
 			
 			# Set the speed and collider globally so collision happens.
 			speed = Vector2(s, 0)
+			timer = t
 			collider = node
+
+
+
+# Function to fade in an out from black.
+func fadeblack(content, fade, spd, mod='self', time=0.5):
+	
+	var index # Index of content node.
+	var percent # Used to calculate modulation.
+	var ftimer = Timer.new() # A timer node.
+	var face = null # If content has face.
+	var p # A var for percentage calculation.
+	add_child(ftimer) # Add the timer as a child.
+	ftimer.one_shot = true # Make the timer one shot.
+	
+	# Find the index of content.
+	for i in range(layers.size()):
+		
+		if layers[i]['name'] == content:
+			index = i
+			break
+	
+	# If content node not found then print an error and return.
+	if index == null:
+		print("Error: No node named " + content + " exists as a target for collision!")
+		return
+	
+	var node = layers[index]['node'] # Set node to the content node found by index.
+	
+	# If speed is outside the range 1-50 then print an error and return.
+	if spd <= 0 or spd > 100:
+		print('Error: The 3rd parameter on fadeblack only accepts values 0 < x <= 100!')
+		return
+	
+	# Reject mod's that are not self or children.
+	if mod != 'self' and mod != 'children':
+		print("Error: The 4th parameter on fadeblack only accepts 'self' or 'children' as values!")
+		return
+	
+	# Reject time less <= 0.
+	if time <= 0:
+		print("Error: The 5th parameter on fadeblack only accepts values above 0.")
+		return
+	
+	# Get a face if it exists.
+	if layers[index].get('face') and mod == 'self':
+		face = layers[index]['face']
+	
+	# If fade is out then fade out.
+	if fade == 'out':
+		percent = 100
+		# While percent isn't 0 fade to black.
+		while percent != 0:
+			percent -= spd # Subtract spd from percent.
+			if percent < 0: percent = 0 # Make percent 0 if it falls below.
+			p = float(percent)/100 # Make p percent/100
+			if mod == 'self': node.set_self_modulate(Color(p,p,p,1)) # Modulate the node by p.
+			else: node.set_modulate(Color(p,p,p,1)) # Modulate the node and all it's children by p.
+			if face: face.set_self_modulate(Color(p,p,p,1)) # Modulate the face by p.
+			ftimer.start(time) # Start the timer at 0.5 seconds.
+			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+	
+	# If fade is in then fade in.
+	elif fade == 'in':
+		percent = 0
+		# While percent isn't 0 fade from black.
+		while percent != 100:
+			percent += spd # Add spd to percent.
+			if percent > 100: percent = 100 # Make percent 100 if it goes above.
+			p = float(percent)/100 # Make p percent/100
+			if mod == 'self': node.set_self_modulate(Color(p,p,p,1)) # Modulate the node by p.
+			else: node.set_modulate(Color(p,p,p,1)) # Modulate the node and all it's children by p.
+			if face: face.set_self_modulate(Color(p,p,p,1)) # Modulate the face by p.
+			ftimer.start(time) # Start the timer at 0.5 seconds.
+			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+	
+	# Else print an error if fade is not in or out.
+	else:
+		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
+	
+	ftimer.queue_free() # Free the timer.
+
+
+
+# Function to fade in an out from black.
+func fadealpha(content, fade, spd, mod='self', time=0.5):
+	
+	var index # Index of content node.
+	var percent # Used to calculate modulation.
+	var ftimer = Timer.new() # A timer node.
+	var face = null # If content has face.
+	var p # A var for percentage calculation.
+	add_child(ftimer) # Add the timer as a child.
+	ftimer.one_shot = true # Make the timer one shot.
+	
+	# Find the index of content.
+	for i in range(layers.size()):
+		
+		if layers[i]['name'] == content:
+			index = i
+			break
+	
+	# If content node not found then print an error and return.
+	if index == null:
+		print("Error: No node named " + content + " exists as a target for collision!")
+		return
+	
+	var node = layers[index]['node'] # Set node to the content node found by index.
+	
+	# If speed is outside the range 1-50 then print an error and return.
+	if spd <= 0 or spd > 100:
+		print('Error: The 3rd parameter on fadeblack only accepts values 0 < x <= 100!')
+		return
+	
+	# Reject mod's that are not self or children.
+	if mod != 'self' and mod != 'children':
+		print("Error: The 4th parameter on fadeblack only accepts 'self' or 'children' as values!")
+		return
+	
+	# Reject time less <= 0.
+	if time <= 0:
+		print("Error: The 5th parameter on fadeblack only accepts values above 0.")
+		return
+	
+	# Get a face if it exists.
+	if layers[index].get('face') and mod == 'self':
+		face = layers[index]['face']
+	
+	# If fade is out then fade out.
+	if fade == 'out':
+		percent = 100
+		# While percent isn't 0 fade to black.
+		while percent != 0:
+			percent -= spd # Subtract spd from percent.
+			if percent < 0: percent = 0 # Make percent 0 if it falls below.
+			p = float(percent)/100 # Make p percent/100
+			if mod == 'self': node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
+			else: node.set_modulate(Color(1,1,1,p)) # Modulate the node and all it's children by p.
+			if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
+			ftimer.start(time) # Start the timer at 0.5 seconds.
+			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+	
+	# If fade is in then fade in.
+	elif fade == 'in':
+		percent = 0
+		# While percent isn't 0 fade from black.
+		while percent != 100:
+			percent += spd # Add spd to percent.
+			if percent > 100: percent = 100 # Make percent 100 if it goes above.
+			p = float(percent)/100 # Make p percent/100
+			if mod == 'self': node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
+			else: node.set_modulate(Color(1,1,1,p)) # Modulate the node and all it's children by p.
+			if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
+			ftimer.start(time) # Start the timer at 0.5 seconds.
+			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+	
+	# Else print an error if fade is not in or out.
+	else:
+		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
+	
+	ftimer.queue_free() # Free the timer.
 
 
 
@@ -424,6 +657,10 @@ func nodelayers(index):
 # A function to do the repetitive tasks needed when adding a new layer.
 func layersetup(path, z):
 	
+	# If the file doesn't exist then say so, let the user fix the rest.
+	if not model.file_exists(path):
+		print('Error: The given content ' + path + ' does not exist!')
+	
 	var content = load(path) # Load the content using it's path.
 	var cname = '' # The name of the content
 	
@@ -432,7 +669,7 @@ func layersetup(path, z):
 	else:
 		cname = layernames(path) # Get a unique name using the content name.
 	
-	var layer = {"name": cname, "path": path, "content": content, "layer": z} # Make a dictionary of content information.
+	var layer = {"name": cname, "path": path, "content": content, "layer": z, "position": Vector2(0,0)} # Make a dictionary of content information.
 	layers.append(layer) # Append the dictionary to the layers array.
 	var index = layers.size() - 1 # Get the index of the insertion.
 	layers[index]['index'] = index # Make the index a key.
@@ -451,21 +688,77 @@ func layersetup(path, z):
 
 
 
+# Mash helper function for adding meshes.
+func maskmesh(info, node, masknode):
+	var meshnode = MeshInstance2D.new() # Create a new MeshInstance2D.
+	meshnode.name = masknode # Name the node masknode.
+	meshnode.position = Vector2(OS.window_size.x/2, OS.window_size.y/2) # Position correctley.
+	meshnode.mesh = load('res://models/' + masknode + '.tres') # Load the mesh model.
+	meshnode.visible = false # Make the mesh invisible.
+	
+	var areanode = Area2D.new() # Create a new Area2D.
+	var shapenode = CollisionPolygon2D.new() # Create a new Collision
+	areanode.connect('area_entered', self, '_character_entered', [areanode]) # Connect the Area2D to a signal for when other areas enter it.
+	areanode.connect('area_exited', self, '_character_exited', [areanode]) # Connect the Area2D to a signal for when other areas exit it.
+	areanode.add_child(shapenode) # Add the CP2D as a child of Area2D.
+	AddMeshShape(areanode, meshnode) # Create a Shape for CP2D to use out of the mesh.
+	meshnode.add_child(areanode) # Add the Area2D as a child of meshnode.
+	layers[info[1]]['area'] = areanode # Add the Area2D as a key for meshnode to access.
+	node.add_child(meshnode) # Add meshnode as a child of imgnode.
+
+
+
 # Called when a character touches another.
 func _character_entered(area, ogarea):
-	if ogarea.get_parent() == collider:
-		var position = Node.new() # Creates a new Node node for positioning the area's parent node.
-		position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
-		position.set_name(area.get_parent().name + '(Position)') # Give it the area parent name + (Position)
-		add_child(position) # Add position as a child of Display.
-		get_node(area.get_parent().name + '(Position)').move(speed, area.get_parent()) # Call position's move function with collider's speed.
+	if collidee == null:
+		if ogarea.get_parent() == collider:
+			_movement(area) # Move the area.
+	else:
+		if area.get_parent() == collidee and ogarea.get_parent() == collider:
+			_movement(area) # Move the area.
 
 
 
 # Called when a character stops touching another.
 func _character_exited(area, ogarea):
-	if ogarea.get_parent() == collider:
+	if collidee == null:
+		if ogarea.get_parent() == collider:
+			_end_movement(area) # Stop the area.
+	else:
+		if area.get_parent() == collidee and ogarea.get_parent() == collider:
+			_end_movement(area) # Stop the area.
+
+
+
+# Movement helper.
+func _movement(area):
+	var position = Node.new() # Creates a new Node node for positioning the area's parent node.
+	position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
+	position.set_name(area.get_parent().name + '(Position)') # Give it the area parent name + (Position)
+	add_child(position) # Add position as a child of Display.
+	get_node(area.get_parent().name + '(Position)').move(speed, area.get_parent(), timer) # Call position's move function with collider's speed.
+
+
+
+# End-Movement helper.
+func _end_movement(area):
+	# If the timer is 0 then stop the motion.
+	if get_node(area.get_parent().name + '(Position)').timer == 0:
 		get_node(area.get_parent().name + '(Position)').finish() # Ends node movement when the collider leaves the area.
+		
+	# Else if timer > 0 create a timer to determine when to end it.
+	else:
+		var endtimer = Timer.new() # Create a new timer node.
+		add_child(endtimer) # Add the timer node as a child of Display.
+		endtimer.start(get_node(area.get_parent().name + '(Position)').timer) # Set the Timer to the given time.
+		endtimer.connect('timeout', self, '_timer_end', [get_node(area.get_parent().name + '(Position)'), endtimer]) # On Timer end call _timer_end().
+
+
+
+# Function called when position timer ends.
+func _timer_end(area, time):
+	time.queue_free() # Free the timer node.
+	area.finish() # Ends node movement.
 
 
 
