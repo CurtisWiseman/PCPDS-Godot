@@ -197,7 +197,7 @@ func mask(mask, path, type, z):
 
 
 # Add a face to an alreadyt existing body.
-func face(facepath, body, x=0, y=0):
+func face(facepath, body, x=0, y=0, type='face'):
 	
 	var index # Used to find the layers index of the body.
 	
@@ -219,7 +219,53 @@ func face(facepath, body, x=0, y=0):
 	facenode.texture = load(facepath) # Set the node's texture to the face image.
 	facenode.position = Vector2(x,y) # Set the face's position to x and y.
 	layers[index]['node'].add_child(facenode) # Add as a child of the body node.
-	layers[index]['face'] = facenode # Add the face node the dictionary.
+	if type == 'face':
+		layers[index]['face'] = facenode # Add the face node the dictionary.
+	else:
+		layers[index]['other'] = facenode # Add the accessory, blush, whatever to other.
+
+
+
+# Switch content with a new texture.
+func switch(content, new, type, face=false, x=0, y=0):
+	
+	var position = false # Don't change position by default.
+	var index = getindex(content) # Get index.
+	if index == null: return # If index is null return.
+	
+	# Error if incorrect type.
+	if type != 'image' and type != 'video' and type != 'mask':
+		print('Error: Switch only accepts image, video, and mask as types. No type: ' + type + '.')
+		return
+	
+	# If types don't match there's a problem.
+	if type != layers[index]['type'] and !layers[index].get('mask'):
+		print('Error: Wrong switch type. Types do not match.')
+		return
+	
+	# If x or y is not 0 then set position to true.
+	if x != 0 or y !=0:
+		position = true
+	
+	# If image then change the face or image texture.
+	if type == 'image':
+		if face:
+			layers[index]['face'].texture = load(new)
+			if position: layers[index]['face'].position = Vector2(x,y)
+		else:
+			layers[index]['node'].texture = load(new)
+			if position: position(content, x, y)
+	
+	# If video then change the stream and play it.
+	elif type == 'video':
+		layers[index]['node'].stream = load(new)
+		layers[index]['node'].play()
+		if position: position(content, x, y)
+	
+	# Else change the mask of image/video being masked.
+	else:
+		layers[index]['node'].material.shader.set_default_texture_param('mask_texture', load(new))
+		if position: position(content, x, y)
 
 
 
@@ -434,6 +480,7 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 	var percent # Used to calculate modulation.
 	var ftimer = Timer.new() # A timer node.
 	var face = null # If content has face.
+	var other = null # If content has other.
 	var p # A var for percentage calculation.
 	add_child(ftimer) # Add the timer as a child.
 	ftimer.one_shot = true # Make the timer one shot.
@@ -470,6 +517,10 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 	# Get a face if it exists.
 	if layers[index].get('face') and mod == 'self':
 		face = layers[index]['face']
+		
+	# Get the other if it exists.
+	if layers[index].get('other') and mod == 'self':
+		other = layers[index]['other']
 	
 	# If fade is out then fade out.
 	if fade == 'out':
@@ -482,6 +533,7 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 			if mod == 'self': node.set_self_modulate(Color(p,p,p,1)) # Modulate the node by p.
 			else: node.set_modulate(Color(p,p,p,1)) # Modulate the node and all it's children by p.
 			if face: face.set_self_modulate(Color(p,p,p,1)) # Modulate the face by p.
+			if other: other.set_self_modulate(Color(p,p,p,1)) # Modulate the other by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
 	
@@ -496,6 +548,7 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 			if mod == 'self': node.set_self_modulate(Color(p,p,p,1)) # Modulate the node by p.
 			else: node.set_modulate(Color(p,p,p,1)) # Modulate the node and all it's children by p.
 			if face: face.set_self_modulate(Color(p,p,p,1)) # Modulate the face by p.
+			if other: other.set_self_modulate(Color(p,p,p,1)) # Modulate the other by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
 	
@@ -514,6 +567,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 	var percent # Used to calculate modulation.
 	var ftimer = Timer.new() # A timer node.
 	var face = null # If content has face.
+	var other = null # If content has other.
 	var p # A var for percentage calculation.
 	add_child(ftimer) # Add the timer as a child.
 	ftimer.one_shot = true # Make the timer one shot.
@@ -551,6 +605,10 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 	if layers[index].get('face') and mod == 'self':
 		face = layers[index]['face']
 	
+	# Get the other if it exists.
+	if layers[index].get('other') and mod == 'self':
+		other = layers[index]['other']
+	
 	# If fade is out then fade out.
 	if fade == 'out':
 		percent = 100
@@ -562,6 +620,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 			if mod == 'self': node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 			else: node.set_modulate(Color(1,1,1,p)) # Modulate the node and all it's children by p.
 			if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
+			if other: other.set_self_modulate(Color(1,1,1,p)) # Modulate the other by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
 	
@@ -576,6 +635,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 			if mod == 'self': node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 			else: node.set_modulate(Color(1,1,1,p)) # Modulate the node and all it's children by p.
 			if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
+			if other: other.set_self_modulate(Color(1,1,1,p)) # Modulate the other by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
 	
@@ -584,6 +644,26 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
 	
 	ftimer.queue_free() # Free the timer.
+
+
+
+# Function to get the index of a node.
+func getindex(content):
+	
+	var index # The index of content.
+	
+	# Find the index of content.
+	for i in range(layers.size()):
+		
+		# Return index if found.
+		if layers[i]['name'] == content:
+			index = i
+			return index
+	
+	# If content node not found then print an error and return.
+	if index == null:
+		print("Error: No node named " + content + " exists!")
+		return
 
 
 
