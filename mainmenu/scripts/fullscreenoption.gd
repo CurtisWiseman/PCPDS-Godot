@@ -44,13 +44,13 @@ func rewrite(scrset):
 	# Remove usersettings.
 	var dir = Directory.new()
 	dir.remove("user://usersettings.tres")
-
+	
 	var newsettings = '' # New settings file.
-
-	# Loop to append new settings.
-	for i in range(start):
+	
+	# Get settings before start of screen.
+	for i in range(0, start):
 		newsettings += settings[i]
-
+	
 	# Remove the current screen setting by skipping over it in newsettings.
 	if screen == 'w':
 		for i in range(start + 16, settings.length()):
@@ -61,8 +61,8 @@ func rewrite(scrset):
 
 	# Append the newsettings to usersettings.
 	usersettings.open("user://usersettings.tres", File.WRITE) # Create the new settings file.
-	usersettings.store_string(newsettings) #
-	usersettings.store_string('screen:' + scrset + '\n') #
+	usersettings.store_string(newsettings) # Store the settings with old screen option removed.
+	usersettings.store_line('screen:' + scrset) # Store new screen option at the end of the file.
 	usersettings.close() # Close user settings to finish.
 	
 
