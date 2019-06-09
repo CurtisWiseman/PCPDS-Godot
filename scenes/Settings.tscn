@@ -17,6 +17,7 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="FullscreenOptions" type="OptionButton" parent="CanvasLayer"]
 anchor_left = 1.0
