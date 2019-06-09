@@ -29,7 +29,8 @@ func _ready():
 		file.store_line(settings + 'master_volume:1.000')
 		settings = file.get_as_text()
 		file.close()
-	else: master_volume = float(settings.substr(settings.find('master_volume:', 0) + 14, 5))
+	else:
+		master_volume = float(settings.substr(settings.find('master_volume:', 0) + 14, 5))
 	
 	# Get the music volume or create it.
 	if settings.find('music_volume:', 0) == -1:
