@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Pause_Screen.gd" type="Script" id=1]
+
+[node name="pause_screen" type="Control"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Pause_Background" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 0.627451 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="Pause_Buttons" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 931.0
+margin_top = 494.0
+margin_right = 989.0
+margin_bottom = 586.0
+
+[node name="Save" type="Button" parent="CenterContainer/Pause_Buttons"]
+margin_right = 58.0
+margin_bottom = 20.0
+text = "Save"
+
+[node name="Load" type="Button" parent="CenterContainer/Pause_Buttons"]
+margin_top = 24.0
+margin_right = 58.0
+margin_bottom = 44.0
+text = "Load"
+
+[node name="History" type="Button" parent="CenterContainer/Pause_Buttons"]
+margin_top = 48.0
+margin_right = 58.0
+margin_bottom = 68.0
+text = "History"
+
+[node name="Quit" type="Button" parent="CenterContainer/Pause_Buttons"]
+margin_top = 72.0
+margin_right = 58.0
+margin_bottom = 92.0
+text = "Quit"
+
+[node name="Quit_Confirmation" type="ConfirmationDialog" parent="CenterContainer/Pause_Buttons/Quit"]
+margin_right = 200.0
+margin_bottom = 70.0
+window_title = "Confirm Exit"
+dialog_text = "Are you sure you want to quit?"
+
+[connection signal="pressed" from="CenterContainer/Pause_Buttons/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="CenterContainer/Pause_Buttons/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="CenterContainer/Pause_Buttons/History" to="." method="_on_History_pressed"]
+[connection signal="pressed" from="CenterContainer/Pause_Buttons/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="confirmed" from="CenterContainer/Pause_Buttons/Quit/Quit_Confirmation" to="." method="_on_Quit_Confirmation_confirmed"]

@@ -4,6 +4,8 @@ extends Node
 var display
 var dialogue
 var sound
+var canvas
+var pause
 
 # Load scripts.
 var window = load("res://scripts/windowsettings.gd").new() # Variable to use functions from windowsettings.
@@ -13,6 +15,13 @@ func _ready():
 	
 	# Set the global rootnode to the root of the current scene.
 	global.rootnode = get_node('.').owner
+	
+	
+	
+	# Make a canvaslayer node for keeping things on top such as the dialogue box.
+	canvas = CanvasLayer.new()
+	canvas.name = 'Canvas'
+	add_child(canvas)
 	
 	
 	
@@ -34,6 +43,7 @@ func _ready():
 	saydialogue.rect_position = Vector2(60, 840) # Set the position of the dialogue.
 	saydialogue.text = 'This is some test dialogue to show what it looks like when it is read out.' # R E M O V E   R E M O V E   R E M O V E   R E M O V E   R E M O V E   R E M O V E
 	saydialogue.set_script(load('res://scripts/dialogue.gd')) # Set the node's script to dialogue.gd.
+	saydialogue.connect('has_been_read', dialogue, '_on_Dialogue_has_been_read')
 	dialogue.add_child(saydialogue) # Add ass a child of dialogue box.
 	
 	
@@ -57,10 +67,25 @@ func _ready():
 	dialogue.polygon = [Vector2(0, 800), Vector2(1920, 800), Vector2(1920, 1080), Vector2(0, 1080)] # Define the endpoints of the polygon.
 	dialogue.color = Color(0, 0, 0, 0.6) # Set the color of the polygon2D.
 	dialogue.set_script(load('res://scripts/dialoguebox.gd')) # Set the node's script to dialoguebox.gd.
-	add_child(dialogue) # Add the dialogue box to the scene.
-
+	
+	
+	
 	# Load the sound system under the sound variable.
 	sound = Node.new() # Create a new Node node.
 	sound.set_name('Sound') # Give it the name Sound.
 	sound.set_script(load('res://scripts/sound.gd')) # Attatch the sound script.
 	add_child(sound) # Add the node under the Systems node.
+	
+	
+	
+	# Load the pause screen system under the pause variable.
+	pause = Control.new() # Make a new contol node.
+	pause.name = 'Pause' # Name the node Pause.
+	pause = load('res://scenes/Pause_Screen.tscn').instance() # Attatch the Pause_Screen scene to pause.
+	pause.visible = false # Make the scene inisible.
+
+
+# Function to view the dialogue box on a scene.
+func dialogue():
+	canvas.add_child(dialogue)
+	canvas.add_child(pause)
