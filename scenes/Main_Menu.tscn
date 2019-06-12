@@ -46,5 +46,6 @@ window_title = "Confirm Exit"
 dialog_text = "Are you sure you want to quit?"
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="confirmed" from="CanvasLayer/Quit/Quit_Confirmation" to="." method="_on_Quit_Confirmation_confirmed"]

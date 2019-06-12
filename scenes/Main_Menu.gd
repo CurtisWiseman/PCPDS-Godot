@@ -22,6 +22,9 @@ func _physics_prcoess(delta):
 func _on_Start_pressed():
 	get_tree().change_scene('res://scenes/Test.tscn')
 
+func _on_Settings_pressed():
+	get_tree().change_scene('res://scenes/Settings.tscn')
+
 func _on_Quit_pressed():
 	get_node('CanvasLayer/Quit/Quit_Confirmation').popup_centered()
 
