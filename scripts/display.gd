@@ -201,6 +201,9 @@ func face(facepath, body, x=0, y=0, type='face'):
 	
 	var index # Used to find the layers index of the body.
 	
+	# Get the node name of the path.
+	body = getname(body)
+	
 	# Find the index of the body.
 	for i in range(layers.size()):
 		
@@ -275,6 +278,9 @@ func remove(cname):
 	var index # The index cname is in layers.
 	var parent # The parent of the cname node.
 	
+	# Get the node name of the path.
+	cname = getname(cname)
+	
 	# Find the index of then content using cname.
 	for i in range(layers.size()):
 		
@@ -326,6 +332,9 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	var childtype # The type of the child node.
 	var haschild = false # True if the node has a child.
 	var mv # Will be set to y if y is a string.
+	
+	# Get the node name of the path.
+	cname = getname(cname)
 	
 	# Find the index of the given node.
 	for i in range(layers.size()):
@@ -485,6 +494,9 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 	add_child(ftimer) # Add the timer as a child.
 	ftimer.one_shot = true # Make the timer one shot.
 	
+	# Get the node name of the path.
+	content = getname(content)
+	
 	# Find the index of content.
 	for i in range(layers.size()):
 		
@@ -572,6 +584,9 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 	add_child(ftimer) # Add the timer as a child.
 	ftimer.one_shot = true # Make the timer one shot.
 	
+	# Get the node name of the path.
+	content = getname(content)
+	
 	# Find the index of content.
 	for i in range(layers.size()):
 		
@@ -651,6 +666,9 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 func getindex(content):
 	
 	var index # The index of content.
+	
+	# Get the node name of the path.
+	content = getname(content)
 	
 	# Find the index of content.
 	for i in range(layers.size()):
@@ -875,6 +893,21 @@ func AddMeshShape(area, mesh):
 		# Add created shapes to this collision body
 		# `0` indicates the first shape owner which is `CollisionPolygon2D'
 		area.shape_owner_add_shape(0, sh)
+
+
+
+# Function to get the node name of a path.
+func getname(path):
+	var node = '' # Used to build node name.
+	
+	path = path.left(path.find_last('.')) # Remove the file extension.
+	
+	# Use the fact that '/' cannot be in file names to find the last slash, and thus the image name after it.
+	for i in range(path.find_last('/') + 1, path.length()):
+		node += path[i]
+	
+	return node
+
 
 
 

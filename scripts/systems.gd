@@ -9,12 +9,18 @@ var pause
 
 # Load scripts.
 var window = load("res://scripts/windowsettings.gd").new() # Variable to use functions from windowsettings.
+var chr = load("res://scripts/char.gd").new() # Variable to reference character images.
 
 # Load nodes for all game systems.
 func _ready():
 	
 	# Set the global rootnode to the root of the current scene.
 	global.rootnode = get_node('.').owner
+	
+	
+	
+	# Ready the character script.
+	chr._ready()
 	
 	
 	

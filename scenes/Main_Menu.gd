@@ -9,7 +9,11 @@ func _ready():
 	# Display the main_menu.png for the settings background.
 	systems.display.background('res://mainmenu/DemoMenu_hq.ogv','video')
 	
-	get_node('CanvasLayer/Start').grab_focus()
+	get_node('CanvasLayer/Start').grab_focus() # Grab the focus of start.
+	
+	
+
+
 
 func _physics_prcoess(delta):
 	if get_node('CanvasLayer/Load').is_hovered() == true:
@@ -18,6 +22,8 @@ func _physics_prcoess(delta):
 		get_node('CanvasLayer/Settings').grab_focus()
 	if get_node('CanvasLayer/Quit').is_hovered() == true:
 		get_node('CanvasLayer/Quit').grab_focus()
+
+
 
 func _on_Start_pressed():
 	get_tree().change_scene('res://scenes/Test.tscn')
