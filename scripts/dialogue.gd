@@ -9,7 +9,8 @@ func _input(event):
 	
 	if event.is_pressed():
 		if get_visible_characters() > get_total_character_count():
-			set_visible_characters(0)
+			#set_visible_characters(0)
+			#this was actually unnecessary. 
 			#set_bbcode(textArray[counter])
 			
 			emit_signal("has_been_read")
