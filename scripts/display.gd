@@ -482,6 +482,26 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 
 
 
+# Resize the given image.
+func resize(path, x=100, y=100, face=false):
+	
+	# Get the index on make the scaling factor.
+	var index = getindex(path)
+	var scale = Vector2(float(x)/100, float(y)/100)
+	var size
+	
+	# Set the scale then attempt to position it close to where it was originally (not exact).
+	if face:
+		layers[index]['face'].set_scale(scale)
+		size = layers[index]['face'].texture.get_size()
+		layers[index]['face'].position = Vector2(layers[index]['face'].position.x + (size.x - (size.x * scale.x))/2, layers[index]['face'].position.y + (size.y - (size.y * scale.y))/2)
+	else:
+		layers[index]['node'].set_scale(scale)
+		size = layers[index]['node'].texture.get_size()
+		layers[index]['node'].position = Vector2(layers[index]['node'].position.x + (size.x - (size.x * scale.x))/2, layers[index]['node'].position.y + (size.y - (size.y * scale.y))/2)
+
+
+
 # Function to fade in an out from black.
 func fadeblack(content, fade, spd, mod='self', time=0.5):
 	
