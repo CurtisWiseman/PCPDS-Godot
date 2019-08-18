@@ -3,7 +3,7 @@ extends Node
 var systems # Define systems for use globally.
 
 func _ready():
-	systems = get_node('Systems') # Load systems with the Systems node.
+	systems = $Systems # Load systems with the Systems node.
 	systems.window.screensetting() # Set the default screen setting.
 	
 	# Display the main_menu.png for the settings background.
@@ -16,7 +16,7 @@ func _ready():
 
 
 func _physics_prcoess(delta):
-	if get_node('CanvasLayer/Load').is_hovered() == true:
+	if $'CanvasLayer/Load'.is_hovered() == true:
 		get_node('CanvasLayer/Load').grab_focus()
 	if get_node('CanvasLayer/Settings').is_hovered() == true:
 		get_node('CanvasLayer/Settings').grab_focus()

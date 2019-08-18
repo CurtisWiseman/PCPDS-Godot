@@ -1,0 +1,6 @@
+(Hippo): Press space or click to continue!
+(Davoo): BBCode is partly supported, allowing for [b]bold[/b] and [i]italic[/i] text. Strike-through and underlined text does not work, unfortunately.
+Hmm, I dunno...seems a little shoddy.
+[play epic fanfare]
+*Choice 1*
+*Choice 2*
