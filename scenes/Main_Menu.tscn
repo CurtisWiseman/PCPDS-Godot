@@ -44,7 +44,6 @@ margin_right = 83.0
 margin_bottom = 58.0
 window_title = "Confirm Exit"
 dialog_text = "Are you sure you want to quit?"
-
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_Quit_pressed"]
