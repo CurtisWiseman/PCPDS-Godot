@@ -1,11 +1,14 @@
 extends Node
 
 # Node names.
-var display
-var dialogue
 var sound
-var canvas
+var timer
 var pause
+var canvas
+var display
+var nametag
+var dialogue
+var dialogueBox
 
 # Load scripts.
 var window = load("res://scripts/windowsettings.gd").new() # Variable to use functions from windowsettings.
@@ -24,55 +27,12 @@ func _ready():
 	
 	
 	
-	# Make a canvaslayer node for keeping things on top such as the dialogue box.
-#	canvas = CanvasLayer.new()
-#	canvas.name = 'Canvas'
-#	add_child(canvas)
-	
-	
-	
 	# Load the image system under the display variable.
 	display = Sprite.new() # Create a new Sprite node.
 	display.set_name('Display') # Give it the name Display.
 	display.set_script(load('res://scripts/display.gd')) # Attatch the display script.
 	add_child(display) # Add the node under the Systems node.
 	
-	
-	
-#	# Load the dialogue system under the dialogue variable.
-#	dialogue = Polygon2D.new() # Create a new polygon2D.
-#	dialogue.name = 'Dialogue Box' # Give the name Dialogue Box.
-	
-#	var saydialogue = RichTextLabel.new() # Create a new richtextlabel.
-#	saydialogue.name = "Dialogue" # Make the node name Dialogue.
-#	saydialogue.rect_size = Vector2(1860,160) # Set the rectangle size.
-#	saydialogue.rect_position = Vector2(60, 840) # Set the position of the dialogue.
-#	saydialogue.text = 'This is some test dialogue to show what it looks like when it is read out.' # R E M O V E   R E M O V E   R E M O V E   R E M O V E   R E M O V E   R E M O V E
-#	saydialogue.set_script(load('res://scripts/dialogue.gd')) # Set the node's script to dialogue.gd.
-#	saydialogue.connect('has_been_read', dialogue, '_on_Dialogue_has_been_read')
-#	dialogue.add_child(saydialogue) # Add ass a child of dialogue box.
-	
-	
-#	var nametag = Label.new() # Create a new label.
-#	nametag.name = "Nametag" # Make the node name nametag.
-#	nametag.rect_size = Vector2(300, 100) # Set the label's size.
-#	nametag.rect_position = Vector2(170, 785) # Set the label's position.
-#	nametag.text = 'Test' # R E M O V E   R E M O V E   R E M O V E   R E M O V E   R E M O V E   R E M O V E
-#	#nametag.font # Need to get a suitable size font for the label.
-#	dialogue.add_child(nametag) # Add as a child of the dialogue box.
-	
-#	var timer = Timer.new() # Create a new timer.
-#	timer.process_mode = 1 # Set process mode to idle.
-#	timer.one_shot = false # Make the timer recurring.
-#	timer.autostart = true # Start the timer as soon as it is on screen.
-#	timer.wait_time = 0.07 # Set the text speed using the wait_time.
-#	timer.name = "Timer" # Give the timer the name Timer.
-#	timer.connect('timeout', saydialogue, '_on_Timer_timeout') # Connect the timer to saydialogue.
-#	dialogue.add_child(timer) # Add under the dialogue box.
-	
-#	dialogue.polygon = [Vector2(0, 800), Vector2(1920, 800), Vector2(1920, 1080), Vector2(0, 1080)] # Define the endpoints of the polygon.
-#	dialogue.color = Color(0, 0, 0, 0.6) # Set the color of the polygon2D.
-#	dialogue.set_script(load('res://scripts/dialoguebox.gd')) # Set the node's script to dialoguebox.gd.
 	
 	
 	# Load the sound system under the sound variable.
@@ -90,7 +50,84 @@ func _ready():
 	pause.visible = false # Make the scene invisible.
 
 
-# Function to view the dialogue box on a scene.
+
+# Function to view the dialogue box on a scene and add the pause menu.
 func dialogue():
-#	canvas.add_child(dialogue)
-	$Canvas.add_child(pause)
+	
+	# Make a canvaslayer node for keeping things on top such as the dialogue box.
+	canvas = CanvasLayer.new()
+	canvas.name = 'Dialogue Canvas'
+	add_child(canvas)
+	
+	# Load the DialogueBox under canvas.
+	dialogueBox = ColorRect.new()
+	dialogueBox.name = 'Dialogue Box'
+	dialogueBox.color = Color(0, 0, 0, 0.85);
+	dialogueBox.margin_bottom = 1050;
+	dialogueBox.margin_top = 760;
+	dialogueBox.margin_left = 360;
+	dialogueBox.margin_right = 1560;
+	dialogueBox.set_script(load('res://scripts/dialoguebox.gd'))
+	
+	# Load the dialogue RichTextLaabel under dialogueBox.
+	dialogue = RichTextLabel.new();
+	dialogue.name = 'Dialogue';
+	dialogue.bbcode_enabled = true;
+	dialogue.margin_bottom = 245;
+	dialogue.margin_top = 110;
+	dialogue.margin_left = 50;
+	dialogue.margin_right = 990;
+	dialogue.set_script(load('res://scripts/dialogue.gd'))
+	
+	# Set the default font for dialogue.
+	var defaultFontDialogueDATA = DynamicFontData.new()
+	defaultFontDialogueDATA.font_path = 'res://fonts/Dialogue/linux_libertine/LinLibertine_R.ttf'
+	var defaultFontDialogue = DynamicFont.new()
+	defaultFontDialogue.font_data = defaultFontDialogueDATA
+	defaultFontDialogue.size = 32
+	dialogue.add_font_override("normal_font", defaultFontDialogue)
+	var defaultFontDialogueDATAB = DynamicFontData.new()
+	defaultFontDialogueDATAB.font_path = 'res://fonts/Dialogue/linux_libertine/LinLibertine_RB.ttf'
+	var defaultFontDialogueB = DynamicFont.new()
+	defaultFontDialogueB.font_data = defaultFontDialogueDATAB
+	defaultFontDialogueB.size = 32
+	dialogue.add_font_override("bold_font", defaultFontDialogueB)
+	var defaultFontDialogueDATAI = DynamicFontData.new()
+	defaultFontDialogueDATAI.font_path = 'res://fonts/Dialogue/linux_libertine/LinLibertine_RI.ttf'
+	var defaultFontDialogueI = DynamicFont.new()
+	defaultFontDialogueI.font_data = defaultFontDialogueDATAI
+	defaultFontDialogueI.size = 32
+	dialogue.add_font_override("italics_font", defaultFontDialogueI)
+	dialogueBox.add_child(dialogue);
+	
+	# Load the Namteag under dialogueBox.
+	nametag = Label.new();
+	nametag.name = 'Nametag';
+	nametag.text = 'Name';
+	nametag.valign = 1;
+	nametag.margin_bottom = 101;
+	nametag.margin_top = 1;
+	nametag.margin_left = 58;
+	nametag.margin_right = 255;
+	
+#	# Set the default font for nametags.
+	var defaultFontNametagDATA = DynamicFontData.new()
+	defaultFontNametagDATA.font_path = 'res://fonts/Nametag/coolvetica/coolvetica rg.ttf'
+	var defaultFontNametag = DynamicFont.new()
+	defaultFontNametag.font_data = defaultFontNametagDATA
+	defaultFontNametag.size = 60
+	nametag.add_font_override("font", defaultFontNametag)
+	dialogueBox.add_child(nametag);
+	
+	# Load the character timer under dialogueBox.
+	timer = Timer.new();
+	timer.name = 'Timer';
+	timer.process_mode = 1;
+	timer.wait_time = 0.07;
+	timer.one_shot = false;
+	timer.autostart = true;
+	timer.connect("timeout", dialogue, "_on_Timer_timeout");
+	dialogueBox.add_child(timer);
+	
+	canvas.add_child(dialogueBox);
+	canvas.add_child(pause)

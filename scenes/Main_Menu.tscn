@@ -10,6 +10,7 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="Start" type="Button" parent="CanvasLayer"]
 margin_left = 170.0
