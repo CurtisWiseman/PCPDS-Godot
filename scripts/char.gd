@@ -19,7 +19,7 @@ func _ready():
 	endlesswar = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': [], 'knife': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}}	
 	hippo = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
 	mage = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-	munchy = {'afl': [], 'stand': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'squat': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
+	munchy = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}}
 	nate = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
 	thoth = 'res://images/characters/Thoth/thoth.png'
 	tom = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'blush': null, 'body': []}
@@ -59,47 +59,26 @@ func insert(character, file, type):
 					actiongiraffe.body.append(file)
 			
 			elif type == 'face':
-				match emotedecipher(file):
-					1: actiongiraffe.angry.append(file)
-					2: actiongiraffe.confused.append(file)
-					3: actiongiraffe.happy.append(file)
-					4: actiongiraffe.neutral.append(file)
-					5: actiongiraffe.sad.append(file)
-					6: actiongiraffe.shock.append(file)
-					7: actiongiraffe.smitten.append(file)
+				emotedecipher(file, 'actiongiraffe', '')
 			
 			elif type == 'afl':
 				if file.findn('blush') != -1:
 					actiongiraffe.blush = file
 				else:
 					actiongiraffe.afl.append(file)
-		
+
 		'Digibro':
 			if type == 'body':
 				if file.findn('campus') != -1:
 					digibro.campus.body.append(file)
 				elif file.findn('casual') != -1:
 					digibro.casual.body.append(file)
-					
+			
 			elif type == 'face':
 				if file.findn('campus') != -1:
-					match emotedecipher(file):
-						1: digibro.campus.angry.append(file)
-						2: digibro.campus.confused.append(file)
-						3: digibro.campus.happy.append(file)
-						4: digibro.campus.neutral.append(file)
-						5: digibro.campus.sad.append(file)
-						6: digibro.campus.shock.append(file)
-						7: digibro.campus.smitten.append(file)
+					emotedecipher(file, 'digibro', '.campus')
 				elif file.findn('casual') != -1:
-					match emotedecipher(file):
-						1: digibro.casual.angry.append(file)
-						2: digibro.casual.confused.append(file)
-						3: digibro.casual.happy.append(file)
-						4: digibro.casual.neutral.append(file)
-						5: digibro.casual.sad.append(file)
-						6: digibro.casual.shock.append(file)
-						7: digibro.casual.smitten.append(file)
+					emotedecipher(file, 'digibro', '.casual')
 			
 			elif type == 'afl':
 				if file.findn('blush') != -1:
@@ -112,8 +91,7 @@ func insert(character, file, type):
 						digibro.casual.blush = file
 				else:
 					digibro.afl.append(file)
-					
-		
+
 		'Endless War':
 			if type == 'body':
 				endlesswar.body.append(file)
@@ -121,23 +99,9 @@ func insert(character, file, type):
 			
 			elif type == 'face':
 				if file.findn('knife') != -1:
-					match emotedecipher(file):
-						1: endlesswar.knife.angry.append(file)
-						2: endlesswar.knife.confused.append(file)
-						3: endlesswar.knife.happy.append(file)
-						4: endlesswar.knife.neutral.append(file)
-						5: endlesswar.knife.sad.append(file)
-						6: endlesswar.knife.shock.append(file)
-						7: endlesswar.knife.smitten.append(file)
+					emotedecipher(file, 'endlesswar', '.knife')
 				else:
-					match emotedecipher(file):
-						1: endlesswar.angry.append(file)
-						2: endlesswar.confused.append(file)
-						3: endlesswar.happy.append(file)
-						4: endlesswar.neutral.append(file)
-						5: endlesswar.sad.append(file)
-						6: endlesswar.shock.append(file)
-						7: endlesswar.smitten.append(file)
+					emotedecipher(file, 'endlesswar', '')
 			
 			elif type == 'afl':
 				if file.findn('blush') != -1:
@@ -147,37 +111,17 @@ func insert(character, file, type):
 						endlesswar.blush.append(file)
 				else:
 					endlesswar.afl.append(file)
-		
+
 		'Hippo':
 			if type == 'body':
 				if file.findn('campus') != -1:
 					hippo.campus.body.append(file)
 				elif file.findn('casual') != -1:
 					hippo.casual.body.append(file)
-					
+			
 			elif type == 'face':
-				match emotedecipher(file):
-					1: 
-						hippo.campus.angry.append(file)
-						hippo.casual.angry.append(file)
-					2: 
-						hippo.campus.confused.append(file)
-						hippo.casual.confused.append(file)
-					3: 
-						hippo.campus.happy.append(file)
-						hippo.casual.happy.append(file)
-					4: 
-						hippo.campus.neutral.append(file)
-						hippo.casual.neutral.append(file)
-					5: 
-						hippo.campus.sad.append(file)
-						hippo.casual.sad.append(file)
-					6: 
-						hippo.campus.shock.append(file)
-						hippo.casual.shock.append(file)
-					7: 
-						hippo.campus.smitten.append(file)
-						hippo.casual.smitten.append(file)
+				emotedecipher(file, 'hippo', '.casual')
+				emotedecipher(file, 'hippo', '.campus')
 			
 			elif type == 'afl':
 				if file.findn('blush') != -1:
@@ -190,33 +134,19 @@ func insert(character, file, type):
 						hippo.casual.blush = file
 				else:
 					hippo.afl.append(file)
-		
+
 		'Mage':
 			if type == 'body':
 				if file.findn('campus') != -1:
 					mage.campus.body.append(file)
 				elif file.findn('casual') != -1:
 					mage.casual.body.append(file)
-					
+			
 			elif type == 'face':
 				if file.findn('campus') != -1:
-					match emotedecipher(file):
-						1: mage.campus.angry.append(file)
-						2: mage.campus.confused.append(file)
-						3: mage.campus.happy.append(file)
-						4: mage.campus.neutral.append(file)
-						5: mage.campus.sad.append(file)
-						6: mage.campus.shock.append(file)
-						7: mage.campus.smitten.append(file)
+					emotedecipher(file, 'mage', '.campus')
 				elif file.findn('casual') != -1:
-					match emotedecipher(file):
-						1: mage.casual.angry.append(file)
-						2: mage.casual.confused.append(file)
-						3: mage.casual.happy.append(file)
-						4: mage.casual.neutral.append(file)
-						5: mage.casual.sad.append(file)
-						6: mage.casual.shock.append(file)
-						7: mage.casual.smitten.append(file)
+					emotedecipher(file, 'mage', '.casual')
 			
 			elif type == 'afl':
 				if file.findn('blush') != -1:
@@ -229,43 +159,33 @@ func insert(character, file, type):
 						mage.casual.blush = file
 				else:
 					mage.afl.append(file)
-		
+
 		'Munchy':
 			if type == 'body':
-				if file.findn('squatting') != -1:
-					munchy.squat.body.append(file)
-				else:
-					munchy.stand.body.append(file)
-					
+				if file.findn('campus') != -1:
+					munchy.campus.body.append(file)
+				elif file.findn('casual') != -1:
+					munchy.casual.body.append(file)
+			
 			elif type == 'face':
 				if file.findn('squatting') != -1:
-					match emotedecipher(file):
-						1: munchy.squat.angry.append(file)
-						2: munchy.squat.confused.append(file)
-						3: munchy.squat.happy.append(file)
-						4: munchy.squat.neutral.append(file)
-						5: munchy.squat.sad.append(file)
-						6: munchy.squat.shock.append(file)
-						7: munchy.squat.smitten.append(file)
+					emotedecipher(file, 'munchy', '.campus.squatting')
+					emotedecipher(file, 'munchy', '.casual.squatting')
 				else:
-					match emotedecipher(file):
-						1: munchy.stand.angry.append(file)
-						2: munchy.stand.confused.append(file)
-						3: munchy.stand.happy.append(file)
-						4: munchy.stand.neutral.append(file)
-						5: munchy.stand.sad.append(file)
-						6: munchy.stand.shock.append(file)
-						7: munchy.stand.smitten.append(file)
+					emotedecipher(file, 'munchy', '.campus')
+					emotedecipher(file, 'munchy', '.casual')
 			
 			elif type == 'afl':
 				if file.findn('blush') != -1:
 					if file.findn('squatting') != -1:
-						munchy.squat.blush = file
+						munchy.campus.squatting.blush = file
+						munchy.casual.squatting.blush = file
 					else:
-						munchy.stand.blush = file
+						munchy.campus.blush = file
+						munchy.casual.blush = file
 				else:
 					munchy.afl.append(file)
-		
+
 		'Nate': 
 			if type == 'body':
 				if file.findn('campus') != -1:
@@ -274,28 +194,8 @@ func insert(character, file, type):
 					nate.casual.body.append(file)
 			
 			elif type == 'face':
-				match emotedecipher(file):
-					1: 
-						nate.campus.angry.append(file)
-						nate.casual.angry.append(file)
-					2: 
-						nate.campus.confused.append(file)
-						nate.casual.confused.append(file)
-					3: 
-						nate.campus.happy.append(file)
-						nate.casual.happy.append(file)
-					4: 
-						nate.campus.neutral.append(file)
-						nate.casual.neutral.append(file)
-					5: 
-						nate.campus.sad.append(file)
-						nate.casual.sad.append(file)
-					6: 
-						nate.campus.shock.append(file)
-						nate.casual.shock.append(file)
-					7: 
-						nate.campus.smitten.append(file)
-						nate.casual.smitten.append(file)
+				emotedecipher(file, 'nate', '.campus')
+				emotedecipher(file, 'nate', '.casual')
 			
 			elif type == 'afl':
 				if file.findn('blush') != -1:
@@ -308,20 +208,13 @@ func insert(character, file, type):
 						nate.casual.blush = file
 				else:
 					nate.afl.append(file)
-		
+
 		'Tom':
 			if type == 'body':
 					tom.body.append(file)
 			
 			elif type == 'face':
-				match emotedecipher(file):
-					1: tom.angry.append(file)
-					2: tom.confused.append(file)
-					3: tom.happy.append(file)
-					4: tom.neutral.append(file)
-					5: tom.sad.append(file)
-					6: tom.shock.append(file)
-					7: tom.smitten.append(file)
+				emotedecipher(file, 'tom', '')
 			
 			elif type == 'afl':
 				if file.findn('blush') != -1:
@@ -332,22 +225,22 @@ func insert(character, file, type):
 
 
 # Function decipher emotions and return a number corresponding to that emotion
-func emotedecipher(face):
+func emotedecipher(face, character, outfit):
 	
 	if face.findn('angry') != -1:
-		return 1
+		execute('systems.chr.'+character+outfit+'.angry.append("'+face+'")')
 	elif face.findn('confused') != -1:
-		return 2
+		execute('systems.chr.'+character+outfit+'.confused.append("'+face+'")')
 	elif face.findn('happy') != -1:
-		return 3
+		execute('systems.chr.'+character+outfit+'.happy.append("'+face+'")')
 	elif face.findn('neutral') != -1:
-		return 4
+		execute('systems.chr.'+character+outfit+'.neutral.append("'+face+'")')
 	elif face.findn('sad') != -1:
-		return 5
+		execute('systems.chr.'+character+outfit+'.sad.append("'+face+'")')
 	elif face.findn('shock') != -1:
-		return 6
+		execute('systems.chr.'+character+outfit+'.shock.append("'+face+'")')
 	elif face.findn('smitten') != -1 or face.findn('blush') != -1:
-		return 7
+		execute('systems.chr.'+character+outfit+'.smitten.append("'+face+'")')
 
 
 
@@ -412,3 +305,14 @@ func returnfaces(character):
 	files.sort()
 	dir.list_dir_end()
 	return files
+
+
+
+# Function to execute the code generated through parsing.
+func execute(parsedInfo):
+	var source = GDScript.new()
+	source.set_source_code('func eval():\n\tvar systems = global.rootnode.get_node("Systems")\n\t' + parsedInfo)
+	source.reload()
+	var script = Reference.new()
+	script.set_script(source)
+	script.eval()

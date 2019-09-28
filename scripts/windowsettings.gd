@@ -10,14 +10,15 @@ func windowed():
 	OS.window_fullscreen = false # Make sure the window is not fullscreened.
 	OS.window_borderless = false # Make sure the window is not borderless.
 	OS.window_size = global.size # Set window size to the globally defined size.
-	OS.window_position = OS.get_screen_size()*0.5 - OS.window_size*0.5 # Position the window in the center of the screen.
+	OS.center_window()
 
 
 # Makes the game borderless fullscreen.
-func borderless():
+func borderless():	
 	OS.window_fullscreen = false # Make sure the window is not fullscreened.
 	OS.window_borderless = true # Make the window borderless.
-	OS.window_maximized = true  # Maximize the window.
+	OS.window_size = OS.get_screen_size(OS.current_screen)
+	OS.center_window()
 
 
 # Makes the game fullscreen.

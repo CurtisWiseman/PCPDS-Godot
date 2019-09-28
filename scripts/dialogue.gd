@@ -1,5 +1,6 @@
 extends RichTextLabel
 
+var charMAX = 285
 var longTextParts = []
 var currentSubstring = 0
 var currentLine = 0
@@ -55,7 +56,7 @@ func say(text):
 	set_visible_characters(0) # Remove current line
 
 #	Compartmentalize long line into smaller strings
-	if isCompartmentalized == false && text.length() >= 120:
+	if isCompartmentalized == false && text.length() >= charMAX:
 		compartmentalise(text)
 # 	Display new line if of appropriate length
 	else:
@@ -75,10 +76,10 @@ func compartmentalise(longText):
 #	Progress through line if unfinished
 	while sentenceCharIndex != sentenceLength:
 
-#		difference between whole string and substring > 120
-		if sentenceLength - sentenceCharIndex >= 120:
-			currentSentence = longText.substr(sentenceCharIndex, 120)
-			sentenceCharIndex += 120
+#		difference between whole string and substring > charMAX
+		if sentenceLength - sentenceCharIndex >= charMAX:
+			currentSentence = longText.substr(sentenceCharIndex, charMAX)
+			sentenceCharIndex += charMAX
 
 			# To make sure that next substring doesn't begin with a blank space
 			while currentSentence.ends_with(" ") == false:
@@ -87,15 +88,13 @@ func compartmentalise(longText):
 
 #			Add substring to array
 			longTextParts.push_back(currentSentence)
-			print(currentSentence)
 
-#		difference between whole string and substring < 120
-		elif sentenceLength - sentenceCharIndex < 120 && sentenceLength - sentenceCharIndex > 0:
+#		difference between whole string and substring < charMAX
+		elif sentenceLength - sentenceCharIndex < charMAX && sentenceLength - sentenceCharIndex > 0:
 			var temp = sentenceLength - sentenceCharIndex
 			currentSentence = longText.substr(sentenceCharIndex, temp)
 			sentenceCharIndex += temp
 			longTextParts.push_back(currentSentence)
-			print(currentSentence)
 
 	currentSubstring = 0
 #	Signal to display first substring

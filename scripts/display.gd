@@ -278,8 +278,8 @@ func remove(cname):
 	var index # The index cname is in layers.
 	var parent # The parent of the cname node.
 	
-	# Get the node name of the path.
-	cname = getname(cname)
+#	# Get the node name of the path.
+#	cname = getname(cname)
 	
 	# Find the index of then content using cname.
 	for i in range(layers.size()):
@@ -928,6 +928,24 @@ func getname(path):
 	
 	return node
 
+
+
+# Returns true if the given path already exists.
+func exists(path):
+	var layname = '' # Appended to to create a layer name.
+	
+	path = path.left(path.find_last('.')) # Remove the file extension.
+	
+	# Use the fact that '/' cannot be in file names to find the last slash, and thus the image name after it.
+	for i in range(path.find_last('/') + 1, path.length()):
+		layname += path[i]
+	
+	# Return true if a matching layer is found.
+	for i in range(0, layers.size()):
+		if layname == layers[i]['name']:
+			return true
+	
+	return false # Else return false.
 
 
 
