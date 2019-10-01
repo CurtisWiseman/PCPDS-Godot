@@ -31,7 +31,7 @@ func _ready():
 func _input(event):
 	
 #	advance_text is a mapped action (2nd tab of project settings). this is done with remapping in mind
-	if Input.is_action_just_pressed("advance_text"):
+	if Input.is_action_just_pressed("advance_text") and !global.pause_input:
 			if get_visible_characters() == get_total_character_count():
 				# In middle of longer sentence - progress through sentence
 				if currentSubstring < longTextParts.size(): 

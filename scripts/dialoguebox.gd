@@ -5,6 +5,8 @@ var dialogue = PoolStringArray() #All of the lines in the current text file. Not
 var i = 0 #Index of current line of dialogue
 var regex = RegEx.new()
 var systems
+var choices = []
+var chosenChoices = []
 var click = InputEventMouseButton.new()
 
 signal empty_line
@@ -57,8 +59,10 @@ func _on_Dialogue_has_been_read():
 			i += 1
 	
 	#Reacts differently depending on the start of the current line. Choices and commands are still WIP, but dialogue is pretty much done.
-	
+		
+		# COMMENTS/COMMANDS
 		if dialogue[i].begins_with("["):
+			
 			if dialogue[i].findn('REMOVE') != -1:
 				var command = dialogue[i].lstrip('[')
 				command = command.rstrip(']')
@@ -67,14 +71,52 @@ func _on_Dialogue_has_been_read():
 					var layer = systems.display.layers[i]['name']
 					if layer.findn(command[1].to_lower()) != -1:
 						systems.display.remove(layer)
+						break
+			
+			elif dialogue[i].findn('SLIDE') != -1:
+				var command = dialogue[i].lstrip('[')
+				command = command.rstrip(']')
+				command = command.split(' ')
+				for i in range(0, systems.display.layers.size() - 1):
+					var layer = systems.display.layers[i]['name']
+					if layer.findn(command[1].to_lower()) != -1:
+						if command.size() == 3:
+							parse_move(['slide', command[2]], '"'+systems.display.layers[i]['path']+'"', 0, false)
+						elif command.size() == 4:
+							parse_move(['slide', command[2], command[3]], '"'+systems.display.layers[i]['path']+'"', 0, false)
+						break
 			i += 1
 			get_tree().input_event(click)
 		
+		
+		# CHOICES
 		elif dialogue[i].begins_with("*"):
-			print("Choice - " + dialogue[i])
+			var choice  = dialogue[i].lstrip('*')
+			choice = choice.rstrip('*')
+			
+			var pastChoice = false
+			var chosenChoice = false
+			
+			if 'UNDO' == choice.substr(0, 4):
+				print(choice)
+			
+			if choices.size() != 0:
+				for i in range(0, choices.size()):
+					if choice == choices[i]:
+						pastChoice = true
+						break
+			
+			if pastChoice:
+				pass
+			else:
+				choices.append(choice)
+				# Display a choice visually
+			
 			i += 1
 			get_tree().input_event(click)
 		
+		
+		# DIALOGUE
 		elif dialogue[i].begins_with("("):
 			
 			#Dialogue template:
@@ -148,6 +190,13 @@ func _on_Dialogue_has_been_read():
 
 
 
+
+
+
+
+
+
+
 # Generates function calls to the image system by parsing the script.
 func parse_info(info):
 	var notsame
@@ -188,7 +237,7 @@ func remove_dupes(character, info):
 		if layer.findn(character) != -1:
 			if size == 1:
 				return false
-			elif size == 2:
+			elif size >= 2:
 				parse_position(info, '', '"'+systems.display.layers[i]['path']+'"', 1)
 				return false
 			else:
@@ -294,7 +343,11 @@ func parse_expnum(expression, parsedInfo):
 # Parses the position for a character.
 func parse_position(info, parsedInfo, body, i):
 	var extra = 0
+	var move = false
 	var num
+	
+	if i+3 >= info.size()-1:
+		move = true
 	
 	if i == info.size():
 		execute(parsedInfo)
@@ -308,18 +361,68 @@ func parse_position(info, parsedInfo, body, i):
 		var tmp = info[i].split('-', true, 1)
 		info[i] = tmp[0]
 		extra = int(tmp[1]) * -1
+	elif info[i] == 'slide':
+		parse_move(info, body, i)
 	
 	if info[i].findn('|') != -1:
 		var cords = info[i].split('|', false, 1)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+cords[0]+', '+cords[1]+')')
+		if move: parse_move(info, body, i+1)
 	elif info[i] == 'right':
 		num = 600 + extra
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
+		if move: parse_move(info, body, i+1)
 	elif info[i] == 'left':
 		num = -600 + extra
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
+		if move: parse_move(info, body, i+1)
 	elif info[i] == 'center':
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(extra)+', 0)')
+		if move: parse_move(info, body, i+1)
+	elif info[i] == 'offleft':
+		execute(parsedInfo+'\n\tsystems.display.position('+body+', -1650, 0)')
+		if move: parse_move(info, body, i+1)
+	elif info[i] == 'offright':
+		execute(parsedInfo+'\n\tsystems.display.position('+body+', 1650, 0)')
+		if move: parse_move(info, body, i+1)
+
+# Function to parse position movement.
+func parse_move(info, body, i, stop=true):
+	var speed = '15'
+	var extra = 0
+	var num
+	
+	if info.size()-1 > i+1:
+		speed = info[i+2]
+	
+	if info[i] == 'slide':
+		if info[i+1].findn('|') != -1:
+			var cords = info[i+1].split('|', false, 1)
+			execute('systems.display.position('+body+', '+cords[0]+', "slide", '+speed+')')
+			if stop: yeild(body)
+		elif info[i+1] == 'right':
+			num = 600 + extra
+			execute('systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
+			if stop: yeild(body)
+		elif info[i+1] == 'left':
+			num = -600 + extra
+			execute('systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
+			if stop: yeild(body)
+		elif info[i+1] == 'center':
+			execute('systems.display.position('+body+', '+str(extra)+', "slide", '+speed+')')
+			if stop: yeild(body)
+		elif info[i+1] == 'offleft':
+			execute('systems.display.position('+body+', -1650, "slide", '+speed+')')
+			if stop: yeild(body)
+		elif info[i+1] == 'offright':
+			execute('systems.display.position('+body+', 1650, "slide", '+speed+')')
+			if stop: yeild(body)
+
+# Function to yeild until moving finishes.
+func yeild(body):
+	global.pause_input = true
+	yield(global.rootnode.get_node('Systems/Display/'+systems.display.getname(execreturn('return '+body))+'(Position)'), 'position_finish')
+	global.pause_input = false
 
 # Function to execute the code generated through parsing.
 func execute(parsedInfo):
