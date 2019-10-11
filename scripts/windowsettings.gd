@@ -9,15 +9,28 @@ func windowed():
 	OS.window_maximized = false # Unmaximize the window.
 	OS.window_fullscreen = false # Make sure the window is not fullscreened.
 	OS.window_borderless = false # Make sure the window is not borderless.
-	OS.window_size = global.size # Set window size to the globally defined size.
+	OS.window_size = Vector2(global.size.x, global.size.y - 35) # Set window size to the globally defined size.
 	OS.center_window()
 
 
 # Makes the game borderless fullscreen.
-func borderless():	
+func borderless():
 	OS.window_fullscreen = false # Make sure the window is not fullscreened.
-	OS.window_borderless = true # Make the window borderless.
-	OS.window_size = OS.get_screen_size(OS.current_screen)
+	OS.window_borderless = true # Make the window borderless
+	
+	if global.windows:
+		# Check if a message needs to be shown.
+		var file = File.new()
+		file.open("user://usersettings.tres", File.READ_WRITE)
+		var settings = file.get_as_text()
+		if settings.find('winBM: seen', 0) == -1:
+			file.store_line(settings + 'winBM: seen')
+			get_parent().winBM()
+		
+		OS.window_size = Vector2(global.size.x, global.size.y - 1) # Make the window almost the size of the screen.
+	else:
+		OS.window_size = global.size # Make window the size of the screen.
+		
 	OS.center_window()
 
 

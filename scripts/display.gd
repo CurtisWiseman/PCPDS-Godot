@@ -27,7 +27,6 @@ func background(bg, type):
 		
 		bgnode.texture = info[2] # Give bgnode the 'bg' image.
 		bgnode.centered = false # Uncenter the background.
-		bgnode.scale = Vector2(global.size.x/1920, global.size.y/1080) # Scale the backgrund to the global size.
 		
 		nodelayers(info[1]) # Add BG below all layers.
 	
@@ -39,7 +38,7 @@ func background(bg, type):
 		layers[info[1]]['type'] = 'video' # The node's type.
 		
 		bgnode.stream = info[2] # Make the background the video.
-		bgnode.rect_size = global.size # Set the size to the global size.
+		bgnode.rect_size = Vector2(1920,1080) # Set the size to 1920x1080.
 		bgnode.connect("finished", self, "loopvideo", [bgnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		
 		nodelayers(info[1]) # Add BG below all layers.

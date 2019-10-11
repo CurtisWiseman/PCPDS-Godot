@@ -1,4 +1,11 @@
+(Mage, campus, 1, happy): LINE
+(Hippo, campus, grabby, happy, offright, slide, right): LINE
+(Mage, slide, offleft): LINE
+(Hippo): LINE
+[SLIDE Mage left 16]
+(Hippo, slide, center, 12): LINE
 Wow. My first day at PCP University!
+[*Choice 1*
 My last school thew me out for being too retarted and not being able to finish my assignments.
 Will this place be any better? Who knows, I might finally find some friends or even ...Love?
 A cool breeze greets me this morning.

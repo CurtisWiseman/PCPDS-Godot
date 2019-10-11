@@ -5,16 +5,18 @@ var sound
 var timer
 var pause
 var scene
+var winBM
 var canvas
+var window
 var display
 var nametag
 var dialogue
 var dialogueBox
 var dialboxLeft
 var dialboxRight
+var winBMvisible = false
 
 # Load scripts.
-var window = load("res://scripts/windowsettings.gd").new() # Variable to use functions from windowsettings.
 var chr = load("res://scripts/char.gd").new() # Variable to reference character images.
 
 # Load nodes for all game systems.
@@ -27,6 +29,14 @@ func _ready():
 	
 	# Ready the character script.
 	chr._ready()
+	
+	
+	
+	# Create a node for window settings.
+	window = Node.new()
+	window.set_name('Window Settings')
+	window.set_script(load("res://scripts/windowsettings.gd"))
+	add_child(window)
 	
 	
 	
@@ -183,3 +193,36 @@ func dialogue():
 	
 	canvas.add_child(dialogueBox)
 	canvas.add_child(pause)
+
+
+
+# Function to display warning message for borderless on windows.
+func winBM():
+	winBM = ColorRect.new()
+	winBM.name = 'Windows Borderless Message'
+	winBM.color = Color(0, 0, 0, 0.95)
+	winBM.margin_top = 0
+	winBM.margin_left = 0
+	winBM.margin_right = 1920
+	winBM.margin_bottom = 1080
+	add_child(winBM)
+	
+	var message = Label.new()
+	message.name = 'Warning'
+	message.text = 'Borderless does not work properly on Windows. If you want to play the game Borderless please set your taskbar to \'hide automatically\' so that it\'s barely visible during gameplay. This message will not appear again.                 Click/Spacebar to continue!'
+	message.valign = 1
+	message.align = 1
+	message.autowrap = true
+	message.margin_top = 0
+	message.margin_left = 30
+	message.margin_right = 1890
+	message.margin_bottom = 1080
+	
+	var messageFontDATA = DynamicFontData.new()
+	messageFontDATA.font_path = 'res://fonts/Nametag/coolvetica/coolvetica rg.ttf'
+	var messageFont = DynamicFont.new()
+	messageFont.font_data = messageFontDATA
+	messageFont.size = 60
+	message.add_font_override("font", messageFont)
+	winBM.add_child(message)
+	winBMvisible = true

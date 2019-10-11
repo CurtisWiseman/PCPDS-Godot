@@ -1,7 +1,8 @@
 extends Node
 
 # Variables to be used across all files.
-var size = Vector2(1920,1080)
+var size
+var windows = false
 var rootnode
 var master_volume = 1
 var music_volume = 1
@@ -11,7 +12,11 @@ var pause_input = false
 # Set dynamic variables + do startup functions.
 func _ready():
 	
-	OS.set_low_processor_usage_mode(true) # Lower's CPU usage.
+	size  = OS.get_screen_size() # Get the size of the screen.
+	
+	# Check if the os is windows.
+	if OS.get_name() == 'Windows':
+		windows = true
 	
 	# If the usersettings file does not exist then create it.
 	var file = File.new()

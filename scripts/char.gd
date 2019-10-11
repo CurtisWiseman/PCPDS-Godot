@@ -247,7 +247,7 @@ func emotedecipher(face, character, outfit):
 # Function to retrieve all files in a given character directory
 func returndir(character):
 		# Make the directory path of a characters folder.
-		var directory = 'res://images/characters/' + character
+		var directory = 'images/characters/' + character
 		
 		# A list to retrun and a variable to manage the while loop.
 		var files = []
