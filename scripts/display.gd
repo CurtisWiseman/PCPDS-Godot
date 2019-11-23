@@ -1,6 +1,7 @@
 extends Node
 
 var bgnode # The background image node.
+var bgtype # Type of the current background.
 var layers = [] # Array for storing images and videos via dictionaries containing their z-layer.
 var model = File.new() # Use to check if model files exist.	
 var speed # The speed and direction to move.
@@ -8,45 +9,63 @@ var timer # How long it takes a character to stop.
 var collider = null # The node told to move.
 var collidee = null # The node that get's collided.
 
+# Set the background node to self by default.
+func _ready():
+	bgnode = self
+
 # Make the given image 'bg' a background.
 func background(bg, type):
 	
-	# If a background is already set then remove it.
-	if layers.size() > 0:
-		if layers[layers.size() - 1]['name'] == 'BG':
-			remove('BG')
+	# If the previous background was the same type then change the content and return.
+	if type == 'image' and bgtype == 'image':
+		bgnode.texture = load(bg)
+		return
+	if type == 'video' and bgtype == 'video':
+		bgnode.stream = load(bg)
+		bgnode.play()
+		return
 	
-	var info = layersetup(bg, 0) # Get info from the layersetup() function.
+	var prevbg = bgnode # Keeps the previous background node.
 	
 	# If of type image make the background a sprite.
 	if type == 'image':
 		bgnode = Sprite.new() # Create a new sprite node.
 		bgnode.set_name('BG') # Give the node the name BG.
-		layers[info[1]]['node'] = bgnode # Set node to bgnode.
-		layers[info[1]]['type'] = 'image' # The node's type.
-		
-		bgnode.texture = info[2] # Give bgnode the 'bg' image.
+		bgnode.texture = load(bg) # Give bgnode the 'bg' image.
 		bgnode.centered = false # Uncenter the background.
-		
-		nodelayers(info[1]) # Add BG below all layers.
+		bgtype = type # Save the background type.
 	
 	# If of type video make the background a videoplayer.
 	elif type == 'video':
 		bgnode = VideoPlayer.new() # Create a new videoplayer node.
 		bgnode.set_name('BG') # Give it the name BG.
-		layers[info[1]]['node'] = bgnode # Set node to bgnode.
-		layers[info[1]]['type'] = 'video' # The node's type.
-		
-		bgnode.stream = info[2] # Make the background the video.
+		bgnode.stream = load(bg) # Make the background the video.
 		bgnode.rect_size = Vector2(1920,1080) # Set the size to 1920x1080.
 		bgnode.connect("finished", self, "loopvideo", [bgnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
+		bgtype = type # Save the background type.
 		
-		nodelayers(info[1]) # Add BG below all layers.
-		bgnode.play() # Begin playing the video.
-	
 	# Otherwise print an error that an incorrect type was given.
 	else:
 		print('ERROR: In display.background(). ' + type + ' is not a valid type.')
+	
+	# If their was no background then reparent the children from self to the background node.
+	if prevbg == self:
+		var children = get_children()
+		for i in range(0, children.size()):
+			remove_child(children[i])
+			bgnode.add_child(layers[layers.size() - 1 - i]['node'])
+		bgtype = type
+	# If there was a background then reparent the children.
+	else:
+		var children = prevbg.get_children()
+		for i in range(0, children.size()):
+			prevbg.remove_child(children[i])
+			bgnode.add_child(layers[layers.size() - 1 - i]['node'])
+	
+	add_child(bgnode) # Add the new bgnode.
+	
+	if type == 'video':
+		bgnode.play() # Begin playing the video.
 
 
 
@@ -179,6 +198,7 @@ func mask(mask, path, type, z):
 		layers[info[1]]['mask'] = true # State the it is indeed a mask.
 		vidnode.stream = info[2] # Set the node's video steam to video.
 		vidnode.rect_size = global.size # Set the size to the global size.
+		vidnode.volume_db = -1000 # Mute the video.
 		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		
 		vidnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
@@ -275,10 +295,9 @@ func switch(content, new, type, face=false, x=0, y=0):
 func remove(cname):
 	
 	var index # The index cname is in layers.
-	var parent # The parent of the cname node.
 	
-#	# Get the node name of the path.
-#	cname = getname(cname)
+	# Get the node name of the path.
+	cname = getname(cname)
 	
 	# Find the index of then content using cname.
 	for i in range(layers.size()):
@@ -292,30 +311,7 @@ func remove(cname):
 		print('Error: ' + cname + ' is not a valid layer name to remove.')
 		return
 	
-	# If index is 0 then remove the cname node off the end then return.
-	if index == 0:
-		layers[index]['node'].queue_free()
-		layers.remove(index)
-		return
-	
-	# Else remove cname node's child, remove cname node, and add cname node's child to cname's parent node.
-	parent = layers[index]['node'].get_parent()
-	layers[index]['node'].remove_child(layers[index - 1]['node'])
-	parent.remove_child(layers[index]['node'])
-	
-	# Make position of child node correct after the parent is removed.
-	if layers[index - 1]['type'] == 'image':
-		if layers[index]['type'] == 'image':
-			layers[index - 1]['node'].position += layers[index]['node'].position
-		else:
-			layers[index - 1]['node'].position += layers[index]['node'].rect_position
-	else:
-		if layers[index]['type'] == 'image':
-			layers[index - 1]['node'].rect_position += layers[index]['node'].position
-		else:
-			layers[index - 1]['node'].rect_position += layers[index]['node'].rect_position
-	
-	parent.add_child(layers[index - 1]['node'])
+	# Free the node at index and remove it from layers.
 	layers[index]['node'].queue_free()
 	layers.remove(index)
 
@@ -326,10 +322,7 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	
 	var index # The index of the given node.
 	var node # The given node.
-	var childnode # The child node.
 	var type # The type of node given: img/vid.
-	var childtype # The type of the child node.
-	var haschild = false # True if the node has a child.
 	var mv # Will be set to y if y is a string.
 	
 	# Get the node name of the path.
@@ -350,12 +343,6 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	type = layers[index]['type'] # The node type.
 	node = layers[index]['node'] # The node.
 	
-	# If the node has a child then get it's node, type, and set haschild to true.
-	if index - 1 >= 0:
-		childtype = layers[index - 1]['type']
-		childnode = layers[index - 1]['node']
-		haschild = true
-	
 	# If y is a string then set mv to y, and y to 0.
 	if typeof(y) == TYPE_STRING:
 		mv = y
@@ -369,49 +356,14 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	# If x is of type integer then give the node it's new position using x and y.
 	elif typeof(x) == TYPE_INT:
 		
-		# If the node has been positioned once before then prepare it for repositioning.
-		if layers[index].get('posreset') != null:
-			#Set the node position to the negative of it's parents position.
-			if type == 'image':
-				if index == layers.size() - 1:
-					node.position = Vector2(0,0)
-				else:
-					node.position = -layers[index + 1]['position']
-			
-			#Set the node position to the negative of it's parents position.
-			if type == 'video':
-				if index == layers.size() - 1:
-					node.rect_position = Vector2(0,0)
-				else:
-					node.rect_position = -layers[index + 1]['position']
-			
-			# If thier is a child set it's position to it's 'ideal' position.
-			if haschild:
-				if childtype == 'image':
-					childnode.position = layers[index - 1]['position']
-				if childtype == 'video':
-					childnode.rect_position = layers[index - 1]['position']
-					
-		# If the first time being position then set 'posreset' to true.
-		else:
-			layers[index]['posreset'] = true
-		
-		layers[index]['position'] = Vector2(x, y) # The new 'ideal' position of node.
+		var position = Vector2(x, y)
+		layers[index]['position'] = position
 		
 		if type== 'image':
-			node.position = Vector2(node.position.x + x, node.position.y + y)
+			node.position = position
 		
 		elif type == 'video':
-			node.rect_position = Vector2(node.rect_position.x + x, node.rect_position.y + y)
-		
-		# If the node has a child then determine the child's new position so it doesn't move.
-		if haschild:
-			
-			if childtype == 'image':
-				childnode.position = Vector2(childnode.position.x - x, childnode.position.y - y)
-			
-			elif childtype == 'video':
-				childnode.rect_position = Vector2(childnode.rect_position.x - x, childnode.rect_position.y - y)
+			node.rect_position = position
 	
 	# If x is not an interger then print an error and return.
 	else:
@@ -690,7 +642,7 @@ func getindex(content):
 	content = getname(content)
 	
 	# Find the index of content.
-	for i in range(layers.size()):
+	for i in range(0, layers.size()):
 		
 		# Return index if found.
 		if layers[i]['name'] == content:
@@ -737,37 +689,32 @@ func layernames(path):
 # Handles node parentage so that videos are also on the correct layer.
 func nodelayers(index):
 	
-	var lastel = layers[layers.size() - 1] # Variable containing the last dictionary in the layers array.
-	
 	# Print an error if the layers array is not populated then exit.
 	if layers.size() == 0:
 		print('The layers array is empty. Incorrect use of function: The layers array must be of size >= 1.')
 		return
 	
-	# If layers is size 1 then add the node under root.
-	if layers.size() == 1:
-		global.rootnode.add_child(layers[0]['node'])
-		return
+	# If index is 0 or layers is size 1 then add to the bgnode.
+	if index == 0 or layers.size() == 1:
+		bgnode.add_child(layers[0]['node'])
 	
-	# If layers is of size > 1 then decide who is the given nodes parent and child.
-	# If index is 0 simply add node 0 under lastel node.
-	if index == 0:
-		layers[1]['node'].add_child(layers[0]['node'])
-		return
+	# If the last in layers then order the nodes accordingly.
+	elif index == layers.size() - 1:
+		bgnode.add_child(layers[index]['node'])
+		var children = bgnode.get_children()
+		var start = layers.size() - 1 - index
+		for i in range(start, children.size() - 1):
+			bgnode.remove_child(children[i])
+			bgnode.add_child(layers[index - 1 - i]['node'])
 	
-	# If index is the last in the array then add lastel to the root node, remove the 2nd to last node
-	if index == lastel['index']:
-		global.rootnode.add_child(lastel['node'])
-		global.rootnode.remove_child(layers[lastel['index'] - 1]['node'])
-		lastel['node'].add_child(layers[lastel['index'] - 1]['node'])
-		return
-	
-	# If index is not at the ends of layer then add it as a child to the layer below it,
-	# then remove the child that is the layer above it from the layer below it,
-	# and then add the layer above it as a child.
-	layers[index + 1]['node'].add_child(layers[index]['node'])
-	layers[index + 1]['node'].remove_child(layers[index - 1]['node'])
-	layers[index]['node'].add_child(layers[index - 1]['node'])
+	# Else reorder the nodes properly.
+	else:
+		bgnode.add_child(layers[index]['node'])
+		var children = bgnode.get_children()
+		var start= layers.size() - 1 - index
+		for i in range(start, children.size() - 1):
+			bgnode.remove_child(children[i])
+			bgnode.add_child(layers[index + i + 1]['node'])
 
 
 

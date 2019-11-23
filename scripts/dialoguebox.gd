@@ -7,10 +7,11 @@ var regex = RegEx.new()
 var systems
 var choices = []
 var chosenChoices = []
-var click = InputEventMouseButton.new()
+var waitTimer = Timer.new()
 
 signal empty_line
 signal sentence_end
+signal sliding_finished
 
 #Colors:
 #	Tom - d23735
@@ -40,9 +41,11 @@ func _ready():
 	i = 0 #Reset index of dialogue
 	emit_signal("empty_line") #Signals to display first line of dialogue
 	
-	# Define a click event.
-	click.button_index = 1
-	click.pressed = true
+	# Define a wait timer.
+	waitTimer.wait_time = 1
+	waitTimer.one_shot = true
+	waitTimer.autostart = false
+	add_child(waitTimer)
 
 
 
@@ -67,7 +70,7 @@ func _on_Dialogue_has_been_read():
 				var command = dialogue[i].lstrip('[')
 				command = command.rstrip(']')
 				command = command.split(' ', false, 1)
-				for i in range(0, systems.display.layers.size() - 1):
+				for i in range(0, systems.display.layers.size()):
 					var layer = systems.display.layers[i]['name']
 					if layer.findn(command[1].to_lower()) != -1:
 						systems.display.remove(layer)
@@ -86,7 +89,7 @@ func _on_Dialogue_has_been_read():
 							parse_move(['slide', command[2], command[3]], '"'+systems.display.layers[i]['path']+'"', 0, false)
 						break
 			i += 1
-			get_tree().input_event(click)
+			emit_signal('empty_line')
 		
 		
 		# CHOICES
@@ -99,39 +102,61 @@ func _on_Dialogue_has_been_read():
 			
 			if 'UNDO' == choice.substr(0, 4):
 				print(choice)
+				return
 			
-			if choices.size() != 0:
+			elif choices.size() != 0:
 				for i in range(0, choices.size()):
 					if choice == choices[i]:
 						pastChoice = true
 						break
 			
-			if pastChoice:
-				pass
+			elif pastChoice:
+				for i in range(0, chosenChoices.size()):
+					if choice == chosenChoices[i]:
+						chosenChoice = true
 			else:
 				choices.append(choice)
 				# Display a choice visually
 			
 			i += 1
-			get_tree().input_event(click)
+			emit_signal('empty_line')
 		
 		
 		# DIALOGUE
 		elif dialogue[i].begins_with("("):
 			
-			#Dialogue template:
-			#(Speaker): Dialogue text here
+			var info # Contains provided character information.
+			var text # Contains the words the character says.
+			var say = true # Whether or not say the character text.
+			var lastChar = dialogue[i].length()-1 # The position of the last character.
+			var wait = true # Whether or not to wait when no text to say.
+			var slide = false # Checks if character is sliding.
 			
 			#Replaces every instance of the word "Player" with "PCPGuy". You can easily
 			#tweak this to replace another word, or to replace it with a varia le i.e an inputted player name
 			regex.compile("Player")
 			dialogue[i] = regex.sub(dialogue[i], "PCPGuy", true)
 
-			var splitLine = dialogue[i].split(":", true, 1) #Split current line into 2 strings
-			splitLine[1] = splitLine[1].substr(1, (dialogue[i].length() - (splitLine[0].length() + 1))) #Start string after colon
-			splitLine[0] = splitLine[0].substr(splitLine[0].find("(") + 1, splitLine[0].find(")") - 1) #"Crop" the info inside of the parentheses
+			# If there is no text on the line then don't say anything.
+			if dialogue[i][lastChar] == ')' or dialogue[i][lastChar] == '$':
+				say = false
+				global.pause_input = true
+				if 'slide'.is_subsequence_ofi(dialogue[i]): 
+					slide = true
+					wait = false
+				elif dialogue[i][lastChar] == '$': wait = false
+				var stripParentheses = dialogue[i].substr(dialogue[i].find("(") + 1, dialogue[i].find(")") - 1) #"Crop" the info inside of the parentheses.
+				info = stripParentheses.split(',') # Split the info inside the parentheses on commas.
 			
-			var info = splitLine[0].split(',') # Split the info inside the parentheses on commas.
+			# If there is text to say then prepare it.
+			else:
+				var splitLine = dialogue[i].split(")", true, 1) #Split current line into 2 strings.
+				if splitLine[1][0] == ':': # If they used a colon then adjust for it.
+					splitLine[1] = splitLine[1].substr(1, (dialogue[i].length() - (splitLine[0].length() + 1))) #Start string after the colon.
+				splitLine[0] = splitLine[0].substr(splitLine[0].find("(") + 1, splitLine[0].length()-1) #"Crop" the info inside of the parentheses.
+			
+				info = splitLine[0].split(',') # Split the info inside the parentheses on commas.
+				text = splitLine[1]
 			
 			# Remove all spaces before and after the info.
 			for i in range(0, info.size()):
@@ -144,6 +169,17 @@ func _on_Dialogue_has_been_read():
 			for i in range(1, info.size()):
 				info[i] = info[i].to_lower()
 			
+			var chrName = info[0] # Set the chrName to info[0].
+			
+			# Check if another name needs to be used.
+			if info[0].find('|') != -1:
+				var tmp = info[0].split('|', false)
+				info[0] = tmp[0]
+				chrName = tmp[1]
+				if !say: say("", chrName)
+			elif !say: say("", "")
+			
+			
 			parse_info(info); # Parse the info so that is displays a character.
 			
 #			Function for custom fonts. This can be incorporated in the following
@@ -154,32 +190,48 @@ func _on_Dialogue_has_been_read():
 #			mageFont.font_data = mageFontData
 #			mageFont.size = 68
 #			$Nametag.add_font_override("normal_font", mageFont)
-
-#			Change nametag color depending on current speaker
-			match info[0]:
-				"Tom":
-					$Nametag.add_color_override("font_color", Color('#f00000'))
-				"Mage":
-					$Nametag.add_color_override("font_color", Color('551A8B'))
-				"Ben":
-					$Nametag.add_color_override("font_color", Color('8d8d8d'))
-				"Digi":
-					$Nametag.add_color_override("font_color", Color('b21069'))
-				"Davoo":
-					$Nametag.add_color_override("font_color", Color('408ff2'))
-				"Jess":
-					$Nametag.add_color_override("font_color", Color('fdf759'))
-				"Munchy":
-					$Nametag.add_color_override("font_color", Color('ff7ab9'))
-				"Hippo":
-					$Nametag.add_color_override("font_color", Color('78ffb5'))
-				"Endless War":
-					$Nametag.add_color_override("font_color", Color('ffff00'))
+			
+			if say: # If the text is to be said then...
 				
-			say(splitLine[1], info[0])
-			get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
-			emit_signal('sentence_end', dialogue[i])
-			i += 1
+				# Change nametag color depending on the current speaker
+				match info[0]:
+					"Tom":
+						$Nametag.add_color_override("font_color", global.tom.color)
+					"Mage":
+						$Nametag.add_color_override("font_color", global.mage.color)
+					"Ben":
+						$Nametag.add_color_override("font_color", Color('8d8d8d'))
+					"Digi":
+						$Nametag.add_color_override("font_color", global.digibro.color)
+					"Davoo":
+						$Nametag.add_color_override("font_color", Color('408ff2'))
+					"Jess":
+						$Nametag.add_color_override("font_color", Color('fdf759'))
+					"Munchy":
+						$Nametag.add_color_override("font_color", global.munchy.color)
+					"Hippo":
+						$Nametag.add_color_override("font_color", global.hippo.color)
+					"Endless War":
+						$Nametag.add_color_override("font_color", global.endlesswar.color)
+				
+				
+				say(text, chrName)
+				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
+				
+				emit_signal('sentence_end', dialogue[i])
+				i += 1
+			
+			else: # Click if nothing was said after 0.5 seconds or not if !wait.
+				if wait:
+					waitTimer.start()
+					yield(waitTimer, 'timeout')
+				
+				if slide:
+					yield(self, 'sliding_finished')
+					
+				i += 1
+				emit_signal('empty_line')
+				global.pause_input = false
 		
 #		If line doesn't start with anything particular, register it as the player's thoughts
 		else:
@@ -227,22 +279,23 @@ func parse_info(info):
 			parse_position(info, 'systems.display.image("res://images/characters/Thoth/thoth.png", 1)', "'res://images/characters/Thoth/thoth.png'", 1)
 		"Tom":
 			notsame = remove_dupes('tom', info)
-			if notsame: parse_outfit(info, 'tom', 1)
+			if notsame: parse_expression(info, 'tom', 'systems.chr.tom.body[0]', 1, 'null')
 
 # Removes duplicate bodies of characters if they exist.
 func remove_dupes(character, info):
 	var size = info.size()
-	for i in range(0, systems.display.layers.size() - 1):
+	for i in range(0, systems.display.layers.size()):
 		var layer = systems.display.layers[i]['name']
 		if layer.findn(character) != -1:
 			if size == 1:
 				return false
 			elif size >= 2:
-				parse_position(info, '', '"'+systems.display.layers[i]['path']+'"', 1)
-				return false
-			else:
-				systems.display.remove(layer)
-				return true
+				if info[1] == 'right' or info[1] == 'left' or info[1] == 'center' or info[1] == 'offleft' or info[1] == 'offright' or info[1] == 'slide' or info[1] == 'off':
+					parse_position(info, '', '"'+systems.display.layers[i]['path']+'"', 1)
+					return false
+				else:
+					systems.display.remove(layer)
+					return true
 	return true
 
 # Parses the characters outfit.
@@ -266,6 +319,10 @@ func parse_expression(info, parsedInfo, body, i, bodyType):
 	var knife = false
 	var blushNum
 	var num
+	
+	if i == info.size(): # Don't use an epxression if none is given.
+		parse_position(info, 'systems.display.image('+body+', 1)', body, i)
+		return
 	
 	if 'squat'.is_subsequence_ofi(bodyType):
 		parsedInfo += '.squatting'
@@ -306,6 +363,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType):
 	elif "smitten".is_subsequence_of(info[i]):
 		num = parse_expnum(info[i], parsedInfo)
 		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(systems.chr.'+parsedInfo+'.smitten['+num+'], '+body+')', body, i+1)
+	else:
+		parse_position(info, 'systems.display.image('+body+', 1)', body, i)
 	
 	if blush:
 		if blushNum != null:
@@ -346,12 +405,12 @@ func parse_position(info, parsedInfo, body, i):
 	var move = false
 	var num
 	
-	if i+3 >= info.size()-1:
-		move = true
-	
 	if i == info.size():
 		execute(parsedInfo)
 		return
+	
+	if i + 2 == info.size()-1:
+		move = true
 	
 	if info[i].findn('+') != -1:
 		var tmp = info[i].split('+', true, 1)
@@ -385,6 +444,8 @@ func parse_position(info, parsedInfo, body, i):
 	elif info[i] == 'offright':
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', 1650, 0)')
 		if move: parse_move(info, body, i+1)
+	elif info[i] == 'off':
+		pass # Do nothing if the character is speaking off screen.
 
 # Function to parse position movement.
 func parse_move(info, body, i, stop=true):
@@ -399,30 +460,36 @@ func parse_move(info, body, i, stop=true):
 		if info[i+1].findn('|') != -1:
 			var cords = info[i+1].split('|', false, 1)
 			execute('systems.display.position('+body+', '+cords[0]+', "slide", '+speed+')')
-			if stop: yeild(body)
+			if stop: wait(body)
 		elif info[i+1] == 'right':
 			num = 600 + extra
 			execute('systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
-			if stop: yeild(body)
+			if stop: wait(body)
 		elif info[i+1] == 'left':
 			num = -600 + extra
 			execute('systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
-			if stop: yeild(body)
+			if stop: wait(body)
 		elif info[i+1] == 'center':
 			execute('systems.display.position('+body+', '+str(extra)+', "slide", '+speed+')')
-			if stop: yeild(body)
+			if stop: wait(body)
 		elif info[i+1] == 'offleft':
 			execute('systems.display.position('+body+', -1650, "slide", '+speed+')')
-			if stop: yeild(body)
+			if stop: wait(body)
 		elif info[i+1] == 'offright':
 			execute('systems.display.position('+body+', 1650, "slide", '+speed+')')
-			if stop: yeild(body)
+			if stop: wait(body)
 
-# Function to yeild until moving finishes.
-func yeild(body):
+# Function to wait until moving finishes.
+func wait(body):
 	global.pause_input = true
+#	var index = systems.display.getindex('res://'+execreturn('return '+body))
+#	print(index)
+#	print('res://'+execreturn('return '+body))
+#	print(systems.display.layer[index]['node'])
+	print('Systems/Display/'+systems.display.getname(execreturn('return '+body))+'(Position)')
 	yield(global.rootnode.get_node('Systems/Display/'+systems.display.getname(execreturn('return '+body))+'(Position)'), 'position_finish')
 	global.pause_input = false
+	emit_signal('sliding_finished')
 
 # Function to execute the code generated through parsing.
 func execute(parsedInfo):

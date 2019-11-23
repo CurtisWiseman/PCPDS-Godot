@@ -9,6 +9,18 @@ var music_volume = 1
 var sfx_volume = 1
 var pause_input = false
 
+# Character Colors
+var digibro = {'color': Color('b21069')}
+var hippo = {'color': Color('78ffb5')}
+var endlesswar = {'color': Color('ffff00')}
+var mage = {'color': Color('551A8B')}
+var munchy = {'color': Color('ff7ab9')}
+var nate = {'color': Color('')}
+var tom = {'color': Color('f00000')}
+
+# Other Colors
+var winbm = {'color': Color(0, 0, 0, 0.95)}
+
 # Set dynamic variables + do startup functions.
 func _ready():
 	

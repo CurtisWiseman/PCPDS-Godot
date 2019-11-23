@@ -108,7 +108,7 @@ func dialogue():
 	# Create dialogue box ends.
 	dialboxRight = ColorRect.new()
 	dialboxRight.name = 'Dialogue Box Right'
-	dialboxRight.color = Color(0, 0, 0, 1)
+	dialboxRight.color = Color.black
 	dialboxRight.margin_bottom = 290
 	dialboxRight.margin_top = 0
 	dialboxRight.margin_left = -405
@@ -120,7 +120,7 @@ func dialogue():
 	dialogueBox.add_child(dialboxRight)
 	dialboxLeft = ColorRect.new()
 	dialboxLeft.name = 'Dialogue Box Left'
-	dialboxLeft.color = Color(0, 0, 0, 1)
+	dialboxLeft.color = Color.black
 	dialboxLeft.margin_bottom = 290
 	dialboxLeft.margin_top = 0
 	dialboxLeft.margin_left = 1110
@@ -200,7 +200,7 @@ func dialogue():
 func winBM():
 	winBM = ColorRect.new()
 	winBM.name = 'Windows Borderless Message'
-	winBM.color = Color(0, 0, 0, 0.95)
+	winBM.color = global.winbm.color
 	winBM.margin_top = 0
 	winBM.margin_left = 0
 	winBM.margin_right = 1920
