@@ -10,7 +10,7 @@ var parent # The Dispay function.
 # Position function variables, to lessen calculation time.
 var type # The type of node.
 var node # The node itself.
-
+var yes = false
 
 # Called by display.gd with the dest, speed, and colliding node.
 func move(s, c, t, x=null):
@@ -30,7 +30,7 @@ func move(s, c, t, x=null):
 # Calculates the movement of images across the screen.
 func _process(delta):
 	
-	position(collider.name, parent.layers[find_index()]['position'] + speed) # Move collider at speed.x.
+	position(parent.layers[find_index()]['position'] + speed) # Move collider at speed.x.
 	
 	# If dest is null then ignore ending movement.
 	if dest != null:
@@ -66,7 +66,7 @@ func free_node():
 
 
 # Calculates position movement of node.
-func position(cname, shift):
+func position(shift):
 	parent.layers[find_index()]['position'] = shift
 	
 	if type == 'image':

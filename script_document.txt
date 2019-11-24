@@ -1,7 +1,3 @@
-[Note: Cannot use two+ (sameCharacter, slide) with no line being spoken in a row, two+ [SLIDE sameCharacter] in a row,]
-[or (char, out, exp, slide), [SLIDE sameCharacter]/(sameCharacter, slide) w/ no line, (sameChar, sameOut, exp, slide).] 
-[If any of these are done the game will crash. I unsure why. It's easy to work around though.]
-
 (9/11, boi, offleft, slide, left) LINE
 (9/11, slide, right) LINE
 (Mage, campus, 1, happy, right, slide, left) LINE

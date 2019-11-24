@@ -228,6 +228,9 @@ func _on_Dialogue_has_been_read():
 				
 				if slide:
 					yield(self, 'sliding_finished')
+					waitTimer.wait_time = 1
+					waitTimer.start()
+					yield(waitTimer, 'timeout')
 					
 				index += 1
 				emit_signal('empty_line')
@@ -444,6 +447,7 @@ func parse_position(info, parsedInfo, body, i):
 		extra = int(tmp[1]) * -1
 	elif info[i] == 'slide':
 		parse_move(info, body, i)
+		return
 	
 	if info[i].findn('|') != -1:
 		var cords = info[i].split('|', false, 1)
