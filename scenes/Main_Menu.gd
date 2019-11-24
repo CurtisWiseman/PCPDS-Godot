@@ -5,7 +5,6 @@ var settings # Settings instance.
 
 func _ready():
 	systems = $Systems # Load systems with the Systems node.
-	systems.window.screensetting() # Set the default screen setting.
 	
 	# Display the main menu background and play the main menu music.
 	systems.display.background('res://mainmenu/DemoMenu_hq.ogv', 'video')

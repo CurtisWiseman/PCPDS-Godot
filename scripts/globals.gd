@@ -21,10 +21,14 @@ var tom = {'color': Color('f00000')}
 # Other Colors
 var winbm = {'color': Color(0, 0, 0, 0.95)}
 
+var chr = load("res://scripts/char.gd").new() # Variable to reference character images.
+
 # Set dynamic variables + do startup functions.
 func _ready():
 	
-	size  = OS.get_screen_size() # Get the size of the screen.
+	size = OS.get_screen_size() # Get the size of the screen.
+	
+	chr._ready() #Load the character images.
 	
 	# Check if the os is windows.
 	if OS.get_name() == 'Windows':
@@ -68,12 +72,7 @@ func _ready():
 	else:
 		sfx_volume = float(settings.substr(settings.find('sfx_volume:', 0) + 11, 5))
 	
-	# If no default screen size is set then set it to windowed.
-	if settings.find('screen:', 0) == -1:
-		file.open("user://usersettings.tres", File.READ_WRITE)
-		file.store_line(settings + 'screen:windowed')
-		settings = file.get_as_text()
-		file.close()
+	OS.window_fullscreen = true 
 	
 	# Create the Music bus.
 	AudioServer.add_bus(1) 

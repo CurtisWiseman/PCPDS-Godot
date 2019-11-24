@@ -294,26 +294,9 @@ func switch(content, new, type, face=false, x=0, y=0):
 # Remove a layer based on it's name.
 func remove(cname):
 	
-	var index # The index cname is in layers.
-	
-	# Get the node name of the path.
-	cname = getname(cname)
-	
-	# Find the index of then content using cname.
-	for i in range(layers.size()):
-		
-		if layers[i]['name'] == cname:
-			index = i
-			break
-	
-	# If cname was not found then print an error and exit the function.
-	if index == null:
-		print('Error: ' + cname + ' is not a valid layer name to remove.')
-		return
-	
 	# Free the node at index and remove it from layers.
-	layers[index]['node'].queue_free()
-	layers.remove(index)
+	layers[getindex(cname)]['node'].queue_free()
+	layers.remove(getindex(cname))
 
 
 
@@ -718,6 +701,20 @@ func nodelayers(index):
 
 
 
+func nodupelayername(path):
+	
+	var layname = '' # Appended to to create a unique name.
+	
+	path = path.left(path.find_last('.')) # Remove the file extension.
+	
+	# Use the fact that '/' cannot be in file names to find the last slash, and thus the image name after it.
+	for i in range(path.find_last('/') + 1, path.length()):
+		layname += path[i]
+	
+	return layname # Return the name.
+
+
+
 # A function to do the repetitive tasks needed when adding a new layer.
 func layersetup(path, z):
 	
@@ -734,6 +731,7 @@ func layersetup(path, z):
 		cname = layernames(path) # Get a unique name using the content name.
 	
 	var layer = {"name": cname, "path": path, "content": content, "layer": z, "position": Vector2(0,0)} # Make a dictionary of content information.
+	
 	layers.append(layer) # Append the dictionary to the layers array.
 	var index = layers.size() - 1 # Get the index of the insertion.
 	layers[index]['index'] = index # Make the index a key.
@@ -900,7 +898,7 @@ class SortDictsDescending:
 	
 	# Sort the layers array based on the 'layer' key in descending order.
 	static func sort(d1, d2):
-		if d1['layer'] > d2['layer']:
+		if d1['layer'] >= d2['layer']:
 			# Switch their indexes in the array.
 			var tmp = d1['index']
 			d1['index'] = d2['index']

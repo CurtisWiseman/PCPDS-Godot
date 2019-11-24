@@ -1,6 +1,7 @@
 extends Node
 
 # Define the characters for global use.
+var nine11
 var actiongiraffe
 var digibro
 var hippo
@@ -14,6 +15,7 @@ var tom
 func _ready():
 	
 	# Initialize the characters with dictionaries. (Except thoth, just load his body.)
+	nine11 = {'video': [], 'body': []}
 	actiongiraffe = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'blush': null, 'body': []}
 	digibro = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
 	endlesswar = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': [], 'knife': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}}	
@@ -27,6 +29,7 @@ func _ready():
 	# Make an array of the characters who need their images loaded. (Make the same as their folder name.)
 	var chararray = ['Action Giraffe', 'Digibro', 'Endless War', 'Hippo', 'Mage', 'Munchy', 'Nate', 'Tom']
 	loadchars(chararray)
+	load911()
 
 
 
@@ -46,6 +49,19 @@ func loadchars(chararray):
 		var afls = returndir(character + '/AFL')
 		for afl in afls:
 			insert(character, afl, 'afl')
+
+
+
+# Function to load 911's assets.
+func load911():
+	
+	var all = returndir('911')
+	
+	for item in all:
+		if '.png'.is_subsequence_ofi(item):
+			nine11.body.append(item)
+		elif '.ogv'.is_subsequence_ofi(item):
+			nine11.video.append(item)
 
 
 
@@ -228,19 +244,19 @@ func insert(character, file, type):
 func emotedecipher(face, character, outfit):
 	
 	if face.findn('angry') != -1:
-		execute('systems.chr.'+character+outfit+'.angry.append("'+face+'")')
+		execute('global.chr.'+character+outfit+'.angry.append("'+face+'")')
 	elif face.findn('confused') != -1:
-		execute('systems.chr.'+character+outfit+'.confused.append("'+face+'")')
+		execute('global.chr.'+character+outfit+'.confused.append("'+face+'")')
 	elif face.findn('happy') != -1:
-		execute('systems.chr.'+character+outfit+'.happy.append("'+face+'")')
+		execute('global.chr.'+character+outfit+'.happy.append("'+face+'")')
 	elif face.findn('neutral') != -1:
-		execute('systems.chr.'+character+outfit+'.neutral.append("'+face+'")')
+		execute('global.chr.'+character+outfit+'.neutral.append("'+face+'")')
 	elif face.findn('sad') != -1:
-		execute('systems.chr.'+character+outfit+'.sad.append("'+face+'")')
+		execute('global.chr.'+character+outfit+'.sad.append("'+face+'")')
 	elif face.findn('shock') != -1:
-		execute('systems.chr.'+character+outfit+'.shock.append("'+face+'")')
+		execute('global.chr.'+character+outfit+'.shock.append("'+face+'")')
 	elif face.findn('smitten') != -1 or face.findn('blush') != -1:
-		execute('systems.chr.'+character+outfit+'.smitten.append("'+face+'")')
+		execute('global.chr.'+character+outfit+'.smitten.append("'+face+'")')
 
 
 
@@ -311,7 +327,7 @@ func returnfaces(character):
 # Function to execute the code generated through parsing.
 func execute(parsedInfo):
 	var source = GDScript.new()
-	source.set_source_code('func eval():\n\tvar systems = global.rootnode.get_node("Systems")\n\t' + parsedInfo)
+	source.set_source_code('func eval():\n\t' + parsedInfo)
 	source.reload()
 	var script = Reference.new()
 	script.set_script(source)

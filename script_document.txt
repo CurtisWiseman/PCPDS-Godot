@@ -1,9 +1,16 @@
-(Mage, campus, 1, happy): LINE
-(Hippo, campus, grabby, happy, offright, slide, right): LINE
-(Mage, slide, offleft): LINE
-(Hippo): LINE
-[SLIDE Mage left 16]
-(Hippo, slide, center, 12): LINE
+[Note: Cannot use two+ (sameCharacter, slide) with no line being spoken in a row, two+ [SLIDE sameCharacter] in a row,]
+[or (char, out, exp, slide), [SLIDE sameCharacter]/(sameCharacter, slide) w/ no line, (sameChar, sameOut, exp, slide).] 
+[If any of these are done the game will crash. I unsure why. It's easy to work around though.]
+
+(9/11, boi, offleft, slide, left) LINE
+(9/11, slide, right) LINE
+(Mage, campus, 1, happy, right, slide, left) LINE
+[SLIDE Mage right]
+(Hippo, campus, grabby, happy, offright, slide, right) LINE
+(Mage, slide, offleft) LINE
+(Mage, off): TEST
+[REMOVE Hippo]
+[REMOVE 9/11]
 Wow. My first day at PCP University!
 [*Choice 1*
 My last school thew me out for being too retarted and not being able to finish my assignments.
