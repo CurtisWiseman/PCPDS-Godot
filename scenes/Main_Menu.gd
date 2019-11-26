@@ -32,7 +32,6 @@ func _physics_prcoess(delta):
 
 
 func _on_Start_pressed():
-#	get_tree().change_scene('res://scenes/Test.tscn')
 	systems.scene.change('test')
 
 func _on_Settings_pressed():

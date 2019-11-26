@@ -10,7 +10,6 @@ var parent # The Dispay function.
 # Position function variables, to lessen calculation time.
 var type # The type of node.
 var node # The node itself.
-var yes = false
 
 # Called by display.gd with the dest, speed, and colliding node.
 func move(s, c, t, x=null):

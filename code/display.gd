@@ -367,7 +367,7 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 		# If slide then do not interact with any characters on the way to destination.
 		if mv == 'slide':
 			var position = Node.new() # Creates a new Node node for positioning the image.
-			position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
+			position.set_script(load('res://code/positioning.gd')) # Give position the positioning script.
 			position.set_name(cname + '(Position)') # Give it the image name + (Position)
 			add_child(position) # Add it as a child of Display.
 			get_node(cname + '(Position)').move(Vector2(s,0), node, 0, x) # Call position's move function.
@@ -404,7 +404,7 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 				node = node.get_node(node.name)
 			
 			var position = Node.new() # Creates a new Node node for positioning the image.
-			position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
+			position.set_script(load('res://code/positioning.gd')) # Give position the positioning script.
 			position.set_name(cname + '(Position)') # Give it the image name + (Position)
 			add_child(position) # Add it as a child of Display.
 			get_node(cname + '(Position)').move(Vector2(s,0), node, 0, x) # Call position's move function.
@@ -795,7 +795,7 @@ func _character_exited(area, ogarea):
 # Movement helper.
 func _movement(area):
 	var position = Node.new() # Creates a new Node node for positioning the area's parent node.
-	position.set_script(load('res://scripts/positioning.gd')) # Give position the positioning script.
+	position.set_script(load('res://code/positioning.gd')) # Give position the positioning script.
 	position.set_name(area.get_parent().name + '(Position)') # Give it the area parent name + (Position)
 	add_child(position) # Add position as a child of Display.
 	get_node(area.get_parent().name + '(Position)').move(speed, area.get_parent(), timer) # Call position's move function with collider's speed.

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/right.png-8e182f6a0fd29b44997100c82af34fda.stex"
+path="res://.import/choiceButton.png-da71679b0347d667079b3fa5b71bb9ed.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/dialoguebox/right.png"
-dest_files=[ "res://.import/right.png-8e182f6a0fd29b44997100c82af34fda.stex" ]
+source_file="res://images/dialoguebox/choiceButton.png"
+dest_files=[ "res://.import/choiceButton.png-da71679b0347d667079b3fa5b71bb9ed.stex" ]
 
 [params]
 

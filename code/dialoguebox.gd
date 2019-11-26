@@ -1,5 +1,5 @@
 #I use a ColorRect as the dialogue box, but replacing it with a TextureRect shouldn't be a problem
-extends ColorRect
+extends TextureRect
 
 var dialogue = PoolStringArray() #All of the lines in the current text file. Not using a regular array for better performance
 var index = 0 #Index of current line of dialogue
@@ -7,11 +7,15 @@ var script
 var regex = RegEx.new()
 var systems
 var choices = []
+var inChoice = false
 var chosenChoices = []
+var displayChoices = []
 var waitTimer = Timer.new()
+var numOfChoices = 0
 
 signal empty_line
 signal sentence_end
+signal choiceChosen
 signal sliding_finished
 
 
@@ -35,14 +39,124 @@ func _ready():
 	waitTimer.one_shot = true
 	waitTimer.autostart = false
 	add_child(waitTimer)
+	
+	global.pause_input = true # Pause input during first load.
 
 
+#Nametag is the label above the textbox, dialogue's say is what updates the textbox.
 func say(words, character = ""):
-	#Nametag is the label above the textbox, dialogue's say is what updates the textbox.
 	$Nametag.text = character
 	$Dialogue.say(words)
 
 
+# Function to calculate the number of unseen choices.
+func choice_calc(choice):
+	# Figure out if there are more unseen choices.
+	var pastChoice = false
+	for item in choices:
+		if choice == item:
+			pastChoice = true
+	if 'UNDO'.is_subsequence_of(dialogue[index]):
+		pastChoice = true
+	
+	if !pastChoice:
+		choices.append(choice) # Add to choices that have been seen.
+		displayChoices.append(choice) # The choices to display.
+		numOfChoices += 1
+		index += 1
+	
+	# If no more unseen choices then display the gathered choices.
+	if dialogue[index].length() == 0 or dialogue[index][0] != '*' or pastChoice:
+		if numOfChoices == 1:
+			choice_display(displayChoices[0], 370, 420)
+		elif numOfChoices == 2:
+			choice_display(displayChoices[0], 335, 385)
+			choice_display(displayChoices[1], 405, 455)
+		elif numOfChoices == 3:
+			choice_display(displayChoices[0], 300, 350)
+			choice_display(displayChoices[1], 370, 420)
+			choice_display(displayChoices[2], 440, 490)
+		elif numOfChoices == 4:
+			choice_display(displayChoices[0], 265, 315)
+			choice_display(displayChoices[1], 335, 385)
+			choice_display(displayChoices[2], 405, 455)
+			choice_display(displayChoices[3], 475, 525)
+		elif numOfChoices == 5:
+			choice_display(displayChoices[0], 230, 280)
+			choice_display(displayChoices[1], 300, 350)
+			choice_display(displayChoices[2], 370, 420)
+			choice_display(displayChoices[3], 440, 490)
+			choice_display(displayChoices[4], 510, 560)
+		
+		return
+	
+	choice  = dialogue[index].lstrip('*')
+	choice = choice.rstrip('*')
+	choice_calc(choice) # Recusivly call until choice_display() is called.
+
+
+# Function to display unseen choices.
+func choice_display(text, top, bot):
+	
+	var choice = TextureRect.new()
+	choice.name = text
+	choice.texture = load('res://images/dialoguebox/choiceButton.png')
+	choice.margin_top = top
+	choice.margin_bottom = bot
+	choice.margin_left = 0
+	choice.margin_right = 1920
+	
+	var choicebutton = TextureButton.new()
+	choicebutton.margin_top = 0
+	choicebutton.margin_bottom = 50
+	choicebutton.margin_left = 400
+	choicebutton.margin_right = 1520
+	
+	var choicetext = RichTextLabel.new();
+	choicetext.name = 'Choice 1 Text'
+	choicetext.bbcode_enabled = true
+	choicetext.margin_top = 10
+	choicetext.margin_bottom = 50
+	choicetext.margin_left = 0
+	choicetext.margin_right = 1920
+	choicetext.add_font_override("normal_font", global.defaultChoiceFont)
+	choicetext.add_font_override("italics_font", global.defaultChoiceFontItalic)
+	choicetext.add_font_override("bold_font", global.defaultChoiceFontBold)
+	choicetext.set_theme(global.textTheme)
+	choicetext.bbcode_text = '[center]' + text + '[/center]'
+	
+	choicebutton.connect('pressed', self, 'choice_pressed', [text, choicebutton])
+	choicebutton.connect('mouse_entered', self, 'choice_hovered', [choice])
+	choicebutton.connect('mouse_exited', self, 'choice_unhovered', [choice])
+	
+	choice.add_child(choicetext)
+	choice.add_child(choicebutton)
+	systems.canvas.add_child(choice)
+
+
+# Handle what happens when a choice is chosen.
+func choice_pressed(choice, button):
+	
+	for item in displayChoices:
+		systems.canvas.remove_child(systems.canvas.get_node(item))
+	
+	waitTimer.wait_time = 1
+	waitTimer.start()
+	yield(waitTimer, 'timeout')
+	
+	displayChoices = []
+	numOfChoices = 0
+	chosenChoices.append(choice)
+	emit_signal('choiceChosen')
+	global.pause_input = false
+
+
+# Functions to change color when hovered/unhovered.
+func choice_hovered(choiceNode): choiceNode.texture = load('res://images/dialoguebox/choiceButtonHovered.png')
+func choice_unhovered(choiceNode): choiceNode.texture = load('res://images/dialoguebox/choiceButton.png')
+
+
+# The main dialogue function.
 func _on_Dialogue_has_been_read():
 	if index < dialogue.size(): #Checks to see if end of document has been reached
 		#Skips empty lines e.g spacing
@@ -55,6 +169,7 @@ func _on_Dialogue_has_been_read():
 			waitTimer.wait_time = 1
 			waitTimer.start()
 			yield(waitTimer, "timeout")
+			global.pause_input = false
 		
 		# COMMENTS/COMMANDS
 		if dialogue[index].begins_with("["):
@@ -93,29 +208,59 @@ func _on_Dialogue_has_been_read():
 		
 		# CHOICES
 		elif dialogue[index].begins_with("*"):
+			
+			# Deal with the end of a choice.
+			if inChoice:
+				if dialogue[index] == '*':
+					inChoice = false
+				index += 1
+				emit_signal('empty_line')
+				return
+			
 			var choice  = dialogue[index].lstrip('*')
 			choice = choice.rstrip('*')
-			
 			var pastChoice = false
 			var chosenChoice = false
 			
+			# UNDO the specified choice.
 			if 'UNDO' == choice.substr(0, 4):
-				print(choice)
+				chosenChoices.erase(choice.substr(5, choice.length()))
+				index += 1
+				emit_signal('empty_line')
 				return
 			
+			# Determine if the choice has been seen before.
 			elif choices.size() != 0:
 				for i in range(0, choices.size()):
 					if choice == choices[i]:
 						pastChoice = true
 						break
 			
-			elif pastChoice:
-				for i in range(0, chosenChoices.size()):
-					if choice == chosenChoices[i]:
-						chosenChoice = true
+			# If the choice has been seen before...
+			if pastChoice:
+				# and there are no chosenChoices then skip the choice block.
+				if chosenChoices.size() == 0:
+					index += 1
+					while dialogue[index] != '*':
+						index += 1
+				else:
+					# If chosenChoices is > 0 then determine if choice is a chosenChoice.
+					for i in range(0, chosenChoices.size()):
+						# If choice is a chosenChoice then set inChoice to true.
+						if choice == chosenChoices[i]:
+							inChoice = true
+						# else skip the choice block.
+						else:
+							index += 1
+							while dialogue[index] != '*':
+								index += 1
+			# If an unseen choice then display it and adjacent unseen choices.
 			else:
-				choices.append(choice)
-				# Display a choice visually
+				global.pause_input = true
+				choice_calc(choice)
+				yield(self, 'choiceChosen')
+				emit_signal('empty_line')
+				return
 			
 			index += 1
 			emit_signal('empty_line')
@@ -177,7 +322,6 @@ func _on_Dialogue_has_been_read():
 				chrName = tmp[1]
 				if !say: say("", chrName)
 			elif !say: say("", "")
-			
 			
 			parse_info(info); # Parse the info so that is displays a character.
 			
@@ -515,21 +659,6 @@ func parse_move(info, body, i, stop=true):
 # Function to wait until moving finishes.
 func wait(body):
 	global.pause_input = true
-	
-#	var bname = systems.display.nodupelayername(execreturn('return '+body))
-#	var k = 0
-#	for i in range(1, bname.length()):
-#			bname = bname.substr(0,i+k) + '*' + bname.substr(i+k, bname.length()-i)
-#			k+=1
-#	bname = '*' + bname
-#	bname = bname + '*'
-#	var node
-#	var children = systems.display.get_children()
-#	for child in children:
-#		if child.name.matchn('*(*P*o*s*i*t*i*o*n*)*'):
-#			if child.name.matchn(bname):
-#				node = child
-	
 	yield(global.rootnode.get_node('Systems/Display/'+systems.display.getname(execreturn('return '+body))+'(Position)'), 'position_finish')
 	global.pause_input = false
 	emit_signal('sliding_finished')

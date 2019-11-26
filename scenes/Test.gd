@@ -4,7 +4,7 @@ var systems # Define systems for use globally.
 
 func _ready():
 	systems = $Systems # Load systems with the Systems node.
-	systems.dialogue("res://script_document.txt"); # Provides the script to be used and activates the pause menu.
+	systems.dialogue("res://scripts/script_document.txt"); # Provides the script to be used and activates the pause menu.
 	systems.display.background('res://images/backgrounds/WayToSchool - colors without J.PNG', 'image') # Set the background.
 
 # Where all non-script processing of a scene takes place.
