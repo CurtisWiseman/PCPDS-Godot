@@ -9,7 +9,7 @@ var sfx_volume = 1
 var pause_input = false
 var loadedOnce = false
 var sliding = false
-var screenshotsTaken = 0
+var screenshotsTaken = 1
 var defaultChoiceFontItalic
 var defaultChoiceFontBold
 var defaultChoiceFont
@@ -83,22 +83,6 @@ func _ready():
 		sfx_volume = float(settings.substr(settings.find('sfx_volume:', 0) + 11, 5))
 	
 	
-	# Find the number of screenshots taken or set it to 0.
-	if settings.find('screenshots_taken:', 0) == -1:
-		file.open("user://usersettings.tres", File.READ_WRITE)
-		file.store_line(settings + 'screenshots_taken:0')
-		settings = file.get_as_text()
-		file.close()
-	else:
-		var settingarray = settings.split('\n')
-		var line
-		for setting in settingarray:
-			if 'screenshots_taken:'.is_subsequence_of(setting):
-				line = setting
-				break
-		screenshotsTaken = int(line.substr(18, line.length()))
-	
-	
 	# If the directory for screenshots doesn't exists create it.
 	var directory = Directory.new()
 	if !directory.dir_exists('user://screenshots'):
@@ -153,47 +137,24 @@ func _ready():
 
 
 
+
+
 # Handle screenshot event.
 func _input(event):
-	if event.is_action_pressed("screenshot"):
+	if event.is_action_pressed("screenshot") and !game.blockInput:
 		
 		# Pause the game then take and save a screenshot.
 		get_tree().paused = not get_tree().paused
 		var image = get_viewport().get_texture().get_data()
 		image.flip_y()
-		screenshotsTaken += 1
-		image.save_png("user://screenshots/screenshot_"+ str(screenshotsTaken) +".png")
 		
-		# Determine values for placing the new screenshot total.
-		var file = File.new()
-		file.open("user://usersettings.tres", File.READ_WRITE)
-		var settings = file.get_as_text()
-		var settingarray = settings.split('\n')
-		var newsettings
-		var location
-		var last = false
-		var line
-		for i in range(0, settingarray.size()):
-			if 'screenshot_taken:'.is_subsequence_of(settingarray[i]):
-				line = settingarray[i]
-				if i == settingarray.size()-2: last = true
+		var file = File.new() # Find an unused file name.
+		var imagePath = "user://screenshots".plus_file('screenshot_%d.png' % screenshotsTaken)
+		while true:
+			if !file.file_exists(imagePath):
 				break
-		for i in range(0, settings.length()):
-			if settings[i] == 's':
-				if settings[i + 1] == 'c':
-					location = i
-					break
+			screenshotsTaken += 1
+			imagePath = "user://screenshots".plus_file('screenshot_%d.png' % screenshotsTaken)
 		
-		# Based on the values, remove the old screenshot amount from the settings.
-		if location == 0:
-			newsettings = settings.substr(location + line.length() + 1, settings.length())
-		elif last:
-			newsettings = settings.substr(0, location)
-		else:
-			newsettings = settings.substr(0, location)
-			newsettings += settings.substr(location + line.length() + 1, settings.length())
-		
-		# Add the new total to settings and unpause the game now that calculations are finished.
-		file.store_line(newsettings + 'screenshots_taken:' + str(screenshotsTaken))
-		file.close()
+		image.save_png(imagePath)
 		get_tree().paused = not get_tree().paused
