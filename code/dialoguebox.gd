@@ -158,6 +158,7 @@ func choice_unhovered(choiceNode): choiceNode.texture = load('res://images/dialo
 
 # The main dialogue function.
 func _on_Dialogue_has_been_read():
+	
 	if index < dialogue.size(): #Checks to see if end of document has been reached
 		#Skips empty lines e.g spacing
 		while dialogue[index].length() == 0:
@@ -170,6 +171,7 @@ func _on_Dialogue_has_been_read():
 			waitTimer.start()
 			yield(waitTimer, "timeout")
 			global.pause_input = false
+		
 		
 		# COMMENTS/COMMANDS
 		if dialogue[index].begins_with("["):
@@ -196,9 +198,9 @@ func _on_Dialogue_has_been_read():
 					var layer = systems.display.layers[i]['name']
 					if layer.findn(command[1].to_lower()) != -1:
 						if command.size() == 3:
-							parse_move(['slide', command[2]], '"'+systems.display.layers[i]['path']+'"', 0, false)
+							parse_move(['slide', command[2]], '"'+systems.display.layers[i]['path']+'"', 0)
 						elif command.size() == 4:
-							parse_move(['slide', command[2], command[3]], '"'+systems.display.layers[i]['path']+'"', 0, false)
+							parse_move(['slide', command[2], command[3]], '"'+systems.display.layers[i]['path']+'"', 0)
 						break
 			
 			global.rootnode.scene(dialogue[index])
@@ -276,6 +278,11 @@ func _on_Dialogue_has_been_read():
 			var wait = true # Whether or not to wait when no text to say.
 			var slide = false # Checks if character is sliding.
 			
+			# Handle 'soft' newlines so that a newline does't sperate lines of dialogue when displayed.
+			if dialogue[index][lastChar] == 'n' and dialogue[index][lastChar-1] == '/':
+				dialogue[index+1] = dialogue[index].substr(0, lastChar-1) + "\n" + dialogue[index+1]
+				index += 1
+			
 			#Replaces every instance of the word "Player" with "PCPGuy". You can easily
 			#tweak this to replace another word, or to replace it with a varia le index.e an inputted player name
 			regex.compile("Player")
@@ -315,6 +322,29 @@ func _on_Dialogue_has_been_read():
 			
 			var chrName = info[0] # Set the chrName to info[0].
 			
+			# Change nametag color depending on the current speaker
+			match info[0]:
+				"Tom":
+					$Nametag.add_color_override("font_color", global.tom.color)
+				"Mage":
+					$Nametag.add_color_override("font_color", global.mage.color)
+				"Ben":
+					$Nametag.add_color_override("font_color", Color('8d8d8d'))
+				"Digi":
+					$Nametag.add_color_override("font_color", global.digibro.color)
+				"Davoo":
+					$Nametag.add_color_override("font_color", Color('408ff2'))
+				"Jess":
+					$Nametag.add_color_override("font_color", Color('fdf759'))
+				"Munchy":
+					$Nametag.add_color_override("font_color", global.munchy.color)
+				"Hippo":
+					$Nametag.add_color_override("font_color", global.hippo.color)
+				"Endless War":
+					$Nametag.add_color_override("font_color", global.endlesswar.color)
+				_:
+					$Nametag.add_color_override("font_color", Color.white)
+			
 			# Check if another name needs to be used.
 			if info[0].find('|') != -1:
 				var tmp = info[0].split('|', false)
@@ -335,28 +365,6 @@ func _on_Dialogue_has_been_read():
 #			$Nametag.add_font_override("normal_font", mageFont)
 			
 			if say: # If the text is to be said then...
-				
-				# Change nametag color depending on the current speaker
-				match info[0]:
-					"Tom":
-						$Nametag.add_color_override("font_color", global.tom.color)
-					"Mage":
-						$Nametag.add_color_override("font_color", global.mage.color)
-					"Ben":
-						$Nametag.add_color_override("font_color", Color('8d8d8d'))
-					"Digi":
-						$Nametag.add_color_override("font_color", global.digibro.color)
-					"Davoo":
-						$Nametag.add_color_override("font_color", Color('408ff2'))
-					"Jess":
-						$Nametag.add_color_override("font_color", Color('fdf759'))
-					"Munchy":
-						$Nametag.add_color_override("font_color", global.munchy.color)
-					"Hippo":
-						$Nametag.add_color_override("font_color", global.hippo.color)
-					"Endless War":
-						$Nametag.add_color_override("font_color", global.endlesswar.color)
-				
 				
 				say(text, chrName)
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
@@ -382,8 +390,15 @@ func _on_Dialogue_has_been_read():
 		
 #		If line doesn't start with anything particular, register it as the player's thoughts
 		else:
-			$Nametag.add_color_override("font_color", Color(1,1,1))
-			say(dialogue[index], "") #Nametag can freely be replaced with player's name
+			var lastChar = dialogue[index].length()-1 # The position of the last character.
+			
+			# Handle 'soft' newlines so that a newline does't sperate lines of dialogue when displayed.
+			if dialogue[index][lastChar] == 'n' and dialogue[index][lastChar-1] == '/':
+				dialogue[index+1] = dialogue[index].substr(0, lastChar-1) + "\n" + dialogue[index+1]
+				index += 1
+			
+			$Nametag.add_color_override("font_color", Color.white)
+			say(dialogue[index], "")
 			global.rootnode.scene(dialogue[index]) # Send the dialogue to the scene function in the root of the scene.
 			emit_signal('sentence_end', dialogue[index])
 			index += 1
@@ -542,6 +557,9 @@ func parse_expnum(expression, parsedInfo):
 	elif 'med' == expression.substr(length-3, 3):
 		return '1'
 	elif 'max' == expression.substr(length-3, 3):
+#		print(execreturn('return global.chr.'+parsedInfo+'.'+expression.rstrip('max')+'.size()'))
+		for item in global.chr.nate.campus.angry:
+			print(item)
 		var num = execreturn('return global.chr.'+parsedInfo+'.'+expression.rstrip('max')+'.size()')
 		if num == 3:
 			return '2'
@@ -617,11 +635,10 @@ func parse_position(info, parsedInfo, body, i):
 	elif info[i] == 'off':
 		pass # Do nothing if the character is speaking off screen.
 	else:
-		print('Invalid movement on line ' + String(index+1) + ' of the script!')
 		return
 
 # Function to parse position movement.
-func parse_move(info, body, i, stop=true):
+func parse_move(info, body, i):
 	var speed = '15'
 	var extra = 0
 	var num
@@ -634,34 +651,20 @@ func parse_move(info, body, i, stop=true):
 		if info[i+1].findn('|') != -1:
 			var cords = info[i+1].split('|', false, 1)
 			execute('systems.display.position('+body+', '+cords[0]+', "slide", '+speed+')')
-			if stop: wait(body)
 		elif info[i+1] == 'right':
 			num = 600 + extra
 			execute('systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
-			if stop: wait(body)
 		elif info[i+1] == 'left':
 			num = -600 + extra
 			execute('systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
-			if stop: wait(body)
 		elif info[i+1] == 'center':
 			execute('systems.display.position('+body+', '+str(extra)+', "slide", '+speed+')')
-			if stop: wait(body)
 		elif info[i+1] == 'offleft':
 			execute('systems.display.position('+body+', -1650, "slide", '+speed+')')
-			if stop: wait(body)
 		elif info[i+1] == 'offright':
 			execute('systems.display.position('+body+', 1650, "slide", '+speed+')')
-			if stop: wait(body)
 		else:
-			print('Invalid movement on line ' + String(index+1) + ' of the script!')
 			return
-
-# Function to wait until moving finishes.
-func wait(body):
-	global.pause_input = true
-	yield(global.rootnode.get_node('Systems/Display/'+systems.display.getname(execreturn('return '+body))+'(Position)'), 'position_finish')
-	global.pause_input = false
-	emit_signal('sliding_finished')
 
 # Function to execute the code generated through parsing.
 func execute(parsedInfo):

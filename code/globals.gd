@@ -7,6 +7,8 @@ var master_volume = 1
 var music_volume = 1
 var sfx_volume = 1
 var pause_input = false
+var loadedOnce = false
+var sliding = false
 var screenshotsTaken = 0
 var defaultChoiceFontItalic
 var defaultChoiceFontBold

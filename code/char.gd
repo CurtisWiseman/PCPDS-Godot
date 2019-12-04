@@ -18,7 +18,7 @@ func _ready():
 	nine11 = {'video': [], 'body': []}
 	actiongiraffe = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'blush': null, 'body': []}
 	digibro = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-	endlesswar = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': [], 'knife': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}}	
+	endlesswar = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': [], 'knife': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}, 'cross': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}}
 	hippo = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
 	mage = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
 	munchy = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}}
@@ -29,26 +29,31 @@ func _ready():
 	# Make an array of the characters who need their images loaded. (Make the same as their folder name.)
 	var chararray = ['Action Giraffe', 'Digibro', 'Endless War', 'Hippo', 'Mage', 'Munchy', 'Nate', 'Tom']
 	loadchars(chararray)
-	load911()
 
 
 
 # Function to load character dictionaries with the appropriate images.
 func loadchars(chararray):
 	
-	for character in chararray:
+	if global.loadedOnce == false:
+	
+		global.loadedOnce = true
 		
-		var bodies = returndir(character)
-		for body in bodies:
-			insert(character, body, 'body')
+		for character in chararray:
+			
+			var bodies = returndir(character)
+			for body in bodies:
+				insert(character, body, 'body')
+			
+			var faces = returnfaces(character)
+			for face in faces:
+				insert(character, face, 'face')
+			
+			var afls = returndir(character + '/AFL')
+			for afl in afls:
+				insert(character, afl, 'afl')
 		
-		var faces = returnfaces(character)
-		for face in faces:
-			insert(character, face, 'face')
-		
-		var afls = returndir(character + '/AFL')
-		for afl in afls:
-			insert(character, afl, 'afl')
+		load911()
 
 
 
@@ -110,12 +115,21 @@ func insert(character, file, type):
 
 		'Endless War':
 			if type == 'body':
-				endlesswar.body.append(file)
-				endlesswar.knife.body.append(file)
+				if file.findn('stand') != -1:
+#					print(file)
+					endlesswar.body.append(file)
+				elif file.findn('knife') != -1:
+#					print(file)
+					endlesswar.knife.body.append(file)
+				elif file.findn('cross') != -1:
+#					print(file)
+					endlesswar.cross.body.append(file)
 			
 			elif type == 'face':
 				if file.findn('knife') != -1:
 					emotedecipher(file, 'endlesswar', '.knife')
+				elif file.findn('cross') != -1:
+					emotedecipher(file, 'endlesswar', '.cross')
 				else:
 					emotedecipher(file, 'endlesswar', '')
 			

@@ -1,6 +1,6 @@
 extends RichTextLabel
 
-var charMAX = 285
+var charMAX = 180
 var longTextParts = []
 var currentSubstring = 0
 var currentLine = 0
@@ -32,7 +32,14 @@ func _input(event):
 	
 #	advance_text is a mapped action (2nd tab of project settings). this is done with remapping in mind
 	if Input.is_action_just_pressed("advance_text") and !global.pause_input:
-			if get_visible_characters() == get_total_character_count():
+		
+			if global.sliding:
+				for child in get_node('../../../../Display').get_children():
+					if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
+						child.finish()
+				global.sliding = false
+			
+			elif get_visible_characters() == get_total_character_count():
 				# In middle of longer sentence - progress through sentence
 				if currentSubstring < longTextParts.size(): 
 					emit_signal("substring_has_been_read")
@@ -54,7 +61,7 @@ func _process(delta):
 
 func say(text):
 	set_visible_characters(0) # Remove current line
-
+	
 #	Compartmentalize long line into smaller strings
 	if isCompartmentalized == false && text.length() >= charMAX:
 		compartmentalise(text)
@@ -80,11 +87,12 @@ func compartmentalise(longText):
 		if sentenceLength - sentenceCharIndex >= charMAX:
 			currentSentence = longText.substr(sentenceCharIndex, charMAX)
 			sentenceCharIndex += charMAX
-
-			# To make sure that next substring doesn't begin with a blank space
-			while currentSentence.ends_with(" ") == false:
-				currentSentence = currentSentence.insert(sentenceCharIndex, longText.substr(sentenceCharIndex, 1))
-				sentenceCharIndex += 1
+			
+			if currentSentence.find(' ', 0) != -1:
+				# To make sure that next substring doesn't begin with a blank space
+				while currentSentence.ends_with(" ") == false:
+					currentSentence = currentSentence.substr(0, sentenceCharIndex - 1)
+					sentenceCharIndex -= 1
 
 #			Add substring to array
 			longTextParts.push_back(currentSentence)

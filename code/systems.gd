@@ -145,7 +145,7 @@ func dialogue(script):
 	timer = Timer.new()
 	timer.name = 'Timer'
 	timer.process_mode = 1
-	timer.wait_time = 0.04
+	timer.wait_time = 0.02
 	timer.one_shot = false
 	timer.autostart = true
 	timer.connect("timeout", dialogue, "_on_Timer_timeout")
