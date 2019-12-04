@@ -13,13 +13,13 @@ func _physics_prcoess(delta):
 		$CenterContainer/Pause_Buttons/Load.grab_focus()
 
 func _input(event):
-	if event.is_action_pressed("pause"): #Originally, this was using ui_cancel. I created my own input_map type in Project Settings -> Input Map
+	if event.is_action_pressed("pause") and !game.blockInput: #Originally, this was using ui_cancel. I created my own input_map type in Project Settings -> Input Map
 		$CenterContainer/Pause_Buttons/Save.grab_focus() #It is linked to the Escape key and the Start button on controllers
 		get_tree().paused = not get_tree().paused
 		visible = not visible
 
 func _on_Save_pressed():
-	pass # Will evantually open the save system
+	game.save()
 
 func _on_Load_pressed():
 	pass # Will evantually open the load system

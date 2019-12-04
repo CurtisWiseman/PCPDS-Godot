@@ -56,7 +56,7 @@ func _ready():
 
 
 # Function to view the dialogue box on a scene and add the pause menu.
-func dialogue(script):
+func dialogue(script, index=0):
 	
 	# A canvas layer above all the rest for pausing.
 	pauseCanvas = CanvasLayer.new()
@@ -152,5 +152,6 @@ func dialogue(script):
 	dialogueBox.add_child(timer)
 	
 	dialogueBox.script = script
+	dialogueBox.index = index
 	canvas.add_child(dialogueBox)
 	pauseCanvas.add_child(pause)

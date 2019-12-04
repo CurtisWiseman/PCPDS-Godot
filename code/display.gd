@@ -171,7 +171,7 @@ func mask(mask, path, type, z):
 		layers[info[1]]['name'] = maskname # Change the name in layers.
 		layers[info[1]]['node'] = imgnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'image' # The node's type.
-		layers[info[1]]['mask'] = true # State the it is indeed a mask.
+		layers[info[1]]['mask'] = mask # Store the mask path.
 		imgnode.centered = false # Uncenter the node.
 		imgnode.texture = info[2] # Set the node's texture to the image.
 		
@@ -195,7 +195,7 @@ func mask(mask, path, type, z):
 		layers[info[1]]['name'] = maskname # Change the name in layers.
 		layers[info[1]]['node'] = vidnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'video' # The node's type.
-		layers[info[1]]['mask'] = true # State the it is indeed a mask.
+		layers[info[1]]['mask'] = mask # Store the mask path.
 		vidnode.stream = info[2] # Set the node's video steam to video.
 		vidnode.rect_size = global.size # Set the size to the global size.
 		vidnode.volume_db = -1000 # Mute the video.
@@ -243,8 +243,13 @@ func face(facepath, body, x=0, y=0, type='face'):
 	layers[index]['node'].add_child(facenode) # Add as a child of the body node.
 	if type == 'face':
 		layers[index]['face'] = facenode # Add the face node the dictionary.
+		layers[index]['facepos'] = Vector2(x,y) # Add the coordinates.
 	else:
-		layers[index]['other'] = facenode # Add the accessory, blush, whatever to other.
+		if !layers[index].has('AFL'):
+			layers[index]['AFL'] = []
+			layers[index]['AFLpos'] = []
+		layers[index]['AFL'].append(facenode) # Add the accessory, blush, or whatever to AFL.
+		layers[index]['AFLpos'].append(Vector2(x,y)) # Add the coordinates.
 
 
 

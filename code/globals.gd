@@ -141,7 +141,7 @@ func _ready():
 
 # Handle screenshot event.
 func _input(event):
-	if event.is_action_pressed("screenshot"):
+	if event.is_action_pressed("screenshot") and !game.blockInput:
 		
 		# Pause the game then take and save a screenshot.
 		get_tree().paused = not get_tree().paused

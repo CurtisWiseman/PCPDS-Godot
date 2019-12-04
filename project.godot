@@ -18,11 +18,13 @@ _global_script_class_icons={
 config/name="PCPDS-Godot"
 run/main_scene="res://scenes/Main_Menu.tscn"
 config/icon="res://icon.png"
+config/version="0.1.0"
 
 [autoload]
 
 global="*res://code/globals.gd"
 characterImages="*res://code/char.gd"
+game="*res://code/saveandload.gd"
 
 [display]
 

@@ -2,7 +2,8 @@
 extends TextureRect
 
 var dialogue = PoolStringArray() #All of the lines in the current text file. Not using a regular array for better performance
-var index = 0 #Index of current line of dialogue
+var index #Index of current line of dialogue
+var start
 var script
 var regex = RegEx.new()
 var systems
@@ -10,6 +11,7 @@ var choices = []
 var inChoice = false
 var chosenChoices = []
 var displayChoices = []
+var displayingChoices = false
 var waitTimer = Timer.new()
 var numOfChoices = 0
 
@@ -17,6 +19,13 @@ signal empty_line
 signal sentence_end
 signal choiceChosen
 signal sliding_finished
+
+var lastSpoken = 0
+var lastLayers
+var lastBGNode
+var lastChoices
+var lastInChoice
+var lastChosenChoices
 
 
 func _ready(): 
@@ -32,7 +41,7 @@ func _ready():
 		dialogue.push_back(f.get_line())
 	f.close()
 	self.connect("empty_line", self, "_on_Dialogue_has_been_read")
-	index = 0 #Reset index of dialogue
+	start = index
 	emit_signal("empty_line") #Signals to display first line of dialogue
 	
 	# Define a wait timer.
@@ -149,6 +158,7 @@ func choice_pressed(choice, button):
 	chosenChoices.append(choice)
 	emit_signal('choiceChosen')
 	global.pause_input = false
+	displayingChoices = false
 
 
 # Functions to change color when hovered/unhovered.
@@ -156,8 +166,17 @@ func choice_hovered(choiceNode): choiceNode.texture = load('res://images/dialogu
 func choice_unhovered(choiceNode): choiceNode.texture = load('res://images/dialoguebox/choiceButton.png')
 
 
+# Function to keep items from the last spoken line.
+func lastKeep(idx):
+	lastSpoken = idx
+	lastChoices = choices.duplicate(true)
+	lastInChoice = inChoice
+	lastChosenChoices = chosenChoices.duplicate(true)
+	lastLayers = systems.display.layers.duplicate(true)
+	lastBGNode = systems.display.bgnode
+
 # The main dialogue function.
-func _on_Dialogue_has_been_read():
+func _on_Dialogue_has_been_read(setIndex=false):
 	
 	if index < dialogue.size(): #Checks to see if end of document has been reached
 		#Skips empty lines e.g spacing
@@ -166,7 +185,7 @@ func _on_Dialogue_has_been_read():
 	
 	#Reacts differently depending on the start of the current line.
 		# Load while on first line.
-		if index == 0:
+		if index == start:
 			waitTimer.wait_time = 1
 			waitTimer.start()
 			yield(waitTimer, "timeout")
@@ -259,6 +278,7 @@ func _on_Dialogue_has_been_read():
 			# If an unseen choice then display it and adjacent unseen choices.
 			else:
 				global.pause_input = true
+				displayingChoices = true
 				choice_calc(choice)
 				yield(self, 'choiceChosen')
 				emit_signal('empty_line')
@@ -276,7 +296,6 @@ func _on_Dialogue_has_been_read():
 			var say = true # Whether or not say the character text.
 			var lastChar = dialogue[index].length()-1 # The position of the last character.
 			var wait = true # Whether or not to wait when no text to say.
-			var slide = false # Checks if character is sliding.
 			
 			# Handle 'soft' newlines so that a newline does't sperate lines of dialogue when displayed.
 			if dialogue[index][lastChar] == 'n' and dialogue[index][lastChar-1] == '/':
@@ -290,12 +309,9 @@ func _on_Dialogue_has_been_read():
 			
 			# If there is no text on the line then don't say anything.
 			if dialogue[index][lastChar] == ')' or dialogue[index][lastChar] == '$':
-				say = false
 				global.pause_input = true
-				if 'slide'.is_subsequence_ofi(dialogue[index]): 
-					slide = true
-					wait = false
-				elif dialogue[index][lastChar] == '$': wait = false
+				say = false
+				if dialogue[index][lastChar] == '$': wait = false
 				var stripParentheses = dialogue[index].substr(dialogue[index].find("(") + 1, dialogue[index].find(")") - 1) #"Crop" the info inside of the parentheses.
 				info = stripParentheses.split(',') # Split the info inside the parentheses on commas.
 			
@@ -370,16 +386,11 @@ func _on_Dialogue_has_been_read():
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
 				global.rootnode.scene(dialogue[index]) # Send the dialogue to the scene function in the root of the scene.
 				emit_signal('sentence_end', dialogue[index])
+				lastKeep(index)
 				index += 1
 			
 			else: # Click if nothing was said after 0.5 seconds or not if !wait.
 				if wait:
-					waitTimer.wait_time = 1
-					waitTimer.start()
-					yield(waitTimer, 'timeout')
-				
-				if slide:
-					yield(self, 'sliding_finished')
 					waitTimer.wait_time = 1
 					waitTimer.start()
 					yield(waitTimer, 'timeout')
@@ -401,6 +412,7 @@ func _on_Dialogue_has_been_read():
 			say(dialogue[index], "")
 			global.rootnode.scene(dialogue[index]) # Send the dialogue to the scene function in the root of the scene.
 			emit_signal('sentence_end', dialogue[index])
+			lastKeep(index)
 			index += 1
 
 

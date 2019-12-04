@@ -1,6 +1,7 @@
 extends Node
 
 var queue = [] # Queue of music to play.
+var playing = {'path': "NULL", 'loop': "NULL", 'volume': "NULL"} # The current song.
 
 # Function to play music.
 func music(path, loop=false, volume=0):
@@ -16,6 +17,11 @@ func music(path, loop=false, volume=0):
 	
 	music.play() # Play the music.
 	add_child(music) # Add as a child of sound.
+	
+	# Save the values of the currently playing music.
+	playing.path = path
+	playing.loop = loop
+	playing.volume = volume
 
 
 
@@ -55,8 +61,13 @@ func unpause(audio):
 
 # Function to remove the audio entirely.
 func stop(audio):
-	if get_node(audio): get_node(audio).queue_free()
-	else: print('Error: No audio node named ' + audio + ' to stop.')
+	if get_node(audio):
+		get_node(audio).queue_free()
+		playing.path = "NULL"
+		playing.loop = "NULL"
+		playing.volume = "NULL"
+	else:
+		print('Error: No audio node named ' + audio + ' to stop.')
 
 
 
@@ -70,8 +81,13 @@ func audioname(path):
 
 
 # Play the next song in the queue.
-func queuenext(audio):
-	audio.queue_free() # Release the audio node.
+func queuenext(audio=null):
+	# Release the audio node.
+	if audio != null:
+		audio.queue_free()
+		playing.path = "NULL"
+		playing.loop = "NULL"
+		playing.volume = "NULL"
 	
 	# If song is in the queue then play it.
 	if queue.size() != 0:
