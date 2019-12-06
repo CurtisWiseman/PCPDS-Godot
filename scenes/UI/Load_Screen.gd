@@ -109,12 +109,12 @@ func loadSaves():
 
 # Function to make a new save and link it to the clicked box.
 func _on_LoadBox_pressed(saveBoxName):
-	get_tree().paused = true
 	var saveFile = saveBoxName.substr(7, saveBoxName.length())
 	saveFile = 'save' + saveFile + '.tres'
 	
 	for save in listOfSaves:
 		if save == saveFile:
+			get_tree().paused = true
 			game.load(saveFile)
 			break
 
