@@ -286,7 +286,7 @@ func returndir(character):
 		# Open the directory as dir
 		var dir = Directory.new()
 		dir.open(directory)
-		dir.list_dir_begin()
+		dir.list_dir_begin(true)
 		
 		# Until the end of the directory is reached appends to files.
 		while true:
@@ -313,7 +313,7 @@ func returnfaces(character):
 	var directory = 'res://images/characters/' + character
 	var dir = Directory.new()
 	dir.open(directory)
-	dir.list_dir_begin()
+	dir.list_dir_begin(true)
 	
 	# Variables for manipulating file gathering.
 	var tmpfiles

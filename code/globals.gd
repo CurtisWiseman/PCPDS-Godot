@@ -3,6 +3,7 @@ extends Node
 # Variables to be used across all files.
 var size
 var rootnode
+var dialogueBox
 var master_volume = 1
 var music_volume = 1
 var sfx_volume = 1

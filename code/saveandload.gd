@@ -1,20 +1,20 @@
 extends Node
 
 var SAVE_FOLDER = 'user://saves'
-var NUM_OF_SAVES = 'numOfSaves.tres'
-var SAVE_NAME_TEMPLATE = 'save%03d.tres'
-var SAVE_IMAGE_NAME_TEMPLATE = 'save%03d.png'
+var SAVE_NAME_TEMPLATE = 'save%d.tres'
+var SAVE_IMAGE_NAME_TEMPLATE = 'save%d.png'
+var loadSaveFile = false
 var blockInput = false
 var safeToSave = false
+# warning-ignore:unused_signal
+signal continue_loading
+
 
 # Function to save the game using a .tres file
-func save():
+func save(saveBoxName, saveBoxNum, sliders):
 	
 	if safeToSave:
-		# Block everything while saving.
-		get_tree().paused = true
-		global.pause_input = true
-		blockInput = true
+		blockInput = true # Block certain inputs while saving.
 		
 		# Create the SAVE_FOLDER directory if it doesn't exist.
 		var directory = Directory.new()
@@ -27,7 +27,13 @@ func save():
 		var sound = global.rootnode.get_node('Systems/Sound')
 		var display = global.rootnode.get_node('Systems/Display')
 		var dialogue = global.rootnode.get_node('Systems/Pause Canvas/Dialogue Canvas/Dialogue Box')
-		var pauseScreen = global.rootnode.get_node('Systems/Pause Canvas/pause_screen')
+		
+		
+		
+		# Take a screenshot to use on the load screen.
+		var image = get_viewport().get_texture().get_data()
+		image.flip_y()
+		image.save_png(SAVE_FOLDER.plus_file(SAVE_IMAGE_NAME_TEMPLATE % saveBoxNum))
 		
 		
 		
@@ -55,10 +61,12 @@ func save():
 					i += 1
 		
 		# DIALOGUE SYSTEM
+		var script = dialogue.script
 		var lastSpoken = str(dialogue.lastSpoken)
 		var inChoice = str(dialogue.lastInChoice)
 		var choices = dialogue.lastChoices
 		var chosenChoices = dialogue.lastChosenChoices
+		var lastBody = dialogue.lastBody
 		
 		if choices == []:
 			choices = "NULL"
@@ -94,14 +102,7 @@ func save():
 			displayBackground = "NULL"
 		else:
 			displayBackground = dialogue.lastBGNode.texture.resource_path
-		
-		if global.sliding: # Stop any sliding characters.
-			get_tree().paused = false
-			for child in display.get_children():
-				if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
-					child.finish()
-			global.sliding = false
-			get_tree().paused = true
+			displayBackground = displayBackground + ',' + dialogue.lastBGType
 		
 		var displayChildren = []
 		var displayFaces = []
@@ -110,42 +111,48 @@ func save():
 			displayChildren = "NULL"
 		else:
 			for layer in dialogue.lastLayers:
+				if sliders != []:
+					for node in sliders:
+						if node['path'] == layer['path'] and node['path'] != lastBody:
+							layer['position'].x = node['dest']
+				
+				var prefix = ''
+				if layer['path'].substr(0,6) != 'res://': prefix = 'res://'
+				
 				if layer.has('mask'):
+					var maskPrefix = ''
+					if layer['mask'].substr(0,6) != 'res://': maskPrefix = 'res://'
+					
 					if layer['type'] == 'image':
-						displayMaskChildren.append('res://' + layer['mask'] + ',res://' + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+						displayMaskChildren.append(maskPrefix + layer['mask'] + ',' + prefix + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
 					elif layer['type'] == 'video':
-						displayMaskChildren.append('res://' + layer['mask'] + ',res://' + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+						displayMaskChildren.append(maskPrefix + layer['mask'] + ',' + prefix + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
 				else:
 					if layer['type'] == 'image':
-						displayChildren.append('res://' + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+						displayChildren.append(prefix + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
 					elif layer['type'] == 'video':
-						displayChildren.append('res://' + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+						displayChildren.append(prefix + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
 				
 				if layer.has('face'):
-					displayFaces.append('res://' + layer['face'].texture.resource_path + ',res://' + layer['path'] + ',' + str(layer['facepos'].x) + ',' + str(layer['facepos'].y))
+					displayFaces.append(layer['face'].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['facepos'].x) + ',' + str(layer['facepos'].y))
 				
 				if layer.has('AFL'):
 					for i in range(0, layer['AFL'].size()):
-						displayFaces.append('res://' + layer['AFL'][i].texture.resource_path + ',res://' + layer['path'] + ',' + str(layer['AFL'][i].x) + ',' + str(layer['AFL'][i].y) + ',other')
+						displayFaces.append(layer['AFL'][i].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['AFL'][i].x) + ',' + str(layer['AFL'][i].y) + ',other')
 		
 		
 		
 		#WRITE THE SAVE FILE.
-		var i = 1
-		var savePath = "user://saves".plus_file('save%03d.tres' % i)
-		while true:
-			if !file.file_exists(savePath):
-				break
-			i += 1;
-			savePath = "user://saves".plus_file('save%03d.tres' % i)
-		
-		file.open(savePath, File.WRITE)
+		var savePath = SAVE_FOLDER.plus_file(SAVE_NAME_TEMPLATE % saveBoxNum)
+		file.open_encrypted_with_pass(savePath, File.WRITE, 'G@Y&D3@D')
 		file.store_line(gameVersion)
+		file.store_line(saveBoxName)
 		file.store_line(sceneName)
 		file.store_line('-music-')
 		file.store_line(musicPlaying)
 		file.store_line(musicQueue)
 		file.store_line('-dialogue-')
+		file.store_line(script)
 		file.store_line(lastSpoken)
 		file.store_line(inChoice)
 		file.store_line(choices)
@@ -168,13 +175,7 @@ func save():
 		
 		file.close()
 		
-		
-		
-		# Return to the game.
-		if pauseScreen.visible: pauseScreen.visible = false;
-		get_tree().paused = false
-		if !dialogue.displayingChoices: global.pause_input = false
-		blockInput = false
+		blockInput = false # Unblock all blocked systems.
 
 
 
@@ -182,4 +183,105 @@ func save():
 
 # Function to load a specified save file.
 func load(save):
-	pass
+	# Disallow saving and block certain inputs.
+	blockInput = true
+	loadSaveFile = true
+	game.safeToSave = false
+	
+	# Get the save file as an array of strings based on newlines.
+	var savePath = SAVE_FOLDER.plus_file(save)
+	var file = File.new()
+	file.open_encrypted_with_pass(savePath, File.READ, 'G@Y&D3@D')
+	var saveText = file.get_as_text().split('\n', false)
+	file.close()
+	
+	# Change to the saved scene.
+	var systems = global.rootnode.get_node('Systems')
+	systems.scene.change(saveText[2])
+	yield(self, 'continue_loading')
+	systems = global.rootnode.get_node('Systems')
+	
+	
+	
+	# LOAD MUSIC
+	if saveText[4] != 'NULL,NULL,NULL':
+		var music = saveText[4].split(',', false)
+		systems.sound.music(music[0], bool(music[1]), int(music[2]))
+	
+	if saveText[5] != 'NULL':
+		var elements = saveText[5].split('|', true)
+		for element in elements:
+			var music = element.split(',', false)
+			systems.sound.queue(music[0], bool(music[1]), int(music[2]))
+	
+	
+	# LOAD DISPLAY
+	if saveText[13] != 'NULL':
+		var background = saveText[13].split(',', false)
+		systems.display.background(background[0], background[1])
+	
+	var i = 14
+	var more = true
+	var size = saveText.size()
+	
+	while saveText[i] != 'faces' and saveText[i] != 'masks' and more: # Load all display content.
+		var item = saveText[i].split(',', false)
+		
+		if item[1] == 'image': systems.display.image(item[0], int(item[2]))
+		else: systems.display.video(item[0], int(item[2]))
+			
+		if item[3] != '0|0':
+			var pos = item[3].split('|', false)
+			systems.display.position(item[0], int(pos[0]), int(pos[1]))
+		
+		if i+1 == size: more = false
+		else: i += 1
+	
+	if more and saveText[i] == 'faces': # If more content and that content is faces then load them.
+		i+=1
+		while saveText[i] != 'masks' and more:
+			var face = saveText[i].split(',', false)
+			if face.size() == 4: systems.display.face(face[0], face[1], int(face[2]), int(face[3]))
+			else: systems.display.face(face[0], face[1], int(face[2]), int(face[3]), face[4])
+			if i+1 == size: more = false
+			else: i += 1
+	
+	if more: # If any content is left then it is masked content. Load it.
+		i+=1
+		while more:
+			var mask = saveText[i].split(',', false)
+		
+			if mask[2] == 'image': systems.display.mask(mask[0], mask[1], mask[2], int(mask[3]))
+			else: systems.display.mask(mask[0], mask[1], mask[2], int(mask[3]))
+			
+			if mask[4] != '0|0':
+				var pos = mask[4].split('|', false)
+				systems.display.position(mask[1], int(pos[0]), int(pos[1]))
+		
+			if i+1 == size: more = false
+			else: i += 1
+	
+	
+	# LOAD DIALOGUE
+	var inChoice = false
+	var choiceArray = []
+	var chosenChoiceArray = []
+	
+	if saveText[9] == 'True':inChoice = true
+	
+	if saveText[10] != 'NULL':
+		var stringArray = saveText[10].split(',', true)
+		for string in stringArray: choiceArray.append(string)
+	if saveText[11] != 'NULL':
+		var stringArray = saveText[11].split(',', true)
+		for string in stringArray: chosenChoiceArray.append(string)
+	
+	systems.dialogue(saveText[7], int(saveText[8]), choiceArray, inChoice, chosenChoiceArray)
+	
+	
+	
+	# Allow the player to interact with the new scene.
+	blockInput = false
+	loadSaveFile = false
+	game.safeToSave = true
+	get_tree().paused = false

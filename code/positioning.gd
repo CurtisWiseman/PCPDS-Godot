@@ -46,10 +46,12 @@ func _process(delta):
 
 # Function so that other nodes can end position movement.
 func finish():
-	node.position.x = dest
+	var destination = dest
 	dest = null
-	parent.layers[find_index()]['position'].x = node.position.x
+	node.position.x = destination
+	parent.layers[find_index()]['position'].x = destination
 	emit_signal('position_finish')
+	return {'path': parent.layers[find_index()]['path'], 'dest': destination}
 
 
 

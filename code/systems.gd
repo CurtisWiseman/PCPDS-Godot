@@ -6,14 +6,11 @@ var timer
 var pause
 var scene
 var canvas
-var window
 var display
 var nametag
 var dialogue
 var pauseCanvas
 var dialogueBox
-var dialboxLeft
-var dialboxRight
 
 # Load nodes for all game systems.
 func _ready():
@@ -50,13 +47,13 @@ func _ready():
 	# Load the pause screen system under the pause variable.
 	pause = Control.new() # Make a new contol node.
 	pause.name = 'Pause' # Name the node Pause.
-	pause = load('res://scenes/Pause_Screen.tscn').instance() # Attatch the Pause_Screen scene to pause.
+	pause = load('res://scenes/UI/Pause_Screen.tscn').instance() # Attatch the Pause_Screen scene to pause.
 	pause.visible = false # Make the scene invisible.
 
 
 
 # Function to view the dialogue box on a scene and add the pause menu.
-func dialogue(script, index=0):
+func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoicesArray=[]):
 	
 	# A canvas layer above all the rest for pausing.
 	pauseCanvas = CanvasLayer.new()
@@ -71,40 +68,13 @@ func dialogue(script, index=0):
 	# Load the DialogueBox under canvas.
 	dialogueBox = TextureRect.new()
 	dialogueBox.name = 'Dialogue Box'
-#	dialogueBox.color = Color(0, 0, 0, 0.9)
-#	dialogueBox.modulate = Color(1, 1, 1, 0.95)
 	dialogueBox.margin_top = 790
 	dialogueBox.margin_bottom = 1080
 	dialogueBox.margin_left = 0
 	dialogueBox.margin_right = 1920
 	dialogueBox.set_script(load('res://code/dialoguebox.gd'))
 	dialogueBox.texture = load('res://images/dialoguebox/dialogueBox.png')
-	
-#	# Create dialogue box ends.
-#	dialboxRight = ColorRect.new()
-#	dialboxRight.name = 'Dialogue Box Right'
-#	dialboxRight.color = Color.black
-#	dialboxRight.margin_bottom = 290
-#	dialboxRight.margin_top = 0
-#	dialboxRight.margin_left = -405
-#	dialboxRight.margin_right = 0
-#	dialboxRight.material = ShaderMaterial.new()
-#	dialboxRight.material.shader = Shader.new()
-#	dialboxRight.material.shader.code = global.dialBoxShaderCode
-#	dialboxRight.material.shader.set_default_texture_param('mask', load('res://images/dialoguebox/left.png'))
-#	dialogueBox.add_child(dialboxRight)
-#	dialboxLeft = ColorRect.new()
-#	dialboxLeft.name = 'Dialogue Box Left'
-#	dialboxLeft.color = Color.black
-#	dialboxLeft.margin_bottom = 290
-#	dialboxLeft.margin_top = 0
-#	dialboxLeft.margin_left = 1110
-#	dialboxLeft.margin_right = 1515
-#	dialboxLeft.material = ShaderMaterial.new()
-#	dialboxLeft.material.shader = Shader.new()
-#	dialboxLeft.material.shader.code = global.dialBoxShaderCode
-#	dialboxLeft.material.shader.set_default_texture_param('mask', load('res://images/dialoguebox/right.png'))
-#	dialogueBox.add_child(dialboxLeft)
+	global.dialogueBox = dialogueBox
 	
 	# Load the dialogue RichTextLaabel under dialogueBox.
 	dialogue = RichTextLabel.new();
@@ -151,7 +121,11 @@ func dialogue(script, index=0):
 	timer.connect("timeout", dialogue, "_on_Timer_timeout")
 	dialogueBox.add_child(timer)
 	
+	# Load dialogue with the necessary variables then add it to the screen.
 	dialogueBox.script = script
 	dialogueBox.index = index
+	dialogueBox.choices = choicesArray
+	dialogueBox.inChoice = inChoiceBool
+	dialogueBox.chosenChoices = chosenChoicesArray
 	canvas.add_child(dialogueBox)
 	pauseCanvas.add_child(pause)

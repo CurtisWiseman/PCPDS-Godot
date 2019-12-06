@@ -39,5 +39,6 @@ margin_right = 233.0
 margin_bottom = 620.0
 text = "Exit"
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Load" to="." method="_on_Load_pressed"]
 [connection signal="pressed" from="CanvasLayer/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_Quit_pressed"]

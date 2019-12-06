@@ -4,9 +4,16 @@ var systems # Define systems for use globally.
 
 func _ready():
 	systems = $Systems # Load systems with the Systems node.
-	systems.dialogue("res://scripts/test_script.tres"); # Provides the script to be used and activates the pause menu.
-	systems.display.background('res://images/backgrounds/WayToSchool - colors without J.PNG', 'image') # Set the background.
-	game.safeToSave = true # Tell the game it's safe to save.
+	
+	if !game.loadSaveFile: # Run if not loading a save file.
+		systems.dialogue("res://scripts/test_script.tres"); # Provides the script to be used and activates the pause menu.
+		systems.display.background('res://images/backgrounds/WayToSchool - colors without J.PNG', 'image') # Set the background.
+		game.safeToSave = true # Tell the game it's safe to save.
+	
+	else: # If loading a save file then emit a signal to continue loading once scene is ready.
+		game.emit_signal('continue_loading')
+
+
 
 # Where all non-script processing of a scene takes place.
 func scene(text):

@@ -5,6 +5,7 @@ signal transition_finish
 var current
 var last
 
+
 # Get the Main_Menu scene path on start.
 func _ready():
 	last = directory + get_tree().get_current_scene().get_name() + '.tscn'

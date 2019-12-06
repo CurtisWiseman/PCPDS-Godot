@@ -7,9 +7,9 @@ var start
 var script
 var regex = RegEx.new()
 var systems
-var choices = []
-var inChoice = false
-var chosenChoices = []
+var choices
+var inChoice
+var chosenChoices
 var displayChoices = []
 var displayingChoices = false
 var waitTimer = Timer.new()
@@ -20,9 +20,11 @@ signal sentence_end
 signal choiceChosen
 signal sliding_finished
 
+var lastBody
 var lastSpoken = 0
 var lastLayers
 var lastBGNode
+var lastBGType
 var lastChoices
 var lastInChoice
 var lastChosenChoices
@@ -174,6 +176,7 @@ func lastKeep(idx):
 	lastChosenChoices = chosenChoices.duplicate(true)
 	lastLayers = systems.display.layers.duplicate(true)
 	lastBGNode = systems.display.bgnode
+	lastBGType = systems.display.bgtype
 
 # The main dialogue function.
 func _on_Dialogue_has_been_read(setIndex=false):
@@ -569,9 +572,6 @@ func parse_expnum(expression, parsedInfo):
 	elif 'med' == expression.substr(length-3, 3):
 		return '1'
 	elif 'max' == expression.substr(length-3, 3):
-#		print(execreturn('return global.chr.'+parsedInfo+'.'+expression.rstrip('max')+'.size()'))
-		for item in global.chr.nate.campus.angry:
-			print(item)
 		var num = execreturn('return global.chr.'+parsedInfo+'.'+expression.rstrip('max')+'.size()')
 		if num == 3:
 			return '2'
@@ -677,6 +677,8 @@ func parse_move(info, body, i):
 			execute('systems.display.position('+body+', 1650, "slide", '+speed+')')
 		else:
 			return
+		
+		lastBody = execreturn('return ' + body) # For saving purposes.
 
 # Function to execute the code generated through parsing.
 func execute(parsedInfo):
