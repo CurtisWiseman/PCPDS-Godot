@@ -95,7 +95,6 @@ func loadSaves():
 # Function to make a new save and link it to the clicked box.
 func _on_LoadBox_pressed(saveBoxName):
 	if game.safeToSave:
-		global.dialogueBox.visible = false
 		PauseScreen.visible = false
 	
 		# Stop any sliding characters.
@@ -117,7 +116,6 @@ func _on_LoadBox_pressed(saveBoxName):
 		game.save(saveBoxName, saveBoxNum, sliders)
 		loadSaveGames()
 		PauseScreen.reloadLoad = true
-		global.dialogueBox.visible = true
 		PauseScreen.visible = true
 
 

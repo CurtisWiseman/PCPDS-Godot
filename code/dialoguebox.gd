@@ -18,7 +18,6 @@ var numOfChoices = 0
 signal empty_line
 signal sentence_end
 signal choiceChosen
-signal sliding_finished
 
 var lastBody
 var lastSpoken = 0
@@ -398,11 +397,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			if say: # If the text is to be said then...
 				
+				global.rootnode.scene(dialogue[index]) # Send the dialogue to the scene function in the root of the scene.
 				say(text, chrName)
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
-				global.rootnode.scene(dialogue[index]) # Send the dialogue to the scene function in the root of the scene.
-				emit_signal('sentence_end', dialogue[index])
 				lastKeep(index)
+				emit_signal('sentence_end', dialogue[index])
 				index += 1
 			
 			else: # Click if nothing was said after 0.5 seconds or not if !wait.
@@ -427,10 +426,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				index += 1
 			
 			$Nametag.add_color_override("font_color", Color.white)
-			say(dialogue[index], "")
 			global.rootnode.scene(dialogue[index]) # Send the dialogue to the scene function in the root of the scene.
-			emit_signal('sentence_end', dialogue[index])
+			say(dialogue[index], "")
 			lastKeep(index)
+			emit_signal('sentence_end', dialogue[index])
 			index += 1
 
 

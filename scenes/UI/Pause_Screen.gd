@@ -31,6 +31,7 @@ func _input(event):
 	if event.is_action_pressed("pause") and !game.blockInput: #Originally, this was using ui_cancel. I created my own input_map type in Project Settings -> Input Map
 		$VBoxContainer/Save.grab_focus() #It is linked to the Escape key and the Start button on controllers
 		get_tree().paused = not get_tree().paused
+		global.dialogueBox.visible = not global.dialogueBox.visible
 		visible = not visible
 
 func _on_Save_pressed():

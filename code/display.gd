@@ -333,6 +333,9 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	type = layers[index]['type'] # The node type.
 	node = layers[index]['node'] # The node.
 	
+	# If x is null then keep x's current position.
+	if x == null: x = int(layers[index]['node'].position.x)
+	
 	# If y is a string then set mv to y, and y to 0.
 	if typeof(y) == TYPE_STRING:
 		mv = y
@@ -424,22 +427,33 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 
 
 # Resize the given image.
-func resize(path, x=100, y=100, face=false):
+func resize(path, x=100, y=100, xpos=0, ypos=0, face=false):
 	
-	# Get the index on make the scaling factor.
-	var index = getindex(path)
-	var scale = Vector2(float(x)/100, float(y)/100)
-	var size
+	if typeof(x) == TYPE_INT:
+		# Get the index on make the scaling factor.
+		var index = getindex(path)
+		var scale = Vector2(float(x)/100, float(y)/100)
+		print(scale, x ,y)
+		var size
 	
-	# Set the scale then attempt to position it close to where it was originally (not exact).
-	if face:
-		layers[index]['face'].set_scale(scale)
-		size = layers[index]['face'].texture.get_size()
-		layers[index]['face'].position = Vector2(layers[index]['face'].position.x + (size.x - (size.x * scale.x))/2, layers[index]['face'].position.y + (size.y - (size.y * scale.y))/2)
-	else:
-		layers[index]['node'].set_scale(scale)
-		size = layers[index]['node'].texture.get_size()
-		layers[index]['node'].position = Vector2(layers[index]['node'].position.x + (size.x - (size.x * scale.x))/2, layers[index]['node'].position.y + (size.y - (size.y * scale.y))/2)
+		# Set the scale then attempt to position it close to where it was originally (not exact).
+		if face:
+			layers[index]['face'].set_scale(scale)
+			size = layers[index]['face'].texture.get_size()
+			layers[index]['face'].position = Vector2(layers[index]['face'].position.x + (size.x - (size.x * scale.x))/2, layers[index]['face'].position.y + (size.y - (size.y * scale.y))/2)
+		else:
+			layers[index]['node'].set_scale(scale)
+			size = layers[index]['node'].texture.get_size()
+			layers[index]['node'].position = Vector2(layers[index]['node'].position.x + xpos + (size.x - (size.x * scale.x))/2, layers[index]['node'].position.y + ypos +  (size.y - (size.y * scale.y))/2)
+	
+	elif x == 'revert':
+		var index = getindex(path)
+		if face:
+			layers[index]['face'].set_scale(Vector2(1,1))
+			layers[index]['face'].position = layers[index]['facepos']
+		else:
+			layers[index]['node'].set_scale(Vector2(1,1))
+			layers[index]['node'].position = layers[index]['position']
 
 
 

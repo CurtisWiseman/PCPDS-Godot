@@ -18,5 +18,5 @@ func scene(text):
 	
 	# The "LINE" portion should be a unique substring.
 	# Meaning it should identify only one line in the script.
-	if "LINE".is_subsequence_ofi(text):
+	if "LINE".is_subsequence_of(text):
 		pass
