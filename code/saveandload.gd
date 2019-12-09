@@ -201,13 +201,15 @@ func load(save):
 	# LOAD MUSIC
 	if saveText[4] != 'NULL,NULL,NULL':
 		var music = saveText[4].split(',', false)
-		systems.sound.music(music[0], bool(music[1]), int(music[2]))
+		if music[1] == 'True': systems.sound.music(music[0], true, int(music[2]))
+		else: systems.sound.music(music[0], false, int(music[2]))
 	
 	if saveText[5] != 'NULL':
 		var elements = saveText[5].split('|', true)
 		for element in elements:
 			var music = element.split(',', false)
-			systems.sound.queue(music[0], bool(music[1]), int(music[2]))
+			if music[1] == 'True': systems.sound.queue(music[0], true, int(music[2]))
+			else: systems.sound.queue(music[0], false, int(music[2]))
 	
 	
 	# LOAD DISPLAY
@@ -224,7 +226,7 @@ func load(save):
 		
 		if item[1] == 'image': systems.display.image(item[0], int(item[2]))
 		else: systems.display.video(item[0], int(item[2]))
-			
+		
 		if item[3] != '0|0':
 			var pos = item[3].split('|', false)
 			systems.display.position(item[0], int(pos[0]), int(pos[1]))
@@ -245,14 +247,14 @@ func load(save):
 		i+=1
 		while more:
 			var mask = saveText[i].split(',', false)
-		
+			
 			if mask[2] == 'image': systems.display.mask(mask[0], mask[1], mask[2], int(mask[3]))
 			else: systems.display.mask(mask[0], mask[1], mask[2], int(mask[3]))
 			
 			if mask[4] != '0|0':
 				var pos = mask[4].split('|', false)
 				systems.display.position(mask[1], int(pos[0]), int(pos[1]))
-		
+			
 			if i+1 == size: more = false
 			else: i += 1
 	
