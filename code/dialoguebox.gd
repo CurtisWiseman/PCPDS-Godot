@@ -193,6 +193,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			waitTimer.start()
 			yield(waitTimer, "timeout")
 			global.pause_input = false
+			game.safeToSave = true
 		
 		
 		# COMMENTS/COMMANDS
@@ -224,6 +225,18 @@ func _on_Dialogue_has_been_read(setIndex=false):
 						elif command.size() == 4:
 							parse_move(['slide', command[2], command[3]], '"'+systems.display.layers[i]['path']+'"', 0)
 						break
+			
+			elif dialogue[index].findn('CHANGE') != -1:
+				global.pause_input = true
+				game.safeToSave = false
+				var command = dialogue[index].lstrip('[')
+				command = command.rstrip(']')
+				command = command.split(' ', false)
+				if command.size() == 2: scene.change(command[1])
+				elif command.size() == 3: scene.change(command[1], command[2])
+				elif command.size() == 4: scene.change(command[1], command[2], int(command[3]))
+				elif command.size() == 5: scene.change(command[1], command[2], int(command[3]), int(command[4]))
+				else: print('Invalid number of commands for CHANGE on line ' + str(index) + '!')
 			
 			global.rootnode.scene(dialogue[index])
 			index += 1

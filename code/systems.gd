@@ -20,14 +20,6 @@ func _ready():
 	
 	
 	
-	# Create the scene node and add under systems node.
-	scene = Node.new()
-	scene.set_name('Scene')
-	scene.set_script(load("res://code/scene.gd"))
-	add_child(scene)
-	
-	
-	
 	# Load the image system under the display variable.
 	display = Sprite.new() # Create a new Sprite node.
 	display.set_name('Display') # Give it the name Display.

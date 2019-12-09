@@ -25,6 +25,7 @@ config/version="0.2.0"
 global="*res://code/globals.gd"
 characterImages="*res://code/char.gd"
 game="*res://code/saveandload.gd"
+scene="*res://code/scene.gd"
 
 [display]
 

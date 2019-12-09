@@ -19,6 +19,10 @@ var defaultFontBold
 var defaultFont
 var textTheme
 
+# Signal to say a that a scene is done loading.
+signal finished_loading
+
+
 # Character Colors
 var digibro = {'color': Color('b21069')}
 var hippo = {'color': Color('78ffb5')}

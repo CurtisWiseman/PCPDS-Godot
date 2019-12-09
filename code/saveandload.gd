@@ -7,8 +7,6 @@ var loadSaveFile = false
 var blockInput = false
 var safeToSave = false
 
-signal continue_loading
-
 
 # Function to save the game using a .tres file
 func save(saveBoxName, saveBoxNum, sliders):
@@ -39,7 +37,6 @@ func save(saveBoxName, saveBoxNum, sliders):
 	# CURRENT VERSION AND CURRENT SCENE
 	var gameVersion = ProjectSettings.get_setting('application/config/version')
 	var sceneName = get_tree().get_current_scene().get_name()
-	sceneName = sceneName.substr(0, sceneName.length()-6)
 	
 	# MUSIC SYSTEM
 	var musicPlaying = sound.playing.path + "," + str(sound.playing.loop) + "," + str(sound.playing.volume)
@@ -137,7 +134,7 @@ func save(saveBoxName, saveBoxNum, sliders):
 			
 			if layer.has('AFL'):
 				for i in range(0, layer['AFL'].size()):
-					displayFaces.append(layer['AFL'][i].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['AFL'][i].x) + ',' + str(layer['AFL'][i].y) + ',other')
+					displayFaces.append(layer['AFL'][i].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['AFLpos'][i].x) + ',' + str(layer['AFLpos'][i].y) + ',other')
 	
 	
 	
@@ -195,10 +192,9 @@ func load(save):
 	file.close()
 	
 	# Change to the saved scene.
+	scene.change(saveText[2])
+	yield(scene, 'scene_changed')
 	var systems = global.rootnode.get_node('Systems')
-	systems.scene.change(saveText[2])
-	yield(self, 'continue_loading')
-	systems = global.rootnode.get_node('Systems')
 	
 	
 	

@@ -1,7 +1,7 @@
 extends Node
 
+signal scene_changed
 var directory = 'res://scenes/'
-signal transition_finish
 var current
 var last
 
@@ -14,7 +14,8 @@ func _ready():
 
 
 # Function to change the scene.
-func change(scenechange, transition=null, speed=5, time=0.5):
+func change(scenechange, transition=null, speed=10, time=0.5):
+	
 	# Variables for directory manipulation.
 	var scenes = []
 	var scene
@@ -38,6 +39,7 @@ func change(scenechange, transition=null, speed=5, time=0.5):
 	
 	dir.list_dir_end() # End the directory.
 	var found = false # Directory has not yet been found.
+	var display
 	
 	# Compare the scenechange vs all scenes to find a match.
 	for i in range(0, len(scenes)):
@@ -47,21 +49,26 @@ func change(scenechange, transition=null, speed=5, time=0.5):
 			last = current
 			
 			if transition != null:
-				_transition(transition, 'out', speed, time)
-				yield(self, 'transition_finish')
+				display = global.rootnode.get_node('Systems/Display')
+				_transition(display, transition, 'out', speed, time)
+				yield(display, 'transition_finish')
 			
 			get_tree().change_scene(directory + scenes[i] + '.tscn')
 			current = directory + scenes[i] + '.tscn'
+			yield(global, 'finished_loading')
 			
 			if transition != null:
-				_transition(transition, "in", speed, time)
-				yield(self, 'transition_finish')
+				display = global.rootnode.get_node('Systems/Display')
+				_transition(display, transition, "in", speed, time)
+				yield(display, 'transition_finish')
 			
 			break
 	
 	# Print error if scene was not found.
 	if !found:
 		print("Error: '" + scenechange + "' is not a scene!!!")
+	else:
+		emit_signal('scene_changed')
 
 
 
@@ -72,18 +79,8 @@ func camera():
 
 
 # Helper function to transition scenes.
-func _transition(transition, fade, speed, time):
+func _transition(display, transition, fade, speed, time):
 	
-	var rootnode = current.replace(directory, '')
-	rootnode = rootnode.replace('.tscn', '')
-	var systems = global.rootnode.get_node('Systems')
-	
-	if transition == "fadeblack": systems.display.fadeblack(rootnode, fade, speed, "children", time, self)
-	elif transition == "fadealpha": systems.display.fadealpha(rootnode, fade, speed, "children", time, self)
+	if transition == "fadeblack": display.fadeblack(display.bgnode, fade, speed, "children", time)
+	elif transition == "fadealpha": display.fadealpha(display.bgnode, fade, speed, "children", time)
 	else: print("Error: '" + transition + "' is not a valid scene transition option!!!")
-
-
-
-# Function to emit signal that transition concluded.
-func _transition_finish():
-	emit_signal('transition_finish')
