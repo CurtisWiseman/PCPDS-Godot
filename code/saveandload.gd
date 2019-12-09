@@ -6,176 +6,175 @@ var SAVE_IMAGE_NAME_TEMPLATE = 'save%d.png'
 var loadSaveFile = false
 var blockInput = false
 var safeToSave = false
-# warning-ignore:unused_signal
+
 signal continue_loading
 
 
 # Function to save the game using a .tres file
 func save(saveBoxName, saveBoxNum, sliders):
 	
-	if safeToSave:
-		blockInput = true # Block certain inputs while saving.
+	blockInput = true # Block certain inputs while saving.
+	
+	# Create the SAVE_FOLDER directory if it doesn't exist.
+	var directory = Directory.new()
+	var file = File.new()
+	
+	if !directory.dir_exists(SAVE_FOLDER):
+		directory.make_dir(SAVE_FOLDER)
+	
+	# Get relevant system nodes.
+	var sound = global.rootnode.get_node('Systems/Sound')
+	var display = global.rootnode.get_node('Systems/Display')
+	var dialogue = global.rootnode.get_node('Systems/Pause Canvas/Dialogue Canvas/Dialogue Box')
+	
+	
+	
+	# Take a screenshot to use on the load screen.
+	var image = get_viewport().get_texture().get_data()
+	image.flip_y()
+	image.save_png(SAVE_FOLDER.plus_file(SAVE_IMAGE_NAME_TEMPLATE % saveBoxNum))
+	
+	
+	
+	# CURRENT VERSION AND CURRENT SCENE
+	var gameVersion = ProjectSettings.get_setting('application/config/version')
+	var sceneName = get_tree().get_current_scene().get_name()
+	sceneName = sceneName.substr(0, sceneName.length()-6)
+	
+	# MUSIC SYSTEM
+	var musicPlaying = sound.playing.path + "," + str(sound.playing.loop) + "," + str(sound.playing.volume)
+	var musicQueue = sound.queue
+	
+	if musicQueue == []:
+		musicQueue = "NULL"
+	else:
+		var musicArray = musicQueue
+		musicQueue = ''
+		var i = 1
+		for music in musicArray:
+			if i == musicArray.size():
+				musicQueue += music.path + ',' + str(music.loop) + ',' + str(music.volume)
+				break
+			else:
+				musicQueue += music.path + ',' + str(music.loop) + ',' + str(music.volume) + '|'
+				i += 1
+	
+	# DIALOGUE SYSTEM
+	var script = dialogue.script
+	var lastSpoken = str(dialogue.lastSpoken)
+	var inChoice = str(dialogue.lastInChoice)
+	var choices = dialogue.lastChoices
+	var chosenChoices = dialogue.lastChosenChoices
+	var lastBody = dialogue.lastBody
+	
+	if choices == []:
+		choices = "NULL"
+	else:
+		var choiceArray = choices
+		choices = ''
+		var i = 1
+		for choice in choiceArray:
+			if i == choiceArray.size():
+				choices += choice
+				break
+			else:
+				choices += choice + ','
+				i += 1
+	
+	if chosenChoices == []:
+		chosenChoices = "NULL"
+	else:
+		var choiceArray = chosenChoices
+		chosenChoices = ''
+		var i = 1
+		for choice in choiceArray:
+			if i == choiceArray.size():
+				chosenChoices += choice
+				break
+			else:
+				chosenChoices += choice + ','
+				i += 1
+	
+	# DISPLAY SYSTEM
+	var displayBackground
+	if dialogue.lastBGNode == display:
+		displayBackground = "NULL"
+	else:
+		displayBackground = dialogue.lastBGNode.texture.resource_path
+		displayBackground = displayBackground + ',' + dialogue.lastBGType
 		
-		# Create the SAVE_FOLDER directory if it doesn't exist.
-		var directory = Directory.new()
-		var file = File.new()
-		
-		if !directory.dir_exists(SAVE_FOLDER):
-			directory.make_dir(SAVE_FOLDER)
-		
-		# Get relevant system nodes.
-		var sound = global.rootnode.get_node('Systems/Sound')
-		var display = global.rootnode.get_node('Systems/Display')
-		var dialogue = global.rootnode.get_node('Systems/Pause Canvas/Dialogue Canvas/Dialogue Box')
-		
-		
-		
-		# Take a screenshot to use on the load screen.
-		var image = get_viewport().get_texture().get_data()
-		image.flip_y()
-		image.save_png(SAVE_FOLDER.plus_file(SAVE_IMAGE_NAME_TEMPLATE % saveBoxNum))
-		
-		
-		
-		# CURRENT VERSION AND CURRENT SCENE
-		var gameVersion = ProjectSettings.get_setting('application/config/version')
-		var sceneName = get_tree().get_current_scene().get_name()
-		sceneName = sceneName.substr(0, sceneName.length()-6)
-		
-		# MUSIC SYSTEM
-		var musicPlaying = sound.playing.path + "," + str(sound.playing.loop) + "," + str(sound.playing.volume)
-		var musicQueue = sound.queue
-		
-		if musicQueue == []:
-			musicQueue = "NULL"
-		else:
-			var musicArray = musicQueue
-			musicQueue = ''
-			var i = 1
-			for music in musicArray:
-				if i == musicArray.size():
-					musicQueue += music.path + ',' + str(music.loop) + ',' + str(music.volume)
-					break
-				else:
-					musicQueue += music.path + ',' + str(music.loop) + ',' + str(music.volume) + '|'
-					i += 1
-		
-		# DIALOGUE SYSTEM
-		var script = dialogue.script
-		var lastSpoken = str(dialogue.lastSpoken)
-		var inChoice = str(dialogue.lastInChoice)
-		var choices = dialogue.lastChoices
-		var chosenChoices = dialogue.lastChosenChoices
-		var lastBody = dialogue.lastBody
-		
-		if choices == []:
-			choices = "NULL"
-		else:
-			var choiceArray = choices
-			choices = ''
-			var i = 1
-			for choice in choiceArray:
-				if i == choiceArray.size():
-					choices += choice
-					break
-				else:
-					choices += choice + ','
-					i += 1
-		
-		if chosenChoices == []:
-			chosenChoices = "NULL"
-		else:
-			var choiceArray = chosenChoices
-			chosenChoices = ''
-			var i = 1
-			for choice in choiceArray:
-				if i == choiceArray.size():
-					chosenChoices += choice
-					break
-				else:
-					chosenChoices += choice + ','
-					i += 1
-		
-		# DISPLAY SYSTEM
-		var displayBackground
-		if dialogue.lastBGNode == display:
-			displayBackground = "NULL"
-		else:
-			displayBackground = dialogue.lastBGNode.texture.resource_path
-			displayBackground = displayBackground + ',' + dialogue.lastBGType
-		
-		var displayChildren = []
-		var displayFaces = []
-		var displayMaskChildren = []
-		if dialogue.lastLayers == []:
-			displayChildren = "NULL"
-		else:
-			for layer in dialogue.lastLayers:
-				if sliders != []:
-					for node in sliders:
-						if node['path'] == layer['path'] and node['path'] != lastBody:
-							layer['position'].x = node['dest']
+	var displayChildren = []
+	var displayFaces = []
+	var displayMaskChildren = []
+	if dialogue.lastLayers == []:
+		displayChildren = "NULL"
+	else:
+		for layer in dialogue.lastLayers:
+			if sliders != []:
+				for node in sliders:
+					if node['path'] == layer['path'] and node['path'] != lastBody:
+						layer['position'].x = node['dest']
+			
+			var prefix = ''
+			if layer['path'].substr(0,6) != 'res://': prefix = 'res://'
+			
+			if layer.has('mask'):
+				var maskPrefix = ''
+				if layer['mask'].substr(0,6) != 'res://': maskPrefix = 'res://'
 				
-				var prefix = ''
-				if layer['path'].substr(0,6) != 'res://': prefix = 'res://'
+				if layer['type'] == 'image':
+					displayMaskChildren.append(maskPrefix + layer['mask'] + ',' + prefix + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+				elif layer['type'] == 'video':
+					displayMaskChildren.append(maskPrefix + layer['mask'] + ',' + prefix + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+			else:
+				if layer['type'] == 'image':
+					displayChildren.append(prefix + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+				elif layer['type'] == 'video':
+					displayChildren.append(prefix + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
 				
-				if layer.has('mask'):
-					var maskPrefix = ''
-					if layer['mask'].substr(0,6) != 'res://': maskPrefix = 'res://'
-					
-					if layer['type'] == 'image':
-						displayMaskChildren.append(maskPrefix + layer['mask'] + ',' + prefix + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
-					elif layer['type'] == 'video':
-						displayMaskChildren.append(maskPrefix + layer['mask'] + ',' + prefix + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
-				else:
-					if layer['type'] == 'image':
-						displayChildren.append(prefix + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
-					elif layer['type'] == 'video':
-						displayChildren.append(prefix + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
-				
-				if layer.has('face'):
-					displayFaces.append(layer['face'].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['facepos'].x) + ',' + str(layer['facepos'].y))
-				
-				if layer.has('AFL'):
-					for i in range(0, layer['AFL'].size()):
-						displayFaces.append(layer['AFL'][i].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['AFL'][i].x) + ',' + str(layer['AFL'][i].y) + ',other')
-		
-		
-		
-		#WRITE THE SAVE FILE.
-		var savePath = SAVE_FOLDER.plus_file(SAVE_NAME_TEMPLATE % saveBoxNum)
-		file.open_encrypted_with_pass(savePath, File.WRITE, 'G@Y&D3@D')
-		file.store_line(gameVersion)
-		file.store_line(saveBoxName)
-		file.store_line(sceneName)
-		file.store_line('-music-')
-		file.store_line(musicPlaying)
-		file.store_line(musicQueue)
-		file.store_line('-dialogue-')
-		file.store_line(script)
-		file.store_line(lastSpoken)
-		file.store_line(inChoice)
-		file.store_line(choices)
-		file.store_line(chosenChoices)
-		file.store_line('-display-')
-		file.store_line(displayBackground)
-		
-		for child in displayChildren:
+			if layer.has('face'):
+				displayFaces.append(layer['face'].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['facepos'].x) + ',' + str(layer['facepos'].y))
+			
+			if layer.has('AFL'):
+				for i in range(0, layer['AFL'].size()):
+					displayFaces.append(layer['AFL'][i].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['AFL'][i].x) + ',' + str(layer['AFL'][i].y) + ',other')
+	
+	
+	
+	#WRITE THE SAVE FILE.
+	var savePath = SAVE_FOLDER.plus_file(SAVE_NAME_TEMPLATE % saveBoxNum)
+	file.open_encrypted_with_pass(savePath, File.WRITE, 'G@Y&D3@D')
+	file.store_line(gameVersion)
+	file.store_line(saveBoxName)
+	file.store_line(sceneName)
+	file.store_line('-music-')
+	file.store_line(musicPlaying)
+	file.store_line(musicQueue)
+	file.store_line('-dialogue-')
+	file.store_line(script)
+	file.store_line(lastSpoken)
+	file.store_line(inChoice)
+	file.store_line(choices)
+	file.store_line(chosenChoices)
+	file.store_line('-display-')
+	file.store_line(displayBackground)
+	
+	for child in displayChildren:
+		file.store_line(child)
+	
+	if displayFaces != []:
+		file.store_line('faces')
+		for child in displayFaces:
 			file.store_line(child)
-		
-		if displayFaces != []:
-			file.store_line('faces')
-			for child in displayFaces:
-				file.store_line(child)
-		
-		if displayMaskChildren != []:
-			file.store_line('masks')
-			for child in displayMaskChildren:
-				file.store_line(child)
-		
-		file.close()
-		
-		blockInput = false # Unblock all blocked systems.
+	
+	if displayMaskChildren != []:
+		file.store_line('masks')
+		for child in displayMaskChildren:
+			file.store_line(child)
+	
+	file.close()
+	
+	blockInput = false # Unblock all blocked systems.
 
 
 

@@ -394,9 +394,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			else: # Click if nothing was said after 0.5 seconds or not if !wait.
 				if wait:
+					game.safeToSave = false
 					waitTimer.wait_time = 1
 					waitTimer.start()
 					yield(waitTimer, 'timeout')
+					game.safeToSave = true
 					
 				index += 1
 				emit_signal('empty_line')

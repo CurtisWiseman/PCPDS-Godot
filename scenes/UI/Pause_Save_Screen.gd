@@ -94,12 +94,13 @@ func loadSaves():
 
 # Function to make a new save and link it to the clicked box.
 func _on_LoadBox_pressed(saveBoxName):
-	global.dialogueBox.visible = false
-	PauseScreen.visible = false
+	if game.safeToSave:
+		global.dialogueBox.visible = false
+		PauseScreen.visible = false
 	
-	# Stop any sliding characters.
-	var sliders = []
-	if global.sliding:
+		# Stop any sliding characters.
+		var sliders = []
+		if global.sliding:
 			var display = global.rootnode.get_node('Systems/Display')
 			global.pause_input = true
 			get_tree().paused = false
@@ -110,14 +111,14 @@ func _on_LoadBox_pressed(saveBoxName):
 			get_tree().paused = true
 			global.pause_input = false
 	
-	$Wait.start()
-	yield($Wait, 'timeout')
-	var saveBoxNum : int = int(saveBoxName.substr(7, saveBoxName.length()))
-	game.save(saveBoxName, saveBoxNum, sliders)
-	loadSaveGames()
-	PauseScreen.reloadLoad = true
-	global.dialogueBox.visible = true
-	PauseScreen.visible = true
+		$Wait.start()
+		yield($Wait, 'timeout')
+		var saveBoxNum : int = int(saveBoxName.substr(7, saveBoxName.length()))
+		game.save(saveBoxName, saveBoxNum, sliders)
+		loadSaveGames()
+		PauseScreen.reloadLoad = true
+		global.dialogueBox.visible = true
+		PauseScreen.visible = true
 
 
 
