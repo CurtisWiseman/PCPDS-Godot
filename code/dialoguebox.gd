@@ -512,13 +512,15 @@ func remove_dupes(character, info):
 				elif 'fade'.is_subsequence_of(info):
 					if systems.display.layers[i]['path'] != get_body(info):
 						global.pause_input = true
+						game.safeToSave = false
 						fade = true
 						var path = systems.display.layers[i]['path']
-						if path.substr(0,6) != 'res://': path = 'res://' + path
 						execute('systems.display.fadealpha("'+path+'", "out", 10, "self", 0.02, true)')
 						yield(systems.display, 'transition_finish_fade')
 						fade = false
 						systems.display.remove(path)
+						lastLayers = systems.display.layers.duplicate(true)
+						game.safeToSave = true
 						global.pause_input = false
 						return true
 					else:
@@ -549,6 +551,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType):
 	var blush = false
 	var shades = false
 	var knife = false
+	var AFL = ''
 	var blushNum
 	var num
 	
@@ -574,37 +577,37 @@ func parse_expression(info, parsedInfo, body, i, bodyType):
 		elif tmp[1] == 'shades':
 			shades = true
 	
-	if "happy".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.happy['+num+'], '+body+')', body, i+1)
-	elif "angry".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.angry['+num+'], '+body+')', body, i+1)
-	elif "confused".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.confused['+num+'], '+body+')', body, i+1)
-	elif "neutral".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.neutral['+num+'], '+body+')', body, i+1)
-	elif "sad".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.sad['+num+'], '+body+')', body, i+1)
-	elif "shock".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.shock['+num+'], '+body+')', body, i+1)
-	elif "smitten".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.smitten['+num+'], '+body+')', body, i+1)
-	else:
-		parse_position(info, 'systems.display.image('+body+', 1)', body, i)
-	
 	if blush:
 		if blushNum != null:
-			execute('systems.display.face(global.chr.'+parsedInfo+'.blush['+str(blushNum)+'], '+body+', 0, 0, "blush")')
+			AFL += '\n\tsystems.display.face(global.chr.'+parsedInfo+'.blush['+str(blushNum)+'], '+body+', 0, 0, "blush")'
 		else:
-			execute('systems.display.face(global.chr.'+parsedInfo+'.blush, '+body+', 0, 0, "blush")')
+			AFL += '\n\tsystems.display.face(global.chr.'+parsedInfo+'.blush, '+body+', 0, 0, "blush")'
 	if shades:
-		execute('systems.display.face(global.chr.nate.afl[0], '+body+', 0, 0, "shades")')
+		AFL += '\n\tsystems.display.face(global.chr.nate.afl[0], '+body+', 0, 0, "shades")'
+	
+	if "happy".is_subsequence_of(info[i]):
+		num = parse_expnum(info[i], parsedInfo)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.happy['+num+'], '+body+')'+AFL, body, i+1)
+	elif "angry".is_subsequence_of(info[i]):
+		num = parse_expnum(info[i], parsedInfo)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.angry['+num+'], '+body+')'+AFL, body, i+1)
+	elif "confused".is_subsequence_of(info[i]):
+		num = parse_expnum(info[i], parsedInfo)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.confused['+num+'], '+body+')'+AFL, body, i+1)
+	elif "neutral".is_subsequence_of(info[i]):
+		num = parse_expnum(info[i], parsedInfo)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.neutral['+num+'], '+body+')'+AFL, body, i+1)
+	elif "sad".is_subsequence_of(info[i]):
+		num = parse_expnum(info[i], parsedInfo)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.sad['+num+'], '+body+')'+AFL, body, i+1)
+	elif "shock".is_subsequence_of(info[i]):
+		num = parse_expnum(info[i], parsedInfo)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.shock['+num+'], '+body+')'+AFL, body, i+1)
+	elif "smitten".is_subsequence_of(info[i]):
+		num = parse_expnum(info[i], parsedInfo)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.smitten['+num+'], '+body+')'+AFL, body, i+1)
+	else:
+		parse_position(info, 'systems.display.image('+body+', 1)'+AFL, body, i)
 
 # Determines the correct face number for an epxression.
 func parse_expnum(expression, parsedInfo):

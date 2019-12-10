@@ -77,7 +77,7 @@ func insert(character, file, type):
 		
 		'Action Giraffe':
 			if type == 'body':
-					actiongiraffe.body.append(file)
+				actiongiraffe.body.append(file)
 			
 			elif type == 'face':
 				emotedecipher(file, 'actiongiraffe', '')
@@ -288,7 +288,7 @@ func returndir(character):
 			# If file exists then append it to files, else break.
 			if file != "" :
 				if !dir.dir_exists(file) and file.findn('import') == -1:
-					files.append(directory + '/' + file)
+					files.append('res://' + directory + '/' + file)
 			else:
 				break
 		

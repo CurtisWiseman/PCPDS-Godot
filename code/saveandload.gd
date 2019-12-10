@@ -112,29 +112,27 @@ func save(saveBoxName, saveBoxNum, sliders):
 					if node['path'] == layer['path'] and node['path'] != lastBody:
 						layer['position'].x = node['dest']
 			
-			var prefix = ''
-			if layer['path'].substr(0,6) != 'res://': prefix = 'res://'
+			var modulate = ',' + str(layer['node'].get_self_modulate()).replace(',', '|')
 			
 			if layer.has('mask'):
-				var maskPrefix = ''
-				if layer['mask'].substr(0,6) != 'res://': maskPrefix = 'res://'
-				
 				if layer['type'] == 'image':
-					displayMaskChildren.append(maskPrefix + layer['mask'] + ',' + prefix + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+					displayMaskChildren.append(layer['mask'] + ',' + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y) + modulate)
 				elif layer['type'] == 'video':
-					displayMaskChildren.append(maskPrefix + layer['mask'] + ',' + prefix + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+					displayMaskChildren.append(layer['mask'] + ',' + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y) + modulate)
 			else:
 				if layer['type'] == 'image':
-					displayChildren.append(prefix + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+					displayChildren.append(layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y) + modulate)
 				elif layer['type'] == 'video':
-					displayChildren.append(prefix + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y))
+					displayChildren.append(layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y) + modulate)
 				
 			if layer.has('face'):
-				displayFaces.append(layer['face'].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['facepos'].x) + ',' + str(layer['facepos'].y))
+				modulate = ',' + str(layer['face'].get_self_modulate()).replace(',', '|')
+				displayFaces.append(layer['face'].texture.resource_path + ',' + layer['path'] + ',' + str(layer['facepos'].x) + ',' + str(layer['facepos'].y) + modulate)
 			
 			if layer.has('AFL'):
 				for i in range(0, layer['AFL'].size()):
-					displayFaces.append(layer['AFL'][i].texture.resource_path + ',' + prefix + layer['path'] + ',' + str(layer['AFLpos'][i].x) + ',' + str(layer['AFLpos'][i].y) + ',other')
+					modulate = ',' + str(layer['AFL'][i].get_self_modulate()).replace(',', '|')
+					displayFaces.append(layer['AFL'][i].texture.resource_path + ',' + layer['path'] + ',' + str(layer['AFLpos'][i].x) + ',' + str(layer['AFLpos'][i].y) + ',other' + modulate)
 	
 	
 	
@@ -191,6 +189,34 @@ func load(save):
 	var saveText = file.get_as_text().split('\n', false)
 	file.close()
 	
+	
+	
+	# Check game version for incompatibility.
+	var version = saveText[0].split('.', false)
+	var currentVersion = ProjectSettings.get_setting('application/config/version').split('.', false, 4)
+	if version != null: 
+		if version.size() < currentVersion.size() or version.size() > currentVersion.size():
+			version = null
+		else:
+			var ver = version
+			version = []
+			for num in ver: version.append(int(num))
+	
+	if version == null:
+		print('Incompatible save version.')
+		blockInput = false
+		loadSaveFile = false
+		get_tree().paused = false
+		return
+	elif version[1] < 1:
+		print("Your save's version (" + saveText[0] + ") is incompatible with the current game version (" + ProjectSettings.get_setting('application/config/version') + ")." )
+		blockInput = false
+		loadSaveFile = false
+		get_tree().paused = false
+		return
+	
+	
+	
 	# Change to the saved scene.
 	scene.change(saveText[2])
 	yield(scene, 'scene_changed')
@@ -231,6 +257,10 @@ func load(save):
 			var pos = item[3].split('|', false)
 			systems.display.position(item[0], int(pos[0]), int(pos[1]))
 		
+		if item[4] != '1|1|1|1':
+			var color = item[4].split('|', false)
+			systems.display.layers[systems.display.getindex(item[0])]['node'].set_self_modulate(Color(color[0], color[1], color[2], color[3]))
+		
 		if i+1 == size: more = false
 		else: i += 1
 	
@@ -238,8 +268,23 @@ func load(save):
 		i+=1
 		while saveText[i] != 'masks' and more:
 			var face = saveText[i].split(',', false)
-			if face.size() == 4: systems.display.face(face[0], face[1], int(face[2]), int(face[3]))
-			else: systems.display.face(face[0], face[1], int(face[2]), int(face[3]), face[4])
+			if face.size() == 5:
+				systems.display.face(face[0], face[1], int(face[2]), int(face[3]))
+				
+				if face[4] != '1|1|1|1':
+					var color = face[4].split('|', false)
+					systems.display.layers[systems.display.getindex(face[1])]['face'].set_self_modulate(Color(color[0], color[1], color[2], color[3]))
+			
+			else:
+				systems.display.face(face[0], face[1], int(face[2]), int(face[3]), face[4])
+				
+				if face[5] != '1|1|1|1':
+					var color = face[5].split('|', false)
+					var layer = systems.display.layers[systems.display.getindex(face[1])]
+					for AFL in layer['AFL']:
+						if AFL.texture.resource_path == face[0]:
+							AFL.set_self_modulate(Color(color[0], color[1], color[2], color[3]))
+			
 			if i+1 == size: more = false
 			else: i += 1
 	
@@ -255,6 +300,10 @@ func load(save):
 				var pos = mask[4].split('|', false)
 				systems.display.position(mask[1], int(pos[0]), int(pos[1]))
 			
+			if mask[5] != '1|1|1|1':
+				var color = mask[5].split('|', false)
+				systems.display.layers[systems.display.getindex(mask[0])]['node'].set_self_modulate(Color(color[0], color[1], color[2], color[3]))
+			
 			if i+1 == size: more = false
 			else: i += 1
 	
@@ -264,7 +313,7 @@ func load(save):
 	var choiceArray = []
 	var chosenChoiceArray = []
 	
-	if saveText[9] == 'True':inChoice = true
+	if saveText[9] == 'True': inChoice = true
 	
 	if saveText[10] != 'NULL':
 		var stringArray = saveText[10].split(',', true)
