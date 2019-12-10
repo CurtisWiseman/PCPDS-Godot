@@ -446,33 +446,43 @@ func parse_info(info):
 	var notsame
 	match info[0]:
 		"9/11":
+			info[0] = 'nine11'
 			notsame = remove_dupes('911', info)
 			if notsame: parse_911(info, 'nine11', 1)
 		"Action Giraffe":
+			info[0] = 'actiongiraffe'
 			notsame = remove_dupes('ag', info)
 			if notsame: parse_outfit(info, 'actiongiraffe', 1)
 		"Digibro":
+			info[0] = 'digibro'
 			notsame = remove_dupes('digi', info)
 			if notsame: parse_outfit(info, 'digibro', 1)
 		"Endless War":
+			info[0] = 'endlesswar'
 			notsame = remove_dupes('endlesswar', info)
 			if notsame: parse_outfit(info, 'endlesswar', 1)
 		"Hippo":
+			info[0] = 'hippo'
 			notsame = remove_dupes('hippo', info)
 			if notsame: parse_outfit(info, 'hippo', 1)
 		"Mage":
+			info[0] = 'mage'
 			notsame = remove_dupes('mage', info)
 			if notsame: parse_outfit(info, 'mage', 1)
 		"Munchy":
+			info[0] = 'munchy'
 			notsame = remove_dupes('munchy', info)
 			if notsame: parse_outfit(info, 'munchy', 1)
 		"Nate":
+			info[0] = 'nate'
 			notsame = remove_dupes('nate', info)
 			if notsame: parse_outfit(info, 'nate', 1)
 		"Thoth":
+			info[0] = 'thoth'
 			remove_dupes('thoth', info)
 			parse_position(info, 'systems.display.image("res://images/characters/Thoth/thoth.png", 1)', "'res://images/characters/Thoth/thoth.png'", 1)
 		"Tom":
+			info[0] = 'tom'
 			notsame = remove_dupes('tom', info)
 			if notsame: parse_expression(info, 'tom', 'global.chr.tom.body[0]', 1, 'null')
 
@@ -480,14 +490,31 @@ func parse_info(info):
 func remove_dupes(character, info):
 	var size = info.size()
 	for i in range(0, systems.display.layers.size()):
+		
 		var layer = systems.display.layers[i]['name']
+		
 		if layer.findn(character) != -1:
 			if size == 1:
 				return false
+			
 			elif size >= 2:
-				if info[1] == 'right' or info[1] == 'left' or info[1] == 'center' or info[1] == 'offleft' or info[1] == 'offright' or info[1] == 'slide' or info[1] == 'off':
+				if info[1] == 'right' or info[1] == 'left' or info[1] == 'center' or info[1] == 'offleft' or info[1] == 'offright' or info[1] == 'slide' or info[1] == 'off' or info[1] == 'silhouette':
 					parse_position(info, '', '"'+systems.display.layers[i]['path']+'"', 1)
 					return false
+				
+				elif 'fade'.is_subsequence_of(info):
+					if info[1] != 'fade' and systems.display.layers[i]['path'] != get_body(info):
+						global.pause_input = true
+						var path = systems.display.layers[i]['path']
+						if path.substr(0,6) != 'res://': path = 'res://' + path
+						execute('systems.display.fadealpha("'+path+'", "out", 10, "self", 0.02, true)')
+						yield(systems.display, 'transition_finish_fade')
+						systems.display.remove(path)
+						global.pause_input = false
+						return true
+					else:
+						return false
+				
 				else:
 					systems.display.remove(systems.display.layers[i]['path'])
 					return true
@@ -515,7 +542,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType):
 	var blushNum
 	var num
 	
-	if i == info.size(): # Don't use an epxression if none is given.
+	if i == info.size(): # Don't use an expression if none is given.
 		parse_position(info, 'systems.display.image('+body+', 1)', body, i)
 		return
 	
@@ -608,6 +635,7 @@ func parse_911(info, parsedInfo, i):
 
 # Parses the position for a character.
 func parse_position(info, parsedInfo, body, i):
+	var transition = false
 	var extra = 0
 	var move = false
 	var num
@@ -615,6 +643,17 @@ func parse_position(info, parsedInfo, body, i):
 	if i == info.size():
 		execute(parsedInfo)
 		return
+	
+	if info[i] == 'silhouette' or info[i] == 'fade':
+		transition = info[i]
+		info.remove(i)
+		
+		if i == info.size():
+			if transition == 'silhouette':
+				execute(parsedInfo+'\n\tsystems.display.fadeblack('+body+', "in", 0)')
+			else:
+				execute(parsedInfo+'\n\tsystems.display.fadealpha('+body+', "in", 10, "self", 0.01)')
+			return
 	
 	if i + 2 == info.size()-1:
 		move = true
@@ -639,23 +678,29 @@ func parse_position(info, parsedInfo, body, i):
 	
 	if info[i].findn('|') != -1:
 		var cords = info[i].split('|', false, 1)
+		if transition: parsedInfo += _transition(transition, body)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+cords[0]+', '+cords[1]+')')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'right':
 		num = 600 + extra
+		if transition: parsedInfo += _transition(transition, body)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'left':
 		num = -600 + extra
+		if transition: parsedInfo += _transition(transition, body)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'center':
+		if transition: parsedInfo += _transition(transition, body)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(extra)+', 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'offleft':
+		if transition: parsedInfo += _transition(transition, body)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', -1650, 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'offright':
+		if transition: parsedInfo += _transition(transition, body)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', 1650, 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'off':
@@ -718,3 +763,27 @@ func execreturn(parsedInfo):
 	var script = Reference.new()
 	script.set_script(source)
 	return script.eval()
+
+# Function to return a transition of a character.
+func _transition(transition, body):
+	if transition == 'silhouette':
+		return '\n\tsystems.display.fadeblack('+body+', "in", 0)'
+	else:
+		return '\n\tsystems.display.fadealpha('+body+', "in", 10, "self", 0.01)'
+
+# Function to get the body path for preventing fade errors.
+func get_body(info, i=1):
+	var num
+	var body
+	match info[i]:
+		"campus":
+			num = str(search('return global.chr.'+info[0]+'.campus.body', info[i+1]))
+			body = 'global.chr.'+info[0]+'.campus.body['+num+']'
+		"casual":
+			num = str(search('return global.chr.'+info[0]+'.casual.body', info[i+1]))
+			body = 'global.chr.'+info[0]+'.casual.body['+num+']'
+		_:
+			num = str(search('return global.chr.'+info[0]+'.body', info[i]))
+			body = 'global.chr.'+info[0]+'.body['+num+']'
+	
+	return execreturn('return ' + body)

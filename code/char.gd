@@ -115,15 +115,7 @@ func insert(character, file, type):
 
 		'Endless War':
 			if type == 'body':
-				if file.findn('stand') != -1:
-#					print(file)
-					endlesswar.body.append(file)
-				elif file.findn('knife') != -1:
-#					print(file)
-					endlesswar.knife.body.append(file)
-				elif file.findn('cross') != -1:
-#					print(file)
-					endlesswar.cross.body.append(file)
+				endlesswar.body.append(file)
 			
 			elif type == 'face':
 				if file.findn('knife') != -1:

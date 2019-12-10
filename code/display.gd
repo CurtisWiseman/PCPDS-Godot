@@ -10,6 +10,7 @@ var collider = null # The node told to move.
 var collidee = null # The node that get's collided.
 
 signal transition_finish # Signal that a transition function is finished.
+signal transition_finish_fade # Signal specifaclly for fade transitions.
 
 # Set the background node to self by default.
 func _ready():
@@ -470,9 +471,7 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 	add_child(ftimer) # Add the timer as a child.
 	ftimer.one_shot = true # Make the timer one shot.
 	
-	if content == bgnode:
-		node = bgnode
-	else:
+	if typeof(content) == TYPE_STRING:
 		# Get the node name of the path.
 		content = getname(content)
 	
@@ -497,10 +496,13 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 		# Get AFLs if they exists.
 		if layers[index].get('AFL') and mod == 'self':
 			AFL = layers[index]['AFL']
+		
+	elif content == bgnode:
+		node = bgnode
 	
 	# If speed is outside the range 1-50 then print an error and return.
-	if spd <= 0 or spd > 100:
-		print('Error: The 3rd parameter on fadeblack only accepts values 0 < x <= 100!')
+	if spd < 0 or spd > 100:
+		print('Error: The 3rd parameter on fadeblack only accepts values 0 <= x <= 100!')
 		return
 	
 	# Reject mod's that are not self or children.
@@ -513,8 +515,19 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 		print("Error: The 5th parameter on fadeblack only accepts values above 0.")
 		return
 	
+	# If speed is 0 then black/de-black the node.
+	if spd == 0:
+		if node.self_modulate == Color(0,0,0,1):
+			node.set_self_modulate(Color(1,1,1,1))
+			if face: face.set_self_modulate(Color(1,1,1,1))
+			if AFL: for afl in AFL: afl.set_self_modulate(Color(1,1,1,1))
+		else:
+			node.set_self_modulate(Color(0,0,0,1))
+			if face: face.set_self_modulate(Color(0,0,0,1))
+			if AFL: for afl in AFL: afl.set_self_modulate(Color(0,0,0,1))
+	
 	# If fade is out then fade out.
-	if fade == 'out':
+	elif fade == 'out':
 		percent = 100
 		# While percent isn't 0 fade to black.
 		while percent != 0:
@@ -557,7 +570,7 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 
 
 # Function to fade in an out from black.
-func fadealpha(content, fade, spd, mod='self', time=0.5):
+func fadealpha(content, fade, spd, mod='self', time=0.5, fadeSignal=false):
 	
 	var node # The node to modulate from.
 	var index # Index of content node.
@@ -569,9 +582,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 	add_child(ftimer) # Add the timer as a child.
 	ftimer.one_shot = true # Make the timer one shot.
 	
-	if content == bgnode:
-		node = bgnode
-	else:
+	if typeof(content) == TYPE_STRING:
 		# Get the node name of the path.
 		content = getname(content)
 	
@@ -596,6 +607,9 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 		# Get AFLs if they exists.
 		if layers[index].get('AFL') and mod == 'self':
 			AFL = layers[index]['AFL']
+		
+	elif content == bgnode:
+		node = bgnode
 	
 	# If speed is outside the range 1-50 then print an error and return.
 	if spd <= 0 or spd > 100:
@@ -650,7 +664,8 @@ func fadealpha(content, fade, spd, mod='self', time=0.5):
 	else:
 		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
 	
-	emit_signal('transition_finish')
+	if !fadeSignal: emit_signal('transition_finish')
+	else: emit_signal('transition_finish_fade')
 	ftimer.queue_free() # Free the timer.
 
 
