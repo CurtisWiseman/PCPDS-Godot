@@ -237,7 +237,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				elif command.size() == 5: scene.change(command[1], command[2], int(command[3]), int(command[4]))
 				else: print('Invalid number of commands for CHANGE on line ' + str(index) + '!')
 			
-			global.rootnode.scene(dialogue[index])
+			global.rootnode.scene(dialogue[index], index)
 			index += 1
 			emit_signal('empty_line')
 		
@@ -397,7 +397,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			if say: # If the text is to be said then...
 				
-				global.rootnode.scene(dialogue[index]) # Send the dialogue to the scene function in the root of the scene.
+				global.rootnode.scene(dialogue[index], index) # Send the dialogue to the scene function in the root of the scene.
 				say(text, chrName)
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
 				lastKeep(index)
@@ -426,7 +426,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				index += 1
 			
 			$Nametag.add_color_override("font_color", Color.white)
-			global.rootnode.scene(dialogue[index]) # Send the dialogue to the scene function in the root of the scene.
+			global.rootnode.scene(dialogue[index], index) # Send the dialogue to the scene function in the root of the scene.
 			say(dialogue[index], "")
 			lastKeep(index)
 			emit_signal('sentence_end', dialogue[index])

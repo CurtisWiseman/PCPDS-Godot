@@ -14,9 +14,8 @@ func _ready():
 
 
 # Where all non-script processing of a scene takes place.
-func scene(text):
+func scene(lineText, index):
 	
-	# The "LINE" portion should be a unique substring.
-	# Meaning it should identify only one line in the script.
-	if "LINE".is_subsequence_of(text):
-		pass
+	# Use the index to match what line to make something happen on.
+	match(index):
+		0: pass
