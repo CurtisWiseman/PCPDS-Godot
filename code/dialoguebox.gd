@@ -14,6 +14,7 @@ var displayChoices = []
 var displayingChoices = false
 var waitTimer = Timer.new()
 var numOfChoices = 0
+var fade = false
 
 signal empty_line
 signal sentence_end
@@ -237,7 +238,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				elif command.size() == 5: scene.change(command[1], command[2], int(command[3]), int(command[4]))
 				else: print('Invalid number of commands for CHANGE on line ' + str(index) + '!')
 			
-			global.rootnode.scene(dialogue[index], index)
+			global.rootnode.scene(dialogue[index], index+1)
 			index += 1
 			emit_signal('empty_line')
 		
@@ -397,7 +398,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			if say: # If the text is to be said then...
 				
-				global.rootnode.scene(dialogue[index], index) # Send the dialogue to the scene function in the root of the scene.
+				global.rootnode.scene(dialogue[index], index+1) # Send the dialogue to the scene function in the root of the scene.
 				say(text, chrName)
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
 				lastKeep(index)
@@ -426,7 +427,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				index += 1
 			
 			$Nametag.add_color_override("font_color", Color.white)
-			global.rootnode.scene(dialogue[index], index) # Send the dialogue to the scene function in the root of the scene.
+			global.rootnode.scene(dialogue[index], index+1) # Send the dialogue to the scene function in the root of the scene.
 			say(dialogue[index], "")
 			lastKeep(index)
 			emit_signal('sentence_end', dialogue[index])
@@ -498,22 +499,31 @@ func remove_dupes(character, info):
 				return false
 			
 			elif size >= 2:
+				if info[1] == 'fade':
+					info.remove(1)
+					size = info.size()
+					if size == 1:
+						return false
+				
 				if info[1] == 'right' or info[1] == 'left' or info[1] == 'center' or info[1] == 'offleft' or info[1] == 'offright' or info[1] == 'slide' or info[1] == 'off' or info[1] == 'silhouette':
 					parse_position(info, '', '"'+systems.display.layers[i]['path']+'"', 1)
 					return false
 				
 				elif 'fade'.is_subsequence_of(info):
-					if info[1] != 'fade' and systems.display.layers[i]['path'] != get_body(info):
+					if systems.display.layers[i]['path'] != get_body(info):
 						global.pause_input = true
+						fade = true
 						var path = systems.display.layers[i]['path']
 						if path.substr(0,6) != 'res://': path = 'res://' + path
 						execute('systems.display.fadealpha("'+path+'", "out", 10, "self", 0.02, true)')
 						yield(systems.display, 'transition_finish_fade')
+						fade = false
 						systems.display.remove(path)
 						global.pause_input = false
 						return true
 					else:
-						return false
+						systems.display.remove(systems.display.layers[i]['path'])
+						return true
 				
 				else:
 					systems.display.remove(systems.display.layers[i]['path'])
@@ -649,10 +659,9 @@ func parse_position(info, parsedInfo, body, i):
 		info.remove(i)
 		
 		if i == info.size():
-			if transition == 'silhouette':
-				execute(parsedInfo+'\n\tsystems.display.fadeblack('+body+', "in", 0)')
-			else:
-				execute(parsedInfo+'\n\tsystems.display.fadealpha('+body+', "in", 10, "self", 0.01)')
+			if transition == 'silhouette': execute(parsedInfo+'\n\tsystems.display.fadeblack('+body+', "in", 0)')
+			elif fade: execute(parsedInfo+'\n\tsystems.display.fadealpha('+body+', "in", 10, "self", 0.01)')
+			else: execute(parsedInfo)
 			return
 	
 	if i + 2 == info.size()-1:
@@ -678,29 +687,29 @@ func parse_position(info, parsedInfo, body, i):
 	
 	if info[i].findn('|') != -1:
 		var cords = info[i].split('|', false, 1)
-		if transition: parsedInfo += _transition(transition, body)
+		if transition: parsedInfo += _transition(transition, body, fade)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+cords[0]+', '+cords[1]+')')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'right':
 		num = 600 + extra
-		if transition: parsedInfo += _transition(transition, body)
+		if transition: parsedInfo += _transition(transition, body, fade)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'left':
 		num = -600 + extra
-		if transition: parsedInfo += _transition(transition, body)
+		if transition: parsedInfo += _transition(transition, body, fade)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'center':
-		if transition: parsedInfo += _transition(transition, body)
+		if transition: parsedInfo += _transition(transition, body, fade)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(extra)+', 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'offleft':
-		if transition: parsedInfo += _transition(transition, body)
+		if transition: parsedInfo += _transition(transition, body, fade)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', -1650, 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'offright':
-		if transition: parsedInfo += _transition(transition, body)
+		if transition: parsedInfo += _transition(transition, body, fade)
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', 1650, 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'off':
@@ -765,11 +774,13 @@ func execreturn(parsedInfo):
 	return script.eval()
 
 # Function to return a transition of a character.
-func _transition(transition, body):
+func _transition(transition, body, fade):
 	if transition == 'silhouette':
 		return '\n\tsystems.display.fadeblack('+body+', "in", 0)'
-	else:
+	elif fade:
 		return '\n\tsystems.display.fadealpha('+body+', "in", 10, "self", 0.01)'
+	else:
+		return ''
 
 # Function to get the body path for preventing fade errors.
 func get_body(info, i=1):
@@ -786,4 +797,6 @@ func get_body(info, i=1):
 			num = str(search('return global.chr.'+info[0]+'.body', info[i]))
 			body = 'global.chr.'+info[0]+'.body['+num+']'
 	
-	return execreturn('return ' + body)
+	body = execreturn('return ' + body)
+	if info[0] == 'nine11': body = body.rstrip('png') + 'ogv'
+	return body

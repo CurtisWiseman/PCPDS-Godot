@@ -18,4 +18,4 @@ func scene(lineText, index):
 	
 	# Use the index to match what line to make something happen on.
 	match(index):
-		0: pass
+		1: pass
