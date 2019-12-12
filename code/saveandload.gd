@@ -140,9 +140,9 @@ func save(saveBoxName, saveBoxNum, sliders):
 				displayFaces.append(layer['face'].texture.resource_path + ',' + layer['path'] + ',' + str(layer['facepos'].x) + ',' + str(layer['facepos'].y) + modulate)
 			
 			if layer.has('AFL'):
-				for i in range(0, layer['AFL'].size()):
-					modulate = ',' + str(layer['AFL'][i].get_self_modulate()).replace(',', '|')
-					displayFaces.append(layer['AFL'][i].texture.resource_path + ',' + layer['path'] + ',' + str(layer['AFLpos'][i].x) + ',' + str(layer['AFLpos'][i].y) + ',other' + modulate)
+				for AFL in layer['AFL']:
+					modulate = ',' + str(AFL['node'].get_self_modulate()).replace(',', '|')
+					displayFaces.append(AFL['path'] + ',' + layer['path'] + ',' + str(AFL['position'].x) + ',' + str(AFL['position'].y) + ',' + AFL['type'] + modulate)
 	
 	
 	

@@ -252,9 +252,7 @@ func face(facepath, body, x=0, y=0, type='face'):
 	else:
 		if !layers[index].has('AFL'):
 			layers[index]['AFL'] = []
-			layers[index]['AFLpos'] = []
-		layers[index]['AFL'].append(facenode) # Add the accessory, blush, or whatever to AFL.
-		layers[index]['AFLpos'].append(Vector2(x,y)) # Add the coordinates.
+		layers[index]['AFL'].append({'node':facenode, 'position':Vector2(x,y), 'type':type, 'path':facepath}) # Add the accessory, blush, or whatever to AFL.
 		
 		# Set below the character if of type below.
 		if type == 'below': 
