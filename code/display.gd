@@ -111,13 +111,14 @@ func image(imgpath, z):
 
 	# Else if no model exists for the image then make a Sprite.
 	else:
-
+	
 		var imgnode = Sprite.new() # Create a new sprite node.
 		imgnode.set_name(info[0]) # Give the sprite node the image name for a node name.
 		layers[info[1]]['node'] = imgnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'image' # The node's type.
 		imgnode.centered = false # Uncenter the node.
 		imgnode.texture = info[2] # Set the node's texture to the image.
+		imgnode.z_index = z # Set the z index of the node to z.
 		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 
 
@@ -244,6 +245,7 @@ func face(facepath, body, x=0, y=0, type='face'):
 	facenode.texture = load(facepath) # Set the node's texture to the face image.
 	facenode.position = Vector2(x,y) # Set the face's position to x and y.
 	layers[index]['node'].add_child(facenode) # Add as a child of the body node.
+	
 	if type == 'face':
 		layers[index]['face'] = facenode # Add the face node the dictionary.
 		layers[index]['facepos'] = Vector2(x,y) # Add the coordinates.
@@ -253,6 +255,11 @@ func face(facepath, body, x=0, y=0, type='face'):
 			layers[index]['AFLpos'] = []
 		layers[index]['AFL'].append(facenode) # Add the accessory, blush, or whatever to AFL.
 		layers[index]['AFLpos'].append(Vector2(x,y)) # Add the coordinates.
+		
+		# Set below the character if of type below.
+		if type == 'below': 
+			facenode.z_as_relative = false
+			facenode.z_index = 0
 
 
 
