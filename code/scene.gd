@@ -72,12 +72,6 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 
 
 
-# Function to move, zoom, and 'shake' the camera.
-func camera():
-	pass
-
-
-
 # Helper function to transition scenes.
 func _transition(display, transition, fade, speed, time):
 	

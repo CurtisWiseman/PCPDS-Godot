@@ -4,8 +4,8 @@ extends Node
 var sound
 var timer
 var pause
-var scene
 var canvas
+var camera
 var display
 var nametag
 var dialogue
@@ -17,6 +17,14 @@ func _ready():
 	
 	# Set the global rootnode to the root of the current scene.
 	global.rootnode = get_node('.').owner
+	
+	
+	
+	# Load the camera under the camera variable.
+	camera = Camera2D.new() # Create a new node.
+	camera.set_name('Camera') # Give it the name Camera.
+	camera.set_script(load('res://code/camera.gd')) # Attatch the camera script.
+	add_child(camera) # Add the node under the Systems node.
 	
 	
 	

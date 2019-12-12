@@ -22,6 +22,7 @@ func save(saveBoxName, saveBoxNum, sliders):
 	
 	# Get relevant system nodes.
 	var sound = global.rootnode.get_node('Systems/Sound')
+	var camera = global.rootnode.get_node('Systems/Camera')
 	var display = global.rootnode.get_node('Systems/Display')
 	var dialogue = global.rootnode.get_node('Systems/Pause Canvas/Dialogue Canvas/Dialogue Box')
 	
@@ -37,6 +38,15 @@ func save(saveBoxName, saveBoxNum, sliders):
 	# CURRENT VERSION AND CURRENT SCENE
 	var gameVersion = ProjectSettings.get_setting('application/config/version')
 	var sceneName = get_tree().get_current_scene().get_name()
+	
+	
+	
+	# CAMERA SYSTEM
+	var zoom = str(camera.lastZoom.x)
+	var offset = str(camera.lastOffset)
+	offset = offset.substr(1, offset.length()-2)
+	
+	
 	
 	# MUSIC SYSTEM
 	var musicPlaying = sound.playing.path + "," + str(sound.playing.loop) + "," + str(sound.playing.volume)
@@ -142,6 +152,7 @@ func save(saveBoxName, saveBoxNum, sliders):
 	file.store_line(gameVersion)
 	file.store_line(saveBoxName)
 	file.store_line(sceneName)
+	file.store_line(zoom+','+offset)
 	file.store_line('-music-')
 	file.store_line(musicPlaying)
 	file.store_line(musicQueue)
@@ -208,7 +219,7 @@ func load(save):
 		loadSaveFile = false
 		get_tree().paused = false
 		return
-	elif version[1] < 1:
+	elif version[1] < 2:
 		print("Your save's version (" + saveText[0] + ") is incompatible with the current game version (" + ProjectSettings.get_setting('application/config/version') + ")." )
 		blockInput = false
 		loadSaveFile = false
@@ -224,14 +235,19 @@ func load(save):
 	
 	
 	
+	# LOAD CAMERA
+	var camera = saveText[3].split(',', false)
+	systems.camera.zoom = Vector2(float(camera[0]), float(camera[0]))
+	systems.camera.offset = Vector2(int(camera[1]), int(camera[2]))
+	
 	# LOAD MUSIC
-	if saveText[4] != 'NULL,NULL,NULL':
-		var music = saveText[4].split(',', false)
+	if saveText[5] != 'NULL,NULL,NULL':
+		var music = saveText[5].split(',', false)
 		if music[1] == 'True': systems.sound.music(music[0], true, int(music[2]))
 		else: systems.sound.music(music[0], false, int(music[2]))
 	
-	if saveText[5] != 'NULL':
-		var elements = saveText[5].split('|', true)
+	if saveText[6] != 'NULL':
+		var elements = saveText[6].split('|', true)
 		for element in elements:
 			var music = element.split(',', false)
 			if music[1] == 'True': systems.sound.queue(music[0], true, int(music[2]))
@@ -239,11 +255,11 @@ func load(save):
 	
 	
 	# LOAD DISPLAY
-	if saveText[13] != 'NULL':
-		var background = saveText[13].split(',', false)
+	if saveText[14] != 'NULL':
+		var background = saveText[14].split(',', false)
 		systems.display.background(background[0], background[1])
 	
-	var i = 14
+	var i = 15
 	var more = true
 	var size = saveText.size()
 	
@@ -313,16 +329,16 @@ func load(save):
 	var choiceArray = []
 	var chosenChoiceArray = []
 	
-	if saveText[9] == 'True': inChoice = true
+	if saveText[10] == 'True': inChoice = true
 	
-	if saveText[10] != 'NULL':
-		var stringArray = saveText[10].split(',', true)
-		for string in stringArray: choiceArray.append(string)
 	if saveText[11] != 'NULL':
 		var stringArray = saveText[11].split(',', true)
+		for string in stringArray: choiceArray.append(string)
+	if saveText[12] != 'NULL':
+		var stringArray = saveText[12].split(',', true)
 		for string in stringArray: chosenChoiceArray.append(string)
 	
-	systems.dialogue(saveText[7], int(saveText[8]), choiceArray, inChoice, chosenChoiceArray)
+	systems.dialogue(saveText[8], int(saveText[9]), choiceArray, inChoice, chosenChoiceArray)
 	
 	
 	

@@ -96,7 +96,7 @@ func loadSaves():
 func _on_LoadBox_pressed(saveBoxName):
 	if game.safeToSave:
 		PauseScreen.visible = false
-	
+		
 		# Stop any sliding characters.
 		var sliders = []
 		if global.sliding:
@@ -109,7 +109,19 @@ func _on_LoadBox_pressed(saveBoxName):
 			global.sliding = false
 			get_tree().paused = true
 			global.pause_input = false
-	
+		
+		# Stop camera movment if it is moving
+		if global.cameraMoving:
+			var camera = global.rootnode.get_node('Systems/Camera')
+			global.pause_input = true
+			get_tree().paused = false
+			camera.finishCameraMovment()
+			yield(camera, 'camera_movment_finished')
+			camera.zoom = camera.lastZoom
+			camera.offset = camera.lastOffset
+			get_tree().paused = true
+			global.pause_input = false
+		
 		$Wait.start()
 		yield($Wait, 'timeout')
 		var saveBoxNum : int = int(saveBoxName.substr(7, saveBoxName.length()))

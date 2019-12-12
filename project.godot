@@ -18,7 +18,7 @@ _global_script_class_icons={
 config/name="PCPDS-Godot"
 run/main_scene="res://scenes/Main_Menu.tscn"
 config/icon="res://icon.png"
-config/version="0.1.0.0"
+config/version="0.2.0.0"
 
 [autoload]
 
@@ -74,5 +74,6 @@ quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
 quality/2d/use_pixel_snap=true
 quality/filters/use_nearest_mipmap_filter=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 quality/filters/msaa=2
 environment/default_environment="res://default_env.tres"

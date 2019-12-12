@@ -1,4 +1,3 @@
-#I use a ColorRect as the dialogue box, but replacing it with a TextureRect shouldn't be a problem
 extends TextureRect
 
 var dialogue = PoolStringArray() #All of the lines in the current text file. Not using a regular array for better performance

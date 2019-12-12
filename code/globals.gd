@@ -10,6 +10,7 @@ var sfx_volume = 1
 var pause_input = false
 var loadedOnce = false
 var sliding = false
+var cameraMoving = false
 var screenshotsTaken = 1
 var defaultChoiceFontItalic
 var defaultChoiceFontBold
