@@ -2,6 +2,7 @@ extends Node
 
 # Define the characters for global use.
 var nine11
+var artso
 var actiongiraffe
 var digibro
 var hippo
@@ -11,6 +12,9 @@ var munchy
 var nate
 var thoth
 var tom
+
+# An array of the characters who need their images loaded. (Make the same as their folder name.)
+var chararray = ['Artso Fartso', 'Action Giraffe', 'Digibro', 'Endless War', 'Hippo', 'Mage', 'Munchy', 'Nate', 'Tom']
 
 func _ready():
 	
@@ -25,9 +29,8 @@ func _ready():
 	nate = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
 	thoth = 'res://images/characters/Thoth/thoth.png'
 	tom = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'blush': null, 'body': []}
+	artso = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
 	
-	# Make an array of the characters who need their images loaded. (Make the same as their folder name.)
-	var chararray = ['Action Giraffe', 'Digibro', 'Endless War', 'Hippo', 'Mage', 'Munchy', 'Nate', 'Tom']
 	loadchars(chararray)
 
 
@@ -87,6 +90,31 @@ func insert(character, file, type):
 					actiongiraffe.blush = file
 				else:
 					actiongiraffe.afl.append(file)
+
+		'Artso Fartso':
+			if type == 'body':
+				if file.findn('campus') != -1:
+					artso.campus.body.append(file)
+				elif file.findn('casual') != -1:
+					artso.casual.body.append(file)
+			
+			elif type == 'face':
+				if file.findn('campus') != -1:
+					emotedecipher(file, 'artso', '.campus')
+				elif file.findn('casual') != -1:
+					emotedecipher(file, 'artso', '.casual')
+			
+			elif type == 'afl':
+				if file.findn('blush') != -1:
+					if file.findn('campus') != -1:
+						artso.campus.blush = file
+					elif file.findn('casual') != -1:
+						artso.casual.blush = file
+					else:
+						artso.campus.blush = file
+						artso.casual.blush = file
+				else:
+					artso.afl.append(file)
 
 		'Digibro':
 			if type == 'body':

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/endlesswar_campus1_stand_silhouette.png-1c957002f09aaf298d60e904b61c18de.stex"
+path="res://.import/artso_face_campus_sad3.png-abef01592994b4b679f0a228709bb1a3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/characters/Endless War/endlesswar_campus1_stand_silhouette.png"
-dest_files=[ "res://.import/endlesswar_campus1_stand_silhouette.png-1c957002f09aaf298d60e904b61c18de.stex" ]
+source_file="res://images/characters/Artso Fartso/Faces_Campus/artso_face_campus_sad3.png"
+dest_files=[ "res://.import/artso_face_campus_sad3.png-abef01592994b4b679f0a228709bb1a3.stex" ]
 
 [params]
 

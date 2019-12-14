@@ -14,10 +14,12 @@ var displayingChoices = false
 var waitTimer = Timer.new()
 var numOfChoices = 0
 var fade = false
+var notsame
 
 signal empty_line
 signal sentence_end
 signal choiceChosen
+signal dupeCheckFinished
 
 var lastBody
 var lastSpoken = 0
@@ -202,7 +204,17 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				regex.compile('9/11')
 				dialogue[index] = regex.sub(dialogue[index], "911", true)
 			
-			if dialogue[index].findn('REMOVE') != -1:
+			if 'leaves'.is_subsequence_ofi(dialogue[index]):
+				for character in characterImages.chararray:
+					if character.is_subsequence_of(dialogue[index]):
+						for i in range(0, systems.display.layers.size()):
+							var layer = systems.display.layers[i]['name']
+							if layer.findn(character.to_lower()) != -1:
+								systems.display.remove(systems.display.layers[i]['path'])
+								break
+						break
+			
+			elif dialogue[index].findn('REMOVE') != -1:
 				var command = dialogue[index].lstrip('[')
 				command = command.rstrip(']')
 				command = command.split(' ', false, 1)
@@ -443,51 +455,69 @@ func _on_Dialogue_has_been_read(setIndex=false):
 
 # Generates function calls to the image system by parsing the script.
 func parse_info(info):
-	var notsame
 	match info[0]:
 		"9/11":
 			info[0] = 'nine11'
-			notsame = remove_dupes('911', info)
-			if notsame: parse_911(info, 'nine11', 1)
+			remove_dupes('911', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_911(info, 'nine11', 1, notsame[1])
+		"Artso Fartso":
+			info[0] = 'artso'
+			remove_dupes('artso', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_outfit(info, 'artso', 1, notsame[1])
 		"Action Giraffe":
 			info[0] = 'actiongiraffe'
-			notsame = remove_dupes('ag', info)
-			if notsame: parse_outfit(info, 'actiongiraffe', 1)
+			remove_dupes('ag', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_outfit(info, 'actiongiraffe', 1, notsame[1])
 		"Digibro":
 			info[0] = 'digibro'
-			notsame = remove_dupes('digi', info)
-			if notsame: parse_outfit(info, 'digibro', 1)
+			remove_dupes('digi', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_outfit(info, 'digibro', 1, notsame[1])
 		"Endless War":
 			info[0] = 'endlesswar'
-			notsame = remove_dupes('endlesswar', info)
-			if notsame: parse_outfit(info, 'endlesswar', 1)
+			remove_dupes('endlesswar', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_outfit(info, 'endlesswar', 1, notsame[1])
 		"Hippo":
 			info[0] = 'hippo'
-			notsame = remove_dupes('hippo', info)
-			if notsame: parse_outfit(info, 'hippo', 1)
+			remove_dupes('hippo', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_outfit(info, 'hippo', 1, notsame[1])
 		"Mage":
 			info[0] = 'mage'
-			notsame = remove_dupes('mage', info)
-			if notsame: parse_outfit(info, 'mage', 1)
+			remove_dupes('mage', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_outfit(info, 'mage', 1, notsame[1])
 		"Munchy":
 			info[0] = 'munchy'
-			notsame = remove_dupes('munchy', info)
-			if notsame: parse_outfit(info, 'munchy', 1)
+			remove_dupes('munchy', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_outfit(info, 'munchy', 1, notsame[1])
 		"Nate":
 			info[0] = 'nate'
-			notsame = remove_dupes('nate', info)
-			if notsame: parse_outfit(info, 'nate', 1)
+			remove_dupes('nate', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_outfit(info, 'nate', 1, notsame[1])
 		"Thoth":
 			info[0] = 'thoth'
 			remove_dupes('thoth', info)
-			parse_position(info, 'systems.display.image("res://images/characters/Thoth/thoth.png", 1)', "'res://images/characters/Thoth/thoth.png'", 1)
+			yield(self, 'dupeCheckFinished')
+			parse_position(info, 'systems.display.image("res://images/characters/Thoth/thoth.png", 1)', "'res://images/characters/Thoth/thoth.png'", 1, notsame[1])
 		"Tom":
 			info[0] = 'tom'
-			notsame = remove_dupes('tom', info)
-			if notsame: parse_expression(info, 'tom', 'global.chr.tom.body[0]', 1, 'null')
+			remove_dupes('tom', info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_expression(info, 'tom', 'global.chr.tom.body[0]', 1, 'null', notsame[1])
 
 # Removes duplicate bodies of characters if they exist.
 func remove_dupes(character, info):
+	waitTimer.wait_time = 0.01
+	waitTimer.start()
+	yield(waitTimer, 'timeout')
+	
 	var size = info.size()
 	for i in range(0, systems.display.layers.size()):
 		
@@ -495,18 +525,25 @@ func remove_dupes(character, info):
 		
 		if layer.findn(character) != -1:
 			if size == 1:
-				return false
+				notsame = [false, null]
+				emit_signal('dupeCheckFinished')
+				return
 			
 			elif size >= 2:
 				if info[1] == 'fade':
 					info.remove(1)
 					size = info.size()
 					if size == 1:
-						return false
+						notsame = [false, null]
+						emit_signal('dupeCheckFinished')
+						return
 				
 				if info[1] == 'right' or info[1] == 'left' or info[1] == 'center' or info[1] == 'offleft' or info[1] == 'offright' or info[1] == 'slide' or info[1] == 'off' or info[1] == 'silhouette':
-					parse_position(info, '', '"'+systems.display.layers[i]['path']+'"', 1)
-					return false
+					if info[1] == 'slide': info[1] = 'slideNoChange'
+					parse_position(info, '', '"'+systems.display.layers[i]['path']+'"', 1, systems.display.layers[i]['node'].position)
+					notsame = [false, null]
+					emit_signal('dupeCheckFinished')
+					return
 				
 				elif 'fade'.is_subsequence_of(info):
 					if systems.display.layers[i]['path'] != get_body(info):
@@ -514,39 +551,57 @@ func remove_dupes(character, info):
 						game.safeToSave = false
 						fade = true
 						var path = systems.display.layers[i]['path']
+						var pos = systems.display.layers[i]['node'].position
 						execute('systems.display.fadealpha("'+path+'", "out", 10, "self", 0.02, true)')
+						notsame = [true, pos]
+						emit_signal('dupeCheckFinished')
 						yield(systems.display, 'transition_finish_fade')
 						fade = false
 						systems.display.remove(path)
 						lastLayers = systems.display.layers.duplicate(true)
 						game.safeToSave = true
 						global.pause_input = false
-						return true
+						return
 					else:
+						var pos = systems.display.layers[i]['node'].position
 						systems.display.remove(systems.display.layers[i]['path'])
-						return true
+						notsame = [true, pos]
+						emit_signal('dupeCheckFinished')
+						return
 				
 				else:
+					var pos = systems.display.layers[i]['node'].position
 					systems.display.remove(systems.display.layers[i]['path'])
-					return true
-	return true
+					notsame = [true, pos]
+					emit_signal('dupeCheckFinished')
+					return
+	
+	if size == 2:
+		if info[1] == 'off':
+			notsame = [false, null]
+			emit_signal('dupeCheckFinished')
+			return
+	
+	notsame = [true, Vector2(0,0)]
+	emit_signal('dupeCheckFinished')
 
 # Parses the characters outfit.
-func parse_outfit(info, parsedInfo, i):
+func parse_outfit(info, parsedInfo, i, pos):
+	if info.size() == 1: return
 	var num
 	match info[i]:
 		"campus":
 			num = str(search('return global.chr.'+parsedInfo+'.campus.body', info[i+1]))
-			parse_expression(info, parsedInfo+'.campus', 'global.chr.'+parsedInfo+'.campus.body['+num+']', i+2, info[i+1])
+			parse_expression(info, parsedInfo+'.campus', 'global.chr.'+parsedInfo+'.campus.body['+num+']', i+2, info[i+1], pos)
 		"casual":
 			num = str(search('return global.chr.'+parsedInfo+'.casual.body', info[i+1]))
-			parse_expression(info, parsedInfo+'.casual', 'global.chr.'+parsedInfo+'.casual.body['+num+']', i+2, info[i+1])
+			parse_expression(info, parsedInfo+'.casual', 'global.chr.'+parsedInfo+'.casual.body['+num+']', i+2, info[i+1], pos)
 		_:
 			num = str(search('return global.chr.'+parsedInfo+'.body', info[i]))
-			parse_expression(info, parsedInfo, 'global.chr.'+parsedInfo+'.body['+num+']', i+1, info[i])
+			parse_expression(info, parsedInfo, 'global.chr.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
 
 # Parses the characters expression.
-func parse_expression(info, parsedInfo, body, i, bodyType):
+func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	var blush = false
 	var shades = false
 	var knife = false
@@ -555,7 +610,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType):
 	var num
 	
 	if i == info.size(): # Don't use an expression if none is given.
-		parse_position(info, 'systems.display.image('+body+', 1)', body, i)
+		parse_position(info, 'systems.display.image('+body+', 1)', body, i, pos)
 		return
 	
 	if 'squat'.is_subsequence_ofi(bodyType):
@@ -586,27 +641,27 @@ func parse_expression(info, parsedInfo, body, i, bodyType):
 	
 	if "happy".is_subsequence_of(info[i]):
 		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.happy['+num+'], '+body+')'+AFL, body, i+1)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.happy['+num+'], '+body+')'+AFL, body, i+1, pos)
 	elif "angry".is_subsequence_of(info[i]):
 		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.angry['+num+'], '+body+')'+AFL, body, i+1)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.angry['+num+'], '+body+')'+AFL, body, i+1, pos)
 	elif "confused".is_subsequence_of(info[i]):
 		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.confused['+num+'], '+body+')'+AFL, body, i+1)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.confused['+num+'], '+body+')'+AFL, body, i+1, pos)
 	elif "neutral".is_subsequence_of(info[i]):
 		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.neutral['+num+'], '+body+')'+AFL, body, i+1)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.neutral['+num+'], '+body+')'+AFL, body, i+1, pos)
 	elif "sad".is_subsequence_of(info[i]):
 		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.sad['+num+'], '+body+')'+AFL, body, i+1)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.sad['+num+'], '+body+')'+AFL, body, i+1, pos)
 	elif "shock".is_subsequence_of(info[i]):
 		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.shock['+num+'], '+body+')'+AFL, body, i+1)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.shock['+num+'], '+body+')'+AFL, body, i+1, pos)
 	elif "smitten".is_subsequence_of(info[i]):
 		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.smitten['+num+'], '+body+')'+AFL, body, i+1)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(global.chr.'+parsedInfo+'.smitten['+num+'], '+body+')'+AFL, body, i+1, pos)
 	else:
-		parse_position(info, 'systems.display.image('+body+', 1)'+AFL, body, i)
+		parse_position(info, 'systems.display.image('+body+', 1)'+AFL, body, i, pos)
 
 # Determines the correct face number for an epxression.
 func parse_expnum(expression, parsedInfo):
@@ -634,26 +689,26 @@ func parse_expnum(expression, parsedInfo):
 		return '0'
 
 # Parses 911's special mask case.
-func parse_911(info, parsedInfo, i):
+func parse_911(info, parsedInfo, i, pos):
 	
 	if 'pew'.is_subsequence_ofi(info[i]):
-		parse_position(info, 'systems.display.mask(global.chr.'+parsedInfo+'.body[2], global.chr.'+parsedInfo+'.video[2], "video", 1)', 'global.chr.'+parsedInfo+'.body[2]', 2)
+		parse_position(info, 'systems.display.mask(global.chr.'+parsedInfo+'.body[2], global.chr.'+parsedInfo+'.video[2], "video", 1)', 'global.chr.'+parsedInfo+'.body[2]', 2, pos)
 	elif 'boi' == info[i]:
-		parse_position(info, 'systems.display.mask(global.chr.'+parsedInfo+'.body[0], global.chr.'+parsedInfo+'.video[0], "video", 1)', 'global.chr.'+parsedInfo+'.body[0]', 2)
+		parse_position(info, 'systems.display.mask(global.chr.'+parsedInfo+'.body[0], global.chr.'+parsedInfo+'.video[0], "video", 1)', 'global.chr.'+parsedInfo+'.body[0]', 2, pos)
 	elif 'standin'.is_subsequence_ofi(info[i]):
-		parse_position(info, 'systems.display.mask(global.chr.'+parsedInfo+'.body[3], global.chr.'+parsedInfo+'.video[3], "video", 1)', 'global.chr.'+parsedInfo+'.body[3]', 2)
+		parse_position(info, 'systems.display.mask(global.chr.'+parsedInfo+'.body[3], global.chr.'+parsedInfo+'.video[3], "video", 1)', 'global.chr.'+parsedInfo+'.body[3]', 2, pos)
 	elif 'concern' == info[i]:
-		parse_position(info, 'systems.display.mask(global.chr.'+parsedInfo+'.body[1], global.chr.'+parsedInfo+'.video[1], "video", 1)', 'global.chr.'+parsedInfo+'.body[1]', 2)
+		parse_position(info, 'systems.display.mask(global.chr.'+parsedInfo+'.body[1], global.chr.'+parsedInfo+'.video[1], "video", 1)', 'global.chr.'+parsedInfo+'.body[1]', 2, pos)
 
 # Parses the position for a character.
-func parse_position(info, parsedInfo, body, i):
+func parse_position(info, parsedInfo, body, i, pos):
 	var transition = false
 	var extra = 0
 	var move = false
 	var num
 	
 	if i == info.size():
-		execute(parsedInfo)
+		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 		return
 	
 	if info[i] == 'silhouette' or info[i] == 'fade':
@@ -661,9 +716,9 @@ func parse_position(info, parsedInfo, body, i):
 		info.remove(i)
 		
 		if i == info.size():
-			if transition == 'silhouette': execute(parsedInfo+'\n\tsystems.display.fadeblack('+body+', "in", 0)')
-			elif fade: execute(parsedInfo+'\n\tsystems.display.fadealpha('+body+', "in", 10, "self", 0.01)')
-			else: execute(parsedInfo)
+			if transition == 'silhouette': execute(parsedInfo+'\n\tsystems.display.fadeblack('+body+', "in", 0)\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
+			elif fade: execute(parsedInfo+'\n\tsystems.display.fadealpha('+body+', "in", 10, "self", 0.01)\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
+			else: execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 			return
 	
 	if i + 2 == info.size()-1:
@@ -683,7 +738,12 @@ func parse_position(info, parsedInfo, body, i):
 		var tmp = info[i].split('-', true, 1)
 		info[i] = tmp[0]
 		extra = int(tmp[1]) * -1
+	elif info[i] == 'slideNoChange':
+		info[i] = 'slide'
+		parse_move(info, body, i)
+		return
 	elif info[i] == 'slide':
+		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 		parse_move(info, body, i)
 		return
 	
@@ -715,13 +775,14 @@ func parse_position(info, parsedInfo, body, i):
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', 1650, 0)')
 		if move: parse_move(info, body, i+1)
 	elif info[i] == 'off':
+		print('hi')
 		pass # Do nothing if the character is speaking off screen.
 	else:
 		return
 
 # Function to parse position movement.
 func parse_move(info, body, i):
-	var speed = '15'
+	var speed = '20'
 	var extra = 0
 	var num
 	
