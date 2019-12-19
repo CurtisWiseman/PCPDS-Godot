@@ -18,7 +18,7 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 
 [node name="Wait" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.3
 one_shot = true
 
 [node name="Save Pages" type="Control" parent="."]

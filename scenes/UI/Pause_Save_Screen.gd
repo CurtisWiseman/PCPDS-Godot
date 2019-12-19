@@ -122,6 +122,19 @@ func _on_LoadBox_pressed(saveBoxName):
 			get_tree().paused = true
 			global.pause_input = false
 		
+		# Stop any fading if it is happening
+		if global.fading:
+			global.pause_input = true
+			get_tree().paused = false
+			global.fading = false
+			var ogTime = $Wait.wait_time
+			$Wait.wait_time = 1
+			$Wait.start()
+			yield($Wait, 'timeout')
+			$Wait.wait_time = ogTime
+			get_tree().paused = true
+			global.pause_input = false
+		
 		$Wait.start()
 		yield($Wait, 'timeout')
 		var saveBoxNum : int = int(saveBoxName.substr(7, saveBoxName.length()))

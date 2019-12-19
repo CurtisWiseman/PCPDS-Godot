@@ -108,14 +108,12 @@ func save(saveBoxName, saveBoxNum, sliders):
 		displayBackground = "NULL"
 	else:
 		displayBackground = dialogue.lastBGNode.texture.resource_path
-		displayBackground = displayBackground + ',' + dialogue.lastBGType
+		displayBackground = displayBackground + ',' + dialogue.lastBGType + ',' + str(dialogue.lastBGNode.get_modulate()).replace(',', '|')
 		
 	var displayChildren = []
 	var displayFaces = []
 	var displayMaskChildren = []
-	if dialogue.lastLayers == []:
-		displayChildren = "NULL"
-	else:
+	if dialogue.lastLayers != []:
 		for layer in dialogue.lastLayers:
 			if sliders != []:
 				for node in sliders:
@@ -165,8 +163,9 @@ func save(saveBoxName, saveBoxNum, sliders):
 	file.store_line('-display-')
 	file.store_line(displayBackground)
 	
-	for child in displayChildren:
-		file.store_line(child)
+	if displayChildren != []:
+		for child in displayChildren:
+			file.store_line(child)
 	
 	if displayFaces != []:
 		file.store_line('faces')
@@ -177,7 +176,6 @@ func save(saveBoxName, saveBoxNum, sliders):
 		file.store_line('masks')
 		for child in displayMaskChildren:
 			file.store_line(child)
-	
 	file.close()
 	
 	blockInput = false # Unblock all blocked systems.
@@ -219,7 +217,7 @@ func load(save):
 		loadSaveFile = false
 		get_tree().paused = false
 		return
-	elif version[1] < 2:
+	elif version[1] < 3:
 		print("Your save's version (" + saveText[0] + ") is incompatible with the current game version (" + ProjectSettings.get_setting('application/config/version') + ")." )
 		blockInput = false
 		loadSaveFile = false
@@ -258,70 +256,74 @@ func load(save):
 	if saveText[14] != 'NULL':
 		var background = saveText[14].split(',', false)
 		systems.display.background(background[0], background[1])
+		if background[2] != '1|1|1|1':
+			var color = background[2].split('|', false)
+			systems.display.bgnode.set_modulate(Color(color[0], color[1], color[2], color[3]))
 	
 	var i = 15
 	var more = true
 	var size = saveText.size()
 	
-	while saveText[i] != 'faces' and saveText[i] != 'masks' and more: # Load all display content.
-		var item = saveText[i].split(',', false)
-		
-		if item[1] == 'image': systems.display.image(item[0], int(item[2]))
-		else: systems.display.video(item[0], int(item[2]))
-		
-		if item[3] != '0|0':
-			var pos = item[3].split('|', false)
-			systems.display.position(item[0], int(pos[0]), int(pos[1]))
-		
-		if item[4] != '1|1|1|1':
-			var color = item[4].split('|', false)
-			systems.display.layers[systems.display.getindex(item[0])]['node'].set_self_modulate(Color(color[0], color[1], color[2], color[3]))
-		
-		if i+1 == size: more = false
-		else: i += 1
-	
-	if more and saveText[i] == 'faces': # If more content and that content is faces then load them.
-		i+=1
-		while saveText[i] != 'masks' and more:
-			var face = saveText[i].split(',', false)
-			if face.size() == 5:
-				systems.display.face(face[0], face[1], int(face[2]), int(face[3]))
-				
-				if face[4] != '1|1|1|1':
-					var color = face[4].split('|', false)
-					systems.display.layers[systems.display.getindex(face[1])]['face'].set_self_modulate(Color(color[0], color[1], color[2], color[3]))
+	if size > 15:
+		while saveText[i] != 'faces' and saveText[i] != 'masks' and more: # Load all display content.
+			var item = saveText[i].split(',', false)
 			
-			else:
-				systems.display.face(face[0], face[1], int(face[2]), int(face[3]), face[4])
-				
-				if face[5] != '1|1|1|1':
-					var color = face[5].split('|', false)
-					var layer = systems.display.layers[systems.display.getindex(face[1])]
-					for AFL in layer['AFL']:
-						if AFL.texture.resource_path == face[0]:
-							AFL.set_self_modulate(Color(color[0], color[1], color[2], color[3]))
+			if item[1] == 'image': systems.display.image(item[0], int(item[2]))
+			else: systems.display.video(item[0], int(item[2]))
+		
+			if item[3] != '0|0':
+				var pos = item[3].split('|', false)
+				systems.display.position(item[0], int(pos[0]), int(pos[1]))
+		
+			if item[4] != '1|1|1|1':
+				var color = item[4].split('|', false)
+				systems.display.layers[systems.display.getindex(item[0])]['node'].set_self_modulate(Color(color[0], color[1], color[2], color[3]))
 			
 			if i+1 == size: more = false
 			else: i += 1
-	
-	if more: # If any content is left then it is masked content. Load it.
-		i+=1
-		while more:
-			var mask = saveText[i].split(',', false)
+		
+		if more and saveText[i] == 'faces': # If more content and that content is faces then load them.
+			i+=1
+			while saveText[i] != 'masks' and more:
+				var face = saveText[i].split(',', false)
+				if face.size() == 5:
+					systems.display.face(face[0], face[1], int(face[2]), int(face[3]))
+				
+					if face[4] != '1|1|1|1':
+						var color = face[4].split('|', false)
+						systems.display.layers[systems.display.getindex(face[1])]['face'].set_self_modulate(Color(color[0], color[1], color[2], color[3]))
 			
-			if mask[2] == 'image': systems.display.mask(mask[0], mask[1], mask[2], int(mask[3]))
-			else: systems.display.mask(mask[0], mask[1], mask[2], int(mask[3]))
+				else:
+					systems.display.face(face[0], face[1], int(face[2]), int(face[3]), face[4])
+				
+					if face[5] != '1|1|1|1':
+						var color = face[5].split('|', false)
+						var layer = systems.display.layers[systems.display.getindex(face[1])]
+						for AFL in layer['AFL']:
+							if AFL.texture.resource_path == face[0]:
+								AFL.set_self_modulate(Color(color[0], color[1], color[2], color[3]))
+				
+				if i+1 == size: more = false
+				else: i += 1
+		
+		if more: # If any content is left then it is masked content. Load it.
+			i+=1
+			while more:
+				var mask = saveText[i].split(',', false)
+				
+				if mask[2] == 'image': systems.display.mask(mask[0], mask[1], mask[2], int(mask[3]))
+				else: systems.display.mask(mask[0], mask[1], mask[2], int(mask[3]))
+				
+				if mask[4] != '0|0':
+					var pos = mask[4].split('|', false)
+					systems.display.position(mask[1], int(pos[0]), int(pos[1]))
+				
+				if mask[5] != '1|1|1|1':
+					var color = mask[5].split('|', false)
+					systems.display.layers[systems.display.getindex(mask[0])]['node'].set_self_modulate(Color(color[0], color[1], color[2], color[3]))
 			
-			if mask[4] != '0|0':
-				var pos = mask[4].split('|', false)
-				systems.display.position(mask[1], int(pos[0]), int(pos[1]))
-			
-			if mask[5] != '1|1|1|1':
-				var color = mask[5].split('|', false)
-				systems.display.layers[systems.display.getindex(mask[0])]['node'].set_self_modulate(Color(color[0], color[1], color[2], color[3]))
-			
-			if i+1 == size: more = false
-			else: i += 1
+				if i+1 == size: more = false
+				else: i += 1
 	
 	
 	# LOAD DIALOGUE

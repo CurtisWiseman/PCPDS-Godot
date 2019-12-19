@@ -206,13 +206,30 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			if 'leaves'.is_subsequence_ofi(dialogue[index]):
 				for character in characterImages.chararray:
-					if character.is_subsequence_of(dialogue[index]):
+					if character.is_subsequence_ofi(dialogue[index]):
 						for i in range(0, systems.display.layers.size()):
 							var layer = systems.display.layers[i]['name']
 							if layer.findn(character.to_lower()) != -1:
 								systems.display.remove(systems.display.layers[i]['path'])
 								break
 						break
+			
+			elif 'fade to black'.is_subsequence_ofi(dialogue[index]):
+				global.pause_input = true
+				systems.display.fadeblack(systems.display.bgnode, 'out', 15, 'children')
+				if !'unpause'.is_subsequence_ofi(dialogue[index]):
+					yield(systems.display, 'transition_finish')
+				global.pause_input = false
+			
+			elif 'fade from black'.is_subsequence_ofi(dialogue[index]):
+				global.pause_input = true
+				systems.display.fadeblack(systems.display.bgnode, 'in', 15, 'children')
+				if !'unpause'.is_subsequence_ofi(dialogue[index]):
+					yield(systems.display, 'transition_finish')
+				global.pause_input = false
+			
+			elif 'cut to black'.is_subsequence_ofi(dialogue[index]): systems.display.fadeblack(systems.display.bgnode, 'out', 100, 'children')
+			elif 'cut from black'.is_subsequence_ofi(dialogue[index]): systems.display.fadeblack(systems.display.bgnode, 'in', 100, 'children')
 			
 			elif dialogue[index].findn('REMOVE') != -1:
 				var command = dialogue[index].lstrip('[')
@@ -409,10 +426,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			if say: # If the text is to be said then...
 				
+				lastKeep(index)
 				global.rootnode.scene(dialogue[index], index+1) # Send the dialogue to the scene function in the root of the scene.
 				say(text, chrName)
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
-				lastKeep(index)
 				emit_signal('sentence_end', dialogue[index])
 				index += 1
 			
@@ -430,6 +447,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 		
 #		If line doesn't start with anything particular, register it as the player's thoughts
 		else:
+			lastKeep(index)
 			var lastChar = dialogue[index].length()-1 # The position of the last character.
 			
 			# Handle 'soft' newlines so that a newline does't sperate lines of dialogue when displayed.
@@ -440,7 +458,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			$Nametag.add_color_override("font_color", Color.white)
 			global.rootnode.scene(dialogue[index], index+1) # Send the dialogue to the scene function in the root of the scene.
 			say(dialogue[index], "")
-			lastKeep(index)
 			emit_signal('sentence_end', dialogue[index])
 			index += 1
 
@@ -533,6 +550,9 @@ func remove_dupes(character, info):
 				if info[1] == 'fade':
 					info.remove(1)
 					size = info.size()
+					if size > 1: if info[1].find('|') != -1:
+						info.remove(1)
+						size = info.size()
 					if size == 1:
 						notsame = [false, null]
 						emit_signal('dupeCheckFinished')
@@ -550,9 +570,15 @@ func remove_dupes(character, info):
 						global.pause_input = true
 						game.safeToSave = false
 						fade = true
+						var indx
+						var speed = 0.02
 						var path = systems.display.layers[i]['path']
 						var pos = systems.display.layers[i]['node'].position
-						execute('systems.display.fadealpha("'+path+'", "out", 10, "self", 0.02, true)')
+						for i in range(0, info.size()): if info[i] == 'fade': indx = i
+						if indx != size - 1: if info[indx+1].find('/') != -1:
+							speed = info[indx+1].split('/', false)
+							speed = float(speed[1])
+						execute('systems.display.fadealpha("'+path+'", "out", 10, "self", ' + str(speed) + ', true)')
 						notsame = [true, pos]
 						emit_signal('dupeCheckFinished')
 						yield(systems.display, 'transition_finish_fade')
@@ -712,8 +738,14 @@ func parse_position(info, parsedInfo, body, i, pos):
 		return
 	
 	if info[i] == 'silhouette' or info[i] == 'fade':
+		var speed = 0.01
 		transition = info[i]
 		info.remove(i)
+		
+		if fade: if i < info.size(): if info[i].find('/') != -1:
+				speed = info[i].split('/', false)
+				speed = float(speed[0])
+				info.remove(i)
 		
 		if i == info.size():
 			if transition == 'silhouette': execute(parsedInfo+'\n\tsystems.display.fadeblack('+body+', "in", 0)\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')

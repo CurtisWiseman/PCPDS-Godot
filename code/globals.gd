@@ -9,6 +9,7 @@ var music_volume = 1
 var sfx_volume = 1
 var pause_input = false
 var loadedOnce = false
+var fading = false
 var sliding = false
 var cameraMoving = false
 var screenshotsTaken = 1

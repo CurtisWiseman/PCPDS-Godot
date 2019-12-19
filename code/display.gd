@@ -466,6 +466,7 @@ func resize(path, x=100, y=100, xpos=0, ypos=0, face=false):
 # Function to fade in an out from black.
 func fadeblack(content, fade, spd, mod='self', time=0.5):
 	
+	global.fading = true # Let the game know fading is occuring.
 	var node # The node to modulate from.
 	var index # Index of content node.
 	var percent # Used to calculate modulation.
@@ -535,7 +536,7 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 	elif fade == 'out':
 		percent = 100
 		# While percent isn't 0 fade to black.
-		while percent != 0:
+		while percent != 0  and global.fading:
 			percent -= spd # Subtract spd from percent.
 			if percent < 0: percent = 0 # Make percent 0 if it falls below.
 			p = float(percent)/100 # Make p percent/100
@@ -547,12 +548,18 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 				node.set_modulate(Color(p,p,p,1)) # Modulate the node and all it's children by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+		
+		if !global.fading:
+			if mod == 'self':
+				node.set_self_modulate(Color(0,0,0,1))
+			else:
+				node.set_modulate(Color(0,0,0,1))
 	
 	# If fade is in then fade in.
 	elif fade == 'in':
 		percent = 0
 		# While percent isn't 0 fade from black.
-		while percent != 100:
+		while percent != 100 and global.fading:
 			percent += spd # Add spd to percent.
 			if percent > 100: percent = 100 # Make percent 100 if it goes above.
 			p = float(percent)/100 # Make p percent/100
@@ -564,12 +571,19 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 				node.set_modulate(Color(p,p,p,1)) # Modulate the node and all it's children by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+			
+		if !global.fading:
+			if mod == 'self':
+				node.set_self_modulate(Color(1,1,1,1))
+			else:
+				node.set_modulate(Color(1,1,1,1))
 	
 	# Else print an error if fade is not in or out.
 	else:
 		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
 	
 	emit_signal('transition_finish')
+	global.fading = false # Let the game know fading is done.
 	ftimer.queue_free() # Free the timer.
 
 
@@ -577,6 +591,7 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 # Function to fade in an out from black.
 func fadealpha(content, fade, spd, mod='self', time=0.5, fadeSignal=false):
 	
+	global.fading = true # Let the game know fading is occuring.
 	var node # The node to modulate from.
 	var index # Index of content node.
 	var percent # Used to calculate modulation.
@@ -635,7 +650,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.5, fadeSignal=false):
 	if fade == 'out':
 		percent = 100
 		# While percent isn't 0 fade to black.
-		while percent != 0:
+		while percent != 0 and global.fading:
 			percent -= spd # Subtract spd from percent.
 			if percent < 0: percent = 0 # Make percent 0 if it falls below.
 			p = float(percent)/100 # Make p percent/100
@@ -647,12 +662,18 @@ func fadealpha(content, fade, spd, mod='self', time=0.5, fadeSignal=false):
 				node.set_modulate(Color(1,1,1,p)) # Modulate the node and all it's children by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+		
+		if !global.fading:
+			if mod == 'self':
+				node.set_self_modulate(Color(1,1,1,0))
+			else:
+				node.set_modulate(Color(1,1,1,0))
 	
 	# If fade is in then fade in.
 	elif fade == 'in':
 		percent = 0
 		# While percent isn't 0 fade from black.
-		while percent != 100:
+		while percent != 100 and global.fading:
 			percent += spd # Add spd to percent.
 			if percent > 100: percent = 100 # Make percent 100 if it goes above.
 			p = float(percent)/100 # Make p percent/100
@@ -664,6 +685,12 @@ func fadealpha(content, fade, spd, mod='self', time=0.5, fadeSignal=false):
 				node.set_modulate(Color(1,1,1,p)) # Modulate the node and all it's children by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+		
+		if !global.fading:
+			if mod == 'self':
+				node.set_self_modulate(Color(1,1,1,1))
+			else:
+				node.set_modulate(Color(1,1,1,1))
 	
 	# Else print an error if fade is not in or out.
 	else:
@@ -671,6 +698,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.5, fadeSignal=false):
 	
 	if !fadeSignal: emit_signal('transition_finish')
 	else: emit_signal('transition_finish_fade')
+	global.fading = false # Let the game know fading is done.
 	ftimer.queue_free() # Free the timer.
 
 
