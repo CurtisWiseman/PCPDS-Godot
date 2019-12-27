@@ -266,6 +266,21 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				elif command.size() == 5: scene.change(command[1], command[2], int(command[3]), int(command[4]))
 				else: print('Invalid number of commands for CHANGE on line ' + str(index) + '!')
 			
+			elif dialogue[index].findn('Song:') != -1:
+				var track = dialogue[index].lstrip('[')
+				track = track.rstrip(']')
+				track = track.substr(6,dialogue[index].length()-1)
+				get_parent().sound.music("res://sounds/music/" + track + ".wav")
+			
+			elif dialogue[index].findn('SFX:') != -1:
+				var sfx = dialogue[index].lstrip('[')
+				sfx = sfx.rstrip(']')
+				sfx = sfx.substr(5,dialogue[index].length()-1)
+				get_parent().sound.sfx("res://sounds/sfx/" + sfx + ".wav")
+			
+			elif dialogue[index].findn('StopMusic') != -1:
+				get_parent().sound.stop(get_parent().sound.audioname(get_parent().sound.queue[0]['path']))
+			
 			global.rootnode.scene(dialogue[index], index+1)
 			index += 1
 			emit_signal('empty_line')
