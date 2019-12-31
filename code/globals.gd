@@ -37,6 +37,9 @@ var tom = {'color': Color('f00000')}
 # Variable to reference character images.
 var chr = load("res://code/char.gd").new()
 
+# location data
+var locations = []
+var locationNames = []
 
 # Set dynamic variables + do startup functions.
 func _ready():
@@ -141,10 +144,45 @@ func _ready():
 	AudioServer.add_bus(2)
 	AudioServer.set_bus_name(2, 'SFX')
 	AudioServer.set_bus_volume_db(2, log(master_volume * sfx_volume) * 20)
+	
+	# Load the location images.
+	locations = returnlocations()
+	var locname = ''
+	for location in locations:
+		location = location.left(location.find_last('.')) # Remove the file extension.
+		locname = location.right(location.find_last('/')+1) # Remove the leading folders.
+		locationNames.append(locname)
 
-
-
-
+# Function to retrieve all backgrounds into a locations array.
+func returnlocations():
+	# Make the directory path of a characters folder.
+	var directory = 'images/backgrounds/'
+	
+	# A list to retrun and a variable to manage the while loop.
+	var files = []
+	var file
+	
+	# Open the directory as dir
+	var dir = Directory.new()
+	dir.open(directory)
+	dir.list_dir_begin(true)
+	
+	# Until the end of the directory is reached appends to files.
+	while true:
+		# Get the next file in the directory.
+		file = dir.get_next()
+		
+		# If file exists then append it to files, else break.
+		if file != "" :
+			if !dir.dir_exists(file) and file.findn('import') == -1:
+				files.append('res://' + directory + '/' + file)
+		else:
+			break
+		
+	# Sort files, close the directory, and return files.
+	files.sort()
+	dir.list_dir_end()
+	return files
 
 # Handle screenshot event.
 func _input(event):

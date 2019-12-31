@@ -281,6 +281,19 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('StopMusic') != -1:
 				get_parent().sound.stop(get_parent().sound.audioname(get_parent().sound.queue[0]['path']))
 			
+			elif dialogue[index].findn('Location') != -1: 
+				var loc = dialogue[index]
+				loc = loc.left(loc.find_first(','))
+				loc = loc.right(loc.find_last(':'))
+				var type = dialogue[index];
+				type = type.right(type.find_first('.'))
+				type = type.right(type.find_first('.'))
+				type = type.left(type.find_first(','))
+				if(type == "mp4"):
+					type = 'video'
+				elif(type == "png"):
+					type = 'image'
+				get_parent().display.background(global.location[global.locationNames.find()],type)
 			global.rootnode.scene(dialogue[index], index+1)
 			index += 1
 			emit_signal('empty_line')
