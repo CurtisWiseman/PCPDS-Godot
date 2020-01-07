@@ -153,6 +153,10 @@ func _ready():
 		locname = location.right(location.find_last('/')+1) # Remove the leading folders.
 		locationNames.append(locname)
 
+
+
+
+
 # Function to retrieve all backgrounds into a locations array.
 func returnlocations():
 	# Make the directory path of a characters folder.
@@ -183,6 +187,11 @@ func returnlocations():
 	files.sort()
 	dir.list_dir_end()
 	return files
+
+
+
+
+
 
 # Handle screenshot event.
 func _input(event):

@@ -261,7 +261,7 @@ func insert(character, file, type):
 
 		'Tom':
 			if type == 'body':
-					tom.body.append(file)
+				tom.body.append(file)
 			
 			elif type == 'face':
 				emotedecipher(file, 'tom', '')

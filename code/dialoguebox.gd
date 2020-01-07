@@ -20,6 +20,7 @@ signal empty_line
 signal sentence_end
 signal choiceChosen
 signal dupeCheckFinished
+signal mouse_click
 
 var lastBody
 var lastSpoken = 0
@@ -231,16 +232,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif 'cut to black'.is_subsequence_ofi(dialogue[index]): systems.display.fadeblack(systems.display.bgnode, 'out', 100, 'children')
 			elif 'cut from black'.is_subsequence_ofi(dialogue[index]): systems.display.fadeblack(systems.display.bgnode, 'in', 100, 'children')
 			
-			elif dialogue[index].findn('REMOVE') != -1:
-				var command = dialogue[index].lstrip('[')
-				command = command.rstrip(']')
-				command = command.split(' ', false, 1)
-				for i in range(0, systems.display.layers.size()):
-					var layer = systems.display.layers[i]['name']
-					if layer.findn(command[1].to_lower()) != -1:
-						systems.display.remove(systems.display.layers[i]['path'])
-						break
-			
 			elif dialogue[index].findn('SLIDE') != -1:
 				var command = dialogue[index].lstrip('[')
 				command = command.rstrip(']')
@@ -254,46 +245,39 @@ func _on_Dialogue_has_been_read(setIndex=false):
 							parse_move(['slide', command[2], command[3]], '"'+systems.display.layers[i]['path']+'"', 0)
 						break
 			
-			elif dialogue[index].findn('CHANGE') != -1:
-				global.pause_input = true
-				game.safeToSave = false
-				var command = dialogue[index].lstrip('[')
-				command = command.rstrip(']')
-				command = command.split(' ', false)
-				if command.size() == 2: scene.change(command[1])
-				elif command.size() == 3: scene.change(command[1], command[2])
-				elif command.size() == 4: scene.change(command[1], command[2], int(command[3]))
-				elif command.size() == 5: scene.change(command[1], command[2], int(command[3]), int(command[4]))
-				else: print('Invalid number of commands for CHANGE on line ' + str(index) + '!')
-			
 			elif dialogue[index].findn('Song:') != -1:
 				var track = dialogue[index].lstrip('[')
 				track = track.rstrip(']')
 				track = track.substr(6,dialogue[index].length()-1)
-				get_parent().sound.music("res://sounds/music/" + track + ".wav")
+				systems.sound.music("res://sounds/music/" + track + ".wav", true)
 			
 			elif dialogue[index].findn('SFX:') != -1:
 				var sfx = dialogue[index].lstrip('[')
 				sfx = sfx.rstrip(']')
 				sfx = sfx.substr(5,dialogue[index].length()-1)
-				get_parent().sound.sfx("res://sounds/sfx/" + sfx + ".wav")
+				systems.sound.sfx("res://sounds/sfx/" + sfx + ".wav")
 			
 			elif dialogue[index].findn('StopMusic') != -1:
-				get_parent().sound.stop(get_parent().sound.audioname(get_parent().sound.queue[0]['path']))
+				systems.sound.stop(systems.sound.audioname(systems.sound.playing['path']))
 			
-			elif dialogue[index].findn('Location') != -1: 
-				var loc = dialogue[index]
-				loc = loc.left(loc.find_first(','))
-				loc = loc.right(loc.find_last(':'))
-				var type = dialogue[index];
-				type = type.right(type.find_first('.'))
-				type = type.right(type.find_first('.'))
-				type = type.left(type.find_first(','))
-				if(type == "mp4"):
-					type = 'video'
-				elif(type == "png"):
-					type = 'image'
-				get_parent().display.background(global.location[global.locationNames.find()],type)
+			elif dialogue[index].findn('Location:') != -1:
+				var loc = dialogue[index].lstrip('[')
+				loc = loc.rstrip(']')
+				loc = loc.substr(10,dialogue[index].length()-1)
+				var locIndex = global.locationNames.find(loc)
+				if locIndex != -1:
+					systems.display.background(global.locations[locIndex], 'image')
+				else:
+					print('Error: No background named ' + loc)
+			
+			elif dialogue[index].findn('pause') != -1:
+				game.safeToSave = false
+				global.pause_input = true
+				say("","")
+				yield(self, 'mouse_click')
+				global.pause_input = false
+				game.safeToSave = true
+			
 			global.rootnode.scene(dialogue[index], index+1)
 			index += 1
 			emit_signal('empty_line')

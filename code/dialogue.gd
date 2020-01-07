@@ -53,6 +53,10 @@ func _input(event):
 #			Finish sentence if still in progress
 			else:
 				set_visible_characters(get_total_character_count())
+	
+	elif Input.is_action_just_pressed("advance_text"):
+		
+		get_parent().emit_signal('mouse_click')
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_debug"):

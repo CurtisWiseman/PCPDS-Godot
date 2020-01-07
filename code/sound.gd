@@ -75,7 +75,7 @@ func stop(audio):
 func audioname(path):
 	var audioname = '' # Appended to to create a name.
 	path = path.left(path.find_last('.')) # Remove the file extension.
-	audioname = path.right(path.find_last('/')) # Use the fact that '/' cannot be in file names to find the name after the last slash.
+	audioname = path.right(path.find_last('/')+1) # Use the fact that '/' cannot be in file names to find the name after the last slash.
 	return audioname # Return the name.
 
 
