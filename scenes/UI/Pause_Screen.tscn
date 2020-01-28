@@ -58,7 +58,6 @@ window_title = "Confirm Exit"
 dialog_text = "Are you sure you want to return to the main menu? All unsaved data will be lost."
 
 [node name="Quit" type="TextureButton" parent="VBoxContainer"]
-editor/display_folded = true
 margin_top = 729.0
 margin_right = 600.0
 margin_bottom = 829.0

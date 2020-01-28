@@ -144,6 +144,10 @@ func save(saveBoxName, saveBoxNum, sliders):
 	
 	
 	
+	var blackScreen = global.rootnode.get_node('Systems').blackScreen
+	
+	
+	
 	#WRITE THE SAVE FILE.
 	var savePath = SAVE_FOLDER.plus_file(SAVE_NAME_TEMPLATE % saveBoxNum)
 	file.open_encrypted_with_pass(savePath, File.WRITE, 'G@Y&D3@D')
@@ -151,6 +155,7 @@ func save(saveBoxName, saveBoxNum, sliders):
 	file.store_line(saveBoxName)
 	file.store_line(sceneName)
 	file.store_line(zoom+','+offset)
+	file.store_line(str(blackScreen.get_self_modulate().a))
 	file.store_line('-music-')
 	file.store_line(musicPlaying)
 	file.store_line(musicQueue)
@@ -190,6 +195,7 @@ func load(save):
 	blockInput = true
 	loadSaveFile = true
 	game.safeToSave = false
+	var index = 0
 	
 	# Get the save file as an array of strings based on newlines.
 	var savePath = SAVE_FOLDER.plus_file(save)
@@ -201,7 +207,7 @@ func load(save):
 	
 	
 	# Check game version for incompatibility.
-	var version = saveText[0].split('.', false)
+	var version = saveText[index].split('.', false)
 	var currentVersion = ProjectSettings.get_setting('application/config/version').split('.', false, 4)
 	if version != null: 
 		if version.size() < currentVersion.size() or version.size() > currentVersion.size():
@@ -217,7 +223,7 @@ func load(save):
 		loadSaveFile = false
 		get_tree().paused = false
 		return
-	elif version[1] < 3:
+	elif version[1] < 4:
 		print("Your save's version (" + saveText[0] + ") is incompatible with the current game version (" + ProjectSettings.get_setting('application/config/version') + ")." )
 		blockInput = false
 		loadSaveFile = false
@@ -227,44 +233,51 @@ func load(save):
 	
 	
 	# Change to the saved scene.
-	scene.change(saveText[2])
+	index += 2
+	scene.change(saveText[index])
 	yield(scene, 'scene_changed')
 	var systems = global.rootnode.get_node('Systems')
+	index += 1
 	
 	
 	
 	# LOAD CAMERA
-	var camera = saveText[3].split(',', false)
+	var camera = saveText[index].split(',', false)
 	systems.camera.zoom = Vector2(float(camera[0]), float(camera[0]))
 	systems.camera.offset = Vector2(int(camera[1]), int(camera[2]))
+	index += 3
 	
 	# LOAD MUSIC
-	if saveText[5] != 'NULL,NULL,NULL':
-		var music = saveText[5].split(',', false)
+	if saveText[index] != 'NULL,NULL,NULL':
+		var music = saveText[index].split(',', false)
 		if music[1] == 'True': systems.sound.music(music[0], true, int(music[2]))
 		else: systems.sound.music(music[0], false, int(music[2]))
 	
-	if saveText[6] != 'NULL':
-		var elements = saveText[6].split('|', true)
+	index += 1
+	
+	if saveText[index] != 'NULL':
+		var elements = saveText[index].split('|', true)
 		for element in elements:
 			var music = element.split(',', false)
 			if music[1] == 'True': systems.sound.queue(music[0], true, int(music[2]))
 			else: systems.sound.queue(music[0], false, int(music[2]))
 	
+	index += 8
 	
 	# LOAD DISPLAY
-	if saveText[14] != 'NULL':
-		var background = saveText[14].split(',', false)
+	if saveText[index] != 'NULL':
+		var background = saveText[index].split(',', false)
 		systems.display.background(background[0], background[1])
 		if background[2] != '1|1|1|1':
 			var color = background[2].split('|', false)
 			systems.display.bgnode.set_modulate(Color(color[0], color[1], color[2], color[3]))
 	
-	var i = 15
+	index += 1
+	var i = index
 	var more = true
 	var size = saveText.size()
 	
-	if size > 15:
+	if size > index:
 		while saveText[i] != 'faces' and saveText[i] != 'masks' and more: # Load all display content.
 			var item = saveText[i].split(',', false)
 			
@@ -330,19 +343,29 @@ func load(save):
 	var inChoice = false
 	var choiceArray = []
 	var chosenChoiceArray = []
+	index -= 5
 	
-	if saveText[10] == 'True': inChoice = true
+	if saveText[index] == 'True': inChoice = true
 	
-	if saveText[11] != 'NULL':
-		var stringArray = saveText[11].split(',', true)
+	index += 1
+	
+	if saveText[index] != 'NULL':
+		var stringArray = saveText[index].split(',', true)
 		for string in stringArray: choiceArray.append(string)
-	if saveText[12] != 'NULL':
-		var stringArray = saveText[12].split(',', true)
+	
+	index += 1
+	
+	if saveText[index] != 'NULL':
+		var stringArray = saveText[index].split(',', true)
 		for string in stringArray: chosenChoiceArray.append(string)
 	
-	systems.dialogue(saveText[8], int(saveText[9]), choiceArray, inChoice, chosenChoiceArray)
+	index -= 4
 	
+	systems.dialogue(saveText[index], int(saveText[index+1]), choiceArray, inChoice, chosenChoiceArray)
 	
+	index -= 5;
+	print(saveText[index])
+	systems.blackScreen.set_self_modulate(Color(0,0,0,float(saveText[index])))
 	
 	# Allow the player to interact with the new scene.
 	blockInput = false

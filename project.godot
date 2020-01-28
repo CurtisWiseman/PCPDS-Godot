@@ -17,8 +17,8 @@ _global_script_class_icons={
 
 config/name="PCPDS-Godot"
 run/main_scene="res://scenes/Main_Menu.tscn"
-config/icon="res://icon.png"
-config/version="0.3.0.0"
+config/icon="res://images/logo.png"
+config/version="0.4.0.0"
 
 [autoload]
 

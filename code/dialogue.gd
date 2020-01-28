@@ -5,11 +5,15 @@ var longTextParts = []
 var currentSubstring = 0
 var currentLine = 0
 var isCompartmentalized = false
+var musicnode = null
+var musicstop = false
+var waitTimer = Timer.new()
 
 signal has_been_read
 signal substring_has_been_read
 signal compartmentalise_text
 signal finished_document
+signal done
 
 #	COLORS
 #	Mage - #551A8B
@@ -27,6 +31,10 @@ func _ready():
 	self.connect("compartmentalise_text", self, "compartmentalise")
 	self.connect("finished_document", self, "on_finished_document")
 	self.connect('has_been_read', get_parent(), '_on_Dialogue_has_been_read')
+	waitTimer.wait_time = 1
+	waitTimer.one_shot = true
+	waitTimer.autostart = false
+	add_child(waitTimer)
 
 func _input(event):
 	
@@ -38,6 +46,18 @@ func _input(event):
 					if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
 						child.finish()
 				global.sliding = false
+			
+			# Stop camera movment if it is moving
+			if global.cameraMoving:
+				var camera = global.rootnode.get_node('Systems/Camera')
+				global.pause_input = true
+				get_tree().paused = false
+				camera.finishCameraMovment()
+				yield(camera, 'camera_movment_finished')
+				camera.zoom = camera.lastZoom
+				camera.offset = camera.lastOffset
+				get_tree().paused = true
+				global.pause_input = false
 			
 			elif get_visible_characters() == get_total_character_count():
 				# In middle of longer sentence - progress through sentence
@@ -63,6 +83,7 @@ func _process(delta):
 		debug()
 	pass
 
+
 func say(text):
 	set_visible_characters(0) # Remove current line
 	
@@ -70,6 +91,16 @@ func say(text):
 	if isCompartmentalized == false && text.length() >= charMAX:
 		compartmentalise(text)
 # 	Display new line if of appropriate length
+	elif text != "":
+		var music = AudioStreamPlayer.new() # Create a new AudioSteamPlayer node.
+		music.stream = load("res://sounds/speech/pcp-blips_gibbontake.ogg") # Set the steam to path.
+		music.bus = 'Music' # Set the bus to Music.
+		music.volume_db = 0 # Set the volume to volume.
+#		music.connect('finished', self, 'loop', [music]) # Loop the music if asked too.
+		music.play()
+		add_child(music)
+		musicnode = music
+		set_bbcode(text)
 	else:
 		set_bbcode(text)
 	return text
@@ -117,6 +148,16 @@ func compartmentalise(longText):
 func _on_Timer_timeout():
 	if get_visible_characters() < get_total_character_count():
 		set_visible_characters(get_visible_characters()+1) 
+	elif musicnode != null:
+		musicstop = true
+		var music = musicnode
+		while music.volume_db > -100:
+			music.volume_db -= 20
+			if music.volume_db > -100: emit_signal("done");
+			yield(get_tree().create_timer(0.1), "timeout")
+		yield(self,"done")
+		music.queue_free()
+		musicnode = null
 
 func read_substring():
 	# Keep current line as compartmentalized until all substrings have been read

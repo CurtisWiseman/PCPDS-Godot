@@ -34,9 +34,6 @@ var munchy = {'color': Color('ff7ab9')}
 var nate = {'color': Color('')}
 var tom = {'color': Color('f00000')}
 
-# Variable to reference character images.
-var chr = load("res://code/char.gd").new()
-
 # location data
 var locations = []
 var locationNames = []
@@ -48,9 +45,6 @@ func _ready():
 	
 	
 	size = OS.get_screen_size() # Get the size of the screen.
-	
-	
-	chr._ready() #Load the character images.
 	
 	
 	# If the usersettings file does not exist then create it.

@@ -1,368 +1,70 @@
 extends Node
 
-# Define the characters for global use.
-var nine11
-var artso
-var actiongiraffe
-var digibro
-var hippo
-var endlesswar
-var mage
-var munchy
-var nate
-var thoth
-var tom
+# Initialize the characters with dictionaries.
+var nine11 = {'video': ['res://images/characters/9-11/911_boi.ogv', 'res://images/characters/9-11/911_concern.ogv', 'res://images/characters/9-11/911_pewpew.ogv', 'res://images/characters/9-11/911_standin.ogv'], 'body': ['res://images/characters/9-11/911_boi.png', 'res://images/characters/9-11/911_concern.png', 'res://images/characters/9-11/911_pewpew.png', 'res://images/characters/9-11/911_standin.png']}
 
-# An array of the characters who need their images loaded. (Make the same as their folder name.)
-var chararray = ['Artso Fartso', 'Action Giraffe', 'Digibro', 'Endless War', 'Hippo', 'Mage', 'Munchy', 'Nate', 'Tom']
+var ephraim = {'body': ['res://images/characters/Cop Killers/ephraim_base.png', 'res://images/characters/Cop Killers/ephraim_dab.png']}
+var k1p = {'body': ['res://images/characters/Cop Killers/k1p_base.png', 'res://images/characters/Cop Killers/k1p_dab.png']}
+var magicks = {'body': ['res://images/characters/Cop Killers/magicks_base.png', 'res://images/characters/Cop Killers/magicks_dab.png']}
+var schrafft = {'body': ['res://images/characters/Cop Killers/schrafft_base.png', 'res://images/characters/Cop Killers/schrafft_dab.png']}
+var smearg = {'body': ['res://images/characters/Cop Killers/smearg_base.png', 'res://images/characters/Cop Killers/smearg_dab.png']}
+var killers = { 'body': ['res://images/characters/Cop Killers/killers1.png', 'res://images/characters/Cop Killers/Killers2.png', 'res://images/characters/Cop Killers/killersdab1.png', 'res://images/characters/Cop Killers/killersdab2.png']}
 
+var kazee = {'face': [], 'body': []}
+var may = kazee.duplicate(true);
+var michelle = kazee.duplicate(true);
+
+var actiongiraffe = {'happy': ['res://images/characters/Action Giraffe/faces/ag_face_happy.png'], 'angry': ['res://images/characters/Action Giraffe/faces/ag_face_angry.png'], 'confused': ['res://images/characters/Action Giraffe/faces/ag_face_confused.png'], 'neutral': ['res://images/characters/Action Giraffe/faces/ag_face_neutral.png'], 'sad': ['res://images/characters/Action Giraffe/faces/ag_face_sad.png'], 'shock': ['res://images/characters/Action Giraffe/faces/ag_face_shock.png'], 'blush': ['res://images/characters/Action Giraffe/AFL/ag_face_blushies.png'], 'body': ['res://images/characters/Action Giraffe/ag_gesture1.png', 'res://images/characters/Action Giraffe/ag_gesture2.png', 'res://images/characters/Action Giraffe/ag_gesture3.png']}
+var digibro = {'campus': {'happy': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_happy1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_happy2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_happy3.png'], 'angry': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_angry1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_angry2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_angry3.png'], 'confused': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_confused1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_confused2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_confused3.png'], 'neutral': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_neutral.png'], 'sad': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_sad1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_sad2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_sad3.png'], 'shock': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_shock1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_shock2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_shock3.png'], 'smitten': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_blush1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_blush2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_blush3.png'], 'blush': ['res://images/characters/Digibro/AFL/digi_face_campus_blushies.png'], 'body': ['res://images/characters/Digibro/digi_campus1.png', 'res://images/characters/Digibro/digi_campus2.png', 'res://images/characters/Digibro/digi_campus3.png', 'res://images/characters/Digibro/digi_campus4.png', 'res://images/characters/Digibro/digi_campus5.png']}, 'casual': {'happy': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_happy1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_happy2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_happy3.png'], 'angry': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_angry1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_angry2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_angry3.png'], 'confused': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_confused1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_confused2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_confused3.png'], 'neutral': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_neutral.png'], 'sad': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_sad1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_sad2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_sad3.png'], 'shock': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_shock1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_shock2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_shock3.png'], 'smitten': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_blush1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_blush2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_blush3.png'], 'blush': ['res://images/characters/Digibro/AFL/digi_face_casual_blushies.png'], 'body': ['res://images/characters/Digibro/digi_casual1.png', 'res://images/characters/Digibro/digi_casual2.png', 'res://images/characters/Digibro/digi_casual3.png', 'res://images/characters/Digibro/digi_casual4.png', 'res://images/characters/Digibro/digi_casual5.png']}, 'special': {'gendoglint': ['res://images/characters/Digibro/Faces_Special/digi_face_special_gendoglint.png'], 'happy': ['res://images/characters/Digibro/Faces_Special/digi_face_special_happyMIN.png', 'res://images/characters/Digibro/Faces_Special/digi_face_special_happyMAX.png'], 'angry': ['res://images/characters/Digibro/Faces_Special/digi_face_special_angryMIN.png', 'res://images/characters/Digibro/Faces_Special/digi_face_special_angryMAX.png'], 'confused': ['res://images/characters/Digibro/Faces_Special/digi_face_special_confusedMIN.png', 'res://images/characters/Digibro/Faces_Special/digi_face_special_confusedMAX.png'], 'neutral': ['res://images/characters/Digibro/Faces_Special/digi_face_special_neutral.png'], 'smitten': ['res://images/characters/Digibro/Faces_Special/digi_face_special_smittenMIN.png', 'res://images/characters/Digibro/Faces_Special/digi_face_special_smittenMAX.png'], 'blush': ['res://images/characters/Digibro/AFL/digi_face_special_blushiesMIN.png' ,'res://images/characters/Digibro/AFL/digi_face_special_blushiesMAX.png'], 'body': ['res://images/characters/Digibro/digi_special1_1.png', 'res://images/characters/Digibro/digi_special1_2.png', 'res://images/characters/Digibro/digi_special1_3.png', 'res://images/characters/Digibro/digi_special1_4.png', 'res://images/characters/Digibro/digi_special2_1.png', 'res://images/characters/Digibro/digi_special2_2.png', 'res://images/characters/Digibro/digi_special2_3.png', 'res://images/characters/Digibro/digi_special2_4.png', 'res://images/characters/Digibro/digi_special3_1.png', 'res://images/characters/Digibro/digi_special3_2.png', 'res://images/characters/Digibro/digi_special3_3.png', 'res://images/characters/Digibro/digi_special3_4.png', 'res://images/characters/Digibro/digi_special4_1.png', 'res://images/characters/Digibro/digi_special4_2.png', 'res://images/characters/Digibro/digi_special4_3.png', 'res://images/characters/Digibro/digi_special4_4.png']}}
+var artsofartso = digibro.duplicate(true);
+#var endlesswar = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': [], 'knife': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}, 'cross': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}}
+#var munchy = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}}
+#var mage = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
+#var nate = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
+#var artso = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
+#var hippo = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
+#var tom = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'blush': null, 'body': []}
+
+var adelram = { 'blush': ['res://images/characters/Adelram/afl/adelram_face_blush.png'], 'body': ['res://images/characters/Adelram/adelram.png'], 'face': ['res://images/characters/Adelram/face/adelram_face_1.png', 'res://images/characters/Adelram/face/adelram_face_2.png']}
+var azumi = {'campus': {'happy': ['res://images/characters/Azumi/face/azumi_face_happyMIN.png', 'res://images/characters/Azumi/face/azumi_face_happyMAX.png'], 'angry': ['res://images/characters/Azumi/face/azumi_face_angryMIN.png', 'res://images/characters/Azumi/face/azumi_face_angryMAX.png'], 'confused': ['res://images/characters/Azumi/face/azumi_face_confusedMIN.png', 'res://images/characters/Azumi/face/azumi_face_confusedMAX.png'], 'neutral': ['res://images/characters/Azumi/face/azumi_face_neutral.png'], 'sad': ['res://images/characters/Azumi/face/azumi_face_sadMIN.png', 'res://images/characters/Azumi/face/azumi_face_sadMAX.png'], 'shock': ['res://images/characters/Azumi/face/azumi_face_shockMIN.png', 'res://images/characters/Azumi/face/azumi_face_shockMAX.png'], 'smitten': ['res://images/characters/Azumi/face/azumi_face_smittenMIN.png', 'res://images/characters/Azumi/face/azumi_face_smittenMAX.png'], 'blush': ['res://images/characters/Azumi/afl/azumi_face_angryMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_angryMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_confusedMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_confusedMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_happyMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_happyMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_neutral_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_neutral_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_sadMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_sadMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_shockMAX_blushMIN.png' ,'res://images/characters/Azumi/afl/azumi_face_shockMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_smittenMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_smittenMAX_blushMAX.png'], 'body': ['res://images/characters/Azumi/azumi_campus.png']}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': ['res://images/characters/Azumi/azumi_casual.png']}}
+var brunswick = {'confused': ['res://images/characters/Brunswick/faces/brunswick_face_confused.png'], 'neutral': ['res://images/characters/Brunswick/faces/brunswick_face_neutral.png'], 'worried': ['res://images/characters/Brunswick/faces/brunswick_face_worried.png'], 'body': ['res://images/characters/Brunswick/brunswick.png']}
+var cerise = {'happy': ['res://images/characters/Cerise/faces/cerise_face_happy.png'], 'serious': ['res://images/characters/Cerise/faces/cerise_face_serious.png'], 'body': ['res://images/characters/Cerise/cerise.png']}
+var coltcorona = {'cani': {'angry': ['res://images/characters/Colt Corona/faces/coltcorona_face1_angryMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_angryMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_angryMAX.png'], 'confused': ['res://images/characters/Colt Corona/faces/coltcorona_face1_confusedMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_confusedMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_confusedMAX.png'], 'happy': ['res://images/characters/Colt Corona/faces/coltcorona_face1_happyMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_happyMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_happyMAX.png'], 'neutral': ['res://images/characters/Colt Corona/faces/coltcorona_face1_neutral.png'], 'sad': ['res://images/characters/Colt Corona/faces/coltcorona_face1_sadMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_sadMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_sadMAX.png'], 'shock': ['res://images/characters/Colt Corona/faces/coltcorona_face1_shockMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_shockMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_shockMAX.png'], 'smitten': ['res://images/characters/Colt Corona/faces/coltcorona_face1_smittenMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_smittenMAX.png'], 'blush': ['res://images/characters/Colt Corona/afls/coltcorona_face1_angryMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_confusedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_happyMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_neutral_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_sadMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_shockedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_smittenMAX_blush.png'], 'body': ['res://images/characters/Colt Corona/coltcorona_1_cani.png']}, 'feetguitar': {'angry': ['res://images/characters/Colt Corona/faces/coltcorona_face2_angryMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_angryMAX.png'], 'confused': ['res://images/characters/Colt Corona/faces/coltcorona_face2_confusedMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_confusedMAX.png'], 'happy': ['res://images/characters/Colt Corona/faces/coltcorona_face2_happyMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_happyMAX.png'], 'neutral': ['res://images/characters/Colt Corona/faces/coltcorona_face2_neutral.png'], 'sad': ['res://images/characters/Colt Corona/faces/coltcorona_face2_sadMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_sadMAX.png'], 'shock': ['res://images/characters/Colt Corona/faces/coltcorona_face2_shockMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_shockMAX.png'], 'smitten': ['res://images/characters/Colt Corona/faces/coltcorona_face2_smittenMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_smittenMAX.png'], 'blush': ['res://images/characters/Colt Corona/afls/coltcorona_face2_angryMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_confusedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_happyMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_neutral_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_sadMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_shockedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_smittenMAX_blush.png'], 'body': ['res://images/characters/Colt Corona/coltcorona_2_feetguitar.png']}, 'gun': {'angry': [], 'confused': [], 'happy': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': ['res://images/characters/Colt Corona/coltcorona_2_gun.png']}, 'thisvideo': {'angry': [], 'confused': [], 'happy': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': ['res://images/characters/Colt Corona/coltcorona_2_thisvideo.png']}, 'bein': {'angry': ['res://images/characters/Colt Corona/faces/coltcorona_face3_angryMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_angryMAX.png'], 'confused': ['res://images/characters/Colt Corona/faces/coltcorona_face3_confusedMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_confusedMAX.png'], 'happy': ['res://images/characters/Colt Corona/faces/coltcorona_face3_happyMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_happyMAX.png'], 'neutral': ['res://images/characters/Colt Corona/faces/coltcorona_face3_neutral.png'], 'sad': ['res://images/characters/Colt Corona/faces/coltcorona_face3_sadMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_sadMAX.png'], 'shock': ['res://images/characters/Colt Corona/faces/coltcorona_face3_shockMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_shockMAX.png'], 'smitten': ['res://images/characters/Colt Corona/faces/coltcorona_face3_smittenMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_smittenMAX.png'], 'blush': ['res://images/characters/Colt Corona/afls/coltcorona_face3_angryMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_confusedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_happyMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_neutral_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_sadMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_shockedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_smittenMAX_blush.png'], 'body': ['res://images/characters/Colt Corona/coltcorona_3_bein.png']}}
+var connor = {'happy': 'res://images/characters/Connor/connor_happy.png', 'angry': 'res://images/characters/Connor/connor_angry.png', 'disappointed': 'res://images/characters/Connor/connor_disappointed.png', 'neutral': 'res://images/characters/Connor/connor_neutral.png'}
+var crocs = {'happy': 'res://images/characters/Crocs/crocs_happy.png', 'angry': 'res://images/characters/Crocs/crocs_angry.png', 'disappointed': 'res://images/characters/Crocs/crocs_disappointed.png', 'neutral': 'res://images/characters/Crocs/crocs_neutral.png', 'special': 'res://images/characters/Crocs/Crocs_special_outfit.png'} 
+
+var davoo = {'campus': {'angry': [], 'confused': [], 'drunk': [], 'neutral': [], 'happy': [], 'sad': [], 'shock': [], 'smitten': [], 'body': [], 'drunkdrool': '', 'catboy': ''}, 'special': {'angry': [], 'confused': [], 'drunk': [], 'neutral': [], 'happy': [], 'sad': [], 'shock': [], 'smitten': [], 'body': [], 'drunkdrool': '', 'catboy': ''}, 'hazmat': {'angry': [], 'confused': [], 'curious': [], 'neutral': [], 'sad': [], 'shock': [], 'thinking':[], 'smitten': []}}
+
+
+var clara = 'res://images/characters/Clara/clara.png'
+var maygib = ''
+var thoth = 'res://images/characters/Thoth/thoth.png'
+
+
+
+# Function to load duplicates.
 func _ready():
-	
-	# Initialize the characters with dictionaries. (Except thoth, just load his body.)
-	nine11 = {'video': [], 'body': []}
-	actiongiraffe = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'blush': null, 'body': []}
-	digibro = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-	endlesswar = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': [], 'knife': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}, 'cross': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}}
-	hippo = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-	mage = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-	munchy = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}}
-	nate = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-	thoth = 'res://images/characters/Thoth/thoth.png'
-	tom = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'blush': null, 'body': []}
-	artso = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-	
-	loadchars(chararray)
-
-
-
-# Function to load character dictionaries with the appropriate images.
-func loadchars(chararray):
-	
-	if global.loadedOnce == false:
-	
-		global.loadedOnce = true
-		
-		for character in chararray:
-			
-			var bodies = returndir(character)
-			for body in bodies:
-				insert(character, body, 'body')
-			
-			var faces = returnfaces(character)
-			for face in faces:
-				insert(character, face, 'face')
-			
-			var afls = returndir(character + '/AFL')
-			for afl in afls:
-				insert(character, afl, 'afl')
-		
-		load911()
-
-
-
-# Function to load 911's assets.
-func load911():
-	
-	var all = returndir('911')
-	
-	for item in all:
-		if '.png'.is_subsequence_ofi(item):
-			nine11.body.append(item)
-		elif '.ogv'.is_subsequence_ofi(item):
-			nine11.video.append(item)
-
-
-
-# Function that inserts an image to the correct character dictionary.
-func insert(character, file, type):
-	
-	match character:
-		
-		'Action Giraffe':
-			if type == 'body':
-				actiongiraffe.body.append(file)
-			
-			elif type == 'face':
-				emotedecipher(file, 'actiongiraffe', '')
-			
-			elif type == 'afl':
-				if file.findn('blush') != -1:
-					actiongiraffe.blush = file
-				else:
-					actiongiraffe.afl.append(file)
-
-		'Artso Fartso':
-			if type == 'body':
-				if file.findn('campus') != -1:
-					artso.campus.body.append(file)
-				elif file.findn('casual') != -1:
-					artso.casual.body.append(file)
-			
-			elif type == 'face':
-				if file.findn('campus') != -1:
-					emotedecipher(file, 'artso', '.campus')
-				elif file.findn('casual') != -1:
-					emotedecipher(file, 'artso', '.casual')
-			
-			elif type == 'afl':
-				if file.findn('blush') != -1:
-					if file.findn('campus') != -1:
-						artso.campus.blush = file
-					elif file.findn('casual') != -1:
-						artso.casual.blush = file
-					else:
-						artso.campus.blush = file
-						artso.casual.blush = file
-				else:
-					artso.afl.append(file)
-
-		'Digibro':
-			if type == 'body':
-				if file.findn('campus') != -1:
-					digibro.campus.body.append(file)
-				elif file.findn('casual') != -1:
-					digibro.casual.body.append(file)
-			
-			elif type == 'face':
-				if file.findn('campus') != -1:
-					emotedecipher(file, 'digibro', '.campus')
-				elif file.findn('casual') != -1:
-					emotedecipher(file, 'digibro', '.casual')
-			
-			elif type == 'afl':
-				if file.findn('blush') != -1:
-					if file.findn('campus') != -1:
-						digibro.campus.blush = file
-					elif file.findn('casual') != -1:
-						digibro.casual.blush = file
-					else:
-						digibro.campus.blush = file
-						digibro.casual.blush = file
-				else:
-					digibro.afl.append(file)
-
-		'Endless War':
-			if type == 'body':
-				endlesswar.body.append(file)
-			
-			elif type == 'face':
-				if file.findn('knife') != -1:
-					emotedecipher(file, 'endlesswar', '.knife')
-				elif file.findn('cross') != -1:
-					emotedecipher(file, 'endlesswar', '.cross')
-				else:
-					emotedecipher(file, 'endlesswar', '')
-			
-			elif type == 'afl':
-				if file.findn('blush') != -1:
-					if file.findn('knife') != -1:
-						endlesswar.knife.blush.append(file)
-					else:
-						endlesswar.blush.append(file)
-				else:
-					endlesswar.afl.append(file)
-
-		'Hippo':
-			if type == 'body':
-				if file.findn('campus') != -1:
-					hippo.campus.body.append(file)
-				elif file.findn('casual') != -1:
-					hippo.casual.body.append(file)
-			
-			elif type == 'face':
-				emotedecipher(file, 'hippo', '.casual')
-				emotedecipher(file, 'hippo', '.campus')
-			
-			elif type == 'afl':
-				if file.findn('blush') != -1:
-					if file.findn('campus') != -1:
-						hippo.campus.blush = file
-					elif file.findn('casual') != -1:
-						hippo.casual.blush = file
-					else:
-						hippo.campus.blush = file
-						hippo.casual.blush = file
-				else:
-					hippo.afl.append(file)
-
-		'Mage':
-			if type == 'body':
-				if file.findn('campus') != -1:
-					mage.campus.body.append(file)
-				elif file.findn('casual') != -1:
-					mage.casual.body.append(file)
-			
-			elif type == 'face':
-				if file.findn('campus') != -1:
-					emotedecipher(file, 'mage', '.campus')
-				elif file.findn('casual') != -1:
-					emotedecipher(file, 'mage', '.casual')
-			
-			elif type == 'afl':
-				if file.findn('blush') != -1:
-					if file.findn('campus') != -1:
-						mage.campus.blush = file
-					elif file.findn('casual') != -1:
-						mage.casual.blush = file
-					else:
-						mage.campus.blush = file
-						mage.casual.blush = file
-				else:
-					mage.afl.append(file)
-
-		'Munchy':
-			if type == 'body':
-				if file.findn('campus') != -1:
-					munchy.campus.body.append(file)
-				elif file.findn('casual') != -1:
-					munchy.casual.body.append(file)
-			
-			elif type == 'face':
-				if file.findn('squatting') != -1:
-					emotedecipher(file, 'munchy', '.campus.squatting')
-					emotedecipher(file, 'munchy', '.casual.squatting')
-				else:
-					emotedecipher(file, 'munchy', '.campus')
-					emotedecipher(file, 'munchy', '.casual')
-			
-			elif type == 'afl':
-				if file.findn('blush') != -1:
-					if file.findn('squatting') != -1:
-						munchy.campus.squatting.blush = file
-						munchy.casual.squatting.blush = file
-					else:
-						munchy.campus.blush = file
-						munchy.casual.blush = file
-				else:
-					munchy.afl.append(file)
-
-		'Nate': 
-			if type == 'body':
-				if file.findn('campus') != -1:
-					nate.campus.body.append(file)
-				elif file.findn('casual') != -1:
-					nate.casual.body.append(file)
-			
-			elif type == 'face':
-				emotedecipher(file, 'nate', '.campus')
-				emotedecipher(file, 'nate', '.casual')
-			
-			elif type == 'afl':
-				if file.findn('blush') != -1:
-					if file.findn('campus') != -1:
-						nate.campus.blush = file
-					elif file.findn('casual') != -1:
-						nate.casual.blush = file
-					else:
-						nate.campus.blush = file
-						nate.casual.blush = file
-				else:
-					nate.afl.append(file)
-
-		'Tom':
-			if type == 'body':
-				tom.body.append(file)
-			
-			elif type == 'face':
-				emotedecipher(file, 'tom', '')
-			
-			elif type == 'afl':
-				if file.findn('blush') != -1:
-					tom.blush = file
-				else:
-					tom.afl.append(file)
-
-
-
-# Function decipher emotions and return a number corresponding to that emotion
-func emotedecipher(face, character, outfit):
-	
-	if face.findn('angry') != -1:
-		execute('global.chr.'+character+outfit+'.angry.append("'+face+'")')
-	elif face.findn('confused') != -1:
-		execute('global.chr.'+character+outfit+'.confused.append("'+face+'")')
-	elif face.findn('happy') != -1:
-		execute('global.chr.'+character+outfit+'.happy.append("'+face+'")')
-	elif face.findn('neutral') != -1:
-		execute('global.chr.'+character+outfit+'.neutral.append("'+face+'")')
-	elif face.findn('sad') != -1:
-		execute('global.chr.'+character+outfit+'.sad.append("'+face+'")')
-	elif face.findn('shock') != -1:
-		execute('global.chr.'+character+outfit+'.shock.append("'+face+'")')
-	elif face.findn('smitten') != -1 or face.findn('blush') != -1:
-		execute('global.chr.'+character+outfit+'.smitten.append("'+face+'")')
-
-
-
-# Function to retrieve all files in a given character directory
-func returndir(character):
-		# Make the directory path of a characters folder.
-		var directory = 'images/characters/' + character
-		
-		# A list to retrun and a variable to manage the while loop.
-		var files = []
-		var file
-		
-		# Open the directory as dir
-		var dir = Directory.new()
-		dir.open(directory)
-		dir.list_dir_begin(true)
-		
-		# Until the end of the directory is reached appends to files.
-		while true:
-			# Get the next file in the directory.
-			file = dir.get_next()
-			
-			# If file exists then append it to files, else break.
-			if file != "" :
-				if !dir.dir_exists(file) and file.findn('import') == -1:
-					files.append('res://' + directory + '/' + file)
-			else:
-				break
-		
-		# Sort files, close the directory, and return files.
-		files.sort()
-		dir.list_dir_end()
-		return files
-
-
-
-# Function to return all images of a character's face folder(s).
-func returnfaces(character):
-	# Open the characters directory:
-	var directory = 'res://images/characters/' + character
-	var dir = Directory.new()
-	dir.open(directory)
-	dir.list_dir_begin(true)
-	
-	# Variables for manipulating file gathering.
-	var tmpfiles
-	var files = []
-	var direc
-	
-	# Grab all files of face subdirectories.
-	while true:
-		direc = dir.get_next()
-		if dir.dir_exists(direc) and direc.findn('face') != -1: #and direc.findn('face') != -1:
-			tmpfiles = returndir(character + '/' + direc)
-			for file in tmpfiles:
-				files.append(file)
-				
-		if direc == "":
-			break
-	
-	# Sort files, close the directory, and return files.
-	files.sort()
-	dir.list_dir_end()
-	return files
-
-
-
-# Function to execute the code generated through parsing.
-func execute(parsedInfo):
-	var source = GDScript.new()
-	source.set_source_code('func eval():\n\t' + parsedInfo)
-	source.reload()
-	var script = Reference.new()
-	script.set_script(source)
-	script.eval()
+	azumi.casual.angry = azumi.campus.angry
+	azumi.casual.confused = azumi.campus.confused
+	azumi.casual.happy = azumi.campus.happy
+	azumi.casual.neutral = azumi.campus.neutral
+	azumi.casual.sad = azumi.campus.sad
+	azumi.casual.shock = azumi.campus.shock
+	azumi.casual.smitten = azumi.campus.smitten
+	azumi.casual.blush = azumi.campus.blush
+	coltcorona.gun.angry = coltcorona.feetguitar.angry
+	coltcorona.gun.confused = coltcorona.feetguitar.confused
+	coltcorona.gun.happy = coltcorona.feetguitar.happy
+	coltcorona.gun.neutral = coltcorona.feetguitar.neutral
+	coltcorona.gun.sad = coltcorona.feetguitar.sad
+	coltcorona.gun.shock = coltcorona.feetguitar.shock
+	coltcorona.gun.smitten = coltcorona.feetguitar.smitten
+	coltcorona.gun.blush = coltcorona.feetguitar.blush
+	coltcorona.thisvideo.angry = coltcorona.feetguitar.angry
+	coltcorona.thisvideo.confused = coltcorona.feetguitar.confused
+	coltcorona.thisvideo.happy = coltcorona.feetguitar.happy
+	coltcorona.thisvideo.neutral = coltcorona.feetguitar.neutral
+	coltcorona.thisvideo.sad = coltcorona.feetguitar.sad
+	coltcorona.thisvideo.shock = coltcorona.feetguitar.shock
+	coltcorona.thisvideo.smitten = coltcorona.feetguitar.smitten
+	coltcorona.thisvideo.blush = coltcorona.feetguitar.blush

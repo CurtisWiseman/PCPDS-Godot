@@ -11,6 +11,7 @@ var nametag
 var dialogue
 var pauseCanvas
 var dialogueBox
+var blackScreen
 
 # Load nodes for all game systems.
 func _ready():
@@ -75,6 +76,14 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	dialogueBox.set_script(load('res://code/dialoguebox.gd'))
 	dialogueBox.texture = load('res://images/dialoguebox/dialogueBox.png')
 	global.dialogueBox = dialogueBox
+	
+	blackScreen = Sprite.new()
+	blackScreen.name = 'Black Screen'
+	blackScreen.centered = false
+	blackScreen.position.y = -790
+	blackScreen.texture = load("res://images/misc/black_screen.png")
+	blackScreen.set_self_modulate(Color(1,1,1,0))
+	dialogueBox.add_child(blackScreen);
 	
 	# Load the dialogue RichTextLaabel under dialogueBox.
 	dialogue = RichTextLabel.new();
