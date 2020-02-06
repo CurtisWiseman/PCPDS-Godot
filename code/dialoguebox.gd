@@ -23,6 +23,7 @@ signal dupeCheckFinished
 signal mouse_click
 signal transition_finish
 
+var lastCG
 var lastBody
 var lastSpoken = 0
 var lastLayers
@@ -32,6 +33,7 @@ var lastChoices
 var lastInChoice
 var lastChosenChoices
 
+var CG = null
 
 func _ready(): 
 	systems = global.rootnode.get_node("Systems") # Assign the systems no to systems.
@@ -173,6 +175,7 @@ func choice_unhovered(choiceNode): choiceNode.texture = load('res://images/dialo
 
 # Function to keep items from the last spoken line.
 func lastKeep(idx):
+	lastCG = CG
 	lastSpoken = idx
 	lastChoices = choices.duplicate(true)
 	lastInChoice = inChoice
@@ -277,7 +280,58 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				global.pause_input = false
 				game.safeToSave = true
 			
-			global.rootnode.scene(dialogue[index], index+1)
+			elif dialogue[index].findn('CG:') != -1:
+				global.pause_input = true
+				
+				var imageName = dialogue[index].lstrip('[')
+				imageName = imageName.rstrip(']')
+				imageName = imageName.substr(4,dialogue[index].length()-1)
+				
+				var imagePath = 'res://images/CG/' + imageName + '.png'
+				
+				systems.display.image(imagePath, 10)
+				systems.display.fadealpha(imagePath, 'in', 1, 'self', 0.01)
+				CG = imagePath
+				
+				yield(systems.display, 'transition_finish')
+				global.pause_input = false
+			
+			elif dialogue[index].findn('CG|cut:') != -1:
+				global.pause_input = true
+				
+				var imageName = dialogue[index].lstrip('[')
+				imageName = imageName.rstrip(']')
+				imageName = imageName.substr(8,dialogue[index].length()-1)
+				
+				var imagePath = 'res://images/CG/' + imageName + '.png'
+				
+				systems.display.image(imagePath, 10)
+				CG = imagePath
+				
+				global.pause_input = false
+			
+			elif dialogue[index].findn('CG END|cut') != -1:
+				global.pause_input = true
+				
+				if CG != null:
+					systems.display.remove(CG)
+					CG = null
+				
+				global.pause_input = false
+			
+			elif dialogue[index].findn('CG END') != -1:
+				global.pause_input = true
+				
+				if CG != null:
+					systems.display.fadealpha(CG, 'out', 1, 'self', 0.01)
+					yield(systems.display, 'transition_finish')
+					
+					systems.display.remove(CG)
+					CG = null
+				
+				global.pause_input = false
+			
+			var halt = global.rootnode.scene(dialogue[index], index+1, self)
 			index += 1
 			emit_signal('empty_line')
 		
@@ -357,10 +411,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				dialogue[index+1] = dialogue[index].substr(0, lastChar-1) + "\n" + dialogue[index+1]
 				index += 1
 			
-			#Replaces every instance of the word "Player" with "PCPGuy". You can easily
-			#tweak this to replace another word, or to replace it with a varia le index.e an inputted player name
-			regex.compile("Player")
-			dialogue[index] = regex.sub(dialogue[index], "PCPGuy", true)
+			# Replaces every instance of the word "PCPG" with the player name.
+			if global.playerName != null:
+				regex.compile("PCPG")
+				dialogue[index] = regex.sub(dialogue[index], global.playerName, true)
 			
 			# If there is no text on the line then don't say anything.
 			if dialogue[index][lastChar] == ')' or dialogue[index][lastChar] == '$':
@@ -435,7 +489,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			if say: # If the text is to be said then...
 				
 				lastKeep(index)
-				global.rootnode.scene(dialogue[index], index+1) # Send the dialogue to the scene function in the root of the scene.
+				var halt = global.rootnode.scene(dialogue[index], index+1, self) # Send the dialogue to the scene function in the root of the scene.
 				say(text, chrName)
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
 				emit_signal('sentence_end', dialogue[index])
@@ -453,18 +507,32 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				emit_signal('empty_line')
 				global.pause_input = false
 		
+		# Don't display anything but call scene function.
+		elif dialogue[index] == ("&&&&&"):
+			var halt = global.rootnode.scene("", index+1, self)
+			index += 1
+			emit_signal('empty_line')
+		
 #		If line doesn't start with anything particular, register it as the player's thoughts
 		else:
 			lastKeep(index)
-			var lastChar = dialogue[index].length()-1 # The position of the last character.
+			
+			# Replaces every instance of the word "PCPG" with the player name.
+			if global.playerName != null:
+				regex.compile("PCPG")
+				dialogue[index] = regex.sub(dialogue[index], global.playerName, true)
 			
 			# Handle 'soft' newlines so that a newline does't sperate lines of dialogue when displayed.
+			var lastChar = dialogue[index].length()-1 # The position of the last character.
 			if dialogue[index][lastChar] == 'n' and dialogue[index][lastChar-1] == '/':
 				dialogue[index+1] = dialogue[index].substr(0, lastChar-1) + "\n" + dialogue[index+1]
 				index += 1
 			
+			if dialogue[index].begins_with("$(") and dialogue[index].ends_with(")"):
+				dialogue[index] = dialogue[index].substr(1, dialogue[index].length())
+			
 			$Nametag.add_color_override("font_color", Color.white)
-			global.rootnode.scene(dialogue[index], index+1) # Send the dialogue to the scene function in the root of the scene.
+			var halt = global.rootnode.scene(dialogue[index], index+1, self) # Send the dialogue to the scene function in the root of the scene.
 			say(dialogue[index], "")
 			emit_signal('sentence_end', dialogue[index])
 			index += 1

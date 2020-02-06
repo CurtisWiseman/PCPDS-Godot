@@ -73,6 +73,10 @@ func save(saveBoxName, saveBoxNum, sliders):
 	var choices = dialogue.lastChoices
 	var chosenChoices = dialogue.lastChosenChoices
 	var lastBody = dialogue.lastBody
+	var lastCG = dialogue.lastCG
+	
+	if lastCG == null:
+		lastCG = "NULL"
 	
 	if choices == []:
 		choices = "NULL"
@@ -118,20 +122,20 @@ func save(saveBoxName, saveBoxNum, sliders):
 			if sliders != []:
 				for node in sliders:
 					if node['path'] == layer['path'] and node['path'] != lastBody:
-						layer['position'].x = node['dest']
+						layer['node'].position.x = node['dest']
 			
 			var modulate = ',' + str(layer['node'].get_self_modulate()).replace(',', '|')
 			
 			if layer.has('mask'):
 				if layer['type'] == 'image':
-					displayMaskChildren.append(layer['mask'] + ',' + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y) + modulate)
+					displayMaskChildren.append(layer['mask'] + ',' + layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['node'].position.x) + "|" + str(layer['node'].position.y) + modulate)
 				elif layer['type'] == 'video':
-					displayMaskChildren.append(layer['mask'] + ',' + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y) + modulate)
+					displayMaskChildren.append(layer['mask'] + ',' + layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['node'].position.x) + "|" + str(layer['node'].position.y) + modulate)
 			else:
 				if layer['type'] == 'image':
-					displayChildren.append(layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y) + modulate)
+					displayChildren.append(layer['path'] + ',' + 'image' + ',' + str(layer['layer']) + ',' + str(layer['node'].position.x) + "|" + str(layer['node'].position.y) + modulate)
 				elif layer['type'] == 'video':
-					displayChildren.append(layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['position'].x) + "|" + str(layer['position'].y) + modulate)
+					displayChildren.append(layer['path'] + ',' + 'video' + ',' + str(layer['layer']) + ',' + str(layer['node'].position.x) + "|" + str(layer['node'].position.y) + modulate)
 				
 			if layer.has('face'):
 				modulate = ',' + str(layer['face'].get_self_modulate()).replace(',', '|')
@@ -155,6 +159,7 @@ func save(saveBoxName, saveBoxNum, sliders):
 	file.store_line(saveBoxName)
 	file.store_line(sceneName)
 	file.store_line(zoom+','+offset)
+	file.store_line(lastCG)
 	file.store_line(str(blackScreen.get_self_modulate().a))
 	file.store_line('-music-')
 	file.store_line(musicPlaying)
@@ -245,6 +250,13 @@ func load(save):
 	var camera = saveText[index].split(',', false)
 	systems.camera.zoom = Vector2(float(camera[0]), float(camera[0]))
 	systems.camera.offset = Vector2(int(camera[1]), int(camera[2]))
+	index += 1
+	
+	# LOAD CG
+	var CG = null
+	if saveText[index] != 'NULL':
+		CG = saveText[index]
+	
 	index += 3
 	
 	# LOAD MUSIC
@@ -361,7 +373,7 @@ func load(save):
 	
 	index -= 4
 	
-	systems.dialogue(saveText[index], int(saveText[index+1]), choiceArray, inChoice, chosenChoiceArray)
+	systems.dialogue(saveText[index], int(saveText[index+1]), choiceArray, inChoice, chosenChoiceArray, CG)
 	
 	index -= 5;
 	print(saveText[index])

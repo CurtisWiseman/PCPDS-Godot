@@ -18,12 +18,7 @@ var actiongiraffe = {'happy': ['res://images/characters/Action Giraffe/faces/ag_
 var digibro = {'campus': {'happy': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_happy1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_happy2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_happy3.png'], 'angry': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_angry1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_angry2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_angry3.png'], 'confused': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_confused1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_confused2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_confused3.png'], 'neutral': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_neutral.png'], 'sad': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_sad1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_sad2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_sad3.png'], 'shock': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_shock1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_shock2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_shock3.png'], 'smitten': ['res://images/characters/Digibro/Faces_Campus/digi_face_campus_blush1.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_blush2.png', 'res://images/characters/Digibro/Faces_Campus/digi_face_campus_blush3.png'], 'blush': ['res://images/characters/Digibro/AFL/digi_face_campus_blushies.png'], 'body': ['res://images/characters/Digibro/digi_campus1.png', 'res://images/characters/Digibro/digi_campus2.png', 'res://images/characters/Digibro/digi_campus3.png', 'res://images/characters/Digibro/digi_campus4.png', 'res://images/characters/Digibro/digi_campus5.png']}, 'casual': {'happy': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_happy1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_happy2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_happy3.png'], 'angry': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_angry1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_angry2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_angry3.png'], 'confused': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_confused1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_confused2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_confused3.png'], 'neutral': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_neutral.png'], 'sad': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_sad1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_sad2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_sad3.png'], 'shock': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_shock1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_shock2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_shock3.png'], 'smitten': ['res://images/characters/Digibro/Faces_Casual/digi_face_casual_blush1.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_blush2.png', 'res://images/characters/Digibro/Faces_Casual/digi_face_casual_blush3.png'], 'blush': ['res://images/characters/Digibro/AFL/digi_face_casual_blushies.png'], 'body': ['res://images/characters/Digibro/digi_casual1.png', 'res://images/characters/Digibro/digi_casual2.png', 'res://images/characters/Digibro/digi_casual3.png', 'res://images/characters/Digibro/digi_casual4.png', 'res://images/characters/Digibro/digi_casual5.png']}, 'special': {'gendoglint': ['res://images/characters/Digibro/Faces_Special/digi_face_special_gendoglint.png'], 'happy': ['res://images/characters/Digibro/Faces_Special/digi_face_special_happyMIN.png', 'res://images/characters/Digibro/Faces_Special/digi_face_special_happyMAX.png'], 'angry': ['res://images/characters/Digibro/Faces_Special/digi_face_special_angryMIN.png', 'res://images/characters/Digibro/Faces_Special/digi_face_special_angryMAX.png'], 'confused': ['res://images/characters/Digibro/Faces_Special/digi_face_special_confusedMIN.png', 'res://images/characters/Digibro/Faces_Special/digi_face_special_confusedMAX.png'], 'neutral': ['res://images/characters/Digibro/Faces_Special/digi_face_special_neutral.png'], 'smitten': ['res://images/characters/Digibro/Faces_Special/digi_face_special_smittenMIN.png', 'res://images/characters/Digibro/Faces_Special/digi_face_special_smittenMAX.png'], 'blush': ['res://images/characters/Digibro/AFL/digi_face_special_blushiesMIN.png' ,'res://images/characters/Digibro/AFL/digi_face_special_blushiesMAX.png'], 'body': ['res://images/characters/Digibro/digi_special1_1.png', 'res://images/characters/Digibro/digi_special1_2.png', 'res://images/characters/Digibro/digi_special1_3.png', 'res://images/characters/Digibro/digi_special1_4.png', 'res://images/characters/Digibro/digi_special2_1.png', 'res://images/characters/Digibro/digi_special2_2.png', 'res://images/characters/Digibro/digi_special2_3.png', 'res://images/characters/Digibro/digi_special2_4.png', 'res://images/characters/Digibro/digi_special3_1.png', 'res://images/characters/Digibro/digi_special3_2.png', 'res://images/characters/Digibro/digi_special3_3.png', 'res://images/characters/Digibro/digi_special3_4.png', 'res://images/characters/Digibro/digi_special4_1.png', 'res://images/characters/Digibro/digi_special4_2.png', 'res://images/characters/Digibro/digi_special4_3.png', 'res://images/characters/Digibro/digi_special4_4.png']}}
 var artsofartso = digibro.duplicate(true);
 #var endlesswar = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': [], 'knife': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}, 'cross': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': []}}
-#var munchy = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': [], 'squatting': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null}}}
-#var mage = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-#var nate = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
 #var artso = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-#var hippo = {'afl': [], 'campus': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': null, 'body': []}}
-#var tom = {'afl': [], 'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'blush': null, 'body': []}
 
 var adelram = { 'blush': ['res://images/characters/Adelram/afl/adelram_face_blush.png'], 'body': ['res://images/characters/Adelram/adelram.png'], 'face': ['res://images/characters/Adelram/face/adelram_face_1.png', 'res://images/characters/Adelram/face/adelram_face_2.png']}
 var azumi = {'campus': {'happy': ['res://images/characters/Azumi/face/azumi_face_happyMIN.png', 'res://images/characters/Azumi/face/azumi_face_happyMAX.png'], 'angry': ['res://images/characters/Azumi/face/azumi_face_angryMIN.png', 'res://images/characters/Azumi/face/azumi_face_angryMAX.png'], 'confused': ['res://images/characters/Azumi/face/azumi_face_confusedMIN.png', 'res://images/characters/Azumi/face/azumi_face_confusedMAX.png'], 'neutral': ['res://images/characters/Azumi/face/azumi_face_neutral.png'], 'sad': ['res://images/characters/Azumi/face/azumi_face_sadMIN.png', 'res://images/characters/Azumi/face/azumi_face_sadMAX.png'], 'shock': ['res://images/characters/Azumi/face/azumi_face_shockMIN.png', 'res://images/characters/Azumi/face/azumi_face_shockMAX.png'], 'smitten': ['res://images/characters/Azumi/face/azumi_face_smittenMIN.png', 'res://images/characters/Azumi/face/azumi_face_smittenMAX.png'], 'blush': ['res://images/characters/Azumi/afl/azumi_face_angryMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_angryMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_confusedMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_confusedMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_happyMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_happyMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_neutral_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_neutral_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_sadMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_sadMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_shockMAX_blushMIN.png' ,'res://images/characters/Azumi/afl/azumi_face_shockMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_smittenMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_smittenMAX_blushMAX.png'], 'body': ['res://images/characters/Azumi/azumi_campus.png']}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': ['res://images/characters/Azumi/azumi_casual.png']}}
@@ -40,6 +35,255 @@ var clara = 'res://images/characters/Clara/clara.png'
 var maygib = ''
 var thoth = 'res://images/characters/Thoth/thoth.png'
 
+var gibbon = {'campus': {
+'happy': ['res://images/characters/Gibbon/Faces/gibbon_face_happy1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_happy2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_happy3.png'],
+ 'angry': ['res://images/characters/Gibbon/Faces/gibbon_face_angry1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_angry2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_angry3.png'],
+ 'confused': ['res://images/characters/Gibbon/Faces/gibbon_face_confused1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_confused2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_confused3.png'], 
+'neutral': ['res://images/characters/Gibbon/Faces/gibbon_face_neutral.png'],
+ 'sad': ['res://images/characters/Gibbon/Faces/gibbon_face_sad1.png','res://images/characters/Gibbon/Faces/gibbon_face_sad2.png','res://images/characters/Gibbon/Faces/gibbon_face_sad3.png'],
+ 'shock': ['res://images/characters/Gibbon/Faces/gibbon_face_shocked1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_shocked2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_shocked3.png'], 
+'smitten': ['res://images/characters/Gibbon/Faces/gibbon_face_smitten1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_smitten2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_smitten3.png'], 
+'blush': ['res://images/characters/Gibbon/AFL/gibbon_face_blushies.png'], 
+'body': ['res://images/characters/Gibbon/gibbon_campus1_default.png', 'res://images/characters/Gibbon/gibbon_campus2_clenched.png', 'res://images/characters/Gibbon/gibbon_campus3_grabby.png', 'res://images/characters/Gibbon/gibbon_campus4_handsup.png', 'res://images/characters/Gibbon/gibbon_campus5_press.png']}, 
+'casual': {
+
+'happy': ['res://images/characters/Gibbon/Faces/gibbon_face_happy1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_happy2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_happy3.png'],
+ 'angry': ['res://images/characters/Gibbon/Faces/gibbon_face_angry1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_angry2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_angry3.png'],
+ 'confused': ['res://images/characters/Gibbon/Faces/gibbon_face_confused1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_confused2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_confused3.png'], 
+'neutral': ['res://images/characters/Gibbon/Faces/gibbon_face_neutral.png'],
+ 'sad': ['res://images/characters/Gibbon/Faces/gibbon_face_sad1.png','res://images/characters/Gibbon/Faces/gibbon_face_sad2.png','res://images/characters/Gibbon/Faces/gibbon_face_sad3.png'],
+ 'shock': ['res://images/characters/Gibbon/Faces/gibbon_face_shocked1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_shocked2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_shocked3.png'], 
+'smitten': ['res://images/characters/Gibbon/Faces/gibbon_face_smitten1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_smitten2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_smitten3.png'], 
+'blush': ['res://images/characters/Gibbon/AFL/gibbon_face_blushies.png'], 
+		 'body': ['res://images/characters/Gibbon/gibbon_casual1_default.png', 'res://images/characters/Gibbon/gibbon_casual2_clenched.png', 'res://images/characters/Gibbon/gibbon_casual3_grabby.png', 'res://images/characters/Gibbon/gibbon_casual4_handsup.png', 'res://images/characters/Gibbon/gibbon_casual5_press.png']},
+
+'special':{
+	'happy': ['res://images/characters/Gibbon/Faces/gibbon_face_happy1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_happy2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_happy3.png'],
+ 'angry': ['res://images/characters/Gibbon/Faces/gibbon_face_angry1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_angry2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_angry3.png'],
+ 'confused': ['res://images/characters/Gibbon/Faces/gibbon_face_confused1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_confused2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_confused3.png'], 
+'neutral': ['res://images/characters/Gibbon/Faces/gibbon_face_neutral.png'],
+ 'sad': ['res://images/characters/Gibbon/Faces/gibbon_face_sad1.png','res://images/characters/Gibbon/Faces/gibbon_face_sad2.png','res://images/characters/Gibbon/Faces/gibbon_face_sad3.png'],
+ 'shock': ['res://images/characters/Gibbon/Faces/gibbon_face_shocked1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_shocked2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_shocked3.png'], 
+'smitten': ['res://images/characters/Gibbon/Faces/gibbon_face_smitten1.png', 'res://images/characters/Gibbon/Faces/gibbon_face_smitten2.png', 'res://images/characters/Gibbon/Faces/gibbon_face_smitten3.png'], 
+'blush': ['res://images/characters/Gibbon/AFL/gibbon_face_blushies.png'], 
+	'body':['res://images/characters/Gibbon/gibbon_special1_default.png', 'res://images/characters/Gibbon/gibbon_special2_clenched.png', 'res://images/characters/Gibbon/gibbon_special3_grabby.png', 'res://images/characters/Gibbon/gibbon_special4_handsup.png', 'res://images/characters/Gibbon/gibbon_special5_press.png']
+},
+'newgle':{'body':['res://images/characters/Gibbon/gibbon_newgl.png']}
+		}
+
+	#res://images/characters/Mage/Faces_Campus/mage_face_campus_happy1
+	#used mage_face_campus_blush1,2,3 for smitten.
+
+var mage = {
+	 'campus': {
+		'happy': ['res://images/characters/Mage/Faces_Campus/mage_face_campus_happy1.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_happy2.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_happy3.png'], 
+		'angry': ['res://images/characters/Mage/Faces_Campus/mage_face_campus_angry1.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_angry2.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_angry3.png'],
+		'confused': ['res://images/characters/Mage/Faces_Campus/mage_face_campus_confused1.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_confused2.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_confused3.png'], 
+		'neutral': ['res://images/characters/Mage/Faces_Campus/mage_face_campus_neutral.png'], 
+		'sad': ['res://images/characters/Mage/Faces_Campus/mage_face_campus_sad1.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_sad2.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_sad3.png'], 
+		'shock': ['res://images/characters/Mage/Faces_Campus/mage_face_campus_shock1.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_shock2.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_shock3.png'], 
+		'smitten': ['res://images/characters/Mage/Faces_Campus/mage_face_campus_blush1.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_blush2.png', 'res://images/characters/Mage/Faces_Campus/mage_face_campus_blush3.png'], 
+		'blush': ['res://images/characters/Mage/AFL/mage_face_campus_blushies.png'], 
+		'body': ['res://images/characters/Mage/mage_campus1.png','res://images/characters/Mage/mage_campus2.png','res://images/characters/Mage/mage_campus3.png','res://images/characters/Mage/mage_campus4.png','res://images/characters/Mage/mage_campus5.png']
+		}, 
+	'casual': {
+		'happy': ['res://images/characters/Mage/Faces_Casual/mage_face_casual_happy1.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_happy2.png' ,'res://images/characters/Mage/Faces_Casual/mage_face_casual_happy3.png'], 
+		'angry': ['res://images/characters/Mage/Faces_Casual/mage_face_casual_angry1.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_angry2.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_angry3.png'], 
+		'confused': ['res://images/characters/Mage/Faces_Casual/mage_face_casual_confused1.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_confused2.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_confused3.png'], 
+		'neutral': ['res://images/characters/Mage/Faces_Casual/mage_face_casual_neutral.png'], 
+		'sad': ['res://images/characters/Mage/Faces_Casual/mage_face_casual_sad1.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_sad2.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_sad3.png'], 
+		'shock': ['res://images/characters/Mage/Faces_Casual/mage_face_casual_shock1.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_shock2.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_shock3.png'], 
+		'smitten': ['res://images/characters/Mage/Faces_Casual/mage_face_casual_blush1.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_blush2.png', 'res://images/characters/Mage/Faces_Casual/mage_face_casual_blush3.png'], 
+		'blush': ['res://images/characters/Mage/AFL/mage_face_casual_blushies.png'], 
+		'body': ['res://images/characters/Mage/mage_casual1.png','res://images/characters/Mage/mage_casual2.png','res://images/characters/Mage/mage_casual3.png','res://images/characters/Mage/mage_casual4.png','res://images/characters/Mage/mage_casual5.png']}
+		}
+
+var munchy = { 
+	'campus': {
+		'happy': ['res://images/characters/Munchy/Faces/munchy_face_happy1.png', 'res://images/characters/Munchy/Faces/munchy_face_happy2.png', 'res://images/characters/Munchy/Faces/munchy_face_happy3.png'], 
+		'angry': ['res://images/characters/Munchy/Faces/munchy_face_angry1.png', 'res://images/characters/Munchy/Faces/munchy_face_angry2.png', 'res://images/characters/Munchy/Faces/munchy_face_angry3.png'], 
+		'confused': ['res://images/characters/Munchy/Faces/munchy_face_confused1.png', 'res://images/characters/Munchy/Faces/munchy_face_confused2.png', 'res://images/characters/Munchy/Faces/munchy_face_confused3.png'], 
+		'neutral': ['res://images/characters/Munchy/Faces/munchy_face_neutral.png'], 
+		'sad': ['res://images/characters/Munchy/Faces/munchy_face_sad1.png', 'res://images/characters/Munchy/Faces/munchy_face_sad2.png', 'res://images/characters/Munchy/Faces/munchy_face_sad3.png'], 
+		'shock': ['res://images/characters/Munchy/Faces/munchy_face_shocked1.png', 'res://images/characters/Munchy/Faces/munchy_face_shocked2.png', 'res://images/characters/Munchy/Faces/munchy_face_shocked3.png'], 
+		'smitten': ['res://images/characters/Munchy/Faces/munchy_face_smitten1.png', 'res://images/characters/Munchy/Faces/munchy_face_smitten2.png', 'res://images/characters/Munchy/Faces/munchy_face_smitten3.png'], 
+		'blush': ['res://images/characters/Munchy/AFL/munchy_face_blushies.png'], 
+		'body': ['res://images/characters/Munchy/munchy_campus1_default.png', 'res://images/characters/Munchy/munchy_campus2_crossing.png', 'res://images/characters/Munchy/munchy_campus3_squatting.png'], 
+		'squatting': {
+			'happy': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_happy1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_happy2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_happy3.png'], 
+			'angry': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_angry1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_angry2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_angry3.png'], 
+			'confused': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_confused1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_confused2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_confused3.png'], 
+			'neutral': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_neutral.png'], 
+			'sad': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_sad1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_sad2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_sad3.png'], 
+			'shock': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_shocked1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_shocked2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_shocked3.png'], 
+			'smitten': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_smitten1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_smitten2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_smitten3.png'], 
+			'blush': ['res://images/characters/Munchy/AFL/munchy_face_squatting_blushies.png']
+			}
+		}, 
+		'casual': {
+			'happy': ['res://images/characters/Munchy/Faces/munchy_face_happy1.png', 'res://images/characters/Munchy/Faces/munchy_face_happy2.png', 'res://images/characters/Munchy/Faces/munchy_face_happy3.png'], 
+			'angry': ['res://images/characters/Munchy/Faces/munchy_face_angry1.png', 'res://images/characters/Munchy/Faces/munchy_face_angry2.png', 'res://images/characters/Munchy/Faces/munchy_face_angry3.png'], 
+			'confused': ['res://images/characters/Munchy/Faces/munchy_face_confused1.png', 'res://images/characters/Munchy/Faces/munchy_face_confused2.png', 'res://images/characters/Munchy/Faces/munchy_face_confused3.png'], 
+			'neutral': ['res://images/characters/Munchy/Faces/munchy_face_neutral.png'], 
+			'sad': ['res://images/characters/Munchy/Faces/munchy_face_sad1.png', 'res://images/characters/Munchy/Faces/munchy_face_sad2.png', 'res://images/characters/Munchy/Faces/munchy_face_sad3.png'], 
+			'shock': ['res://images/characters/Munchy/Faces/munchy_face_shocked1.png', 'res://images/characters/Munchy/Faces/munchy_face_shocked2.png', 'res://images/characters/Munchy/Faces/munchy_face_shocked3.png'], 
+			'smitten': ['res://images/characters/Munchy/Faces/munchy_face_smitten1.png', 'res://images/characters/Munchy/Faces/munchy_face_smitten2.png', 'res://images/characters/Munchy/Faces/munchy_face_smitten3.png'], 
+			'blush': ['res://images/characters/Munchy/AFL/munchy_face_blushies.png'], 
+			'body': ['res://images/characters/Munchy/munchy_casual1_default.png', 'res://images/characters/Munchy/munchy_casual2_crossing.png', 'res://images/characters/Munchy/munchy_casual3_squatting.png'], 
+			'squatting': 
+			{
+				'happy': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_happy1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_happy2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_happy3.png'], 
+				'angry': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_angry1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_angry2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_angry3.png'], 
+				'confused': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_confused1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_confused2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_confused3.png'], 
+				'neutral': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_neutral.png'], 
+				'sad': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_sad1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_sad2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_sad3.png'], 
+				'shock': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_shocked1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_shocked2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_shocked3.png'], 
+				'smitten': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_smitten1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_smitten2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_smitten3.png'], 
+				'blush': ['res://images/characters/Munchy/AFL/munchy_face_squatting_blushies.png']
+			}
+		},		
+		'special': {
+			'happy': ['res://images/characters/Munchy/Faces/munchy_face_happy1.png', 'res://images/characters/Munchy/Faces/munchy_face_happy2.png', 'res://images/characters/Munchy/Faces/munchy_face_happy3.png'], 
+			'angry': ['res://images/characters/Munchy/Faces/munchy_face_angry1.png', 'res://images/characters/Munchy/Faces/munchy_face_angry2.png', 'res://images/characters/Munchy/Faces/munchy_face_angry3.png'], 
+			'confused': ['res://images/characters/Munchy/Faces/munchy_face_confused1.png', 'res://images/characters/Munchy/Faces/munchy_face_confused2.png', 'res://images/characters/Munchy/Faces/munchy_face_confused3.png'], 
+			'neutral': ['res://images/characters/Munchy/Faces/munchy_face_neutral.png'], 
+			'sad': ['res://images/characters/Munchy/Faces/munchy_face_sad1.png', 'res://images/characters/Munchy/Faces/munchy_face_sad2.png', 'res://images/characters/Munchy/Faces/munchy_face_sad3.png'], 
+			'shock': ['res://images/characters/Munchy/Faces/munchy_face_shocked1.png', 'res://images/characters/Munchy/Faces/munchy_face_shocked2.png', 'res://images/characters/Munchy/Faces/munchy_face_shocked3.png'], 
+			'smitten': ['res://images/characters/Munchy/Faces/munchy_face_smitten1.png', 'res://images/characters/Munchy/Faces/munchy_face_smitten2.png', 'res://images/characters/Munchy/Faces/munchy_face_smitten3.png'], 
+			'blush': ['res://images/characters/Munchy/AFL/munchy_face_blushies.png'], 
+			'body': ['res://images/characters/Munchy/munchy_special1_default.png', 'res://images/characters/Munchy/munchy_special2_crossing.png', 'res://images/characters/Munchy/munchy_special3_squatting.png'], 
+			'squatting': 
+			{
+				'happy': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_happy1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_happy2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_happy3.png'], 
+				'angry': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_angry1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_angry2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_angry3.png'], 
+				'confused': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_confused1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_confused2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_confused3.png'], 
+				'neutral': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_neutral.png'], 
+				'sad': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_sad1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_sad2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_sad3.png'], 
+				'shock': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_shocked1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_shocked2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_shocked3.png'], 
+				'smitten': ['res://images/characters/Munchy/SquatFaces/munch_face_squatting_smitten1.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_smitten2.png', 'res://images/characters/Munchy/SquatFaces/munch_face_squatting_smitten3.png'], 
+				'blush': ['res://images/characters/Munchy/AFL/munchy_face_squatting_blushies.png']
+			}
+		}
+	}
+var nate = {
+		'afl':{
+		'beard':['res://images/characters/Nate/AFL/nate_afl_beard.png'],
+		'kaminashades':['res://images/characters/Nate/AFL/nate_afl_kaminashades.png'],
+		'purplenates':['res://images/characters/Nate/AFL/nate_afl_purple_nates.png']
+	},
+	'campus': {
+		'happy': ['res://images/characters/Nate/Faces/nate_face_happy1.png', 'res://images/characters/Nate/Faces/nate_face_happy2.png', 'res://images/characters/Nate/Faces/nate_face_happy3.png'], 
+		'angry': ['res://images/characters/Nate/Faces/nate_face_angry1.png', 'res://images/characters/Nate/Faces/nate_face_angry2.png', 'res://images/characters/Nate/Faces/nate_face_angry3.png'], 
+		'confused': ['res://images/characters/Nate/Faces/nate_face_confused1.png', 'res://images/characters/Nate/Faces/nate_face_confused2.png', 'res://images/characters/Nate/Faces/nate_face_confused3.png'], 
+		'neutral': ['res://images/characters/Nate/Faces/nate_face_neutral.png'], 
+		'sad': ['res://images/characters/Nate/Faces/nate_face_sad1.png', 'res://images/characters/Nate/Faces/nate_face_sad2.png', 'res://images/characters/Nate/Faces/nate_face_sad3.png'], 
+		'shock': ['res://images/characters/Nate/Faces/nate_face_shock1.png', 'res://images/characters/Nate/Faces/nate_face_shock2.png', 'res://images/characters/Nate/Faces/nate_face_shock3.png'], 
+		'smitten': ['res://images/characters/Nate/Faces/nate_face_smitten1.png', 'res://images/characters/Nate/Faces/nate_face_smitten2.png', 'res://images/characters/Nate/Faces/nate_face_smitten3.png'], 
+		'blush': ['res://images/characters/Nate/AFL/nate_face_blushies.png'], 
+		'body': ['res://images/characters/Nate/nate_campus1_standing.png', 'res://images/characters/Nate/nate_campus2_smoking.png', 'res://images/characters/Nate/nate_campus3_pointing.png', 'res://images/characters/Nate/nate_campus4_papers.png','res://images/characters/Nate/nate_campus5_maniacal.png' ]
+		}, 
+	'casual': {
+		
+		'happy': ['res://images/characters/Nate/Faces/nate_face_happy1.png', 'res://images/characters/Nate/Faces/nate_face_happy2.png', 'res://images/characters/Nate/Faces/nate_face_happy3.png'], 
+		'angry': ['res://images/characters/Nate/Faces/nate_face_angry1.png', 'res://images/characters/Nate/Faces/nate_face_angry2.png', 'res://images/characters/Nate/Faces/nate_face_angry3.png'], 
+		'confused': ['res://images/characters/Nate/Faces/nate_face_confused1.png', 'res://images/characters/Nate/Faces/nate_face_confused2.png', 'res://images/characters/Nate/Faces/nate_face_confused3.png'], 
+		'neutral': ['res://images/characters/Nate/Faces/nate_face_neutral.png'], 
+		'sad': ['res://images/characters/Nate/Faces/nate_face_sad1.png', 'res://images/characters/Nate/Faces/nate_face_sad2.png', 'res://images/characters/Nate/Faces/nate_face_sad3.png'], 
+		'shock': ['res://images/characters/Nate/Faces/nate_face_shock1.png', 'res://images/characters/Nate/Faces/nate_face_shock2.png', 'res://images/characters/Nate/Faces/nate_face_shock3.png'], 
+		'smitten': ['res://images/characters/Nate/Faces/nate_face_smitten1.png', 'res://images/characters/Nate/Faces/nate_face_smitten2.png', 'res://images/characters/Nate/Faces/nate_face_smitten3.png'], 
+		'blush': ['res://images/characters/Nate/AFL/nate_face_blushies.png'],  
+		'body': ['res://images/characters/Nate/nate_casual1_standing.png', 'res://images/characters/Nate/nate_casual2_smoking.png', 'res://images/characters/Nate/nate_casual3_pointing.png', 'res://images/characters/Nate/nate_casual4_papers.png', 'res://images/characters/Nate/nate_casual5_maniacal.png']
+		},
+	'special': {
+		
+		'happy': ['res://images/characters/Nate/Faces/nate_face_happy1.png', 'res://images/characters/Nate/Faces/nate_face_happy2.png', 'res://images/characters/Nate/Faces/nate_face_happy3.png'], 
+		'angry': ['res://images/characters/Nate/Faces/nate_face_angry1.png', 'res://images/characters/Nate/Faces/nate_face_angry2.png', 'res://images/characters/Nate/Faces/nate_face_angry3.png'], 
+		'confused': ['res://images/characters/Nate/Faces/nate_face_confused1.png', 'res://images/characters/Nate/Faces/nate_face_confused2.png', 'res://images/characters/Nate/Faces/nate_face_confused3.png'], 
+		'neutral': ['res://images/characters/Nate/Faces/nate_face_neutral.png'], 
+		'sad': ['res://images/characters/Nate/Faces/nate_face_sad1.png', 'res://images/characters/Nate/Faces/nate_face_sad2.png', 'res://images/characters/Nate/Faces/nate_face_sad3.png'], 
+		'shock': ['res://images/characters/Nate/Faces/nate_face_shock1.png', 'res://images/characters/Nate/Faces/nate_face_shock2.png', 'res://images/characters/Nate/Faces/nate_face_shock3.png'], 
+		'smitten': ['res://images/characters/Nate/Faces/nate_face_smitten1.png', 'res://images/characters/Nate/Faces/nate_face_smitten2.png', 'res://images/characters/Nate/Faces/nate_face_smitten3.png'], 
+		'blush': ['res://images/characters/Nate/AFL/nate_face_blushies.png'],  
+		'body': ['res://images/characters/Nate/nate_special1_standing.png', 'res://images/characters/Nate/nate_special2_smoking.png', 'res://images/characters/Nate/nate_special3_pointing.png', 'res://images/characters/Nate/nate_special4_papers.png', 'res://images/characters/Nate/nate_special5_maniacal.png']
+		}
+		}
+
+var jesse = {
+		'campus': {
+			'happy': ['res://images/characters/Jesse/faces_campus/jesse_face_campus_happyMIN.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_happyMED.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_happyMAX.png'], 
+			'angry': ['res://images/characters/Jesse/faces_campus/jesse_face_campus_angryMIN.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_angryMED.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_angryMAX.png'], 
+			'confused': ['res://images/characters/Jesse/faces_campus/jesse_face_campus_confusedMIN.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_confusedMED.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_confusedMAX.png'], 
+			'neutral': ['res://images/characters/Jesse/faces_campus/jesse_face_campus_neutral.png'], 
+			'sad': ['res://images/characters/Jesse/faces_campus/jesse_face_campus_sadMIN.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_sadMED.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_sadMAX.png'], 
+			'shock': ['res://images/characters/Jesse/faces_campus/jesse_face_campus_shockMIN.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_shockMED.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_shockMAX.png'], 
+			'smitten': ['res://images/characters/Jesse/faces_campus/jesse_face_campus_smittenMIN.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_smittenMED.png', 'res://images/characters/Jesse/faces_campus/jesse_face_campus_smittenMAX.png'], 
+			'blush': ['res://images/characters/Jesse/AFL/jesse_face_blushiesMIN.png', 'res://images/characters/Jesse/AFL/jesse_face_blushiesMAX.png'], 
+			'body': ['res://images/characters/Jesse/jesse_campus_1.png', 'res://images/characters/Jesse/jesse_campus_2.png', 'res://images/characters/Jesse/jesse_campus_3.png', 'res://images/characters/Jesse/jesse_campus_4.png', 'res://images/characters/Jesse/jesse_campus_5.png']}, 
+		'casual': {
+			'happy': ['res://images/characters/Jesse/faces_casual/jesse_face_casual_happyMIN.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_happyMED.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_happyMAX.png'], 
+			'angry': ['res://images/characters/Jesse/faces_casual/jesse_face_casual_angryMIN.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_angryMED.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_angryMAX.png'], 
+			'confused': ['res://images/characters/Jesse/faces_casual/jesse_face_casual_confusedMIN.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_confusedMED.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_confusedMAX.png'], 
+			'neutral': ['res://images/characters/Jesse/faces_casual/jesse_face_casual_neutral.png'], 
+			'sad': ['res://images/characters/Jesse/faces_casual/jesse_face_casual_sadMIN.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_sadMED.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_sadMAX.png'], 
+			'shock': ['res://images/characters/Jesse/faces_casual/jesse_face_casual_shockMIN.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_shockMED.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_shockMAX.png'], 
+			'smitten': ['res://images/characters/Jesse/faces_casual/jesse_face_casual_smittenMIN.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_smittenMED.png', 'res://images/characters/Jesse/faces_casual/jesse_face_casual_smittenMAX.png'], 
+			'blush': ['res://images/characters/Jesse/AFL/jesse_face_blushiesMIN.png', 'res://images/characters/Jesse/AFL/jesse_face_blushiesMAX.png'], 
+			'body': ['res://images/characters/Jesse/jesse_casual_1.png', 'res://images/characters/Jesse/jesse_casual_2.png', 'res://images/characters/Jesse/jesse_casual_3.png', 'res://images/characters/Jesse/jesse_casual_4.png', 'res://images/characters/Jesse/jesse_casual_5.png']
+			},
+		'special': {
+			'happy': ['res://images/characters/Jesse/faces_special/jesse_face_special_happyMIN.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_happyMED.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_happyMAX.png'], 
+			'angry': ['res://images/characters/Jesse/faces_special/jesse_face_special_angryMIN.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_angryMED.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_angryMAX.png'], 
+			'confused': ['res://images/characters/Jesse/faces_special/jesse_face_special_confusedMIN.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_confusedMED.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_confusedMAX.png'], 
+			'neutral': ['res://images/characters/Jesse/faces_special/jesse_face_special_neutral.png'], 
+			'sad': ['res://images/characters/Jesse/faces_special/jesse_face_special_sadMIN.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_sadMED.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_sadMAX.png'], 
+			'shock': ['res://images/characters/Jesse/faces_special/jesse_face_special_shockMIN.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_shockMED.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_shockMAX.png'], 
+			'smitten': ['res://images/characters/Jesse/faces_special/jesse_face_special_smittenMIN.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_smittenMED.png', 'res://images/characters/Jesse/faces_special/jesse_face_special_smittenMAX.png'], 
+			'blush': ['res://images/characters/Jesse/AFL/jesse_face_blushiesMIN.png', 'res://images/characters/Jesse/AFL/jesse_face_blushiesMAX.png'], 
+			'body': ['res://images/characters/Jesse/jesse_special_1.png', 'res://images/characters/Jesse/jesse_special_2.png', 'res://images/characters/Jesse/jesse_special_3.png', 'res://images/characters/Jesse/jesse_special_4.png', 'res://images/characters/Jesse/jesse_special_5.png']
+			}
+		}
+
+var tom = {
+		'pose1':{
+			'afl': ['res://images/characters/Tom/AFL/tom_afl_facemask.png'], 
+			'happy': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_happyMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_happyMAX.png'], 
+			'angry': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_angryMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_angryMAX.png'], 
+			'confused': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_confusedMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_confusedMAX.png'], 
+			'neutral': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_neutral.png'], 
+			'sad': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_sadMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_sadMAX.png'], 
+			'shock': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_shockMIN.png','res://images/characters/Tom/faces_1_2/tom_face_1_2_shockMAX.png'], 
+			'smitten':['res://images/characters/Tom/faces_1_2/tom_face_1_2_smittenMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_smittenMAX.png'],
+			'drunk':['res://images/characters/Tom/faces_1_2/tom_face_1_2_drunkMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_drunkMAX.png'],
+			'blush': null, 
+			'body': ['res://images/characters/Tom/tom_1.png', 'res://images/characters/Tom/tom_2.png', 'res://images/characters/Tom/tom_champagne.png', 'res://images/characters/Tom/tom_cider.png', 'res://images/characters/Tom/tom_huel.png', 'res://images/characters/Tom/tom_mic.png', 'res://images/characters/Tom/tom_whiskey.png']
+			},
+		'pose3':{
+			'afl': ['res://images/characters/Tom/AFL/tom_afl_facemask.png'], 
+			'happy': ['res://images/characters/Tom/faces_3/tom_face_3_happyMIN.png', 'res://images/characters/Tom/faces_3/tom_face_3_happyMAX.png'], 
+			'angry': ['res://images/characters/Tom/faces_3/tom_face_3_angryMIN.png', 'res://images/characters/Tom/faces_3/tom_face_3_angryMAX.png'], 
+			'confused': ['res://images/characters/Tom/faces_3/tom_face_3_confusedMIN.png', 'res://images/characters/Tom/faces_3/tom_face_3_confusedMAX.png'], 
+			'neutral': ['res://images/characters/Tom/faces_3/tom_face_3_neutral.png'], 
+			'sad': ['res://images/characters/Tom/faces_3/tom_face_3_sadMIN.png', 'res://images/characters/Tom/faces_3/tom_face_3_sadMAX.png'], 
+			'shock': ['res://images/characters/Tom/faces_3/tom_face_3_shockMIN.png','res://images/characters/Tom/faces_3/tom_face_3_shockMAX.png'], 
+			'smitten':['res://images/characters/Tom/faces_3/tom_face_3_smittenMIN.png', 'res://images/characters/Tom/faces_3/tom_face_3_smittenMAX.png'],
+			'drunk':['res://images/characters/Tom/faces_3/tom_face_3_drunkMIN.png', 'res://images/characters/Tom/faces_3/tom_face_3_drunkMAX.png'],
+			'blush': null, 
+			'body': ['res://images/characters/Tom/tom_3.png']
+			},
+		'pose4':{
+			'afl': ['res://images/characters/Tom/AFL/tom_afl_facemask.png'], 
+			'happy': ['res://images/characters/Tom/faces_4/tom_face_4_happyMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_happyMAX.png'], 
+			'angry': ['res://images/characters/Tom/faces_4/tom_face_4_angryMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_angryMAX.png'], 
+			'confused': ['res://images/characters/Tom/faces_4/tom_face_4_confusedMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_confusedMAX.png'], 
+			'neutral': ['res://images/characters/Tom/faces_4/tom_face_4_neutral.png'], 
+			'sad': ['res://images/characters/Tom/faces_4/tom_face_4_sadMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_sadMAX.png'], 
+			'shock': ['res://images/characters/Tom/faces_4/tom_face_4_shockMIN.png','res://images/characters/Tom/faces_4/tom_face_4_shockMAX.png'], 
+			'smitten':['res://images/characters/Tom/faces_4/tom_face_4_smittenMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_smittenMAX.png'],
+			'drunk':['res://images/characters/Tom/faces_4/tom_face_4_drunkMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_drunkMAX.png'],
+			'blush': null, 
+			'body': ['res://images/characters/Tom/tom_3.png']
+			},
+		}
 
 
 # Function to load duplicates.

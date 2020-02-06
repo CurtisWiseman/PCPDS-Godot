@@ -20,6 +20,7 @@ var defaultFontItalic
 var defaultFontBold
 var defaultFont
 var textTheme
+var playerName
 
 # Signal to say a that a scene is done loading.
 signal finished_loading
@@ -86,6 +87,13 @@ func _ready():
 	else:
 		sfx_volume = float(settings.substr(settings.find('sfx_volume:', 0) + 11, 5))
 	
+	# Get the player name if it exists
+	if file.file_exists(OS.get_user_data_dir() + '/playername.tres'):
+		file.open("user://playername.tres", File.READ)
+		playerName = file.get_as_text()
+		file.close()
+	else:
+		playerName = null;
 	
 	# If the directory for screenshots doesn't exists create it.
 	var directory = Directory.new()
@@ -189,6 +197,7 @@ func returnlocations():
 
 # Handle screenshot event.
 func _input(event):
+	
 	if event.is_action_pressed("screenshot") and !game.blockInput:
 		
 		# Pause the game then take and save a screenshot.

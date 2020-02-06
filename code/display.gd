@@ -73,7 +73,7 @@ func background(bg, type):
 
 
 # Display the given image on the scene on the given layer.
-func image(imgpath, z):
+func image(imgpath, z, modulate=Color(1,1,1,1)):
 	
 	# If z is 0 print error then exit function.
 	if z == 0:
@@ -81,45 +81,45 @@ func image(imgpath, z):
 		return
 	
 	var info = layersetup(imgpath, z) # Get info from the layersetup() function.
-	var copy = '' # Used if their if their is a copy node.
+#	var copy = '' # Used if their if their is a copy node.
+#	
+#	# If a copy of an existing node then temporarily remove the [#] on the end to check if model exists.
+#	if info[0].find_last(']') == info[0].length() - 1:
+#		copy = info[0].right(info[0].find_last('['))
+#		info[0] = info[0].left(info[0].find_last('[')) # Remove the file extension.
+#
+#	# If a mesh model exists for the image then make a MeshInstance2D.
+#	if model.file_exists('res://models/' + info[0] + '.tres'):
+#
+#		var meshnode = MeshInstance2D.new() # Create a new MeshInstance2D.
+#		meshnode.name = info[0] + copy # Name the node info[0].
+#		layers[info[1]]['node'] = meshnode # Add the node under the node key.
+#		layers[info[1]]['type'] = 'image' # The node's type.
+#		meshnode.texture = info[2] # Set the node's texture to the image.
+#		meshnode.mesh = load('res://models/' + info[0] + '.tres') # Load the mesh model.
+#
+#		var areanode = Area2D.new() # Create a new Area2D.
+#		var shapenode = CollisionPolygon2D.new() # Create a new Collision
+#		areanode.connect('area_entered', self, '_character_entered', [areanode]) # Connect the Area2D to a signal for when other areas enter it.
+#		areanode.connect('area_exited', self, '_character_exited', [areanode]) # Connect the Area2D to a signal for when other areas exit it.
+#		areanode.add_child(shapenode) # Add the CP2D as a child of Area2D.
+#		AddMeshShape(areanode, meshnode) # Create a Shape for CP2D to use out of the mesh.
+#		meshnode.add_child(areanode) # Add the Area2D as a child of meshnode.
+#		layers[info[1]]['area'] = areanode # Add the Area2D as a key for meshnode to access.
+#
+#		nodelayers(info[1]) # Put the meshnode into the appropriate spot based on z.
+#
+#	# Else if no model exists for the image then make a Sprite.
+#	else:
 	
-	# If a copy of an existing node then temporarily remove the [#] on the end to check if model exists.
-	if info[0].find_last(']') == info[0].length() - 1:
-		copy = info[0].right(info[0].find_last('['))
-		info[0] = info[0].left(info[0].find_last('[')) # Remove the file extension.
-	
-	# If a mesh model exists for the image then make a MeshInstance2D.
-	if model.file_exists('res://models/' + info[0] + '.tres'):
-
-		var meshnode = MeshInstance2D.new() # Create a new MeshInstance2D.
-		meshnode.name = info[0] + copy # Name the node info[0].
-		layers[info[1]]['node'] = meshnode # Add the node under the node key.
-		layers[info[1]]['type'] = 'image' # The node's type.
-		meshnode.texture = info[2] # Set the node's texture to the image.
-		meshnode.mesh = load('res://models/' + info[0] + '.tres') # Load the mesh model.
-		
-		var areanode = Area2D.new() # Create a new Area2D.
-		var shapenode = CollisionPolygon2D.new() # Create a new Collision
-		areanode.connect('area_entered', self, '_character_entered', [areanode]) # Connect the Area2D to a signal for when other areas enter it.
-		areanode.connect('area_exited', self, '_character_exited', [areanode]) # Connect the Area2D to a signal for when other areas exit it.
-		areanode.add_child(shapenode) # Add the CP2D as a child of Area2D.
-		AddMeshShape(areanode, meshnode) # Create a Shape for CP2D to use out of the mesh.
-		meshnode.add_child(areanode) # Add the Area2D as a child of meshnode.
-		layers[info[1]]['area'] = areanode # Add the Area2D as a key for meshnode to access.
-
-		nodelayers(info[1]) # Put the meshnode into the appropriate spot based on z.
-
-	# Else if no model exists for the image then make a Sprite.
-	else:
-	
-		var imgnode = Sprite.new() # Create a new sprite node.
-		imgnode.set_name(info[0]) # Give the sprite node the image name for a node name.
-		layers[info[1]]['node'] = imgnode # Add the node under the node key.
-		layers[info[1]]['type'] = 'image' # The node's type.
-		imgnode.centered = false # Uncenter the node.
-		imgnode.texture = info[2] # Set the node's texture to the image.
-		imgnode.z_index = z # Set the z index of the node to z.
-		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
+	var imgnode = Sprite.new() # Create a new sprite node.
+	imgnode.set_name(info[0]) # Give the sprite node the image name for a node name.
+	layers[info[1]]['node'] = imgnode # Add the node under the node key.
+	layers[info[1]]['type'] = 'image' # The node's type.
+	imgnode.centered = false # Uncenter the node.
+	imgnode.texture = info[2] # Set the node's texture to the image.
+	imgnode.z_index = z # Set the z index of the node to z.
+	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 
 
 
@@ -781,8 +781,10 @@ func nodelayers(index):
 	else:
 		bgnode.add_child(layers[index]['node'])
 		var children = bgnode.get_children()
-		var start= layers.size() - 1 - index
+		var start= layers.size() - index
 		for i in range(start, children.size() - 1):
+			print(start)
+			print('-----')
 			bgnode.remove_child(children[i])
 			bgnode.add_child(layers[index + i + 1]['node'])
 

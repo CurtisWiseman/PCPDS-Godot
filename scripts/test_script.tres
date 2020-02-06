@@ -1,1 +1,34 @@
-﻿(Digibro, special, 3_1, happy|blush, left) line
+﻿(Gibbon, campus, grabby, happy, right) LINE
+[SLIDE Gibbon center]
+(Mage, campus, 1, happy, offleft, slide, left): LINE
+(Mage, campus, 1, happyMED, left)
+(Mage): LINE
+[Location: 7-eleven]
+My Name:
+I'm PCPG and it's my first day at PCP University!
+[CG: Battle Builder]
+This is the kind of school I’ve always dreamed of! A whole class dedicated to Memes? Seems like the internet is finally old enough now to get a break into our educational system.
+Anyways, the color scheme of this classroom is hurting in the eyes.
+[CG end]
+
+[Choice]
+*Choice 1*
+*Choice 2*
+
+*Choice 1*
+My last school threw me out for being too retarted and not being able to finish my assignments.
+Will this place be any better? Who knows, I might finally find some friends or even ...Love?
+*
+
+*Choice 2*
+A cool breeze greets me this morning.
+As I walk by the entrance to a dinky alley on my way to campus, a slim guy with fluffy hair nearly walks straight into me.
+*
+
+This text exists everywhere!
+
+*Choice 1*
+T E X T
+*
+Text...
+[CHANGE test fadeblack 20]
