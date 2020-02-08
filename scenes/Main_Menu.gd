@@ -42,7 +42,7 @@ func _physics_prcoess(delta):
 
 
 func _on_Start_pressed():
-	scene.change('test')
+	scene.change('common')
 
 func _on_Settings_pressed():
 	for node in $'CanvasLayer'.get_children():

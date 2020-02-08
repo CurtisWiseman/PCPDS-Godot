@@ -17,7 +17,7 @@ var blackScreen
 func _ready():
 	
 	# Set the global rootnode to the root of the current scene.
-	global.rootnode = get_node('.').owner
+	global.rootnode = get_node('..')
 	
 	
 	
@@ -50,11 +50,6 @@ func _ready():
 	pause.name = 'Pause' # Name the node Pause.
 	pause = load('res://scenes/UI/Pause_Screen.tscn').instance() # Attatch the Pause_Screen scene to pause.
 	pause.visible = false # Make the scene invisible.
-
-
-
-# Function to view the dialogue box on a scene and add the pause menu.
-func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoicesArray=[], CG=null):
 	
 	# A canvas layer above all the rest for pausing.
 	pauseCanvas = CanvasLayer.new()
@@ -66,6 +61,18 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	canvas.name = 'Dialogue Canvas'
 	pauseCanvas.add_child(canvas)
 	
+	blackScreen = Sprite.new()
+	blackScreen.name = 'Black Screen'
+	blackScreen.centered = false
+	blackScreen.texture = load("res://images/misc/black_screen.png")
+	blackScreen.set_self_modulate(Color(1,1,1,0))
+	canvas.add_child(blackScreen);
+
+
+
+# Function to view the dialogue box on a scene and add the pause menu.
+func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoicesArray=[], CG=null):
+	
 	# Load the DialogueBox under canvas.
 	dialogueBox = TextureRect.new()
 	dialogueBox.name = 'Dialogue Box'
@@ -76,14 +83,6 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	dialogueBox.set_script(load('res://code/dialoguebox.gd'))
 	dialogueBox.texture = load('res://images/dialoguebox/dialogueBox.png')
 	global.dialogueBox = dialogueBox
-	
-	blackScreen = Sprite.new()
-	blackScreen.name = 'Black Screen'
-	blackScreen.centered = false
-	blackScreen.position.y = -790
-	blackScreen.texture = load("res://images/misc/black_screen.png")
-	blackScreen.set_self_modulate(Color(1,1,1,0))
-	dialogueBox.add_child(blackScreen);
 	
 	# Load the dialogue RichTextLaabel under dialogueBox.
 	dialogue = RichTextLabel.new();

@@ -386,7 +386,7 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 			position.set_script(load('res://code/positioning.gd')) # Give position the positioning script.
 			position.set_name(cname + '(Position)') # Give it the image name + (Position)
 			add_child(position) # Add it as a child of Display.
-			get_node(cname + '(Position)').move(Vector2(s,0), node, 0, x) # Call position's move function.
+			get_node(cname + '(Position)').move(Vector2(s,0), node, type, index, 0, x) # Call position's move function.
 		
 		if mv == 'collide':
 			
@@ -423,7 +423,7 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 			position.set_script(load('res://code/positioning.gd')) # Give position the positioning script.
 			position.set_name(cname + '(Position)') # Give it the image name + (Position)
 			add_child(position) # Add it as a child of Display.
-			get_node(cname + '(Position)').move(Vector2(s,0), node, 0, x) # Call position's move function.
+			get_node(cname + '(Position)').move(Vector2(s,0), node, type, index, 0, x) # Call position's move function.
 			
 			# Set the speed and collider globally so collision happens.
 			speed = Vector2(s, 0)

@@ -60,9 +60,9 @@ func _ready():
 
 
 #Nametag is the label above the textbox, dialogue's say is what updates the textbox.
-func say(words, character = ""):
+func say(words, character = "", voice = null):
 	$Nametag.text = character
-	$Dialogue.say(words)
+	$Dialogue.say(words, voice)
 
 
 # Function to calculate the number of unseen choices.
@@ -200,6 +200,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			yield(waitTimer, "timeout")
 			global.pause_input = false
 			game.safeToSave = true
+			# Emit a signal letting nodes know a scene finished loading.
+			global.emit_signal('finished_loading')
 		
 		
 		# COMMENTS/COMMANDS
@@ -331,6 +333,18 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				global.pause_input = false
 			
+			elif dialogue[index].findn('CHANGE') != -1:
+				global.pause_input = true
+				game.safeToSave = false
+				var command = dialogue[index].lstrip('[')
+				command = command.rstrip(']')
+				command = command.split(' ', false)
+				if command.size() == 2: scene.change(command[1])
+				elif command.size() == 3: scene.change(command[1], command[2])
+				elif command.size() == 4: scene.change(command[1], command[2], int(command[3]))
+				elif command.size() == 5: scene.change(command[1], command[2], int(command[3]), float(command[4]))
+				else: print('Invalid number of commands for CHANGE on line ' + str(index) + '!')
+			
 			var halt = global.rootnode.scene(dialogue[index], index+1, self)
 			index += 1
 			emit_signal('empty_line')
@@ -444,28 +458,30 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			var chrName = info[0] # Set the chrName to info[0].
 			
-			# Change nametag color depending on the current speaker
-			match info[0]:
-				"Tom":
-					$Nametag.add_color_override("font_color", global.tom.color)
-				"Mage":
-					$Nametag.add_color_override("font_color", global.mage.color)
-				"Ben":
-					$Nametag.add_color_override("font_color", Color('8d8d8d'))
-				"Digi":
-					$Nametag.add_color_override("font_color", global.digibro.color)
-				"Davoo":
-					$Nametag.add_color_override("font_color", Color('408ff2'))
-				"Jess":
-					$Nametag.add_color_override("font_color", Color('fdf759'))
-				"Munchy":
-					$Nametag.add_color_override("font_color", global.munchy.color)
-				"Hippo":
-					$Nametag.add_color_override("font_color", global.hippo.color)
-				"Endless War":
-					$Nametag.add_color_override("font_color", global.endlesswar.color)
-				_:
-					$Nametag.add_color_override("font_color", Color.white)
+			var voice = null
+			
+#			# Do stuff depending on the current speaker
+#			match info[0]:
+#				"Tom":
+#					$Nametag.add_color_override("font_color", global.tom.color)
+#				"Mage":
+#					$Nametag.add_color_override("font_color", global.mage.color)
+#				"Ben":
+#					$Nametag.add_color_override("font_color", Color('8d8d8d'))
+#				"Digi":
+#					$Nametag.add_color_override("font_color", global.digibro.color)
+#				"Davoo":
+#					$Nametag.add_color_override("font_color", Color('408ff2'))
+#				"Jess":
+#					$Nametag.add_color_override("font_color", Color('fdf759'))
+#				"Munchy":
+#					$Nametag.add_color_override("font_color", global.munchy.color)
+#				"Gibbon":
+#					voice = load('res://sounds/speech/pcp-voice_gibbontake.ogg')
+#				"Endless War":
+#					$Nametag.add_color_override("font_color", global.endlesswar.color)
+#				_:
+#					$Nametag.add_color_override("font_color", Color.white)
 			
 			# Check if another name needs to be used.
 			if info[0].find('|') != -1:
@@ -477,20 +493,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			parse_info(info); # Parse the info so that is displays a character.
 			
-#			Function for custom fonts. This can be incorporated in the following
-#			"match" section to use different fonts for differents speakers 
-#			var mageFontData = DynamicFontData.new()
-#			mageFontData.font_path = "res://fonts/Nametag/karmatic_arcade/ka1.ttf"
-#			var mageFont = DynamicFont.new()
-#			mageFont.font_data = mageFontData
-#			mageFont.size = 68
-#			$Nametag.add_font_override("normal_font", mageFont)
-			
 			if say: # If the text is to be said then...
 				
 				lastKeep(index)
 				var halt = global.rootnode.scene(dialogue[index], index+1, self) # Send the dialogue to the scene function in the root of the scene.
-				say(text, chrName)
+				say(text, chrName, voice)
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
 				emit_signal('sentence_end', dialogue[index])
 				index += 1

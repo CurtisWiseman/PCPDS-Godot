@@ -5,26 +5,15 @@ var longTextParts = []
 var currentSubstring = 0
 var currentLine = 0
 var isCompartmentalized = false
-var musicnode = null
-var musicstop = false
+var speech
+var once = 0
 var waitTimer = Timer.new()
 
 signal has_been_read
 signal substring_has_been_read
 signal compartmentalise_text
 signal finished_document
-signal done
-
-#	COLORS
-#	Mage - #551A8B
-#	Tom - #d23735
-#	Ben - #8d8d8d
-#	Digi - #b21069
-#	Davoo - #408ff2
-#	Jess - #fdf759
-#	Munchy - #ff7ab9
-#	Hippo - #78ffb5
-#	Endless War - N/A
+signal speech_done
 
 func _ready():
 	self.connect("substring_has_been_read", self, "read_substring")
@@ -60,6 +49,11 @@ func _input(event):
 				global.pause_input = false
 			
 			elif get_visible_characters() == get_total_character_count():
+				
+				if speech != null:
+					speech.queue_free()
+					speech = null
+				
 				# In middle of longer sentence - progress through sentence
 				if currentSubstring < longTextParts.size(): 
 					emit_signal("substring_has_been_read")
@@ -84,22 +78,20 @@ func _process(delta):
 	pass
 
 
-func say(text):
+func say(text, voice=null):
 	set_visible_characters(0) # Remove current line
 	
 #	Compartmentalize long line into smaller strings
 	if isCompartmentalized == false && text.length() >= charMAX:
 		compartmentalise(text)
 # 	Display new line if of appropriate length
-	elif text != "":
-		var music = AudioStreamPlayer.new() # Create a new AudioSteamPlayer node.
-		music.stream = load("res://sounds/speech/pcp-blips_gibbontake.ogg") # Set the steam to path.
-		music.bus = 'Music' # Set the bus to Music.
-		music.volume_db = 0 # Set the volume to volume.
-#		music.connect('finished', self, 'loop', [music]) # Loop the music if asked too.
-		music.play()
-		add_child(music)
-		musicnode = music
+	elif text != "" and voice != null:
+		speech = AudioStreamPlayer.new()
+		speech.stream = load("res://sounds/speech/pcp-voice_brunswick.ogg")
+		speech.bus = 'SFX'
+		speech.volume_db = 0
+		speech.play()
+		add_child(speech)
 		set_bbcode(text)
 	else:
 		set_bbcode(text)
@@ -146,18 +138,12 @@ func compartmentalise(longText):
 
 # Function to "scroll text" (can't come up with the correct phrasing)
 func _on_Timer_timeout():
+	
 	if get_visible_characters() < get_total_character_count():
-		set_visible_characters(get_visible_characters()+1) 
-	elif musicnode != null:
-		musicstop = true
-		var music = musicnode
-		while music.volume_db > -100:
-			music.volume_db -= 20
-			if music.volume_db > -100: emit_signal("done");
-			yield(get_tree().create_timer(0.1), "timeout")
-		yield(self,"done")
-		music.queue_free()
-		musicnode = null
+		set_visible_characters(get_visible_characters()+1)
+	elif speech != null and not (get_visible_characters() == 0 and get_total_character_count() == 0):
+		speech.queue_free()
+		speech = null
 
 func read_substring():
 	# Keep current line as compartmentalized until all substrings have been read

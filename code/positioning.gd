@@ -6,21 +6,29 @@ var timer # Timer for parent node to use.
 var collider = null # The node doing the colliding.
 signal position_finish # Emitted when collider has reached dest.
 var parent # The Dispay function.
+var nodepos
+var index
+var once = 0
+
+signal done_cleaning
 
 # Position function variables, to lessen calculation time.
 var type # The type of node.
 var node # The node itself.
 
 # Called by display.gd with the dest, speed, and colliding node.
-func move(s, c, t, x=null):
+func move(s, n, ty, i, t, x=null):
 	speed = s
-	collider = c
+	index = i
 	timer = t
 	dest = x
 	parent = get_parent()
 	
-	type = parent.layers[find_index()]['type'] # The node type.
-	node = parent.layers[find_index()]['node'] # The node.
+	type = ty # The node type.
+	node = n # The node.
+	
+	if type == 'image': nodepos = node.position
+	else: nodepos = node.rect_position
 	
 	connect('position_finish', self, 'free_node') # Connects signal 'position_finish' to free_node().
 	global.sliding = true; # Let the game know a node is sliding.
@@ -30,17 +38,21 @@ func move(s, c, t, x=null):
 # Calculates the movement of images across the screen.
 func _process(delta):
 	
-	position(parent.layers[find_index()]['position'] + speed) # Move collider at speed.x.
+	position(nodepos + speed) # Move collider at speed.x.
 	
 	# If dest is null then ignore ending movement.
 	if dest != null:
 		# Else check if the destination has been reached then emit the 'position_finish' signal.
 		if speed.x < 0:
-			if parent.layers[find_index()]['position'].x <= dest:
+			if nodepos.x <= dest:
 				emit_signal('position_finish')
 		else:
-			if parent.layers[find_index()]['position'].x >= dest:
+			if nodepos.x >= dest:
 				emit_signal('position_finish')
+	else:
+		if once == 0:
+			emit_signal('done_cleaning')
+			once = 1
 
 
 
@@ -48,20 +60,11 @@ func _process(delta):
 func finish():
 	var destination = dest
 	dest = null
+	yield(self, 'done_cleaning')
 	node.position.x = destination
-	parent.layers[find_index()]['position'].x = destination
+	parent.layers[index]['position'].x = destination
 	emit_signal('position_finish')
-	return {'path': parent.layers[find_index()]['path'], 'dest': destination}
-
-
-
-# Function to re-find the positioning index after character addition.
-func find_index():
-	
-	for i in range(parent.layers.size()):
-	
-		if parent.layers[i]['node'] == collider:
-			return i
+	return {'path': parent.layers[index]['path'], 'dest': destination}
 
 
 
@@ -81,10 +84,10 @@ func free_node():
 
 # Calculates position movement of node.
 func position(shift):
-	parent.layers[find_index()]['position'] = shift
+	nodepos = shift
 	
-	if type == 'image':
+	if type == 'image' and dest != null:
 		node.position = shift
 	
-	elif type == 'video':
+	elif type == 'video' and dest != null:
 		node.rect_position = shift

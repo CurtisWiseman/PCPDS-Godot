@@ -5,6 +5,7 @@ var directory = 'res://scenes/'
 var current
 var last
 
+signal transition_finish
 
 # Get the Main_Menu scene path on start.
 func _ready():
@@ -15,6 +16,8 @@ func _ready():
 
 # Function to change the scene.
 func change(scenechange, transition=null, speed=10, time=0.5):
+	global.pause_input = true;
+	game.safeToSave = false;
 	
 	# Variables for directory manipulation.
 	var scenes = []
@@ -49,20 +52,29 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 			last = current
 			
 			if transition != null:
-				display = global.rootnode.get_node('Systems/Display')
+				display = global.rootnode.get_node('Systems')
+				display = display.blackScreen
 				_transition(display, transition, 'out', speed, time)
-				yield(display, 'transition_finish')
-			
-			get_tree().change_scene(directory + scenes[i] + '.tscn')
-			current = directory + scenes[i] + '.tscn'
-			yield(global, 'finished_loading')
-			
-			if transition != null:
-				display = global.rootnode.get_node('Systems/Display')
-				_transition(display, transition, "in", speed, time)
-				yield(display, 'transition_finish')
+				yield(self, 'transition_finish')
+				
+				get_tree().change_scene(directory + scenes[i] + '.tscn')
+				current = directory + scenes[i] + '.tscn'
+				yield(global, 'finished_loading')
+				
+				display = global.rootnode.get_node('Systems')
+				display = display.blackScreen
+				_transition(display, transition, 'in', speed, time)
+				yield(self, 'transition_finish')
+				
+			else:
+				get_tree().change_scene(directory + scenes[i] + '.tscn')
+				current = directory + scenes[i] + '.tscn'
+				yield(global, 'finished_loading')
 			
 			break
+	
+	global.pause_input = false;
+	game.safeToSave = true;
 	
 	# Print error if scene was not found.
 	if !found:
@@ -73,8 +85,48 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 
 
 # Helper function to transition scenes.
-func _transition(display, transition, fade, speed, time):
+func _transition(node, transition, fade, speed, time):
+	fadeblackalpha(node, fade, speed, time)
+
+
+
+func fadeblackalpha(node, fade, spd, time=0.5):
+	global.fading = true # Let the game know fading is occuring.
+	var percent # Used to calculate modulation.
+	var ftimer = Timer.new() # A timer node.
+	var p # A var for percentage calculation.
+	ftimer.name = "fade-scene-timer" # Set the timer name.
+	global.rootnode.get_node('Systems').add_child(ftimer) # Add the timer as a child.
+	ftimer.one_shot = true # Make the timer one shot.
 	
-	if transition == "fadeblack": display.fadeblack(display.bgnode, fade, speed, "children", time)
-	elif transition == "fadealpha": display.fadealpha(display.bgnode, fade, speed, "children", time)
-	else: print("Error: '" + transition + "' is not a valid scene transition option!!!")
+	# If fade is out then fade out.
+	if fade == 'in':
+		percent = 100
+		# While percent isn't 0 fade to black.
+		while percent != 0 and global.fading:
+			percent -= spd # Subtract spd from percent.
+			if percent < 0: percent = 0 # Make percent 0 if it falls below.
+			p = float(percent)/100 # Make p percent/100
+			node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
+			ftimer.start(time) # Start the timer at 0.5 seconds.
+			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+	
+	# If fade is in then fade in.
+	elif fade == 'out':
+		percent = 0
+		# While percent isn't 0 fade from black.
+		while percent != 100 and global.fading:
+			percent += spd # Add spd to percent.
+			if percent > 100: percent = 100 # Make percent 100 if it goes above.
+			p = float(percent)/100 # Make p percent/100
+			node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
+			ftimer.start(time) # Start the timer at 0.5 seconds.
+			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+	
+	# Else print an error if fade is not in or out.
+	else:
+		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
+	
+	ftimer.queue_free()
+	global.fading = false
+	emit_signal('transition_finish')
