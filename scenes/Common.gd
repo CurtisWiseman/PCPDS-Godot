@@ -19,7 +19,8 @@ func scene(lineText, index, dialogueNode):
 	
 	# Use the index to match what line to make something happen on.
 	match(index):
-		7:	# Take User Input
+		8:	# Take User Input
+			game.blockInput = true
 			global.pause_input = true
 			
 			input = LineEdit.new()
@@ -41,6 +42,7 @@ func scene(lineText, index, dialogueNode):
 			
 			systems.canvas.remove_child(input)
 			global.pause_input = false
+			game.blockInput = false
 			dialogueNode.emit_signal('empty_line')
 	
 	return true

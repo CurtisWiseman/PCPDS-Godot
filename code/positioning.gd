@@ -8,7 +8,7 @@ signal position_finish # Emitted when collider has reached dest.
 var parent # The Dispay function.
 var nodepos
 var index
-var once = 0
+var destination
 
 signal done_cleaning
 
@@ -22,6 +22,7 @@ func move(s, n, ty, i, t, x=null):
 	index = i
 	timer = t
 	dest = x
+	destination = x
 	parent = get_parent()
 	
 	type = ty # The node type.
@@ -30,7 +31,7 @@ func move(s, n, ty, i, t, x=null):
 	if type == 'image': nodepos = node.position
 	else: nodepos = node.rect_position
 	
-	connect('position_finish', self, 'free_node') # Connects signal 'position_finish' to free_node().
+#	connect('position_finish', self, 'finish') # Connects signal 'position_finish' to free_node().
 	global.sliding = true; # Let the game know a node is sliding.
 
 
@@ -44,21 +45,14 @@ func _process(delta):
 	if dest != null:
 		# Else check if the destination has been reached then emit the 'position_finish' signal.
 		if speed.x < 0:
-			if nodepos.x <= dest:
-				emit_signal('position_finish')
+			if nodepos.x <= dest: finish()
 		else:
-			if nodepos.x >= dest:
-				emit_signal('position_finish')
-	else:
-		if once == 0:
-			emit_signal('done_cleaning')
-			once = 1
+			if nodepos.x >= dest: finish()
 
 
 
 # Function so that other nodes can end position movement.
 func finish():
-	var destination = dest
 	dest = null
 	yield(self, 'done_cleaning')
 	node.position.x = destination
@@ -91,3 +85,6 @@ func position(shift):
 	
 	elif type == 'video' and dest != null:
 		node.rect_position = shift
+	
+	else:
+		emit_signal('done_cleaning')

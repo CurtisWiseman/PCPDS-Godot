@@ -10,7 +10,7 @@ func _ready():
 	
 	# Display the main menu background and play the main menu music.
 	systems.display.background('res://mainmenu/DemoMenu_hq.ogv', 'video')
-	systems.sound.music('res://sounds/music/PCPDemo_Menu.wav', true)
+	systems.sound.music('res://sounds/music/PCPDating_Menu.ogg', true)
 	
 	$'CanvasLayer/Start'.grab_focus() # Grab the focus of start.
 	

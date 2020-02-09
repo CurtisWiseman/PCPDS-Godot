@@ -2,6 +2,7 @@ extends Node
 
 var queue = [] # Queue of music to play.
 var playing = {'path': "NULL", 'loop': "NULL", 'volume': "NULL"} # The current song.
+var playingSFX = {'path': "NULL", 'volume': "NULL"} # The current sfx.
 
 # Function to play music.
 func music(path, loop=false, volume=0):
@@ -36,6 +37,10 @@ func sfx(path, volume=0):
 	sfx.connect('finished', self, 'end', [sfx]) # Delete the node when finished.
 	sfx.play() # Play the sound effect.
 	add_child(sfx) # Add as a child of sound.
+	
+	# Save the values of the currently playing sfx.
+	playingSFX.path = path
+	playingSFX.volume = volume
 
 
 
@@ -70,6 +75,15 @@ func stop(audio):
 		print('Error: No audio node named ' + audio + ' to stop.')
 
 
+
+# Function to remove playing SFX.
+func stop_SFX(audio):
+	if get_node(audio):
+		get_node(audio).queue_free()
+		playingSFX.path = "NULL"
+		playingSFX.volume = "NULL"
+	else:
+		print('Error: No audio node named ' + audio + ' to stop.')
 
 # Get the name of the audio using path.
 func audioname(path):

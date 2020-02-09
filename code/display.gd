@@ -373,11 +373,11 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	if mv != null:
 		
 		# If the node position is the same as the destination do nothing and return.
-		if layers[index]['position'].x == x:
+		if layers[index]['node'].position.x == x:
 			return
 		
 		# If the destination is negative then make the speed negative.
-		if x < layers[index]['position'].x:
+		if x < layers[index]['node'].position.x:
 			s *= -1
 		
 		# If slide then do not interact with any characters on the way to destination.
@@ -432,34 +432,34 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 
 
 
-# Resize the given image.
-func resize(path, x=100, y=100, xpos=0, ypos=0, face=false):
-	
-	if typeof(x) == TYPE_INT:
-		# Get the index on make the scaling factor.
-		var index = getindex(path)
-		var scale = Vector2(float(x)/100, float(y)/100)
-		print(scale, x ,y)
-		var size
-	
-		# Set the scale then attempt to position it close to where it was originally (not exact).
-		if face:
-			layers[index]['face'].set_scale(scale)
-			size = layers[index]['face'].texture.get_size()
-			layers[index]['face'].position = Vector2(layers[index]['face'].position.x + (size.x - (size.x * scale.x))/2, layers[index]['face'].position.y + (size.y - (size.y * scale.y))/2)
-		else:
-			layers[index]['node'].set_scale(scale)
-			size = layers[index]['node'].texture.get_size()
-			layers[index]['node'].position = Vector2(layers[index]['node'].position.x + xpos + (size.x - (size.x * scale.x))/2, layers[index]['node'].position.y + ypos +  (size.y - (size.y * scale.y))/2)
-	
-	elif x == 'revert':
-		var index = getindex(path)
-		if face:
-			layers[index]['face'].set_scale(Vector2(1,1))
-			layers[index]['face'].position = layers[index]['facepos']
-		else:
-			layers[index]['node'].set_scale(Vector2(1,1))
-			layers[index]['node'].position = layers[index]['position']
+## Resize the given image.
+#func resize(path, x=100, y=100, xpos=0, ypos=0, face=false):
+#
+#	if typeof(x) == TYPE_INT:
+#		# Get the index on make the scaling factor.
+#		var index = getindex(path)
+#		var scale = Vector2(float(x)/100, float(y)/100)
+#		print(scale, x ,y)
+#		var size
+#
+#		# Set the scale then attempt to position it close to where it was originally (not exact).
+#		if face:
+#			layers[index]['face'].set_scale(scale)
+#			size = layers[index]['face'].texture.get_size()
+#			layers[index]['face'].position = Vector2(layers[index]['face'].position.x + (size.x - (size.x * scale.x))/2, layers[index]['face'].position.y + (size.y - (size.y * scale.y))/2)
+#		else:
+#			layers[index]['node'].set_scale(scale)
+#			size = layers[index]['node'].texture.get_size()
+#			layers[index]['node'].position = Vector2(layers[index]['node'].position.x + xpos + (size.x - (size.x * scale.x))/2, layers[index]['node'].position.y + ypos +  (size.y - (size.y * scale.y))/2)
+#
+#	elif x == 'revert':
+#		var index = getindex(path)
+#		if face:
+#			layers[index]['face'].set_scale(Vector2(1,1))
+#			layers[index]['face'].position = layers[index]['facepos']
+#		else:
+#			layers[index]['node'].set_scale(Vector2(1,1))
+#			layers[index]['node'].position = layers[index]['position']
 
 
 
@@ -775,7 +775,7 @@ func nodelayers(index):
 		var start = layers.size() - 1 - index
 		for i in range(start, children.size() - 1):
 			bgnode.remove_child(children[i])
-			bgnode.add_child(layers[index - 1 - i]['node'])
+			bgnode.add_child(layers[i]['node'])
 	
 	# Else reorder the nodes properly.
 	else:
@@ -783,10 +783,8 @@ func nodelayers(index):
 		var children = bgnode.get_children()
 		var start= layers.size() - index
 		for i in range(start, children.size() - 1):
-			print(start)
-			print('-----')
 			bgnode.remove_child(children[i])
-			bgnode.add_child(layers[index + i + 1]['node'])
+			bgnode.add_child(layers[index + 1]['node'])
 
 
 

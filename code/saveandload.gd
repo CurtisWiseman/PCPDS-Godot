@@ -124,7 +124,8 @@ func save(saveBoxName, saveBoxNum, sliders):
 					if node['path'] == layer['path'] and node['path'] != lastBody:
 						layer['node'].position.x = node['dest']
 			
-			var modulate = ',' + str(layer['node'].get_self_modulate()).replace(',', '|')
+			var modulate = str(layer['node'].self_modulate)
+			modulate = ',' + modulate.replace(',', '|')
 			
 			if layer.has('mask'):
 				if layer['type'] == 'image':

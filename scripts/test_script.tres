@@ -1,5 +1,6 @@
-﻿[Location: dininghall.demo]
+﻿[Location: dininghall.demo, dininghall.table.mudpuddleforeground, dininghall.foodfight|1]
 (Gibbon, campus, grabby, happy, right) LINE
+[Location: dininghall.demo, dininghall.table.mudpuddleforeground]
 [SLIDE Gibbon center]
 (Mage, campus, 1, happy, offleft, slide, left): LINE
 (Mage, campus, 1, happyMED, left)

@@ -15,6 +15,7 @@ var waitTimer = Timer.new()
 var numOfChoices = 0
 var fade = false
 var notsame
+var overlays = []
 
 signal empty_line
 signal sentence_end
@@ -184,6 +185,7 @@ func lastKeep(idx):
 	lastBGNode = systems.display.bgnode
 	lastBGType = systems.display.bgtype
 
+
 # The main dialogue function.
 func _on_Dialogue_has_been_read(setIndex=false):
 	
@@ -253,26 +255,71 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var track = dialogue[index].lstrip('[')
 				track = track.rstrip(']')
 				track = track.substr(6,dialogue[index].length()-1)
-				systems.sound.music("res://sounds/music/" + track + ".wav", true)
+				systems.sound.music("res://sounds/music/" + track + ".ogg", true)
 			
 			elif dialogue[index].findn('SFX:') != -1:
 				var sfx = dialogue[index].lstrip('[')
 				sfx = sfx.rstrip(']')
 				sfx = sfx.substr(5,dialogue[index].length()-1)
-				systems.sound.sfx("res://sounds/sfx/" + sfx + ".wav")
+				systems.sound.sfx("res://sounds/sfx/" + sfx + ".ogg")
 			
 			elif dialogue[index].findn('StopMusic') != -1:
 				systems.sound.stop(systems.sound.audioname(systems.sound.playing['path']))
 			
+			elif dialogue[index].findn('StopSFX') != -1:
+				systems.sound.stop_SFX(systems.sound.audioname(systems.sound.playingSFX['path']))
+			
 			elif dialogue[index].findn('Location:') != -1:
+				
+				if overlays != []:
+					for path in overlays:
+						systems.display.remove(path)
+					
+					overlays = []
+				
 				var loc = dialogue[index].lstrip('[')
+				var ovr = null
+				
 				loc = loc.rstrip(']')
 				loc = loc.substr(10,dialogue[index].length()-1)
+				loc = loc.strip_edges(true, true)
+				
+				if loc.find(',') != -1:
+					var arr = loc.split(',', false, 1)
+					loc = arr[0]
+					ovr = [arr[1]]
+				
 				var locIndex = global.locationNames.find(loc)
 				if locIndex != -1:
 					systems.display.background(global.locations[locIndex], 'image')
 				else:
 					print('Error: No background named ' + loc)
+				
+				if ovr != null:
+					var ovrLayer = [3]
+					
+					if ovr[0].find(',') != -1:
+						ovr = ovr[0].split(',', false)
+						
+						ovrLayer = []
+						for i in range(0, ovr.size()):
+   						 	ovrLayer.append(3)
+					
+					for i in range(0, ovr.size()):
+						ovr[i] = ovr[i].strip_edges(true, true)
+						
+						if ovr[i].find('|') != -1:
+							var arr = ovr[i].split('|', false, 1)
+							ovr[i] = arr[0]
+							ovrLayer[i] = int(arr[1])
+					
+					for i in range(0, ovr.size()):
+						var ovrIndex = global.locationNames.find(ovr[i])
+						if ovrIndex != -1:
+							systems.display.image(global.locations[ovrIndex], ovrLayer[i])
+							overlays.append(global.locations[ovrIndex])
+						else:
+							print('Error: No overlay named ' + ovr[i])
 			
 			elif dialogue[index].findn('pause') != -1:
 				game.safeToSave = false
@@ -417,12 +464,12 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			var info # Contains provided character information.
 			var text # Contains the words the character says.
 			var say = true # Whether or not say the character text.
-			var lastChar = dialogue[index].length()-1 # The position of the last character.
+#			var lastChar = dialogue[index].length()-1 # The position of the last character.
 			var wait = true # Whether or not to wait when no text to say.
 			
 			# Handle 'soft' newlines so that a newline does't sperate lines of dialogue when displayed.
-			if dialogue[index][lastChar] == 'n' and dialogue[index][lastChar-1] == '/':
-				dialogue[index+1] = dialogue[index].substr(0, lastChar-1) + "\n" + dialogue[index+1]
+			if dialogue[index][dialogue[index].length()-1] == 'n' and dialogue[index][dialogue[index].length()-2] == '/':
+				dialogue[index+1] = dialogue[index].substr(0, dialogue[index].length()-1-1) + "\n" + dialogue[index+1]
 				index += 1
 			
 			# Replaces every instance of the word "PCPG" with the player name.
@@ -431,10 +478,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				dialogue[index] = regex.sub(dialogue[index], global.playerName, true)
 			
 			# If there is no text on the line then don't say anything.
-			if dialogue[index][lastChar] == ')' or dialogue[index][lastChar] == '$':
+			if dialogue[index][dialogue[index].length()-1] == ')' or dialogue[index][dialogue[index].length()-1] == '$':
 				global.pause_input = true
 				say = false
-				if dialogue[index][lastChar] == '$': wait = false
+				if dialogue[index][dialogue[index].length()-1] == '$': wait = false
 				var stripParentheses = dialogue[index].substr(dialogue[index].find("(") + 1, dialogue[index].find(")") - 1) #"Crop" the info inside of the parentheses.
 				info = stripParentheses.split(',') # Split the info inside the parentheses on commas.
 			
@@ -614,36 +661,6 @@ func remove_dupes(character, info):
 					emit_signal('dupeCheckFinished')
 					return
 				
-				elif 'fade'.is_subsequence_of(info):
-					if systems.display.layers[i]['path'] != get_body(info):
-						global.pause_input = true
-						game.safeToSave = false
-						fade = true
-						var indx
-						var speed = 0.02
-						var path = systems.display.layers[i]['path']
-						var pos = systems.display.layers[i]['node'].position
-						for i in range(0, info.size()): if info[i] == 'fade': indx = i
-						if indx != size - 1: if info[indx+1].find('/') != -1:
-							speed = info[indx+1].split('/', false)
-							speed = float(speed[1])
-						execute('systems.display.fadealpha("'+path+'", "out", 10, "self", ' + str(speed) + ', true)')
-						notsame = [true, pos]
-						emit_signal('dupeCheckFinished')
-						yield(systems.display, 'transition_finish_fade')
-						fade = false
-						systems.display.remove(path)
-						lastLayers = systems.display.layers.duplicate(true)
-						game.safeToSave = true
-						global.pause_input = false
-						return
-					else:
-						var pos = systems.display.layers[i]['node'].position
-						systems.display.remove(systems.display.layers[i]['path'])
-						notsame = [true, pos]
-						emit_signal('dupeCheckFinished')
-						return
-				
 				else:
 					var pos = systems.display.layers[i]['node'].position
 					systems.display.remove(systems.display.layers[i]['path'])
@@ -745,7 +762,6 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	if blush:
 		var blushFace = search('return characterImages.'+parsedInfo+'.blush', info[i]) + 1
 		if blushFace != -1 and blushFace != -2: blushNum = blushNum -1 + blushFace
-		print(characterImages.azumi.casual.blush[blushNum])
 		AFL += '\n\tsystems.display.face(characterImages.'+parsedInfo+'.blush['+str(blushNum)+'], '+body+', 0, 0, "blush")'
 	if shades:
 		AFL += '\n\tsystems.display.face(characterImages.nate.afl[0], '+body+', 0, 0, "shades")'
@@ -834,14 +850,10 @@ func parse_position(info, parsedInfo, body, i, pos):
 		transition = info[i]
 		info.remove(i)
 		
-		if fade: if i < info.size(): if info[i].find('/') != -1:
-				speed = info[i].split('/', false)
-				speed = float(speed[0])
-				info.remove(i)
+		if fade: info.remove(i)
 		
 		if i == info.size():
 			if transition == 'silhouette': execute(parsedInfo+'\n\tsystems.display.fadeblack('+body+', "in", 0)\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
-			elif fade: execute(parsedInfo+'\n\tsystems.display.fadealpha('+body+', "in", 10, "self", 0.01)\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 			else: execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 			return
 	
