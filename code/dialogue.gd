@@ -117,10 +117,10 @@ func compartmentalise(longText):
 			
 			if currentSentence.find(' ', 0) != -1:
 				# To make sure that next substring doesn't begin with a blank space
-				while currentSentence.ends_with(" ") == false:
+				while currentSentence.ends_with(' ') == false:
 					currentSentence = currentSentence.substr(0, sentenceCharIndex - 1)
 					sentenceCharIndex -= 1
-
+			
 #			Add substring to array
 			longTextParts.push_back(currentSentence)
 

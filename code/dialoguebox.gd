@@ -224,12 +224,14 @@ func _on_Dialogue_has_been_read(setIndex=false):
 						break
 			
 			elif 'fade to black'.is_subsequence_ofi(dialogue[index]):
+				if global.fading: yield(global, 'finished_fading')
 				global.pause_input = true
 				fadeblackalpha(systems.blackScreen, 'out', 1, 0.01)
 				yield(self, 'transition_finish')
 				global.pause_input = false
 			
 			elif 'fade from black'.is_subsequence_ofi(dialogue[index]):
+				if global.fading: yield(global, 'finished_fading')
 				global.pause_input = true
 				fadeblackalpha(systems.blackScreen, 'in', 1, 0.01)
 				yield(self, 'transition_finish')
@@ -494,6 +496,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 				info = splitLine[0].split(',') # Split the info inside the parentheses on commas.
 				text = splitLine[1]
+				if text.begins_with(" "):
+					var t = text.substr(1, text.length())
 			
 			# Remove all spaces before and after the info.
 			for i in range(0, info.size()):
@@ -608,11 +612,6 @@ func parse_info(info):
 			remove_dupes('911', info)
 			yield(self, 'dupeCheckFinished')
 			if notsame[0]: parse_911(info, 'nine11', 1, notsame[1])
-		"Thoth":
-			info[0] = 'thoth'
-			remove_dupes('thoth', info)
-			yield(self, 'dupeCheckFinished')
-			parse_position(info, 'systems.display.image("res://images/characters/Thoth/thoth.png", 1)', "'res://images/characters/Thoth/thoth.png'", 1, notsame[1])
 		"Tom":
 			info[0] = 'tom'
 			remove_dupes('tom', info)
@@ -708,7 +707,11 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 2
 			parse_expression(info, parsedInfo+'.special', 'characterImages.'+parsedInfo+'.special.body['+num+']', i+next, info[i+1], pos)
 		"newgle":
-			parse_expression(info, parsedInfo+'.special', 'characterImages.'+parsedInfo+'.newgle.body['+0+']', i+next, info[i+1], pos)
+			parse_expression(info, parsedInfo+'.newgle', 'characterImages.'+parsedInfo+'.newgle.body['+0+']', i+1, info[i+1], pos)
+		"base":
+			parse_expression(info, parsedInfo+'.base', 'characterImages.'+parsedInfo+'.base.body['+0+']', i+1, info[i+1], pos)
+		"bigboi":
+			parse_expression(info, parsedInfo+'.bigboi', 'characterImages.'+parsedInfo+'.bigboi.body['+0+']', i+1, info[i+1], pos)
 		_:
 			num = str(search('return characterImages.'+parsedInfo+'.body', info[i]))
 			parse_expression(info, parsedInfo, 'characterImages.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
@@ -814,7 +817,6 @@ func parse_expnum(expression, parsedInfo):
 		return '1'
 	elif 'max' == expression.substr(length-3, 3):
 		var num = execreturn('return characterImages.'+parsedInfo+'.'+expression.rstrip('max')+'.size()')
-		print('return characterImages.'+parsedInfo+'.'+expression.rstrip('max')+'.size()')
 		if num == 3:
 			return '2'
 		else:
@@ -1051,5 +1053,5 @@ func fadeblackalpha(node, fade, spd, time=0.5):
 		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
 	
 	emit_signal('transition_finish')
-	global.fading = false
+	global.finish_fading()
 	ftimer.queue_free()

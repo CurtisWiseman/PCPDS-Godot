@@ -126,7 +126,7 @@ func _on_LoadBox_pressed(saveBoxName):
 		if global.fading:
 			global.pause_input = true
 			get_tree().paused = false
-			global.fading = false
+			global.finish_fading()
 			var ogTime = $Wait.wait_time
 			$Wait.wait_time = 1
 			$Wait.start()

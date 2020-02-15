@@ -583,7 +583,7 @@ func fadeblack(content, fade, spd, mod='self', time=0.5):
 		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
 	
 	emit_signal('transition_finish')
-	global.fading = false # Let the game know fading is done.
+	global.finish_fading()# Let the game know fading is done.
 	ftimer.queue_free() # Free the timer.
 
 
@@ -698,7 +698,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.5, fadeSignal=false):
 	
 	if !fadeSignal: emit_signal('transition_finish')
 	else: emit_signal('transition_finish_fade')
-	global.fading = false # Let the game know fading is done.
+	global.finish_fading() # Let the game know fading is done.
 	ftimer.queue_free() # Free the timer.
 
 

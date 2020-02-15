@@ -128,5 +128,5 @@ func fadeblackalpha(node, fade, spd, time=0.5):
 		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
 	
 	ftimer.queue_free()
-	global.fading = false
+	global.finish_fading()
 	emit_signal('transition_finish')

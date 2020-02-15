@@ -24,6 +24,7 @@ var playerName
 
 # Signal to say a that a scene is done loading.
 signal finished_loading
+signal finished_fading
 
 
 # Character Colors
@@ -215,3 +216,10 @@ func _input(event):
 		
 		image.save_png(imagePath)
 		get_tree().paused = not get_tree().paused
+
+
+
+# Function to let game know fading is finished.
+func finish_fading():
+	fading = false
+	emit_signal('finished_fading')
