@@ -9,6 +9,7 @@ var parent # The Dispay function.
 var nodepos
 var index
 var destination
+var reference
 
 signal done_cleaning
 
@@ -28,10 +29,12 @@ func move(s, n, ty, i, t, x=null):
 	type = ty # The node type.
 	node = n # The node.
 	
+	reference = weakref(node)
+	
 	if type == 'image': nodepos = node.position
 	else: nodepos = node.rect_position
 	
-#	connect('position_finish', self, 'finish') # Connects signal 'position_finish' to free_node().
+	connect('position_finish', self, 'free_node') # Connects signal 'position_finish' to free_node().
 	global.sliding = true; # Let the game know a node is sliding.
 
 
@@ -55,10 +58,11 @@ func _process(delta):
 func finish():
 	dest = null
 	yield(self, 'done_cleaning')
-	node.position.x = destination
-	parent.layers[index]['position'].x = destination
-	emit_signal('position_finish')
-	return {'path': parent.layers[index]['path'], 'dest': destination}
+	if reference.get_ref():
+		node.position.x = destination
+		parent.layers[index]['position'].x = destination
+		emit_signal('position_finish')
+		return {'path': parent.layers[index]['path'], 'dest': destination}
 
 
 
@@ -72,6 +76,7 @@ func free_node():
 	if sliders == 1:
 		global.sliding = false
 	
+	print('freed')
 	queue_free() # Deletes the node to free memory.
 
 
@@ -81,10 +86,10 @@ func position(shift):
 	nodepos = shift
 	
 	if type == 'image' and dest != null:
-		node.position = shift
+		if reference.get_ref(): node.position = shift
 	
 	elif type == 'video' and dest != null:
-		node.rect_position = shift
+		if reference.get_ref(): node.rect_position = shift
 	
 	else:
 		emit_signal('done_cleaning')

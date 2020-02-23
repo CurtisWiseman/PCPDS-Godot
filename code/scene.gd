@@ -54,8 +54,9 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 			if transition != null:
 				display = global.rootnode.get_node('Systems')
 				display = display.blackScreen
-				_transition(display, transition, 'out', speed, time)
-				yield(self, 'transition_finish')
+				if display.get_self_modulate().a != 1:
+					_transition(display, transition, 'out', speed, time)
+					yield(self, 'transition_finish')
 				
 				get_tree().change_scene(directory + scenes[i] + '.tscn')
 				current = directory + scenes[i] + '.tscn'

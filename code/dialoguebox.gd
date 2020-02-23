@@ -50,7 +50,6 @@ func _ready():
 	f.close()
 	self.connect("empty_line", self, "_on_Dialogue_has_been_read")
 	start = index
-	emit_signal("empty_line") #Signals to display first line of dialogue
 	
 	# Define a wait timer.
 	waitTimer.one_shot = true
@@ -58,6 +57,7 @@ func _ready():
 	add_child(waitTimer)
 	
 	global.pause_input = true # Pause input during first load.
+	emit_signal("empty_line") #Signals to display first line of dialogue
 
 
 #Nametag is the label above the textbox, dialogue's say is what updates the textbox.
@@ -73,7 +73,7 @@ func choice_calc(choice):
 	for item in choices:
 		if choice == item:
 			pastChoice = true
-	if 'UNDO'.is_subsequence_of(dialogue[index]):
+	if dialogue[index].findn('UNDO') != -1:
 		pastChoice = true
 	
 	if !pastChoice:
@@ -205,44 +205,44 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			# Emit a signal letting nodes know a scene finished loading.
 			global.emit_signal('finished_loading')
 		
-		
 		# COMMENTS/COMMANDS
 		if  dialogue[index].begins_with("["):
 			
-			if '9/11'.is_subsequence_of(dialogue[index]):
+			if dialogue[index].findn('9/11') != -1:
 				regex.compile('9/11')
 				dialogue[index] = regex.sub(dialogue[index], "911", true)
 			
-			if 'leaves'.is_subsequence_ofi(dialogue[index]):
-				for character in characterImages.chararray:
-					if character.is_subsequence_ofi(dialogue[index]):
-						for i in range(0, systems.display.layers.size()):
-							var layer = systems.display.layers[i]['name']
-							if layer.findn(character.to_lower()) != -1:
-								systems.display.remove(systems.display.layers[i]['path'])
-								break
+			if dialogue[index].findn('leaves') != -1:
+				var character = dialogue[index].lstrip('[')
+				character = character.rstrip(' leaves]')
+
+				for i in range(0, systems.display.layers.size()):
+					var layer = systems.display.layers[i]['name']
+					if layer.findn(character.to_lower()) != -1:
+						systems.display.remove(systems.display.layers[i]['path'])
 						break
 			
-			elif 'fade to black'.is_subsequence_ofi(dialogue[index]):
+			elif dialogue[index].findn('fade to black') != -1:
 				if global.fading: yield(global, 'finished_fading')
 				global.pause_input = true
 				fadeblackalpha(systems.blackScreen, 'out', 1, 0.01)
 				yield(self, 'transition_finish')
 				global.pause_input = false
 			
-			elif 'fade from black'.is_subsequence_ofi(dialogue[index]):
+			elif dialogue[index].findn('fade from black') != -1:
 				if global.fading: yield(global, 'finished_fading')
 				global.pause_input = true
 				fadeblackalpha(systems.blackScreen, 'in', 1, 0.01)
 				yield(self, 'transition_finish')
 				global.pause_input = false
 			
-			elif 'cut to black'.is_subsequence_ofi(dialogue[index]): fadeblackalpha(systems.blackScreen, 'out', 100)
-			elif 'cut from black'.is_subsequence_ofi(dialogue[index]): fadeblackalpha(systems.blackScreen, 'in', 100)
+			elif dialogue[index].findn('cut to black') != -1: fadeblackalpha(systems.blackScreen, 'out', 100)
+			elif dialogue[index].findn('cut from black') != -1: fadeblackalpha(systems.blackScreen, 'in', 100)
 			
 			elif dialogue[index].findn('SLIDE') != -1:
 				var command = dialogue[index].lstrip('[')
 				command = command.rstrip(']')
+				command = command.replace(',', '')
 				command = command.split(' ')
 				for i in range(0, systems.display.layers.size()):
 					var layer = systems.display.layers[i]['name']
@@ -282,6 +282,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var loc = dialogue[index].lstrip('[')
 				var ovr = null
 				
+				loc = loc.strip_edges(true, true)
 				loc = loc.rstrip(']')
 				loc = loc.substr(10,dialogue[index].length()-1)
 				loc = loc.strip_edges(true, true)
@@ -382,6 +383,92 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				global.pause_input = false
 			
+			elif dialogue[index].findn('Scene:') != -1:
+				
+				var saveChosenChoices = chosenChoices
+				var saveInChoice = inChoice
+				var saveChoices = choices
+				
+				if saveChoices == []:
+					saveChoices = "NULL"
+				else:
+					var choiceArray = saveChoices
+					saveChoices = ''
+					var i = 1
+					for choice in choiceArray:
+						if i == choiceArray.size():
+							saveChoices += choice
+							break
+						else:
+							saveChoices += choice + ','
+							i += 1
+				
+				if saveChosenChoices == []:
+					saveChosenChoices = "NULL"
+				else:
+					var choiceArray = saveChosenChoices
+					saveChosenChoices = ''
+					var i = 1
+					for choice in choiceArray:
+						if i == choiceArray.size():
+							saveChosenChoices += choice
+							break
+						else:
+							saveChosenChoices += choice + ','
+							i += 1
+				
+				var sceneSave = dialogue[index].substr(8,dialogue[index].length()-1).rstrip(']')
+				
+				var file = File.new()
+				file.open_encrypted_with_pass('user://scenes/' + sceneSave, File.WRITE, 'HELPLETMEOUT')
+				file.store_line(str(saveInChoice))
+				file.store_line(saveChoices)
+				file.store_line(saveChosenChoices)
+				file.close()
+			
+			elif dialogue[index].findn('==>') != -1:
+				global.pause_input = true
+				
+				var sceneName = '[Scene: ' + dialogue[index].substr(5,dialogue[index].length()-1)
+				var found = null
+				
+				for i in range(0, dialogue.size()):
+					if dialogue[i].find(sceneName) != -1:
+						found = i
+						break
+				
+				if found != null:
+					if found < index:
+						var loadInChoice = false
+						var loadChoices = []
+						var loadChosenChoices = []
+						
+						var file = File.new()
+						var sceneSave = dialogue[index].substr(5,dialogue[index].length()-1).rstrip(']')
+						file.open_encrypted_with_pass('user://scenes/' + sceneSave, File.READ, 'HELPLETMEOUT')
+						var choiceText = file.get_as_text().split('\n', false, 3)
+						file.close()
+						
+						if choiceText[0] == 'True': loadInChoice = true
+						if choiceText[1] != 'NULL':
+							var stringArray = choiceText[1].split(',', true)
+							for string in stringArray: loadChoices.append(string)
+						if choiceText[2] != 'NULL':
+							var stringArray = choiceText[2].split(',', true)
+							for string in stringArray: loadChosenChoices.append(string)
+						
+						choices = loadChoices
+						inChoice = loadInChoice
+						chosenChoices = loadChosenChoices
+						
+						index = found
+					else:
+						index = found
+				else:
+					print('Could not find: ' + sceneName)
+				
+				global.pause_input = false
+			
 			elif dialogue[index].findn('CHANGE') != -1:
 				global.pause_input = true
 				game.safeToSave = false
@@ -393,6 +480,9 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				elif command.size() == 4: scene.change(command[1], command[2], int(command[3]))
 				elif command.size() == 5: scene.change(command[1], command[2], int(command[3]), float(command[4]))
 				else: print('Invalid number of commands for CHANGE on line ' + str(index) + '!')
+			
+			elif dialogue[index].findn('ENDING') != -1:
+				scene.change('main_menu', 'fadeblack', 1, 0.01)
 			
 			var halt = global.rootnode.scene(dialogue[index], index+1, self)
 			index += 1
@@ -573,6 +663,16 @@ func _on_Dialogue_has_been_read(setIndex=false):
 		
 #		If line doesn't start with anything particular, register it as the player's thoughts
 		else:
+			
+			# Skip line if it only contains spaces.
+			if dialogue[index].begins_with(' '):
+				var string = dialogue[index]
+				string = string.replace(' ', '')
+				if string.length() == 0:
+					index += 1
+					emit_signal('empty_line')
+					return
+			
 			lastKeep(index)
 			
 			# Replaces every instance of the word "PCPG" with the player name.
@@ -681,6 +781,10 @@ func parse_outfit(info, parsedInfo, i, pos):
 	if info.size() == 1: return
 	var next
 	var num
+	
+	if 'knife'.is_subsequence_ofi(info[i]):
+		parsedInfo += '.knife'
+	
 	match info[i]:
 		"campus":
 			num = str(search('return characterImages.'+parsedInfo+'.campus.body', info[i+1]))
@@ -689,7 +793,10 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 1
 			else:
 				next = 2
-			parse_expression(info, parsedInfo+'.campus', 'characterImages.'+parsedInfo+'.campus.body['+num+']', i+next, info[i+1], pos)
+			parsedInfo += '.campus'
+			var extra = ''
+			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
+			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"casual":
 			num = str(search('return characterImages.'+parsedInfo+'.casual.body', info[i+1]))
 			if num == '-1' or num == '-2':
@@ -697,7 +804,10 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 1
 			else:
 				next = 2
-			parse_expression(info, parsedInfo+'.casual', 'characterImages.'+parsedInfo+'.casual.body['+num+']', i+next, info[i+1], pos)
+			parsedInfo += '.casual'
+			var extra = ''
+			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
+			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"special":
 			num = str(search('return characterImages.'+parsedInfo+'.special.body', info[i+1]))
 			if num == '-1' or num == '-2':
@@ -705,13 +815,28 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 1
 			else:
 				next = 2
-			parse_expression(info, parsedInfo+'.special', 'characterImages.'+parsedInfo+'.special.body['+num+']', i+next, info[i+1], pos)
+			parsedInfo += '.special'
+			var extra = ''
+			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
+			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"newgle":
 			parse_expression(info, parsedInfo+'.newgle', 'characterImages.'+parsedInfo+'.newgle.body['+0+']', i+1, info[i+1], pos)
 		"base":
 			parse_expression(info, parsedInfo+'.base', 'characterImages.'+parsedInfo+'.base.body['+0+']', i+1, info[i+1], pos)
 		"bigboi":
 			parse_expression(info, parsedInfo+'.bigboi', 'characterImages.'+parsedInfo+'.bigboi.body['+0+']', i+1, info[i+1], pos)
+		"hazmat":
+			var expression = info[i+1]
+			var expNum = parse_expnum(expression, parsedInfo+'.hazmat')
+			
+			if "angry".is_subsequence_of(expression): expression = 'angry'
+			elif "confused".is_subsequence_of(expression): expression = 'confused'
+			elif "sad".is_subsequence_of(expression): expression = 'sad'
+			elif "shock".is_subsequence_of(expression): expression = 'shock'
+			elif "smitten".is_subsequence_of(expression): expression = 'smitten'
+			
+			var body = 'characterImages.'+parsedInfo+'.hazmat.'+expression+'['+expNum+']'
+			parse_position(info, 'systems.display.image('+body+', 1)', body, i+2, pos)
 		_:
 			num = str(search('return characterImages.'+parsedInfo+'.body', info[i]))
 			parse_expression(info, parsedInfo, 'characterImages.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
@@ -728,11 +853,6 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	if i == info.size(): # Don't use an expression if none is given.
 		parse_position(info, 'systems.display.image('+body+', 1)', body, i, pos)
 		return
-	
-	if 'squat'.is_subsequence_ofi(bodyType):
-		parsedInfo += '.squatting'
-	elif 'knife'.is_subsequence_ofi(bodyType):
-		parsedInfo += '.knife'
 	
 	if info[i].find('|') != -1:
 		var tmp = info[i].split('|', false)
@@ -816,6 +936,11 @@ func parse_expnum(expression, parsedInfo):
 	elif 'med' == expression.substr(length-3, 3):
 		return '1'
 	elif 'max' == expression.substr(length-3, 3):
+		if "angry".is_subsequence_of(expression): expression = 'angry'
+		elif "confused".is_subsequence_of(expression): expression = 'confused'
+		elif "sad".is_subsequence_of(expression): expression = 'sad'
+		elif "shock".is_subsequence_of(expression): expression = 'shock'
+		elif "smitten".is_subsequence_of(expression): expression = 'smitten'
 		var num = execreturn('return characterImages.'+parsedInfo+'.'+expression.rstrip('max')+'.size()')
 		if num == 3:
 			return '2'

@@ -33,6 +33,7 @@ func _input(event):
 			if global.sliding:
 				for child in get_node('../../../../Display').get_children():
 					if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
+						print(child.name)
 						child.finish()
 				global.sliding = false
 			
@@ -117,8 +118,10 @@ func compartmentalise(longText):
 			
 			if currentSentence.find(' ', 0) != -1:
 				# To make sure that next substring doesn't begin with a blank space
+				var tempMAX = charMAX
 				while currentSentence.ends_with(' ') == false:
-					currentSentence = currentSentence.substr(0, sentenceCharIndex - 1)
+					currentSentence = currentSentence.substr(0, tempMAX - 1)
+					tempMAX -= 1
 					sentenceCharIndex -= 1
 			
 #			Add substring to array

@@ -767,24 +767,9 @@ func nodelayers(index):
 	# If index is 0 or layers is size 1 then add to the bgnode.
 	if index == 0 or layers.size() == 1:
 		bgnode.add_child(layers[0]['node'])
-	
-	# If the last in layers then order the nodes accordingly.
-	elif index == layers.size() - 1:
-		bgnode.add_child(layers[index]['node'])
-		var children = bgnode.get_children()
-		var start = layers.size() - 1 - index
-		for i in range(start, children.size() - 1):
-			bgnode.remove_child(children[i])
-			bgnode.add_child(layers[i]['node'])
-	
-	# Else reorder the nodes properly.
 	else:
-		bgnode.add_child(layers[index]['node'])
-		var children = bgnode.get_children()
-		var start= layers.size() - index
-		for i in range(start, children.size() - 1):
-			bgnode.remove_child(children[i])
-			bgnode.add_child(layers[index + 1]['node'])
+		add_child(layers[index]['node'])
+		move_child(layers[index]['node'], index)
 
 
 

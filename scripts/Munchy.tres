@@ -1,0 +1,1810 @@
+[Scene: Enlisting]
+
+(PCPG) !enlist rowdys
+
+(Ben|Ben, campus, slouch, neutral) Well, shit.
+
+[Ben Leaves]
+[SLIDE, Munchy, left, center]
+
+[After a few seconds, the screen flashes pink]
+
+A whole slew of different shades of pink flash around me, blinding in their intensity. The light is so strong that I feel like I could have a fucking seizure at any moment. Thankfully though, the light dies down after a little bit, and at the same time... I feel relieved. I feel like I may have just stumbled upon a kind of experience I’ll never forget.
+
+(Munchy|Munchy, campus, squatting, happyMAX) Fuck YES!! Glad you chose to be on the right side of HISTORY, my man!
+
+(PCPG) Wait, I don’t understand. What the fuck was that all about?
+
+(Munchy|Munchy, campus, crossing, neutral) Well, I hate to break it to you (lol, I don’t), but you’ve just made the semi-irreversible decision of GETTING ROWDY. Maybe if I were a fucking slack-jawed, knuckle-dragging retarded idiot, I’d go off on how this decision impacts you in a way related to some nebulous video game mechanics.
+
+(Munchy|Munchy, campus, squatting, angryMED) But I’m not. This is reality motherfucker. This is feeling. This is touch. After this, there’s no turning back, unless you wanna totally fucking obliterate any chance you have of being on friendly terms with the Rowdys. 
+
+(Munchy|Munchy, campus, default, neutral) And by that I mean, I can pardon you. But hey, you’ve come this far, right? Let’s head over to the lunch table your new cohorts are sitting at first. I’ll introduce you.
+
+(PCPG) Uh, sure.
+
+This is all starting to freak me out a little bit. Feeling? Touch? What is this guy even saying? Is he on DRUGS or something? No, I must calm myself. This is my life now. I made my Rowdy bed, and now I gotta… what do they call it? ‘Thashing’? I think I remember hearing something like that.
+
+[Scene: !data rowdies]
+
+[StopMusic]
+[Location: dininghall.norowdies, dininghall.table.rowdiesforeground]
+[Song: PCPDating_HomeMorning]
+
+Anyways, we head for the cafeteria, and I notice Gibbon is sitting at the Mud Puddle table. Rather than make a fool of myself trying to explain what I just did, and how that cuts me off from joining him today, I simply try to ignore him and join Munchy at the line.
+
+I’m eyeing a few things I think look tasty, when I feel Munchy nudge my shoulder a bit. He hands me an energy drink. The label on it reads ‘Bang Energy: FUEL YOUR DESTINY - Cotton Candy Flavor’.
+
+(PCPG) Huh? Oh, thanks!
+
+(Munchy|Munchy, campus, default, happyMIN) No problem dude. That shit is what ALL real Rowdys strive for. They’ve got other flavors, I guess, but they’re all fucking trivial compared to the sweet rejuvenating essence found in Cotton Candy. A good friend like Bang will get you prepped for what being a Rowdy is really all about.
+
+He keeps talking about all this ‘Rowdy’ stuff, but I still don’t have a good grasp on what it all means. Maybe I should just wait and see what the others are like, first.
+
+After getting our food, we walk on over to the absolute cacophony that is the Rowdys table. The atmosphere is completely overwhelming. The video games, the hollering and hooting, the portable speaker that seems to be blasting… what the fuck is that… ‘gamering’?! Oh God, this was a terrible mista-
+
+(Munchy|Munchy, campus, default, confusedMIN) Yo, what’s the hold up man? Just sit down. Everyone’s waiting to hear about the new arrival.
+
+(PCPG) Ah, yeah, s-sure.
+
+(Munchy|Munchy, campus, crossing, angryMIN) ALRIGHT EVERYONE, LISTEN THE FUCK UP! WE HAVE A NEW! RECRUIT!! Gentlemen, if you would do me the honors.
+
+
+(Crocs, happy, Offleft, slide, left) !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH
+
+(Connor|BLUE WHALE, happy, Offright, slide, right) !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH
+
+(Munchy|Munchy, campus, squatting, angryMAX) !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH
+
+All three of them just start violently moving their arms and legs up and down. What they’re doing… I can’t help but feel like it looks fucking stupid, but at the same time, mildy intriguing. Maybe I should try it.
+
+(PCPG) !thrash
+
+(Munchy|Munchy, campus, crossing, happyMED) Hell yeah dude!
+
+(Munchy|Munchy, campus, default, neutral) Alright everyone, meet PCPG. He’s a newbie around here, so I expect you ALL to impart some crucial knowledge about Rowdy Culture onto him.
+
+(Connor|BLUE WHALE, neutral) yo.
+
+(Crocs, happy) Howdy!
+
+(PCPG) Uh, hey. What are you guys all doing? Making plans to take out those Killers over there, I bet! Hehe…
+
+(Connor|BLUE WHALE, disappointed) what? no.
+
+(Crocs, neutral) Yeah, nah. There’s no need to worry about those chumps. Me and Blue Whale were just playing some Super Thrash Bros. Wanna join?
+
+(PCPG) Oh uh, yeah sure.
+
+I look down at the console they’re using. It seems to just be a modded version of Smash, but the only difference is a title change, and a garish hue-shift to make everything some incredibly saturated shade of pink. It seems as though Rowdys and Killers alike both have this weird, almost autistic obsession with coating everything in their associated color. 
+
+Anyways, right as I try to pick up the controller, the bell rings. Damnit! I’ll never be a real Rowdy if school is gonna get in the way like this.
+
+(Crocs, neutral) Ah damn, I guess that’s just how it is on this bitch of an earth. Let’s meet back at the Roughhouse later after school, okay? Then we’ll see if you’re a real gamer like me and Blue Whale.
+
+(PCPG) Sounds sick. Do you know how to get there from the school?
+
+(Crocs, happy) I don’t have the directions off the top of my head, but let’s just say you’ll hear where it is before you see where it is.
+
+(PCPG) Oh uh, okay…
+
+[Munchy leaves]
+[Connor leaves]
+[Crocs leaves]
+
+[Fade to black]
+
+[Scene: In the Rowdy Roughhouse]
+
+At first I didn’t realize what Crocs meant by that, but after not too long it became pretty apparent. The subwoofers, my God, I could hear them from a mile away. And as I got closer, everything, all the buildings around me also adopted many different shades of magenta and fuchsia, not unlike the ones I saw in my vision when I first enlisted. This must be the place.
+
+[StopMusic]
+[Location: rowdyroughhouse]
+[Fade from black]
+[Song: PCPDS_YungMan]
+
+When I enter into the depths, my senses are assaulted on all fronts by the disruptive aura this place oozes and radiates. The halls and walls, floors and ceilings, no spot is left unpainted or undyed. It fucking reeks in here, and what’s more, there are speakers left and right, all with the label ‘LIL D00P’ plastered on them. Close by, there's a digital jukebox that’s running through a playlist called ‘the-rowdy-themes’. Looking at the queue, it’s just a repeat of the same song for hours - ‘YMCA reworked to Minor Key’.
+
+After wandering around for a little while, I heard some commotion coming from a nearby room, loud enough to overpower the clangorous “YOUNG MAN”s and “Y! M! C! A!”s.
+
+(Connor|BLUE WHALE, angry, left, fade) ah! fuck! damnit crocs! why do you always want to play with items on!
+
+(Crocs, happy, right, fade) Hehehe… No reason... Actually. There IS a reason: so I can win.
+
+(Connor|BLUE WHALE, happy) haha… classic paradox crocs. oh hey, what’s up PCPG.
+
+(PCPG) Not much, just wanted to come over and hang out I guess. Mind if I hop in?
+
+(Crocs, neutral) Sure, go ahead… just try not to get totally owned, okay?
+
+(PCPG) Heh, same to you, Paradox Crocs.
+
+(Crocs, neutral) Please, just call me Crocs.
+
+We play for a few rounds. It dawns on me that these guys actually suck at this game, and I’m able to beat them with relative ease. I mean, I’ve been playing video games ever since I could hold a controller, so maybe my gaming prowess is just on another level compared to them. 
+
+I hear some shuffling coming from the hallway. Munchy walks in with a few boxes of Papa Gino’s pizza. The scent of it is welcoming, but I guess anything would be compared to the fragrance of piss and energy drinks that litters this place.
+
+(Munchy|Munchy, casual, crossing, happyMED, Offleft, slide, center) Pass the controller bros. I’m just about fucking clamoring for some quality gaming with my fellow Rowdys.
+
+As soon as Munchy plugs his controller in and selects his character, I notice him do something a bit strange. For some reason, he puts Crocs, Blue Whale, and himself all on the same team, leaving it a 1-on-3 for me.
+
+(PCPG) Hey, shouldn’t one of you be on my team?
+
+(Connor|BLUE WHALE, disappointed) oh wow, he really doesn’t know huh.
+
+(Crocs, happy) Here we fucking go. Always epic to see a new guy go through the fucking wringer.
+
+(Munchy|Munchy, casual, default, angryMIN) Consider this your trial by fire. You may have enlisted and gone through the whole thing with ol’ Endless War, but to us you’re still a runt. If you thought you could just waltz in here and become best pals with all the cool Rowdys, then I’m afraid you’ve got another thing fucking coming.
+
+(Munchy|Munchy, casual, squatting, angryMAX) STOMP ‘EM, BOYS.
+
+Immediately I’m thrown into a desperate struggle, evading items and assist trophies left and right. Munchy makes it a personal effort of his to just walk up to me as Kirby and carry me off the edge. It’s surprisingly effective and catches me off guard, to the point where the fight itself wasn’t even a point of contention for the other three. 
+
+All the while though, everyone in the room is fucking howling at the absolute mayhem going on in the game. If I were with any other group of people I’d probably get pissed off at how things were so stacked against me, but I can’t help but feel like I’m having fun getting my shit pushed in when it’s these three that are the ones doing it.
+
+(Munchy|Munchy, casual, crossing, happyMED, blushies) That was fucking insane. Hold on, let’s try that again, but I have a custom map we can use. It’s called “Steel Death Cage”--
+
+Before he can elaborate on whatever sick and twisted creation he was referring to, Endless War slams open the door.
+
+[SLIDE, Crocs, right, left-150]
+[SLIDE, Connor, left, left+350]
+[SLIDE, Munchy, right, right-350]
+
+[StopMusic]
+[SFX: PCP-SFX_RecordScratch]
+[Song: PCPDating_ClassPhilosophy]
+
+(Endless War|Endless War, knife, confusedMAX, right+150) I cannot believe what my eye is fucking SEEING right now. Not only did you people do jack shit over at the lunch table earlier today, but now I find you practically abandoning your positions as gangsters, lounging around with useless junk food and video games. Don’t you have any pride? Don’t you have any desire to take down Ben Saint and all who serve him?
+
+(Endless War|Endless War, cross, angryMAX) I swear to Slime Invictus, I am fucking through with you people if you don’t start getting your act together and start SPREADING KILLER SLIME ALL OVER THE ASPHALT!
+
+(Connor|BLUE WHALE, disappointed) go away endless war. no one likes you.
+
+(Crocs, happy) Hehe, DIE Endless War.
+
+(Munchy|Munchy, casual, squatting, angryMED) Yeah chill the fuck out EW. Gang violence ain’t always about being ruthlessly single-minded and energetic. Sometimes you just wanna chill and live, and hang out with your bros. Only shitters believe that you have to get in fights every day. Are YOU a shitter, Endless War? Did baby make a fucking mess?
+
+(Endless War|Endless War, cross, sadMIN) This is an appalling display. To become entrenched in blatant hedonism, to devote even a second of your time away from the thrill of WAR, it makes me disgusted to even be in this room! I’d like to think at least one of you isn’t so far gone, but…
+
+(Endless War|Endless War, knife, neutral) Say… you there. PCPG. You’re an up and coming gangster yourself, am I correct? Surely you haven’t been corrupted to such a sedentary lifestyle just yet? Join me PCPG, and I will make your face the greatest in all of gang violence.
+
+[CHOICE]
+*Are you out of your fucking mind?*
+*Hey you know what, you’re right.*
+
+*Are you out of your fucking mind?*
+
+What an easy decision. This dame has clearly lost her marbles, wanting me to cut back on some quality time with my fellow Rowdys.
+
+(PCPG) Get fucked you dumb bitch. I wanna see what ‘Steel Death Cage’ is all about.
+
+(Munchy|Munchy, casual, default, happyMIN) LOL!
+
+(Crocs, happy) Hahaha, holy shit.
+
+(Endless War|Endless War, stand, confusedMIN) Ugh, you complete 3TARD! At this rate, Ben is going to win his first Slimefest, all thanks to your complete and utter laziness! Why did I even bother coming over here, I knew this kind of behavior was just waiting for me! But to see their culture demotivate you so soon, that is what truly disappoints me. I’m leaving.
+
+[Endless War leaves]
+[SFX: PCP-SFX_DoorSlam]
+
+[SLIDE, Crocs,left-150, right]
+[SLIDE, Connor, left+350, left]
+[SLIDE, Munchy, right-350, right]
+
+Endless War leaves in a stomping tantrum, but that ‘Slimefest’ thing she mentioned caught my attention.
+
+(Munchy|Munchy, casual, squatting, smittenMED) Damn dude, you really laid it on her. That was sick.
+
+(PCPG) Hehe, well, it just felt like the right thing to say I guess. The ‘Rowdy’ thing to say.
+
+(Munchy|Munchy, casual, default, happyMIN) Of course. Anyways, ready to play a few more rounds? You’re gonna like the way the next stage looks, trust me dude.
+
+I try to get a few more rounds in before I have to leave. The map we played on next threw me off guard at first, but in hindsight it makes sense, considering that Munchy was the one who made it. It’s just a giant fucking box, with a tiny gap in the middle of the top of the stage. Me, Crocs, Blue, and Munchy just fucking bounce each other around at ridiculously high percents for what feels like hours, laughing all the while. 
+
+After Crocs and Blue Whale are defeated, I manage to secure victory by throwing Munchy straight upwards, right through the aforementioned gap. This results in uproarious celebration from everyone in the room, but the glory doesn’t last long before I check the time on my phone.
+
+(PCPG) Oh fuck! 9pm already? I gotta head home to do schoolwork, see you guys later!
+
+(Munchy|Munchy, casual, crossing, neutral) Later man. Come back tomorrow, we’re gonna have another game night. Maybe you could even bring a game we could all play together, too.
+
+(PCPG) Oh yeah, sure. I’ll think of something.
+
+[Fade to black]
+
+[Connor leaves]
+[Crocs leaves]
+[Munchy leaves]
+
+I walk home, filled with comradery. I guess being in a gang isn’t such a bad thing after all, if it means I can experience moments like these. I just hope I don’t run into Endless War again, what with the heated gamer moment I had earlier.
+
+*Hey you know what, you’re right.*
+
+It was a tough choice, but I went with what my heart was telling me.
+
+(PCPG) Endless War is right. I mean, I haven’t even gotten in a single !kill yet. We should try and use this time more efficiently, and plan ahead for what the Killers might pull on us next.
+
+(Connor|BLUE WHALE, disappointed) aw what, c’mon man, don’t be a freakin’ gameplay goon.
+
+(Endless War|Endless War, cross, neutral) Don’t bother listening to them. Meet me outside, and we’ll discuss things further. I’m glad you finally understand that these so-called ‘game-nights’ will just lead to further stagnation for the Rowdys.
+
+(Munchy|Munchy, casual, crossing, shockedMIN) Yo, PCPG, I’m gonna level with you. If you go any further, it’s the end for you. The next time you set foot back in the Roughhouse, I’m throwing you into the sphere. Consider this your final warning.
+
+(PCPG) The sphere? What are you talking about?
+
+(Endless War|Endless War, knife, angryMED) Ignore it! He’s trying to throw you off! Come with me, and we will usher in a new age of WAR together!
+
+(PCPG) You’re right. Sorry Munchy, but I’m just going to have to part ways with the Rowdys for now.
+
+(Munchy|Munchy, casual, default, confusedMED) Hey, fair enough. But don’t forget what I told you. The sphere…
+
+[Connor leaves]
+[Crocs leaves]
+[Munchy leaves]
+
+[SLIDE, Endless War, right+150, offright]
+[Endless War leaves]
+
+[Fade to black]
+
+I leave the confines of the Rowdy Roughhouse, with Endless War walking just a few feet ahead of me.
+
+[Location: outsidepcpu.night]
+[Fade from black]
+
+(Endless War|Endless War, cross, happyMAX, center, fade) I’m glad you got enlightened to the true nature of the Rowdys before it was too late. They may have won countless battles against the Killers, but the moral victory is no doubt the one they always lose in the end. Now, come with me, and we will create a new age of WAR.
+
+(PCPG) What do you mean by that? What exactly are we gonna ‘create’?
+
+(Endless War|Endless War, knife, neutral) Explaining such concepts to your feeble mind would take ages. With that in mind, I’ll just keep things simple enough for you to understand: do you want to help me or not? Your mission, should you choose to accept it, will be elaborated on later.
+
+[CHOICE]
+*Hell yeah, I want a new age of WAR*
+*Er, I don’t think I’m cut out for this ‘WAR’ thing after all.*
+
+*Hell yeah, I want a new age of WAR*
+
+(PCPG) Sign me up, finally a chance to matter!
+
+(Endless War|Endless War, stand, neutral) Of course. Meet me tomorrow on the school roof at the beginning of lunch. We have much to do before we can truly bring upon this new age.
+
+[fade to black]
+[ENDLESS WAR ROUTE START]
+
+
+*Er, I don’t think I’m cut out for this ‘WAR’ thing*
+
+(PCPG) Uhh, sorry, but I think I might not be the right fit for this. I’m not even sure what exactly I’m getting into here, so I’ll just have to decline. Sorry.
+
+(Endless War|Endless War, knife, neutral) …
+
+(Endless War|Endless War, knife, shockedMED) Did you honestly think you could back out of this without consequence?
+
+Suddenly, the air grows cold around me, and Endless War begins to radiate a threatening aura. I start to back up a few steps.
+
+(Endless War|Endless War, knife, shockedMAX) Why… Why does it always have to end up like this. People join, they’re turned off by both sides, and then they leave, like none of it even mattered in the first place. The nameless faces in the sewers pile up, and things don’t get any better. 
+
+(Endless War|Endless War, knife, shockedMAX) Why can’t things just be simple, like the old days. You’ve let me down PCPG. With you at my side, I thought that things could get better around here for once, but I guess not. Perish.
+
+[SFX: PCP-SFX_KatanaSlash] 
+[Blood splatter]
+
+Before I know it, I’ve got a hole in my gut. I fucked up, big time. Using the last of my strength, I crawl on my hands and feet back into the Roughhouse.
+
+[StopMusic]
+[Location: rowdyroughhouse]
+[Fade from black]
+[Song: PCPDating_GameOver]
+
+(PCPG) M-Munchy. You’ve got to help me… Endless War, she… I... cough, cough...
+
+(Munchy|Munchy, casual, crossing, angryMIN, center, fade) …
+
+He lets out a brief sigh.
+
+(Munchy|Munchy, casual, default, sadMIN) I’m sorry PCPG. I’m a man of my word, and that means there’s only one place left for you in this world.
+
+(Munchy|Munchy, casual, crossing, angryMIN) !sphere @PCPG
+
+[Fade to black]
+
+Before I know it, everything goes black. The pain in my stomach goes away, and at this point, I’m almost certain I’m dead. But… something feels off. It feels like I’m… floating, somehow.
+
+What is this place? Is it heaven? Is it hell?
+
+(K1P) Welcome to the sphere, dude. It’s a place that exists between this world and the next. Anyways, they were nice enough to throw a gamecube and a CRT in here. Wanna help me practice my wavedashes?
+
+(PCPG) Oh God…
+
+No… /n No!! /n NOOOOOOOOOOOOOO!!!
+
+[BAD END]
+
+[Scene: Artisan]
+
+[StopMusic]
+[Fade from black]
+[Location: artclass]
+[Song: PCPDating_ClassMemes_Buttchugger]
+
+Time for a new day.
+
+(Munchy|Munchy, campus, crossing, neutral, center, fade) Class is in session, my dudes. Today, I want you all to draw something that… inspires you. Something that really gets your noggin joggin’. Something that you look at and it makes you go ‘whoa dude, like, fuck, tahaaaaa~, siiiiiick’. You guys pick up what I’m puttin’ down?
+
+(Munchy|Munchy, campus, default, neutral) Basically, just start drawing something that you’re really fond of, something that motivates you, perhaps. I’ll grade it towards the end of class. Go.
+
+Kind of a vague prompt, but it wasn’t hard for me to come up with an idea after some thinking. Looking back, I was reminded of… the Roughhouse. It's sprawling pink brick and stone, the subwoofers at every turn. I forgot the searing pain it brought to my ears, and instead remembered the almost-brilliant simplicity of the hue-shifted YMCA that had stood before me last night. I just had to draw it.
+
+(Munchy|Munchy, campus, default, neutral) Time’s up, PCPG. Let’s see what you’ve got here...
+
+[CG: PCPDS_CG_RoughhouseDrawing_Bad]
+
+Fuck.
+
+Maybe I’m not cut out for this shit.
+
+[CG End]
+
+(Munchy|Munchy, campus, crossing, shockMIN) Lol, nice. Next time, you might wanna try laying out a sketch first, it looks like you just did this in one go without any layering.
+
+(PCPG) Well, I don’t know if ‘nice’ is the way to put it, if I’m gonna be honest…
+
+(PCPG) I don’t know if drawing is really my thing. I had so much time to work on this, and in the end it just ended up looking like shit.
+
+(Munchy|Munchy, campus, squatting, happyMIN) Don’t get psyched out, man. You haven’t been here for long, so of course it’s gonna look that way to you. You just have to like, keep at it man. That’s the secret to art, really. 
+
+(Munchy|Munchy, campus, crossing, neutral) This whole learning curve ain’t easy. It just takes a lot of time, is all. Once you get a grip on things, once you get into THE ZONE, that’s when it all starts to make sense. If I gave up on drawing shitty My Little Pony fan art all those years ago, I wouldn’t be where I am today.
+
+(Munchy|Munchy, campus, crossing, neutral) Now, that said, doing what you’re doing right now without any guidance won’t get you very far. But hey, that’s what school is for, right? That, and crippling amounts of student debt, which will haunt you for all eternity. But hey, that comes later.
+
+(PCPG) Ah yeah, I guess so. Do you have any tips on what I could do to make this piece look better in particular?
+
+(Munchy|Munchy, campus, default, happyMIN) Sure, I’d love to help out.
+
+We spend a short while going over the drawing. To my surprise, he gave it a bit more praise than I was expecting, but I suppose it isn’t his job to knock everything about it. Afterwards, I feel a newfound sense of confidence, and I’m willing to give it a second shot, if it weren’t already time to head to lunch.
+
+(Munchy|Munchy, campus, crossing, neutral) So yeah, just go ahead and try some of those things I talked about. Another thing to consider is, while you didn’t sign up for this class to just read shit all day, you can still improve your art by checking out some books on anatomy. Obviously that won’t really do shit for your ability to draw houses, but hey, rounding out your skillset is important. 
+
+(Munchy|Munchy, campus, squatting, angryMIN) If you’re just autistically drawing the same thing over and over, the only thing you’re ever gonna be viewed as is just that: an autisticperson, or perhaps a savant. Whatever the case, art isn’t just…
+
+[Fade to black]
+[Fade from black
+
+(Munchy|Munchy, campus, default, neutral) Blah Blah Blah...
+
+(Munchy|Munchy, campus, crossing, happyMED) Bla, Blah BLAH, Bla Bla...
+
+[SFX: PCPDating_School_Bell]
+
+(Munchy|Munchy, campus, squatting, angryMED) Bla, Bla Bla Blahhh...
+
+
+
+(Munchy|Munchy, campus, default, shockedMED, blushies) Ah shit, there’s the bell! 
+
+(Munchy|Munchy, campus, crossing, confusedMIN) Well, you get what I mean, don’t you?
+
+(PCPG) Ah, yeah, s-sure!
+
+(Munchy|Munchy, campus, default, neutral) Cool.
+
+[Munchy leaves]
+
+Halfway through his speech, I think I started daydreaming. Being the Rowdy Fucker, the leader of a literal gang, I first expected him to be a bit more… Rowdy? 
+
+Perhaps that’s not the right word, but he’s surprisingly well-spoken, to the point where I could hear him ramble on about something for hours, and not be bothered by it. I can’t get carried away though, if I start dozing off like this, I’ll be a failure before I know it! Get it together, PCPG!
+
+[Scene: How 2 Use Slime (no ads) (working updated 2020)]
+
+[Location: hallway1]
+
+I’m on my way towards the lunchroom, when I notice Paradox Crocs and Blue Whale having a heated argument about something…
+
+(Connor|BLUE WHALE, angry, left, fade) you’re just wasting your time, crocs. it’s just going to end the way it always does.
+
+(Crocs, neutral, right, fade) Yeah, you’re probably right. But like, making Killers mad is really, really funny. There’s no way I CAN’T pass up an opportunity like this. Those noobs are gonna be rolling in their graves after I’m through with them.
+
+(Connor|BLUE WHALE, neutral) that’s simply not true.
+
+(Connor|BLUE WHALE, disappointed) killers don’t care about ben at all. any kind of ‘narrative stakes’ died a long time ago.
+
+(Crocs, neutral) Non-gamer that you are, Blue, you forget one crucial thing. This isn’t about Ben losing, because like, when has that not been the case. This is about me WINNING. This is about the comeback of Paradox “Big Iron” Crocs, a chance for me to return to the spotlight and assert my position as the top Rowdy.
+
+(Connor|BLUE WHALE, neutral) yeah, whatever.
+
+(PCPG) Hey guys, what’s up?
+
+(Crocs, neutral) Oh God, where do I BEGIN. Let’s grab some food first, and I’ll give you a quick rundown on the state of affairs.
+[Connor leaves]
+[Crocs leaves]
+
+[StopMusic]
+[Location: dininghall.norowdies, dininghall.table.rowdiesforeground]
+[Song: PCPDating_BotBustah]
+
+We don’t waste any time rushing through the lunch line. I’m shaking in anticipation at what Crocs could possibly want to tell me. It hasn’t been very long, but it feels like I’m finally starting to make some friends around here, albeit some pretty strange ones. Compared to the Killers, it seems like the Rowdys are a bunch of sewer freaks, but I guess that’s what helps them stand out in the crowd.
+
+(Crocs, angry, right, fade) Here’s the quick rundown, my dude. You see those limp-wristed KILLERS over there? Well, let me ask you a question first and foremost. This WAR, this battle of gang versus gang… do you even KNOW the meaning behind it? Do you have any idea why we’re even throwing ourselves in the line of fire?
+
+[CHOICE]
+*So we can thrash all over their corpses and take their slime!*
+*So we can uh… kill them and make Munchy, proud, I think?*
+
+*So we can thrash all over their corpses and take their slime!*
+
+(Crocs, happy) Hell yeah! I like your attitude. Keep it up, and maybe I won’t have to sit next to a RUNT anymore, and instead find myself beside a real Rowdy.
+
+(Connor|BLUE WHALE, neutral, left, fade) lower your expectations, crocs. this guy could just turn out to be another goon.
+
+(PCPG) A “goon”?
+
+(Crocs, neutral) I’ll get to that in a second.
+
+*So we can uh… kill them and make Munchy, proud, I think?*
+
+[SFX: PCP-SFX_Gunshot]
+
+(Connor|BLUE WHALE, disappointed, right, fade) jesus fucking christ, crocs!
+
+(Crocs, special) Boy oh boy. Technically you’re right about what you just said, but if you ask me, your heart’s just not in the right place. Consider yourself lucky that I just grazed you.
+
+(PCPG) R-right…
+
+Before the pain in my shoulder even hit me, the flash of his revolver blinded my eyes. I knew he was one of the more famous Rowdys out there, but it looks like it’s bad to show weakness around Paradox Crocs. I manage to blot out the minor wound with my t-shirt.
+
+(Crocs, neutral) In any case, slime is a complex substance. Whenever we take out a Killer in the heat of battle, something strange happens. Half of their slime goes directly to Munchy! Can you believe it? 
+
+(Crocs, neutral) I don’t really know how it works, maybe it’s some bullshit that has to do with Endless War, but it’s reeaaal convenient for us, since it means we don’t have to give slime to Munchy face-to-face. 
+
+(Connor|BLUE WHALE, neutral) god, don’t remind me… i still have nightmares about the old days
+
+(PCPG) Huh? What was so bad about handing slime over to Munchy directly?
+
+(Crocs, disappointed) Well, let’s just say it was done through rather extreme methods.
+
+(Crocs, disappointed) Have you, uh, have you heard of ‘vore’, PCPG?
+
+(PCPG) …
+
+The gears start to turn in my head, and a downright disgusting picture slowly unfolds. Understanding the basics of Rowdy culture is one thing, but this is just a step too far.
+
+(PCPG) I think I get the idea.
+
+(Crocs, disappointed) Good. It’s an explanation I don’t want to have to give if I can help it.
+
+(Crocs, neutral) Moving on, you might be thinking…
+
+(Crocs, neutral) Just what the fuck IS this slime stuff all about? Well, I’ll tell ya’. Every now and again, we who find ourselves in the throes of gang violence put our guns down and let our bosses do the fighting for us. It’s called “Slimefest”, and it’s when Ben and Munchy duke it out in whatever game they see fit.
+
+(Crocs, neutral) The key thing here is that the Kingpins don’t start off on equal footing, not usually at least. Kingpins are given resources in the game determined by how much slime each of them have, so it’s important for us Rowdys to go out on the offensive. Slimefest is a game of inches. At least it’s supposed to be, if it weren’t for, well...
+
+(Connor|BLUE WHALE, happy) if it weren’t for the fact that ben sucks at almost every video game, lol.
+
+(Crocs, happy) Yeah, basically. In my opinion though, it’s still fun to see just HOW MUCH Ben can eat shit and lose, even if the outcome is predetermined.
+
+(PCPG) Wait, for real? Has Ben even won this Slimefest before?
+
+(Connor|BLUE WHALE, neutral) no. there was like, maybe one time where ben had a decent chance, but otherwise it’s stacked in munchy’s favor.
+
+(PCPG) This doesn’t sound fair at all. Maybe it would be better if us gangsters played instead of the Kingpins?
+
+(Connor|BLUE WHALE, disappointed) i mean, i guess. but for now we just kind of sit back and watch munchy kick ben’s ass. munchy takes the in-game victory, and ben uh, ben takes the ‘moral’ victory. everyone goes home afterwards, and it's like nothing ever happened.
+
+(Crocs, angry) It’s about the journey, not the destination Blue.
+
+(Crocs, neutral) Gonna get to the point though. Munchy has miraculously coaxed Ben out of his ivory tower, and another Slimefest is on the horizon. The game hasn’t been decided yet, but the plan is to convince Munchy to pick something most Rowdys are already good at so we can give him a training session that’ll set him on the path to victory.
+
+(Crocs, neutral) A sick plan, don’tcha think? We’re gonna try and get him to play Nuclear Throne, I think it’s a good fit given that the game is about infecting yourself with toxic waste, just like slime.
+
+(PCPG) Damn, you’re pretty good, Crocs.
+
+(Crocs, happy) Heh, I didn’t become a Consort for nothing.
+
+(PCPG) Huh? What’s a Consort?
+
+(Crocs, neutral) Blue Whale, you take the lead here, I gotta snack on some game fuel for a sec.
+
+(Connor|BLUE WHALE, neutral) uh, sure. a consort is just a rowdy who munchy deems cool enough to get a special title. me and crocs have one. back then it was sort of this cool way for your kingpin to acknowledge you, but these days people treat it like a celebrity status, as in, everyone wants to be one. this kind of relates to what being a ‘goon’ is, in a way.
+
+(Connor|BLUE WHALE, neutral) a goon is just someone who spends all their time doing gang violence, and pretty much nothing else. in my opinion it's a lot cooler for you to draw fanart, or something. killing a lot of people doesn’t really make you special. plenty of people go down this road and they just end up quitting because no one strokes their ego.
+
+(Connor|BLUE WHALE, neutral) when in reality, what makes gang violence so special is that you can use it to make friends with people, and give yourself inspiration to make good art. that’s what it's supposed to be all about, but most people don’t even get to the ‘making friends’ part.
+
+(Connor|BLUE WHALE, neutral) it’s a bit of a meme in our community, but people on both sides of the gang warfare have talked about this thing called ‘culture death’. it’s a nightmare scenario where everyone just focuses on killing each other, and not on the important stuff, like making other people laugh with your shitty meme edits, or something.
+
+(Connor|BLUE WHALE, neutral) in short, don’t be a goon PCPG. you don’t even have to kill people all that much, really. as long as you make cool art and have fun, you won’t be thrown into the dumpster. i don’t know if i can say the same for the killers though, i don’t hang out in the cathedral that much.
+
+(Crocs, disappointed) Oh God, the Cathedral. That place is a den of goons if I’ve ever seen one. 
+
+(Crocs, neutral) Completely unrelated to that though, me and Blue Whale were gonna head back to the Roughhouse after school for a game night. You down?
+
+(PCPG) Hell yeah!
+
+(Crocs, happy) Sick. If you have a game in mind that we could play for Slimefest, be sure to bring it. I still think Nuclear Throne is a good idea, but maybe yours could be even better.
+
+(PCPG) Gotcha. See you guys later.
+
+[Connor leaves]
+[Crocs leaves]
+
+[Scene: Rowdy Reflection]
+
+[StopMusic]
+[Location: pcpgroom]
+[Song: PCPDating_HomeNight]
+
+Man, what a day…
+
+I may not have gotten a kill in yet as a Rowdy runt, but maybe that’s not as important as it seems. Blue and Crocs, while they do strike me as guys who have been on the warpath once or twice, seemed more concerned about how gang violence can help turn you into a better person, as strange as that sounds.
+
+Becoming a Rowdy has given my life so many twists and turns, it’s no wonder people turn to a life of crime, at least when Munchy and Ben are involved. I just hope I don’t run into Endless War again, I’ve definitely gotten on her bad side after what happened yesterday.
+
+As far as art class goes, however, I think it might be the first time in my life where I’m actually enjoying doing schoolwork. Even though what I made today was borderline shit, Munchy saw potential in it. Well, maybe it’s just him doing his job, encouraging me and all.
+
+On my way to the Roughhouse, I start to feel anxious about what the others are gonna think about what I brought to game night.
+
+[CG: Battle Builder]
+
+It’s a practically unplayable bargain bin title I found lying around in my room. I don’t even remember why I haven’t canned it at this point, but I guess not doing so worked in my favor this time, since every other game I have is just single-player.
+
+Still though, it’s better than nothing. I’m sure everyone will have a good laugh at it, and then it can just be swept under the rug.
+
+[CG end]
+
+[Scene: Game of Thrones]
+
+The familiar hum of the subwoofers guides me all the way to the Roughhouse proper, except this time they don’t bother me as much. At this rate I think I could get used to hanging around here. What does surprise me though, is what song the speakers are blasting this time around.
+
+[StopMusic]
+[Location: rowdyroughhouse]
+[Song: PCPDating_Karkalicious]
+
+Apparently someone cleared the queue of ‘YMCA reworked to Minor Key’ and instead put on something called ‘Karkalicious+++ Deluxe DLC Bonus Chapter Pro Premium Edition’. It’s intentionally grating on the ears, and although I want to consider myself a Rowdy at heart, I don’t know if blatant self-inflicted torture on the eardrums (more so than usual) is a part of what being a Rowdy truly is. 
+
+Then again, that could just as easily be the case, there’s really no telling with these guys sometimes. In fact, the music is so deafening that I kind of want to shut it down myself. Let’s see here…
+
+{ACCESS DENIED, REASON: don’t kill the vibe.}
+
+What the hell? I guess it’s locked to higher level Rowdys only.
+
+(Munchy|Munchy, casual, default, neutral, Offleft, slide, center) Ah, is LIL’ D00P giving you trouble? Don’t worry man, I got you.
+
+[StopMusic]
+[Song: PCPDating_Feed]
+
+(Munchy|Munchy, casual, crossing, confusedMIN) There, that should do it. Sometimes the guys around here get carried away with this thing, it happens. I take it you’re here for game night?
+
+(PCPG) O-Oh, yeah! There wasn’t much lying around at my house, but I did manage to dig something up. Where are the others?
+
+(Munchy|Munchy, casual, default, neutral) They’re in the other room here, I think they’re just going over their strats in Nuclear Throne. Follow me.
+
+I head into the main room again with Munchy. Just like the other day, Crocs and Blue are seated in front of the CRT. From the looks of it, history is repeating itself right in front of my eyes.
+
+(Connor|BLUE WHALE, angry, right, fade) crocs, you motherfucker. you were supposed to pick strong spirit. we’re just going to eat shit and die to lil’ hunter again like last time.
+
+(Crocs, neutral, left, fade) Yeah, whatever man. Everybody knows plasma guts is WAY better than any other mutation in the game.
+
+(Connor|BLUE WHALE, disappointed) that’s… that’s not even the right name of that mutation.
+
+(Crocs, angry) I don’t see how that’s relevant. Are YOU sure YOU know how to play this game, Blue?
+
+(Connor|BLUE WHALE, angry) this is bullshit, i don’t want to play anymore. someone else tag in.
+
+[SLIDE, Connor, right, Offright]
+[SLIDE, Munchy, center, right]
+
+(Munchy|Munchy, casual, default, confusedMED) Perfect timing… Wait. Oh God, Crocs, why the fuck are you playing as Frog, this is a disaster.
+
+(Crocs, neutral) I don’t want to hear any more questions. Just unpause the game already.
+
+(Munchy|Munchy, casual, squatting, angryMED) No, this is so unbelievably fucked, let’s start over.
+
+(Crocs, neutral) Well, actually, I’ve already been playing Nuclear Throne for like 2 hours now. Maybe PCPG could tag along instead?
+
+(PCPG) Sure. I don’t think I’ve played this game before though, you think you can teach me some things, Munchy?
+
+(Munchy|Munchy, casual, default, happyMIN) Fine by me.
+
+(Munchy|Munchy, casual, crossing, neutral) This game isn’t really that difficult to grasp. Just shoot things, and collect the weird green shit off of their corpses. It’s kind of like gang violence, in that sense.
+
+(PCPG) Oh, sick.
+
+Munchy and I start playing through the game, and for starters, it’s a lot more fun than smash. I guess it’s mostly due to the fact that it’s a cooperative experience, rather than having three other people beat the shit out of me. 
+
+It’s pretty intense, and all the while, Munchy and Crocs are cracking jokes, mostly back-seat-gaming me at the same time. I keep dying a lot, but Munchy’s able to carry us both up to The Throne boss fight itself.
+
+(Munchy|Munchy, casual, crossing, happyMED) Oh here, I wanna show you something REALLY funny. Stand on the red carpet here for a second.
+
+A few seconds pass, and before I can even parse what the ‘joke’ is, I’m fucking obliterated by a huge laser beam The Throne shoots at me.
+
+(Munchy|Munchy, casual, squatting, happyMAX) LOL, fucking owned, dude.
+
+(Crocs, happy) Nice one, up five Munchy.
+
+(Munchy|Munchy, casual, default, happyMIN, blushies) Whoa hold on, I think doing that might have actually ruined everything, lol.
+
+The throne starts trampling over my character’s corpse, and in a few minutes the screen is riddled with bullets. It doesn’t take long before Munchy runs out of ammo, and dies altogether.
+
+(Munchy|Munchy, casual, default, confusedMIN) Shit. Well, whatever. Hey… didn’t you say you brought something PCPG?
+
+(PCPG) Ah, yeah. I’ll put it in real quick.
+
+I’m still a bit nervous as to how the guys are gonna feel about the game, but there’s no point in holding off on showing it to them. After some brief setup, that familiar startup screen from my childhood lights up on the CRT.
+
+[Location: rowdyroughhouse.game]
+
+(Munchy|Munchy, casual, crossing, confusedMAX) So what’s this game all about? I’m taking a look at the cover here, but it’s really bizarre. Is it a shooter, or something?
+
+(PCPG) The simplest answer I can give you is uh…
+
+(PCPG) It’s like Minecraft… with guns…
+
+(Munchy|Munchy, casual, squatting, happyMED) Holy fucking shit, sign me UP.
+
+(Crocs, neutral) Yeah hold on, pass me the controller.
+
+(PCPG) Ah, sorry. It’s two player only, I’m afraid.
+
+(Crocs, angry) Damn it! I call next in line, then.
+
+(PCPG) Alright, let’s get a match going. Every map is pre-generated.
+
+(Munchy|Munchy, casual, default, confusedMIN) Wait, I’m still confused. What’s the objective?
+
+(PCPG) It’s a game where you go running around, shooting people, and building things, and digging tunnels with your pickaxe and shovel. The question is, which of you can capture the enemy intelligence, or flag, three times before time runs out.
+
+(Munchy|Munchy, casual, default, happyMIN) Wait, so it literally IS Minecraft with guns? Jesus Christ, lol.
+
+(PCPG) Yeah, haha. It’s normally supposed to be played with a bunch of other people, but the servers for it shut down almost a decade ago. Now you just kind of play hide and seek with one other person, shooting each other every now and then. It’s not the way it’s supposed to be played, but it’s still a lot of fun, I think. It might not be the best fit for Slimefest.
+
+(Munchy|Munchy, casual, crossing, neutral) I see...
+
+We go for a few rounds, and it immediately becomes apparent that the split screen view of the game for each player turns it into an absolute nightmare to play. Calling this hide and seek was an understatement, because every time we manage to spot each other, the oncoming gunfire from both of us causes a kind of panic I haven’t felt in years. Even though the graphics suck ass, the level of immersion is off the charts. 
+
+Eventually though, I manage to tunnel my way through to his intelligence and win every single time.
+
+(PCPG) Man, that was fucking brutal. It’s fun though, isn’t it? I still think Nuclear Throne might be the better option, though... 
+
+(Munchy|Munchy, casual, crossing, neutral) No… no you know what, this is perfect. I may have played some FPS games in my youth, but this is something else entirely. The blocky textures, the shitty controls… it’s a complete and utter shitshow.
+
+(Munchy|Munchy, casual, squatting, happyMED) But that might make it the perfect form of entertainment, me and him jumping blindly into something neither of us have ever played before. Nuclear Throne IS pretty sick but I’ll take this into consideration too. Thanks for showing it to me, man.
+
+(PCPG) No problem, dude! You guys can hold onto it, I think I’m gonna head out.
+
+(Connor|BLUE WHALE, disappointed, center, fade) this can’t end well.
+
+(Crocs, happy) Don’t be such a prude, Blue Whale. This is gonna be the best Slimefest yet, I can feel it.
+
+Another great day at the Roughhouse. I don’t know whether to be excited or afraid that Battle Builder could be the game that gets played for the upcoming battle between Munchy and Ben, but if tonight was anything to go by, I’m sure it’ll be a lot of fun for everyone involved when the time comes.
+
+[Connor leaves]
+[Crocs leaves]
+[Munchy leaves]
+
+[Scene: Lonesome Cactus]
+
+[StopMusic]
+[Location: artclass]
+[Song: PCPDating_ClassMemes_Megalovania]
+
+(Munchy|Munchy, campus, squatting, angryMIN, center, fade) Another day in the slammer, students. For the next forty-five minutes, I expect you people to fucking CREATE something. Where I went to school, there were so many people trying to find a way to get out of making art it was almost disgusting.
+
+(Munchy|Munchy, campus, crossing, neutral) Now that I’m the one in charge, however, I won’t let a single one of you get under the impression that you can just slack your way through this class. 
+
+(Munchy|Munchy, campus, crossing, angryMED) Yesterday was the baby shit. Today we’re going to get into the real reason why you took this class: to learn how to actually DRAW, motherfuckers.
+
+He starts pointing at a picture put up on the front board.
+
+(Munchy|Munchy, campus, squatting, angryMIN) Do you guys see what I’m seeing? This shit right here is FANEUIL. HALL. I could go on and on about the rich history of the building, but today we’re going to focus on the visual aspects of it. 
+
+(Munchy|Munchy, campus, crossing, neutral) Do you get bored looking at the beauty of this fucking building? Well, normally I’d tell you to fuck off and get out of class if that were the case, but this is just a SLIVER of the kind of architecture you’ll find in Boston, which is a cornerstone of this kind of shit.
+
+(Munchy|Munchy, campus, default, neutral) I’ll get to the point though. Today we’re going to draw architecture. As tempting as it might be to draw your kawaii uguu anime OC all the time, a good grip on reality is just as important. Anatomy isn’t everything. Give your best attempt to draw this kind of shit, and I’ll grade it towards the end of class, just like yesterday.
+
+Sick! I’ve totally got a headstart this time, since I can just re-do the picture of the Rowdy Roughhouse that I made.
+
+Let’s see…
+
+Some more details in the foreground might work here…
+
+Gotta add background stuff as well…
+
+Aaaand, done! Just in time, I think Munchy’s coming over to critique it.
+
+[CG: PCPDS_CG_RoughhouseDrawing_Good]
+
+(Munchy|Munchy) Oh man, this looks so much better. See what I tell you man? You just have to put in actual effort if you wanna get results. It’s a shame so many people fail to get that far, but I can tell you’re not like that. Keep at it man.
+
+(PCPG) Ah yeah, sure. Maybe one day, I could… you know… become a Consort?
+
+[CG end]
+
+(Munchy|Munchy, campus, crossing, neutral) …
+
+(Munchy|Munchy, campus, crossing, confusedMED) Eh. It’s not out of the question, but…
+
+(Munchy|Munchy, campus, default, neutral) Don’t let that become your main motivation. You should just try and make art for your own sake, not to please a crowd. Though, it does feel good to be praised, don’t get me wrong.
+
+(Munchy|Munchy, campus, crossing, happyMIN) You did good today though. And hey, you don’t have to JUST make art because I told you to. You can do whatever you want on your own time. See you later brah.
+
+(PCPG) Uh, yeah, see you later…
+
+[Munchy leaves]
+
+[SFX: PCPDating_School_Bell]
+
+That was a bit of a bummer, I didn’t mean to come off as an attention whore. He still seemed to have positive things to say though, so maybe I’m just worrying too much. I just gotta keep pushing forward. 
+
+[Location: hallway2]
+
+Wandering these halls, I find my thoughts interrupted. I see Munchy walking in and out of the art room with various supplies. Ah right, if I remember correctly, he isn’t just an art teacher. Maybe this is a good opportunity to apologize to him about earlier while he prepares for the next class.
+
+[CHOICE]
+*Go back into the classroom.*
+*Head to the lunchroom.*
+
+*Go back into the classroom.*
+
+[StopMusic]
+[Location: historyclass]
+[Song: PCPDating_LibraryTheme]
+
+I walk back into art class and… holy shit! He works fast in setting everything up!
+
+(Munchy|Munchy, campus, crossing, neutral, center, fade) Oh hey, what’s up man. You need anything?
+
+(PCPG) Oh yeah uh… actually, I forgot what I even came here for. Say, what is all this shit? Ah, wait, this is supposed to be history class, right?
+
+(Munchy|Munchy, campus, default, happyMIN) That’s correct. The way most schools teach history is boring as shit though, so I try and shake things up a bit. If you wanna come into class later, I’d be cool with that.
+
+(PCPG) Nah, it’s fine. Hey, who’s that guy on the poster over here in the corner?
+
+(Munchy|Munchy, campus, squatting, happyMED) Oh fuck, where do I even begin. This guy’s called Thoth, as in, the Egyptian god Thoth. Basically, he did a bunch of cool shit way back in Egypt, which lead to the development of society and human consciousness as we know it.
+
+(PCPG) Wait, but he isn’t actually real though, is he?
+
+(Munchy|Munchy, campus, crossing, neutral) Everyone’s rather conflicted on that part. Apparently he only shows himself to people he deems worthy. Or you know, insane as shit, lol. It’s all explained in a larger teaching of this thing called ‘Spirit Science’, but I’ve got a good feeling it’s not actually real.
+
+(Munchy|Munchy, campus, crossing, happyMIN) It is interesting to think about though, that people can interpret history in such a bizarre way, don't you think?
+
+(PCPG) Thoth, huh. The whole thing sounds rather intriguing.
+
+(Munchy|Munchy, campus, default, neutral) Don’t stick around here too long, by the way. I think the other Rowdys wanted to meet you in the lunchroom today for something important.
+
+(PCPG) Oh shit, you’re right. See you later.
+[Munchy leaves]
+*
+*Head to the lunchroom.*
+
+    Nah, I’m sure he’s probably busy. I’ll just meet up with the Rowdys instead.
+*
+
+[Scene: Bustin’ in Boston]
+
+[Location: dininghall.norowdies, dininghall.table.rowdiesforeground]
+
+I’m reminded again about what he said in art class earlier… it feels really hard to not want to be a Consort, to just let that desire disappear. Every Rowdy I’ve met so far has been a cool person to hang out with, and I want them to respect me for who I am rather than just staying a runt forever. 
+
+I guess that too will change as time passes, though. Gotta keep my head held high, and my gun loaded… if only I had one. Speaking of which, I see some Killers giving me some sharp stares. Hopefully today isn’t the day that I have to shed blood.
+
+(PCPG) Yo, what’s up guys?
+
+(Crocs, neutral, left, fade) Nothing much…
+
+(Connor|BLUE WHALE, neutral, right, fade) yeah, nothing…
+
+(PCPG) …
+
+(PCPG) Is something wrong?
+
+(Crocs, angry) Yeah… YOU!
+
+(PCPG) H-huh?
+
+(Crocs, disappointed) Listen PCPG, I hate to bust your balls, but we’ve had just about enough of sitting next to a guy who hasn’t even gotten a single kill before. It’s just flat out unacceptable behavior for any Rowdy, or Killer, for that matter.
+
+(Crocs, happy) Now, that being said, starting a riot in the lunchroom, while hilarious, would also be fucking stupid. As Rowdy as that sounds, we have MUCH better plans for you.
+
+(Connor|BLUE WHALE, neutral) see that tub of coleslaw on the table?
+
+(PCPG) Yeah?
+
+(Connor|BLUE WHALE, happy) hehehe… hold onto it. you’re gonna need it where we’re going.
+
+(Crocs, neutral) Follow my lead. We’re gonna head to where the sun don’t shine.
+
+[Connor leaves]
+[Crocs leaves]
+
+[StopMusic]
+[Location: sewers]
+[Song: PCPDating_Tension]
+
+It fucking reeks in here, worse than the Roughhouse by a mile. The blackened cobblestone and dangling chains give off a vibe I can’t describe in words. It’s also dark as shit, with the only light source being the glow of toxic waste flowing close by.
+
+(Crocs, disappointed, left, fade) G-Gee… it’s more dark in here than usual.
+
+(Connor|BLUE WHALE, neutral, right, fade) did you bring a light?
+
+(Crocs, neutral) No…
+
+(Connor|BLUE WHALE, disappointed) c-classic paradox crocs.
+
+(PCPG) What’s going on? Why did you two take me here? Are you… are you gonna kill me?
+
+(Crocs, happy) No, better. We’re gonna make you fight a GHOST.
+
+(PCPG) No way, that sounds fucking awesome.
+
+(Connor|BLUE WHALE, neutral) until you’re up against one face-to-face, it can seem that way. these things can suck the slime out of your body if you’re not prepared.
+
+(Crocs, neutral) That’s what the coleslaw is for. Drink it before it’s too late.
+
+(PCPG) Gotcha.
+
+The gooey remains of a white cabbage mixed with mayo trickles down my gullet. It’s hard to swallow, but I guess this is what it takes to bust a ghost.
+
+(Crocs, neutral) Perfect. Now, all we gotta do is find-
+
+(Lord of Ghosts|The Lord of Ghosts, neutral, silhouette, center) …
+
+(Lord of Ghosts|The Lord of Ghosts, neutral) HELLO THERE, MORTALS.
+
+(Connor|BLUE WHALE, disappointed) oh god oh fuck
+
+(Crocs, disappointed) BRO WHAT THE FUCK NO SERIOUSLY LIKE BRO I’M NOT KIDDING WE GOTTA GET THE FUCK OUT OF HERE.
+
+(PCPG) Oh I know you! You’re the Lord of Gho-
+
+(Lord of Ghosts|The Lord of Ghosts, angry) BOO!
+
+(PCPG) AAAAAAHHHHHHHHHHHHHHH!!
+
+(Connor|BLUE WHALE, disappointed) jesus christ i’m getting the fuck away from this place
+
+(Crocs, disappointed) WE CAN DO THIS SOME OTHER TIME DUDE JUST BAIL.
+
+[SLIDE, Connor, right, offleft]
+[SLIDE, Crocs, left, offleft]
+
+The two Rowdys book it, leaving me in the dust. I’m spooked right onto the hard floor, just inches away from the ghastly apparition that can only have the worst of intentions.
+
+(Lord of Ghosts|The Lord of Ghosts, happy) SPOOKED YA, DIDN’T I?
+
+(PCPG) L-l-look, you can have my slime! Just don’t kill me, please!
+
+(Lord of Ghosts|The Lord of Ghosts, blush2) KILL YOU? WHY, IT NEVER ENTERED MY MIND.
+
+(Lord of Ghosts|The Lord of Ghosts, blush1) I MEAN YOU NO HARM, YOU POOR SOUL. INSTEAD, I HAVE COME TO CONGRATULATE YOU.
+
+The ghost begins to shuffle around a bit, revealing something in the process…
+
+[Lord of Ghosts leaves]
+
+I’m overcome with shock. Underneath the bedsheet was… Gibbon?
+
+(Gibbon|Gibbon, campus, handsup, smittenMAX, blushies, center, fade) Haha, It’s me! I was the Lord of Ghosts the whole time!
+
+(PCPG) Wha-
+
+(PCPG) I… I don’t understand...
+
+(Gibbon|Gibbon, campus, default, happyMED) Like I said, I wanted to congratulate you. From what I’ve seen, you’ve been doing really well in art class as of late. For you to be so enthusiastic about this school, it’s all I could have asked for. Take this, as a token of my appreciation.
+
+He hands me the bedsheet. What am I supposed to do with this?
+
+(Gibbon|Gibbon, campus, default, neutral) I followed you here the moment I saw you leave with that coleslaw of yours, figuring it would be the perfect opportunity for the others to see how far you’ve come.
+
+(PCPG) But, I’ve barely done anything. I’ve just drawn a few stupid pictures. I haven’t even killed someone yet!
+
+(Gibbon|Gibbon, campus, default, smittenMAX) Don’t push yourself, PCPG. The time will come when you’re ready. The Rowdys need you in ways you might not understand at first. Go, and take your trophy back to them. They’ll know what it means.
+
+(PCPG) …
+
+(PCPG) Well, sorry if it seems like I abandoned you the other day..
+
+(Gibbon|Gibbon, campus, handsup, happyMED) Don’t mention it. There’s a lot to love about gang violence, and about Munchy too. I understand.
+
+(PCPG) Thank you.
+
+[Gibbon leaves]
+
+[Location: dininghall.norowdies, dininghall.table.rowdiesforeground]
+
+I head out the way I came, and back into the lunchroom. With the bedsheet in hand, I can see Crocs’ and Blue Whales’ jaws drop when I walk up to the Rowdys table.
+
+(Connor|BLUE WHALE, neutral, left, fade) no fucking way.
+
+(Crocs, disappointed, right, fade) This… this can’t be. It’s simply not true!
+
+(Connor|BLUE WHALE, angry) i call bullshit. there’s no way you busted the lord of ghosts, it’s impossible.
+
+(Crocs, neutral) And yet, that bedsheet. There’s no mistaking it. You’re a hero to us all, PCPG!
+
+(PCPG) Sick, I sure feel like one. Just one punch into his stupid holes for eyes, and he was gone. I guess the coleslaw worked after all.
+
+(Crocs, disappointed) Unfortunately so. I hate having to eat that shit, but it’s the only way to get rid of ghosts. If you thought the Lord of Ghosts was scary, don’t even get me started on these guys called KOFF and Blue Manso-
+
+(PCPG) Wait…
+
+(PCPG) What’s going on over there?
+
+[Connor leaves]
+[Crocs leaves]
+
+[Location: dininghall.demo]
+
+In the corner of my eye, I can see Munchy and Ben having a heated discussion in the middle of the lunchroom.
+
+(Munchy|Munchy, campus, squatting, angryMIN, right, fade) Ben, you’re being a fucking baby. I have played this game for literally 20 minutes.
+
+(Ben|Ben, campus, base, angryMIN, left, fade) You might as well have played it your entire life. You’ve played way more shooters than I have, which is to say, like, zero.
+
+(Munchy|Munchy, campus, squatting, angryMAX) UGHHHHH GOOOOOD. 
+
+(Munchy|Munchy, campus, crossing, angryMIN) Look, we can just do Nuclear Throne some other time.
+
+(Ben|Ben, campus, exasperated, confusedMIN) Why are in such a rush to play this shitty game that no one in the community has ever heard of before?
+
+(Munchy|Munchy, campus, default, angryMIN) You’d understand if you’d just give it a fucking chance.
+
+(Ben|Ben, campus, base, shockMIN) No, I refuse. If it’s so good then we just record an episode for it instead, or something. Shoving it into Slimefest is nonsense.
+
+(Munchy|Munchy, campus, crossing, neutral) It’s unlike anything we’ve ever done for a Slimefest before. This is the perfect opportunity to shake things up a bit.
+
+(Ben|Ben, campus, point, neutral) I get the feeling that you’re just doing this so you’ll have an advantage…
+
+(Munchy|Munchy, campus, squatting, angryMED) Jesus fucking Christ that’s not the POINT.
+
+(Ben|Ben, campus, base, angryMIN) I’ve already made my decision.
+
+(Munchy|Munchy, campus, crossing, neutral) We’re gonna run out of games you’re already good at eventually, Ben. If we can delay that dreadful day given the opportunity, then we should take the chance.
+
+(Ben|Ben, campus, slouch, angryMAX) I guess I’m not getting through to you, huh?
+
+(Munchy|Munchy, campus, crossing, happyMIN) Heh, I can already tell where this is heading.
+
+(Ben|Ben, campus, base, happyMIN) Then, would you do me the honors, Rowdy Fucker?
+
+(Munchy|Munchy, campus, crossing, happyMED) It would be simply delightful.
+
+Munchy starts staring over at the Rowdys, and Ben at the Killers. For whatever reason, I can feel myself start to sweat, and I feel a weird sense of dread in my stomach. I hope it’s just the coleslaw.
+
+[SLIDE, Ben, left, Offleft]
+[SLIDE, Munchy, right, Offleft]
+
+(Crocs, special outfit, Offright, slide, left) Hey kid, catch!
+
+Out of nowhere, Crocs hands me one of his spare pistols.
+
+(Crocs, special outfit) One big iron is enough to kill anything that moves. Better familiarize yourself with how it works, you don’t have much time to prepare.
+
+(PCPG) What do you mean?
+
+(Connor|BLUE WHALE, neutral, Offright, slide, right) too late to ask questions.
+
+[Connor leaves]
+[Crocs leaves]
+
+(Munchy|Munchy, campus, crossing, angryMED, Offright, slide, right) ROWDY.
+
+(Ben|Ben, campus, base, happyMAX, Offleft, slide, left) FUCKERS.
+
+(Munchy|Munchy, campus, squatting, angryMAX) COP.
+
+(Ben|Ben, campus, dab, neutral) KILLERS.
+
+(Munchy|Munchy, campus, squatting, angryMAX) ENDLESS WARRRRRRRR!
+
+(Ben|Ben, campus, exasperated, angryMIN) ENDLESS WARRRRRRRR!
+
+[Munchy leaves]
+[Ben leaves]
+
+[StopMusic]
+[Song: PCPDating_ActionSerious]
+[SFX: PCP-SFX_Gunshot]
+[Song: PCP-AMBIENT_War]
+
+The lunchroom immediately descends into chaos. Bullets are flying by left and right, but I manage to duck behind a table that Crocs has flipped over for cover.
+
+(Schrafft) You can’t hide forever, PCPG. Once I heard you went over to their side, that was when you became my enemy.
+
+(Crocs, special outfit, right) Don’t listen to him. He’s just trying to annoy and bait the shit out of you. I guarantee there’s two or three more Killers just waiting for us.
+
+(PCPG) So then what do we do.
+
+(Crocs, special outfit) Only thing we can do: face bloodshed.
+
+(Connor|BLUE WHALE, neutral, left) ...well, i don’t know what crocs means but, let’s just kill them. they don’t have that much slime compared to us.
+
+(PCPG) How do you know that?
+
+(Connor|BLUE WHALE, angry) fucking 3tards, i swear. anyways, let’s just go.
+
+(Crocs, special outfit) Got it. On three.
+
+(Connor|BLUE WHALE, neutral) one…
+
+(PCPG) two…
+
+(Crocs, special outfit) GO!
+
+(PCPG) Wha-
+
+[SLIDE, Crocs, right, center]
+[SLIDE, Crocs, center, right]
+
+Crocs pushes over the table with one kick. Flashes of smoke and fire zoom out of his revolver, laying waste to the other Killers across the room
+
+[SFX: PCP-SFX_Gunshot]
+
+(Magicks, Neutral, center, fade) ah, shit.
+
+[Magicks leaves]
+
+(K1P, Neutral, center, fade) Goddamnit! Die, busters!
+
+[SFX: PCP-SFX_KatanaSlash]
+
+[SLIDE, K1P, center, offleft]
+
+Out of nowhere, this weird amphibian with a katana in its mouth zips across the room, knocking over a table behind it. The blade runs right through Blue Whale, slicing him in two.
+
+(Connor|BLUE WHALE, disappointed) whatever, cough, i didn’t even have a weapon on me anyways…
+
+[Connor leaves]
+
+(PCPG) Oh fuck, Blue Whale!
+
+[SLIDE, crocs, right, center]
+
+(Crocs, special outfit) Leave him behind. Only two more left to go.
+
+(PCPG) But…
+
+(Crocs, special outfit) You’ll understand later. Just make good use of that gun, I don’t want it to fall into the wrong hands.
+
+It didn’t hit me until now, but my hands are shaking. The cold, metal grip in my palms is covered in sweat. I don’t wanna die… I don’t wanna die!
+
+(PCPG) aaaaaaaAAAAAAAHHH!!!
+
+[SFX: PCP-SFX_Gunshot]
+
+[SLIDE, Crocs, center, right]
+
+(Crocs, special outfit) Holy shit, watch where you’re pointing that thing bro!
+
+[SFX: PCP-SFX_Gunshot]
+
+I just start firing at random, hoping to land some hits on the guy with the VR headset. One of them ricochets off the wall, and lands right into the amphibian.
+
+[SLIDE, K1P, Offleft, left]
+
+(K1P, Neutral) Gah! Fucking RNG bullshit!
+
+(Crocs, special outfit) hehe, DIE K1P!
+
+[K1P leaves]
+
+[SLIDE, Crocs, right, left]
+
+(Schrafft, Neutral, Offright, slide, right) Damn, all on my own again. Guess now’s a better time than ever.
+
+The VR headset begins to flash bright red. With a gun in his hand, his arm jerks back and forth, like it’s trying to lock on to me and Crocs.
+
+(Crocs, special outfit) Botting huh? Not surprising coming from you.
+
+(Schrafft, Neutral) All’s fair in the endless WAR. Die, buster.
+
+(Crocs, special outfit) Enough with the hard R’s, kraker. Draw.
+
+[SFX: PCP-SFX_Gunshot]
+[SLIDE, Crocs, left, left+100]
+[SFX: PCP-SFX_Gunshot]
+[SLIDE, Crocs, left+100, left+200]
+[SFX: PCP-SFX_Gunshot]
+[SLIDE, Crocs, left+200, left+300]
+
+The weird cyborg guy starts shooting bullet after bullet into Crocs, but… Crocs just tanks it. No matter how many times he’s shot, he just keeps walking forward. Is this the true power of slime?
+
+The distance between them closes, and the gun being fired runs out of bullets. Crocs grabs the barrel of the revolver and knocks the other guy onto the ground with the handle.
+
+[If possible, slide schrafft’s portrait DOWNWARDS here, to signify that he’s been knocked onto the ground.]
+
+[SLIDE, Crocs, left+300, left]
+
+(Crocs, special outfit) Hey… PCPG...
+
+(Crocs, special outfit) This one’s on me. You’ve earned it.
+
+With slime on his face, the man on the ground starts staring at me. What do I do?
+
+(Schrafft, Neutral) Heh. You know, kid, you don’t have to do this. Fire off that big iron, and there’s no going back. You’ll end up just like me one day, a withered corpse on the battlefield, thirsting for slime, and for what? Just so some guy at the top can waste it all away in some dumb videogame? Think hard before you shoot...
+
+[CHOICE]
+*Load the gun. Pull the trigger.*
+*Spare him his life.*
+
+*Load the gun. Pull the trigger.*
+
+(PCPG) No.. you’re wrong. The time for reflection is over. I made the decision to live a life of crime long ago. My time spent as a Rowdy has enlightened me to the true nature of the WAR. No second chances. No regrets.
+
+[SFX:PCP-SFX_Gunshot]
+
+[Schrafft leaves]
+
+(Crocs, special outfit) Fucking epic dude.
+
+(Munchy|Munchy, campus, crossing, smitenMED, Offright, slide, right) I can’t believe it. You’ve become a real Rowdy right in front of my eyes, PCPG. I would congratulate you, but the best is yet to come.
+
+(Munchy|Munchy, campus, squatting, happyMED) Ben. You know what this means, don’t you?
+
+(Ben|Ben, campus, slouch, sadMIN, center, fade) Ugh, no way man.
+
+(Munchy|Munchy, campus, crossing, happyMED) That’s right. Come on over to the Roughhouse tomorrow at noon, because it’s just gonna be you and me, and a giant ass fucking TV letting us decide our fate in a good game of BATTLE BUILDER. I won’t take no for an answer.
+
+(Ben|Ben, campus, slouch, neutral) Fine, but give me like 20 minutes to get used to the controls.
+
+(Munchy|Munchy, campus, crossing, confusedMED) Just pirate it or some shit, I only have one copy. I’m gonna train with the Rowdys, I expect you to do the same with the Killers. 
+
+(Munchy|Munchy, campus, crossing, neutral) That invitation goes for all you Rowdys and Killers as well. No excuses.
+
+(PCPG) But, Blue Whale…
+
+Out of nowhere, Endless War walks slowly into the lunchroom.
+
+[SLIDE, Crocs, left, left-150]
+[SLIDE, Ben, center, left+350]
+[SLIDE, Munchy, right, right-350]
+
+(Endless War|Endless War, cross, neutral, Offright, slide, right+150, 10) Don’t worry about him, or anyone who may have perished here for that matter. Because of our glorious slime, I’ll always revive those who engage in some good old fashioned WAR, if they so wish. In a WAR of slime, no one is truly gone for good.
+
+(PCPG) People can come back to life… with slime?
+
+(Munchy|Munchy, campus, default, neutral) Something like that. Let’s just hope he revives in time for tomorrow. I don’t want to have to demote him or anything. 
+
+(Munchy|Munchy, campus, default, neutral) Anyways, I’ve already said what I wanted to. Slimefest. Tomorrow. Got it, Ben? Make sure not to sleep in or anything.
+
+(Ben|Ben, campus, base, shockedMIN) Uh, sure.
+
+[Crocs, leaves]
+[Ben leaves]
+[Munchy leaves]
+[Endless War leaves]
+
+[StopMusic]
+
+The lunchroom goes dead quiet as everyone files out. When Crocs asked for his gun back, I noticed that I had a firm grip on the gun the entire time Munchy was talking. It seems like gang violence is affecting me on not just a physical level, but a mental one as well…
+*
+
+*Spare him his life.*
+
+(PCPG) I hate to admit it, but you’re right. I can’t take your life in good conscience, even if it’s something I feel like I’ve wanted to do ever since I enlisted. It’s just not who I-
+
+(Crocs, special outfit) You fucking fool. I don’t want to hear one word come out of your mouth. I’ll finish him off instead.
+
+Just as crocs was about to fire off a bullet into his head, the guy with the VR headset starts doing something strange.
+
+(Schrafft, Neutral) ...hack it…
+
+The sprinklers above start spraying above, leaving an intense, stinging sensation on my skin. Isn’t this just water? Why does it hurt so much?
+
+(Schrafft, Neutral) Taste the rain, dickheads.
+
+(Crocs, special outfit) Damn, bicarbonate rain! It’s the natural enemy of slime, used to genocide our people in the old days…
+
+The pain only grows with each minute. Looking down at my hands, I notice they’re washed down to the bone! I’m gonna die if I don’t get out of here!
+
+(Munchy|Munchy, campus, squatting, angryMED, center, fade) You motherfucker. I’m having you arrested when this is over.
+
+(Schrafft, Neutral) Not my fault your lackey didn’t kill me when he had the chance.
+
+(Crocs, special outfit) PCPG... if I were you I would just lie down and let it pass. See you on the other side.
+
+(PCPG) Taking everyone down with you, even your Kingpin… How could you do this?
+
+(Schrafft, Dabbing) All’s fair in… the endless… WAR…
+
+[Crocs leaves]
+[Schrafft leaves]
+[Munchy leaves]
+
+What were once gangsters are now almost entirely skeletons. It isn’t long before the rain drives itself right into my skull, cleansing the slime from my body.
+
+[StopMusic]
+[Location: sewers]
+[Song: PCPDating_GameOver]
+
+(Connor|BLUE WHALE, disappointed, left, fade) i take it things didn’t go so well, huh.
+
+(Crocs, special outfit, right, fade) We almost had them, until this FAKE ROWDY went and ruined everything. I was wrong about you, PCPG. A real Rowdy would have NEVER gone soft on the battlefield like that.
+
+(Munchy|Munchy, campus, default, sadMIN, center, fade) Yeah what the fuck man, how are we gonna do Slimefest now? All the slime’s been fucking obliterated. Consider yourself banished.
+
+(PCPG) But, but… I didn’t think that kind of thing would happen! This isn’t even my fault!
+
+[Connor leaves]
+[Crocs leaves]
+
+(Munchy|Munchy, campus, crossing, sadMAX) Even putting that aside, you wussed out. I could never have someone in my gang who wouldn’t blow a Killer’s head off if they were in your position. You can still come to art class, but from now on, you’re fucking exiled from the Rowdys.
+
+(Munchy|Munchy, campus, squatting, sadMED) Goodbye.
+
+[Munchy leaves]
+
+The phantoms of my former comrades all dissipate one by one as they rise up through the sewers. I wanna join them, but…
+
+I just don’t have the heart to. Maybe the life of a ghost is a better fit for someone as worthless as me. Goodbye WAR. Goodbye… Rowdys…
+
+[BAD END]
+*
+
+[Scene: Ready Player Blue]
+
+[StopMusic]
+[Location: rowdyroughhouse.game]
+[Song: PCPDating_DateTheme]
+
+Not long after what happened in the lunchroom, Munchy contacted me and told me to come to the Roughhouse after school to help hone his skills for the upcoming competition. My skills at Battle Builder are a bit rusty, but I think it’ll be a fun time gearing him up to take out Ben.
+
+Finding my way to the Rowdy Roughhouse this time was easy. As soon as I got out of school, it was like I was being drawn there against my will, as if some unforeseen force was guiding me straight to it. The will to fight for my Kingpin, perhaps? Whatever the case was, I was glad to be there again. It was like a second home to me at this point.
+
+(Munchy|Munchy, casual, crossing, happyMED, Offleft, slide, center) Good to see you make it. Blue Whale and Crocs came as well, they’ve been practicing while I was waiting for you to get here.
+
+(PCPG) I see…
+
+[Munchy leaves]
+
+(Connor|BLUE WHALE, angry, left, fade) i’m right fucking here. how can you not see me?
+
+(Crocs, neutral, right, fade) You’re cheating, I just know it. If this was a fair fight, you’d come out of hiding and fight me like a real man.
+
+(Connor|BLUE WHALE, angry) i’m standing in the middle of the goddamn map, just come over here.
+
+(Munchy|Munchy, casual, default, angryMIN, center, fade) I can’t say they’ve had much success finding out meaningful strategies, they’ve mostly been dicking around.
+
+(PCPG) Uh, well, that’s fine. It’s good to get used to the controls at least. Hey guys, can we take over from here?
+
+(Crocs, angry) Damn, you win this round, Blue.
+
+(Connor|BLUE WHALE, angry) only because you kept building twin towers all over the fucking map. it was really easy to spot you. anyways, here’s the controllers.
+
+(PCPG) Thanks.
+
+[Connor leaves]
+[Crocs leaves]
+
+[Scene: Sleep Tight]
+
+Munchy and I get down to business. We spend a short while going over basic tactics, like building trenches, spotting people, and just the shooting mechanics in general. After a short while, Crocs and Blue Whale get up and leave, making it a one-on-one training session. I imagine it was probably a bit boring for them to just watch us practice stuff, so I can’t blame them.
+
+Somehow though, the atmosphere has gotten a bit… tense. I’ve only known Munchy for a short while, but staying here with him, fondly regarding a game I’ve known since childhood, it’s almost like I’ve known him my entire life. I’m not sure if I know everything there is about being a good Rowdy to Munchy, but I’d like to think I’ve learned quite a bit about being his friend.
+
+Maybe that’s a bit foolish to say though. In any case, I’m happy to be here, having fun with this shitty FPS.
+
+[Fade to black]
+[Fade from black]
+[Fade to black]
+[Fade from black]
+
+[This is to simulate PCPG slowly drifting off into sleep]
+
+Hours go by, and it seems like the toll of being entrapped in gang violence is showing. I’m starting to get really fucking tired, to the point where I’m having a hard time keeping my eyes open.
+
+(Munchy|Munchy, casual, default, confusedMIN) Hey, you alright man?
+
+(PCPG) Huh… Oh! Yeah, I’m, uh, I’m fine dude, don’t even worry about it.
+
+(Munchy|Munchy, casual, crossing, neutral) Don’t push yourself. I don’t know if I get everything about this game, but I can’t imagine Ben is in a much better position over at the Cathedral. If you want to go home early, feel free. I’ll be fine.
+
+Going back home and hitting the hay for the night is tempting, but I feel like there’s still a bit more I can do to help him win tomorrow… what should I do?
+
+[CHOICE]
+*Go home*
+*Fight through your sleep deprivation*
+
+*Go home*
+
+(PCPG) You know what, you’re right. I think I’m gonna head out.
+
+(Munchy|Munchy, casual, crossing, happyMIN) Gotcha, later man! And remember, tomorrow at noon.
+
+(PCPG) Ah, sure, yeah.
+
+[Location: pcpgroom]
+
+What a godsend, I finally get to rest after all the shit I’ve been through today. Hopefully I won’t have to get into any fights tomorrow either, I think I’ve had enough bloodshed for one week.
+
+Even though being in a gang can be fun, it seems like it brings out the worst in people as well. Hopefully I don’t turn out that way...
+
+ZZZzzz…
+
+[Fade to black]
+[StopMusic]
+[Song: PCPDating_TomsLot]
+
+…
+
+(Thoth) Disappointing… perhaps you are not who I perceived you to be.
+
+(PCPG) ?!
+
+[Location: pcpgroom]
+[Fade from black]
+
+What was up with that dream? I can’t remember much, but there was this weird guy in a bird mask, who… I felt like I’ve seen somewhere before…
+
+Oh shit, It’s 2pm! I’m late as fuck!
+
+[Location: rowdyroughhouse]
+
+I bolt into the YMCA as fast as I can. My heart is beating so much that I can practically hear it.
+
+(PCPG) Hello? Where the hell is everybody?
+
+(Crocs, neutral, offright, slide, center) Heh, I’m afraid you’re too late, PCPG.
+
+(PCPG) Fuck! What happened while I was gone? Did Munchy win?
+
+(Crocs, neutral) Let’s just say this Slimefest was one for the history books.
+
+(PCPG) Oh shit, nice! I take it Ben didn’t stand a chance, haha.
+
+(Crocs, disappointed) You don’t get it, do you.
+
+(PCPG) Huh?
+
+(Crocs, disappointed) He lost, man. Game over. For the first time, the Rowdys failed to take home the gold. Sucks, doesn’t it?
+
+[StopMusic]
+[Song: PCPDating_GameOver]
+
+(PCPG) Oh… oh God, no! This can’t be fucking happening!
+
+(Crocs, neutral) Whoa, chill out man. We’re still, like, four or five Slimefests ahead of them. They may brag about it now, but we still have the moral victory.
+
+(PCPG) No, no… this is all my fault. I can’t believe this. If I hadn’t shown up, he could’ve played Nuclear Throne and won instead. Fuck, fuck, fuck!!!
+
+(Crocs, neutral) I’m sorry man, that’s just how it is sometimes. No need to cry about it.
+
+(PCPG) No, you don’t understand. No one understands!
+
+[Crocs leaves]
+
+The guilt begins to pile up in my head. How could I let this happen? Not only was I not there for him when he needed me to train him the most, I wasn’t even there to support him at Slimefest. I’ve failed on both fronts. I’ve become the fakest Rowdy of them all, worse than even the most devoted Killer.
+
+To feel ashamed is an understatement. Even being in this room feels wrong. I can’t call myself a Rowdy anymore, not after what happened today. Even showing my face around Munchy feels like a goddamn violation of the faith he had in me. It’s all so goddamn tiresome. Goodbye, Rowdy Roughhouse. I didn’t know you for long, but it was fun while it lasted.
+
+(PCPG) !renounce
+
+[BAD END]
+*
+
+*Fight through your sleep deprivation*
+
+(PCPG) Nah, you know what. I’m gonna stay here with you. There’s still a few things left I wanna show you how to do for the big day tomorrow. Is that alright?
+
+(Munchy|Munchy, casual, default, happyMED) Sure man. I didn’t expect the game to have this much depth.
+
+(PCPG) People find a way to complicate things and do dumb shit. What Crocs was doing earlier, building a bunch of shitty towers all over the place, is actually a legitimate strategy. Here, let me show you a few things.
+
+(Munchy|Munchy, casual, crossing, happyMIN) Go ahead.
+
+With controller in hand, I manage to toughen my way through the signals that my aching bones are sending out. My body is telling me to lie down and die, but my mind is telling me that the only thing that matters is the look on Ben’s face as he eats shit and loses. I just hope I’ll have enough energy to thrash on the Killers tomorrow.
+
+
+
+[Fade to black]
+[Fade from black]
+[Fade to black]
+
+ZZZzzz...
+
+[StopMusic]
+[Song: PCPDating_Holy]
+
+…
+
+(Thoth) Hahaha, it really is you after all, my son.
+
+(PCPG) Wait... What’s happening? Who are you?
+
+(Thoth) It does not matter who I am. What matters is who you are, and your place in this sacred realm.
+
+(Thoth) Long have I waited for your reincarnation in the third dimension, and at last I have found you.
+
+(PCPG) I feel like I’ve seen you somewhere before, somehow.
+
+(PCPG) Wait a minute, that’s right! You’re-
+
+(Thoth) Yes, I am Thoth, king of Atlantis, and the indirect founder of the Tat brotherhood. That is all irrelevant now, however. I have come with a small request, my child.
+
+(PCPG) Huh?
+
+(Thoth) For thousands of years, my brothers and I have been manifesting many sacred sites on the planet into the third dimension. The place you call the ‘Rowdy Roughhouse’ is just one of those many locations I have brought into being, and it is the last node on the Christ Consciousness grid yet to be activated.
+
+(Thoth) PCPG, your destiny, your purpose on this almost-dying world, is to prime that sacred site, and activate its true potential! This I am most certain of.
+
+(PCPG) I don’t understand. What do you want me to do?
+
+(Thoth) It is not something you are capable of comprehending, I am afraid. All that I ask is that you stay by the side of your friends, and cherish them. You will know what is required of you when the time comes. Afterwards, this world as we know it will prosper, and it will all be thanks to you.
+
+(PCPG) I still don’t get it! What the fuck even is ‘Christ Consciousness’? What’s so special about the Rowdy Roughhouse?
+
+(Thoth) Fool that you are, you of all people need not ask such a question. I take my leave, and I hope the best for you come the day of your king’s victory. Awaken!
+
+(PCPG) !!!
+
+[Location: rowdyroughhouse]
+[Fade from black]
+[StopMusic]
+
+(Munchy|Munchy, casual, crossing, confusedMIN) PCPG, you falling asleep or somethin’?
+
+(PCPG) Ah!
+
+(Munchy|Munchy, casual, default, neutral) Yo, dude, seriously. If you need to go to bed, don’t waste your time here. I think I’m more than capable.
+
+(PCPG) Ah, shit, yeah. I think it's time I go home, for real this time. See you tomorrow man, Slimefest is gonna be sick.
+
+(Munchy|Munchy, casual, default, smittenMIN) Hell yeah man, thanks for all your help today. I’m a true combat veteran of this shitty block world now.
+
+(Munchy|Munchy, casual, squatting, happyMED) !thrash
+
+(PCPG) !thrash
+
+[Munchy leaves]
+*
+
+[Location: pcpgroom]
+[Song: PCPDating_ProCrastinatorShortLoop]
+
+Thank God, I’m finally home. As fucking haggard as I am, this day was packed with experiences I’ll never forget. Taking a Killer’s life, I finally did it! I’m finally a bonafide Rowdy, after all the trouble I went through. And tomorrow, I’ll just prove that fact once more, by standing with my Kingpin against the hordes of Killers that are sure to overstay their welcome at the Roughhouse.
+
+Now’s not the time for fear though. Everything is up to Munchy at this point, I’ve done all I can to give him the edge he needs. I just hope the strategies I taught him will be of use when fighting Ben, for all I know people in the Cathedral could have taught him better.
+
+Ah, what am I saying! Ben’s never won a Slimefest, and he never will! The battle fought tomorrow will be won by the Rowdy Fucker! I’ll accept no other fate than that!
+
+[Fade to black]
+[StopMusic]
+
+ZZZzzz…
+
+[Location: pcpgroom]
+[Fade from black]
+
+[SFX: PCP-SFX_AlarmClock]
+
+...yawn...
+
+Wait a minute, I don’t remember setting an alarm when I got home last night…
+
+Well, whatever. I’m wide awake, just in time for-
+
+Oh shit! It’s noon already? I’ve gotta get a fucking move on!
+
+[Scene: Rowdy. Fuckers. Cop. Killers. In...]
+
+[Location: rowdyroughhouse.game]
+[Song: PCPDating_RADCON]
+
+I’m damn near out of breath once I get into the building.
+
+(Crocs, angry, left, fade) Well well well, look who FINALLY decided to show up.
+
+(PCPG) Ah, shit, sorry I’m late everyone. Wait, where’s Ben.
+
+(Munchy|Munchy, special, crossing, angryMIN, center, fade) I was just about to get to that. God only knows what’s taking him so long…
+
+(K1P, Neutra, right, fade) He just slept in a bit, don’t worry. He’ll be here like, any minute now.
+
+(Munchy|Munchy, special, squatting, angryMED) UGHHHH. Jesus Christ.
+
+[K1P leaves]
+[Crocs leaves]
+
+(Nate|Nate, campus, smoking, happyMED, shades, Offright, slide, right) Classic Ben.
+
+(PCPG) Nate? What are you doing here?
+
+(Nate|Nate, campus, pointing, happyMIN, shades) Why, I’m here to cheer my brother on, of course. Someone’s gotta do it after all, given how little faith the Killers actually have in him.
+
+Professor Bestman is Ben’s brother? Never would’ve guessed.
+
+(Munchy|Munchy, special, crossing, neutral) Hey, I think he has a good chance if you ask me. We’re both pretty equal in slime, so this is just a matter of who can win the fastest.
+
+(Magicks, Neutral, left, fade) maybe so… if only he shows up.
+[Nate leaves]
+[Magicks leaves]
+[SLIDE, Munchy, center, left]
+
+A trail of smoke billows into the room. It can only mean one thing, that the same threatening aura found at the Killer lunch table has stepped into the Rowdy base.
+
+(Ben|Ben, casual, base, Offright, slide, right) What’s up guys?
+
+(Munchy|Munchy, special, squatting, angryMIN) Jesus Christ Ben, did you really have to come dressed like a homeless person? Oh, and cool it with that Juul of yours, or whatever the fuck it is.
+
+(Ben|Ben, casual, exasperated, angryMAX) VAPING IS NOT A CRIME GODDAMNIT!
+
+(Munchy|Munchy, special, crossing, neutral) Fucking, whatever. Let’s just get down to brass tacks here.
+
+(Ben|Ben, casual, point, happyMAX) Sure. I’m ready to go, had a few good practice rounds with the Killers last night.
+
+(Munchy|Munchy, special, crossing, happyMED) Heh, is that so? Then it’ll make my VICTORY all the sweeter.
+
+[SLIDE, Munchy, left, left+350]
+[SLIDE, Ben, right, right-350]
+
+(Kazee|Kazee, body1, face1, left-150, fade) You can do it Munchy!
+
+(PCPG) Damn, a lot of people showed up, huh.
+
+(Schrafft, Neutral, right+150, fade) Only natural. This IS what everybody on both sides of the war have been fighting over.
+
+(PCPG) Oh man, it’s you! Didn’t I put a bullet in your head yesterday?
+
+(Schrafft, Neutral) Hey now, don’t make it personal.
+
+[Munchy leaves]
+[Ben leaves]
+[Kazee leaves]
+
+(Crocs, neutral, left+350, fade) You’re on our turf now, Benhead. The least you could do is mind your own business.
+
+(K1P, Neutral, right-350) I’m just waiting to get this over with. Ben has no chance, considering that the guy who basically picked the game is the one who trained Munchy.
+
+(PCPG) What? You guys had every opportunity to help him out too, y’know.
+
+[Schrafft leaves]
+
+(Magicks, Neutral, right+150, fade) yeah, well, it’s not like ben’s played much shooting games before. i can’t imagine this will go well…
+
+(Connor|BLUE WHALE, neutral, left-150, fade) well, what do you know, i’m right again. narrative steaks: obliterated.
+
+(Crocs, angry) Shut up Blue Whale.
+
+(PCPG) Look, let’s just get this show on the road.
+
+(K1P, Neutral) Fine by me, just don’t backseat game him, okay?
+
+(PCPG) God, whatever man.
+
+(PCPG) Okay, here are the rules: First Kingpin to capture the intel 10 times wins.
+
+(K1P, Neutral) Wait, how is this even fair? You’re playing on split screen, right?
+
+(PCPG) Is that a problem?
+
+(K1P, Neutral) It’s a HUGE fucking problem! This is like, if you were playing melee or something, and you were just able to tell what move your opponent was gonna make ahead of time, 100% of the time.
+
+(PCPG) I have no clue what that fucking means. Anyways, it’s not like there’s a minimap, it’s completely fai-
+
+[Connor leaves]
+[Magicks leaves]
+[Crocs leaves]
+[K1P leaves]
+
+(Munchy|Munchy, special, default, angryMIN, center, fade) Both of you, enough. I don’t know what K1P is talking about either, but I’m sure it literally doesn’t even matter. Let’s just fucking go.
+
+(PCPG) Okay, on the count of three, both of you will load into the map.
+
+(PCPG) One, two, three!
+
+[Munchy leaves]
+
+[Scene: Slimefest]
+
+[StopMusic]
+[Song: PCPDating_Slimefests]
+
+(PCPG) Oh fuck, who put on the music?
+
+(Crocs, happy, Offleft, slide, left) Don’t mind me, just lightening the mood with some rowdy tunes. It’s a lot better than the sheer silence the game normally has, don’t you think?
+
+(PCPG) Heh, fair enough. It has a nice ring to it.
+
+[SLIDE, Crocs, left, offleft]
+
+Right off the bat, my eardrums and heart are pounding, as munchy starts building around his intelligence, just like I taught him. 
+
+(Munchy|Munchy, special, crossing, smittenMAX, right, fade) Good luck breaking through this one, Ben.
+
+(Ben|Ben, casual, base, angryMIN, left, fade) You fool, I’m already on my way.
+
+Ben sprints across the map, making his way to Munchy’s base without hesitation. The gunfire blasting through the speakers overpowers the music every time a shot is fired, causing everyone to be on their guard.
+
+(Munchy|Munchy, special, default, shockedMAX) AH, FUCK!
+
+(Ben|Ben, casual, dabbing) Heheheheheh… !dab
+
+(Munchy|Munchy, special, default, angryMIN) Agh, shit. Nice shot.
+
+(Ben|Ben, casual, base, neutral)
+Ben plows through the dirt covering up Munchy’s intel with ease, taking it all the way back to his base and bringing the score to 1-0. Has he had more practice with this game than I thought? Could Munchy really lose this on the field of battle this time around? No, impossible…
+
+(Munchy|Munchy, special, squatting, angryMED) You know what, fuck this, I’ve got a better idea.
+
+(Munchy|Munchy, special, crossing, angryMIN) You’re gonna be calling me Munchy Dufresne after the shit I’m about to pull off.
+
+(Ben|Ben, casual, point, happyMIN) Oh really now? I’ll be waiting back at my base then, and we’ll see if you’re as clever as you think you are, buster.
+
+(Munchy|Munchy, special, crossing, angryMIN) Whoa, hey now, cool it with the anti-Rowdy remarks.
+
+Munchy starts tunneling like his life depended on it. My guess is that he got a good look at where Ben’s intel was located thanks to the split screen view. After a long while, he digs his way up, only to meet face to face with ben. The gunfire rings through the speakers once again.
+
+(Ben|Ben, casual, exasperated, shockedMAX) FUCK!
+
+(Munchy|Munchy, special, crossing, happyMED) Hehe, DIE Ben.
+
+(Ben|Ben, casual, base, shockedMIN) Ugh, whatever. Thanks for the free tunnel back to your place, idiot.
+
+Munchy takes Ben’s intel all the way back through the tunnel and into his base. It’s a bold tactic, but it’s set them at 1 to 1. At this point, both of them start taking the tunnel back and forth, meeting each other midway through. A single bullet decides who wins the exchange, and after a while the score is 5-7, in favor of Munchy. But then. Something happens…
+
+(Ben|Ben, casual, base, neutral|cloud)
+Ben takes out his vape and blows another huge cloud of smog all over the room! It piles up near the ceiling, conveniently covering up the top half of the split screen view. Munchy can’t see a thing!
+
+(Munchy|Munchy, special, suatting, angryMAX) Ben, what the FUCK.
+
+(Ben|Ben, casual, point, happyMAX|cloud) Chill out man, I’m just taking the edge off.
+
+(Munchy|Munchy, special, squatting, angryMED) I’m gonna take a fucking gun to your head if you don’t cut that shit out.
+
+[SFX: PCP-SFX_Gunshot]
+
+A dirty trick to grab a kill on Munchy! Just how low will this man stoop?
+
+(Ben|Ben, casual, base, happyMIN|cloud) Wow, nice job, Munchy.
+
+(Munchy|Munchy, special, default, angryMIN) Someone run a fucking fan in here, or we’re gonna have BIG problems. And put that vape pen away, or I’ll crush it with my fucking bare hands.
+
+With Munchy’s view obscured, Ben manages to get another three captures in while the vapor clears. I knew Killers didn’t fight fair, but this is just outrageous! The score is 8-7…
+
+[SLIDE, Munchy, right, right-350]
+[SLIDE, Ben, left, left+350]
+
+(K1P, Neutral, Offleft, slide, left-150) Only two more capture points. Heh, I think you’ll just have to take the MORAL victory this time, Rowdys.
+
+(Connor|BLUE WHALE, angry, Offright, slide, right+150) yeah, i guess anyone can win if they cheat hard enough huh.
+
+(K1P, Neutral) Whatever, you guys shouldn’t be playing with this setup anyways.
+
+(Munchy|Munchy, special, crossing, angryMIN) Silence. The game isn’t over just yet, you fucking morons.
+
+[SLIDE, K1P, left, offleft]
+[SLIDE, Connor, right, offright]
+[SLIDE, Munchy, right-350, right]
+[SLIDE, Ben, left+350, left]
+
+This time, Munchy decides to spend some time digging an alternate route. He makes sure to camouflage the exit a bit, too, but the time he spends doing it allows Ben to get another capture in. It’s 9-8, and Munchy needs to seriously stop Ben in his tracks. In a brilliant display however, he kills Ben at his base, and starts filling the main tunnel with dirt, leaving Ben with no easy way to get back to Munchy’s intel!
+
+(Munchy|Munchy, special, squatting, happyMAX) They call it ‘intelligence’ for a reason, Ben. Just like always, the Rowdys manage to clutch one out when the stakes are high.
+
+(Ben|Ben, casual, exasperated, sadMIN) No, no this isn’t true! You can’t outplay me like this!
+
+(Munchy|Munchy, special, crossing, happyMIN) Too late, I already did.
+
+Running back and forth through his hidden tunnel, Munchy manages to evade detection. Not a single gun fight goes by, and he manages to make his victory lap twice with the intel in hand, leading him to end the game once and for all!
+
+(Munchy|Munchy, special, crossing, happyMIN) Game over, retard. 9 to 10.
+
+(Ben|Ben, casual, slouch, shockedMAX) AAAAAAAHHHHHHHH NOOOOOOOOO! IF ONLY I CHEATED MORE!!
+
+[Ben leaves]
+[SLIDE, Munchy, right, right-350]
+
+(Munchy|Munchy, special, squatting, happyMAX) !THRASH !THRASH !THRASH !THRASH !THRASH
+
+(Crocs, happy, Offleft, slide, left+350) !THRASH !THRASH !THRASH !THRASH !THRASH
+
+(Kazee|Kazee, body1, face1, Offright, slide, right+150) !THRASH !THRASH !THRASH !THRASH !THRASH
+
+(Connor|BLUE WHALE, happy, Offleft, slide, left-150) !thrash !thrash !thrash !thrash !thrash
+
+(PCPG) !THRASH !THRASH !THRASH !THRASH !THRASH
+
+[Connor leaves]
+[Kazee leaves]
+[Crocs leaves]
+
+[SLIDE, Munchy, right-350, left]
+
+(Ben|Ben, casual, base, neutral, right-350, fade) …
+
+(Ben|Ben, casual, dabbing, neutral) !dab
+
+(Nate|Nate, campus, standing, angryMIN, shades, right+150, fade) Ah, damn.
+
+(Munchy|Munchy, special, defaul, happyMED) Easiest game of my fucking LIFE. How will the Killers ever recover?
+
+[SLIDE, Munchy, left, left-150]
+[Ben leaves]
+[Nate leaves]
+
+(K1P, Neutral, Offright, slide, left+350) Whatever, it’s not like I didn’t expect this to happen.
+
+(Magicks, Neutral, Offright, slide, right-350) just another slimefest for ya.
+
+(Schrafft, Neutral, Offright, slide, right+150) What they said, yeah.
+
+[SLIDE, K1P, left+350, Offleft]
+[SLIDE, Magicks, right-350, Offleft]
+[Slide, Schrafft, right+150, Offright]
+
+[K1P leaves]
+[Magicks leaves]
+[Schrafft leaves]
+
+(PCPG) What? You guys don’t even care that your Kingpin just got fucking thrashed on?
+
+[SLIDE, Munchy, right-350, left]
+
+(Crocs, happy, right, fade) Who can blame them? I mean, this IS Ben Saint we’re talking about.
+
+(Munchy|Munchy, special, crossing, happyMIN) Haha, yeah, lol.
+
+Ben, Nate, and the Killers walk home with expressions on their face ranging from mild disappointment to outright depression. Serves them right, fucking Benheads.
+
+(Munchy|Munchy, special, defaul, neutral) Another one down, gentlemen. Let’s not get carried away though. There’s something I’d like to announce…
+
+(Crocs, neutral) Oh yeah?
+[Crocs leaves]
+
+[SLIDE, Munchy, left, center]
+
+[StopMusic]
+[Song: PCPDating_MoveMe]
+
+(Munchy|Munchy, special, defaul, smittenMED) PCPG...
+
+(PCPG) …
+
+(Munchy|Munchy, special, defaul, smittenMIN) Throughout your time as a Rowdy, you have shown an incredible display of what it means to be on our side, the right side of history. You’ve made sick ass art, straight up BUSTED the Lord of Ghosts, and took part in a crucial battle at the lunch table, even managing to gank a Killer when tensions were high.
+
+(Munchy|Munchy, special, crossing, smittenMAX, blushies) Not only that, but you arguably won me this Slimefest. It sounds cliché as hell, but really, I couldn’t have done it without you. It’s only fair that I give you this in return.
+
+He hands me a scroll with a grey ribbon binding it together.
+
+(Munchy|Munchy, special, defaul, happyMED) Open it up. You’ll like the way you look, I guaran-fucking-tee it.
+
+[CG: Smearg’s PCPG Consort Art]
+
+(PCPG) …
+
+(PCPG) No fucking way…
+
+(Munchy) Welcome to the club, motherfucker. You’ve earned it.
+
+Tears begin to well up in my eyes. I thought this day might come eventually but, to see this so soon, it’s almost patronizing…
+
+[CG end]
+
+(Munchy|Munchy, special, squatting, angryMED, blushies) Wipe those fucking bitch tears off your face. You’ve been through hell, and things are only gonna get harder from here on out.
+
+(Munchy|Munchy, special, crossing, smittenMIN, blushies) Good thing you’ve got powerful allies now though, don’t you think?
+
+(PCPG) You’re right. I’ve got big shoes to fill now.
+
+(PCPG) The day is young. What say we all head to the 7/11 and grab ourselves some Cotton Candy Bang?
+
+(Munchy|Munchy, special, crossing, happyMED) Now you’re on my fucking wavelength, dude. Let’s get out of here, I can still feel the Killer stench lingering, aka the Juul pod Ben tossed in the garbage can out in the hall.
+
+(PCPG) Hell yeah!
+
+[CG: Rowdies March]
+
+My time at school, my time spent with the Rowdys…
+
+It’s all flashing before my eyes...
+
+I don’t know if what Thoth said is true, but there’s one thing I can say for certain…
+
+Now that I’m surrounded by true friends, true comrades in the WAR...
+
+I’m content with just letting the days go by for all eternity.
+
+!THRASH
+
+[CG end]
+
+[CREDITS]

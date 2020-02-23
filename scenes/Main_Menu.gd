@@ -64,3 +64,48 @@ func _on_X_pressed(scene):
 	
 	for N in $'CanvasLayer'.get_children():
 			N.visible = true
+
+#######################################################
+
+func _on_Digibro_pressed():
+	scene.change('Digi')
+
+
+func _on_Ben_Saint_pressed():
+	scene.change('Ben Saint')
+
+
+func _on_Davoo_pressed():
+	scene.change('Davoo')
+
+
+func _on_Tom_pressed():
+	scene.change('Tom')
+
+
+func _on_Endless_War_Miniroute_pressed():
+	scene.change('Endless War Miniroute')
+
+
+func _on_Gibbon_pressed():
+	scene.change('Gibbon')
+
+
+func _on_Jesse_pressed():
+	scene.change('Jesse')
+
+
+func _on_Kopie_von_Digibro_pressed():
+	scene.change('Kopie von Digibro')
+
+
+func _on_Mage_pressed():
+	scene.change('Mage')
+
+
+func _on_Munchy_pressed():
+	scene.change('Munchy')
+
+
+func _on_Nate_pressed():
+	scene.change('Nate')

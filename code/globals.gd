@@ -101,6 +101,9 @@ func _ready():
 	if !directory.dir_exists('user://screenshots'):
 		directory.make_dir('user://screenshots')
 	
+	# If the directory for scenes doesn't exists create it.
+	if !directory.dir_exists('user://scenes'):
+		directory.make_dir('user://scenes')
 	
 	# Create the default fonts.
 	var defaultFontDATA = DynamicFontData.new()

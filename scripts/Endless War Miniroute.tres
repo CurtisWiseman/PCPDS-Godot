@@ -1,0 +1,770 @@
+[Scene: An Offering of Wealth]
+
+[Location: roof.day]
+[Song: PCPDating_HomeMorning]
+[fade from black]
+
+The next day after my morning class I make my way to the school roof. I never would’ve guessed you could come up here if Endless War didn’t tell me to meet her here, but the door was totally unlocked.
+
+The place is empty though. I wonder what kinda help Endless War even wants from me to realize this plan of hers. Anything I could offer she could do herself right? Maybe she just needs some extra manpower.
+
+(Endless War|Endless War, stand, neutral, offleft, slide, center) Good, you came early. We should be able to finish this up quickly then.
+
+(PCPG) Woah, hey there EW.
+
+(Endless War|Endless War, stand, confusedMIN) Ew no, you don’t get call me that. Don’t think that just cause I called you out here doesn’t mean you are any more special than any other newbie gang member. Fucking get real.
+
+(PCPG) Okay..
+
+(Endless War|Endless War, stand, neutral) Anyways, we first need to gain capital, a lot of capital. I need it to influence some very powerful people to allow this plan to go through.
+
+(Endless War|Endless War, cross, angryMIN) Also, the parts I require cannot be stolen quite so easily, so I’m forced to actually fucking buy them like a plebian, and they are quite expensive.
+
+(PCPG) Buy parts for what?
+
+(Endless War|Endless War, stand, neutral) No need to worry about that. I definitely do not want to bring you along to buy those parts, lest he becomes untrusting of me.
+
+He?
+
+(Endless War|Endless War, stand, neutral) The only people I know who has access to the kinda money I need is Professor Digibro and Professor Bestman. Professor Digibro is out of the picture because...
+
+(Endless War, cross, sadMIN)
+And for the first time ever I find Endless War unsure of what to say, barely able to continue her sentence.
+
+(Endless War|Endless War, cross, sadMED) ...he just.. doesn't.. get it for some reason, you know?
+
+I’m not sure what it exactly is, but I nonetheless agree with her. 
+
+(Endless War|Endless War, stand, neutral) And besides, through the WAR I have cooperated with Professor Bestman to gain a profit, so he will no doubt be easier to convince of this regardless. 
+
+(PCPG) So, not to push any responsibility off myself here, but why do you need me then?
+
+(Endless War|Endless War, stand, neutral) You will provide backup to the conversation, a second voice to show that I am not acting alone. It’s simple psychology.
+
+(Endless War|Endless War, knife, angryMIN) However, you will watch what you say. I don’t want you fucking this up for me, is that understood?
+
+(PCPG) Yes ma'am.
+
+(Endless War|Endless War, stand, happyMIN) Stay obedient like that and we’ll both have a swell ol time together. Lets go.
+
+[Endless War leaves]
+[Location: hallway2]
+
+Endless War then makes her way down the stairs and I follow. This whole plan of hers seems a lot more sketchy than I originally thought, but it seems like she knows what she’s doing. I guess I’ll trust her judgment for now.
+
+[StopMusic]
+[Song: PCPDating_ClassMemes_Megalovania]
+[Location: memeclass]
+
+(Nate, campus, papers, confusedMED|shades, offright, slide, left)
+We enter the Meme’s classroom and find the professor at his desk.
+
+(Endless War|Endless War, cross, neutral, offright, slide, right+200) Professor Bestman, a word?
+
+(Nate|Professor Bestman, smoking, standing, happyMED|shades, left) Oh but of course, anything for my favourite student council president, but uhh..
+
+(Nate, campus, standing, sadMIN, left)
+Professor Bestman nods over in my direction worryingly.
+
+(Endless War|Endless War, stand, neutral, right+200) Don't worry, he's with me.
+
+(Nate|Professor Bestman, campus, standing, sadMIN|shades, left) I see.. 
+
+Professor Bestman continues to look at me worryingly, the same look one would give to someone asking for a drink when they clearly have drunk too much. I ignore it, I know what I’m doing here.
+
+(Nate|Professor Bestman, campus, smoking, neutral|shades, left) So, what’s up EW?
+
+(Endless War|Endless War, cross, neutral, right+200, slide, left) I have another.. proposition for you. This one is on a much grander scale though.
+
+(Nate|Professor Bestman, campus, standing, shockMIN|shades, left) Oh? Is this related to your “new age of WAR” thing?
+
+(Nate, campus, standing, neutral|shades, left)
+(Endless War|Endless War, stand, happyMIN, right) Indeed it is. I have information from a.. reliable source that may benefit you immensely in the long run.
+
+(Nate|Professor Bestman, campus, pointing, confusedMIN|shades, left) And you want something in exchange for this information now?
+
+(Endless War|Endless War, stand, neutral, right) Precisely. An investment if you will. I will need an amount equivalent to six sextillion SlimeCoin.
+
+Holy slime, six sextillion SlimeCoin?! Does Professor Bestman even have that kinda money?
+
+(Nate|Professor Bestman, campus, standing, neutral|shades, left) Hmm, and you can't tell me anything else about it until I accept?
+
+(Endless War|Endless War, cross, happyMIN, right) I see you understand my predicament. I'd rather not kill you if you refuse, I like you that much at least.
+
+The professor pauses at the compliment.
+
+(Nate|Professor Bestman, campus, smoking, sadMIN|shades, left) Of course. Listen, I would love to help you out here, but I need more insurance than just your word, given the amount of money you’re asking here. 
+
+(Endless War, stand, neutral, right)
+(Nate|Professor Bestman, campus, pointing, neutral|shades, left) Convince me. Convince me that this is worth my money and that I will inevitably gain from this, else it’s gotta be a no from me dawg.
+
+Endless War pauses to formulate her argument, but I bet I could give a good reason for him to help us out. Should I try to convince Professor Bestman myself? 
+
+[CHOICE]
+
+*Try to convince him yourself*
+*Let Endless War do the convincing*
+
+*Try to convince him yourself*
+
+(PCPG) Actually, if I may, I think the best kind of insurance for yourself here is past experience. You already make money off the WAR, and I assume when the WAR is good you make more, no?
+
+(Endless War|Endless War, stand, angryMIN, right)
+(Nate|Professor Bestman, campus, smoking, happyMIN|shades, left)
+Endless War gives me a wary look while the professor agrees to my question.
+
+(PCPG) What Endless War and I are trying to do here is to simply make the WAR gooder more often and to higher extents. A new age of WAR would surely require new services and products, a prime opportunity to gain big, wouldn’t you say?
+
+(Nate|Professor Bestman, campus, standing, neutral|shades, left) Hmm, you do make some good points there PCPG. The WAR has indeed been a massively successful venture so far, but..
+
+(Nate, campus, standing, sadMIN|shades, left)
+(Endless War, stand, angryMED, right)
+Professor Bestman then goes quiet. There better not be a “no” behind that “but” else I may not make it out of this classroom in one piece.
+
+(Endless War, stand, happyMIN, right)
+(Nate|Professor Bestman, campus, smoking, happyMED|shades, left) Nah, nevermind. Endless War, you have never failed me before with your ideas so I don’t see why you would now either. Sure, I will accept your offer.
+
+Oh thank slime itself, I live to see another day.
+
+(Nate|Professor Bestman, campus, papers, neutral|shades, left) However, my only requirement is that I will need to acquire that useful information right now so that I may capitalize on it as efficiently as possible. I will transfer you the money as soon as possible.
+
+(Endless War|Endless War, cross, happyMIN, right) Oh, but of course. In the next few days there will be an incredible spike in demand for slime not only in this city, but worldwide, and all related slime industries will skyrocket in stocks. Ride that wave and you will be set for life.
+
+(Nate|Professor Bestman, campus, papers, confusedMIN|shades, left) Slime huh? Are you sure about this?
+
+(Endless War|Endless War, stand, neutral, right) Absolutely certain.
+
+(Nate|Professor Bestman, campus, smoking, confusedMIN|shades, left) Hmm, I better tell Slimecorp then...
+
+(Nate, campus, smoking, confusedMED|shades, left)
+Professor Bestman furrows his eyebrows in thought for a few seconds.
+
+(Nate|Professor Bestman, campus, standing, happyMIN|shades, left) Well, this has been a productive conversation, but excuse me, I need to make a very important phone call.
+
+[Nate leaves]
+(Endless War, stand, happyMIN, right, slide, center)
+With that the professor leaves the classroom, and we both sigh in relief.
+
+(Endless War|Endless War, stand, neutral) You were lucky this time but don’t butt in like that again, cause if you ever manage to fuck something up for me..
+
+(Endless War|Endless War, knife, angryMIN)
+She brandishes her knife menacingly.
+*
+
+*Let Endless War do the convincing*
+
+I stay silent and let Endless War talk.
+
+[StopMusic]
+(Endless War|Endless War, stand, neutral, right) Well consider this Nate, your success in the WAR has been closely tied to me for a while now. Imagine if I hadn’t told you to take an interest in Nickelodeon when I had, you wouldn’t be where you are now where I have to ask you for help.
+
+(Nate|Professor Bestman, campus, smoking, neutral|shades, left) I suppose that is true..
+
+(Endless War|Endless War, knife, angryMIN, right) It would be a shame then if you lost access to such a useful resource because of a simple disagreement, no?
+
+(Nate, campus, standing, sadMIN|shades, left)
+Professor Bestman begins to visibly sweat.
+
+(Nate|Professor Bestman, campus, standing, sadMIN|shades, left) Yeah.. that would suck balls..
+
+(Endless War|Endless War, knife, angryMED, right) And so wouldn’t it be in your best interest not to engage in simple disagreements with such a person who is so influential to your success? Who not only is key to continuing that success, but also your life?
+
+(Nate|Professor Bestman, campus, papers, sadMIN|shades, left) Uhh, yeah I think I understand what you’re getting at here, but..
+
+(Endless War, knife, angryMAX, right)
+Professor Bestman takes a moment to consider his words while Endless War reaches her breaking point. If Professor Bestman doesn’t accept her offer, I don’t think even I will make it out of this classroom in one piece.
+
+(Endless War, knife, happyMIN, right)
+(Nate|Professor Bestman, campus, standing, sadMIN|shades, left) I.. think I indeed do owe you for getting me to where I am now, so I’ll.. accept your offer.
+
+[Song: PCPDating_ClassMemes_Megalovania]
+(Nate|Professor Bestman, campus, papers, neutral|shades, left) However, my only requirement is that I will need to acquire that useful information right now so that I may capitalize on it as efficiently as possible. I will transfer you the money as soon as possible.
+
+(Endless War|Endless War, cross, happyMIN, right) Oh, but of course. In the next few days there will be an incredible spike in demand for slime not only in this city, but worldwide, and all related slime industries will skyrocket in stocks. Ride that wave and you will be set for life.
+
+(Nate|Professor Bestman, campus, papers, confusedMIN|shades, left) Slime huh? Are you sure about this?
+
+(Endless War|Endless War, stand, neutral, right) Absolutely certain.
+
+(Nate|Professor Bestman, campus, smoking, confusedMIN|shades, left) Hmm, I better tell Slimecorp then...
+
+(Nate, campus, smoking, confusedMED|shades, left)
+Professor Bestman furrows his eyebrows in thought for a few seconds.
+
+(Nate|Professor Bestman, campus, standing, happyMIN|shades, left) Well, this has been a productive conversation, but excuse me, I need to make a very important phone call.
+
+[Nate leaves]
+(Endless War, stand, neutral, right, slide, center)
+With that the professor hurriedly makes his way out of the classroom and I sigh in relief. Why does Endless War need to make everything so tense?
+
+(Endless War|Endless War, stand, neutral) I mean you could’ve said something to help me convince him there, but I suppose you didn’t fuck it all up either, so sure, you pass.
+*
+
+(Endless War|Endless War, stand, neutral) Anyways, we still have a few more things to do today, so let’s go.
+
+[Endless War leaves]
+And with that we make our way out of the classroom.
+
+[fade to black]
+[StopMusic]
+
+[Scene: An Offering of Blood]
+
+[Location: dininghall.full, dininghall.table.mudpuddleforeground]
+[Song: PCPDating_ClassPhilosophy]
+(Endless War, stand, neutral)
+[fade from black]
+
+(Endless War|Endless War, stand, neutral) Okay, so next we need to find something, or rather, someone.
+
+(PCPG) Wait a second Endless War, can’t we take a break for a minute? That was pretty nerve wracking back there and now we’re just immediately jumping into the next thing.
+
+(PCPG) Maybe we could, oh I don’t know, grab a coffee together or something?
+
+(Endless War|Endless War, stand, confusedMIN) …
+
+(Endless War|Endless War, stand, confusedMED) Are you.. trying to !date me?
+
+(PCPG) Uhh…
+
+I mean, I wasn’t considering it at first, but now I definitely am. Should I even dare say it…?
+
+(PCPG) !date En-
+
+(Endless War|Endless War, stand, angryMIN) Well first off, thats fucking disgusting, why would I ever !date you? That’ll be one hell of a timeline when that happens.
+
+(Endless War|Endless War, cross, angryMIN) Secondly, a fucking coffee? What kind of boring shitty ideas do you have in that head of yours? At least ask for a bomb ass milkshake or something like that, that’s at least way more romantic.
+
+(Endless War|Endless War, stand, angryMED) If you want to fuck around with dates and cute bullshit like that go hang out with Mage, I’m sure she’d love it. If you want to help me change the fucking world then stick around.
+
+(PCPG) Uhh you know what, nevermind, I’m sorry I even brought it up. Let’s just focus on what's at hand.
+
+(Endless War|Endless War, stand, neutral) Okay, so as I was saying, we are looking for a specific student.
+
+(PCPG) Who?
+
+(Endless War|Endless War, cross, neutral) Not sure of their name yet, but I have good information that they can be extremely helpful to our cause. I’ll look for their description, you just follow me until we find them and then I’ll tell you what we need to do.
+
+(PCPG) Okay...
+
+[Endless War leaves]
+Endless War then goes around the cafeteria and scans all the tables. Most of the student population does have their lunch here most of the time, but it’s not a guaranteed place to find someone.
+
+(Endless War|Endless War, stand, angryMIN, offright, slide, center) Damn it, they aren’t here. I guess we’ll have to pass by the classrooms and look for them there.
+
+(Endless War, stand, neutral)
+But before we manage to head out of the cafeteria, a familiar face stops us in our tracks.
+
+(Endless War, stand, neutral, center, slide, right) 
+(Mage|Mage, campus, 4, confusedMIN, offleft, slide, left) Hey Endless War and.. PCPG?
+
+(Mage, campus, 1, sadMIN, left)
+Mage gives me the same worrying look Professor Bestman did.
+
+(Mage|Mage, campus, 5, confusedMIN, left) What are you doing with.. her?
+
+(PCGP) Oh we-
+
+(Endless War|Endless War, stand, angryMIN, right) That’s none of your business Mage. What do you want?
+
+(Mage|Mage, campus, 3, angryMIN, right) Stop skipping student council meetings EW! You can’t possibly expect us to do everything without the president herself?
+
+(Endless War|Endless War, knife, angryMED, left) Holy slime Mage most of our meetings are useless boring bullshit that nobody cares about. Now move before I move you myself.
+
+(Mage|Mage, campus, 2, angryMED, right) I’d like to see you try.
+
+The air crackles with energy as both girls stare each other down. I better stop them before this gets nasty.
+
+(PCPG) Woah hey let’s just chill for a second. How about a compromise, alright?
+
+(Endless War, stand, angryMIN, left)
+(Mage|Mage, campus, 2, angryMIN, right) What sort of compromise?
+
+(PCPG) Well uhh, maybe.. maybe let Endless War skip this meeting, but then make her promise to attend the following ones until the end of year. How does that sound?
+
+(Endless War|Endless War, stand, happyMED, left) Ooh, I like that as a compromise. How about it vice president?
+
+(Mage|Mage, campus, 5, angryMIN, right) …
+
+(Mage|Mage, campus, 4, neutral, right) Fine, but this is not looking good for you with the student council election so close now.
+
+(Endless War|Endless War, stand, happyMED, left) Oh, I’m not worried about that at all.
+
+(Mage|Mage, campus, 5, neutral, right) We’ll see about that..
+
+[Mage leaves]
+Mage then disappears into the cafeteria crowd as we make our way out to the hallways.
+
+[StopMusic]
+[Location: hallway1.percyjackson]
+
+(Endless War|Endless War, stand, angryMIN, left, slide, center) On slime itself, sometimes Mage can be such an annoying bitch. I much prefer hanging out with her alternate self, though she is rarely around nowadays..
+
+Mage’s alternate self?
+
+(Endless War|Endless War, cross, happyMIN) Nice thinking back there though. After we’re done today there won’t be student council meetings to attend, so that compromise works out perfectly for me.
+
+I wasn’t really thinking of that, but I guess she’s right. Hmm, but..
+
+(PCPG) Why did you become student council president if you didn’t want to attend the meetings? Isn’t that like the whole point?
+
+(Endless War|Endless War, stand, happyMIN) Oh silly PCPG, power is not an easy thing to get, and being the student council president is an easy way to gain a lot of power. There’s all kinds of things you can do with a position like mine.
+
+(PCPG) Like what?
+
+(Endless War|Endless War, stand, neutral) Well maybe if you attended this school longer you would see the kind of things I can do, but enough talking, we should continue our search.
+
+[fade to black]
+[Endless War leaves]
+[Location: hallway2]
+[Song: PCPDating_DateTheme]
+[fade from black]
+
+We spend most of the rest of lunch searching all over campus with no success. I decide to strike up a conversation to occupy us as we head to the next class over.
+
+(Endless War, stand, neutral, offright, slide, center)
+(PCPG) So I was wondering, what made you think of this plan anyways? Not to say you couldn’t have come up with it yourself out of the blue, but it all seems pretty elaborate for that to be the case.
+
+(Endless War|Endless War, cross, blushMIN) It’s…
+
+Endless War pauses for a moment. I didn’t expect her to consider my question so seriously.
+
+(Endless War|Endless War, cross, sadMIN) Well, someone.. found me and gave me the idea. He even offered to sell me some of the parts I needed that would be difficult to obtain otherwise. I felt like I had met him before, a long time before, which is why I humoured his suggestion at first.
+
+(PCPG) Someone?
+
+(Endless War|Endless War, cross, neutral) He called himself krak. He seemed like a Killer to me, but I’ve never seen him around them before. Don’t know much else about him though...
+
+(PCPG) Huh, interesting...
+
+Who is this mysterious krak? And why is he so interested in this new age of WAR? Hmm..
+
+(Endless War, stand, neutral)
+Finding nothing else to add to the conversation we both silently continue walking down the hallway, until Endless War suddenly stops in front of the science classroom ahead of me
+
+(Endless War|Endless War, stand, happyMIN) Found him.
+
+(PCPG) Sweet! Okay so what’s the plan now?
+
+(Endless War|Endless War, stand, confusedMIN) Hmm..
+
+Endless War stands there motionless as she stares into the classroom.
+
+(Endless War|Endless War, stand, confusedMIN) Actually, I thought I was gonna need your help for this, but it may be a better idea to do this myself...
+
+(PCPG) Oh. Uhh okay, so what should I do now then?
+
+(Endless War|Endless War, stand, neutral) We still have one more task to perform after this. Meet me after school near the alleyways around campus. There will be a large manhole cover next to a yellowish building, wait for me there.
+
+(Endless War|Endless War, stand, angryMIN) Don’t fucking leave if I don’t come right after school. I’ll be busy with something.
+
+(PCPG) Okay, got it.
+
+[Endless War leaves]
+Endless War then makes her way into the science classroom and shuts the door behind her. What exactly is she planning to do with this student? Who even are they? I ruminate on these questions as I make my way over to my next class.
+
+[fade to black]
+[StopMusic]
+
+[Scene: An Offering of Slime]
+
+[Location: waytoschool.nojesse]
+[fade from black]
+
+After school I arrive near the alleyways and find the manhole Endless War was talking about, but no Endless War. I guess I will wait for her to arrive..
+
+[fade to black]
+[Location: waytoschool.night]
+[Song: PCPDating_HomeNight]
+[fade from black]
+
+The day eventually turns into night and yet no sign of her is to be seen. At this point I get the feeling that maybe I’ve been ditched, it sadly wouldn’t be the first time.
+
+As I’m debating whether or not to leave the devil herself finally arrives.
+
+(Endless War|Endless War, stand, neutral, offleft, slide, center) Good, you’re still here. I do not want to do this myself.
+
+(PCPG) Uhh, so like where were you for the past several hours?
+
+(Endless War|Endless War, stand, angryMIN) I fucking told you I was going to be busy. It just turns out that the whole process was a little more.. complicated than I originally thought.
+
+(PCPG) What process?
+
+(Endless War|Endless War, stand, neutral) None of your business. Open up the damn manhole already and start climbing down.
+
+(PCPG) Wait, we’re going down there?
+
+(Endless War|Endless War, knife, angryMED) What else would we do here you retard? Go down already!
+
+I approach the manhole and, after taking a few seconds to find a good grip, heave it open. I take a look inside. It is very dark down there, the manhole ladder disappearing into a sea of black punctuated only by a faint green glow from the bottom.
+
+(Endless War|Endless War, knife, angryMED) What are you waiting for? Go!
+
+I tentatively make my way down the ladder.
+
+[StopMusic]
+[Song: PCPDating_BotBustah]
+[Location: sewers]
+
+Woah, this is not what I expected the sewers to look like. I did expect this smell however, which is absolutely vile. 
+
+(Endless War|Endless War, stand, neutral, offleft, slide, center) Okay, so we are looking for a specific valve to twist open. It should look out of place, different from the rest of these valves. It's part of my personal addition to directly connect the grand canyon to the sewer system of Boston.
+
+(PCPG) The grand canyon? Why would you want to connect the grand canyon to the sewer system?
+
+(Endless War|Endless War, stand, confusedMIN) Oh, you don’t know? I guess CERN did cover it up quite well..
+
+(Endless War|Endless War, cross, neutral) Due to a freak accident that happened a long time ago at CERN’s Large Hadron Collider in Switzerland, the grand canyon next to us surprisingly started to fill up with radioactive ooze. 
+
+(PCPG) Woah, that's pretty wild. What caused the accident?
+
+(Endless War|Endless War, cross, neutral) Nobody really knows, but an unattended station during a tour visit seems to be the most likely explanation. CERN clearly didn’t want their mistake to be publicized though, so I’m sure there’s more to it than just that.
+
+(Endless War|Endless War, stand, neutral) Anyways, we should get started. I forget the layout of this place so we’ll just have to walk around to find it.
+
+[Endless War leaves]
+We start our trek down a random path and begin our search. About an hour passes of us getting lost in the intricate sewer system and soon the bright green all around us is starting to make me feel green too.
+
+(PCPG) So like, what is this radioactive ooze stuff anyways?
+
+(Endless War|Endless War, stand, neutral, offleft, slide, center) Fuck if I know, but it can be refined into the slime that we all know and love.
+
+(PCPG) This is what slime is made out of? 
+
+(Endless War|Endless War, stand, neutral) Yeah. In fact I refine it myself, for reviving people of course.
+
+(PCPG) Reviving people?
+
+(Endless War|Endless War, stand, angryMIN) Oh fucking hell. Yes of course you can revive people, how else has this bloody WAR gone on for so long with our small student population?
+
+(PCPG) I.. guess I never really thought about it too hard.
+
+(Endless War|Endless War, stand, angryMED) Of course you haven’t. I put all of this work into infusing everyone’s DNA with slime and setting up all these fucking systems behind the scenes and nobody even gives a single slimeoid shit! Fuck all of you ungrateful fucks!
+
+I guess that was a hot button to press there.
+
+(PCPG) Uhh... sooo, how do you make slime then?
+
+(Endless War|Endless War, stand, angryMIN) Didn’t you just hear me? You don’t make it. All I do is take this stuff, clean it of its impurities using a complicated process called using a fucking filter, and voila, slime. 
+
+(Endless War|Endless War, stand, neutral) The only issue with it is that to refine enough slime to be useful takes either a long time or a large amount of effort. That’s one thing I’m aiming to fix with this new change to the WAR.
+
+(PCPG) That does sound like a lot of work, but surely there must be an easier way to obtain slime, right?
+
+(Endless War|Endless War, stand, confusedMED) What? Of course there isn’t. Why the fuck would you know more about this than me?
+
+(PCPG) Hmm, let me try something though...
+
+(PCPG) !harvest slime
+
+Suddenly I feel as though I have made the worst mistake of my life. May the slime gods above have mercy on my soul.
+
+(Endless War|Endless War, knife, angryMAX) HARVEST IS NOT A COMMAND YOU FUCKING IDIOT
+
+(Endless War|Endless War, knife, angryMAX) STOP FUCKING AROUND AND FIND THIS GODDAMN VALVE ALREADY BEFORE I END YOU!
+
+[Endless War leaves]
+Endless War then walks on ahead of me in anger. I decide to shut up and continue our search before I accidentally trip on another landmine of hers. It takes nearly another two hours to find the valve in this maze of tunnels, but we eventually do. We find it located on a wall next to a large pipe jutting out of the ceiling.
+
+(Endless War|Endless War, stand, neutral, offleft, slide, center) Holy slime finally. Okay, now twist it counterclockwise until you can’t move it anymore.
+
+(PCPG) Aren’t you like way stronger than me? Why don’t you twist it?
+
+(Endless War|Endless War, knife, angryMED) JUST FUCKING DO IT!
+
+(PCPG) Okay alright, was just asking.
+
+(Endless War, stand, neutral, center, slide, right, 10)
+I approach the valve, but as I place my hands on it Endless War begins to slowly back away.
+
+(PCPG) Where are you going?
+
+(Endless War, stand, neutral, right, slide, offright, 10)
+Endless War ignores my question and continues to move back. Afraid to anger her again I get to work and begin twisting the valve. At first it is incredibly tight, but soon enough the valve loosens and I begin to twist it faster and faster until it suddenly stops. I shout out to Endless War who is now quite far away from me.
+
+(PCPG) Okay, that should be it. What now?
+
+(Endless War) Now, you have fun.
+
+Before I can decipher what she meant a torrent of radioactive ooze juts out of the pipe above me, pushing me to the ground and nearly washing me away into the main sewer stream of ooze. After desperately struggling to escape the torrent, I finally manage to crawl towards dry land right next to a laughing Endless War.
+
+(Endless War|Endless War, stand, happyMAX, offright, slide, center) AHAHAHA you fucking idiot, what did you think the valve was gonna open?!
+
+(PCPG) Thanks for that, I now see why you wanted me to do this. Should I be worried that I am now covered in literal radioactive goo?
+
+(Endless War|Endless War, stand, happyMED) Eh don’t worry about it. You are basically made up of this stuff, remember? It can’t be that bad for you.
+
+(PCPG) I suppose so..
+
+(Endless War|Endless War, stand, happyMIN) Well, that’s all we need to do. All that's left is the ceremony itself.
+
+(PCPG) The ceremony?
+
+(Endless War|Endless War, cross, neutral) This is a big event, surely we must have a ceremony to announce it’s beginning. It’s only appropriate.
+
+(Endless War|Endless War, stand, neutral) Your final task is to bring Munchy and Ben alongside the Rowdies and Killers to the Bunker Hill Monument tomorrow morning so that we can all start the ceremony together.
+
+(PCPG) Why there?
+
+(Endless War|Endless War, cross, neutral) I like the place. I feel a sense of.. belonging to the monument I suppose. 
+
+(Endless War|Endless War, stand, happyMIN) Anyways, have yourself a peaceful evening PCPG, might as well enjoy your last one.
+
+[Endless War leaves]
+With that Endless War walks away down the way we came, leaving me soaked and lost down here. My last peaceful night huh?
+
+[fade to black]
+[StopMusic]
+
+[Scene: The Ritual]
+
+The next morning I go over to convince both gangs to join us, despite them both absolutely hating my guts by this point. After avoiding a few close calls to my life, I finally manage to get both Ben and Munchy to agree, and alongside both gangs I make my way over to the ceremony.
+
+[Location: Bunker Hill Monument]
+(Endless War, cross, happyMED)
+[Song: PCPDating_LifeInEndlessWar]
+[fade from black]
+
+(Ben, casual, base, neutral, offleft, slide, left)
+(Munchy, casual, standing, neutral, offright, slide, right)
+We arrive at the monument and find Endless War excitedly waiting for us. Behind her is a white tarp covering something.. very big.
+ 
+(PCPG) What's going on? What’s behind you?
+ 
+(Endless War|Endless War, stand, neutral) Rowdys! Killers! I think it is high time for a new chapter of our glorious WAR. The current state of affairs is so dull and so so boring, and I think it's in due part all of your fault. 
+ 
+(Ben, casual, base, shockMIN, left)
+(Munchy, casual, crossing, angryMIN, right)
+(Endless War|Endless War, stand, angryMIN) You pride yourself on violence and murder yet all of you only really get away with are single digit deaths by end of one of your childish scuffles. I think I’ve had enough babysitting your sorry asses, we need to force you to murder like never before.
+ 
+She looks at Munchy.
+ 
+(Endless War|Endless War, stand, happyMIN) Imagine if you can take all of your pent up anger and frustration of the Killers and fully express it on them and the rest of the population 24/7. 
+ 
+(Munchy, casual, standing, happyMIN, right)
+She turns to face Ben.
+ 
+(Endless War|Endless War, stand, happyMIN) Imagine if we could keep mowing down Rowdies and ignorant juvies with those guns of yours without end or interruption.
+ 
+(Ben, casual, base, happyMIN, left)
+Munchy and Ben salivate at her propositions.
+ 
+(Ben|Ben, causal, point, happyMIN|cloud, left) Well, what are you suggesting then?
+ 
+(Endless War|Endless War, knife, neutral) You see, to truly engage in WAR, we need to first fully forgo our useless mortal bodies in preference of something.. slimier. We secondly need to indoctrinate everyone to the violence and bloodshed. To leave no person without the instinct to kill. No child without a deadly weapon.
+
+(Ben, casual, base, shockMIN, left)
+(Endless War|Endless War, knife, happyMIN) I wish for a world with no society, no schools, no rules. A world where the only thing that matters is kill or be killed, a world where the only thing on people’s mind is WAR. 
+
+Huh, that sounds a lot like that ever so popular branch of politics, anarcho-facism™.
+
+(Ben, casual, base, neutral|cloud, left)
+(Munchy, casual, crossing, neutral, right)
+(Endless War|Endless War, knife, neutral) To achieve this end, I have procured the perfect set of ingredients and circumstances.
+ 
+She then pulls down the tarp behind her revealing a monstrosity of a machine, with a nigh endless amount of pipes, wires, and machinery all caved in on each other. In the middle of it all is a seat, and strapped to that seat, is a gagged Davoo?
+ 
+(Ben, casual, base, shockedMIN, left)
+(Munchy, casual, standing, shockedMIN, right)
+(Endless War, stand, neutral, center, slide, center+50)
+(Davoo|Davoo, neutral, shockedMIN, offleft, slide, left-50) Mhhhmmmmm!!
+ 
+(Endless War|Endless War, cross, neutral, center+50) You see I discovered that our lovely student Davoo here has two interesting properties which will allow this all to work ever so smoothly. 
+
+(Endless War|Endless War, cross, happyMIN, center+50) Firstly, Davoo is goo, and thus on a molecular level has already forgone his fleshy body. If we can replicate that to the rest of us, we could similarly achieve true immortality without the tedious need to constantly infuse slime into our bodies.
+ 
+[CG: Endless Eye]
+
+(Endless War) But even better than that, he appears to contain a collective in and of himself, and that got me thinking of how useful that is. Imagine everyone not only being immortal, but also part of a collective voice that will shout at them to fight endlessly. Instead of trying to indoctrinate you to violence through conventional means, I can simply BE you.
+ 
+(Endless War) By hooking him up to this expensive machine, which is hooked up to the unexplainable large amount of radioactive ooze in the grand canyon via the the intricate sewer system of Boston, I can refine all that waste into slime and infuse it into every possible DNA-like structure there is!
+
+(Endless War) This will not only transform everyone and everything into perfect immortal killing machines, but will change the very essence of this country, nay the entire world, to not only be at WAR..
+
+(Endless War) ..but ENDLESS WAR!
+
+(Endless War) AHAHAHAHA!!!!
+
+(Endless War, stand, happyMAX, center+50)
+(Ben, casual, base, happyMIN, left)
+(Munchy, casual, standing, happyMED, right)
+[CG end]
+
+Endless War continues to laugh as the crowd around her watches in shock and awe at her revelation.
+ 
+(PCPG) But, what will happen to Davoo then?
+ 
+(Ben, casual, base, happyMIN|cloud, left)
+(Endless War|Endless War, stand, neutral, center+50) Eh I don’t know, he’ll probably be consumed into the collective losing his individual self, but who cares, this is for the greater good.
+ 
+(Davoo|Davoo, neutral, shockedMAX, center-50) MMMMMNNNNN!!!!
+ 
+(Endless War|Endless War, stand, happyMIN, center+50)
+She chuckles at this final remark and pulls out a complicated looking remote with a cartoonishly large switch out of her pocket.
+ 
+(Ben, casual, base, happyMIN, left)
+(Endless War|Endless War, stand, happyMED, center+50) With a singular flip, the world will be changed, nay improved into something far greater, but of course I will not do it without the consent of both the gang leaders.
+
+(Davoo, neutral, shockedMIN, center-50) 
+(Endless War|Endless War, stand, happyMED, center+50) Munchy. Ben. Are you both ready for a new age of WAR? Are you ready for ENDLESS WAR?
+ 
+Munchy and Ben look at each other, each with a devious glint in their eyes. Seems like they are down for ENDLESS WAR, but am I?
+ 
+[CHOICE]
+ 
+*Sacrifice Davoo for ENDLESS WAR*
+*Stop ENDLESS WAR and save Davoo*
+ 
+*Sacrifice Davoo for ENDLESS WAR*
+
+I’m sorry Davoo, but progress requires sacrifices.
+ 
+(Ben, casual, base, happyMAX|cloud, left)
+(Munchy, casual, squatting, happyMAX, right)
+(Endless War, stand, blushMED|blushiesMIN, center+50)
+(Davoo, neutral, shockedMAX, center-50) 
+(Ben and Munchy) HELL YEAH! FLIP THAT SWITCH BITCH!
+
+Endless War promptly complies and soon the machine behind her whirs into life as it sucks radioactive ooze from below and churns it into slime.
+
+(Endless War|Endless War, stand, blushMED|blushiesMED, center+50) AHAHAHA!! LET THE NEW AGE OF ENDLESS WAR BEGIN!!!
+
+[Song: PCP-AMBIENT_Earthquake]
+
+The machine begins to speed up faster and faster, enough so that it almost seems like it will break apart at its hinges. Then just before it seems like everything will explode, the machine begins to turn in on itself, almost as though it’s falling into the tall monument behind it.
+
+(Endless War|Endless War, stand, blushMED|blushiesMED, center+50) And for the final ingredient! One who must sacrifice themselves so that the collective can function as one, who can incessantly chant to violence endlessly, a leader to direct this world to ENDLESS WAR!
+
+(Endless War|Endless War, stand, blushMAX|blushiesMAX, center+50) ME! Endless War!!
+
+[Davoo leaves]
+[Endless War leaves]
+[Location: Bunker Hill Monument.eye]
+
+Endless War then jumps into the collapsing machine and along with Davoo is sucked into the monument itself. The monument then morphs and changes with the machine until they are fully combined as one, as a single entity. The monument, nay Endless War herself, then begins to quietly chant, drowning all other thoughts I may have had.
+
+[StopMusic]
+[StopMusic]
+[Ben leaves]
+[Munchy leaves]
+[Location: white]
+
+And then without warning, everything went white.
+ 
+[fade to black]
+
+[Scene: ENDLESS WAR]
+[Song: PCPDating_ProCrastinatorShortLoop]
+
+It’s been several months since that fateful day, and true to Endless War’s words, the world has dramatically changed, nay improved, from what it was.
+
+[Location: 7eleven.nightmare]
+[fade from black]
+
+ENDLESS WAR has now spanned across the world, inviting everyone to kill each other to gain the new main currency of this world, the ever so valuable slime. People, animals, inanimate objects, everything has been affixed by this new curse of slimeification, and now our immortal bodies can kill each other endlessly like she always wanted.
+
+[Location: hallway2.dream]
+
+School stopped functioning, just like every other part of society. Businesses and even the government have effectively come to a halt as a result, though there is talk of a corporation that will rise up to take advantage of our new situation. I guess time will tell on that front.
+
+[Location: outsidepcpu.nightmare]
+
+As for me? I kill alongside everyone else and honestly, it’s a great time. I switch between gangs from time to time, trying out what both have to offer, and in doing so have gained many friendships. Despite all the violence around me, I feel more welcome in this city now than ever. 
+
+[Location: Bunker Hill Monument.eye]
+
+I still don’t know exactly what happened to Davoo or Endless War. I can only assume that she was right and they both got consumed into the collective and are now fueling our desire to kill. I guess they aren’t too far from us after all.
+
+I visit them here every so often to see if I can ever truly figure out what happened to them. Unfortunately, all that is left is a single eye, looking down upon us from the very top of the monument.
+
+Maybe that’s her, Endless War herself, watching over us all as we live in the kind of world she envisioned for us. In her new age of WAR.
+
+I’d like to think so.
+
+[fade to black]
+[StopMusic]
+
+To continue your journey in ENDLESS WAR, join the RFCK discord at
+discord.gg/mtSRXek or @ENDLESSWARrfck on Twitter.
+
+[CREDITS]
+*
+
+*Stop ENDLESS WAR and save Davoo*
+
+This is probably not gonna end well for me, but this is the right thing to do, right? Before Ben and Munchy can answer her I make a jump towards the remote in her hands and manage to knock it off of her. The remote drops it onto the floor and luckily breaks open, scattering it’s innards all over the concrete.
+
+(Endless War|Endless War, stand, shockedMED, center-50) YOU MOTHERFUCKER!
+
+[Davoo leaves]
+The restraints on Davoo then suddenly unlock and he immediately makes a break for it.
+
+(Endless War|Endless War, stand, shockedMAX, center-50, slide, center) BEN! MUNCHY! AFTER HIM! NOW!!
+
+[Ben leaves]
+[Munchy leaves]
+Ben and Munchy alongside their gangs promptly chase after Davoo. Endless War then turns to face me.
+
+(Endless War|Endless War, knife, neutral) So after everything we did together, you decide now is when you’ll try and stop me?
+
+(PCPG) …
+
+(Endless War|Endless War, knife, angryMIN) You think you’re so smart for doing that huh? What do you honestly think is going to happen now though? Did you somehow think you could stop my glorious plan?
+
+(Endless War|Endless War, knife, angryMED) I will tell you what will happen next. Davoo will soon be captured again, I will manage to fix my remote by then, and the new age of WAR will then begin anew.
+
+[StopMusic]
+
+(Endless War|Endless War, knife, angryMAX) The only thing different is that you won't get to see it begin.
+
+[Song: PCP-AMBIENT_Earthquake]
+
+But before Endless War can approach me, the ground starts to shake.
+
+(Endless War, knife, confusedMIN)
+(PCPG) Uhh, what is happening?
+
+Endless War then turns to look at the machine behind here and finds it vibrating at a rapid rate. The various pipes that hold the machine together begin to leak with radioactive ooze and sparks begin to fly between the various electronics.
+
+(Endless War|Endless War, stand, shockedMIN) No. NO FUCK!
+
+[Endless War leaves]
+Endless War rushes to the remote and tries to piece it back together as the machine continues whirring up, seemingly breaking itself down as a result. Maybe the machine trying to activate but because Davoo isn’t here nothing is functioning properly?
+
+(Endless War) Fucking stop you piece of shit!
+
+[cut to black]
+[StopMusic]
+[SFX: PCP-SFX_Nuke]
+
+Suddenly the machine gives in and explodes, knocking us both onto the ground.
+
+[fade from black]
+
+I open my eyes and find Endless War standing, staring down at the smoking pile of ooze, metal, and electronics. She seems almost… sad. 
+
+I try and stand up.
+
+(Endless War) Shit..
+
+She then quickly turns around and runs straight at me, but before I can react she..
+
+(Endless War, knife, angryMED, offright, slide, center)
+[SFX: PCP-SFX_KatanaSlash]
+[Overlay: Blood Splatter]
+..stabs me in the stomach. She then pulls her knife back out and I fall onto the floor, my blood mixing with the burnt radioactive ooze. Well, that's the end of the road for me, hopefully it wasn’t all for nothing and Davoo managed to escape or hide somewhere by now.
+
+(Endless War|Endless War, knife, neutral) PCPG, you must understand, there is no stopping true progress, you can only halt it. 
+
+(Endless War|Endless War, knife, sadMIN) ENDLESS WAR will happen, it has to, with or without you.
+
+(Endless War|Endless War, knife, sadMED) Hopefully you will instead enjoy this final death of yours, you’ll be one of the final few who do.
+
+[Remove Overlay]
+[cut to black]
+[SFX: PCP-SFX_KatanaSlash]
+Endless War then brings her knife down on me one more time, and the world goes black.
+
+[BAD END]
+*
+
