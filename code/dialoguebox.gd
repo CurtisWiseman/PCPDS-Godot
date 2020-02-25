@@ -197,7 +197,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 	#Reacts differently depending on the start of the current line.
 		# Load while on first line.
 		if index == start:
-			waitTimer.wait_time = 1
+			waitTimer.wait_time = 0.5
 			waitTimer.start()
 			yield(waitTimer, "timeout")
 			global.pause_input = false
@@ -213,14 +213,34 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				dialogue[index] = regex.sub(dialogue[index], "911", true)
 			
 			if dialogue[index].findn('leaves') != -1:
-				var character = dialogue[index].lstrip('[')
-				character = character.rstrip(' leaves]')
+				global.pause_input = true
+				
+				var command = dialogue[index].lstrip('[')
+				command = command.rstrip(']')
+				command = command.split(' ', false)
+				
+				var character = command[0]
+				var speed = 3
+				
+				if command.size() == 3:
+					speed = int(command[2])
+				
+				var characterToRemove = null
+				var rmIndex
 
 				for i in range(0, systems.display.layers.size()):
 					var layer = systems.display.layers[i]['name']
 					if layer.findn(character.to_lower()) != -1:
-						systems.display.remove(systems.display.layers[i]['path'])
+						characterToRemove = systems.display.layers[i]['node']
+						rmIndex = i
 						break
+				
+				if characterToRemove != null:
+					systems.display.fadealpha(characterToRemove, 'out', speed)
+					yield(systems.display, 'transition_finish')
+					systems.display.remove(characterToRemove, rmIndex)
+				
+				global.pause_input = false
 			
 			elif dialogue[index].findn('fade to black') != -1:
 				if global.fading: yield(global, 'finished_fading')
@@ -275,7 +295,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				if overlays != []:
 					for path in overlays:
-						systems.display.remove(path)
+						systems.display.remove_name(path)
 					
 					overlays = []
 				
@@ -366,7 +386,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				global.pause_input = true
 				
 				if CG != null:
-					systems.display.remove(CG)
+					systems.display.remove_name(CG)
 					CG = null
 				
 				global.pause_input = false
@@ -378,7 +398,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					systems.display.fadealpha(CG, 'out', 1, 'self', 0.01)
 					yield(systems.display, 'transition_finish')
 					
-					systems.display.remove(CG)
+					systems.display.remove_name(CG)
 					CG = null
 				
 				global.pause_input = false
@@ -484,6 +504,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('ENDING') != -1:
 				scene.change('main_menu', 'fadeblack', 1, 0.01)
 			
+			waitTimer.wait_time = 0.01
+			waitTimer.start()
+			yield(waitTimer, "timeout")
+			
 			var halt = global.rootnode.scene(dialogue[index], index+1, self)
 			index += 1
 			emit_signal('empty_line')
@@ -552,12 +576,14 @@ func _on_Dialogue_has_been_read(setIndex=false):
 		
 		# DIALOGUE
 		elif dialogue[index].begins_with("("):
+			global.pause_input = true
 			
 			var info # Contains provided character information.
 			var text # Contains the words the character says.
 			var say = true # Whether or not say the character text.
 #			var lastChar = dialogue[index].length()-1 # The position of the last character.
 			var wait = true # Whether or not to wait when no text to say.
+			var noChar = false
 			
 			# Handle 'soft' newlines so that a newline does't sperate lines of dialogue when displayed.
 			if dialogue[index][dialogue[index].length()-1] == 'n' and dialogue[index][dialogue[index].length()-2] == '/':
@@ -632,7 +658,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				if !say: say("", chrName)
 			elif !say: say("", "")
 			
-			parse_info(info); # Parse the info so that is displays a character.
+			if info.size() > 1:
+				parse_info(info); # Parse the info so that is displays a character.
+			else:
+				noChar = true
 			
 			if say: # If the text is to be said then...
 				
@@ -640,13 +669,14 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var halt = global.rootnode.scene(dialogue[index], index+1, self) # Send the dialogue to the scene function in the root of the scene.
 				say(text, chrName, voice)
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
-				emit_signal('sentence_end', dialogue[index])
+#				emit_signal('sentence_end', dialogue[index])
 				index += 1
+				if noChar: global.pause_input = false
 			
-			else: # Click if nothing was said after 0.5 seconds or not if !wait.
+			else:
 				if wait:
 					game.safeToSave = false
-					waitTimer.wait_time = 1
+					waitTimer.wait_time = 0.1
 					waitTimer.start()
 					yield(waitTimer, 'timeout')
 					game.safeToSave = true
@@ -717,6 +747,12 @@ func parse_info(info):
 			remove_dupes('tom', info)
 			yield(self, 'dupeCheckFinished')
 			if notsame[0]: parse_expression(info, 'tom', 'characterImages.tom.body[0]', 1, 'null', notsame[1])
+		"Colt Corona":
+			var charName = info[0].to_lower();
+			charName = charName.replace(' ', '');
+			remove_dupes(charName, info)
+			yield(self, 'dupeCheckFinished')
+			if notsame[0]: parse_outfit(info, charName+'.'+info[1], 1, notsame[1])
 		_:
 			var charName = info[0].to_lower();
 			charName = charName.replace(' ', '');
@@ -761,10 +797,13 @@ func remove_dupes(character, info):
 					return
 				
 				else:
+					if !global.pause_input: global.pause_input = true
 					var pos = systems.display.layers[i]['node'].position
-					systems.display.remove(systems.display.layers[i]['path'])
+					systems.display.remove(systems.display.layers[i]['node'], i)
+					yield(systems.display, 'removed_char')
 					notsame = [true, pos]
 					emit_signal('dupeCheckFinished')
+					if global.pause_input: global.pause_input = false
 					return
 	
 	if size == 2:
@@ -1081,6 +1120,8 @@ func execute(parsedInfo):
 	var script = Reference.new()
 	script.set_script(source)
 	script.eval()
+	emit_signal("sentence_end", dialogue[index])
+	global.pause_input = false
 
 # Function to search bodies for the correct one.
 func search(body, info):

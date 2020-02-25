@@ -34,7 +34,7 @@ func sfx(path, volume=0):
 	sfx.bus = 'SFX' # Set the bus to SFX.
 	sfx.name = audioname(path) # Make the node name the audio name.
 	sfx.volume_db = volume # Set the volume to volume.
-	sfx.connect('finished', self, 'end', [sfx]) # Delete the node when finished.
+	sfx.connect('finished', self, 'stop_SFX', [sfx]) # Delete the node when finished.
 	sfx.play() # Play the sound effect.
 	add_child(sfx) # Add as a child of sound.
 	

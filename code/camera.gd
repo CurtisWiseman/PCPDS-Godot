@@ -2,8 +2,8 @@ extends Camera2D
 
 var shakeTimer = Timer.new()
 var waitTimer = Timer.new()
-var posX = global.size.x/2
-var posY = global.size.y/2
+var posX = 1920/2
+var posY = 1080/2
 var finishMovment = false
 var lastOffset
 var lastZoom

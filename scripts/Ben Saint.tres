@@ -2,7 +2,7 @@
  
 (PCPG) !enlist killers
 
-(Munchy, campus, standing, neutral, right) I fucking knew it.
+(Munchy, campus, default, neutral, right) I fucking knew it.
  
 [CG: Purple Effect]
 Suddenly a purple light begins to envelop and circle around me and a near infinite amount of memories and experiences suddenly flash before my eyes. The light then calms down again, and at the end of it all, I feel like a changed man.
@@ -24,7 +24,7 @@ Woah.
  
 (Munchy|Professor Munchy, campus, crossing, angryMIN, right) Disgusting.
  
-(Munchy, campus, stand, neutral, right)
+(Munchy, campus, default, neutral, right)
 (Endless War, stand, happyMIN)
 (Ben, campus, point, happyMIN, left) You are also disposed to excessive murder and violence, so you can get straight fucked if any of that’s not what you were thinking of doing with your life.
  
@@ -32,11 +32,10 @@ Woah.
 (Ben, campus, base, neutral, left) Anyways, come meet the rest of the Killers at the cafeteria, it’s almost time for lunch anyways. 
  
 [Munchy leaves]
-[Endless War leaves]
-[SLIDE, Ben, center, offleft]
+[EndlessWar leaves]
+[SLIDE, Ben, offleft]
 We leave Munchy and Endless War behind and head for the cafeteria. I’m a certified Cop Killer now, I guess? Should I like, go find a cop to murder later or something? I’m not exactly sure how this all works.
  
-[StopMusic]
 [Song: PCPDating_ClassPhilosophy]
 [Location: dininghall.full, dininghall.table.mudpuddleforeground]
 
