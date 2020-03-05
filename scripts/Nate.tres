@@ -281,21 +281,17 @@ I turn around and start walking.
 
 [StopMusic]
 
-(Nate|???, casual, standing, neutral, offleft) Yo! PCPG!
+(Nate) Yo! PCPG!
 
 fever pitch
 
-(Nate, casual, standing, neutral, offleft, slide, center)
-
 [Song: PCPDating_MoveMe]
 
-(Nate|Professor Bestman, casual, standing, neutral) Hey. What’s up, bud?
+(Nate|Professor Bestman, casual, standing, neutral, offleft, slide, center) Hey. What’s up, bud?
 
 He’s looking rather different. This is intimidating in a rather new way.
 
-(Nate|Professor Bestman, casual, standing, confusedMIN) No worries. I knew you’d be coming in late. Come on in.
-
-(Nate, casual, standing, neutral, center, slide, offright)
+(Nate|Professor Bestman, casual, standing, confusedMIN, center, slide, offright) No worries. I knew you’d be coming in late. Come on in.
 
 Shuffling past me, he already has his keys out to open the door. Besides his keys, he seems to be clutching an empty can of sorts.
 
@@ -576,8 +572,6 @@ We say our goodbyes and he closes the door behind me. I am happy.
 I didn’t expect a full night’s sleep tonight.
 
 [fade to black]
-
-[Nate leaves]
 
 sacrifice...
 
