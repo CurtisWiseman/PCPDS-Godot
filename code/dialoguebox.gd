@@ -214,7 +214,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			if dialogue[index].findn('leaves') != -1:
 				global.pause_input = true
-				
 				var command = dialogue[index].lstrip('[')
 				command = command.rstrip(']')
 				command = command.split(' ', false)
@@ -230,7 +229,9 @@ func _on_Dialogue_has_been_read(setIndex=false):
 
 				for i in range(0, systems.display.layers.size()):
 					var layer = systems.display.layers[i]['name']
-					if layer.findn(character.to_lower()) != -1:
+					#QUICK HACK! Layers can also be CG etc!
+					#This caused problems if the character leaving has a name that appears in the CG name
+					if layer.findn(character.to_lower()) != -1 and (CG == null or systems.display.getname(CG) != layer):
 						characterToRemove = systems.display.layers[i]['node']
 						rmIndex = i
 						break
@@ -264,15 +265,26 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				command = command.rstrip(']')
 				command = command.replace(',', '')
 				command = command.split(' ')
+				var did_slide = false
 				for i in range(0, systems.display.layers.size()):
 					var layer = systems.display.layers[i]['name']
-					if layer.findn(command[1].to_lower()) != -1:
+					var slider = command[1].to_lower()
+					
+					if slider == "ColtCorona":
+						global.stupid_debug = true
+					
+					if layer.findn(slider) != -1:
 						if command.size() == 3:
+							did_slide = true
 							parse_move(['slide', command[2]], '"'+systems.display.layers[i]['path']+'"', 0)
 						elif command.size() == 4:
+							did_slide = true
 							parse_move(['slide', command[2], command[3]], '"'+systems.display.layers[i]['path']+'"', 0)
 						break
-			
+				if not did_slide:
+					prints("WARNING: BAD SLIDE COMMAND: ", command)
+					#unpause it here because parse_move would noramlly do that for us, but this is a safety fallback
+					global.pause_input = false
 			elif dialogue[index].findn('Song:') != -1:
 				var track = dialogue[index].lstrip('[')
 				track = track.rstrip(']')
@@ -326,7 +338,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 						
 						ovrLayer = []
 						for i in range(0, ovr.size()):
-   						 	ovrLayer.append(3)
+							ovrLayer.append(3)
 					
 					for i in range(0, ovr.size()):
 						ovr[i] = ovr[i].strip_edges(true, true)
@@ -393,14 +405,12 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			elif dialogue[index].findn('CG END') != -1:
 				global.pause_input = true
-				
 				if CG != null:
 					systems.display.fadealpha(CG, 'out', 1, 'self', 0.01)
 					yield(systems.display, 'transition_finish')
 					
 					systems.display.remove_name(CG)
 					CG = null
-				
 				global.pause_input = false
 			
 			elif dialogue[index].findn('Scene:') != -1:
@@ -577,7 +587,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 		# DIALOGUE
 		elif dialogue[index].begins_with("("):
 			global.pause_input = true
-			
 			var info # Contains provided character information.
 			var text # Contains the words the character says.
 			var say = true # Whether or not say the character text.
@@ -671,8 +680,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
 #				emit_signal('sentence_end', dialogue[index])
 				index += 1
-				if noChar: global.pause_input = false
-			
+				if noChar: 
+					global.pause_input = false
 			else:
 				if wait:
 					game.safeToSave = false
@@ -724,15 +733,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			say(dialogue[index], "")
 			emit_signal('sentence_end', dialogue[index])
 			index += 1
-
-
-
-
-
-
-
-
-
 
 # Generates function calls to the image system by parsing the script.
 func parse_info(info):
@@ -800,7 +800,6 @@ func remove_dupes(character, info):
 					if !global.pause_input: global.pause_input = true
 					var pos = systems.display.layers[i]['node'].position
 					systems.display.remove(systems.display.layers[i]['node'], i)
-					yield(systems.display, 'removed_char')
 					notsame = [true, pos]
 					emit_signal('dupeCheckFinished')
 					if global.pause_input: global.pause_input = false
@@ -1008,6 +1007,8 @@ func parse_position(info, parsedInfo, body, i, pos):
 	var num
 	
 	if i == info.size():
+		if (body+', '+str(pos[0])+', '+str(pos[1])).to_lower().find("blushmin") > -1:
+			pass
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 		return
 	
@@ -1087,7 +1088,8 @@ func parse_move(info, body, i):
 	var extra = 0
 	var num
 	
-	if info.size()-1 > i+1:
+	#the second part of this and checks that if the speed param is a string, it BETTER be valid float (integers are valid for that too)
+	if info.size()-1 > i+1 and ((typeof(info[i+2]) == TYPE_STRING) == (info[i+2].is_valid_float())):
 		speed = info[i+2]
 	
 	if info[i] == 'slide':

@@ -11,7 +11,6 @@ var collidee = null # The node that get's collided.
 
 signal transition_finish # Signal that a transition function is finished.
 signal transition_finish_fade # Signal specifaclly for fade transitions.
-signal removed_char
 
 # Set the background node to self by default.
 func _ready():
@@ -317,8 +316,6 @@ func remove(node, i):
 	
 	node.queue_free()
 	layers.remove(i)
-	
-	emit_signal("removed_char")
 	
 #	# Free the node at index and remove it from layers.
 #	layers[getindex(cname)]['node'].queue_free()
