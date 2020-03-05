@@ -2,8 +2,7 @@
 
 [Song: PCPDating_ClassMemes_Simple & Clean]
 [Location: hallway2] 
-
-
+ 
 With the tap of a finger, I add the entirety of Yu Yu Hakusho to my anime list, making it slightly less pathetic in the process. 
 
 Some part of me wonders whether the tremendous spike in my consumption of Japanese media over the past few days is purely a result of wanting to impress Professor Digibro, while another wonders how long it’s gonna take for me to fully admit that I’m gay as hell for anime Jesus.
@@ -2074,6 +2073,32 @@ All of the Digi-echs ten laserguns fire at once, leaving no trace of Mother’s 
 
 [fade to black]
 [StopMusic]
+[Song: PCPDating_HappyOrSomething]
+[Location: outsidepcpu.day]
+[fade from black]
+
+(PCPG) So, are we gonna seal the dimensional rift?
+
+(Digi|Digi, Campus, 3, ConfusedMIN) Are you kidding? This is a direct gateway to all of anime, of course we’re leaving it open.
+
+(Digi|Digi, Campus, 3, SmittenMAX) We are essentially gods now.
+
+(PCPG) Huh, neat. You wanna find an interesting world and live there then?
+
+(Digi|Digi, Campus, 2, SmittenMAX) This whole “When will they build the world I wanna live in”-thing is bullshit. Just fucking build it yourself.
+
+(Digi|Digi, Campus, 2, SmittenMED) That’s what this school is. In fact:... 
+
+(Digi|Digi, Campus, 2, SmittenMED) Do you want to go to RadProm with me?
+
+(PCPG) As literal gods with anime power beyond comprehension?
+
+(Digi|Digi, Campus, 5, SmittenMED) Yeah, that’s why it’s fucking hilarious.
+
+(PCPG) Okay, yeah. Sure. Let’s go to prom.
+
+[fade to black]
+[StopMusic]
 [Location: radprom1]
 [Song: PCPDating_RADCON]
 (Digi|Digi, Special, 2, SmittenMED|blush2) 
@@ -2081,7 +2106,7 @@ All of the Digi-echs ten laserguns fire at once, leaving no trace of Mother’s 
 
 (PCPG) Come to think of it: That’s two assholes with garbage opinions on anime down now. How many are even left?
 
-(Digi|Digi, Special, 2, SmittenMED) You wanna see the list?
+(Digi|Digi, Special, 2, SmittenMIN|blush2) You wanna see the list?
 
 (PCPG) Nah, that’d ruin the moment.
 [StopMusic]

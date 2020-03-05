@@ -1,7 +1,6 @@
 ﻿[Scene: Walking to School]
 
 [Song: PCPDating_HomeMorning]
-
 Wow. My first day at PCP University! 
 
 My last school threw me out for being too retarded and not being able to finish my assignments.
@@ -160,7 +159,7 @@ Gib turns to Action Giraffe.
 [fade to black]
 [StopMusic]
 [Gibbon leaves]
-[Action Giraffe leaves]
+[ActionGiraffe leaves]
 [Location: musicclass, musicclass.foreground]
 [Song: PCPDating_ClassJapanese]
 [fade from black]
@@ -190,6 +189,7 @@ Digibro rubs his chin, deep in thought.
 (Digi|Professor Digibro, Campus, 1, confusedMIN) Hmm... I guess that’s a pretty good way to describe my music.
 
 [SLIDE ActionGiraffe offleft]
+
 [ActionGiraffe leaves]
 (Digi|Professor Digibro, Campus, 5, happyMIN) Anyway, I’ve listed my bandcamp in the course outline sheet, so I highly recommend y’all check it out.
 
@@ -2118,7 +2118,7 @@ Endless War gives me a menacing look.
 
 [Munchy leaves]
 [Ben leaves]
-[Endless War leaves]
+[EndlessWar leaves]
 (Cop Killers, default)  
 But before I can give an answer, a group of thugs I’ve never met before burst into the room.
 
@@ -2254,7 +2254,7 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 
 [Ben leaves]
 [Munchy leaves]
-[Endless War leaves]
+[EndlessWar leaves]
 I turn away from the group and head to the cafeteria for lunch. It’s just not worth it right now to engage myself with the WAR and all its intricacies. Maybe I’ll consider it another time.
 
 [fade to black]

@@ -2033,7 +2033,7 @@ After grabbing a Rip It from the fridge, he notices your surprised gaze.
 
 (Ben|Ben, casual, base, happyMIN) Yeah, I like to buy in bulk to save money. 
 
-(Ben|Ben, casual, point, blushMIN) What brand and flavor do you want? I probably have it in here somewhere.
+(Ben|Ben, casual, point, smittenMIN) What brand and flavor do you want? I probably have it in here somewhere.
 
 (PCPG) Soy Bang--
 
@@ -2049,7 +2049,7 @@ You asked for the standard green Monster, but this is very obviously the Zero Ul
 
 It has less of a burn than regular Monster, like it’s less carbonated. It tastes good, though.
 
-(Ben|Ben, casual, point, blushMIN) If you’re ever looking to buy energy drinks, I would recommend going into any dollar store and purchasing Rip It’s.
+(Ben|Ben, casual, point, smittenMIN) If you’re ever looking to buy energy drinks, I would recommend going into any dollar store and purchasing Rip It’s.
 
 (Ben|Ben, casual, base, neutral) They’re definitely not the best tasting, but they have the most amount of value; 160mg’s of caffeine for one dollar.
 
@@ -2139,7 +2139,7 @@ You’re calmer, but still a little wary.
 
 (Ben|Ben, casual, base, neutral) Energy drinks are actually a rather inefficient source of caffeine…
 
-(Ben|Ben, casual, point, blushMIN) This is what I use when I really have to focus.
+(Ben|Ben, casual, point, smittenMIN) This is what I use when I really have to focus.
 
 (Ben, casual, base, neutral)
 
@@ -2565,9 +2565,9 @@ I'm a little stumped and startled myself at this point, but I’m glad Digi is n
 
 (Digi|Digi, campus, 4, happyMIN) Nate’s one of my closest friends. I’ve known him for a while.
 
-(Digi|Digi, campus, 3, blushMAX) We often get together to produce a lot of KHANNNNTTEENENEHTHTTHTHTTTTTT!!!!11111
+(Digi|Digi, campus, 3, smittenMAX) We often get together to produce a lot of KHANNNNTTEENENEHTHTTHTHTTTTTT!!!!11111
 
-(Digi, campus, 2, blushMED)
+(Digi, campus, 2, smittenMED)
 
 I don’t know what Digi just said, but I’m happy to be on what seems like the right track.
 

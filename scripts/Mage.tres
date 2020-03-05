@@ -54,13 +54,13 @@ Ok, this is most definitely not the real university. The professors all hate nat
 
 (Mage|Mage, campus, 3, happyMAX, center, slide, left) There she is!
 
-(Cerise and Pokemon|???, happy, offright, slide, center) Mage! What a pleasure to meet you here! And who’s this? Your new boyfriend?
+(Cerise|???, happy, offright, slide, center) Mage! What a pleasure to meet you here! And who’s this? Your new boyfriend?
 
 This conversation is somehow already more uncomfortable than getting chased by zombies.
 
 (Mage|Mage, campus, 1, angryMED|blushies) Quit joking Cerise, we have a problem! The zombies are back!
 
-(Cerise and Pokemon|Cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
+(Cerise|Cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
 
 (Cerise) I will protect my Pokémon children!
 
@@ -162,9 +162,9 @@ The triangular girl’s fierce glare petrifies me.
 
 (Ben|Ben, school, base, sadMIN) Yeah, it’s already getting late, and I’m definitely known as someone who’s never late! See you around Violet!
 
-[SLIDE, Endless War, left, offright]
+[SLIDE, EndlessWar, left, offright]
 [SLIDE, Ben, right, offleft]
-[Endless War leaves] 
+[EndlessWar leaves] 
 [Ben leaves]
 [StopMusic]
 
@@ -566,7 +566,7 @@ I yawn myself back to sleep.
 
 (PCPG) Urgh.
 
-(Mage|Mage, campus, 1, blushMIN) Have you heard about RadProm yet?
+(Mage|Mage, campus, 1, smittenMIN) Have you heard about RadProm yet?
 
 (PCPG) I have heard about it, but I’m not sure what it actually is.
 
@@ -581,7 +581,7 @@ I yawn myself back to sleep.
 My heart makes a little jump. 
 
 (PCPG) Sooo… would you like it if I came with you?
-(Mage, campus, 1, blushMED)
+(Mage, campus, 1, smittenMED)
 
 Mage looks relieved.
 
@@ -757,7 +757,7 @@ The Cop Killer turns to the Indigo Interlopers.
 
 [CG: Indigo Interlopers Death]
 [Ben leaves]
-[Endless War leaves]
+[EndlessWar leaves]
 [Cop Killers leave]
 [Mage leaves]
 [fade to black]
@@ -792,7 +792,7 @@ Professor Bestman even performed a legitimately awesome rendition of Another One
 
 (PCPG) Eh that’s not it. I just had other things on my mind lately.
 
-(Digibro|Professor Digibro, casual, 2, blushMED) Yeah, you’ve been seen hanging out with the Lethal Aurora Mage lately. Tell me, what’s going on there?
+(Digibro|Professor Digibro, casual, 2, smittenMED) Yeah, you’ve been seen hanging out with the Lethal Aurora Mage lately. Tell me, what’s going on there?
 
 [SLIDE, Digibro, center, left]
 (Mage, casual, 1, sadMIN, offright, slide, center) 
@@ -819,7 +819,7 @@ Professor Bestman even performed a legitimately awesome rendition of Another One
 
 (Mage|Mage, casual, 4, angryMIN) I disagree.
 
-(Digibro|Professor Digibro, casual, 5, blushMED) Ehh whatever! Have fun guys.
+(Digibro|Professor Digibro, casual, 5, smittenMED) Ehh whatever! Have fun guys.
 
 [SLIDE: Digi, left, offleft]
 [Digibro leaves]
@@ -856,7 +856,7 @@ We walk outside the hall, down the terrace into the garden.
 
 (PCPG) Your answer makes me worry even more.
 
-(Mage|Mage, casual, 2, blushMIN) Anywho, wanna go back in and get some cake?
+(Mage|Mage, casual, 2, smittenMIN) Anywho, wanna go back in and get some cake?
 
 [SLIDE, Mage, center, offleft]
 [Mage leaves]
@@ -1079,7 +1079,7 @@ Someone is standing in front of me. I’m recognizing the iconic silhouette.
 
 I’m confused… but my memories are slowly coming back… Mage… I made a mistake…
 
-(Endless War|Endless War, stand, blushMED) I told you, you fucking idiot. You need a weapon to defend yourself in this merciless city! And to !equip a weapon, what do you have to do first?
+(Endless War|Endless War, stand, smittenMED) I told you, you fucking idiot. You need a weapon to defend yourself in this merciless city! And to !equip a weapon, what do you have to do first?
 
 (PCPG) Eh… e-enlist?
 
