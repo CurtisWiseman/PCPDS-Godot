@@ -74,7 +74,7 @@ func _input(event):
 func _process(delta):
 	if Input.is_action_just_pressed("ui_debug"):
 		debug()
-	if Input.is_key_pressed(KEY_SEMICOLON):
+	if Input.is_action_just_released("force_unpause"):
 		print("Input pause forcibly broken out of!")
 		global.pause_input = false
 
