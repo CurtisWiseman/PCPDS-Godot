@@ -1007,8 +1007,6 @@ func parse_position(info, parsedInfo, body, i, pos):
 	var num
 	
 	if i == info.size():
-		if (body+', '+str(pos[0])+', '+str(pos[1])).to_lower().find("blushmin") > -1:
-			pass
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 		return
 	
