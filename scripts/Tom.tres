@@ -297,7 +297,7 @@ This is the kind of silence which precedes executions and utterances of the word
 
 [Fade to black]
 [StopMusic]
-[Endless War leaves]
+[EndlessWar leaves]
 [Ben leaves]
 [Location: horseshoesclinic.day.colt]
 [Song: PCPDating_Misato]
@@ -957,9 +957,9 @@ A voice disrupts the somber moment of silence that follows.
  
 (Drug dealer|???, neutral) That’ll be fifteen PCPennies, good chap.
 
-[SLIDE, Drug dealer, left, offleft]
+[SLIDE, Drugdealer, left, offleft]
 
-[Drug dealer leaves]
+[Drugdealer leaves]
  
 (Tom, 2, confusedMIN) What’s it say?
  
@@ -1300,7 +1300,7 @@ A girl’s voice makes me come to my senses.
 [Location: japaneseforest]
 [fade from black]
 
-(Azumi|???, Ninja, blushMAX)
+(Azumi|???, Ninja, smittenMAX)
  
 (PCPG) What did you say?
  
@@ -1370,7 +1370,7 @@ I have to take this opportunity, not that I actually remember anything about my 
  
 (Azumi, Ninja, confusedMIN) …
 
-(Azumi|Sword, Ninja, blushMIN) Well fuck, his story checks out. Welcome on board, kid.
+(Azumi|Sword, Ninja, smittenMIN) Well fuck, his story checks out. Welcome on board, kid.
  
 Hell fucking yes
  

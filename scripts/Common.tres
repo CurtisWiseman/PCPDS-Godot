@@ -1,7 +1,6 @@
 ﻿[Scene: Walking to School]
 
 [Song: PCPDating_HomeMorning]
-
 Wow. My first day at PCP University! 
 
 My last school threw me out for being too retarded and not being able to finish my assignments.
@@ -156,7 +155,7 @@ Gib turns to Action Giraffe.
 [fade to black]
 [StopMusic]
 [Gibbon leaves]
-[Action giraffe leaves]
+[ActionGiraffe leaves]
 [Location: musicclass]
 [Song: PCPDating_ClassJapanese]
 [fade from black]
@@ -185,8 +184,8 @@ Digibro rubs his chin, deep in thought.
 
 (Digi|Professor Digibro, Campus, 1, confusedMIN) Hmm… I guess that’s a pretty good way to describe my music.
 
-[SLIDE, Action Giraffe, left, offleft]
-[Action Giraffe leaves]
+[SLIDE, ActionGiraffe, left, offleft]
+[ActionGiraffe leaves]
 (Digi|Professor Digibro, Campus, 5, happyMIN) Anyway, I’ve listed my bandcamp in the course outline sheet, so I highly recommend y’all check it out.
 
 (Digi|Professor Digibro, Campus, 1, confusedMIN) Hopefully you’ve all heard of Sturgeon’s Revelation, but for those of you who remain uninformed, it states that 90 percent of everything is crap. Luckily, I consider my music to be in that gifted 10 percent…
@@ -388,7 +387,7 @@ Before the girl finishes her sentence Gibbon quickly shuts her up with his hand.
 (Gibbon, campus, clenched, angryMIN, center-100) Hey Endless War.
 
 (Gibbon, campus, default, angryMIN, center-100, slide, left)
-(Endless War|Endless War, stand, blushMIN) Oh, shy are we now? 
+(Endless War|Endless War, stand, smittenMIN) Oh, shy are we now? 
 
 (Endless War|Endless War, stand, confusedMIN) You wouldn’t happen to know where Gun Girl is nowadays? I hardly see her ‘round the Cop Killers anymore.
 
@@ -405,7 +404,7 @@ Endless War turns to face me. Her gaze nearly turns me to stone.
 
 (Endless War|Endless War, stand, neutral) You see this school is in the middle of a violent and dangerous gang war between the Rowdy Fuckers…
 
-[Endless War leaves]
+[EndlessWar leaves]
 [Gibbon leaves]
 [Zoom in on Rowdy Fuckers table]
 
@@ -442,7 +441,7 @@ Gibbon gives me a quick nod and heads for the cafeteria door.
 (Endless War, knife, happyMAX)
 I follow Gibbon as this “Endless War” girl stays behind at the table. As I look back, I can see her grinning, almost as if she’s reveling in the panic and bloodshed.
 
-[Endless War leaves]
+[EndlessWar leaves]
 [StopMusic]
 [Location: hallway1.percyjackson]
 [SFX: PCPDating_School_Bell]
@@ -613,11 +612,11 @@ Digibro snatches the book out of my hands. He looks at the novel and almost imme
 
 (Digi|Professor Digibro, casual, 5, HappyMAX) I don’t give a fuck whether it is or not. And even if it was, that wouldn’t be nearly as worrying as them allowing students to read shit like ‘Ass War’.
 
-(Digi|Professor Digibro, casual, 2, BlushMAX) I can’t believe someone as cool as you would consume such garbage.
+(Digi|Professor Digibro, casual, 2, smittenMAX) I can’t believe someone as cool as you would consume such garbage.
 
 Digibro tosses The Asterisk War away with such vigor that, upon colliding with the wall, it disintegrates instantly. He pulls another light novel out of his pocket, which I failed to notice due to the immense baggy spaciousness of his robe.
 
-(Digi|Professor Digibro, casual, 4, BlushMIN) Here, try this!
+(Digi|Professor Digibro, casual, 4, smittenMIN) Here, try this!
 
 Digibro shoves the small book into my arms. For a brief moment, I feel Digi’s soft tender skin brushing up against mine. I look this new light novel over. It is titled Boogiepop and Others.
 
@@ -641,7 +640,7 @@ We sit down between the stuffed bookshelves and Digi motions for me to read the 
 
 (PCPG) Boogiepop and Others? 
 
-(Digi|Professor Digibro, casual, 2, blushMED) I think the audience knows what kinda book I’m talking about.
+(Digi|Professor Digibro, casual, 2, smittenMED) I think the audience knows what kinda book I’m talking about.
 
 (PCPG) What audience? What are you talking about?
 
@@ -663,7 +662,7 @@ Utterly confused by what’s going on I just begin reading Boogiepop, and after 
 
 (PCPG) It’s great, thanks for suggesting it to me!
 
-(Digi|Professor Digibro, casual, 1, blushMIN) R-really? It’s pretty dense on your first read, I’m glad you like it.
+(Digi|Professor Digibro, casual, 1, smittenMIN) R-really? It’s pretty dense on your first read, I’m glad you like it.
 
 (Digi|Professor Digibro, casual, 1, happyMIN) I was thinking that maybe you and I could hang again sometime. I… I could recommend you some more books… an… and maybe I could get to know you some more…
 
@@ -671,7 +670,7 @@ My heart is pounding out of my chest. Have I finally found someone I can call a 
 
 (PCPG) Y… yeah, I’d like that.
 
-(Digi|Professor Digibro, casual, 1, blushMIN) Good, I’m glad.
+(Digi|Professor Digibro, casual, 1, smittenMIN) Good, I’m glad.
 
 I feel myself being enraptured by the warmth in Digi’s smile. My face feels warm as it begins to redden like a tomato.
 
@@ -948,7 +947,7 @@ As I near closer a figure comes walking out of it, and soon I realize that it’
 
 (PCPG) Wow, that sounds wonderful. But, what’s with the outfit then?
 
-(Mage|Mage, casual, 3, blushMIN) Oh, I just think this looked cute, so I try to wear it wherever I can. What, do you not think it’s cute?
+(Mage|Mage, casual, 3, smittenMIN) Oh, I just think this looked cute, so I try to wear it wherever I can. What, do you not think it’s cute?
 
 (PCPG) Uhh, y-yeah it’s pretty c-cute on you.
 
@@ -1170,7 +1169,7 @@ The situation seems to be getting heated, but I really don’t have the confiden
 
 (PCPG) Maybe, but you still shouldn’t be an asshole about it, she clearly isn’t comfortable.
 
-(Mage, campus, 2, blushMIN) Thanks PCPG, you are a good boi!
+(Mage, campus, 2, smittenMIN) Thanks PCPG, you are a good boi!
 
 [SLIDE, Mage, center, offleft]
 [Mage leaves]
@@ -1541,8 +1540,8 @@ He understands me, he KNOWS me, he…
 (Colt Corona, thisvideo, angryMIN, offleft, slide, left)
 A passing disheveled looking horseman pushes me to the side.
 
-[SLIDE, colt corona, left, offleft]
-[Colt Corona leaves]
+[SLIDE, coltcorona, left, offleft]
+[ColtCorona leaves]
 …the blue eyes weren’t looking at me. Neither the direction of his gaze, nor his expression has changed. Unaware of how he just broke my heart a little, he gazes on. What’s his deal?
 
 I decide to alert him to my presence with a tap on the shoulder.
@@ -1634,7 +1633,7 @@ With that, he storms out of the classroom, assumably to tend to one of the many 
 
 Huh.
 
-(Digi|Professor Digibro, Campus, 1, BlushMIN) You might have similar potential if I’m completely honest. Got that new kid energy of not fitting the fuck in anywhere.
+(Digi|Professor Digibro, Campus, 1, smittenMIN) You might have similar potential if I’m completely honest. Got that new kid energy of not fitting the fuck in anywhere.
 
 (PCPG) Do you always insult your students out of the blue?
 
@@ -1704,7 +1703,7 @@ He sounds strangely sincere and kind of sad as he says it.
 
 *Other choices*
 
-(Digi|Professor Digibro, Campus, 2, BlushMIN) I could give you a little preview now, if you’re free…
+(Digi|Professor Digibro, Campus, 2, smittenMIN) I could give you a little preview now, if you’re free…
 
 (PCPG) Well, technically I have a class now, but so long as I’m with a professor it’s probably fine, right?
 
@@ -1726,7 +1725,7 @@ Digi gives an approving nod as though me slacking off on my academic duties does
 
 (PCPG) So what? I start reading and you just sit there? Even if it’s a light novel, reading the whole thing will take a while.
 
-(Digi|Professor Digibro, Campus, 1, BlushMED) I could read it to you...? All of the dialogue is permanently etched into my mind anyways and years of lecturing have definitely improved my delivery.
+(Digi|Professor Digibro, Campus, 1, smittenMED) I could read it to you...? All of the dialogue is permanently etched into my mind anyways and years of lecturing have definitely improved my delivery.
 
 (PCPG) I’m not a child.
 
@@ -1744,11 +1743,11 @@ After finishing a chapter Digi speaks up.
 
 (PCPG) It’s great! That list must be a fucking treasure trove if this is anything to go by.
 
-(Digi|Professor Digibro, Campus, 2, BlushMIN) R-really? It’s pretty dense on your first read, I’m glad you liked it.
+(Digi|Professor Digibro, Campus, 2, smittenMIN) R-really? It’s pretty dense on your first read, I’m glad you liked it.
 
-(Digi|Professor Digibro, Campus, 1, BlushMIN) I was thinking that maybe you and I could hang again sometime. 
+(Digi|Professor Digibro, Campus, 1, smittenMIN) I was thinking that maybe you and I could hang again sometime. 
 
-(Digi|Professor Digibro, Campus, 1, BlushMIN) I… I could recommend you some more books… an… and maybe I could get to know you some more…
+(Digi|Professor Digibro, Campus, 1, smittenMIN) I… I could recommend you some more books… an… and maybe I could get to know you some more…
 
 My heart is pounding out of my chest. Have I finally found someone I can call a friend or maybe even… something more? 
 
@@ -1837,7 +1836,7 @@ The professor then goes on for a while about the art of creating reusable meme t
 I pack my stuff as Mage comes up to my table.
 
 [SLIDE, Mage, offright, center]
-(Mage|Mage, campus, 5, blushMIN) Thanks for supporting me back there PCPG.
+(Mage|Mage, campus, 5, smittenMIN) Thanks for supporting me back there PCPG.
 
 Blood rushes to my face at the compliment. Why wouldn’t I support her there? The topic seemed really important to her.
 
@@ -2087,7 +2086,7 @@ Endless War gives me a menacing look.
 
 [Munchy leaves]
 [Ben leaves]
-[Endless War leaves]
+[EndlessWar leaves]
 (Cop Killers, default)  
 But before I can give an answer, a group of thugs I’ve never met before burst into the room.
 
@@ -2223,7 +2222,7 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 
 [Ben leaves]
 [Munchy leaves]
-[Endless War leaves]
+[EndlessWar leaves]
 I turn away from the group and head to the cafeteria for lunch. It’s just not worth it right now to engage myself with the WAR and all its intricacies. Maybe I’ll consider it another time.
 
 [fade to black]

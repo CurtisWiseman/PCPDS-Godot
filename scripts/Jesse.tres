@@ -128,7 +128,7 @@ After those two deserted, it’s just me and Endless War left, and she’s givin
 [fade to black]
 [StopMusic]
 [Nate leaves]
-[Endless War leaves]
+[EndlessWar leaves]
 [Scene: New Horizons]
 Lunchtime…
 [Location: hallway2]
@@ -446,8 +446,8 @@ I look over at the other table to see if they’re faring any better. Not that I
 (Action Giraffe|Action Giraffe, angry) I have AIDS.
 (Lord of Ghosts|Lord of Ghosts, confused) POINT TAKEN
 I have no idea what they’re talking about.
-[Action Giraffe leaves]
-[Lord of Ghosts leaves]
+[ActionGiraffe leaves]
+[LordofGhosts leaves]
 (Ben|Ben, campus, slouch, angryMIN) Okay, let’s get this over with. Time to judge your work.
 When did he get back? Not one to announce his presence like Mr. Bestman, I guess.
 (Ben|Ben, campus, base, angryMIN) Davoo, and kid whose name I can’t remember, what have you got there?
@@ -472,17 +472,17 @@ He picks up the flask of “I Have AIDS” to take a closer look.
 [SFX: PCP-SFX_DemonScreetch]
 (Lord of Ghosts|Lord of Ghosts, shock) WAAAIIIIIIIIIIEEEEEEEEIIIIII!!! MY GHOSTLY ESSENCE FUCK OW OWIE
 Burning holes in his, uh, skin, the concoction gives off a visible smoke trail that would no doubt set off the fire alarm, if its batteries had been replaced at all in the last ten years.
-[SLIDE, Lord of Ghosts, offleft]
+[SLIDE, LordofGhosts, offleft]
 (Ben, campus, exasp, angryMAX)
-[Lord of Ghosts leaves]
+[LordofGhosts leaves]
 [SFX: PCP-SFX_DoorSlam]
 Panicking, he rushes out the door so quickly that he knocks over the flask and spills it all over Professor Saint’s jacket!
 (Ben|Ben, campus, exasp, angryMAX) Gah! Get back here you specter of torment!
 (Ben|Ben, campus, slouch, angryMIN) ...bleh. If he hadn’t zoomed around so recklessly, my jacket would be fine goddammit…
 (Ben|Ben, campus, exasp, angryMAX) Rage quit! That’s it, class is over. Everybody go home.
-[SLIDE, Action Giraffe, offleft]
+[SLIDE, ActionGiraffe, offleft]
 [SLIDE, Ben, center]
-[Action Giraffe leaves]
+[ActionGiraffe leaves]
 [StopMusic]
 Class filters out, but on my way to the door I stop to talk with Mr. Saint.
 (PCPG) Hey, professor? I know your jacket’s gonna need some patching up. Gibbon told me a few days ago, there’s this great fabricsman named Dan who has a shop set up downtown. He’ll get that jacket looking better than new. Oh, but just make sure you don’t let him sell you a new toilet seat. He’s REALLY pushy about it for some reason.
