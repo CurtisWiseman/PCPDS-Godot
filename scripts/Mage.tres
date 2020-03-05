@@ -54,13 +54,21 @@ Ok, this is most definitely not the real university. The professors all hate nat
 
 (Mage|Mage, campus, 3, happyMAX, center, slide, left) There she is!
 
+<<<<<<< HEAD
 (Cerise|???, cerise, happy, offright, slide, center) Mage! What a pleasure to meet you here! And who’s this? Your new boyfriend?
+=======
+(Cerise|???, happy, offright, slide, center) Mage! What a pleasure to meet you here! And who’s this? Your new boyfriend?
+>>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
 
 This conversation is somehow already more uncomfortable than getting chased by zombies.
 
 (Mage|Mage, campus, 1, angryMED|blushies) Quit joking Cerise, we have a problem! The zombies are back!
 
+<<<<<<< HEAD
 (cerise|Cerise, cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
+=======
+(Cerise|Cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
+>>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
 
 (Cerise) I will protect my Pokémon children!
 
@@ -162,9 +170,16 @@ The triangular girl’s fierce glare petrifies me.
 
 (Ben|Ben, campus, base, sadMIN) Yeah, it’s already getting late, and I’m definitely known as someone who’s never late! See you around Violet!
 
+<<<<<<< HEAD
 [SLIDE EndlessWar offright]
 [SLIDE Ben offleft]
 [Endless War leaves] 
+=======
+[SLIDE, EndlessWar, left, offright]
+[SLIDE, Ben, right, offleft]
+[EndlessWar leaves] 
+[Ben leaves]
+>>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
 [StopMusic]
 
 [Song: PCPDating_FallenGlass]
@@ -765,8 +780,13 @@ The Cop Killer turns to the Indigo Interlopers.
 
 [CG: Indigo Interlopers Death]
 [Ben leaves]
+<<<<<<< HEAD
 [Endless War leaves]
 [Cop Killers leaves]
+=======
+[EndlessWar leaves]
+[Cop Killers leave]
+>>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
 [Mage leaves]
 [fade to black]
 [CG end]

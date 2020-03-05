@@ -7,7 +7,7 @@ var dialogueBox
 var master_volume = 1
 var music_volume = 1
 var sfx_volume = 1
-var pause_input = false
+var pause_input setget _pause_input_set
 var loadedOnce = false
 var fading = false
 var sliding = false
@@ -40,6 +40,10 @@ var tom = {'color': Color('f00000')}
 var locations = []
 var locationNames = []
 
+func _pause_input_set(v):
+	#slap a breakpoint on this if you want to debug pause-locking
+	pause_input = v
+	
 # Set dynamic variables + do startup functions.
 func _ready():
 	
