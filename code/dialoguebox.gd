@@ -865,7 +865,7 @@ func parse_outfit(info, parsedInfo, i, pos):
 			parse_expression(info, parsedInfo+'.bigboi', 'characterImages.'+parsedInfo+'.bigboi.body['+0+']', i+1, info[i+1], pos)
 		"hazmat":
 			var expression = info[i+1]
-			var expNum = parse_expnum(expression, parsedInfo+'.hazmat')
+			var expNum = parse_expnum(expression, parsedInfo+'.hazmat')[0]
 			
 			if "angry".is_subsequence_of(expression): expression = 'angry'
 			elif "confused".is_subsequence_of(expression): expression = 'confused'
@@ -898,24 +898,24 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		
 		if tmp.size() == 2:
 			if 'blush'.is_subsequence_ofi(tmp[1]):
-				blushNum = int(parse_expnum(tmp[1], parsedInfo))
+				blushNum = int(parse_expnum(tmp[1], parsedInfo)[0])
 				blush = true
 			elif tmp[1] == 'shades':
 				shades = true
 		else:
 			for k in range(1, tmp.size()):
 				if 'blush'.is_subsequence_ofi(tmp[k]):
-					blushNum = int(parse_expnum(tmp[k], parsedInfo));
+					blushNum = int(parse_expnum(tmp[k], parsedInfo)[0]);
 					blush = true
 				elif tmp[k] == 'shades':
 					shades = true
 		
 #		if tmp.size() == 3:
-#			blushNum = int(parse_expnum(info[i], parsedInfo));
+#			blushNum = int(parse_expnum(info[i], parsedInfo)[0]);
 #			blush = true
 #			shades = true
 #		elif 'blush'.is_subsequence_ofi(tmp[1]):
-#			blushNum = int(parse_expnum(tmp[1], parsedInfo));
+#			blushNum = int(parse_expnum(tmp[1], parsedInfo)[0]);
 #			blush = true
 #		elif tmp[1] == 'shades':
 #			shades = true
@@ -927,52 +927,47 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	if shades:
 		AFL += '\n\tsystems.display.face(characterImages.nate.afl[0], '+body+', 0, 0, "shades")'
 	
+	var useDefault = false
 	if "happy".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.happy['+num+'], '+body+')'+AFL, body, i+1, pos)
+		useDefault = true
 	elif "angry".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.angry['+num+'], '+body+')'+AFL, body, i+1, pos)
+		useDefault = true
 	elif "confused".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.confused['+num+'], '+body+')'+AFL, body, i+1, pos)
+		useDefault = true
 	elif "neutral".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.neutral['+num+'], '+body+')'+AFL, body, i+1, pos)
+		useDefault = true
 	elif "sad".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.sad['+num+'], '+body+')'+AFL, body, i+1, pos)
+		useDefault = true
 	elif "shock".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.shock['+num+'], '+body+')'+AFL, body, i+1, pos)
+		useDefault = true
 	elif "smitten".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.smitten['+num+'], '+body+')'+AFL, body, i+1, pos)
+		useDefault = true
 	elif "face".is_subsequence_of(info[i]):
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.face['+num+'], '+body+')'+AFL, body, i+1, pos)
-	elif info[i] == 'right' or info[i] == 'left' or info[i] == 'center' or info[i] == 'offleft' or info[i] == 'offright' or info[i] == 'slide' or info[i] == 'off' or info[i] == 'silhouette':
+		useDefault = true
+	if not useDefault and (info[i] == 'right' or info[i] == 'left' or info[i] == 'center' or info[i] == 'offleft' or info[i] == 'offright' or info[i] == 'slide' or info[i] == 'off' or info[i] == 'silhouette'):
 		parse_position(info, 'systems.display.image('+body+', 1)'+AFL, body, i, pos)
 	else:
-		num = parse_expnum(info[i], parsedInfo)
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.'+info[i]+'['+num+'], '+body+')'+AFL, body, i+1, pos)
+		var expression_num_stuff = parse_expnum(info[i], parsedInfo)
+		num = expression_num_stuff[0]
+		var faceType = expression_num_stuff[1]
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.'+faceType+'['+num+'], '+body+')'+AFL, body, i+1, pos)
 
-# Determines the correct face number for an epxression.
+# Determines the correct face number for an epxression, returns
+#[face_type, number]
 func parse_expnum(expression, parsedInfo):
 	var length = expression.length()
 	
 	if expression[length-1].is_valid_integer():
 		var num = int(expression[length-1])
-		if num == 1:
-			return '0'
-		elif num == 2:
-			return '1'
-		elif num == 3:
-			return '2'
+		#STUPID HACK! This used to only check up to and including three...
+		#It probably doesn't need to be limited like this, it probably should be every number is allowed
+		#But I am afraid to touch it right now, so leaving it...
+		if num < 4: 
+			return [str(num-1), expression.left(length-1)]
 	elif 'min' == expression.substr(length-3, 3):
-		return '0'
+		return ['0', expression.left(length-3)]
 	elif 'med' == expression.substr(length-3, 3):
-		return '1'
+		return ['1', expression.left(length-3)]
 	elif 'max' == expression.substr(length-3, 3):
 		if "angry".is_subsequence_of(expression): expression = 'angry'
 		elif "confused".is_subsequence_of(expression): expression = 'confused'
@@ -981,11 +976,11 @@ func parse_expnum(expression, parsedInfo):
 		elif "smitten".is_subsequence_of(expression): expression = 'smitten'
 		var num = execreturn('return characterImages.'+parsedInfo+'.'+expression.rstrip('max')+'.size()')
 		if num == 3:
-			return '2'
+			return ['2', expression.rstrip('max')]
 		else:
-			return '1'
+			return ['1', expression.rstrip('max')]
 	else:
-		return '0'
+		return ['0', expression]
 
 # Parses 911's special mask case.
 func parse_911(info, parsedInfo, i, pos):
