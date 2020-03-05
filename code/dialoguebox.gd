@@ -955,9 +955,8 @@ func parse_expnum(expression, parsedInfo):
 	if expression[length-1].is_valid_integer():
 		var num = int(expression[length-1])
 		#STUPID HACK! This used to only check up to and including three...
-		#It probably doesn't need to be limited like this, it probably should be every number is allowed
-		#But I am afraid to touch it right now, so leaving it...
-		if num < 4: 
+		#I'm making it more useful, notably fixing use cases with four faces, but it may break things...
+		if num > 0: 
 			return [str(num-1), expression.left(length-1)]
 	elif 'min' == expression.substr(length-3, 3):
 		return ['0', expression.left(length-3)]
