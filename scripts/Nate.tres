@@ -8,13 +8,13 @@
 
 It happened again. I fell asleep in class.
 
-Specifically, I fell asleep in class yesterday and didn’t find out until later that there was a handout I was supposed to collect from the desk on the way out.
+Specifically, I fell asleep in class [i]yesterday[/i] and didn’t find out until later that there was a handout I was supposed to collect from the desk on the way out.
 
 I’m already getting bad grades in Professor Bestman’s class, and now I don’t even have the handout necessary to do the assignment due tomorrow.
 
 (PCPG) Gotta get that handout.
 
-[Location: pcpgbathroom.complete]
+[Location: pcpgbathroom]
 
 There’s no way around it. I’m going to have to ask Professor Bestman for it directly...
 
@@ -197,7 +197,7 @@ I’m spooked by a sudden exclamation that I hear coming from all the way outsid
 
 Oh no. He found my can! I dropped it on the ground since there were no trash cans outside...
 
-(Nate|Professor Bestman, campus, maniacal, offright) Take some personal fucking responsibility, why dontcha!!
+(Nate|Professor Bestman, campus, maniacal, offright) Take some [b]personal[/b] [i]fucking[/i] [b]responsibility[/b], why dontcha!!
 
 [Nate leaves]
 
@@ -509,7 +509,7 @@ What do I think about the man, Ronnie Coleman, who sacrificed his life to become
 *Ronnie Coleman is truly a deserved king among men.*
 *Ronnie Coleman is a very stupid dude.*
 
-    *Ronnie Coleman is truly a deserved king among men.*
+*Ronnie Coleman is truly a deserved king among men.*
 (PCPG) That’s incredible. I can’t even imagine the amount of willpower and discipline it took to reach that kind of status.
 
 Professor Bestman seems to light up at my sympathetic passion.
@@ -517,9 +517,9 @@ Professor Bestman seems to light up at my sympathetic passion.
 (Nate|Professor Bestman, casual, standing, smittenMED|shades) Yes!
 
 (Nate|Professor Bestman, casual, pointing, happyMED|shades) He really is The Best. Guy. Ever!
-    *
+*
 
-    *Ronnie Coleman is a very stupid dude.*
+*Ronnie Coleman is a very stupid dude.*
 (PCPG) What?!
 
 (PCPG) What’s the point of reaching the top if you have to give up so much to do it?
@@ -1027,7 +1027,6 @@ With a bit more tonal context, I take another glance at the scene Nate is focusi
 
 The young woman appears to be struggling to set up and use the machine. The Smith machine as Nate calls it. She’s very obviously new to the gym as she seems out of place and largely uncomfortable. 
 
-
 (Nate, casual, standing, angryMED|shades)
 
 She eventually turns visibly flustered and her sudden frustration triggers Nate to jump up from the bench. Nate’s mouth tightens and his eyes close slightly to match his now piercing gaze. Nate’s right hand is closing into a fist in tension.
@@ -1305,7 +1304,6 @@ Nate’s embrace calms all my worries and placates the constricting storm of emo
 (Nate, casual, standing, neutral|shades)
 
 (PCPG) I’m sorry, Nate. None of this is your fault!
-
 
 (PCPG) All you’ve done is boost me up and give me the opportunity to better myself and work towards my goals.
 
@@ -1708,7 +1706,6 @@ Unfortunately, I don’t have much experience with these kinds of dismal events.
 (PCPG) My whole life has changed!
 
 I’m absolutely certain about how I feel, but I guess I’ve never taken the time to tell Nate any of this.
-
 
 (Nate, casual, smoking, confusedMIN|beard)$
 
@@ -2239,7 +2236,6 @@ Not that you don’t have plenty of ways to waste time.
 *That sounds great!*
 
 (Tom|Tom, 2, happyMAX) I’m glad we finally managed to hang out like we originally planned to.
-
 
 You faintly recall that you made plans to hang out with Tom a while back.
 *
