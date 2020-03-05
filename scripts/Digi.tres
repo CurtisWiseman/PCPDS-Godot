@@ -16,7 +16,7 @@ Turning a corner, I barely avoid the established hazard of school hallways, that
 [StopMusic]
 [Song: PCPDating_BotBustah]
 
-(Endless War, knife, angryMIN) Watch where you’re going, juvie!
+(Endless War, knife, angryMIN, offleft, slide, center) Watch where you’re going, juvie!
  
 The amount in this case would likely be either tsundere bullshit or a fucking knife in my abdomen, or both.
  
@@ -32,25 +32,26 @@ The amount in this case would likely be either tsundere bullshit or a fucking kn
  
 A quick glance at my phone reveals that I still have time to get the pre-lecture rant that has become a part of my morning routine. 
 
-[SLIDE, Endless war, offright]
-
-[EndlessWar leaves]
+[SLIDE, EndlessWar, offright]
 
 While something about coming to school and returning fifteen bucks poorer without having eaten anything reminds me of middle school, those unpleasant memories are easily outweighed by the joy of hearing the professors soothing voice.
 
+[EndlessWar leaves]
+
 [fade to black]
 [StopMusic]
-[Location: japaneseclass.day]
+[Location: japaneseclass.day, japaneseclass.day.foreground]
 [Song: PCPDating_ClassJapanese]
+
+(Digi|Professor Digibro, Campus, 5, HappyMED)
+
 [fade from black]
 
 [Screen shake]
 
-(Digi|Professor Digibro, Campus, 5, HappyMED)
-
 I slam my fifteen Yang-bucks onto the desk with a little more force than strictly necessary.
  
-(PCPG) Hey Digi, what do you want out of life, romantic or otherwise? Goals, plans, Machiavellian schemes, whatever comes to mind.
+(PCPG) Hey Digi, what do you want out of life, romantic or otherwise? Goals, plans, machiavellian schemes, whatever comes to mind.
  
 (Digi|Professor Digibro, Campus, 5, HappyMED) Well, as the people who’ve been around for a while surely know, I was one of the founders of this place, and my ethos is kind of the same as it was back then, which is that the main point of generating income is to support the creative ventures of anyone who has something to offer.
 
@@ -66,7 +67,7 @@ I find myself pondering titles for the preposterous light novel that my life has
  
 (Digi|Professor Digibro, Campus, 2, HappyMIN) …In terms of relationships, I definitely want to settle down at some point, and since I’m acutely obsessed with being understood, which is kind of why I even do this in the first place, the only person I could spend all my time with is someone who is essentially me.
 
-(Digi|Professor Digibro, Campus, 2, BlushMIN) Some girl has started talking to me on social media recently, and that’s kind of promising…
+(Digi|Professor Digibro, Campus, 2, SmittenMIN) Some girl has started talking to me on social media recently, and that’s kind of promising…
  
 Wait, what? 
 
@@ -82,7 +83,8 @@ Fuck!
  
 The bell rings
  
-(Digi|Professor Digibro, Campus, 2, HappyMAX) Well, that’s that for this rant./n Thanks for your contribution to the Digibro-niche-art-foundation.
+(Digi|Professor Digibro, Campus, 2, HappyMAX) Well, that’s that for this rant./n
+Thanks for your contribution to the Digibro-niche-art-foundation.
 
 (Digi|Professor Digibro, Campus, 3, HappyMED) Take a seat, class is on.
  
@@ -104,25 +106,31 @@ I want to protest, but do as I am told since I don’t actually have any kind of
  
 With that, he opens up his laptop and starts typing, leaving the classroom in confused, though fleeting silence.
  
-(Davoo, Greeting, ShockMAX, left) One and a half hours?! That’s not enough time to write a proper friggin thesis on any one of these…
+(Davoo, Campus, Greeting, ShockMAX, offleft, slide, left) One and a half hours?! That’s not enough time to write a proper friggin thesis on any one of these…
  
 I only really hear the start of Davoo’s complaint.
+
+[SLIDE, Davoo, offleft]
 
 This is it. This is my chance to prove myself.
 
 A project so supermassive as to catapult me into that exclusive group of people, whose opinions on anime Digibro respects. And so I start writing.
 
-[SLIDE, Davoo, left, offleft]
-
 [Davoo leaves]
 
 …
+
+……
+
+………
  
-(Digi|Professor Digibro, Campus, 5, ConfusedMIN) Okay, hand in your essays./n Let’s see who’s a pleeb and who’s a weeb!
+(Digi|Professor Digibro, Campus, 5, ConfusedMIN) Okay, hand in your essays./n
+Let’s see who’s a pleeb and who’s a weeb!
  
 The grading process is unusually quick, with Digi often just reading the first few lines of text before scribbling something onto the paper and placing it onto another pile. 
 
-Impotent screams that he should at least consider the first three paragraphs before forming an opinion emanate from all over the classroom,/n but they fall on deaf ears. 
+Impotent screams that he should at least consider the first three paragraphs before forming an opinion emanate from all over the classroom,/n
+but they fall on deaf ears. 
 
 Occasionally the professor erupts into profanity-laden soliloquies.
  
@@ -130,7 +138,8 @@ Occasionally the professor erupts into profanity-laden soliloquies.
  
 Needless to say, the mood is tense.
  
-(Digi|Professor Digibro, Campus, 2, HappyMIN) Here you go, PCPG./n I could have done with a bit less purple prose, but there were some interesting points in there
+(Digi|Professor Digibro, Campus, 2, HappyMIN) Here you go, PCPG./n
+I could have done with a bit less purple prose, but there were some interesting points in there
 
 (Digi|Professor Digibro, Campus, 2, AngryMED) And at least you didn’t drone on and on about how you don’t typically care about x-type of show like most of these Geoff Thewian Fucktards.
  
@@ -142,35 +151,34 @@ Three out of fucking seven.
 
 Even glancing over the fact of what an absolutely laughable style of rating x/7 is; what in the ever-loving fuck did these assholes write?!
 
-[SLIDE, Digibro, center, offright]
+[SLIDE, Digi, right]
 
-[Digi leaves]
 [StopMusic]
 
 I turn to ask Davoo to see what he got, but Digi’s personal assistant seems to have already left somewhere.
 
 [Song: PCPDating_Misato]
 
-(Colt Corona, Thisvideo, Shocked2, offleft, slide, left) AAAaaaaaAAAAaaAAAAAAaa
+(Colt Corona, Thisvideo, shockMED, offleft, slide, left) AAAaaaaaAAAAaaAAAAAAaa
 
-(Colt Corona, Thisvideo, Angry2) He put numbers over the spot where I wanted to stick my giant horsey weiner AAAaaaa
+(Colt Corona, Thisvideo, AngryMED) He put numbers over the spot where I wanted to stick my giant horsey weiner AAAaaaa
 
-(Colt Corona, Thisvideo, Sad1) What did I do to deserve such cruelty?!
+(Colt Corona, Thisvideo, SadMIN) What did I do to deserve such cruelty?!
  
 While the altered beast lewdly gestures at his crotch, I sneak a peak at his “essay”, which turns out to just be an incredibly crude drawing Pinkie Pie, along with a heart and the words “pony slut”.
  
 Apparently, this piece of high art was deserving of a 7/7.
 
-[SLIDE, Colt Corona, left, offleft]
+(Colt Corona, Thisvideo, SadMIN, slide, offleft) God has forsaken us
 
-[Colt Corona leaves]
 [StopMusic]
  
 I leave for home devastated and with a rotten feeling in the depths of my stomach.
  
 [fade to black]
 
-
+[Colt Corona leaves]
+[Digi leaves]
 
 [Scene: Corrupting Your Kids]
 
@@ -180,31 +188,38 @@ I leave for home devastated and with a rotten feeling in the depths of my stomac
  
 The bastion of academia looming above the city is easy to spot, despite the only source of light being an enormous, illuminated billboard on the other side of the street. 
 
-The positioning seems almost spiteful seeing how it advertises another University./n The text on it reads:
+The positioning seems almost spiteful seeing how it advertises another University./n
+The text on it reads:
 
-“What’s in an OP?/n Does SAO still suck?/n How long will the sponsorship segment be?
+“What’s in an OP?/n
+Does SAO still suck?/n
+How long will the sponsorship segment be?
 
-Find out at the Thewniversity!/n (after this ad for Naruto online)”
+Find out at the Thewniversity!/n
+(after this ad for Naruto online)”
  
 The twenty-minute tutorial I watched on lockpicking proves useless as the door to PCPU simply swings open.
  
 [Location: hallway2]
  
-Strangely enough, there still seems to be a light burning in the Japanese classroom./n More specifically, it looks like the blue glow of a monitor. 
+Strangely enough, there still seems to be a light burning in the Japanese classroom./n
+More specifically, it looks like the blue glow of a monitor. 
 
 There can’t still be anyone here this late at night, they probably just forgot to turn it off, right? 
 
-Besides, I can’t turn back now./n It’s time to get action and steal some test-answers, baby.
+Besides, I can’t turn back now./n
+It’s time to get action and steal some test-answers, baby.
 
 [fade to black]
-[Location: japaneseclass.night]
+[Location: japaneseclass.night, japaneseclass.night.foreground]
 [fade from black]
  
 (Digi|Professor Digibro, Casual, 1, ShockMAX) Ah fuck, is it morning already?
  
 (PCPG) N-No. What are you doing here?
  
-(Digi|Professor Digibro, Casual, 1, ShockMIN) Writing, producing content the only way I know how:/n by being a workaholic insomniac.
+(Digi|Professor Digibro, Casual, 1, ShockMIN) Writing, producing content the only way I know how:/n
+by being a workaholic insomniac.
 
 (Digi|Professor Digibro, Casual, 2, ConfusedMIN) I also feel like I’m in a better position to ask you that question.
  
@@ -217,7 +232,8 @@ Besides, I can’t turn back now./n It’s time to get action and steal some tes
 
 (PCPG) Okay, this probably sounds really fucking stupid, but I had to find out what makes my taste so shit as to be deserving of a 3/7, so I made a plan to steal the answer sheets.
  
-(Digi|Professor Digibro, Casual, 2, AngryMIN) Well fuck you, I am a 3/7./n I call myself an autist all the fucking time, it’s not a fucking insult.
+(Digi|Professor Digibro, Casual, 2, AngryMIN) Well fuck you, I am a 3/7./n
+I call myself an autist all the fucking time, it’s not a fucking insult.
 
 (Digi|Professor Digibro, Casual, 2, AngryMED) Also seeing how you’re in a fucking course on anime, you better come to terms with being on the spectrum.
  
@@ -240,13 +256,15 @@ I’m completely lost.
  
 (Digi|Professor Digibro, Casual, 2, ConfusedMIN) Six hours before class starts?
  
-(PCPG) Yeah, well, you know. That test kind of messed with my head./n I’ve been thinking about it all day.
+(PCPG) Yeah, well, you know. That test kind of messed with my head./n
+I’ve been thinking about it all day.
  
 (Digi|Professor Digibro, Casual, 5, ShockMIN) Well yeah, that’s the point; to contemplate on it and play with the concept a little.
  
 (PCPG) Right, but I put a lot of soul into that analysis, just to get 3/7?
 
-(PCPG) I’m not saying I’m an amazing writer, but that’s lower mid-tier./n That’s “The Anime Man”-territory.
+(PCPG) I’m not saying I’m an amazing writer, but that’s lower mid-tier./n
+That’s “The Anime Man”-territory.
 
 (PCPG) I really respect the work you’re doing, and I probably deserved the score I got, but it still stings quite a bit.
 *
@@ -255,7 +273,8 @@ I’m completely lost.
 
 (Digi|Professor Digibro, Casual, 1, ShockMED) Wait, you thought I was rating the quality of your writing?
 
-(Digi|Professor Digibro, Casual, 3, HappyMAX) It’s a fucking autism score according to the Media-Neurodivergence-Scale./n I explained this after handing out the results!
+(Digi|Professor Digibro, Casual, 3, HappyMAX) It’s a fucking autism score according to the Media-Neurodivergence-Scale./n
+I explained this after handing out the results!
  
 (PCPG) I might not have heard that over the psychotic breakdown I was having.
  
@@ -267,13 +286,15 @@ Digi passes me a can he produces from under his desk.
 
 (PCPG) Oh, I've seen this stuff on the shelves before, never had one tho.
 
-(Digi|Professor Digibro, Casual, 2, HappyMED) Fuck, you're missing out then!/n Come on, take a swig and rate it!
+(Digi|Professor Digibro, Casual, 2, HappyMED) Fuck, you're missing out then!/n
+Come on, take a swig and rate it!
 
-(PCPG) You want me to review this Tacate?/n Will it affect my autism score?
+(PCPG) You want me to review this Tacate?/n
+Will it affect my autism score?
 
 (Digi|Professor Digibro, Casual, 5, HappyMIN) Nah, but it might change my opinion of you depending on what you think.
 
-(Digi|Professor Digibro, Casual, 2, BlushMAX) Now drink already ya punk bitch.
+(Digi|Professor Digibro, Casual, 2, SmittenMAX) Now drink already ya punk bitch.
 
 He raises his own can and toasts me.
 
@@ -286,9 +307,11 @@ He raises his own can and toasts me.
 
 *It’s good*
 
-Oh god, this shit is really easy to drink./n It simply flows down your throat without being watery or boring. 
+Oh god, this shit is really easy to drink./n
+It simply flows down your throat without being watery or boring. 
 
-It just tastes like beer,/n damn good beer. 
+It just tastes like beer,/n
+damn good beer. 
 
 (Digi|Professor Digibro, Casual, 2, ShockMIN) So, whatcha think
 
@@ -303,7 +326,8 @@ He throws me another can.
 
 *It could be more sophisticated*
 
-He seems like the kind of guy who would appreciate some snobby pretentious bullshit,/n so let's give it to him. 
+He seems like the kind of guy who would appreciate some snobby pretentious bullshit,/n
+so let's give it to him. 
 
 (Digi|Professor Digibro, Casual, 2, ShockMIN) so, whatcha think.
 
@@ -328,7 +352,8 @@ He pulls out another can and cracks it open in a practiced motion.
 
 He shrugs.
 
-(Digi|Professor Digibro, Casual, 2, HappyMIN) Gets me in the mood./n Gets my creative juices flowing. 
+(Digi|Professor Digibro, Casual, 2, HappyMIN) Gets me in the mood./n
+Gets my creative juices flowing. 
 
 (Digi|Professor Digibro, Casual, 5, HappyMIN) That's the best reason to drink if you ask me!
 
@@ -340,7 +365,8 @@ As he says this, Digi slams his laptop shut and puts it in a bag.
 
 (PCPG) Wait, are you done? With the novel?
 
-(Digi|Professor Digibro, Casual, 2, BlushMIN) Well no, but I'm fresh out of booze, sooo I'll go see a friend of mine./n Do you want to tag along?
+(Digi|Professor Digibro, Casual, 2, SmittenMIN) Well no, but I'm fresh out of booze, sooo I'll go see a friend of mine./n
+Do you want to tag along?
 
 (PCPG) Fuck yeah I want to meet your friend.
 
@@ -358,21 +384,25 @@ As he says this, Digi slams his laptop shut and puts it in a bag.
 
 (Digi|Professor Digibro, Casual, 3, HappyMAX) This is the place for anyone in search of a stiff drink, brony-tunes and in-depth discussions of furry porn.
 
-(Digi|Professor Digibro, Casual, 4, HappyMin) PCPG, meet Dr. Cider./n Cider, this is PCPG.
+(Digi|Professor Digibro, Casual, 4, HappyMin) PCPG, meet Dr. Cider./n
+Cider, this is PCPG.
 
 (PCPG) Doctor?
 
 (Cider) PhD still pending ...
 
-(Digi|Professor Digibro, Casual, 2, Neutral) And it has been for years./n He’s the best bartender around though. 
+(Digi|Professor Digibro, Casual, 2, Neutral) And it has been for years./n
+He’s the best bartender around though. 
 
-(PCPG) When you said you were going to see a friend; I was kind of assuming…/n at their home?
+(PCPG) When you said you were going to see a friend; I was kind of assuming…/n
+at their home?
 
 (PCPG) I wasn’t expecting to be taken on some kind of pub-crawl.
 
 (Cider) What is a home really?
 
-(Cider) It’s the place where you wake up in the morning with little recollection of the previous days./n And I for one like having some ale nearby in those instances.
+(Cider) It’s the place where you wake up in the morning with little recollection of the previous days./n
+And I for one like having some ale nearby in those instances.
 
 Before I can properly respond to the strangely inspirational musings of an alcoholic bartender, there’s a crash outside.
 
@@ -384,13 +414,15 @@ He looks at his watch.
 
 (PCPG) Shouldn’t we check if they’re alright?
 
-(Cider) Would’ve come in here covered in blood already if they survived./n The road outside here is a deathtrap.
+(Cider) Would’ve come in here covered in blood already if they survived./n
+The road outside here is a deathtrap.
 
 I look over to Digi to get some hits as to whether that was a joke or not.
 
 (Digi|Professor Digibro, Casual, 1, SadMIN) You can check on the corpse if you want to, but it’s gonna sour your buzz.
 
-(Digi|Professor Digibro, Casual, 2, HappyMIN) Don’t worry, he tries to keep the death toll to a minimum inside of the bar./n I’ll have a snare of the dog.
+(Digi|Professor Digibro, Casual, 2, HappyMIN) Don’t worry, he tries to keep the death toll to a minimum inside of the bar./n
+I’ll have a snare of the dog.
 
 Fuck I don’t know shit about drinks. 
 
@@ -398,7 +430,10 @@ Let’s say uhhh…
 
 (PCPG) What’s a “Trevor’s brass monkey”?
 
-(Cider) A brass monkey done hideously wrong./n Just a giant fucking mistake in a glass./n A… I know what to make you.
+(Cider) A brass monkey done hideously wrong./n
+Just a giant fucking mistake in a glass. A… 
+
+(Cider) I know exactly what to make you.
 
 (Cider) Wait a second.
 
@@ -406,25 +441,35 @@ Cider hands me a glass of neon green liquid exuding the aura of something made f
 
 (PCPG) So what is it?
 
-(Cider) This, my friend, is a drunken mistake./n Cheers!
+(Cider) This, my friend, is a drunken mistake./n
+Cheers!
 
 Digi retrieves the laptop from his bag and stats typing again.
 
-(PCPG) And why exactly are you writing a light novel?/n Don’t get me wrong, it’s cool and all, but most of these things kind of suck.
+(PCPG) And why exactly are you writing a light novel?/n
+Don’t get me wrong, it’s cool and all, but most of these things kind of suck.
 
-(Digi|Professor Digibro, Casual, 5, ShockMIN) Most/n yeah/n sure.
+(Digi|Professor Digibro, Casual, 5, ShockMIN) Most/n
+yeah, sure.
 
-(Digi|Professor Digibro, Casual, 1, AngryMED) But that’s not a problem with the format./n It’s a problem with lazy uninspired hacks./n So the same as with all things.
+(Digi|Professor Digibro, Casual, 1, AngryMED) But that’s not a problem with the format./n
+It’s a problem with lazy uninspired hacks.
 
-(Digi|Professor Digibro, Casual, 1, Neutral) The point is mainly to prove that I can write fiction that is at least palatable along with the standard self-indulgence which lies at the core of all writing.
+(Digi|Professor Digibro, Casual, 1, AngryMED) So the same as with all things.
 
-(PCPG) Okay, I get that/n But why does it have to be in a day?
+(Digi|Professor Digibro, Casual, 1, Neutral) The point is mainly to prove that I can write fiction that is at least palatable 
+
+(Digi|Professor Digibro, Casual, 1, Neutral) along with the standard self-indulgence which lies at the core of all writing.
+
+(PCPG) Okay, I get that/n
+But why does it have to be in a day?
 
 (PCPG) That does sound kind of hacky.
 
-(Digi|Professor Digibro, Casual, 1, AngryMED) Because that asshole from Eromanga allegedly did it and because I tend to abandon projects when they take to long.
+(Digi|Professor Digibro, Casual, 1, AngryMED) Because that asshole from Eromanga allegedly did it.
 
-(Digi|Professor Digibro, Casual, 2, HappyMIN) It’s not like I won’t edit it later or take longer for later volumes,/n but there has to be some semi-finished thing at the end of the day. I’m nearing the final stretch anyway.
+(Digi|Professor Digibro, Casual, 2, HappyMIN) It’s not like I won’t edit it later or take longer for later volumes,/n
+but there has to be some semi-finished thing at the end of the day. I’m nearing the final stretch anyway.
 
 Digi’s stomach growls, and I also feel some amount of hunger set in.
 
@@ -437,13 +482,18 @@ Digi’s stomach growls, and I also feel some amount of hunger set in.
 
 (PCPG) Well, whatever this slime-looking stuff is, I’ll take another round of it!
 
-(Cider|Cider) You sure?/n It’s called the drunken mistake for a reason, you know.
+(Cider|Cider) You sure?/n
+It’s called the drunken mistake for a reason, you know.
 
 (Cider|Cider) Makes ya feel like your brain’s dissolving.
 
-(Digi|Professor Digibro, Casual, 2, ConfusedMIN) Since when do you try to stop people from drinking?/n Isn’t that your main source of entertainment?/n I’ll take one as well.
+(Digi|Professor Digibro, Casual, 2, ConfusedMIN) Since when do you try to stop people from drinking?/n
+Isn’t that your main source of entertainment?
 
-(Cider|Cider) Can’t argue with that and neither do I want to./n Coming right up.
+(Digi|Professor Digibro, Casual, 2, ConfusedMIN) I’ll take one as well.
+
+(Cider|Cider) Can’t argue with that and neither do I want to./n
+Coming right up.
 
 And so the evening proceeds with us drowning ourselves in green slurry and discussing the artistic merit of light novels until we suddenly don’t.
 
@@ -452,9 +502,8 @@ And so the evening proceeds with us drowning ourselves in green slurry and discu
 [StopMusic]
 [Song: PCPDating_Drugz]
 [Location: pubcrawl.cider]
-[fade from black]
-
 (Digi|Professor Digibro, Casual, 1, SadMAX, left)  
+[fade from black]
 
 (Cider) Wake up you two, I have to get this place ready.
 
@@ -468,7 +517,7 @@ Oh right, we went to a bar and…
 
 (PCPG) I wanna wake up with you for the rest of my life.
 
-(Digi|Professor Digibro, Casual, 1, BlushMIN) What?
+(Digi|Professor Digibro, Casual, 1, SmittenMIN) What?
 
 Digi seems like he’s also still too drunk to properly process anything. Instead he just looks down at his laptop.
 
@@ -482,11 +531,13 @@ I look over at his screen, the word document is empty.
 
 (PCPG) Well, you did it in a day, can’t you do it again?
 
-(Digi|Professor Digibro, Casual, 2, SadMAX) NO I CAN’T FUCKING DO IT AGAIN!/n The soul is gone now.
+(Digi|Professor Digibro, Casual, 2, SadMAX) NO I CAN’T FUCKING DO IT AGAIN!/n
+The soul is gone now.
 
 (Digi|Professor Digibro, Casual, 2, SadMED) I could write a new thing, but THIS story, THIS idea is forever ruined now.
 
-(Digi|Professor Digibro, Casual, 2, SadMED) I will never find the energy to rehash these same scenes./n It’s over.
+(Digi|Professor Digibro, Casual, 2, SadMED) I will never find the energy to rehash these same scenes./n
+It’s over.
 
 (PCPG) That seems a little…
 
@@ -494,7 +545,8 @@ I look over at his screen, the word document is empty.
 
 (Digi|Professor Digibro, Casual, 2, HappyMED) But do you want to kill yourself with me?
 
-A lovers suicide?/n No!
+A lovers suicide?/n
+No!
 
 (PCPG) Sure.
 
@@ -509,15 +561,16 @@ A lovers suicide?/n No!
 
 (Digi|Professor Digibro, Casual, 1, SadMED) You can still turn around, you know. 
 
-(Digi|Professor Digibro, Casual, 1, BlushMIN) I didn’t even think you would actually come with me in the first place, but then again most of the people who attend my lectures are depressed jackasses, so maybe I should have seen it coming.
+(Digi|Professor Digibro, Casual, 1, SmittenMIN) I didn’t even think you would actually come with me in the first place, but then again most of the people who attend my lectures are depressed jackasses, so maybe I should have seen it coming.
 
-(PCPG) Nah, I’m with you./n Always been into the death of the author.
+(PCPG) Nah, I’m with you./n
+Always been into the death of the author.
 
-(Digi|Professor Digibro, Casual, 1, BlushMIN) Okay then.
+(Digi|Professor Digibro, Casual, 1, SmittenMIN) Okay then.
 
 We lean over the edge…
 
-(Digi|Professor Digibro, Casual, 3, BlushMAX) Time to escape this nihilistic suburban void and get isekaied.
+(Digi|Professor Digibro, Casual, 3, SmittenMAX) Time to escape this nihilistic suburban void and get isekaied.
 
 
 [SLIDE, Digibro, center, offright]
@@ -527,9 +580,11 @@ We lean over the edge…
 [Song: PCPDating_GameOver]
 … And fall. 
 
-With his long fluffy coat, he looks like he could just glide away into the sunrise if he wanted to,/n but instead it just makes a flapping noise as we accelerate toward the ground. 
+With his long fluffy coat, he looks like he could just glide away into the sunrise if he wanted to,/n
+but instead it just makes a flapping noise as we accelerate toward the ground. 
 
-As the pavement rapidly approaches, I waste a few more thoughts on my reasons for doing this, and honestly?/n I can’t remember. 
+As the pavement rapidly approaches, I waste a few more thoughts on my reasons for doing this, and honestly?/n
+I can’t remember. 
 
 I’m still fucking wasted.
 
@@ -547,7 +602,7 @@ I’m still fucking wasted.
 
 *get something to eat*
 
-
+[==> The Way to a Man's Heart]
 *
 
 
@@ -558,7 +613,7 @@ I’m still fucking wasted.
 
 (PCPG) I might pass out if I drink any more of this stuff.
 
-(Digi|Professor Digibro, Casual, 2, BlushMED, left) Do you like eating out?
+(Digi|Professor Digibro, Casual, 2, SmittenMED, left) Do you like eating out?
 
 (PCPG) I probably would if I could afford it?
 
@@ -568,13 +623,16 @@ I’m still fucking wasted.
 
 (Digi|Professor Digibro, Casual, 2, HappyMIN) I’ve been dragging my friends there for years, but it really is that good.
 
-(Digi|Professor Digibro, Casual, 2, HappyMIN) 10/10 on my list of the best restaurants in America./n I’ve been to a shitton./n You will cry.
+(Digi|Professor Digibro, Casual, 2, HappyMIN) 10/10 on my list of the best restaurants in America./n
+I’ve been to a shitton.
+
+(Digi|Professor Digibro, Casual, 2, HappyMIN) You will cry.
 
 (PCPG) Don’t tell me you rate every restaurant you go to.
 
 (Digi|Professor Digibro, Casual, 1, SadMIN) It’s a work in progress.
 
-(PCPG) Okay then, take me to it.
+(PCPG) Okay then, take me there.
 
 [fade to black]
 [Digi leaves]
@@ -589,23 +647,31 @@ We’re served lavish portions of meats and veggies by a waitress who seems used
 
 (PCPG) It’s…
 
-It’s good./n It’s certainly not bad, but after how much Digi hyped this place up, it’s definitely a bit disappointing. 
+It’s good./n
+It’s certainly not bad, but after how much Digi hyped this place up, it’s definitely a bit disappointing. 
 
 I wonder if the professor’s alone in his unfaltering adoration for the food here and his other friends had a similar experience.
 
 (PCPG) It’s the best meal I have ever had in my life.
 
-(PCPG) Admittedly, I’ve mostly had cup ramen and my own shitty attempts at poor boy cooking, but Wow this must be what drugs feel like./n I think I can die now.
+(PCPG) Admittedly, I’ve mostly had cup ramen and my own shitty attempts at poor boy cooking, but Wow this must be what drugs feel like./n
+I think I can die now.
 
-(Digi|Professor Digibro, Casual, 5, BlushMAX) “What drugs feel like”?/n You go to fucking PCPU, how have you never smoked weed?
+(Digi|Professor Digibro, Casual, 5, SmittenMAX) “What drugs feel like”?/n
+You go to fucking PCPU, how have you never smoked weed?
 
-(PCPG) Been busy watching anime, I guess?/n Maybe I’ll try some of the strains the cafeteria inexplicably serves.
+(PCPG) Been busy watching anime, I guess?/n
+Maybe I’ll try some of the strains the cafeteria inexplicably serves.
 
-(Digi|Professor Digibro, Casual, 2, ConfusedMED) Don’t./n That stuff sucks dick./n Although I’m kind of short on supply myself.
+(Digi|Professor Digibro, Casual, 2, ConfusedMED) Don’t./n
+That stuff sucks dick.
+
+(Digi|Professor Digibro, Casual, 2, ConfusedMED) Although I’m kind of short on supply myself.
 
 (PCPG) So what, are you like a big weed guy?
 
-(Digi|Professor Digibro, Casual, 1, ShockMIN) Probably depends on what metric you use, but yeah, I’m pretty into it./n Or at least enough into it to get seriously annoyed by the piss poor availability.
+(Digi|Professor Digibro, Casual, 1, ShockMIN) Probably depends on what metric you use, but yeah, I’m pretty into it./n
+Or at least enough into it to get seriously annoyed by the piss poor availability.
 
 (Digi|Professor Digibro, Casual, 2, HappyMIN) The whole idea of manually altering your brain chemistry is just fascinating to me.
 
@@ -617,21 +683,31 @@ I wonder if the professor’s alone in his unfaltering adoration for the food he
 
 Digi suddenly starts typing on his phone.
 
-(PCPG) Still working on that light novel?/n What’s it about anyways?
+(PCPG) Still working on that light novel?/n
+What’s it about anyways?
 
-(Digi|Digi, Casual, 4, Neutral) Obviously it’s an isekai, but you know, good./n For more than that you’ll have to read it.
+(Digi|Digi, Casual, 4, Neutral) Obviously it’s an isekai, but you know, good./n
+For more than that you’ll have to read it.
 
 (Digi|Digi, Casual, 1, ShockMIN) Didn’t I mention that I finished it at the bar?
 
-(PCPG) Pretty sure I would remember that./n What are you typing then?
+(PCPG) Pretty sure I would remember that./n
+What are you typing then?
 
-(Digi|Digi, Casual, 1, BlushMIN) Okay, so there’s this girl who’s super into my lectures and who has a staggeringly similar approach to media, or maybe just way of thinking in general as me.
+(Digi|Digi, Casual, 1, SmittenMIN) Okay, so there’s this girl who’s super into my lectures and who has a staggeringly similar approach to media, or maybe just way of thinking in general as me.
 
-(Digi|Digi, Casual, 5, BlushMIN) So we’ve been chatting on social media./n Her name’s May and…
+(Digi|Digi, Casual, 5, SmittenMIN) So we’ve been chatting on social media./n
+Her name’s May and…
 
-This is bad./n Oh god he’s still talking to her./n I can’t let this happen.
+Oh god this is bad. He’s still talking to her./n
+I can’t let this happen.
 
-I can’t lose him forever to some e-girl./n She’s probably a cosplayer./n Or worse.
+I can’t lose him forever to some e-girl./n
+She’s probably a cosplayer.
+
+Or worse.
+
+I've got to get that phone away from him by pretending to:
 
 [CHOICE]
 
@@ -668,9 +744,11 @@ I sloppily break his grasp of the phone and plunge the cursed piece of tech into
 
 (Digi|Digi, Casual, 2, ConfusedMIN) Have I told you to check out encyclopedia.zone?
 
-(PCPG) Maybe?/n What I’m getting at is, that these guys are trying to brainwash anime reviewers in order to help them orchestrate a weeb uprising to justify their retaliation.
+(PCPG) Maybe?/n
+What I’m getting at is, that these guys are trying to brainwash anime reviewers in order to help them orchestrate a weeb uprising to justify their retaliation.
 
-(PCPG) These people killed Jeffrey Epstein, so no one is safe, especially not you./n It was for the greater good.
+(PCPG) These people killed Jeffrey Epstein, so no one is safe, especially not you./n
+It was for the greater good.
 *
 
 *Save him from his detractors*
@@ -679,7 +757,8 @@ I sloppily break his grasp of the phone and plunge the cursed piece of tech into
 
 (Digi|Digi, Crouch)
 
-As the prof ducks under the table./n I throw his phone out of the window.
+As the prof ducks under the table./n
+I throw his phone out of the window.
 
 (Digi|Digi, Crouch) What happened?
 
@@ -691,10 +770,12 @@ As the prof ducks under the table./n I throw his phone out of the window.
 
 (PCPG) He probably got spooked when I saw him and warned you, so he just stole your phone and ran.
 
-(Digi|Digi, Casual, 3, AngryMAX) Some fuck with a katana stole my phone?/n This better not be used in the new batch of Digibro-exposed videos.
+(Digi|Digi, Casual, 3, AngryMAX) Some fuck with a katana stole my phone?/n
+This better not be used in the new batch of Digibro-exposed videos.
 *
 
-(Digi|Digi, Casual, 2, Neutral) Anyways, we should probably head to PCPU./n The sun is rising. 
+(Digi|Digi, Casual, 2, Neutral) Anyways, we should probably head to PCPU./n
+The sun is rising. 
 
 (PCPG) Sounds reasonable.
 
@@ -708,87 +789,108 @@ As the prof ducks under the table./n I throw his phone out of the window.
 
 [Location: scienceclass]
 [Song: PCPDating_ClassScience]
+(Ben|Professor Saint, campus, base, neutral)
 [fade from black]
 
-(Ben|Professor Saint, school, base, neutral) …and of course, since corporate funded science has nothing better to do than indulge the vanity of capital, even when there are multiple global crisis to be averted. 
+(Ben|Professor Saint, campus, base, neutral) …and of course, corporate funded science has nothing better to do than indulge the vanity of capital, even when there are multiple global crisis to be averted. 
 
 So, we’ve got this shit.
 
 Ben gestures toward a small flask on his desk.
 
-(Ben|Professor Saint, school, base, shockMIN) What did all of this research money go into you ask?
+(Ben|Professor Saint, campus, base, shockMIN) What did all of this research money go into you ask?
 
-(Ben|Professor Saint, school, point, neutral) Well I’m gonna tell you: It literally turns you into an anime girl.
+(Ben|Professor Saint, campus, point, neutral) Well I’m gonna tell you: It literally turns you into an anime girl.
 
-(Ben|Professor Saint, school, point, angryMIN) It was pitched as some kind of rejuvenation elixir, which is obviously an affront to god, because anyone who reaches their thirties and isn’t thoroughly ambivalent toward their own existence needs to grow up anyway.
+(Ben|Professor Saint, campus, point, angryMIN) It was pitched as some kind of rejuvenation elixir, which is obviously an affront to god, because anyone who reaches their thirties and isn’t thoroughly ambivalent toward their own existence needs to fucking grow up already.
 
-(Ben|Professor Saint, school, point, shockMIN) Also it’s made from slime, so of course it has weird side effects./n I’m not saying that slime is bad, because only a complete troglodyte would believe that.
+(Ben|Professor Saint, campus, point, shockMIN) But also it’s made from slime, so of course it has weird side effects.
 
-(Ben|Professor Saint, school, base, neutral) I just think that Slimecorp might accidentally or purposefully kill us all if they keep fucking with stuff they cannot comprehend.
+(Ben|Professor Saint, campus, point, shockMIN) I’m not saying that slime is bad, because only a complete troglodyte would believe that.
 
-(Ben|Professor Saint, school, base, angryMIN) That’s it./n That’s the lecture./n Go home and start a riot or something.
+(Ben|Professor Saint, campus, base, neutral) I just think that Slimecorp might accidentally or purposefully kill us all if they keep fucking with stuff they cannot comprehend.
 
-(PCPG) Hey, Ben, you’re like cool and hip with the kids, right?/n Being in a gang and such.
+(Ben|Professor Saint, campus, base, angryMIN) That’s it./n
+That’s the lecture.
 
-(Ben|Professor Saint, school, base, happyMIN) Well gee, if you say so, I guess I will humbly accept the compliment./n I have been described as “radical”.
+(Ben|Professor Saint, campus, base, angryMIN) Go home and start a riot or something.
+
+(PCPG) Hey, Ben, you’re like cool and hip with the kids, right?/n
+Being in a gang and such.
+
+(Ben|Professor Saint, campus, base, happyMIN) Well gee, if you say so, I guess I will humbly accept the compliment./n
+I have been described as “radical”.
 
 (PCPG) Then you wouldn’t happen to know where one can get premium psychedelic herbs around these parts.
 
 (PCPG) You know, stuff whose quality has been avowed by connoisseurs.
 
-(Ben|Professor Saint, school, base, shockMIN) The devil’s lettuce? What are you, a cop?
+(Ben|Professor Saint, campus, base, shockMIN) The devil’s lettuce? What are you, a cop?
 
 (PCPG) God no, I might even be inclined to become a killer if you could refer me to someone.
 
-(Ben|Professor Saint, school, base, happyMIN) I guess I know a guy of dubious moral standing who might be able to help you.
+(Ben|Professor Saint, campus, base, happyMIN) I guess I know a guy of dubious moral standing who might be able to help you.
 
-(Ben|Professor Saint, school, point, happyMIN) Really off kilter fuck, but he’s been known to sell a good product when the price is right./n Just come to the sewer priest’s alley after school. You’ll find him.
+(Ben|Professor Saint, campus, point, happyMIN) Really off kilter fuck, but he’s been known to sell a good product when the price is right./n
+Just come to the sewer priest’s alley after school. You’ll find him.
 
-(PCPG) That sounds… promising?/n Anyways, thanks.
+(PCPG) That sounds… promising?/n
+Anyways, thanks.
 
-(Ben|Professor Saint, school, dab) All in the name of recruitment, juvie.
+(Ben|Professor Saint, campus, dab) All in the name of recruitment, juvie.
 
-[SLIDE, Ben, center, offleft]
+[SLIDE, Ben, offleft]
+
+Ha, that was easy./n
+I can handle a transaction involving illicit substances! 
 
 [Ben leaves]
 
-Ha, that was easy./n I can handle a transaction involving illicit substances! 
-
-Digi will be heads over heels for me if I get him the best weed in town./n PCPG, you did it again!
+Digi will be heads over heels for me if I get him the best weed in town./n
+PCPG, you did it again!
 
 [fade to black]
 [StopMusic]
-[Location: musicclass]
+[Location: musicclass, musicclass.foreground]
 [Song: PCPDating_ClassJapanese]
+(Digi|Digi, Campus, 3, HappyMED)
+(Nate|Professor Bestman, Campus, Pointing, HappyMAX|shades, left)
 [fade from black]
 
 (Digi|Digi, Campus, 3, HappyMED)
 
-(Nate|Professor Bestman, Campus, Pointing, HappyMAX, left|shades) You did it, you absolute madman!/n You showed that little bitch Masamune how it’s done.
+(Nate|Professor Bestman, Campus, Pointing, HappyMAX|shades) You did it, you absolute madman!/n
+You showed that little bitch Masamune how it’s done.
 
 (Digi|Digi, Campus, 3, HappyMED) Hell yeah, so what they do in the show is possible, just probably not sustainable.
 
 (Digi|Digi, Campus, 3, AngryMED) Not that that excuses all the other bullshit it throws at its viewers.
 
-(Nate|Professor Bestman, Campus, Papers, HappyMED|shades) Yeah, I struggle to believe that he hasn’t raped student council girl whatever the fuck her name is yet./n Honestly, who could blame him.
+(Nate|Professor Bestman, Campus, Papers, HappyMED|shades) Yeah, I struggle to believe that he hasn’t raped student council girl whatever the fuck her name is yet./n
+Honestly, who could blame him.
 
 (Digi|Digi, Campus, 5, HappyMAX) He’s just that dedicated to grooming his sister, I guess.
 
-(Nate|Professor Bestman, Campus, Papers, ConfusedMAX|shades) But why?/n Why is he so intent on getting his pathetic light novel author dick into the worst girl imaginable?
+(Nate|Professor Bestman, Campus, Papers, ConfusedMAX|shades) But why?/n
+Why is he so intent on getting his pathetic light novel author dick into the worst girl imaginable?
 
 (Nate|Professor Bestman, Campus, Smoking, ConfusedMAX|shades) She’s not even that hot.
 
-(Nate|Professor Bestman, Campus, Smoking, AngryMED|shades) His piece of shit not-blood-related-I-swear-you-guys-Imouto is distracting him from the far superior option of dating Elf, an actually functioning human being and leaving Sagiri to fend for herself.
+(Nate|Professor Bestman, Campus, Smoking, AngryMED|shades) His piece of shit not-blood-related-I-swear-you-guys-Imouto is distracting him from the far superior option of dating Elf, an actually functioning human being 
 
-(Digi|Digi, Campus, 2, AngryMED) Yeah, but you see, that would be interesting./n And this show is made by hacks who think that somewhat attractive characters and lazy fetish bait are substitutes for an engaging story.
+(Nate|Professor Bestman, Campus, Smoking, AngryMED|shades) and leaving Sagiri to fend for herself.
+
+(Digi|Digi, Campus, 2, AngryMED) Yeah, but you see, that would be interesting, and this show is made by hacks who think that somewhat attractive characters and lazy fetish bait are substitutes for an engaging story.
 
 (Digi|Digi, Campus, 2, Neutral) Have you seen that they’re making an OVA?
 
-(Nate|Professor Bestman, Campus, Standing, HappyMED|shades) Yes, I know./n I know they’re always gonna go for the worst arc imaginable, but I can’t stop dreaming about a better world in which anime is good, goddamnit.
+(Nate|Professor Bestman, Campus, Standing, HappyMED|shades) Yes, I know./n
+I know they’re always gonna go for the worst arc imaginable, but I can’t stop dreaming about a better world in which anime is good, goddamnit.
 
 (Digi|Digi, Campus, 5, SadMIN) Don’t we all.
 
-(Nate|Professor Bestman, Campus, Standing, HappyMED|shades, left, slide, offleft) Anyways, I’ve gotta go./n Keep cranking out those light novels my dude.
+(Nate|Professor Bestman, Campus, Standing, HappyMED|shades, left, slide, offleft) Anyways, I’ve gotta go./n
+Keep cranking out those light novels my dude.
 
 [Nate leaves]
 
@@ -802,11 +904,14 @@ Digi will be heads over heels for me if I get him the best weed in town./n PCPG,
 
 (PCPG) If it does, it would certainly explain the quality of the average light novel.
 
-(Digi|Digi, Campus, 2, ConfusedMIN) Right. You seemed pretty out of breath when you got here, do you want another rant or…
+(Digi|Digi, Campus, 2, ConfusedMIN) Right. 
 
-(PCPG) No, but I found you a dealer./n Consider it an apology for what happened to your phone.
+(Digi|Digi, Campus, 2, ConfusedMIN) You seemed pretty out of breath when you got here, do you want another rant or…
 
-(Digi|Digi, Campus, 3, BlushMAX) Alright, let’s get high.
+(PCPG) No, but I found you a dealer./n
+Consider it an apology for what happened to your phone.
+
+(Digi|Digi, Campus, 3, SmittenMAX) Alright, let’s get high.
 
 [fade to black]
 [StopMusic]
@@ -817,25 +922,30 @@ Digi will be heads over heels for me if I get him the best weed in town./n PCPG,
 
 (Digi|Digi, Casual, 4, ShockMIN) Are you okay?
 
-(PCPG) Yeah, why wouldn’t I be?/n In case you haven’t noticed, I’m an expert at interacting with the criminal underworld.
+(PCPG) Yeah, why wouldn’t I be?/n
+In case you haven’t noticed, I’m an expert at interacting with the criminal underworld.
 
 (PCPG) No reason to be nervous.
 
 (Digi|Digi, Casual, 1, ConfusedMIN) You’re shaking.
 
-(PCPG) Just a little cold./n Brrr, it’s freezing out here, I really should get some warmer clothes.
+(PCPG) Just a little cold.
 
-(Digi|Digi, Casual, 5, ConfusedMIN) Really?/n It’s not that cold…
+(PCPG) Brrr, it’s freezing out here, I really should get some warmer clothes.
+
+(Digi|Digi, Casual, 5, ConfusedMIN) Really?/n
+It’s not that cold…
 
 (Digi|Digi, Casual, 5, HappyMIN) You can have one of my coats if you want.
 
-(PCPG) The- the coat?/n Are you sure?
+(PCPG) The- the coat?/n
+Are you sure?
 
 (Digi|Digi, Casual, 2, HappyMED) yeah, as I said, I’m fine.
 
 (PCPG) And why the fuck do you carry multiple coats?
 
-(Digi|Digi, Casual, 2, BlushMIN) You never know when you might need an additional baller furcoat, dude.
+(Digi|Digi, Casual, 2, SmittenMIN) You never know when you might need an additional baller furcoat, dude.
 
 - Coat of anime Jesus acquired! -
 
@@ -843,17 +953,21 @@ Oh god it smells like him.
 
 I immediately feel bigger and better equipped for the situation at hand. 
 
-No lowlife’s ganna fuck with me in this pimp ass getup./n By which I mean looking like an actual fucking pimp.
+No lowlife’s ganna fuck with me in this pimp ass getup./n
+By which I mean looking like an actual fucking pimp.
 
-Ben’s contact isn’t hard to spot, seeing how he’s one of the shadiest looking motherfuckers I have ever seen./n And that’s after spending a few weeks at PCPU of all places.
+Ben’s contact isn’t hard to spot, seeing how he’s one of the shadiest looking motherfuckers I have ever seen./n
+And that’s after spending a few weeks at PCPU of all places.
 
 (Drug dealer|???, neutral, offright, slide, right)
 
 (PCPG) I hear you’re in the business of supplying smokable central asian flora.
 
-(Drug dealer|???, neutral) Sadly, my knowledge of this world’s many kingdoms is still lacking./n But I do sell cannabis if that’s what you’re asking about.
+(Drug dealer|???, neutral) Sadly, my knowledge of this world’s many kingdoms is still lacking./n
+But I do sell cannabis if that’s what you’re asking about.
 
-(PCPG) I was being subtle in case someone is listening./n Yes, weed.
+(PCPG) I was being subtle in case someone is listening./n
+Yes, weed.
 
 (PCPG) And what do you mean by “this world’s”?
 
@@ -865,9 +979,11 @@ Ben’s contact isn’t hard to spot, seeing how he’s one of the shadiest look
 
 (Drug dealer|???, neutral) Yet, some of my skills did prove useful, as well as the large collection of revitalizing herbs I carried with me, and so, I became a drug dealer in another world.
 
-(Digi|Digi, Casual, 2, ConfusedMIN) So you’ve been isekaied./n But why?
+(Digi|Digi, Casual, 2, ConfusedMIN) So you’ve been isekaied./n
+But why?
 
-(Drug dealer, neutral) Ah, answers, the most potent drug of all./n But alas, I do not know.
+(Drug dealer, neutral) Ah, answers, the most potent drug of all./n
+But alas, I do not know.
 
 (Drug dealer, neutral) All I know is that I’m the best goddamn psychedelics merchant around.
 
@@ -877,23 +993,29 @@ Ben’s contact isn’t hard to spot, seeing how he’s one of the shadiest look
 
 (PCPG) You have?
 
-(Drug dealer, neutral) Enough chit chat./n This is the dank weed of legend./n Potent beyond comparison and only obtainable in the swamplands of the semi-permanently deceased.
+(Drug dealer, neutral) Enough chit chat./n
+This is the dank weed of legend.
+
+(Drug dealer, neutral) Potent beyond comparison and only obtainable in the swamplands of the semi-permanently deceased.
 
 (Drug dealer, angry) Now paypal me the money.
 
 [fade to black]
 [StopMusic]
-[Drug Dealer leaves]
+[DrugDealer leaves]
 [Digi leaves]
 [Location: 7eleven.day]
 [Song: PCPDating_Tension]
 [fade from black]
 
-(Digi|Digi, Casual, 1, SadMIN, offleft, slide, center) So, do you want to head to the rooftop and smoke this shit?/n If it’s anywhere near what that guy promised, we’re in for on hell of a ride.
+(Digi|Digi, Casual, 1, SadMIN, offleft, slide, center) So, do you want to head to the rooftop and smoke this shit?/n
+If it’s anywhere near what that guy promised, we’re in for on hell of a ride.
 
-(PCPG) You seem a bit out of it./n Not that I blame you, this fucker creeps me out too.
+(PCPG) You seem a bit out of it./n
+Not that I blame you, this fucker creeps me out too.
 
-(Digi|Digi, Casual, 1, ConfusedMED) It’s not that./n Someone around here is isekaiing randos to and from Boston.
+(Digi|Digi, Casual, 1, ConfusedMED) It’s not that./n
+Someone around here is isekaiing randos to and from Boston.
 
 (Digi|Digi, Casual, 5, ConfusedMED) I only know a handful of people who would do shit like that, and all of them are…
 
@@ -901,9 +1023,8 @@ Ben’s contact isn’t hard to spot, seeing how he’s one of the shadiest look
 
 (Digi|Digi, Casual, 2, AngryMIN) Incompetent shitheads, but yes, if they have a means of causing these incidents on a citywide scale, there’s no way they won’t be coming after me.
 
-(Digi|Digi, Casual, 3, AngryMED) I’ve made a lot of enemies over the years, PCPG, and I’m not fucking sorry about it./n Bring it on you pieces of shit.
-
-[SLIDE, Digibro, center, left-150]
+(Digi|Digi, Casual, 3, AngryMED, center, slide, left-150) I’ve made a lot of enemies over the years, PCPG, and I’m not fucking sorry about it./n
+Bring it on you pieces of shit.
 
 (Michelle|???, body2, face2, right-350) Well well well, If it isn’t mister phimosis cock himself, big D digibro and whoever your pathetic little tag-along is. 
 
@@ -911,7 +1032,8 @@ Ben’s contact isn’t hard to spot, seeing how he’s one of the shadiest look
 
 (May, body1, face3, right+150)
 
-(Michelle|???, body2, face5) Do you fuck your students now, Conrad?/n That’s pretty gay dude.
+(Michelle|???, body2, face5) Do you fuck your students now, Conrad?/n
+That’s pretty gay dude.
 
 (PCPG) Who the fuck is Conrad?
 
@@ -923,7 +1045,8 @@ Ben’s contact isn’t hard to spot, seeing how he’s one of the shadiest look
 
 (Michelle|Michelle, body3, face4) Do I look like I give a fuck?
 
-(Michelle|Michelle, body3, face4) This poor maiden’s only crime was wanting some of that forbidden anituber dick, and you shunned her./n What the fuck?
+(Michelle|Michelle, body3, face4) This poor maiden’s only crime was wanting some of that forbidden anituber dick, and you shunned her./n
+What the fuck?
 
 (Michelle|Michelle, body3, face5) You have an occupational obligation to fuck your groupies whether they like it or not, so repent for your sins.
 
@@ -933,15 +1056,23 @@ She’s just giving me a death stare.
 
 She… Oh god, does she know what I did? 
 
-These ladies look a fair bit more dangerous than some of the other gangs around here, and it seems like one of them is hella jealous of me./n This can’t be good…
+These ladies look a fair bit more dangerous than some of the other gangs around here, and it seems like one of them is hella jealous of me./n
+This can’t be good…
 
-(Michelle|Michelle, body2, face5) And what’s your deal with that faggy coat?/n What is that?/n Some kind of half finished fur suit?
+(Michelle|Michelle, body2, face5) And what’s your deal with that faggy coat?
 
-(Michelle|Michelle, body2, face5) Are you a furry?/n A degenerate?/n How despicable, truly a being beyond redemption.
+(Michelle|Michelle, body2, face5) What is that?/n
+Some kind of half finished fur suit?
+
+(Michelle|Michelle, body2, face5) Are you a furry?/n
+A degenerate?
+
+(Michelle|Michelle, body2, face5) How despicable, truly a being beyond redemption.
 
 (Michelle|Michelle, body3, face5) You go to the sin bin, mister.
 
-Oh, right, I’m still wearing Digi’s sick ass fur coat…/n Wait, did she just call it “faggy”?
+Oh, right, I’m still wearing Digi’s sick ass fur coat…/n
+Wait, did she just call it “faggy”?
 
 [CHOICE]
 
@@ -950,25 +1081,30 @@ Oh, right, I’m still wearing Digi’s sick ass fur coat…/n Wait, did she jus
 
 *Admit to being a furry*
 
-(PCPG) Hell yeah I’m a furry, a chosen hero of the anthropologically inclined and I wear it with pride./n What do you say now, huh?.
+(PCPG) Hell yeah I’m a furry, a chosen hero of the anthropologically inclined and I wear it with pride./n
+What do you say now, huh?.
 
-(Michelle|Michelle, body3, face2) Disgraceful, you clearly haven’t been bullied enough./n I might have to throw up.
+(Michelle|Michelle, body3, face2) Disgraceful, you clearly haven’t been bullied enough./n
+I might have to throw up.
 
 (Kazee, body1, face1) Yes, tell her!
 
-(Michelle|Michelle, body1, face4) What the fuck, Kazee, which side are you on?/n Do you want to spend a night in the locker again?
+(Michelle|Michelle, body1, face4) What the fuck, Kazee, which side are you on?/n
+Do you want to spend a night in the locker again?
 
 (Kazee, body2, face1) N-No, I guess I was just…
 
 (Michelle|Michelle, body2, face1) Good, because I’m prettier than this vile creature, so I make the rules.
 
-(Michelle|Michelle, body2, face3) Like, It really is such a privilege that I am this smart, funny and good looking./n Like, It’s not even fair, but I guess that’s what you get for being a pure and perfectly moral child of god.
+(Michelle|Michelle, body2, face3) Like, It really is such a privilege that I am this smart, funny and good looking./n
+Like, It’s not even fair, but I guess that’s what you get for being a pure and perfectly moral child of god.
 
 (Michelle|Michelle, body2, face5) What’s even your name, heathen?
 
 (PCPG) It’s PCPG.
 
-(Michelle|Michelle, body3, face2) May, put that on the list for when we cleanse the world of furfag scum./n I’ve got to pee now
+(Michelle|Michelle, body3, face2) May, put that on the list for when we cleanse the world of furfag scum./n
+I’ve got to pee now
 
 [SLIDE, May, right+150, offright]
 
@@ -986,13 +1122,16 @@ Oh, right, I’m still wearing Digi’s sick ass fur coat…/n Wait, did she jus
 
 (Digi|Digi, Casual, 1, ConfusedMIN, center) So you really are a furry, huh?
 
-(PCPG) What to you mean “really are”?/n Or is that just the standard assumption for students at PCPU.
+(PCPG) What to you mean “really are”?/n
+Or is that just the standard assumption for students at PCPU.
 
 (Digi|Digi, Casual, 1, HappyMED) You’ve got the voice.
 
-(PCPG) What voice?/n What does my voice have to do with anything?
+(PCPG) What voice?/n
+What does my voice have to do with anything?
 
-(Digi|Digi, Casual, 5, ConfusedMIN) There’s just this very distinct quality to the voice of most furries./n Not everyone has it, and there are some people who do have it and at least claim to not be furries, but it’s a damn good fucking indicator.
+(Digi|Digi, Casual, 5, ConfusedMIN) There’s just this very distinct quality to the voice of most furries./n
+Not everyone has it, and there are some people who do have it and at least claim to not be furries, but it’s a damn good fucking indicator.
 
 (PCPG) That’s ridiculous.
 
@@ -1009,11 +1148,13 @@ After some more teasing about my furry ass voice, we both return home.
 
 *Deny being a furry*
 
-(PCPG) It’s a pimp ass fur coat. I buy drugs and hang around in front of 7/11s./n Clearly I’m a rapper.
+(PCPG) It’s a pimp ass fur coat. I buy drugs and hang around in front of 7/11s./n
+Clearly I’m a rapper.
 
 (May, gib version) Oh yeah? Let’s hear it white boy!
 
-Fuck, I guess that’s it for the bluff./n It’s probably also not worth explaining to her that this is just the art style and that I am either Japanese or aracial. 
+Fuck, I guess that’s it for the bluff./n
+It’s probably also not worth explaining to her that this is just the art style and that I am either Japanese or aracial. 
 
 (Digi|Digi, Casual, 2, HappyMAX) You can do it! I’ll give you a beat and you show her what you’ve got.
 
@@ -1021,27 +1162,41 @@ With newfound confidence, I take a deep breath and try to channel the coat’s e
 
 Here goes nothing.
 
-(PCPG) Michelle and the cat of cauck /n you stand and gawk /n as I let lyrics run amok /n Digging graves, you see? /n I’m like Moroccan tea; /n I high poor n°°°°, bitches, so now answer me…
+(PCPG) Michelle and the cat of cauck /n
+you stand and gawk
+
+(PCPG) as I let lyrics run amok /n
+Digging graves, you see?
+
+(PCPG) I’m like Moroccan tea; /n
+I high poor n****, bitches, so now answer me…
 
 (Digi|Digi, Casual, 2, ConfusedMAX) Okay, stop, no you’re making us look bad.
 
 (PCPG) What? No N-bombs?
 
-(Digi|Digi, Casual, 1, ConfusedMED) Not with lines this atrocious./n I was kind of assuming you had at least heard rap-music at some point in your life.
+(Digi|Digi, Casual, 1, ConfusedMED) Not with lines this atrocious./n
+I was kind of assuming you had at least heard rap-music at some point in your life.
 
 (PCPG) I’ve listened to Drake
 
 (Digi|Digi, Casual, 1, AngryMED) Drake fucking sucks.
 
-(Michelle|Michelle, body1, face2) What the fuck was that?/n You people don’t even deserve to be humiliated by me.
+(Michelle|Michelle, body1, face2) What the fuck was that?/n
+You people don’t even deserve to be humiliated by me.
 
-(Michelle|Michelle, body1, face2) What’s your game plan Digi? Are you gonna have plastic surgeons fix this degenerate until he looks good?/n Are you pulling a Geoff?
+(Michelle|Michelle, body1, face2) What’s your game plan Digi? Are you gonna have plastic surgeons fix this degenerate until he looks good?/n
+Are you pulling a Geoff?
 
-(Digi|Digi, Casual, 3, SadMIN) Fuck no. PCPG is alright, they just…/n Yeah, I honestly don’t know how to justify THIS.
+(Digi|Digi, Casual, 3, SadMIN) Fuck no. PCPG is alright, they just…/n
+Yeah, I honestly don’t know how to justify THIS.
 
 (PCPG) Don’t you have anything else to do, Michelle?
 
-(Michelle|Michelle, body2, face1) You know what?/n You’re right./n I’m getting dangerously sober. 
+(Michelle|Michelle, body2, face1) You know what?/n
+You’re right.
+
+(Michelle|Michelle, body2, face1) I’m getting dangerously sober. 
 
 (Michelle|Michelle, body2, face4) But call May, or you won’t get away so easily next time.
 
@@ -1066,7 +1221,6 @@ After some more teasing regarding my majority-of-the-annual-anitube-rap-cypher-t
 *
 
 
-
 [Scene: Lolis, Boomers, Shenanigans]
 
 [Location: library]
@@ -1075,21 +1229,25 @@ After some more teasing regarding my majority-of-the-annual-anitube-rap-cypher-t
 
 Digi’s been kind of distant ever since the Cauckcast encounter.
 
-Maybe he’s just trying to revert back to a reasonable student-teacher relationship that doesn’t include after school drug deals, but it definitely seems like something changed after that fateful day. 
+Maybe he’s just trying to revert back to a reasonable student-teacher relationship that doesn’t include after school drug deals, 
+
+but it definitely seems like something changed after that fateful day. 
 
 I’ve been keeping tabs on him, of course. So at least I know that he’s not dating May or anything. 
 
 He…
 
-(Digi|Digi, Campus, 4, HappyMIN) Hey, it’s been a while.
+(Digi|Digi, Campus, 4, HappyMIN, offright, slide, center) Hey, it’s been a while.
 
-(PCPG) And who’s fault is that?/n You’ve barely even given any lectures.
+(PCPG) And who’s fault is that?/n
+You’ve barely even given any lectures.
 
 (PCPG) Your students are used to three hours of Digibro daily. They’re essentially in withdrawal.
 
 (Digi|Digi, Campus, 2, ConfusedMED) You’re exaggerating.
 
-(PCPG) I’m not though./n Some of them have resorted to actually watching anime, now that they have nothing to fill their time with anymore.
+(PCPG) I’m not though./n
+Some of them have resorted to actually watching anime, now that they have nothing to fill their time with anymore.
 
 (Digi|Digi, Campus, 2, AngryMED) Tough luck. These fucks are always clambering for bigger projects, and when you try to deliver, they complain that there’s a drought of good old fashioned ranting.
 
@@ -1097,15 +1255,19 @@ He…
 
 (PCPG) Don’t shoot the messenger, dude, I’m just relaying information.
 
-(PCPG) How are you anyways?/n It almost felt like you were avoiding me.
+(PCPG) How are you anyways?/n
+It almost felt like you were avoiding me.
 
-(Digi|Digi, Campus, 1, SadMIN) I-/n I’ve been busy.
+(Digi|Digi, Campus, 1, SadMIN) I-/n
+I’ve been busy.
 
 (Digi|Digi, Campus, 1, ConfusedMED) I’d love to talk about all the bullshit that’s been going on, but you’re already kind of more caught up in it than you should be.
 
-(PCPG) You’re making it sound like the entire school is at risk, but if you can’t discuss it, I get that./n Nice work getting your light novel into the library this quickly.
+(PCPG) You’re making it sound like the entire school is at risk, but if you can’t discuss it, I get that./n
+Nice work getting your light novel into the library this quickly.
 
-(Digi|Digi, Campus, 2, HappyMED) There are certain privileges that come with being cofounder of this place…/n Have you read it?
+(Digi|Digi, Campus, 2, HappyMED) There are certain privileges that come with being cofounder of this place…/n
+Have you read it?
 
 (PCPG) Of course I have. It’s definitely interesting to see you write fiction… but
 
@@ -1113,21 +1275,24 @@ He…
 
 (PCPG) No, it’s not a criticism. I’ve just been wondering… these characters… they’re the ones from the posters in your classroom, right?
 
-(Digi|Digi, Campus, 4, BlushMIN) Yeah, that’s one of the other benefits; students just draw your characters for you, and you don’t even have to pay them.
+(Digi|Digi, Campus, 4, SmittenMIN) Yeah, that’s one of the other benefits; students just draw your characters for you, and you don’t even have to pay them.
 
-The air in the library has that strange property air sometimes acquires when conversations fail to contain what needs to be said, but progress anyway./n It feels heavy. 
+The air in the library has that strange property air sometimes acquires when conversations fail to contain what needs to be said, but progress anyway./n
+It feels heavy. 
 
 Crushingly heavy, viscous and pregnant with words that could be spoken.
 
 All that it takes is to break the deadlock.
 
-(PCPG) It kind of feels like no time has passed at all since we met up here, you know./n Since you recommended Boogiepop to me.
+(PCPG) It kind of feels like no time has passed at all since we met up here, you know./n
+Since you recommended Boogiepop to me.
 
 (PCPG) I’ve read the rest since then, and the more time I spent with you, the more I realized how much of it is essentially a guide to understanding Digibro.
 
 (Digi|Digi, Campus, 5, ShockMED) Wait, you read all of it?
 
-(PCPG) Ha ha, yeah./n It was sort of a chore even just finding all of them.
+(PCPG) Ha ha, yeah./n
+It was sort of a chore even just finding all of them.
 
 (PCPG) Not that they aren’t good. They’re great and I love them, but there are needlessly many and it’s stupidly hard to find decent fan translations.
 
@@ -1137,7 +1302,8 @@ All that it takes is to break the deadlock.
 
 (Digi|Digi, Campus, 5, HappyMIN) Don’t worry about it. Fuck knows I haven’t read all of Boogiepop.
 
-(Digi|Digi, Campus, 2, HappyMAX) What are your thoughts though?/n I hope you have a loving thesis prepared.
+(Digi|Digi, Campus, 2, HappyMAX) What are your thoughts though?/n
+I hope you have a loving thesis prepared.
 
 (PCPG) Um… I can see how it informs your perspective on… well… individual perspective. The reader learns about the events that transpired through these narrators with incomplete information, but it’s not just a stylistic flourish. There could just as easily be one character who investigated after the fact and found the whole truth as the narrator, but it wouldn’t really be the truth. While it’s not necessarily that distorted, it’s just facts rather than the story. An essential aspect of the events is their absurdity, and absurdity is lost when it is fully understood. The real intrigue comes from how these different characters disseminate information and integrate it into their worldviews. Boogiepop draws a direct parallel to its examination of the neurologically atypical. For abnormality to mean anything, it must be looked at from the inside, because a third person narrator will always conflate the ability to function with normalcy, which is the exact reductionist attitude that becomes a problem. In a way, it could be seen as a mystery novel, which treats its mystery the way a drama would, in that understanding the “what” isn’t really the goal, but rather understanding how these people deal with that which they know. A singular truth can only ever be unjustifiably truncated, and a perspective cannot ever encompass the whole truth. Only a plurality of incomplete perspectives…
 
@@ -1145,13 +1311,15 @@ All that it takes is to break the deadlock.
 
 (Digi|Digi, Campus, 2, AngryMIN) Dude, just record a fucking youtube video.
 
-(Digi|Digi, Campus, 2, BlushMIN) But yeah, I can see how you would take that away from it./n I’ve read these books so many goddamn times, I could probably tell their story verbatim.
+(Digi|Digi, Campus, 2, SmittenMIN) But yeah, I can see how you would take that away from it./n
+I’ve read these books so many goddamn times, I could probably tell their story verbatim.
 
-(Digi|Digi, Campus, 5, BlushMIN) Sometimes your mind just resonates with a certain piece of media so much that it’s hard to even deal with; it seeds so many new thoughts that the outside world loses relevance for a while.
+(Digi|Digi, Campus, 5, SmittenMIN) Sometimes your mind just resonates with a certain piece of media so much that it’s hard to even deal with; it seeds so many new thoughts that the outside world loses relevance for a while.
 
 (Digi|Digi, Campus, 2, HappyMAX) You’re at your limit, about to overflow, thinking any more is impossible.
 
-(PCPG) Pretty sure that’s normal? Just rare./n A kind of experience so potent you only get to have it a few times, especially when you’re young.
+(PCPG) Pretty sure that’s normal? Just rare./n
+A kind of experience so potent you only get to have it a few times, especially when you’re young.
 
 (Digi|Digi, Campus, 1, HappyMIN) I was a kid, and my relation to the outside world was strained at best anyways.
 
@@ -1159,9 +1327,9 @@ All that it takes is to break the deadlock.
 
 (PCPG) Can’t have been easy
 
-(Digi|Digi, Campus, 2, BlushMIN) It wasn’t, but it’s also the kind of situation in which a story explicitly about not fitting in would resonate with you that strongly.
+(Digi|Digi, Campus, 2, SmittenMIN) It wasn’t, but it’s also the kind of situation in which a story explicitly about not fitting in would resonate with you that strongly.
 
-(Digi|Digi, Campus, 5, BlushMIN) Not that I fit in now, but I’ve gotten better at using that and dealing with it… To a point where I’m even kind of okay with my body now.
+(Digi|Digi, Campus, 5, SmittenMIN) Not that I fit in now, but I’ve gotten better at using that and dealing with it… To a point where I’m even kind of okay with my body now.
 
 (PCPG) Your body?
 
@@ -1173,9 +1341,10 @@ All that it takes is to break the deadlock.
 
 (PCPG) Sorry, how does Boogiepop fit into that exactly?
 
-(Digi|Digi, Campus, 2, BlushMIN) It’s about a clearly male and a clearly female entity, both using a body which… Like, it is the body of a girl but that doesn’t really matter to anyone.
+(Digi|Digi, Campus, 2, SmittenMIN) It’s about a clearly male and a clearly female entity, both using a body which… Like, it is the body of a girl but that doesn’t really matter to anyone.
 
-(Digi|Digi, Campus, 3, BlushMAX) I can be a fucking alicorn princess and anyone who tells me I can’t be because I look like a clusterpunk hobo can eat a dick./n You really didn’t get that from reading Boogiepop?
+(Digi|Digi, Campus, 3, SmittenMAX) I can be a fucking alicorn princess and anyone who tells me I can’t be because I look like a clusterpunk hobo can eat a dick./n
+You really didn’t get that from reading Boogiepop?
 
 (PCPG) I guess I’ve never really thought of myself as a gendered entity in the first place. Not in a shitty “I don’t feel like someone of a certain gender, I just act the role and it doesn’t bother me”-way.
 
@@ -1201,9 +1370,11 @@ All that it takes is to break the deadlock.
 
 (PCPG) It’s less of a contact and more of a thing which is at this school and which we could steal ...
 
-(PCPG) I’m not some kind of plant it that’s what you’re asking./n Who would I even be a plant for?
+(PCPG) I’m not some kind of plant it that’s what you’re asking./n
+Who would I even be a plant for?
 
-(Digi|Digi, Campus, 2, HappyMED) I’ve seen enough of the gay ops of thrones to maintain a reasonable level of paranoia./n So where is this thing?
+(Digi|Digi, Campus, 2, HappyMED) I’ve seen enough of the gay ops of thrones to maintain a reasonable level of paranoia./n
+So where is this thing?
 
 (PCPG) Follow me.
 
@@ -1226,7 +1397,7 @@ Of course he has.
 
 [Screen shake]
 
-(Digi|Digi, Campus, 3, BlushMAX) Wooooooh lord!
+(Digi|Digi, Campus, 3, SmittenMAX) Wooooooh lord!
 
 (PCPG) Is something happening?
 
@@ -1262,29 +1433,31 @@ Of course he has.
 
 No response.
 
-(Snob|???, right) Hey, what are you doing here?
+(Snob|???, snob, neutral, offright, slide, right) Hey, what are you doing here?
 
 (Digi|Digi, Campus, 4, ConfusedMIN) Snob? I thought you died or some shit.
 
 He knows this guy?
 
-(Snob|That Anime Snob) Unsurprising that you’re too busy indulging in the sound of your own voice for hours on end without getting to the point to know who’s on your own janitorial staff.
+(Snob|That Anime Snob, snob, smug) Unsurprising that you’re too busy indulging in the sound of your own voice for hours on end without getting to the point to know who’s on your own janitorial staff.
 
-(Digi|Digi, Campus, 3, AngryMIN) Have you been around this place?/n It doesn’t even fucking look like it fucking has any cleaning personnel, let alone a whole staff.
+(Digi|Digi, Campus, 3, AngryMIN) Have you been around this place?/n
+It doesn’t even fucking look like it fucking has any cleaning personnel, let alone a whole staff.
 
 (Digi|Digi, Campus, 3, ConfusedMIN) What are you really here for?
 
-(Snob|That Anime Snob) I’m not here for anything. This school is a disgrace. You fill the heads of these children with your shit taste and lies about modern anime being “good”.
+(Snob|That Anime Snob, snob, neutral) I’m not here for anything. This school is a disgrace. You fill the heads of these children with your shit taste and lies about modern anime being “good”.
 
 (PCPG) What about something like Doukyuusei? That was great.
 
-(Snob|That Anime Snob) It was mediocre slice-of-nothing-ever-fucking-happens, you pleb.
+(Snob|That Anime Snob, snob, smug) It was mediocre slice-of-nothing-ever-fucking-happens, you pleb.
 
-(Snob|That Anime Snob) How can you listen to someone who wears sunglasses indoors and take him seriously?
+(Snob|That Anime Snob, snob, smug) How can you listen to someone who wears sunglasses indoors and take him seriously?
 
-(PCPG) Don’t make fun of the shades, man./n So uncool.
+(PCPG) Don’t make fun of the shades, man./n
+So uncool.
 
-(Snob|That Anime Snob) Ha! The Hypocrisy!
+(Snob|That Anime Snob, snob, smug) Ha! The Hypocrisy!
 
 (PCPG) That’s not what hypocri… Digi, who is this old fuck? I can barely understand him.
 
@@ -1295,6 +1468,8 @@ The janitor’s intrusion had kind of distracted me from the whole elixir-incide
 His hands crackle with a strange kind of magical energy and his aura has changed in a way I can’t really describe. Suddenly, the realization I should have had minutes ago strikes; 
 
 He is a magical girl in all aspects except physical!
+
+(Snob|That Anime Snob, snob, smug)
 
 (Digi|Digi, Campus, 3, AngryMAX) … he really shouldn’t be here.
 
@@ -1308,11 +1483,13 @@ He is a magical girl in all aspects except physical!
 [StopMusic]
 [Song: PCPDating_Tension]
 
-(PCPG) Listen, Snob, this is all a huge misunderstanding. We’re not here to steal anything, just for Digi to drink this weird potion that turns you into a loli, and that didn’t even work.
+(PCPG) Listen, Snob, this is all a huge misunderstanding. 
+
+(PCPG) We’re not here to steal anything, just for Digi to drink this weird potion that turns you into a loli, and that didn’t even work.
 
 (PCPG) So we’re essentially innocent.
 
-(Snob|That Anime Snob) Of course, another pedophile added to your weird cult of mindless followers ...
+(Snob|That Anime Snob, snob, neutral) Of course, another pedophile added to your weird cult of mindless followers ...
 
 (Digi|Digi, Campus, 5, AngryMIN) How is it pedophilia? We’re both adults and he didn’t even mention anything sexual?...
 
@@ -1320,13 +1497,14 @@ He is a magical girl in all aspects except physical!
 
 (PCPG) Eh.
 
-(Snob|That Anime Snob) Okay, this is it./n No more stupid relativism, I’m calling the police.
+(Snob|That Anime Snob, snob, neutral) Okay, this is it./n
+No more stupid relativism, I’m calling the police.
 
 (Digi|Digi, Campus, 5, AngryMAX) For what crime?
 
-(Snob|That Anime Snob) Reasonable discourse about anime will never be possible in this town for as long as you exist in it.
+(Snob|That Anime Snob, snob, smug) Reasonable discourse about anime will never be possible in this town for as long as you exist in it.
 
-(Snob|That Anime Snob) Goodbye Digibro!
+(Snob|That Anime Snob, snob, neutral) Goodbye Digibro!
 
 [fade to black]
 [StopMusic]
@@ -1336,9 +1514,13 @@ He is a magical girl in all aspects except physical!
 
 In all my life of blatant disregard for the law and basic social conduct, I never once assumed that I might go to jail. 
 
-I didn’t even do anything this time, but that probably doesn’t matter. The justice system seemed very keen on getting rid of Digi, as though someone much more powerful was pulling the strings. 
+I didn’t even do anything this time, but that probably doesn’t matter. 
 
-The world is full of fuck. Random Isekaiing, Snob, there has to be something going on behind the scenes, my options of doing anything against it while locked up are limited though. 
+The justice system seemed very keen on getting rid of Digi, as though someone much more powerful was pulling the strings. 
+
+The world is full of fuck. Random Isekaiing, Snob, there has to be something going on behind the scenes, 
+
+my options of doing anything against it while locked up are limited though. 
 
 Oh well, I guess I’ll just lean against these bars and… Fuck! Are those snakes?!
 
@@ -1352,7 +1534,7 @@ Oh well, I guess I’ll just lean against these bars and… Fuck! Are those snak
 
 (PCPG) Hey Snob, have you seen Bubblegum Crisis?
 
-(Snob|That Anime Snob) What kind of question is that? Of course I have! It…
+(Snob|That Anime Snob, snob, neutral) What kind of question is that? Of course I have! It…
 
 (Digi|Digi, Campus, 3, AngryMAX) Then maybe you should have known better than to come to my fucking school and start shit.
 
@@ -1362,7 +1544,7 @@ A beam of energy shoots from Digi’s hand, before Snob even has time to get the
 
 The boomer is fucking pulverized where he stands. 
 
-[Snob Leaves]
+[Snob leaves]
 
 [CG end]
 
@@ -1373,16 +1555,18 @@ A ton of questions come to mind, like: Is this freak power permanent? Is there a
 (Digi|Digi, Campus, 2, ShockMIN) Good idea. And I know of a pretty great place to hide.
 
 [fade to black]
+[Digi leaves]
 [StopMusic]
 [Location: computerlab]
 [Song: PCPDating_BotBustah]
+(Tom, 1, Shock, right)
 [fade from black]
 
 (Tom, 1, Shock) Woah, you look like you just saw a ghost.
 
 (PCPG) Ahhh! Digi, you said no one would be here.
 
-(Digi|Digi, Campus, 2, HappyMED) No one we need to worry about. Tom is pretty much the only person who ever comes here and he’s trustworthy enough.
+(Digi|Digi, Campus, 2, HappyMED, offleft, slide, left) No one we need to worry about. Tom is pretty much the only person who ever comes here and he’s trustworthy enough.
 
 (Tom, 2, happyMIN) Well, no one beside me is truly games enough to be here… also I guess Digi sometimes.
 
@@ -1402,18 +1586,19 @@ A ton of questions come to mind, like: Is this freak power permanent? Is there a
 
 (PCPG) So you’re just gonna talk about pokemon?
 
-(Tom, 3, confusedMIN) If this isn’t interesting enough for you visually, you can do something else on the side. Think of it asa podcast.
+(Tom, 3, confusedMIN) If this isn’t interesting enough for you visually, you can do something else on the side. Think of it as a podcast.
 
-(PCPG) That’s not what I meant, I’m familiar with the concept of a conversation./n It’s just hard to pretend like nothing happened.
+(PCPG) That’s not what I meant, I’m familiar with the concept of a conversation./n
+It’s just hard to pretend like nothing happened.
 
-(Digi|Digi, Campus, 5, HappyMAX) Welcome to the bloodsports of anime analysis then./n People die, get used to it.
+(Digi|Digi, Campus, 5, HappyMAX) Welcome to the bloodsports of anime analysis then./n
+People die, get used to it.
 
 [fade to black]
 [StopMusic]
 [Tom leaves]
 [Digi leaves]
 *
-
 
 
 [Scene: Pack Your Bags Kids, Anime Is Real Now]
@@ -1428,7 +1613,7 @@ Despite the strange, all-encompassing feeling of dread that characterizes the wa
 
 (Michelle|Michelle, body2, face5) Who the fuck are you?
 
-(May, body2, face4, left)
+(May, body2, face4, left) ...
 
 (Kazee, body1, face1, right)
 
@@ -1465,7 +1650,8 @@ Oh god, speaking of psychopaths.
 
 (May, body1, face2) Where is Digi?
 
-(PCPG) He wanted to meet up here…/n Said there was something he needed to tell me.
+(PCPG) He wanted to meet up here…/n
+Said there was something he needed to tell me.
 
 (PCPG) You wouldn’t know anything about that, would you?
 
@@ -1477,15 +1663,16 @@ Oh god, speaking of psychopaths.
 
 (May, body3, face3) Stop talking like we work for you, you piece of shit, or this coalition will be a thing of the past.
 
-(Michelle|Michelle, body1, face5) Yeah, Geoff./n The only reason you’re even still alive is the entertainment value of your cosplay slut.
+(Michelle|Michelle, body1, face5) Yeah, Geoff./n
+The only reason you’re even still alive is the entertainment value of your cosplay slut.
 
 Geoff? 
 
-[SLIDE, May, left, left-150]
+[SLIDE, May, left-150]
 
-[SLIDE, Michelle, center, left+350]
+[SLIDE, Michelle, left+350]
 
-[SLIDE, Kazee, right, right-350]
+[SLIDE, Kazee, right-350]
 
 I turn around to see the face plastered on every billboard in town.
 
@@ -1496,7 +1683,7 @@ I turn around to see the face plastered on every billboard in town.
 
 [SLIDE, Kazee, right-350, offright]
 
-(Digi|Digi,Campus, 3, BlushMAX, left-150) Ah, everyone’s here already.
+(Digi|Digi,Campus, 3, SmittenMAX, left-150) Ah, everyone’s here already.
 
 (Digi|Digi, Campus, 3, AngryMIN) Good.
 
@@ -1508,7 +1695,9 @@ I turn around to see the face plastered on every billboard in town.
 
 (PCPG) Digi!
 
-(Digi|Digi, Campus, 2, AngryMIN) I had some patience left when the isekaiing started./n The tiniest piece./n Almost nothing.
+(Digi|Digi, Campus, 2, AngryMIN) I had some patience left when the isekaiing started./n
+The tiniest piece./n
+Almost nothing.
 
 (Digi|Digi, Campus, 2, AngryMIN) But it’s gone now.
  
@@ -1516,7 +1705,9 @@ I turn around to see the face plastered on every billboard in town.
 
 (Digi|Digi, Campus, 3, AngryMAX) So when people start pulling gay ops and fucking with them cause they want to get to me, they better be prepared for the dervish starts a-whirlin’.
 
-(PCPG) So you’re the one responsible for the dimensional displacements?/n Why?/n HOW?!
+(PCPG) So you’re the one responsible for the dimensional displacements?/n
+Why?/n
+HOW?!
 
 (Geoff) It wasn’t exactly “me” who did that.
 
@@ -1526,15 +1717,18 @@ I turn around to see the face plastered on every billboard in town.
 
 (PCPG) Digi, why can she do that?
 
-(Digi) Do I really have to explain the long and storied history of mahou shoujo to you?/n Weren’t you paying attention in class?
+(Digi) Do I really have to explain the long and storied history of mahou shoujo to you?/n
+Weren’t you paying attention in class?
 
 (May) Yeah, why do you waste your time on this uncultured piece of shit, Digi?
 
-(May) Do you really think I WANT to work with Geoff to get you all to myself?/n These are desperate times!
+(May) Do you really think I WANT to work with Geoff to get you all to myself?/n
+These are desperate times!
 
 Huh, so she really is jealous.
 
-(Geoff) Can we cut this pointless bullshit already?/n It’s time to settle who the real top anime academic is once and for all.
+(Geoff) Can we cut this pointless bullshit already?/n
+It’s time to settle who the real top anime academic is once and for all.
 
 [cut to black]
 [CG end]
@@ -1575,13 +1769,16 @@ The ground is trembling beneath my feet.
 
 [Location: insidemech.geoff]
 
-(Geoff) Black market magical girl elixir; Hard to get your hands on, but channels open up if you make the right endorsements. We can chase you through the entire realm of anime with this power!
+(Geoff) Black market magical girl elixir; Hard to get your hands on, but channels open up if you make the right endorsements. 
+
+(Geoff) We can chase you through the entire realm of anime with this power!
 
 (Geoff) Four against one. This really is the kind of might befitting of an OP-expert.
 
 (PCPG) I’ll look past the fact that you didn’t even count me as an entity here, but why exactly didn’t you just drink it yourself? That’s a bit overly convoluted.
 
-(Geoff) Obviously this stuff doesn’t work on men./n You need the soul of an anime girl for the potion to take effect.
+(Geoff) Obviously this stuff doesn’t work on men./n
+You need the soul of an anime girl for the potion to take effect.
 
 (PCPG) Okay, Digi, shut down the intercom. We need blackout curtains. I’ve got an idea!
 
@@ -1614,7 +1811,7 @@ The ground is trembling beneath my feet.
 
 (PCPG) Don’t worry, I’ve got a plan for that too. Just get out of here.
 
-(Digi|Digi, campus] Alright.
+(Digi|Digi, campus, 2, ConfusedMAX) Alright.
 
 [cut to black]
 [StopMusic]
@@ -1627,9 +1824,11 @@ I turn the intercom back on.
 
 [Location: insidemech.geoff]
 
-(PCPG) Hey Geoff, shouldn’t all that shitty mobile game sponsorship money have gotten you a better mech?/n You’re supposed to fire AT us, you know?
+(PCPG) Hey Geoff, shouldn’t all that shitty mobile game sponsorship money have gotten you a better mech?/n
+You’re supposed to fire AT us, you know?
 
-(Geoff) Is that your plan? To anger me in order to die faster?/n Your fans really are morons, Digi.
+(Geoff) Is that your plan? To anger me in order to die faster?/n
+Your fans really are morons, Digi.
 
 (PCPG) Seethe if you must, but we’ll win this no matter the odds. We’ve got the power of god and anime on our side!
 
@@ -1663,7 +1862,8 @@ Fuck! Antigrav systems down.
 
 Falling. 
 
-I guess this is it./n Glad to have met you Digi.
+I guess this is it./n
+Glad to have met you Digi.
 
 [fade to black]
 [StopMusic]
@@ -1679,17 +1879,20 @@ Oh...
 
 Oh god.
 
-This is way too Japanese-looking to just be any old forest./n I have officially been fucking isekaied. 
+This is way too Japanese-looking to just be any old forest./n
+I have officially been fucking isekaied. 
 
-That’s is probably alright, I guess I can join a guild and date some local princess after making myself useful with my otherworldly knowledge. 
+That’s probably alright, I guess I can join a guild and date some local princess after making myself useful with my otherworldly knowledge. 
 
 Maybe they’ll even celebrate me as a hero of legend. I can make this work, just gotta find the next town. Digi would… 
 
 Shit, and here I almost managed to be positive about the state of affairs. 
 
-He’ll be happy with May, right?/n Isn’t that all that matters; That he’s happy in his world? 
+He’ll be happy with May, right?/n
+Isn’t that all that matters; That he’s happy in his world? 
 
-I’m sure he’ll be pissed at me when he figures out that I never had a way to get back though./n Oh well, he’ll get over it.
+I’m sure he’ll be pissed at me when he figures out that I never had a way to get back though./n
+Oh well, he’ll get over it.
 
 (Drug dealer, neutral, offleft, slide, center) Are you okay?
 
@@ -1739,11 +1942,11 @@ I may have made a colossal mistake.
 
 (PCPG) So all we have to do is to make sure that our victory is awesome and the rule of cool will validate it.
 
-(Digi|Digi, Campus, 3, BlushMAX) We’ll need an army.
+(Digi|Digi, Campus, 3, SmittenMAX) We’ll need an army.
 
 (PCPG) And do you have an idea how we can get one?
 
-(Digi|Digi, Campus, 3, BlushMAX) Fuck yeah.
+(Digi|Digi, Campus, 3, SmittenMAX) Fuck yeah.
 
 A rift opens and Digi pushes me through it.
 
@@ -1752,20 +1955,21 @@ A rift opens and Digi pushes me through it.
 [Digi leaves]
 [Location: japaneseforest]
 [Song: PCPDating_MichellesTheme]
+(ArtsoFartso|???, special, 4, happyMIN)
 [fade from black]
-
-(Artso Fartso, 4, happyMIN)
 
 (PCPG) Digi?
 
-(Artso Fartso, 1, neutral) Who the fuck is Digi? I’m motherfucking Artso Fartso, Bitch!
+(ArtsoFartso|???, special, 1, neutral) Who the fuck is Digi? I’m motherfucking Artso Fartso, Bitch!
+
 [StopMusic]
 [Song: PCPDating_ActionFun]
+
 Oh.
 
 (PCPG) I need your help.
 
-(Artso Fartso, 1, angryMIN) Bite for it, kid.
+(ArtsoFartso|Artso Fartso, special, 1, angryMIN) Bite for it, kid.
 
 (PCPG) Listen; Shit’s fucked.
 
@@ -1773,35 +1977,35 @@ Oh.
 
 (PCPG) Help us if that sounds cool?
 
-(Artso Fartso, 3, blushiesMAX) So ... you’re his human computer.
+(ArtsoFartso|Artso Fartso, special, 3, SmittenMAX) So ... you’re his human computer.
 
 (PCPG) No, I’m just a guy. PCPG, regular dude, level three autist.
 
-(Artso Fartso, 1, blushiesMIN) He visualizes the true reality that must come to pass however crazy it seems and you help him actualize it!
+(ArtsoFartso|Artso Fartso, special, 1, SmittenMIN) He visualizes the true reality that must come to pass however crazy it seems and you help him actualize it!
 
-(Artso Fartso, 1, blushiesMIN) He’s the mad scientist and you’re his human computer!
+(ArtsoFartso|Artso Fartso, special, 1, SmittenMIN) He’s the mad scientist and you’re his human computer!
 
-(Artso Fartso, 2, happyMAX) Fucking yin and yang of the giant dick that fucks the universe apart ...
+(ArtsoFartso|Artso Fartso, special, 2, happyMAX) Fucking yin and yang of the giant dick that fucks the universe apart ...
 
 (PCPG) What?
 
-(Artso Fartso, 2, confusedMIN) But you see; Both are necessary to really harness the power of autism that permeates reality in its ground state.
+(ArtsoFartso|Artso Fartso, special, 2, confusedMIN) But you see; Both are necessary to really harness the power of autism that permeates reality in its ground state.
 
-(Artso Fartso, 3, neutral) To become devilman, to make that big cum happen, you must combine your tisms!
+(ArtsoFartso|Artso Fartso, special, 3, neutral) To become devilman, to make that big cum happen, you must combine your tisms!
 
 (PCPG) And what is a devilman in this metaphor?
 
-(Artso Fartso, 1, confusedMAX) Everything is devilman!
+(ArtsoFartso|Artso Fartso, special, 1, confusedMAX) Everything is devilman!
 
 (PCPG) Ah, yes.
 
-(Artso Fartso, 3, angryMAX) Are you ready to shatter reality ‘till you can’t no more?
+(ArtsoFartso|Artso Fartso, special, 3, angryMAX) Are you ready to shatter reality ‘till you can’t no more?
 
 (PCPG) Fuck yeah!
 
-(Artso Fartso, 1, GendoGlint) Then let’s go save your mad scientist.
+(ArtsoFartso|Artso Fartso, special, 1, GendoGlint) Then let’s go save your mad scientist.
 
-[Artso Fartso leaves]
+[ArtsoFartso leaves]
 
 We continue to hop through dimensions while recruiting Digis, each more insane than the last, before finally returning to the mech.
 
@@ -1811,7 +2015,7 @@ We continue to hop through dimensions while recruiting Digis, each more insane t
 
 (Digi|Digi, Campus, 5, ShockMAX, left)
 
-(Artso Fartso, 1, HappyMAX, right)
+(ArtsoFartso|Artso Fartso, special, 1, HappyMAX, right)
 
 (PCPG) Digi, open the com-channel!
 
@@ -1819,9 +2023,9 @@ We continue to hop through dimensions while recruiting Digis, each more insane t
 
 (Geoff) Who are these people?
 
-(Artso Fartso, 1, GendoGlint) We’re the fucking cavalry, Bitch.
+(ArtsoFartso|Artso Fartso, special, 1, GendoGlint) We’re the fucking cavalry, Bitch.
 
-(Artso Fartso, 1, confusedMAX) Prepare to get your shit fucked, course we’re on that Ragnarok shit now, baby!
+(ArtsoFartso|Artso Fartso, special, 1, confusedMAX) Prepare to get your shit fucked, course we’re on that Ragnarok shit now, baby!
 
 (Digi|Digi, Campus, 5, ShockMAX) Holy fuck, that worked?
 
@@ -1851,17 +2055,43 @@ All of the Digi-echs ten laserguns fire at once, leaving no trace of Mother’s 
 
 (Digi|Digi, Campus, 3, ConfusedMIN) Are you kidding? This is a direct gateway to all of anime, of course we’re leaving it open.
 
-(Digi|Digi, Campus, 3, BlushMAX) We are essentially gods now.
+(Digi|Digi, Campus, 3, SmittenMAX) We are essentially gods now.
 
 (PCPG) Huh, neat. You wanna find an interesting world and live there then?
 
-(Digi|Digi, Campus, 2, BlushMAX) This whole “When will they build the world I wanna live in”-thing is bullshit. Just fucking build it yourself.
+(Digi|Digi, Campus, 2, SmittenMAX) This whole “When will they build the world I wanna live in”-thing is bullshit. Just fucking build it yourself.
 
-(Digi|Digi, Campus, 2, BlushMED) That’s what this school is. In fact; Do you want to go to RadProm with me?
+(Digi|Digi, Campus, 2, SmittenMED) That’s what this school is. In fact; Do you want to go to RadProm with me?
 
 (PCPG) As literal gods with anime power beyond comprehension?
 
-(Digi|Digi, Campus, 5, BlushMED) Yeah, that’s why it’s fucking hilarious.
+(Digi|Digi, Campus, 5, SmittenMED) Yeah, that’s why it’s fucking hilarious.
+
+(PCPG) Okay, yeah. Sure. Let’s go to prom.
+
+[fade to black]
+[StopMusic]
+[Song: PCPDating_HappyOrSomething]
+[Location: outsidepcpu.day]
+[fade from black]
+
+(PCPG) So, are we gonna seal the dimensional rift?
+
+(Digi|Digi, Campus, 3, ConfusedMIN) Are you kidding? This is a direct gateway to all of anime, of course we’re leaving it open.
+
+(Digi|Digi, Campus, 3, SmittenMAX) We are essentially gods now.
+
+(PCPG) Huh, neat. You wanna find an interesting world and live there then?
+
+(Digi|Digi, Campus, 2, SmittenMAX) This whole “When will they build the world I wanna live in”-thing is bullshit. Just fucking build it yourself.
+
+(Digi|Digi, Campus, 2, SmittenMED) That’s what this school is. In fact:... 
+
+(Digi|Digi, Campus, 2, SmittenMED) Do you want to go to RadProm with me?
+
+(PCPG) As literal gods with anime power beyond comprehension?
+
+(Digi|Digi, Campus, 5, SmittenMED) Yeah, that’s why it’s fucking hilarious.
 
 (PCPG) Okay, yeah. Sure. Let’s go to prom.
 
@@ -1869,11 +2099,12 @@ All of the Digi-echs ten laserguns fire at once, leaving no trace of Mother’s 
 [StopMusic]
 [Location: radprom1]
 [Song: PCPDating_RADCON]
+(Digi|Digi, Special, 2, SmittenMED|blush2) 
 [fade from black]
 
 (PCPG) Come to think of it: That’s two assholes with garbage opinions on anime down now. How many are even left?
 
-(Digi|Digi, Special, 2, BlushMED) You wanna see the list?
+(Digi|Digi, Special, 2, SmittenMIN|blush2) You wanna see the list?
 
 (PCPG) Nah, that’d ruin the moment.
 [StopMusic]
