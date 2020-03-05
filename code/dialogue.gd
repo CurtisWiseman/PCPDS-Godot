@@ -50,7 +50,6 @@ func _input(event):
 				global.pause_input = false
 			
 			elif get_visible_characters() == get_total_character_count():
-				
 				if speech != null:
 					speech.queue_free()
 					speech = null
@@ -70,14 +69,14 @@ func _input(event):
 				set_visible_characters(get_total_character_count())
 	
 	elif Input.is_action_just_pressed("advance_text"):
-		
 		get_parent().emit_signal('mouse_click')
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_debug"):
 		debug()
-	pass
-
+	if Input.is_action_just_released("force_unpause"):
+		print("Input pause forcibly broken out of!")
+		global.pause_input = false
 
 func say(text, voice=null):
 	set_visible_characters(0) # Remove current line

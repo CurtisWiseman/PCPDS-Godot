@@ -423,3 +423,15 @@ func _ready():
 	coltcorona.thisvideo.shock = coltcorona.feetguitar.shock
 	coltcorona.thisvideo.smitten = coltcorona.feetguitar.smitten
 	coltcorona.thisvideo.blush = coltcorona.feetguitar.blush
+	davoo.angry = davoo.campus.angry
+	davoo.confused = davoo.campus.angry
+	davoo.drunk = davoo.campus.drunk
+	davoo.happy = davoo.campus.happy
+	davoo.neutral = davoo.campus.neutral
+	davoo.sad = davoo.campus.sad
+	davoo.shock = davoo.campus.shock
+	davoo.smitten = davoo.campus.smitten
+	davoo.body = davoo.campus.body
+	davoo.drunksmile = davoo.campus.drunksmile
+	davoo.drunkdrool = davoo.campus.drunkdrool
+	davoo.catboy = davoo.campus.catboy
