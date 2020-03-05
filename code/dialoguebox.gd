@@ -268,12 +268,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var did_slide = false
 				for i in range(0, systems.display.layers.size()):
 					var layer = systems.display.layers[i]['name']
-					var slider = command[1].to_lower()
-					
-					if slider == "ColtCorona":
-						global.stupid_debug = true
-					
-					if layer.findn(slider) != -1:
+					if layer.findn(command[1].to_lower()) != -1:
 						if command.size() == 3:
 							did_slide = true
 							parse_move(['slide', command[2]], '"'+systems.display.layers[i]['path']+'"', 0)
