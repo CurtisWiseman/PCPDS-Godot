@@ -959,6 +959,9 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		var expression_num_stuff = parse_expnum(info[i], parsedInfo)
 		num = expression_num_stuff[0]
 		var faceType = expression_num_stuff[1]
+		#STUPID HACK! People keep swapping between these two in the scripts...
+		if faceType == "shocked":
+			faceType = "shock"
 		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.'+faceType+'['+num+'], '+body+')'+AFL, body, i+1, pos)
 
 # Determines the correct face number for an epxression, returns
