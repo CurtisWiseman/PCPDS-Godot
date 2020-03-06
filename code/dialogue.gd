@@ -27,6 +27,7 @@ func _ready():
 
 func _input(event):
 	
+	
 #	advance_text is a mapped action (2nd tab of project settings). this is done with remapping in mind
 	if Input.is_action_just_pressed("advance_text") and !global.pause_input:
 		

@@ -1,5 +1,7 @@
 extends Node
 
+const DialogueBox = preload('res://code/dialoguebox.gd')
+
 # Node names.
 var sound
 var timer
@@ -74,13 +76,12 @@ func _ready():
 func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoicesArray=[], CG=null):
 	
 	# Load the DialogueBox under canvas.
-	dialogueBox = TextureRect.new()
+	dialogueBox = DialogueBox.new()
 	dialogueBox.name = 'Dialogue Box'
 	dialogueBox.margin_top = 790
 	dialogueBox.margin_bottom = 1080
 	dialogueBox.margin_left = 0
 	dialogueBox.margin_right = 1920
-	dialogueBox.set_script(load('res://code/dialoguebox.gd'))
 	dialogueBox.texture = load('res://images/dialoguebox/dialogueBox.png')
 	global.dialogueBox = dialogueBox
 	
@@ -131,7 +132,7 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	
 	# Load dialogue with the necessary variables then add it to the screen.
 	dialogueBox.CG = CG
-	dialogueBox.script = script
+	dialogueBox.dialogueScript = script
 	dialogueBox.index = index
 	dialogueBox.choices = choicesArray
 	dialogueBox.inChoice = inChoiceBool

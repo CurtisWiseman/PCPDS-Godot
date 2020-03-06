@@ -6,13 +6,13 @@
 Woah, that was a long-ass day. Time to clean up and head to bed.
 
 [SFX: PCP-SFX_DoorOpen]
-[PCPG bathroom complete]
+[Location: pcpgbathroom]
 
 The classes in this school may be exhausting, but they are definitely way more interesting than all the other schools I attended.
 
 [StopMusic]
 [SFX: PCP-SFX_DoorOpen]
-[Location: hallway2.nightmare]
+[Location: hallway2.dream]
 [Song: PCPDating_Tension]
 
 (PCPG) Huh…? What the fuck?
@@ -48,19 +48,27 @@ I’m... in the university? But it seems... different. Something is clearly wron
 (Mage|Mage, campus, 4, happyMIN) I have an old friend who lives here, I’m sure that she can help us! Come with me!
 
 We start running down the hallway until it just… ends?
-[Location: mageforest.nightmare]
+[Location: dreamforest]
 
 Ok, this is most definitely not the real university. The professors all hate nature for different reasons, and would never let a forest grow wild on campus.
 
 (Mage|Mage, campus, 3, happyMAX, center, slide, left) There she is!
 
+<<<<<<< HEAD
+(Cerise|???, cerise, happy, offright, slide, center) Mage! What a pleasure to meet you here! And who’s this? Your new boyfriend?
+=======
 (Cerise|???, happy, offright, slide, center) Mage! What a pleasure to meet you here! And who’s this? Your new boyfriend?
+>>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
 
 This conversation is somehow already more uncomfortable than getting chased by zombies.
 
 (Mage|Mage, campus, 1, angryMED|blushies) Quit joking Cerise, we have a problem! The zombies are back!
 
+<<<<<<< HEAD
+(cerise|Cerise, cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
+=======
 (Cerise|Cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
+>>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
 
 (Cerise) I will protect my Pokémon children!
 
@@ -72,7 +80,6 @@ This conversation is somehow already more uncomfortable than getting chased by z
 [SLIDE, Cerise, center, offright]
 
 [StopMusic]
-[CG: Cerise]
 [SFX: PCP-SFX_DemonScreetch]
 
 Wings grow out of the demon girl’s back, seeming to form giant claws, which start to slaughter the zombies as the horde enters from the hallways. Blood, organs and limbs fly through the air.
@@ -81,10 +88,9 @@ I feel nauseous.
 
 (Mage) PCPG? Are you ok?
 [Mage leaves]
-[Cerise leaves]
+[cerise leaves]
 
 [Location: pcpgroom]
-[CG end]
 [StopMusic]
 
 AHHH!
@@ -95,6 +101,7 @@ Oh, good. It really was only a dream. I guess my mind had a lot of things to wor
  
 This wacky university is like a world I never knew I wanted. A weird amalgam of unique personalities that have found a place where they belong. It's like a… it really is like a dream come true.
 
+[fade to black]
 [StopMusic]
 [StopMusic]
 
@@ -102,12 +109,13 @@ This wacky university is like a world I never knew I wanted. A weird amalgam of 
 [Scene: Shadows of the Past]
 [Location: roof.day]
 [Song: PCPDating_DateTheme]
+[fade from black]
 
 I meet up with Mage on the roof during lunch and, wow, this is just like in my japanese animes! The perfect place to hang out with friends, eat your lunch alone when you’re bullied, or jump if you’ve been bullied for too long. Student accessible school roofs are the reason people are dying!
 
 Oh, Mage is already waiting for me.
 
-(Mage|Mage, campus, 1, happyMIN, offright, slide, center)
+(Mage, campus, 1, happyMIN, offright, slide, center)
 
 (PCPG) Hi, sorry I’m late, but Professor Digi wouldn’t let us leave before finishing his top 1000 anime OPs and EDs list.
 
@@ -138,15 +146,15 @@ Suddenly, someone enters the school roof.
 
 (Mage|Mage, campus, 5, angryMIN) Oh, it’s you.
 
-(Endless War|Endless War, cross, blushMIN|blushiesMED) You know it. I assume you haven’t changed your opinion regarding the offer I made you last Monday?
+(Endless War|Endless War, cross, smittenMIN|blushiesMED) You know it. I assume you haven’t changed your opinion regarding the offer I made you last Monday?
 
 (Mage|Mage, campus, 5, angryMED)  No, I haven’t. And stop asking me, I told you, time and time again!
 
-(Ben|Ben, school, point, happyMIN, offleft, right) But Mage, you would be such a valuable addition to my gang! You’re a perfect fit! /n Your color scheme, your influence, your experience!
+(Ben|Ben, campus, point, happyMIN, offleft, slide, right) But Mage, you would be such a valuable addition to my gang! You’re a perfect fit! Your color scheme, your influence, your experience!
 
 (Mage|Mage, campus, 5, shockMAX) Ben, please, stop it! I made up my mind about this. I have no interest in fighting over slime!
 
-(Ben|Ben, school, base, neutral) I would highly appreciate it if you would help us out. I know you are a fighter Mage, you are more of a fighter than most of us.
+(Ben|Ben, campus, base, neutral) I would highly appreciate it if you would help us out. I know you are a fighter Mage, you are more of a fighter than most of us.
 
 (Endless War|Endless War, stand, angryMIN) Yeah, Maaaaage! You can’t keep running away from your past like a pathetic little coward!
 
@@ -160,17 +168,25 @@ The triangular girl’s fierce glare petrifies me.
 
 (Endless War|Endless War, stand, confusedMED) Let’s go Cop Killer. Your men still have some slime to mine.
 
-(Ben|Ben, school, base, sadMIN) Yeah, it’s already getting late, and I’m definitely known as someone who’s never late! See you around Violet!
+(Ben|Ben, campus, base, sadMIN) Yeah, it’s already getting late, and I’m definitely known as someone who’s never late! See you around Violet!
 
+<<<<<<< HEAD
+[SLIDE EndlessWar offright]
+[SLIDE Ben offleft]
+[Endless War leaves] 
+=======
 [SLIDE, EndlessWar, left, offright]
 [SLIDE, Ben, right, offleft]
 [EndlessWar leaves] 
 [Ben leaves]
+>>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
 [StopMusic]
 
 [Song: PCPDating_FallenGlass]
 
 (PCPG) What did he mean by that, Mage?
+
+[Ben leaves]
 
 (Mage|Mage, campus, 3, shockMIN) Huh? Who, what?
 
@@ -195,12 +211,11 @@ Mage isn’t laughing with me.
 
 [SFX: PCPDating_School_Bell]
 The school bell rings, and Mage and I head back to our classes
-[SLIDE, Mage, center, offright]
-[Mage leaves]
-
+[SLIDE Mage offright]
 [fade to black]
 [StopMusic]
-
+[Mage leaves]
+ 
 [Scene: Violent Trees]
 
 [Location: citypark.day]
@@ -246,11 +261,11 @@ All the leaves and even the barks are purple. The grass and the dirt under the t
 
 My parents were surprisingly unconcerned about me going out, considering the circumstances. Like, I wasn’t allowed to leave my neighborhood, but the neighborhood was pretty big. My parents thought I was a well-behaved kid...
 
-But that couldn’t have been further from the truth.
-
-[Mage fades]
-
 [CG: Mage CG1]
+
+(Mage) But that couldn’t have been further from the truth.
+
+[Mage leaves]
 
 (Mage) I was a fighter, not because I needed to be one, but because I wanted to. As the feared gang leader known as Violet Violence, I protected my neighborhood from our enemies.
 
@@ -258,6 +273,7 @@ But that couldn’t have been further from the truth.
 
 (PCPG) Your enemies? Do you mean school bullies or what?
 
+[CG: end|cut]
 [CG: Mage CG2]
  
 (Mage) The gang called the Indigo Interlopers. Older kids, ruffians and school delinquents who had a problem with a seven year old Mage claiming a part of their city. And I hated them, of course, because of their colour. 
@@ -282,12 +298,14 @@ But that couldn’t have been further from the truth.
 
 (PCPG) I guess this didn’t end well?
 
+[CG: end|cut]
 [CG: Mage CG3]
 
 (Mage) I’m scared of who I was back then. I killed without hesitation, was a merciless warrior.
 
 (Mage) But I had to pay a horrible price for my ruthless behavior.
 
+[CG: end|cut]
 [CG: Mage CG4]
 
 (Mage) One day, my gang was ambushed by the Indigo Interlopers. Shortly before, we killed their leader. Understandably, they wanted revenge.
@@ -296,9 +314,8 @@ But that couldn’t have been further from the truth.
 
 (Mage) After months, I found myself in America, and my new friends found me. The teachers and students of the University. I actually named the University, you know? It had another name first, “Horseshoe University” or something like that, but when I first became Student Council President, I decided on a more fitting name.
 
-[CG end]
+[CG: end|cut]
 
-[Location: mageforest]
 (Mage) I came here and turned this forest purple as a living memorial for my fallen friends. Every tree here is named after one of my Tigers. I burned their names into the bark with purple magic, without hurting the trees of course.
 
 I hadn’t noticed it before, but yes, every tree has a name. Even though their original owners are dead, the trees will honor their names for decades or even centuries.
@@ -314,7 +331,10 @@ I hadn’t noticed it before, but yes, every tree has a name. Even though their 
 (Mage|Mage, casual, 5, sadMIN) I know, but it’s not easy. Anyways, thanks for listening to my exposition dump. It’s good to have someone to talk to.
 
 [fade to black]
+[Mage leaves]
 [StopMusic]
+
+
 
 [Scene: Let’s Go to the Mall]
 [Location: pcpgroom]
@@ -325,41 +345,41 @@ It’s finally weekend! I was really looking forward to this ... date? I guess i
 [Location: purplemall]
 [Song: PCPDating_DateTheme]
 
-(Mage|Mage, casual, 1, happyMED, offright, slide, left) Hey PCPG!
+(Mage|Mage, campus, 1, happyMED, offright, slide, left) Hey PCPG!
 
 She looks way happier than the last time I met her.
 
 (PCPG) I got excited when you asked me to go to the mall with you. It’s a very different location compared to our last d-
 
-(Mage|Mage, casual, 3, shockMIN) Oh, I like forests way more honestly, but I needed a change of mood. Telling you about my past woke up some dark memories within me.
+(Mage|Mage, campus, 3, shockMIN) Oh, I like forests way more honestly, but I needed a change of mood. Telling you about my past woke up some dark memories within me.
 
 (PCPG) My therapist told me it’s better to confront them than to run away.
 
-(Mage|Mage, casual, 4, happyMED) Ye. That may be true, but not today!
+(Mage|Mage, campus, 4, happyMED) Ye. That may be true, but not today!
 
 I catch how Mage looks longingly to the comic book store.
 
-(PCPG) Do you.. want to gothere?
+(PCPG) Do you.. want to go there?
 
-(Mage|Mage, casual, 2, shockMED) No! I mean, yes, but....
+(Mage|Mage, campus, 2, shockMED) No! I mean, yes, but...
 
 (PCPG) But?
 
-(Mage|Mage, casual, 5, confusedMED) Actually, I go to this store a lot, just to look inside. They have a whole board of Pokémon Plushies! I always wanted one, they didn’t have those back in Lithuania.
+(Mage|Mage, campus, 5, confusedMED) Actually, I go to this store a lot, just to look inside. They have a whole board of Pokémon Plushies! I always wanted one, they didn’t have those back in Lithuania.
 
 (PCPG) So… why don’t you go inside then?
 
 Mage turns to me, with fear in her eyes.
 
-(Mage|Mage, casual, 2, shockMAX) There are people inside!
+(Mage|Mage, campus, 2, shockMAX) There are people inside!
 
 (PCPG) And you are scared of people?
 
-(Mage|Mage, casual, 1, shockMIN) Not of people, but of strangers. 
+(Mage|Mage, campus, 1, shockMIN) Not of people, but of strangers. 
 
 (PCPG) But you were a stranger to me until last week and look, now we’re hanging out together. Maybe these are nice people too!
 
-(Mage|Mage, casual, 5, neutralMIN) M-maybe. Yee, you’re right. I can’t explain it logically, I’m just scared. I know nobody in there, and they have never seen me before. What if they look at me weird?
+(Mage|Mage, campus, 5, neutralMIN) M-maybe. Yee, you’re right. I can’t explain it logically, I’m just scared. I know nobody in there, and they have never seen me before. What if they look at me weird?
 
 (PCPG) Is that really such a big problem?
 
@@ -367,76 +387,80 @@ Hmm...
 
 (PCPG) What if I go in there first, looking for comics or something, and then you can come in a moment later and pretend that we wanted to meet there?! That way you don’t have to feel weird!
 
-(Mage|Mage, casual, 5, shockMIN) Guess we can try that…
+(Mage|Mage, campus, 5, shockMIN) Guess we can try that…
 
 (PCPG) Okay, see you in a few minutes!
 
 I leave Mage alone and head to the comic store. 
 
+[fade to black]
+[Mage leaves]
 [Location: comicstore.full]
+[fade from black]
 
 Opening the door, the familiar smell of weebs and nerds welcomes me. There are only a few people in the store though, but probably too many for her given her reaction. Waiting next to the Pokemon shelf, I squint outside the window to see if Mage decides to follow.
 
-(Mage|Mage, casual, 2, happyMAX, offright, slide, right) I’m here! I’m finally here! Now let’s get the plushie and go!
+(Mage|Mage, campus, 2, happyMAX, offright, slide, right) I’m here! I’m finally here! Now let’s get the plushie and go!
 
 She studies the Pokemon shelf, undecided.
 
-(Mage|Mage, casual, 2, happyMED) Oh no, they’re adorable!
+(Mage|Mage, campus, 2, happyMED) Oh no, they’re adorable!
 
-(Mage|Mage, casual, 2, happyMAX) Oh look there’s a Snom! It has such a great name!
+(Mage|Mage, campus, 2, happyMAX) Oh look there’s a Snom! It has such a great name!
 
 (PCPG) Which one is your favourite?
 
-(Mage|Mage, casual, 5, sadMIN) Mhmhm I can’t decide! They don’t have a Houndoom or a Sableye, and I can’t choose between Mareep and Wooloo!
+(Mage|Mage, campus, 5, sadMIN) Mhmhm I can’t decide! They don’t have a Houndoom or a Sableye, and I can’t choose between Mareep and Wooloo!
 
-(Mage, casual, 1, sadMIN)
+(Mage, campus, 1, sadMIN)
 
 (PCPG) They kinda look like they belong together! How about …
 
 (PCPG) How about we each get one, and exchange them from time to time?
 
-(Mage|Mage, casual, 5, happyMAX) Sounds fair! 
+(Mage|Mage, campus, 5, happyMAX) Sounds fair! 
 
 A pink haired girl bumps into me.
 
-(Adelram, face 1, offright, slide, center)
+(Adelram, body, face 1, offright, slide, center)
 
-(Mage|Mage, casual, 2, shockMAX) Be careful!
+(Mage|Mage, campus, 2, shockMAX) Be careful!
 
 (PCPG) I’m sorry, I didn’t see her!
 
-(Adelram|???, face 2) HER? HER? What the fuck, what’s wrong with you humans!? To insult me like that. 
+(Adelram|???, body, face 2) HER? HER? What the fuck, what’s wrong with you humans!? To insult me like that. 
 
-(Adelram|???, face 2) Do I look like a girl to you?
+(Adelram|???, body, face 2) Do I look like a girl to you?
 
 (PCPG) Ehm… honestly-
 
-(Mage|Mage, casual, 3, happyMIN) Of course not, you look like a handsome demon boy to me!
+(Mage|Mage, campus, 3, happyMIN) Of course not, you look like a handsome demon boy to me!
 
-(Adelram|???, face 1) Hmpf. That’s better! Btw, have you lowly peasants seen my boyfriend anywhere?
+(Adelram|???, body, face 1) Hmpf. That’s better! Btw, have you lowly peasants seen my boyfriend anywhere?
 
-(Mage|Mage, casual, 1, shockMIN) Oh, how did you lose him?
+(Mage|Mage, campus, 1, shockMIN) Oh, how did you lose him?
 
-(Adelram|???, face 1) That idiot is so excited to finally be in the human world, and now he gets lost every few minutes. He’s so annoying!
+(Adelram|???, body, face 1) That idiot is so excited to finally be in the human world, and now he gets lost every few minutes. He’s so annoying!
 
 (PCPG) What does he look like?
 
-(Adelram|???, face 1|blush) Stupidly tall, handsome and with long, dark hair- He also constantly has a dumb smile on his face (which is totally cute but don’t tell him).
+(Adelram|???, body, face 1|blush) Stupidly tall, handsome and with long, dark hair- He also constantly has a dumb smile on his face (which is totally cute but don’t tell him).
 
-(Mage|Mage, casual, 2, happyMIN) If we see him, I promise we’ll tell him he can find you here, ok?
+(Mage|Mage, campus, 2, happyMIN) If we see him, I promise we’ll tell him he can find you here, ok?
 
-(Adelram|???, face 1) Hrrmmm okay! But I warn you! If I don’t find him, my wrath will be felt by every lowly human being in this city! But you're not a human, huh, purple girl? Are those demon horns I see?
+(Adelram|???, body, face 1) Hrrmmm okay! But I warn you! If I don’t find him, my wrath will be felt by every lowly human being in this city! But you're not a human, huh, purple girl? Are those demon horns I see?
 
-(Mage|Mage, casual, 5, happyMED) Mage horns, to be accurate! Don’t worry, I’m sure you’ll find him!
+(Mage|Mage, campus, 5, happyMED) Mage horns, to be accurate! Don’t worry, I’m sure you’ll find him!
 
 The demon boy stomps away, leaving Mage and me.
 
-[SLIDE, Adelram, center, offright]
-[Adelram leaves]
+[SLIDE Adelram offright]
 
 (PCPG) Are you ready to leave?
 
-(Mage|Mage, casual, 1, happyMIN) I’m ready when you are!
+(Mage|Mage, campus, 1, happyMIN) I’m ready when you are!
+
+[Adelram leaves]
 
 (PCPG) Yeah, let’s go to the cash-
 
@@ -446,23 +470,23 @@ An automatic cashier machine appears before us.
 
 (PCPG) Oh no. It’s over. the robots are finally taking over.
 
-(Mage|Mage, casual, 1, happyMED) Nah, it’s ok. I know her.
+(Mage|Mage, campus, 1, happyMED) Nah, it’s ok. I know her.
 
-(Clara|Cashier Robot) Welcome to our shop! Please put your products on the scanner!
+(Clara|Cashier Robot, clara, offleft, slide, center) Welcome to our shop! Please put your products on the scanner!
 
 We follow the instructions.
 
-(Clara|Cashier Robot) I’m sorry, please scan your products again!
+(Clara|Cashier Robot, clara) I’m sorry, please scan your products again!
 
-(Mage|Mage, casual, 5, shockMED) Ahh, Clara is being a bitch today!
+(Mage|Mage, campus, 5, shockMED) Ahh, Clara is being a bitch today!
 
 (PCPG) Who? 
 
-(Mage|Mage, casual, 5, shockMIN) Clara! The cashier!
+(Mage|Mage, campus, 5, shockMIN) Clara! The cashier!
 
 (PCPG) You gave this robot a name?
 
-(Mage|Mage, casual, 3, happyMED) Yeah, why not? I think she’s cute!
+(Mage|Mage, campus, 3, happyMED) Yeah, why not? I think she’s cute!
 
 No you are… 
 
@@ -471,9 +495,9 @@ No you are…
 Where did that stray thought even come from? After scanning everything again, we grab our stuff and head out into the warm evening.
 
 [fade to black]
-[Mage fades]
-[Clara fades]
 [StopMusic]
+[Mage leaves]
+[Clara leaves]
 
 [Scene: Don’t Let Your Dreams Be Memes]
 
@@ -489,21 +513,19 @@ Where did that stray thought even come from? After scanning everything again, we
 
 [CG end]
 
-(Munchy, casual, squatting, angryMAX)
+(Munchy|Professor Tinyhats, casual, squatting, angryMAX) HAVE YOU SEEN DAN SOFTTOILETSEATS ANYWHERE? I HAVE TO TELL HIM...
 
-(Munchy|Professor Tinyhats) HAVE YOU SEEN DAN SOFTTOILETSEATS ANYWHERE? I HAVE TO TELL HIM...
+(Munchy|Professor Tinyhats, casual, squatting, happyMAX) … THAT I STOLE HIS DAD!
 
-(Munchy|Professor Tinyhats, casual, squatting, happyMAX) …I STOLE HIS DAD!
+[Munchy leaves]
 
 [Location: mageforest.nightmare]
 
 (PCPG) How… how did I get here?
 
-(Lethal, silhouette)
+(Lethal, silouette) Hehehehehehe ...
 
 (PCPG) AH!
-
-[Lethal leaves] 
 
 There is someone between the trees. I try to run away, but for some reason my legs don't want to move. There! Again! A violet figure!
 
@@ -511,18 +533,16 @@ This is bad, I just want to go back to bed!
 
 But somehow I know I’m not supposed to escape. I have to obey the will of whatever is coming closer from the forest.
 
-(Lethal, 5, happyMAX) 
-
-(Lethal|???) HAHuAuHAHAHAHAuHAHA! You didn’t expect me, huh?
+(Lethal|???, 5, happyMAX) HAHuAuHAHAHAHAuHAHA! You didn’t expect me, huh?
 
 I try to cry for help, but my voice gets stuck in my throat. 
 
 Who is she? She seems familiar, but at the same time I’m sure that I’ve never seen something so terrifying.
 
-(Lethal, 1, smugMIN) Who I am!? Oh silly, you should know who I am! Didn’t she tell you about meee? I am the superior version of her, the one who always gets sent to the naughty corner of her mind!
+(Lethal|???, 5, smugMIN) Who I am!? Oh silly, you should know who I am! Didn’t she tell you about meee? I am the superior version of her, the one who always gets sent to the naughty corner of her mind!
 
-(Lethal, 5, happyMIN)  But not for much longer, I can promise you that! 
-(Lethal, 5, happyMAX) HUAUAUHAUHUAUHUHAHUHA!
+(Lethal|???, 5, happyMIN) But not for much longer, I can promise you that! 
+(Lethal|???, 5, happyMAX) HUAUAUHAUHUAUHUHAHUHA!
 
 The creature that reminds me of Mage laughs again, it sends shivers down my spine. Is that her... evil twin sister?
 
@@ -533,7 +553,7 @@ and…
 No…!
 
 [Location: mageforest.nightmare, overlay.bloodsplatter]
-
+[Lethal leaves]
 [CG: endlesseye]
 (Endless War) Do you get it now, juve?
 [StopMusic]
@@ -593,6 +613,9 @@ As we enter a new street, a group of people blocks our way.
 [StopMusic]
 [Song: PCPDating_ActionSerious]
 [CG: Indigo Interlopers]
+
+(???) Stop right where you are you fuckers!
+
 [CG end]
 
 (Mage|Mage, campus, 5, shockMED) Oh no ...
@@ -743,22 +766,27 @@ Suddenly the street is filled with purple characters, some hooded, some masked, 
 
 The Cop Killer turns to the Indigo Interlopers.
 
-(Ben|Cop Killer, casual, exasperated, angryMIN) This is our city, and there is not enough slime for all of us! Go mine somewhere else!
+(Ben|Cop Killer, casual, exasp, angryMIN) This is our city, and there is not enough slime for all of us! Go mine somewhere else!
 
 (Interlopers) We aren’t even here for sli- 
 
-(Ben|Cop Killer, exasperated, angryMAX ) KILLERS! In the name of Bernie, Christine-chan and our beloved Endless War...
+(Ben|Cop Killer, casual, exasp, angryMAX ) KILLERS! In the name of Bernie, Christine-chan and our beloved Endless War...
 
 (Endless War) Aww, this why I haven’t replaced you yet!!
 
 (Ben|Cop Killer, casual, dab) !KILL THESE FUCKERS!
 
-(Cop Killers, normal) !kill !kill !kill !kill kill! !kill !kill !kill !kill !kill !kill !kill kill! !kill !kill kill! !kill !kill !kill
+(Cop Killers) !kill !kill !kill !kill kill! !kill !kill !kill !kill !kill !kill !kill kill! !kill !kill kill! !kill !kill !kill
 
 [CG: Indigo Interlopers Death]
 [Ben leaves]
+<<<<<<< HEAD
+[Endless War leaves]
+[Cop Killers leaves]
+=======
 [EndlessWar leaves]
 [Cop Killers leave]
+>>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
 [Mage leaves]
 [fade to black]
 [CG end]
@@ -897,7 +925,7 @@ Mage steps forward.
 
 (Mage|Mage, campus, 1, shockMED) Lethal. It’s time. Come out and get rid of them!
 (Mage, campus, 2, shockMAX)
-[CG: Purple effect]
+[CG: Purple Effect]
 [CG ends]
 [Mage Leaves]
 
