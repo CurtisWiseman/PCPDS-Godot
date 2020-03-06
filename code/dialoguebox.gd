@@ -737,9 +737,14 @@ func parse_info(info):
 			if notsame[0]: parse_911(info, 'nine11', 1, notsame[1])
 		"Tom":
 			info[0] = 'tom'
+			var poseNum = 1
+			var i = 1
+			if info.size() > 1 and info[1].is_valid_integer():
+				poseNum = int(info[1])
+				i += 1
 			remove_dupes('tom', info)
 			yield(self, 'dupeCheckFinished')
-			if notsame[0]: parse_expression(info, 'tom', 'characterImages.tom.body[0]', 1, 'null', notsame[1])
+			if notsame[0]: parse_expression(info, 'tom.pose' + str(poseNum), 'characterImages.tom.pose' + str(poseNum) +'.body[0]', i, 'null', notsame[1])
 		"Colt Corona":
 			var charName = info[0].to_lower();
 			charName = charName.replace(' ', '');
