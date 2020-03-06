@@ -739,10 +739,10 @@ Everytime a combatant is dimissed by the judges, they shoot at them with a fucki
 [SFX: PCP-SFX_Gunshot]
 [SLIDE, Gibbon, right, offleft]
 [Gibbon leaves]
-(Tom, campus, 1, neutral, offright, slide, right)
+(Tom, 1, neutral, offright, slide, right)
 (Nate|Prof. Bestman, campus, pointing, happyMED|kaminashades) You know Tom, you clearly didn’t have the greatest performance today, but despite that, you appeared so depressed lately that the concerned Student Council has given us hard cash to let you win for your own wellbeing. That’s why we’re obligated to let you win this year's 10 PACES AND DRAW!
 (Nate|Prof. Bestman, campus, smoking, happyMIN|kaminashades) (and yes, we are that corrupt)
-(Tom, campus, 4, happyMAX) Fuck yeah! My depression is good for something at last!
+(Tom, 4, happyMAX) Fuck yeah! My depression is good for something at last!
 [SLIDE, Tom, right, offleft]
 [Tom leaves]
 Well, that was quick. Definitely a quick draw.

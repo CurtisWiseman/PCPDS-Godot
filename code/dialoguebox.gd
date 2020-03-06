@@ -745,13 +745,27 @@ func parse_info(info):
 		"Tom":
 			info[0] = 'tom'
 			var poseNum = 1
+			var bodyNum = 0
 			var i = 1
 			if info.size() > 1 and info[1].is_valid_integer():
-				poseNum = int(info[1])
-				i += 1
+					poseNum = int(info[1])
+					i += 1
+			if info.size() > i:
+				var tom_poses = ["champagne", "huel", "cider", "whisky", "whiskey", "mic"]
+				var next = info[i].to_lower()
+				if tom_poses.find(next) != -1:
+					if next == "whisky":
+						next = "whiskey"
+					var bodies = characterImages.tom["pose"+str(poseNum)].body
+					for j in range(bodies.size()):
+						var bod = bodies[j]
+						if bod.find(next) != -1:
+							bodyNum = j
+							i += 1
+							break
 			remove_dupes('tom', info)
 			yield(self, 'dupeCheckFinished')
-			if notsame[0]: parse_expression(info, 'tom.pose' + str(poseNum), 'characterImages.tom.pose' + str(poseNum) +'.body[0]', i, 'null', notsame[1])
+			if notsame[0]: parse_expression(info, 'tom.pose' + str(poseNum), 'characterImages.tom.pose' + str(poseNum) +'.body['+str(bodyNum)+']', i, 'null', notsame[1])
 		"Colt Corona":
 			var charName = info[0].to_lower();
 			charName = charName.replace(' ', '');
