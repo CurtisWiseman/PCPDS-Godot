@@ -19,7 +19,7 @@ func scene(lineText, index, dialogueNode):
 	
 	# Use the index to match what line to make something happen on.
 	match(index):
-		27:	# Take User Input
+		26:	# Take User Input
 			game.blockInput = true
 			global.pause_input = true
 
@@ -46,14 +46,14 @@ func scene(lineText, index, dialogueNode):
 			dialogueNode.emit_signal('empty_line')
 			systems.canvas.remove_child(input)
 		
-		31: # Read the player name
+		30: # Read the player name
 			var file = File.new()
 			file.open("user://playername.tres", File.READ)
 			var username = file.get_as_text()
 			file.close()
 			
 			if username.findn('Brad Garlinghouse') == -1 and username.findn('BradGarlinghouse') == -1:
-				dialogueNode.index = 44
+				dialogueNode.index = 43
 	
 	return true
 

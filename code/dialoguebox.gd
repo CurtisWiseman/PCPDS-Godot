@@ -191,6 +191,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 		#Skips empty lines e.g spacing
 		while dialogue[index].length() == 0:
 			index += 1
+		
+		print_debug(index, ': ', dialogue[index])
 	
 	#Reacts differently depending on the start of the current line.
 		# Load while on first line.
@@ -216,7 +218,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				command = command.rstrip(']')
 				command = command.split(' ', false)
 				
-				var character = command[0]
+				var character = command[0].to_lower()
 				var speed = 3
 				
 				if command.size() == 3:
@@ -224,12 +226,17 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				var characterToRemove = null
 				var rmIndex
+				
+				var removing_ag = character == 'actiongiraffe'
 
 				for i in range(0, systems.display.layers.size()):
-					var layer = systems.display.layers[i]['name']
+					var layer: String = systems.display.layers[i]['name']
+					# HACK: Special case Action Giraffe as his layers use 'ag' rather than his full name
+					var is_ag_layer = layer.begins_with('ag_')
 					#QUICK HACK! Layers can also be CG etc!
 					#This caused problems if the character leaving has a name that appears in the CG name
-					if layer.findn(character.to_lower()) != -1 and (CG == null or systems.display.getname(CG) != layer):
+					if (layer.findn(character) != -1 or (removing_ag and is_ag_layer))\
+					and (CG == null or systems.display.getname(CG) != layer):
 						characterToRemove = systems.display.layers[i]['node']
 						rmIndex = i
 						break
@@ -764,12 +771,16 @@ func remove_dupes(character, info):
 	waitTimer.start()
 	yield(waitTimer, 'timeout')
 	
+	var removing_ag_dupes = character == 'actiongiraffe'
+	
 	var size = info.size()
 	for i in range(0, systems.display.layers.size()):
 		
-		var layer = systems.display.layers[i]['name']
+		var layer: String = systems.display.layers[i]['name']
 		
-		if layer.findn(character) != -1:
+		var is_ag_layer = layer.begins_with('ag_')
+		
+		if layer.findn(character) != -1 or (removing_ag_dupes and is_ag_layer):
 			if size == 1:
 				notsame = [false, null]
 				emit_signal('dupeCheckFinished')
