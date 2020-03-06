@@ -1,22 +1,5 @@
 extends TextureRect
 
-var dialogue = PoolStringArray() #All of the lines in the current text file. Not using a regular array for better performance
-var index #Index of current line of dialogue
-var start
-var script
-var regex = RegEx.new()
-var systems
-var choices
-var inChoice
-var chosenChoices
-var displayChoices = []
-var displayingChoices = false
-var waitTimer = Timer.new()
-var numOfChoices = 0
-var fade = false
-var notsame
-var overlays = []
-
 signal empty_line
 signal sentence_end
 signal choiceChosen
@@ -24,6 +7,22 @@ signal dupeCheckFinished
 signal mouse_click
 signal transition_finish
 
+var dialogue := PoolStringArray() #All of the lines in the current text file. Not using a regular array for better performance
+var index := 0 #Index of current line of dialogue
+var start := 0
+var dialogueScript: String
+var regex := RegEx.new()
+var systems
+var choices
+var inChoice
+var chosenChoices
+var displayChoices = []
+var displayingChoices := false
+var waitTimer := Timer.new()
+var numOfChoices := 0
+var fade = false
+var notsame
+var overlays = []
 var lastCG
 var lastBody
 var lastSpoken = 0
@@ -33,7 +32,6 @@ var lastBGType
 var lastChoices
 var lastInChoice
 var lastChosenChoices
-
 var CG = null
 
 func _ready(): 
@@ -41,7 +39,7 @@ func _ready():
 
 	#Opens the document containing the scene's script (as in the dialogue)
 	var f = File.new()
-	f.open(script, File.READ)
+	f.open(dialogueScript, File.READ)
 	
 #	var err = f.open_encrypted_with_pass("res://document.txt", File.READ, "password") ability to read encrypted files 
 	#Stores every line of dialogue in the array
