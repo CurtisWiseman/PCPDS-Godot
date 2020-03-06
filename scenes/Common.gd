@@ -17,8 +17,6 @@ func _ready():
 # Where all non-script processing of a scene takes place.
 func scene(lineText, index, dialogueNode):
 	
-	print_debug(index, " ", lineText)
-	
 	# Use the index to match what line to make something happen on.
 	match(index):
 		26:	# Take User Input
