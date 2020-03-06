@@ -267,6 +267,19 @@ var tom = {
 			'blush': null, 
 			'body': ['res://images/characters/Tom/tom_1.png', 'res://images/characters/Tom/tom_2.png', 'res://images/characters/Tom/tom_champagne.png', 'res://images/characters/Tom/tom_cider.png', 'res://images/characters/Tom/tom_huel.png', 'res://images/characters/Tom/tom_mic.png', 'res://images/characters/Tom/tom_whiskey.png']
 			},
+		'pose2':{
+			'afl': ['res://images/characters/Tom/AFL/tom_afl_facemask.png'], 
+			'happy': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_happyMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_happyMAX.png'], 
+			'angry': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_angryMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_angryMAX.png'], 
+			'confused': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_confusedMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_confusedMAX.png'], 
+			'neutral': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_neutral.png'], 
+			'sad': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_sadMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_sadMAX.png'], 
+			'shock': ['res://images/characters/Tom/faces_1_2/tom_face_1_2_shockMIN.png','res://images/characters/Tom/faces_1_2/tom_face_1_2_shockMAX.png'], 
+			'smitten':['res://images/characters/Tom/faces_1_2/tom_face_1_2_smittenMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_smittenMAX.png'],
+			'drunk':['res://images/characters/Tom/faces_1_2/tom_face_1_2_drunkMIN.png', 'res://images/characters/Tom/faces_1_2/tom_face_1_2_drunkMAX.png'],
+			'blush': null, 
+			'body': ['res://images/characters/Tom/tom_2.png']
+		},
 		'pose3':{
 			'afl': ['res://images/characters/Tom/AFL/tom_afl_facemask.png'], 
 			'happy': ['res://images/characters/Tom/faces_3/tom_face_3_happyMIN.png', 'res://images/characters/Tom/faces_3/tom_face_3_happyMAX.png'], 
