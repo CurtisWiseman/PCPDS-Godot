@@ -1552,7 +1552,7 @@ A trail of smoke billows into the room. It can only mean one thing, that the sam
 
 (Crocs, neutral, left+350, fade) You’re on our turf now, Benhead. The least you could do is mind your own business.
 
-(K1P, Neutral, right-350) I’m just waiting to get this over with. Ben has no chance, considering that the guy who basically picked the game is the one who trained Munchy.
+(K1P, default, blank, right-350) I’m just waiting to get this over with. Ben has no chance, considering that the guy who basically picked the game is the one who trained Munchy.
 
 (PCPG) What? You guys had every opportunity to help him out too, y’know.
 
