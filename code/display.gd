@@ -348,7 +348,7 @@ func remove_bad_layers():
 			to_remove.append(l)
 	for l in to_remove:
 		layers.erase(l)
-
+	
 # Function to move characters to specified positions.
 func position(cname, x, y=0, s=4, t=0, n='all'):
 	
@@ -376,7 +376,7 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	node = layers[index]['node'] # The node.
 	
 	# If x is null then keep x's current position.
-	if x == null: x = int(layers[index]['node'].position.x)
+	if x == null: x = int(global.get_node_pos(layers[index]['node']).x)
 	
 	# If y is a string then set mv to y, and y to 0.
 	if typeof(y) == TYPE_STRING:
@@ -409,11 +409,11 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	if mv != null:
 		
 		# If the node position is the same as the destination do nothing and return.
-		if layers[index]['node'].position.x == x:
+		if global.get_node_pos(layers[index]['node']).x == x:
 			return
 		
 		# If the destination is negative then make the speed negative.
-		if x < layers[index]['node'].position.x:
+		if x < global.get_node_pos(layers[index]['node']).x:
 			s *= -1
 		
 		# If slide then do not interact with any characters on the way to destination.

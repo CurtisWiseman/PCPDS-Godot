@@ -1272,7 +1272,7 @@ Despite the overwhelming abundance of such scenes in entertainment media, this w
 
 Also despite the overwhelming abundance of such scenes, I was utterly unprepared when it gave in to our weight and dropped me and Tom onto the floor of the exact room we were trying to get to.
 
-(tom, 1, shockedMAX)
+(Tom, 1, shockedMAX)
 
 [Location: horseshoesclinic.day]
  
@@ -1300,19 +1300,19 @@ A girl’s voice makes me come to my senses.
 [Location: japaneseforest]
 [fade from black]
 
-(Azumi|???, Ninja, smittenMAX)
+(Azumi|???, Campus, smittenMAX)
  
 (PCPG) What did you say?
  
-(Azumi|???, Ninja, happyMIN) I asked if you were alright?
+(Azumi|???, Campus, happyMIN) I asked if you were alright?
  
 (PCPG) I guess… my head just hurts a little. How did I get here, wherever it is, and who are you?
  
-(Azumi|???, Ninja, neutral) We’re in modern-day feudal Japan, obviously, and my name would be Azumi.
+(Azumi|???, Campus, neutral) We’re in modern-day feudal Japan, obviously, and my name would be Azumi.
  
 (PCPG) Modern-day Japan isn’t feudal… why would you even specify the time period?
  
-(Azumi, Ninja, confusedMAX) How could I be a ninja if it weren’t?
+(Azumi, Campus, confusedMAX) How could I be a ninja if it weren’t?
  
 (PCPG) That is an excellent question, never fucking mind then.
  
@@ -1320,7 +1320,7 @@ Apart from being a ninja, Azumi also seems to be a one-armed raccoon lady, there
 
 I can’t even remember my own name for god’s sake.
  
-(Azumi|Sword, Ninja, angryMIN) Just let me drink this useless fuck’s blood already, or at least leave him to die there!
+(Azumi|Sword, Campus, angryMIN) Just let me drink this useless fuck’s blood already, or at least leave him to die there!
  
 Unlike Azumi, who speaks in a way that is almost uncannily anime and shows hints of an accent, this guy sounds gruff and thoroughly American. 
 
@@ -1328,27 +1328,27 @@ Feudal Japan must be quite multicultural nowadays.
  
 (PCPG) Not to seem paranoid, cause there’s clearly no reason to be, but what does he mean by “drink my blood”?
  
-(Azumi, Ninja, sadMIN) Simply ignore him. He has an exceedingly one-track mind even by the standards of cursed swords.
+(Azumi, Campus, sadMIN) Simply ignore him. He has an exceedingly one-track mind even by the standards of cursed swords.
  
 (PCPG) Oh, so you guys have some kind of good cop/bad cop deal going on, got it.
  
-(Azumi, Ninja, confusedMIN) I have no idea what a “cop” is. A type of monster?
+(Azumi, Campus, confusedMIN) I have no idea what a “cop” is. A type of monster?
  
 (PCPG) No, well it’s not really worth explaining. What I mean is that one of you takes care of intimidation while the other lulls the suspect into a false sense of security.
  
-(Azumi, Ninja, happyMAX|blushMIN) We don’t really do either of that… intimidation is kind of unnecessary when you can just kill things.
+(Azumi, Campus, happyMAX|blushMIN) We don’t really do either of that… intimidation is kind of unnecessary when you can just kill things.
  
 Lovely.
  
 My facial expression might have come off as a little too judging, as Azumi feels the need to justify herself.
  
-(Azumi, Ninja, angryMAX) There are countless forces which seek to cause harm to the inhabitants of this land, both systemic and localized in the form of murderous monstrosities.
+(Azumi, Campus, angryMAX) There are countless forces which seek to cause harm to the inhabitants of this land, both systemic and localized in the form of murderous monstrosities.
 
-(Azumi, Ninja, confusedMAX) Having to resort to solutions beyond the “magic of friendship” comes with the territory of living in a society.
+(Azumi, Campus, confusedMAX) Having to resort to solutions beyond the “magic of friendship” comes with the territory of living in a society.
  
 (PCPG) Sooo you’re just running around slaying monsters and probably trying to exact revenge on whichever shady character took your arm, right?
  
-(Azumi, Ninja, angryMIN) Not for the arm, my jackass of a sword sliced that off to satiate his bloodthirst, but essentially.
+(Azumi, Campus, angryMIN) Not for the arm, my jackass of a sword sliced that off to satiate his bloodthirst, but essentially.
  
 Deeply disturbing as that may be, I have never been so close to having my childhood dream of becoming an outlaw ninja come true. 
 
@@ -1356,25 +1356,25 @@ I have to take this opportunity, not that I actually remember anything about my 
  
 (PCPG) You might want my help then, for you see; I was the most feared swordsman in all the land where I came from.
  
-(Azumi|Sword, Ninja, angryMIN) And where would that be, shitface?
+(Azumi|Sword, Campus, angryMIN) And where would that be, shitface?
  
 (PCPG) Umm… Bosutan-chō!
  
-(Azumi, Ninja, confusedMIN) Bosu…tan?
+(Azumi, Campus, confusedMIN) Bosu…tan?
  
 (PCPG) Yes, It is a mysterious village unknown to the outside world, because… anyone who ever visited was killed by our excellent warriors.
 
 (PCPG) Stabbing people has a long tradition in... Bosutan.
  
-(Azumi|Sword, Ninja, confusedMAX) …
+(Azumi|Sword, Campus, confusedMAX) …
  
-(Azumi, Ninja, confusedMIN) …
+(Azumi, Campus, confusedMIN) …
 
-(Azumi|Sword, Ninja, smittenMIN) Well fuck, his story checks out. Welcome on board, kid.
+(Azumi|Sword, Campus, smittenMIN) Well fuck, his story checks out. Welcome on board, kid.
  
 Hell fucking yes
  
-(Azumi, Ninja, neutral) We should get going then, the next wave is coming soon.
+(Azumi, Campus, neutral) We should get going then, the next wave is coming soon.
 
 [SLIDE, Azumi, center, offleft]
 

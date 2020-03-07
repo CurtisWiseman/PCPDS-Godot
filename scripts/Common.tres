@@ -1888,7 +1888,7 @@ A menacing shadow appears behind us.
 
 [SLIDE Nate left]
 (Nate|Professor Bestman, campus, papers, angryMAX|shades)
-(Mage, Campus1, shockMED)
+(Mage, campus, 1, shockMED)
 (Nate|Professor Bestman, campus, papers, angryMAX|shades) Get the fuck out of my classroom if you have nothing productive to do here!
 
 [fade to black]
@@ -1944,23 +1944,23 @@ I’m starting to get [i]really[/i] sleepy. Man... I didn’t get... much sleep.
 
 What’s happening? Is this a dream?
 
-(Michelle, body2, head1, silhouette, offright, center)
+(Michelle, body2, face1, silhouette, offright, center)
 [i]Woah[/i]
 
-(Michelle, body2, head1)
+(Michelle, body2, face1)
 A young woman is standing before me.
 
 (PCPG) Who are you?
 
-(Michelle|???, body2, head1) That’s not important right now.
+(Michelle|???, body2, face1) That’s not important right now.
 
-(Michelle|???, body2, head1) What’s important is whether [i]you[/i] can help me out.
+(Michelle|???, body2, face1) What’s important is whether [i]you[/i] can help me out.
 
 I’ve been having some weird dreams lately...
 
-(Michelle|???, body2, head1) You’ve met Nate, right?
+(Michelle|???, body2, face1) You’ve met Nate, right?
 
-(Michelle|???, body2, head1) Well I need you to [i]take his route[/i]. 
+(Michelle|???, body2, face1) Well I need you to [i]take his route[/i]. 
 
 (PCPG) Take his route? What the hell do you mean by that?
 
@@ -1968,15 +1968,15 @@ Like is any of this for real...
 
 [i]or not?...[/i]
 
-(Michelle|???, body2, head1) Nate needs a bit of help. That’s where [i]you [/i]come in.
+(Michelle|???, body2, face1) Nate needs a bit of help. That’s where [i]you [/i]come in.
 
 (PCPG) Well I guarantee you that Professor Bestman doesn’t need my help. The guy’s got his life completely in order.
 
-(Michelle|???, body2, head 1) Everyone has their personal journeys to endure and crosses to bear.
+(Michelle|???, body2, face1) Everyone has their personal journeys to endure and crosses to bear.
 
-(Michelle|???, body2, head 1) We all need a bit of support every now and then.
+(Michelle|???, body2, face1) We all need a bit of support every now and then.
 
-(Michelle|???, body2, head 1) So can you help me out?
+(Michelle|???, body2, face1) So can you help me out?
 
 [CHOICE]
 *Help Nate*
@@ -1986,13 +1986,13 @@ Like is any of this for real...
 
 (PCPG) Alright... I’ll help you out... 
 
-(Michelle|???, body2, head 1) Awesome!
+(Michelle|???, body2, face1) Awesome!
 
 (PCPG) I’m not sure how much I can contribute though...
 
-(Michelle|???, body2, head1) Nate sees a lot of potential in you. I’m sure you can do it.
+(Michelle|???, body2, face1) Nate sees a lot of potential in you. I’m sure you can do it.
 
-(Michelle|???, body2, head1) Good luck!
+(Michelle|???, body2, face1) Good luck!
 
 [Michelle leaves]
 [fade to black]
@@ -2006,9 +2006,9 @@ Like is any of this for real...
 
 (PCPG) Just take me back to the school.
 
-(Michelle|???, body2, head1) Everyone falls down, and everyone has to decide for themselves whether to get back up...
+(Michelle|???, body2, face1) Everyone falls down, and everyone has to decide for themselves whether to get back up...
 
-(Michelle, body2, head1, center, offright)
+(Michelle, body2, face1, center, offright)
 [Michelle leaves]
 [fade to black]
 [StopMusic]
@@ -2823,54 +2823,54 @@ I mean really, don’t I deserve more?
 
 Holy fuck! Did I fall through a trapdoor or something.. into this.. basement?
 
-(Mumkey, offright, slide, center)
+(Mumkey Jones, offright, slide, center)
 (Geoff|???, neutral, offleft, slide, left) Uhh Mumkey, I’m... I’m not comfortable with this...
 
-(Mumkey) Shut up weeb, we already invested all your precious Naruto Online dollars into these guns. There’s no backing out now!
+(Mumkey Jones) Shut up weeb, we already invested all your precious Naruto Online dollars into these guns. There’s no backing out now!
 
-(Mumkey) So, you’re an outcast like us huh? A loser, a loner? Nobody wanted to come up to you and offer you their love? Or perhaps you refused what measly things they did have to offer? 
+(Mumkey Jones) So, you’re an outcast like us huh? A loser, a loner? Nobody wanted to come up to you and offer you their love? Or perhaps you refused what measly things they did have to offer? 
 
 (PCPG) ...
 
-(Mumkey) No matter. My friend, I think you’ll be happy to hear that you are not alone!
+(Mumkey Jones) No matter. My friend, I think you’ll be happy to hear that you are not alone!
 
-(Mumkey) Me and Mr. Anime Pope over here are also outcasts from the PCPU! In fact, we’re in the middle of planning our revenge...
+(Mumkey Jones) Me and Mr. Anime Pope over here are also outcasts from the PCPU! In fact, we’re in the middle of planning our revenge...
 
-(Mumkey) Now you’re probably wondering: But Muuumkeyyy, what have these poor people even done to you to deserve such a cruel fate?
+(Mumkey Jones) Now you’re probably wondering: But Muuumkeyyy, what have these poor people even done to you to deserve such a cruel fate?
 
 (PCPG) I wasn’t about to as-
 
-(Mumkey) WELL I’M GLAD YA ASKED, allow me to tell you the tragic tale of Mumkey Jones, once a celebrated student at the Pro Crastinators University, now expelled, homeless, cancelled, and on a quest for vengeance!
+(Mumkey Jones) WELL I’M GLAD YA ASKED, allow me to tell you the tragic tale of Mumkey Jones, once a celebrated student at the Pro Crastinators University, now expelled, homeless, cancelled, and on a quest for vengeance!
 
 The monkey man starts telling me his story. It at first just sounds like pathetic whining, but after a while I begin to empathize and even.. sympathize with him.
 
 (Geoff|???, smug2) Or, you know, you could simply take the fact that you were expelled with grace, like me! 
 
-(Mumkey) Well you were kicked just cause you’re just a boring shill. I excelled at the classes, they just didn’t see my true brilliance for what it’s worth, so don’t you dare compare yourself to me!
+(Mumkey Jones) Well you were kicked just cause you’re just a boring shill. I excelled at the classes, they just didn’t see my true brilliance for what it’s worth, so don’t you dare compare yourself to me!
 
 [SFX: PCP-SFX_Gunshot] 
 (Geoff, dead, left, slide, offleft)
 (PCPG) Holy shit Mumkey, what the fuck! Wasn’t he your friend?!
 
-(Mumkey) Ah don’t worry about it. He’ll be back soon enough. 
+(Mumkey Jones) Ah don’t worry about it. He’ll be back soon enough. 
 
-(Mumkey) All you need to know is that this world is one truly twisted, and every waking moment is unjustly filled with agony for those who are like us! I know you must feel similar.
+(Mumkey Jones) All you need to know is that this world is one truly twisted, and every waking moment is unjustly filled with agony for those who are like us! I know you must feel similar.
 
 (PCPG) I mean... I guess so.
 
-(Mumkey) Haven’t you ever wanted to get revenge on the people who hurt you? Haven’t you ever wanted to hurt them back? Show them the pain they caused you?
+(Mumkey Jones) Haven’t you ever wanted to get revenge on the people who hurt you? Haven’t you ever wanted to hurt them back? Show them the pain they caused you?
 
 (PCPG) Well... sometimes, I suppose.
 
-(Mumkey) Then it is decided! Let’s shoot up this stupid facade of a university!
+(Mumkey Jones) Then it is decided! Let’s shoot up this stupid facade of a university!
 
 (PCPG) Woah what?
 
-(Mumkey) Don’t think about it too hard! Just shoot up this school with me!
+(Mumkey Jones) Don’t think about it too hard! Just shoot up this school with me!
 
 (PCPG) Yeah?
 
-(Mumkey) Yeah!
+(Mumkey Jones) Yeah!
 
 (PCPG) Yeaaah! Let’s fucking do it!
 

@@ -59,7 +59,7 @@ func finish():
 	dest = null
 	yield(self, 'done_cleaning')
 	if reference.get_ref():
-		node.position.x = destination
+		global.get_node_pos(node).x = destination
 		#More attempting to appease crashes that turbo-mode seems to incur
 		var _index = index
 		if parent.layers.size() <= index or not parent.layers[index].has("node") or parent.layers[index]["node"] != node:

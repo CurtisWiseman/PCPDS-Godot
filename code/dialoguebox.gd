@@ -504,6 +504,9 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				global.pause_input = false
 			
 			elif dialogue[index].findn('CHANGE') != -1:
+				if global.turbo_mode:
+					index += 1
+					return
 				global.pause_input = true
 				game.safeToSave = false
 				var command = dialogue[index].lstrip('[')
@@ -840,13 +843,8 @@ func remove_dupes(character, info):
 				else:
 					if !global.pause_input: global.pause_input = true
 					var display_node = systems.display.layers[i]['node']
-					var pos
-					if display_node is VideoPlayer:
-						pos = display_node.rect_position
-					else:
-						pos = display_node.position
 					systems.display.remove(display_node, i)
-					notsame = [true, pos]
+					notsame = [true, global.get_node_pos(display_node)]
 					emit_signal('dupeCheckFinished')
 					if global.pause_input: global.pause_input = false
 					return
