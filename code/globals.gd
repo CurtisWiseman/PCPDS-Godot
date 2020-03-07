@@ -8,6 +8,7 @@ var master_volume = 1
 var music_volume = 1
 var sfx_volume = 1
 var pause_input setget _pause_input_set
+var turbo_mode = false
 var loadedOnce = false
 var fading = false
 var sliding = false

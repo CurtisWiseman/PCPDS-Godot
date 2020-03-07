@@ -1414,7 +1414,7 @@ He seems pretty cool.
 
 Oh god, not again.
 
-(Ben|Professor Saint, campus, exasperated, angryMIN) And if you do nothing to oppose that system, if you choose not to stand by the people who oppose it, then all you are doing is endorsing the status quo. You might as well be siphoning that power yourself!
+(Ben|Professor Saint, campus, exasp, angryMIN) And if you do nothing to oppose that system, if you choose not to stand by the people who oppose it, then all you are doing is endorsing the status quo. You might as well be siphoning that power yourself!
 
 (PCPG) Uh, Professor Saint?
 
@@ -1445,9 +1445,9 @@ As I think about whether I should join them in their delinquency, a strange pres
 
 (Brunswick, worried, right) Swine?
 
-(Ben, campus, exasperated, shockMAX) Oh fuck, how the hell did he know Brunswick was here?
+(Ben, campus, exasp, shockMAX) Oh fuck, how the hell did he know Brunswick was here?
 
-(Ben, campus, exasperated, shockMAX, center, slide, left)
+(Ben, campus, exasp, shockMAX, center, slide, left)
 [Location: philosophyclass.d.portal]
 
 Suddenly, the room begins to heat up, as a literal portal in spacetime rips itself open before my eyes, consuming some of the classes desks and chairs, and revealing within it a fiery inferno.
@@ -1460,7 +1460,7 @@ Suddenly, the room begins to heat up, as a literal portal in spacetime rips itse
 
 (Russel|???, neutral) It’s time for you to say goodbye to your “friend” here and come back down to Pokémon Hell, where you truly belong.
 
-(Ben, campus, exasperated, angryMIN) Oh fuck off Russel, don’t you have enough Pokémon down there to suck you off already?
+(Ben, campus, exasp, angryMIN) Oh fuck off Russel, don’t you have enough Pokémon down there to suck you off already?
 
 (Russel, neutral) But Ben Saint, you of all people should realize... 
 
@@ -1476,7 +1476,7 @@ Alright Brunswick, now all you need to do is to enter the friendly portal where 
 Brunswick in his confusion obeys Russels command and slumbers his way towards the portal.
 
 (Brunswick, confused, right-50, slide, right-100, 10)
-(Ben, campus, exasperated, sadMIN) Brunswick! Please snap out of it, you’re better than this! Don’t do this to me!
+(Ben, campus, exasp, sadMIN) Brunswick! Please snap out of it, you’re better than this! Don’t do this to me!
 
 (Brunswick, confused, right-100, slide, right-150, 10)
 (Ben, campus, slouch, sadMAX) I can’t lose you again!
@@ -1533,7 +1533,7 @@ Unlike Russel, the Lord of Ghosts uses the classroom door to leave us, a far mor
 
 His voice sounded awfully familiar. Have I met him before?
 
-(Ben, campus, exasperated, angryMIN) Okay, so which one of you FUCKS tattled about Brunswick being here?
+(Ben, campus, exasp, angryMIN) Okay, so which one of you FUCKS tattled about Brunswick being here?
 
 Nobody replies, obviously.
 
@@ -1822,7 +1822,7 @@ On my left, I hear a quite purple voice trying to speak up.
 
 Suddenly, the door bursts open and the bearded socialist storms into the classroom.
 
-(Ben, campus, exasperated, angryMIN, offright, slide, right) MAGE MAGE SHUT THE FUCK EVERYONE UP MAGE MAGE MAGE WANTS TO SPEAK!
+(Ben, campus, exasp, angryMIN, offright, slide, right) MAGE MAGE SHUT THE FUCK EVERYONE UP MAGE MAGE MAGE WANTS TO SPEAK!
 
 [StopMusic]
 [SLIDE Ben offleft]
@@ -2043,7 +2043,7 @@ Professor Munchy decided to end our morning class early today, and soon I found 
 
 (PCPG) Wait, you guys are actually friends? Aren’t you two literally in the middle of a WAR with each other?
 
-(Ben, campus, exasperated, confusedMIN) Well yeah, how else are you supposed to show affection for one another if not by brutally murdering each others loyal subjects?
+(Ben, campus, exasp, confusedMIN) Well yeah, how else are you supposed to show affection for one another if not by brutally murdering each others loyal subjects?
 
 (Munchy, campus, crossing, happyMIN) Yeah, I wouldn’t have it any other way bro.
 
@@ -2562,7 +2562,7 @@ Davoo raises his hand to make one such inquiry. I hadn’t noticed him sitting t
 
 What the hell would that even mean?
 
-(Ben, campus, exasperated, angryMIN) OH MY FUCKING GOD, IS THIS MORE OF THAT “GOD PARTICLE” BULLSHIT?! WHY DO PEOPLE KEEP SAYING THAT?! THE HIGGS BOSON...
+(Ben, campus, exasp, angryMIN) OH MY FUCKING GOD, IS THIS MORE OF THAT “GOD PARTICLE” BULLSHIT?! WHY DO PEOPLE KEEP SAYING THAT?! THE HIGGS BOSON...
 
 (Davoo, campus, explaining, angryMAX) No, that’s not what I mean, if you’d just fucking let me finish my fucking question that I asked...
 

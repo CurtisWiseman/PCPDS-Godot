@@ -170,16 +170,9 @@ The triangular girl’s fierce glare petrifies me.
 
 (Ben|Ben, campus, base, sadMIN) Yeah, it’s already getting late, and I’m definitely known as someone who’s never late! See you around Violet!
 
-<<<<<<< HEAD
 [SLIDE EndlessWar offright]
 [SLIDE Ben offleft]
-[Endless War leaves] 
-=======
-[SLIDE, EndlessWar, left, offright]
-[SLIDE, Ben, right, offleft]
-[EndlessWar leaves] 
-[Ben leaves]
->>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
+[EndlessWar leaves]
 [StopMusic]
 
 [Song: PCPDating_FallenGlass]
@@ -745,7 +738,7 @@ A distant, swelling chant makes the gang stop. It’s a cacophony of voices, pro
 [CG end]
 
 [Slide, Mage, center, right]
-[Cop Killers, dabbing, offleft, slide, center]
+[CopKillers, dabbing, offleft, slide, center]
 Suddenly the street is filled with purple characters, some hooded, some masked, some not even human. Besides their colour scheme, the only thing they have in common is that they are all dabbing in perfect unison. 
 
 (Endless War) Exclamation point dabbing, precisely.
@@ -780,13 +773,8 @@ The Cop Killer turns to the Indigo Interlopers.
 
 [CG: Indigo Interlopers Death]
 [Ben leaves]
-<<<<<<< HEAD
-[Endless War leaves]
-[Cop Killers leaves]
-=======
 [EndlessWar leaves]
-[Cop Killers leave]
->>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
+[CopKillers leave]
 [Mage leaves]
 [fade to black]
 [CG end]

@@ -1539,7 +1539,7 @@ It would probably be inappropriate and awkward to tell Tom that I’ve actually 
 
 Tom seems satisfied and content with this answer. Everyone is being perfectly pleasant.
 
-(Ben|Ben, casual, exasperated, happyMIN) Well we were actually just parting ways for the night. It was good to see you again, PCPG!
+(Ben|Ben, casual, exasp, happyMIN) Well we were actually just parting ways for the night. It was good to see you again, PCPG!
 
 (Tom|Tom, 2, happyMIN) See ya’ around!
 
@@ -1939,7 +1939,7 @@ Tom seems satisfied and content with this answer.
 
 You wonder how these two can smile so much. They’re being perfectly pleasant...
 
-(Ben|Ben, casual, exasperated, happyMIN) Well we were actually just parting ways for the night. It was good to see you again, PCPG!
+(Ben|Ben, casual, exasp, happyMIN) Well we were actually just parting ways for the night. It was good to see you again, PCPG!
 
 (Tom|Tom, 2, happyMIN) See ya’ around!
 
@@ -1977,11 +1977,11 @@ Don’t let this be over.
 
 You run over to him as he turns around to your sudden exclamation.
 
-(Ben|Ben, casual, exasperated, shockMIN) What’s up?
+(Ben|Ben, casual, exasp, shockMIN) What’s up?
 
 (PCPG) Wanna hang for a bit?
 
-(Ben|Ben, casual, exasperated, confusedMIN) Uhhhhhhh…
+(Ben|Ben, casual, exasp, confusedMIN) Uhhhhhhh…
 
 He looks at his watch in slight consternation.
 
@@ -2065,9 +2065,9 @@ This mind reading feels dismayingly familiar.
 
 (PCPG) What?! That’s nothing! Three cups of coffee max a week?!
 
-(Ben|Ben, casual, exasperated, angryMIN) Yup! It’s why it’s so common for people to have a psychological dependence on caffeine or coffee.
+(Ben|Ben, casual, exasp, angryMIN) Yup! It’s why it’s so common for people to have a psychological dependence on caffeine or coffee.
 
-(Ben|Ben, casual, exasperated, angryMAX) They’ve raised their tolerance to such high levels that they need a lot just to feel normal.
+(Ben|Ben, casual, exasp, angryMAX) They’ve raised their tolerance to such high levels that they need a lot just to feel normal.
 
 (PCPG) Wow. That’s unfortunate.
 
@@ -2079,7 +2079,7 @@ Not drinking coffee for that long seems like it would be a Sisyphean task for so
 
 (Ben|Ben, casual, base, neutral) But like anything in life, moderation is key.
 
-(Ben|Ben, casual, exasperated, happyMAX) As Aristotle and Plato told us, ‘moderation is a moral virtue!’
+(Ben|Ben, casual, exasp, happyMAX) As Aristotle and Plato told us, ‘moderation is a moral virtue!’
 
 You suddenly remember that he’s also a philosophy teacher at school.
 
@@ -2095,7 +2095,7 @@ You both take a sip from your respective caffeinated beverages.
 
 Unprompted, Ben continues.
 
-(Ben|Ben, casual, exasperated, shockMAX) Neither of these taste good, though.
+(Ben|Ben, casual, exasp, shockMAX) Neither of these taste good, though.
 
 (Ben|Ben, casual, point, happyMIN) If you’re looking for pure taste, I’d go for the Rockstar XDurance series.
 
@@ -2121,9 +2121,9 @@ He gets up and goes to a nearby cabinet. After reaching around for a bit, he pul
 
 what the fuck?!
 
-(Ben|Ben, casual, exasperated, shockMAX, right, slide, center) Hold on, man! It’s not what you think!
+(Ben|Ben, casual, exasp, shockMAX, right, slide, center) Hold on, man! It’s not what you think!
 
-(Ben|Ben, casual, exasperated, shockMIN) It’s just caffeine powder!
+(Ben|Ben, casual, exasp, shockMIN) It’s just caffeine powder!
 
 what?
 
@@ -2850,7 +2850,7 @@ From out of the blue, I hear Mage’s voice. She’s addressing everybody in the
 
 (Nate|Nate, campus, standing, happyMIN|shades) Thanks, guys!
 
-(Ben|Ben, casual, exasperated, shockMIN) Let’s go, Tom. I want to make sure we get good seats.
+(Ben|Ben, casual, exasp, shockMIN) Let’s go, Tom. I want to make sure we get good seats.
 
 (Ben, school, base, neutral, left, slide, offleft)$
 

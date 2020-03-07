@@ -15,6 +15,8 @@ signal compartmentalise_text
 signal finished_document
 signal speech_done
 
+var turbo_timer = 0.1
+
 func _ready():
 	self.connect("substring_has_been_read", self, "read_substring")
 	self.connect("compartmentalise_text", self, "compartmentalise")
@@ -26,58 +28,73 @@ func _ready():
 	add_child(waitTimer)
 
 func _input(event):
-	
-	
 #	advance_text is a mapped action (2nd tab of project settings). this is done with remapping in mind
 	if Input.is_action_just_pressed("advance_text") and !global.pause_input:
-		
-			if global.sliding:
-				for child in get_node('../../../../Display').get_children():
-					if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
-						print(child.name)
-						child.finish()
-				global.sliding = false
-			
-			# Stop camera movment if it is moving
-			if global.cameraMoving:
-				var camera = global.rootnode.get_node('Systems/Camera')
-				global.pause_input = true
-				get_tree().paused = false
-				camera.finishCameraMovment()
-				yield(camera, 'camera_movment_finished')
-				camera.zoom = camera.lastZoom
-				camera.offset = camera.lastOffset
-				get_tree().paused = true
-				global.pause_input = false
-			
-			elif get_visible_characters() == get_total_character_count():
-				if speech != null:
-					speech.queue_free()
-					speech = null
-				
-				# In middle of longer sentence - progress through sentence
-				if currentSubstring < longTextParts.size(): 
-					emit_signal("substring_has_been_read")
-#				# At end of document - signal to do stuff
-				elif (currentLine == get_parent().dialogue.size() - 1):
-					emit_signal("finished_document")
-				# Sentence is finished - load next line
-				else:
-					emit_signal("has_been_read")
-					currentLine += 1
-#			Finish sentence if still in progress
-			else:
-				set_visible_characters(get_total_character_count())
-	
+		advance_text()
 	elif Input.is_action_just_pressed("advance_text"):
 		get_parent().emit_signal('mouse_click')
+		
+		
+func advance_text():
+	if global.sliding:
+		for child in get_node('../../../../Display').get_children():
+			if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
+				print(child.name)
+				child.finish()
+		global.sliding = false
+	
+	# Stop camera movment if it is moving
+	if global.cameraMoving:
+		var camera = global.rootnode.get_node('Systems/Camera')
+		global.pause_input = true
+		get_tree().paused = false
+		camera.finishCameraMovment()
+		yield(camera, 'camera_movment_finished')
+		camera.zoom = camera.lastZoom
+		camera.offset = camera.lastOffset
+		get_tree().paused = true
+		global.pause_input = false
+	
+	elif get_visible_characters() == get_total_character_count():
+		if speech != null:
+			speech.queue_free()
+			speech = null
+		
+		# In middle of longer sentence - progress through sentence
+		if currentSubstring < longTextParts.size(): 
+			emit_signal("substring_has_been_read")
+#				# At end of document - signal to do stuff
+		elif (currentLine == get_parent().dialogue.size() - 1):
+			emit_signal("finished_document")
+		# Sentence is finished - load next line
+		else:
+			emit_signal("has_been_read")
+			currentLine += 1
+#			Finish sentence if still in progress
+	else:
+		set_visible_characters(get_total_character_count())
 
 func _process(delta):
+	var turbo = false
+	if global.turbo_mode:
+		if turbo_timer < 0.0:
+			turbo = true
+			turbo_timer = 0.1
+		turbo_timer -= delta
+		
+	if turbo:
+		if global.pause_input:
+			get_parent().emit_signal('mouse_click')
+		else:
+			advance_text()
+		
 	if Input.is_action_just_pressed("ui_debug"):
 		debug()
 	if Input.is_action_just_released("force_unpause"):
 		print("Input pause forcibly broken out of!")
 		global.pause_input = false
+	if Input.is_key_pressed(KEY_Y) and Input.is_key_pressed(KEY_P):
+		global.turbo_mode = true
 
 func say(text, voice=null):
 	set_visible_characters(0) # Remove current line

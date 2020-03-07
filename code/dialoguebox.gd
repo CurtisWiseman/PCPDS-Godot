@@ -457,6 +457,9 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				file.close()
 			
 			elif dialogue[index].findn('==>') != -1:
+				if global.turbo_mode:
+					index += 1
+					return
 				global.pause_input = true
 				
 				var sceneName = '[Scene: ' + dialogue[index].substr(5,dialogue[index].length()-1)
@@ -525,7 +528,9 @@ func _on_Dialogue_has_been_read(setIndex=false):
 		
 		# CHOICES
 		elif dialogue[index].begins_with("*"):
-			
+			if global.turbo_mode:
+				index += 1
+				return
 			# Deal with the end of a choice.
 			if inChoice:
 				if dialogue[index] == '*':
@@ -881,11 +886,11 @@ func parse_outfit(info, parsedInfo, i, pos):
 			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"newgle":
-			parse_expression(info, parsedInfo+'.newgle', 'characterImages.'+parsedInfo+'.newgle.body['+0+']', i+1, info[i+1], pos)
+			parse_expression(info, parsedInfo+'.newgle', 'characterImages.'+parsedInfo+'.newgle.body[0]', i+1, info[i+1], pos)
 		"base":
-			parse_expression(info, parsedInfo+'.base', 'characterImages.'+parsedInfo+'.base.body['+0+']', i+1, info[i+1], pos)
+			parse_expression(info, parsedInfo+'.base', 'characterImages.'+parsedInfo+'.base.body[0]', i+1, info[i+1], pos)
 		"bigboi":
-			parse_expression(info, parsedInfo+'.bigboi', 'characterImages.'+parsedInfo+'.bigboi.body['+0+']', i+1, info[i+1], pos)
+			parse_expression(info, parsedInfo+'.bigboi', 'characterImages.'+parsedInfo+'.bigboi.body[0]', i+1, info[i+1], pos)
 		"hazmat":
 			var expression = info[i+1]
 			var expNum = parse_expnum(expression, parsedInfo+'.hazmat')[0]

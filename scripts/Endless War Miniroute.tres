@@ -526,7 +526,7 @@ The next morning I go over to convince both gangs to join us, despite them both 
 [fade from black]
 
 (Ben, casual, base, neutral, offleft, slide, left)
-(Munchy, casual, standing, neutral, offright, slide, right)
+(Munchy, casual, default, neutral, offright, slide, right)
 We arrive at the monument and find Endless War excitedly waiting for us. Behind her is a white tarp covering something.. very big.
  
 (PCPG) What's going on? What’s behind you?
@@ -541,7 +541,7 @@ She looks at Munchy.
  
 (Endless War|Endless War, stand, happyMIN) Imagine if you can take all of your pent up anger and frustration of the Killers and fully express it on them and the rest of the population 24/7. 
  
-(Munchy, casual, standing, happyMIN, right)
+(Munchy, casual, default, happyMIN, right)
 She turns to face Ben.
  
 (Endless War|Endless War, stand, happyMIN) Imagine if we could keep mowing down Rowdies and ignorant juvies with those guns of yours without end or interruption.
@@ -565,7 +565,7 @@ Huh, that sounds a lot like that ever so popular branch of politics, anarcho-fac
 She then pulls down the tarp behind her revealing a monstrosity of a machine, with a nigh endless amount of pipes, wires, and machinery all caved in on each other. In the middle of it all is a seat, and strapped to that seat, is a gagged Davoo?
  
 (Ben, casual, base, shockedMIN, left)
-(Munchy, casual, standing, shockedMIN, right)
+(Munchy, casual, default, shockedMIN, right)
 (Endless War, stand, neutral, center, slide, center+50)
 (Davoo|Davoo, neutral, shockedMIN, offleft, slide, left-50) Mhhhmmmmm!!
  
@@ -587,7 +587,7 @@ She then pulls down the tarp behind her revealing a monstrosity of a machine, wi
 
 (Endless War, stand, happyMAX, center+50)
 (Ben, casual, base, happyMIN, left)
-(Munchy, casual, standing, happyMED, right)
+(Munchy, casual, default, happyMED, right)
 [CG end]
 
 Endless War continues to laugh as the crowd around her watches in shock and awe at her revelation.

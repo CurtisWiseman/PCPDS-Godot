@@ -944,7 +944,7 @@ In the corner of my eye, I can see Munchy and Ben having a heated discussion in 
 
 (Munchy|Munchy, campus, crossing, angryMIN) Look, we can just do Nuclear Throne some other time.
 
-(Ben|Ben, campus, exasperated, confusedMIN) Why are in such a rush to play this shitty game that no one in the community has ever heard of before?
+(Ben|Ben, campus, exasp, confusedMIN) Why are in such a rush to play this shitty game that no one in the community has ever heard of before?
 
 (Munchy|Munchy, campus, default, angryMIN) You’d understand if you’d just give it a fucking chance.
 
@@ -996,7 +996,7 @@ Out of nowhere, Crocs hands me one of his spare pistols.
 
 (Munchy|Munchy, campus, squatting, angryMAX) ENDLESS WARRRRRRRR!
 
-(Ben|Ben, campus, exasperated, angryMIN) ENDLESS WARRRRRRRR!
+(Ben|Ben, campus, exasp, angryMIN) ENDLESS WARRRRRRRR!
 
 [Munchy leaves]
 [Ben leaves]
@@ -1525,7 +1525,7 @@ A trail of smoke billows into the room. It can only mean one thing, that the sam
 
 (Munchy|Munchy, special, squatting, angryMIN) Jesus Christ Ben, did you really have to come dressed like a homeless person? Oh, and cool it with that Juul of yours, or whatever the fuck it is.
 
-(Ben|Ben, casual, exasperated, angryMAX) VAPING IS NOT A CRIME GODDAMNIT!
+(Ben|Ben, casual, exasp, angryMAX) VAPING IS NOT A CRIME GODDAMNIT!
 
 (Munchy|Munchy, special, crossing, neutral) Fucking, whatever. Let’s just get down to brass tacks here.
 
@@ -1633,7 +1633,7 @@ Ben plows through the dirt covering up Munchy’s intel with ease, taking it all
 
 Munchy starts tunneling like his life depended on it. My guess is that he got a good look at where Ben’s intel was located thanks to the split screen view. After a long while, he digs his way up, only to meet face to face with ben. The gunfire rings through the speakers once again.
 
-(Ben|Ben, casual, exasperated, shockedMAX) FUCK!
+(Ben|Ben, casual, exasp, shockedMAX) FUCK!
 
 (Munchy|Munchy, special, crossing, happyMED) Hehe, DIE Ben.
 
@@ -1680,7 +1680,7 @@ This time, Munchy decides to spend some time digging an alternate route. He make
 
 (Munchy|Munchy, special, squatting, happyMAX) They call it ‘intelligence’ for a reason, Ben. Just like always, the Rowdys manage to clutch one out when the stakes are high.
 
-(Ben|Ben, casual, exasperated, sadMIN) No, no this isn’t true! You can’t outplay me like this!
+(Ben|Ben, casual, exasp, sadMIN) No, no this isn’t true! You can’t outplay me like this!
 
 (Munchy|Munchy, special, crossing, happyMIN) Too late, I already did.
 

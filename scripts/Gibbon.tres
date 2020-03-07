@@ -120,7 +120,7 @@ I suppose I’d better hop to it. Now, if I remember right, Vriska’s the one w
 [fade from black]
 (Gibbon|Gibbon, campus, handsup, shockMIN) Uhh, time’s up! Pencils down, I’m gonna come see how you all did.
 Gib skips around the class looking very pleased. He stops by his own desk, which is where Munchy has been sitting, and takes a closer look at the professor’s work.
-(Munchy, campus, standing, neutral)
+(Munchy, campus, default, neutral)
 [SLIDE, Munchy, left]
 (Gibbon|Gibbon, campus, default, confusedMIN, center, slide, right) …
 (Gibbon|Gibbon, campus, default, confusedMED) Professor Munchausen, you’ve just drawn Vriska punching a crocodile.
