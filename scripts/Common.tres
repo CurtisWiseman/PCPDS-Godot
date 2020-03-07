@@ -101,7 +101,7 @@ Suddenly a powerful voice booms at us.
 
 (???) Hello fellow students!
 
-(Nate|???, campus, papers, happyMIN|shades, center, fade) Oh, I haven’t seen you around before. Are you a new student?
+(Nate|???, campus, papers, happyMIN|shades, fade, center) Oh, I haven’t seen you around before. Are you a new student?
 
 (PCPG) Yeah, this is my first day here. I’m PCPG.
 
@@ -311,11 +311,11 @@ Another has a group of students complaining about their food to each other as th
 [SLIDE Gibbon offright]
 I don’t think I’m quite comfortable with the implication here, but if Gibbon says they’re just being cool, then I guess they’re just being cool.
 
-(Mage|???, campus, standing, silhouette, fade) Hey! I haven’t seen you around before.
+(Mage|???, campus, 1, silhouette) Hey! I haven’t seen you around before.
 
 A female voice from behind catches my attention.
 
-(Mage|???, campus, 4, happyMED, fade)
+(Mage|???, campus, 4, fade, happyMED)
 (PCPG) Hm? Oh, right! Yes, I haven’t. Haven’t been here before, that is! I’m the new guy. That’s me.
 
 (Mage|???, campus, 5, neutral) There’s no need to be so nervous, I won't bite. I know this school can be a bit overwhelming sometimes, but you’ll get used to it.
@@ -381,7 +381,7 @@ Careful of the “mud puddle,” I sit down in front of Gibbon and pop some blue
 (PCPG) Dominated by slime?
 
 [SLIDE Gibbon left]
-(Endless War|???, stand, silhouette, fade) You heard him right.
+(Endless War|???, stand, silhouette) You heard him right.
 
 A new female voice replies from behind me, and this time she doesn’t sound so happy to see me. I look back and see her gesturing to the cafeteria table enveloped by vapor.
 
@@ -434,7 +434,7 @@ She moves her finger to the vapor table, where the vapor is starting to clear up
 [Song: PCP-AMBIENT_War]
 [Location: dininghall.demo, dininghall.foodfight|1, dininghall.table.mudpuddleforeground]
 
-(Endless War, knife, smittenMIN|blushiesMIN, slide, center)
+(Endless War, knife, smittenMIN|blushMIN, slide, center)
 (Gibbon, campus, grabby, neutral, slide, left)
 Gunshots fill the hall as the fight truly breaks out between them. The rest of the students rush out of the hall, though they don’t seem too scared of the violence, almost as if it’s a common occurrence.
 
@@ -443,9 +443,9 @@ Gunshots fill the hall as the fight truly breaks out between them. The rest of t
 [SLIDE Gibbon offleft]
 Gibbon gives me a quick nod and heads for the cafeteria door.
 
-(Endless War, knife, smittenMIN|blushiesMIN) You don’t wanna join in, juvie? 
+(Endless War, knife, smittenMIN|blushMIN) You don’t wanna join in, juvie?
 
-(Endless War, knife, smittenMED|blushiesMED) I guess you haven’t chosen a side yet. No worries, soon enough you will. Soon enough.
+(Endless War, knife, smittenMED|blushMED) I guess you haven’t chosen a side yet. No worries, soon enough you will. Soon enough.
 
 (Endless War, knife, happyMAX)
 I follow Gibbon as this “Endless War” girl stays behind at the table. As I look back, I can see her grinning, almost as if she’s reveling in the panic and bloodshed.
@@ -495,40 +495,40 @@ Before I was able to quip on how she might be a dude or something, the door to t
 
 [SLIDE Gibbon offleft]
 [SLIDE Mage offleft]
-(Munchy|???, campus, squatting, angryMED, offright, slide, center)  HELLO CHILDREN! Listen! You may not know who I am, but you’re gonna find out WAY MORE, than you’ve ever DREAMED of knowing!
+(Munchy|???, campus, 3, angryMED, offright, slide, center)  HELLO CHILDREN! Listen! You may not know who I am, but you’re gonna find out WAY MORE, than you’ve ever DREAMED of knowing!
 
-(Munchy, campus, crossing, happyMAX) I’m gonna introduce you to the finest of arts, because - if you haven’t figured it out yet - I’m Munchy J. Shatsky, a.k.a. “Professor Tinyhats,” a.k.a. “Munchy” if your attention span’s too fucking short to remember how to address me properly.
+(Munchy, campus, 2, happyMAX) I’m gonna introduce you to the finest of arts, because - if you haven’t figured it out yet - I’m Munchy J. Shatsky, a.k.a. “Professor Tinyhats,” a.k.a. “Munchy” if your attention span’s too fucking short to remember how to address me properly.
 
-(Munchy, campus, crossing, happyMAX) Let's get right down to the fundamentals. There are exactly THREE art forms! Everything else is not art.
+(Munchy, campus, 2, happyMAX) Let's get right down to the fundamentals. There are exactly THREE art forms! Everything else is not art.
 
-(Munchy, campus, crossing, angryMIN) Books? Not art! Don’t even have pictures!
+(Munchy, campus, 2, angryMIN) Books? Not art! Don’t even have pictures!
 
-(Munchy, campus, crossing, angryMED): Music? Pretty okay I guess, but not REAL ART!
+(Munchy, campus, 2, angryMED): Music? Pretty okay I guess, but not REAL ART!
 
-(Munchy, campus, squatting, angryMED) The first art form is DRAWING!
+(Munchy, campus, 3, angryMED) The first art form is DRAWING!
 
-(Munchy, campus, crossing, happyMED) It’s pretty cool, I know. It’s one of the easiest ways to make something of worth in society, all you have to do is move a fucking pencil around. Can you believe it? That’ll only get you so far though, the REAL motherfuckers know how to do this shit CLEANLY and efficiently.
+(Munchy, campus, 2, happyMED) It’s pretty cool, I know. It’s one of the easiest ways to make something of worth in society, all you have to do is move a fucking pencil around. Can you believe it? That’ll only get you so far though, the REAL motherfuckers know how to do this shit CLEANLY and efficiently.
 
-(Munchy, campus, crossing, happyMAX) The real masters of the craft. The REAL cowboys. The only humans worth something, the ones who can QUICK-DRAW.
+(Munchy, campus, 2, happyMAX) The real masters of the craft. The REAL cowboys. The only humans worth something, the ones who can QUICK-DRAW.
 
 Huh? What is that even supposed to mean?
 
-(Munchy, campus, default, angryMIN) I’ll be your mentor, because having a great teacher is obviously better than not going to school and trying to learn everything by yourself! This is why I was educated here, in the PCP University, AND LOOK WHERE I AM NOW!
+(Munchy, campus, 1, angryMIN) I’ll be your mentor, because having a great teacher is obviously better than not going to school and trying to learn everything by yourself! This is why I was educated here, in the PCP University, AND LOOK WHERE I AM NOW!
 
-(Munchy, campus, crossing, happyMED) But let’s get to the second of the REAL art forms! Any guesses?
+(Munchy, campus, 2, happyMED) But let’s get to the second of the REAL art forms! Any guesses?
 
 (Mage, campus, 4, neutral, offleft, slide, left) Ahem... animation?
 
-(Munchy, campus, squatting, angryMED) WRONG! That WAS WRONG MAGE! Animation is just drawing, BUT MORE! Try better next time!
+(Munchy, campus, 3, angryMED) WRONG! That WAS WRONG MAGE! Animation is just drawing, BUT MORE! Try better next time!
 
 (Mage, campus, 5, sadMIN)
 [SLIDE Mage offleft]
 [Mage leaves]
-(Munchy, campus, squatting, angryMED) You IDIOTS, I’m talking about MUSIC! Ever heard of Sleep Tight, THE greatest band of our generation? No? Well, fuck you.
-(Munchy, campus, default, neutral) How about cooking, then, maybe that’s more appealing to you goddamn Neanderthals. Most people, aka retards, would not agree with me that it’s an art form, but I think it’s a perfectly valid form of creation.
-(Munchy, campus, squatting, happyMED) What’s better than making art, and not only that, being able to eat it, too?
+(Munchy, campus, 3, angryMED) You IDIOTS, I’m talking about MUSIC! Ever heard of Sleep Tight, THE greatest band of our generation? No? Well, fuck you.
+(Munchy, campus, 1, neutral) How about cooking, then, maybe that’s more appealing to you goddamn Neanderthals. Most people, aka retards, would not agree with me that it’s an art form, but I think it’s a perfectly valid form of creation.
+(Munchy, campus, 3, happyMED) What’s better than making art, and not only that, being able to eat it, too?
 
-(Munchy, campus, crossing, angryMIN)
+(Munchy, campus, 2, angryMIN)
 (Tom|???, 1, angryMED, right) Fuck this shit. Cooking is too humancore for me!
 
 (PCPG) What do you mean by that? I like cooked food.
@@ -555,27 +555,27 @@ Huh? What is that even supposed to mean?
 
 [Mage leaves]
 
-(Munchy, campus, squatting, happyMED, offright, slide, center) AND YOU’LL GET ENOUGH VEGGIES TO FLIP, MAGE! We’re gonna do all the handmade shit here! Handmade pasta! Roll your own dough! YOU’RE GONNA COOK YOUR OWN DOUGH! Rustic and authentic, like a [i]real Italiano boy![/i] You know what the sacred white sauce is called?
+(Munchy, campus, 3, happyMED, offright, slide, center) AND YOU’LL GET ENOUGH VEGGIES TO FLIP, MAGE! We’re gonna do all the handmade shit here! Handmade pasta! Roll your own dough! YOU’RE GONNA COOK YOUR OWN DOUGH! Rustic and authentic, like a [i]real Italiano boy![/i] You know what the sacred white sauce is called?
 
-(Munchy, campus, squatting, angryMED) YOU! New one! Answer my question!
+(Munchy, campus, 3, angryMED) YOU! New one! Answer my question!
 
 (PCPG) I can barely understand what you are trying to tell me.
 
-(Munchy, campus, squatting, angryMED) Jesus fucking Christ, you’re hopeless. Maybe you’re a better fit for my history class then, huh. Ever heard of SPIRIT SCIENCE? That shit will FUCK you up man, do not even get me STARTED.
+(Munchy, campus, 3, angryMED) Jesus fucking Christ, you’re hopeless. Maybe you’re a better fit for my history class then, huh. Ever heard of SPIRIT SCIENCE? That shit will FUCK you up man, do not even get me STARTED.
 [fade to black]
 This incomprehensible talk of the flow of consciousness went on for another hour. I did not feel like I learned anything, but at the same time I felt strangely enlightened. 
-(Munchy, campus, crossing, happyMAX)
+(Munchy, campus, 2, happyMAX)
 What a bizarre guy...
 [fade from black]
-(Munchy, campus, crossing, happyMAX) So, my dear students! We arrive at the end of our journey... for now! But don’t fucking wimp out on me just yet, you’ll see me again. Sooner than you think!
+(Munchy, campus, 2, happyMAX) So, my dear students! We arrive at the end of our journey... for now! But don’t fucking wimp out on me just yet, you’ll see me again. Sooner than you think!
 
 (PCPG) What is that supposed to mean?
 
-(Munchy, campus, crossing, neutral|blushies) To all the new students: You can meet me for EXCLUSIVE PRIVATE TUTORING! This afternoon! At the 7 Eleven down the street!
+(Munchy, campus, 2, neutral|blushMIN) To all the new students: You can meet me for EXCLUSIVE PRIVATE TUTORING! This afternoon! At the 7 Eleven down the street!
 
 (PCPG) Wait, aren’t I the only new student here? Not sure if that’s a good idea.
 
-(Munchy, campus, default, happyMIN) I will be there anyways! The whole afternoon! Just come over, it’s impossible to miss me.
+(Munchy, campus, 1, happyMIN) I will be there anyways! The whole afternoon! Just come over, it’s impossible to miss me.
 
 [fade to black]
 [StopMusic]
@@ -591,7 +591,7 @@ What a bizarre guy...
 (Gibbon, campus, handsup, happyMED) Yeh. You’ll soon learn how to survive in this university. But for now, have yourself a chill afternoon.
 
 (PCPG) Thanks for all your help showing me around school. That was really nice, Gibbon.
-(Gibbon, campus, default, neutral|blushies) Oh, it’s nothing. ‘Til tomorrow, PCPG!
+(Gibbon, campus, default, neutral|blushMIN) Oh, it’s nothing. ‘Til tomorrow, PCPG!
 [SLIDE Gibbon offright]
 
 Hmm, now what? School is done, so where should I spend the afternoon?
@@ -764,17 +764,17 @@ I check the clock. It is getting pretty late, so I decide to head home for the e
 
 Why did Munchy mention this place for a meeting? A 7 Eleven doesn’t seem like a place where anyone would want to spend their time. This one in particular seems like a hot spot for homeless guys and losers. I wonder if that sewer guy from this morning hangs around here too.
 
-(Munchy, campus, crossing, happyMIN, center, slide) Oh, there you are. I knew someone would come!
+(Munchy, campus, 2, happyMIN, center, slide) Oh, there you are. I knew someone would come!
 
 (PCPG) Hey Professor! So, what’s this private tutoring all about?
 
-(Munchy, campus, crossing, happyMED) Ahhh! Did I really call it private tutoring? Ok, well then, let me tutor you!
+(Munchy, campus, 2, happyMED) Ahhh! Did I really call it private tutoring? Ok, well then, let me tutor you!
 
 He points at some spray paint on one of the windows that reads “!THRASH”
 
-(Munchy, campus, default, happyMED) See this shit right here? This is GRAFFITI, my man. Some call it ‘vandalism’, but if you ask me, dismissing this shit as a crime is a crime in and of itself.
+(Munchy, campus, 1, happyMED) See this shit right here? This is GRAFFITI, my man. Some call it ‘vandalism’, but if you ask me, dismissing this shit as a crime is a crime in and of itself.
 
-(Munchy, campus, crossing, neutral) Now, I’m not gonna tell you to go out and do this kind of thing on your own just yet, but hey, it IS one of my favorite kinds of art, that which pays homage to ME. If you want to get to know me better, maybe check out the Rowdys. I’m sure they’re looking for new blood such as yourself. That’s all.
+(Munchy, campus, 2, neutral) Now, I’m not gonna tell you to go out and do this kind of thing on your own just yet, but hey, it IS one of my favorite kinds of art, that which pays homage to ME. If you want to get to know me better, maybe check out the Rowdys. I’m sure they’re looking for new blood such as yourself. That’s all.
 
 (PCPG) Uhh, sure.
 
@@ -782,7 +782,7 @@ He points at some spray paint on one of the windows that reads “!THRASH”
 (9/11, standin, right)
 (9/11|???, standin) Sorry to crash into your little party here, but I’ve been ordered to tell you that you need to leave.
 
-(Munchy, campus, squatting, happyMAX) HEYYY, 9/11! My favorite fuckin’ abstract character! What are you doing here!?
+(Munchy, campus, 3, happyMAX) HEYYY, 9/11! My favorite fuckin’ abstract character! What are you doing here!?
 
 (9/11, pewpew) Hey my old friend! I’m working here now. Trying to save up for my own jet! 
 
@@ -792,7 +792,7 @@ He points at some spray paint on one of the windows that reads “!THRASH”
 
 I don’t get it.
 
-(Munchy, campus, squatting, happyMED) Hey did you know that I was born almost EXACTLY a year before you?
+(Munchy, campus, 3, happyMED) Hey did you know that I was born almost EXACTLY a year before you?
 
 (9/11, concern) You never miss telling me that everytime we see each other on campus my dude!
 
@@ -800,7 +800,7 @@ I don’t get it.
 
 (???) YOU BETTER NOT BE TALKING SMACK ABOUT ME BEHIND MY BACK 9/11! QUIT FUCKING AROUND AND GET THE FUCK BACK IN HERE!
 
-(Munchy, campus, default, confusedMED) Wait... that voice... is that the 43rd president of the United States George W. Bush himself?!?!
+(Munchy, campus, 1, confusedMED) Wait... that voice... is that the 43rd president of the United States George W. Bush himself?!?!
 
 (9/11, concern) Yeah. God knows how he ended up being my manager.
 
@@ -817,13 +817,13 @@ I don’t get it.
 
 [9/11 leaves]
 [SLIDE Munchy center]
-(Munchy, campus, default, happyMIN) It seems like our time here is over. You should go home now anyways to get some of your important tween hours.
+(Munchy, campus, 1, happyMIN) It seems like our time here is over. You should go home now anyways to get some of your important tween hours.
 
 (Munchy, campus, default, angryMIN) School starts early tomorrow, make sure to be on time. Professor Bestman hates it when someone is late.
 
 (PCPG) Thanks for the advice, Professor Tinyhats!
 
-(Munchy, crossing, smittinMIN|blushies) Ohhhh, [i]you[/i] can just call me Munchy.
+(Munchy, campus, crossing, smittenMIN|blushMIN) Ohhhh, [i]you[/i] can just call me Munchy.
 
 (PCPG) Uh, sure thing, Munchy.
 
@@ -942,7 +942,7 @@ Gibbon then stands up straight and stretches.
 
 (PCPG) Yeah, same here.
 
-(Gibbon, campus, default, smittenMIN|blushies) Well, see you later then.
+(Gibbon, campus, default, smittenMIN|blushMIN) Well, see you later then.
 
 [Gibbon leaves]
 Gibbon then walks off leaving me alone with the squirrels. Other than being a little strange he really seems like a nice guy. I hope I can get to know him better during my time here.
@@ -989,7 +989,7 @@ Did I just admit to being a furry? Fuck.
 
 (PCPG) Wait, why not? After how much you praised it, I’d imagine you’d want more people to see it.
 
-(Mage, casual, 4, angerMED) It’s ... a secret. I don’t think you or anyone should know about it... yet. It’s something I would only share with people I know I can trust.
+(Mage, casual, 4, angryMED) It’s ... a secret. I don’t think you or anyone should know about it... yet. It’s something I would only share with people I know I can trust.
 
 I’m taken aback by this sudden change in her attitude. Maybe I should just trust her on this one.
 
@@ -1454,37 +1454,37 @@ Suddenly, the room begins to heat up, as a literal portal in spacetime rips itse
 
 (Ben, campus, slouch, sadMIN, left) That must be... Pokémon Hell. So that means...
 
-(Russel|???, neutral, offleft, center) It’s been a while, hasn’t it Brunswick?
+(Russel|???, base, neutral, offleft, center) It’s been a while, hasn’t it Brunswick?
 
 (Brunswick, worried, right) Mamo...
 
-(Russel|???, neutral) It’s time for you to say goodbye to your “friend” here and come back down to Pokémon Hell, where you truly belong.
+(Russel|???, base, neutral) It’s time for you to say goodbye to your “friend” here and come back down to Pokémon Hell, where you truly belong.
 
 (Ben, campus, exasp, angryMIN) Oh fuck off Russel, don’t you have enough Pokémon down there to suck you off already?
 
-(Russel, neutral) But Ben Saint, you of all people should realize... 
+(Russel, base, neutral) But Ben Saint, you of all people should realize...
 
-(Russel, neutral) It’s [i]never[/i] enough. 
+(Russel, base, neutral) It’s [i]never[/i] enough.
 
 (Brunswick, confused, right)
 Russel then unleashes what looks to be a Confuse Ray at the startled Brunswick, hitting him directly and confusing him.
 
-(Russel, neutral, center, slide, center-50) 
+(Russel, base, neutral, center, slide, center-50)
 Alright Brunswick, now all you need to do is to enter the friendly portal where you can meet up with all of your favourite friends, those who were brutally murdered by your ever so precious Ben Saint.
 
-(Brunswick, confused, right, slide, right-50, 10)
+(Brunswick, confused, 1, right, slide, right-50, 10)
 Brunswick in his confusion obeys Russels command and slumbers his way towards the portal.
 
-(Brunswick, confused, right-50, slide, right-100, 10)
+(Brunswick, confused, 1, right-50, slide, right-100, 10)
 (Ben, campus, exasp, sadMIN) Brunswick! Please snap out of it, you’re better than this! Don’t do this to me!
 
-(Brunswick, confused, right-100, slide, right-150, 10)
+(Brunswick, confused, 1, right-100, slide, right-150, 10)
 (Ben, campus, slouch, sadMAX) I can’t lose you again!
 
-(Brunswick, confused, right-150, slide, right-250, 10)
+(Brunswick, confused, 1, right-150, slide, right-250, 10)
 But despite Ben’s pleas, Brunswick continues slowly towards his doom. Students, seemingly caring more about Brunswick than Ben ever could, sacrifice their own wellbeing by climbing onto his hairy mass to stop him from entering the portal, but all is in vain. Brunswick is simply too massive and strong for their efforts.
 
-(Brunswick, confused, right-250, slide, right-300, 10)
+(Brunswick, confused, 1, right-250, slide, right-300, 10)
 Just before Brunswick falls into the portal and is consumed once more by the fire he escaped from, a commanding shout sounds from the classroom door.
 
 [StopMusic]
@@ -1493,25 +1493,25 @@ Just before Brunswick falls into the portal and is consumed once more by the fir
 (Lord of Ghosts, neutral, right)
 Somehow this gets to Brunswicks ears, stopping him inches from the portal’s edge.
 
-(Russel, default, worried, center-50) The Lord of Ghosts himself? But sir what are you doing here?
+(Russel, base, worried, center-50) The Lord of Ghosts himself? But sir what are you doing here?
 
 (Lord of Ghosts|The Lord of Ghosts, angry, right) I WANT YOU TO LET GO OF THAT POKÉMON.
 
-(Russel, default, worried, center-50) B-but sir, he belongs in Pokémon Hell! I made a whole campaign to #LetRusselWrestle in order to defeat and capture him at the third PCP Royal Rumble, but I unfortunately missed my chance. This is now my time to drag him down to where he belongs!
+(Russel, base, worried, center-50) B-but sir, he belongs in Pokémon Hell! I made a whole campaign to #LetRusselWrestle in order to defeat and capture him at the third PCP Royal Rumble, but I unfortunately missed my chance. This is now my time to drag him down to where he belongs!
 
 (Lord of Ghosts|The Lord of Ghosts, neutral, right) I DO NOT CARE. I AM THE LORD OF GHOSTS AND SO ALL GHOSTS MUST OBEY ME. THAT’S HOW IT WORKS.
 
-(Russel, default, worried, center-50) I guess... you are right sir.
+(Russel, base, worried, center-50) I guess... you are right sir.
 
 (Lord of Ghosts, happy, right)
-(Brunswick, worried, right-300, slide, right-150)
+(Brunswick, worried, 1, right-300, slide, right-150, 10)
 Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. After shaking off his confusion he steps away from the portal and lowers himself to let the student’s on top of him off. 
 
-(Russel, neutral, center-50, slide, center) But do not worry Brunswick, despite not getting you this time, I will bring you back to Pokémon Hell soon enough.
+(Russel, base, neutral, 1, center-50, slide, center) But do not worry Brunswick, despite not getting you this time, I will bring you back to Pokémon Hell soon enough.
 
 (Brunswick, default, worried, center+50) Swine...
 
-(Russel, neutral) And you, Ben “Max Revive” Saint, don’t you worry either. You won't be separated from your “friends” for too long. In due time I will bring you down there too, and this time, for good.
+(Russel, base, neutral) And you, Ben “Max Revive” Saint, don’t you worry either. You won't be separated from your “friends” for too long. In due time I will bring you down there too, and this time, for good.
 
 (Ben, campus, base, happyMIN, left) I’d like to see you try you literal fart gas.
 
@@ -1521,10 +1521,10 @@ Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. 
 Russel then enters back through the portal and closes it behind him, seemingly returning everything back to normal.
 
 [Song: PCPDating_ClassPhilosophy]
-(Brunswick, worried, center+50, slide, left)
+(Brunswick, worried, 1, center+50, slide, left, 10)
 (Ben, campus, base, happyMIN, left, slide, center) Wow, uh thanks for the save Lord of Ghosts. Even though we were previously enemies bent on dominating one another that one time, you helped me out big here.
 
-(Lord of Ghosts|The Lord of Ghosts, blush 2, right) DO NOT MENTION IT, FOR I AM THE LORD OF GHOSTS, THAT IS WHAT I DO.
+(Lord of Ghosts|The Lord of Ghosts, blushMED, right) DO NOT MENTION IT, FOR I AM THE LORD OF GHOSTS, THAT IS WHAT I DO.
 
 (Lord of Ghosts|The Lord of Ghosts, neutral, right) I HOWEVER MUST GO NOW, SO BYE BYE...
 

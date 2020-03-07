@@ -826,8 +826,13 @@ func remove_dupes(character, info):
 				
 				else:
 					if !global.pause_input: global.pause_input = true
-					var pos = systems.display.layers[i]['node'].position
-					systems.display.remove(systems.display.layers[i]['node'], i)
+					var display_node = systems.display.layers[i]['node']
+					var pos
+					if display_node is VideoPlayer:
+						pos = display_node.rect_position
+					else:
+						pos = display_node.position
+					systems.display.remove(display_node, i)
 					notsame = [true, pos]
 					emit_signal('dupeCheckFinished')
 					if global.pause_input: global.pause_input = false
