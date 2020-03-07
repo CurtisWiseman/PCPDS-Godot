@@ -4,9 +4,11 @@ var queue = [] # Queue of music to play.
 var playing = {'path': "NULL", 'loop': "NULL", 'volume': "NULL"} # The current song.
 var playingSFX = {'path': "NULL", 'volume': "NULL"} # The current sfx.
 
+
 # Function to play music.
 func music(path, loop=false, volume=0):
-	
+	if path == playing.path:
+		return
 	var music = AudioStreamPlayer.new() # Create a new AudioSteamPlayer node.
 	music.stream = load(path) # Set the steam to path.
 	music.bus = 'Music' # Set the bus to Music.
@@ -23,6 +25,7 @@ func music(path, loop=false, volume=0):
 	playing.path = path
 	playing.loop = loop
 	playing.volume = volume
+
 
 
 
@@ -66,6 +69,7 @@ func unpause(audio):
 
 # Function to remove the audio entirely.
 func stop(audio):
+	
 	if get_node(audio):
 		get_node(audio).queue_free()
 		playing.path = "NULL"
