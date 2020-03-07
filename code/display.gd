@@ -306,10 +306,11 @@ func switch(content, new, type, face=false, x=0, y=0):
 
 # Remove a layer based on it's name.
 func remove_name(cname):
-	
-	# Free the node at index and remove it from layers.
-	layers[getindex(cname)]['node'].queue_free()
-	layers.remove(getindex(cname))
+	var ind = getindex(cname)
+	if ind != null:
+		# Free the node at index and remove it from layers.
+		layers[ind]['node'].queue_free()
+		layers.remove(ind)
 
 # Remove a layer.
 func remove(node, i):
@@ -686,7 +687,8 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 	
 	if node != null: ref = weakref(node)
 	
-	if not is_instance_valid(node):
+	#I somehow got a timer as the node once?!
+	if not is_instance_valid(node) or not node is CanvasItem:
 		#Again turbo mode does some bad thigns sometimes
 		remove_bad_layers()
 		#Making sure to wait before exiting since I imagine things don't expect this to exit immediately
@@ -700,6 +702,9 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 			percent -= spd # Subtract spd from percent.
 			if percent < 0: percent = 0 # Make percent 0 if it falls below.
 			p = float(percent)/100 # Make p percent/100
+			if not is_instance_valid(node):
+				#Welp, it's gone already!
+				break
 			if mod == 'self':
 				if ref: node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 				if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
@@ -709,7 +714,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
 		
-		if !global.fading:
+		if !global.fading and is_instance_valid(node):
 			if mod == 'self':
 				if ref: node.set_self_modulate(Color(1,1,1,0))
 			else:
@@ -724,6 +729,9 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 			if percent > 100: percent = 100 # Make percent 100 if it goes above.
 			p = float(percent)/100 # Make p percent/100
 			if mod == 'self':
+				if not is_instance_valid(node):
+					#Welp, it's gone already!
+					break
 				if ref: node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 				if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
 				if AFL: for afl in AFL: afl.set_self_modulate(Color(1,1,1,p)) # Modulate AFLs by p.
@@ -732,7 +740,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
 		
-		if !global.fading:
+		if !global.fading and is_instance_valid(node):
 			if mod == 'self':
 				if ref: node.set_self_modulate(Color(1,1,1,1))
 			else:

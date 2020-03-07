@@ -283,15 +283,15 @@ This is the kind of silence which precedes executions and utterances of the word
  
 (PCPG) I’ve gotta go.
 
-(Ben|Professor Saint, school, point, happyMIN, offleft, slide, left) Well in this troper’s humble opinion, the student council’s job should be to build alternative infrastructure and counter institutions which would facilitate a dual power takeover of the school and a democratic redistribution of influence and resources.
+(Ben|Professor Saint, campus, point, happyMIN, offleft, slide, left) Well in this troper’s humble opinion, the student council’s job should be to build alternative infrastructure and counter institutions which would facilitate a dual power takeover of the school and a democratic redistribution of influence and resources.
  
 (PCPG) Isn’t the pyramid scheme already an alternative power structure? Also what resources do you want to redistribute?
  
-(Ben|Professor Saint, school, exasp, angryMIN) No you fucking idiot, they’re a parallel power structure. They’re so intricately interwoven with the school itself, that I wouldn’t be surprised if the same guy was behind it.
+(Ben|Professor Saint, campus, exasp, angryMIN) No you fucking idiot, they’re a parallel power structure. They’re so intricately interwoven with the school itself, that I wouldn’t be surprised if the same guy was behind it.
 
-(Ben|Professor Saint, school, exasp, angryMIN) That might sound like a conspiracy theory, and maybe it is, but it would be completely unsurprising.
+(Ben|Professor Saint, campus, exasp, angryMIN) That might sound like a conspiracy theory, and maybe it is, but it would be completely unsurprising.
 
-(Ben|Professor Saint, school, exasp, angryMIN) As for the resources, let’s just say that there are a lot of corporate-ass fat cats with way more slime than anyone could possibly need, and I think we might be better off without them if you catch my drift.
+(Ben|Professor Saint, campus, exasp, angryMIN) As for the resources, let’s just say that there are a lot of corporate-ass fat cats with way more slime than anyone could possibly need, and I think we might be better off without them if you catch my drift.
  
 (PCPG) I… guess?
 
@@ -305,27 +305,27 @@ This is the kind of silence which precedes executions and utterances of the word
  
 Who better to ask than the guidance counselor? This is where students come with their problems after all, and boy do I have some problems with the awful suggestions I’ve gotten so far.
 
-(Jesse|Dr. Horseshoes, campus, body 1, angryMIN) Come in and bow before the footwear man.
+(Jesse|Dr. Horseshoes, campus, campus_1, angryMIN) Come in and bow before the footwear man.
  
 (PCPG) But I’m already in.
  
-(Jesse|Dr. Horseshoes, campus, body 1, angryMAX) Then bow. It’s the least you can do if you crawl in here, asking for my help like it’s my job. You people disgust me.
+(Jesse|Dr. Horseshoes, campus, campus_1, angryMAX) Then bow. It’s the least you can do if you crawl in here, asking for my help like it’s my job. You people disgust me.
  
 (PCPG) Well it is your job, isn’t it?
 
 (PCPG) Anyways, I wanted to ask you what you think the student council should be doing.
  
-(Jesse|Dr. Horseshoes, campus, body 3, happyMED) Well that’s easy. I don’t know if you’ve noticed, but there are a bunch of really stupid pieces of shit at this school, and there’s nothing we can legally do about that.
+(Jesse|Dr. Horseshoes, campus, campus_3, happyMED) Well that’s easy. I don’t know if you’ve noticed, but there are a bunch of really stupid pieces of shit at this school, and there’s nothing we can legally do about that.
  
 (PCPG) So you mean like correctional measures or something?
  
-(Jesse|Dr. Horseshoes, campus, body 3, angryMAX) What? No! I should be allowed to fucking kill ‘em.
+(Jesse|Dr. Horseshoes, campus, campus_3, angryMAX) What? No! I should be allowed to fucking kill ‘em.
 
-(Jesse|Dr. Horseshoes, campus, body 4, angryMAX) Everyone should be allowed to kill everybody and then no one would be a worthless garbage-human anymore. Do you know for how long I’ve wanted a trapdoor in front of this room so I could get rid of these fuckers?
+(Jesse|Dr. Horseshoes, campus, campus_4, angryMAX) Everyone should be allowed to kill everybody and then no one would be a worthless garbage-human anymore. Do you know for how long I’ve wanted a trapdoor in front of this room so I could get rid of these fuckers?
 
-(Jesse|Dr. Horseshoes, campus, body 4, angryMAX) Forever!
+(Jesse|Dr. Horseshoes, campus, campus_4, angryMAX) Forever!
 
-(Jesse|Dr. Horseshoes, campus, body 4, angryMAX) But oh no, that would be a far too extreme measure, they say. “You’re deranged,” they say. You know what I say to them?
+(Jesse|Dr. Horseshoes, campus, campus_4, angryMAX) But oh no, that would be a far too extreme measure, they say. “You’re deranged,” they say. You know what I say to them?
  
 [Choice]
 
@@ -337,7 +337,7 @@ Who better to ask than the guidance counselor? This is where students come with 
 
 (PCPG) Didn’t Digi hire you a few days ago?
 
-(Jesse|Dr. Horseshoes, campus, body 1, confusedMIN) How is that relevant? Now answer the rhetorical question!
+(Jesse|Dr. Horseshoes, campus, campus_1, confusedMIN) How is that relevant? Now answer the rhetorical question!
 
 (PCPG) Fine. What do you say to them?
 *
@@ -351,20 +351,20 @@ Who better to ask than the guidance counselor? This is where students come with 
 
 (PCPG) What kind of weird, stirnerite ideology is this?
 
-(Jesse|Dr. Horseshoes, campus, body 3, happyMED) It’s called anarcho-fascism™.
+(Jesse|Dr. Horseshoes, campus, campus_3, happyMED) It’s called anarcho-fascism™.
 
 (PCPG) I don’t think you can trademark that.
 
-(Jesse|Dr. Horseshoes, campus, body 3, angryMED) Well I have to, because some piece of shit imbecile wrote a wikipedia article about a wrong thing with the same name to SPITE me and ruin my funny made up political beliefs.
+(Jesse|Dr. Horseshoes, campus, campus_3, angryMED) Well I have to, because some piece of shit imbecile wrote a wikipedia article about a wrong thing with the same name to SPITE me and ruin my funny made up political beliefs.
 
-(Jesse|Dr. Horseshoes, campus, body 4, angryMAX) Except I’m serious about them. This is the REAL anarcho fascism, the ideology of the REAL AMERICA.
+(Jesse|Dr. Horseshoes, campus, campus_4, angryMAX) Except I’m serious about them. This is the REAL anarcho fascism, the ideology of the REAL AMERICA.
 
 (PCPG) Riiiiiiight. So, what do you say to people who call you deranged?
 *
  
-(Jesse|Dr. Horseshoes, campus, body 4, angryMAX) Well that’s exactly the problem; I don’t want to say anything to them, I want to fucking kill them for having the audacity not to understand that living with these people is far worse than death could ever be.
+(Jesse|Dr. Horseshoes, campus, campus_4, angryMAX) Well that’s exactly the problem; I don’t want to say anything to them, I want to fucking kill them for having the audacity not to understand that living with these people is far worse than death could ever be.
  
-(Jesse|Dr. Horseshoes, campus, body 1, happyMED) This solved your problem?
+(Jesse|Dr. Horseshoes, campus, campus_1, happyMED) This solved your problem?
  
 (PCPG) Sure... Good talk.
 

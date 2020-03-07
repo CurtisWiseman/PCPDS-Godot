@@ -748,6 +748,18 @@ func parse_info(info):
 			remove_dupes('911', info)
 			yield(self, 'dupeCheckFinished')
 			if notsame[0]: parse_911(info, 'nine11', 1, notsame[1])
+		"Redman":
+			remove_dupes('redman', info)
+			yield(self, 'dupeCheckFinished')
+			var num = str(search('return characterImages.redman.body', info[1]))
+			var body = 'characterImages.redman.body['+str(num)+']'
+			if notsame[0]: parse_position(info, 'systems.display.image('+body+', 1)', body, 2, notsame[1])
+		"Gungirl":
+			remove_dupes('gungirl', info)
+			yield(self, 'dupeCheckFinished')
+			var num = str(search('return characterImages.gungirl.body', info[1]))
+			var body = 'characterImages.gungirl.body['+str(num)+']'
+			if notsame[0]: parse_position(info, 'systems.display.image('+body+', 1)', body, 2, notsame[1])
 		"Tom":
 			info[0] = 'tom'
 			var poseNum = 1
@@ -876,6 +888,11 @@ func parse_outfit(info, parsedInfo, i, pos):
 			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"special":
+			#Crocs is another weird case
+			if (info[0].to_lower() == "crocs"):
+				num = str(search('return characterImages.'+parsedInfo+'.body', info[i]))
+				parse_expression(info, parsedInfo, 'characterImages.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
+				return
 			num = str(search('return characterImages.'+parsedInfo+'.special.body', info[i+1]))
 			if num == '-1' or num == '-2':
 				num = '0'
@@ -887,7 +904,9 @@ func parse_outfit(info, parsedInfo, i, pos):
 			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"newgle":
-			parse_expression(info, parsedInfo+'.newgle', 'characterImages.'+parsedInfo+'.newgle.body[0]', i+1, info[i+1], pos)
+			#GIBB IS THE ONLY NEWGLE CASE! ANd ITS VERY SIMPLE!
+			var body = "characterImages.gibbon.newgle.body[0]"
+			parse_position(info, 'systems.display.image('+body+', 1)', body, 2, notsame[1])
 		"base":
 			parse_expression(info, parsedInfo+'.base', 'characterImages.'+parsedInfo+'.base.body[0]', i+1, info[i+1], pos)
 		"bigboi":
@@ -912,6 +931,7 @@ func parse_outfit(info, parsedInfo, i, pos):
 func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	var blush = false
 	var shades = false
+	var beard = false
 	var knife = false
 	var AFL = ''
 	var blushNum
@@ -931,6 +951,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 				blush = true
 			elif tmp[1] == 'shades':
 				shades = true
+			elif tmp[1] == 'beard':
+				beard = true
 		else:
 			for k in range(1, tmp.size()):
 				if 'blush'.is_subsequence_ofi(tmp[k]):
@@ -938,6 +960,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 					blush = true
 				elif tmp[k] == 'shades':
 					shades = true
+				elif tmp[k] == 'beard':
+					beard = true
 		
 #		if tmp.size() == 3:
 #			blushNum = int(parse_expnum(info[i], parsedInfo)[0]);
@@ -955,7 +979,9 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		AFL += '\n\tsystems.display.face(characterImages.'+parsedInfo+'.blush['+str(blushNum)+'], '+body+', 0, 0, "blush")'
 	if shades:
 		AFL += '\n\tsystems.display.face(characterImages.nate.afl[0], '+body+', 0, 0, "shades")'
-	
+	if beard:
+		AFL += '\n\tsystems.display.face(characterImages.nate.afl[2], '+body+', 0, 0, "shades")'
+		
 	var useDefault = false
 	if "happy".is_subsequence_of(info[i]):
 		useDefault = true
@@ -1032,7 +1058,7 @@ func parse_position(info, parsedInfo, body, i, pos):
 	var move = false
 	var num
 	
-	if i == info.size():
+	if i >= info.size():
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 		return
 	
@@ -1043,7 +1069,7 @@ func parse_position(info, parsedInfo, body, i, pos):
 		
 		if fade: info.remove(i)
 		
-		if i == info.size():
+		if i >= info.size():
 			if transition == 'silhouette': execute(parsedInfo+'\n\tsystems.display.fadeblack('+body+', "in", 0)\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 			else: execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
 			return
