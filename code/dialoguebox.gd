@@ -408,8 +408,9 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				if CG != null:
 					systems.display.fadealpha(CG, 'out', 1, 'self', 0.01)
 					yield(systems.display, 'transition_finish')
-					
-					systems.display.remove_name(CG)
+					#The yield means something else could fuck with it in between!
+					if CG != null:
+						systems.display.remove_name(CG)
 					CG = null
 				global.pause_input = false
 			

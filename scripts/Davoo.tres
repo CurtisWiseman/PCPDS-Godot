@@ -3,7 +3,7 @@
 [Location: japaneseclass.day]
 [Song: PCPDating_ClassJapanese]
 [fade from black]
- 
+
 So far I’ve been doing a pretty alright job on the actually-give-a-crap-about-school-front. I’ve attended as many classes as are chronologically attendable, done extra research on the side and, oh yeah, I have essentially stopped sleeping. 
 
 The things you do for the respect of your peers.
@@ -1134,7 +1134,7 @@ A few days have passed since we met at the planetarium and I have hardly heard f
 
 Someone sits down next to me.
 
-(Gibbon, campus, handsup, smittenMAX, offleft, slide, left|blushies) 
+(Gibbon, campus, handsup, smittenMAX|blushies, offleft, slide, left) 
  
 (PCPG) Hey Gib, how’s it going?
  
@@ -1308,33 +1308,33 @@ I’m PCPG, I have talked god into disbanding, I can do this.
  
 I see Digi before I do Davoo. He’s off to the side, smoking pot with a delinquent girl as it seems. Good for him. Suddenly, I feel a tap on my shoulder.
  
-(Davoo, suit, neutral, smittenMIN)
+(Davoo, special, smittenMIN)
  
 (PCPG) Hey, looking great!
  
-(Davoo, suit, neutral, sadMIN) Thanks. Sorry that I dropped off the radar for a while.
+(Davoo, special, sadMIN) Thanks. Sorry that I dropped off the radar for a while.
  
 (PCPG) You definitely had me worried for a bit, what was going on?
  
-(Davoo, suit, neutral, neutral) Well, I had to completely restructure my daily schedule. So it’s kind of easier to get used to everything if there aren’t any outside distractions.
+(Davoo, special, neutral) Well, I had to completely restructure my daily schedule. So it’s kind of easier to get used to everything if there aren’t any outside distractions.
 
 (PCPG) So you really quit, huh?
  
-(Davoo, suit, neutral, neutral) Yeah… I think I’m happy about it.
+(Davoo, special, neutral) Yeah… I think I’m happy about it.
 
-(Davoo, suit, neutral, smittenMIN) I don’t really know yet, If that makes any sense. I’m definitely realizing more and more how much I’ve locked myself into a certain mode of operation, which it’s probably good to be out of.
+(Davoo, special, smittenMIN) I don’t really know yet, If that makes any sense. I’m definitely realizing more and more how much I’ve locked myself into a certain mode of operation, which it’s probably good to be out of.
 
-(Davoo, suit, neutral, smittenMIN) But that’s hard to measure by any kind of objective standards, so my mood and creative output are really the only thing I can go by while being almost impossible to quantify.
+(Davoo, special, smittenMIN) But that’s hard to measure by any kind of objective standards, so my mood and creative output are really the only thing I can go by while being almost impossible to quantify.
  
 (PCPG) Meaning what exactly?
  
-(Davoo, suit, neutral, happyMIN) That I’ll have to wait and see, I guess. Surely if I made a huge mistake, I’ll notice at some point.
+(Davoo, special, happyMIN) That I’ll have to wait and see, I guess. Surely if I made a huge mistake, I’ll notice at some point.
  
 (PCPG) That makes sense… I don’t think that freedom to readjust and reconsider can be a bad thing, and Digi seems to be doing alright as well.
 
 (PCPG) Anyways, how’s the game going?
  
-(Davoo, suit, neutral, happyMIN) I’ve made a ton of progress. Time hardly felt like it was passing with all of this manic energy I’ve had. But is that really what you want to talk about that right now?
+(Davoo, special, happyMIN) I’ve made a ton of progress. Time hardly felt like it was passing with all of this manic energy I’ve had. But is that really what you want to talk about that right now?
  
 (PCPG) Right… of course… that isn’t the most relevant thing right now, is it?
 
@@ -1345,7 +1345,7 @@ Oh god I’m getting flustered. I don’t know if I can do this.
 [StopMusic]
 [Song: PCPDating_Beloved]
  
-(Davoo, suit, neutral, smittenMAX) No, that’s not what I meant. Look, maybe I’m misreading social cues here, but this is prom night…
+(Davoo, special, smittenMAX) No, that’s not what I meant. Look, maybe I’m misreading social cues here, but this is prom night…
  
 (PCPG) Yeah, I guess it is. Right now, I don’t really want to talk about anything at all. That is to say… I think… what I actually want is…
  
@@ -1359,17 +1359,17 @@ Nope, nothing happens.
 
 (PCPG) Hey, um, that was the cue, in case you were wondering.
 
-(Davoo, suit, neutral, smittenMAX) Yeah, I know. I have consumed enough media to know that, which is kinda the problem, you know.
+(Davoo, special, smittenMAX) Yeah, I know. I have consumed enough media to know that, which is kinda the problem, you know.
 
-(Davoo, suit, neutral, shockedMIN) I don’t want to be cliche about this. Deriving some vapid enjoyment from playing the bishi in a trite performance of a societal idea of romance is probably fine and all, but it wouldn’t be satisfying in a greater sense. 
+(Davoo, special, shockedMIN) I don’t want to be cliche about this. Deriving some vapid enjoyment from playing the bishi in a trite performance of a societal idea of romance is probably fine and all, but it wouldn’t be satisfying in a greater sense. 
 
-(Davoo, suit, neutral, smittenMAX) The whole “I love you” thing would just be a shtick at that point, so I need to find a better way of saying all this. 
+(Davoo, special, smittenMAX) The whole “I love you” thing would just be a shtick at that point, so I need to find a better way of saying all this. 
 
 God damn it, I should have seen that one coming.
 
 (PCPG) Well, I’m sure that you just said the “I love you”-thing in a way which no one ever has, and for good reason, so I’m gonna go ahead and kiss you now out of fear that this might become an essay on the rampant sameyness of confession scenes in mass media.
 
-(Davoo, suit, neutral, smittenMAX) What?!
+(Davoo, special, smittenMAX) What?!
 
 [fade to black]
  

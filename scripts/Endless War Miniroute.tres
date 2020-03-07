@@ -549,7 +549,7 @@ She turns to face Ben.
 (Ben, casual, base, happyMIN, left)
 Munchy and Ben salivate at her propositions.
  
-(Ben|Ben, causal, point, happyMIN|cloud, left) Well, what are you suggesting then?
+(Ben|Ben, casual, point, happyMIN|cloud, left) Well, what are you suggesting then?
  
 (Endless War|Endless War, knife, neutral) You see, to truly engage in WAR, we need to first fully forgo our useless mortal bodies in preference of something.. slimier. We secondly need to indoctrinate everyone to the violence and bloodshed. To leave no person without the instinct to kill. No child without a deadly weapon.
 
@@ -621,21 +621,21 @@ I’m sorry Davoo, but progress requires sacrifices.
  
 (Ben, casual, base, happyMAX|cloud, left)
 (Munchy, casual, squatting, happyMAX, right)
-(Endless War, stand, blushMED|blushiesMIN, center+50)
+(Endless War, stand, smittenMED|blushMIN, center+50)
 (Davoo, neutral, shockedMAX, center-50) 
 (Ben and Munchy) HELL YEAH! FLIP THAT SWITCH BITCH!
 
 Endless War promptly complies and soon the machine behind her whirs into life as it sucks radioactive ooze from below and churns it into slime.
 
-(Endless War|Endless War, stand, blushMED|blushiesMED, center+50) AHAHAHA!! LET THE NEW AGE OF ENDLESS WAR BEGIN!!!
+(Endless War|Endless War, stand, smittenMED|blushMED, center+50) AHAHAHA!! LET THE NEW AGE OF ENDLESS WAR BEGIN!!!
 
 [Song: PCP-AMBIENT_Earthquake]
 
 The machine begins to speed up faster and faster, enough so that it almost seems like it will break apart at its hinges. Then just before it seems like everything will explode, the machine begins to turn in on itself, almost as though it’s falling into the tall monument behind it.
 
-(Endless War|Endless War, stand, blushMED|blushiesMED, center+50) And for the final ingredient! One who must sacrifice themselves so that the collective can function as one, who can incessantly chant to violence endlessly, a leader to direct this world to ENDLESS WAR!
+(Endless War|Endless War, stand, smittenMED|blushMED, center+50) And for the final ingredient! One who must sacrifice themselves so that the collective can function as one, who can incessantly chant to violence endlessly, a leader to direct this world to ENDLESS WAR!
 
-(Endless War|Endless War, stand, blushMAX|blushiesMAX, center+50) ME! Endless War!!
+(Endless War|Endless War, stand, smittenMAX|blushMAX, center+50) ME! Endless War!!
 
 [Davoo leaves]
 [EndlessWar leaves]
