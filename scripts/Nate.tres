@@ -391,13 +391,13 @@ Upon hearing the professor laugh, I find myself relaxing into my seat and my fac
 
 I start looking less at my feet, and more at him directly. I smile shyly.
 
-(Nate|Professor Bestman, casual, neutral, shockMIN|shades) Alright, that took a little longer than expected.
+(Nate|Professor Bestman, casual, smoking, shockMIN|shades) Alright, that took a little longer than expected.
 
-(Nate|Professor Bestman, casual, neutral, confusedMIN|shades) To be honest though, I just did like twenty minutes with the hand grips on the car ride over here.
+(Nate|Professor Bestman, casual, smoking, confusedMIN|shades) To be honest though, I just did like twenty minutes with the hand grips on the car ride over here.
 
-(Nate|Professor Bestman, casual, neutral, confusedMED|shades) So uhhhh, cut me some slack.
+(Nate|Professor Bestman, casual, standing, confusedMED|shades) So uhhhh, cut me some slack.
 
-(Nate, casual, neutral, happyMIN|shades)
+(Nate, casual, standing, happyMIN|shades)
 
 It’s a little shocking to hear the professor speak so casually and with such levity, but it puts me at ease.
 
@@ -443,7 +443,7 @@ He seems to have caught onto my minor consternation.
 
 As I continue looking, there is another picture that strikes my interest, this time in black and white. I keep looking at the face of the man in the picture. I swear I’ve seen this person before. /n It’s uncanny.
 
-(Nate|Professor Bestman, casual, neutral, smittenMED|shades) Hahaha! Don’t worry. Your brain isn’t deceiving you. That’s Arnie!
+(Nate|Professor Bestman, casual, standing, smittenMED|shades) Hahaha! Don’t worry. Your brain isn’t deceiving you. That’s Arnie!
 
 (PCPG) Arnie?
 
@@ -1539,7 +1539,7 @@ It would probably be inappropriate and awkward to tell Tom that I’ve actually 
 
 Tom seems satisfied and content with this answer. Everyone is being perfectly pleasant.
 
-(Ben|Ben, casual, exasperated, happyMIN) Well we were actually just parting ways for the night. It was good to see you again, PCPG!
+(Ben|Ben, casual, exasp, happyMIN) Well we were actually just parting ways for the night. It was good to see you again, PCPG!
 
 (Tom|Tom, 2, happyMIN) See ya’ around!
 
@@ -1741,7 +1741,7 @@ Nate adjusts his posture, as if to speak, but takes a brief hold before continui
 
 Nate starts smiling demurely.
 
-(Nate|Nate, casual, standing, happyMED|beard, blush) Thanks, PCPG.
+(Nate|Nate, casual, standing, happyMED|beard|blush) Thanks, PCPG.
 
 (Nate|Nate, casual, pointing, smittenMED|beard) You’re absolutely right! Life is about continuously getting back up.
 
@@ -1939,7 +1939,7 @@ Tom seems satisfied and content with this answer.
 
 You wonder how these two can smile so much. They’re being perfectly pleasant...
 
-(Ben|Ben, casual, exasperated, happyMIN) Well we were actually just parting ways for the night. It was good to see you again, PCPG!
+(Ben|Ben, casual, exasp, happyMIN) Well we were actually just parting ways for the night. It was good to see you again, PCPG!
 
 (Tom|Tom, 2, happyMIN) See ya’ around!
 
@@ -1977,11 +1977,11 @@ Don’t let this be over.
 
 You run over to him as he turns around to your sudden exclamation.
 
-(Ben|Ben, casual, exasperated, shockMIN) What’s up?
+(Ben|Ben, casual, exasp, shockMIN) What’s up?
 
 (PCPG) Wanna hang for a bit?
 
-(Ben|Ben, casual, exasperated, confusedMIN) Uhhhhhhh…
+(Ben|Ben, casual, exasp, confusedMIN) Uhhhhhhh…
 
 He looks at his watch in slight consternation.
 
@@ -2065,9 +2065,9 @@ This mind reading feels dismayingly familiar.
 
 (PCPG) What?! That’s nothing! Three cups of coffee max a week?!
 
-(Ben|Ben, casual, exasperated, angryMIN) Yup! It’s why it’s so common for people to have a psychological dependence on caffeine or coffee.
+(Ben|Ben, casual, exasp, angryMIN) Yup! It’s why it’s so common for people to have a psychological dependence on caffeine or coffee.
 
-(Ben|Ben, casual, exasperated, angryMAX) They’ve raised their tolerance to such high levels that they need a lot just to feel normal.
+(Ben|Ben, casual, exasp, angryMAX) They’ve raised their tolerance to such high levels that they need a lot just to feel normal.
 
 (PCPG) Wow. That’s unfortunate.
 
@@ -2079,7 +2079,7 @@ Not drinking coffee for that long seems like it would be a Sisyphean task for so
 
 (Ben|Ben, casual, base, neutral) But like anything in life, moderation is key.
 
-(Ben|Ben, casual, exasperated, happyMAX) As Aristotle and Plato told us, ‘moderation is a moral virtue!’
+(Ben|Ben, casual, exasp, happyMAX) As Aristotle and Plato told us, ‘moderation is a moral virtue!’
 
 You suddenly remember that he’s also a philosophy teacher at school.
 
@@ -2095,7 +2095,7 @@ You both take a sip from your respective caffeinated beverages.
 
 Unprompted, Ben continues.
 
-(Ben|Ben, casual, exasperated, shockMAX) Neither of these taste good, though.
+(Ben|Ben, casual, exasp, shockMAX) Neither of these taste good, though.
 
 (Ben|Ben, casual, point, happyMIN) If you’re looking for pure taste, I’d go for the Rockstar XDurance series.
 
@@ -2121,9 +2121,9 @@ He gets up and goes to a nearby cabinet. After reaching around for a bit, he pul
 
 what the fuck?!
 
-(Ben|Ben, casual, exasperated, shockMAX, right, slide, center) Hold on, man! It’s not what you think!
+(Ben|Ben, casual, exasp, shockMAX, right, slide, center) Hold on, man! It’s not what you think!
 
-(Ben|Ben, casual, exasperated, shockMIN) It’s just caffeine powder!
+(Ben|Ben, casual, exasp, shockMIN) It’s just caffeine powder!
 
 what?
 
@@ -2619,11 +2619,11 @@ I see Davoo and his wild and unkempt light-brown hair doing flips and Alley Oop�
 
 It doesn’t help that both of the dude’s feet are encased in full orthopedic casts. The whole thing is a rather impressive display of gymnastics and acrobatics. Somehow, despite all this, Davoo continues to bounce as happily as ever. It’s inspiring!
 
-(Davoo, campus, neutral, neutral, offright, slide, center)
+(Davoo, campus, neutral, offright, slide, center)
 
 After about ten minutes he walks back inside and joins everyone else.
 
-(Davoo, campus, neutral, neutral, center, slide, offleft)
+(Davoo, campus, neutral, center, slide, offleft)
 
 [Davoo leaves]
 
@@ -2774,7 +2774,7 @@ I remember I used to look at people like this and think they were being idiotic,
 
 [Location: radprom3]
 
-(Ben, school, base, neutral, offleft, left)$
+(Ben, campus, base, neutral, offleft, left)$
 
 (Tom, 1, neutral, offright, right)$
 
@@ -2786,7 +2786,7 @@ I decide to go outside for some fresh air, and see Tom, Ben, and Nate in a group
 
 (Nate|Nate, campus, standing, happyMIN|shades) Hey PCPG!
 
-(Ben|Ben, school, base, happyMIN) What’s up, dude.
+(Ben|Ben, campus, base, happyMIN) What’s up, dude.
 
 (Tom|Tom, 1, happyMAX) Yo!
 
@@ -2796,9 +2796,9 @@ I decide to go outside for some fresh air, and see Tom, Ben, and Nate in a group
 
 (PCPG) What are you guys waiting around for?
 
-(Ben|Ben, school, point, happyMIN) Nate’s about to do his lecture. Wish him luck!
+(Ben|Ben, campus, point, happyMIN) Nate’s about to do his lecture. Wish him luck!
 
-(Ben, school, base, neutral)$
+(Ben, campus, base, neutral)$
 
 (Tom|Tom, 3, neutral) It’s gonna be lit.
 
@@ -2814,7 +2814,7 @@ I see Nate shuffling around the note cards from last night in his hands.
 
 (Tom|Tom, 1, shockedMAX) You can do it! You’ve just got to believe in the heart of the cards!
 
-(Ben, school, base, neutral, left, slide, left-200)$
+(Ben, campus, base, neutral, left, slide, left-200)$
 
 (Mage, campus, 4, neutral, offleft, slide, center+250)$
 
@@ -2828,7 +2828,7 @@ From out of the blue, I hear Mage’s voice. She’s addressing everybody in the
 
 (Mage|Mage, campus, 4, shockMIN) Everyone listen up! We’re going to be starting the presentations, so I need all the presenters to please move to the lecture hall!
 
-(Ben, school, base, neutral, left-200, slide, left)$
+(Ben, campus, base, neutral, left-200, slide, left)$
 
 (Mage, campus, 4, neutral, center+250, slide, offleft)$
 
@@ -2844,15 +2844,15 @@ From out of the blue, I hear Mage’s voice. She’s addressing everybody in the
 
 (PCPG) Nate, we’re right here with you!
 
-(Ben|Ben, school, point, happyMIN) You’ve got to believe in yourself!
+(Ben|Ben, campus, point, happyMIN) You’ve got to believe in yourself!
 
 (Tom|Tom, 3, happyMAX) You can do it! Just kick that lecture’s butt!
 
 (Nate|Nate, campus, standing, happyMIN|shades) Thanks, guys!
 
-(Ben|Ben, casual, exasperated, shockMIN) Let’s go, Tom. I want to make sure we get good seats.
+(Ben|Ben, casual, exasp, shockMIN) Let’s go, Tom. I want to make sure we get good seats.
 
-(Ben, school, base, neutral, left, slide, offleft)$
+(Ben, campus, base, neutral, left, slide, offleft)$
 
 (Tom, 1, neutral, right, slide, offleft)
 
@@ -2920,25 +2920,25 @@ I can tell this is going to be the start of another incredible Nate lecture.
 
 [pause]
 
-(Michelle, body2, head1, silhouette, offright, center)
+(Michelle, body2, face1, silhouette, offright, center)
 
 This seems familiar...
 
-(Michelle, body2, head1, offright, center)
+(Michelle, body2, face1, offright, center)
 
 It’s her again...
 
-(Michelle|???, body2, head1) Thank you for helping me out.
+(Michelle|???, body2, face1) Thank you for helping me out.
 
-(Michelle|???, body2, head1) You did well!
+(Michelle|???, body2, face1) You did well!
 
 (PCPG) Can I know your name?
 
-(Michelle|Michelle, body2, head1) Michelle!
+(Michelle|Michelle, body2, face1) Michelle!
 
 Ohhh…
 
-(Michelle, body2, head1, center, offright)
+(Michelle, body2, face1, center, offright)
 
 [fade to black]
 
@@ -3180,15 +3180,15 @@ You’re so tired…
 
 [pause]
 
-(Michelle, body2, head1, silhouette, offright, center) 
+(Michelle, body2, face1, silhouette, offright, center) 
 
-(Michelle|???, body2, head1, silhouette) You’ve met with a terrible fate, haven’t you?
+(Michelle|???, body2, face1, silhouette) You’ve met with a terrible fate, haven’t you?
 
-(Michelle|???, body2, head1) There’s no one to blame but yourself.
+(Michelle|???, body2, face1) There’s no one to blame but yourself.
 
-(Michelle|???, body2, head1) Everyone falls down, and everyone has to decide for themselves whether to get back up...
+(Michelle|???, body2, face1) Everyone falls down, and everyone has to decide for themselves whether to get back up...
 
-(Michelle, body2, head1, center, offright)
+(Michelle, body2, face1, center, offright)
 
 [fade to black]
 

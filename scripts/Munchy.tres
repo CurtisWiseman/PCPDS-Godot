@@ -143,7 +143,7 @@ Immediately I’m thrown into a desperate struggle, evading items and assist tro
 
 All the while though, everyone in the room is fucking howling at the absolute mayhem going on in the game. If I were with any other group of people I’d probably get pissed off at how things were so stacked against me, but I can’t help but feel like I’m having fun getting my shit pushed in when it’s these three that are the ones doing it.
 
-(Munchy|Munchy, casual, crossing, happyMED, blushies) That was fucking insane. Hold on, let’s try that again, but I have a custom map we can use. It’s called “Steel Death Cage”--
+(Munchy|Munchy, casual, crossing, happyMED|blushies) That was fucking insane. Hold on, let’s try that again, but I have a custom map we can use. It’s called “Steel Death Cage”--
 
 Before he can elaborate on whatever sick and twisted creation he was referring to, Endless War slams open the door.
 
@@ -380,7 +380,7 @@ We spend a short while going over the drawing. To my surprise, he gave it a bit 
 
 
 
-(Munchy|Munchy, campus, default, shockedMED, blushies) Ah shit, there’s the bell! 
+(Munchy|Munchy, campus, default, shockedMED|blushies) Ah shit, there’s the bell! 
 
 (Munchy|Munchy, campus, crossing, confusedMIN) Well, you get what I mean, don’t you?
 
@@ -621,7 +621,7 @@ A few seconds pass, and before I can even parse what the ‘joke’ is, I’m fu
 
 (Crocs, happy) Nice one, up five Munchy.
 
-(Munchy|Munchy, casual, default, happyMIN, blushies) Whoa hold on, I think doing that might have actually ruined everything, lol.
+(Munchy|Munchy, casual, default, happyMIN|blushies) Whoa hold on, I think doing that might have actually ruined everything, lol.
 
 The throne starts trampling over my character’s corpse, and in a few minutes the screen is riddled with bullets. It doesn’t take long before Munchy runs out of ammo, and dies altogether.
 
@@ -883,7 +883,7 @@ The ghost begins to shuffle around a bit, revealing something in the process…
 
 I’m overcome with shock. Underneath the bedsheet was… Gibbon?
 
-(Gibbon|Gibbon, campus, handsup, smittenMAX, blushies, center, fade) Haha, It’s me! I was the Lord of Ghosts the whole time!
+(Gibbon|Gibbon, campus, handsup, smittenMAX|blushies, center, fade) Haha, It’s me! I was the Lord of Ghosts the whole time!
 
 (PCPG) Wha-
 
@@ -944,7 +944,7 @@ In the corner of my eye, I can see Munchy and Ben having a heated discussion in 
 
 (Munchy|Munchy, campus, crossing, angryMIN) Look, we can just do Nuclear Throne some other time.
 
-(Ben|Ben, campus, exasperated, confusedMIN) Why are in such a rush to play this shitty game that no one in the community has ever heard of before?
+(Ben|Ben, campus, exasp, confusedMIN) Why are in such a rush to play this shitty game that no one in the community has ever heard of before?
 
 (Munchy|Munchy, campus, default, angryMIN) You’d understand if you’d just give it a fucking chance.
 
@@ -996,7 +996,7 @@ Out of nowhere, Crocs hands me one of his spare pistols.
 
 (Munchy|Munchy, campus, squatting, angryMAX) ENDLESS WARRRRRRRR!
 
-(Ben|Ben, campus, exasperated, angryMIN) ENDLESS WARRRRRRRR!
+(Ben|Ben, campus, exasp, angryMIN) ENDLESS WARRRRRRRR!
 
 [Munchy leaves]
 [Ben leaves]
@@ -1136,7 +1136,7 @@ With slime on his face, the man on the ground starts staring at me. What do I do
 
 (Crocs, special outfit) Fucking epic dude.
 
-(Munchy|Munchy, campus, crossing, smitenMED, Offright, slide, right) I can’t believe it. You’ve become a real Rowdy right in front of my eyes, PCPG. I would congratulate you, but the best is yet to come.
+(Munchy|Munchy, campus, crossing, smittenMED, Offright, slide, right) I can’t believe it. You’ve become a real Rowdy right in front of my eyes, PCPG. I would congratulate you, but the best is yet to come.
 
 (Munchy|Munchy, campus, squatting, happyMED) Ben. You know what this means, don’t you?
 
@@ -1504,11 +1504,11 @@ I’m damn near out of breath once I get into the building.
 [K1P leaves]
 [Crocs leaves]
 
-(Nate|Nate, campus, smoking, happyMED, shades, Offright, slide, right) Classic Ben.
+(Nate|Nate, campus, smoking, happyMED|shades, Offright, slide, right) Classic Ben.
 
 (PCPG) Nate? What are you doing here?
 
-(Nate|Nate, campus, pointing, happyMIN, shades) Why, I’m here to cheer my brother on, of course. Someone’s gotta do it after all, given how little faith the Killers actually have in him.
+(Nate|Nate, campus, pointing, happyMIN|shades) Why, I’m here to cheer my brother on, of course. Someone’s gotta do it after all, given how little faith the Killers actually have in him.
 
 Professor Bestman is Ben’s brother? Never would’ve guessed.
 
@@ -1525,7 +1525,7 @@ A trail of smoke billows into the room. It can only mean one thing, that the sam
 
 (Munchy|Munchy, special, squatting, angryMIN) Jesus Christ Ben, did you really have to come dressed like a homeless person? Oh, and cool it with that Juul of yours, or whatever the fuck it is.
 
-(Ben|Ben, casual, exasperated, angryMAX) VAPING IS NOT A CRIME GODDAMNIT!
+(Ben|Ben, casual, exasp, angryMAX) VAPING IS NOT A CRIME GODDAMNIT!
 
 (Munchy|Munchy, special, crossing, neutral) Fucking, whatever. Let’s just get down to brass tacks here.
 
@@ -1540,7 +1540,7 @@ A trail of smoke billows into the room. It can only mean one thing, that the sam
 
 (PCPG) Damn, a lot of people showed up, huh.
 
-(Schrafft, Neutral, right+150, fade) Only natural. This IS what everybody on both sides of the war have been fighting over.
+(Schrafft, Neutral, blank, right+150, fade) Only natural. This IS what everybody on both sides of the war have been fighting over.
 
 (PCPG) Oh man, it’s you! Didn’t I put a bullet in your head yesterday?
 
@@ -1550,7 +1550,7 @@ A trail of smoke billows into the room. It can only mean one thing, that the sam
 [Ben leaves]
 [Kazee leaves]
 
-(Crocs, neutral, left+350, fade) You’re on our turf now, Benhead. The least you could do is mind your own business.
+(Crocs, neutral, blank, left+350, fade) You’re on our turf now, Benhead. The least you could do is mind your own business.
 
 (K1P, default, blank, right-350) I’m just waiting to get this over with. Ben has no chance, considering that the guy who basically picked the game is the one who trained Munchy.
 
@@ -1558,9 +1558,9 @@ A trail of smoke billows into the room. It can only mean one thing, that the sam
 
 [Schrafft leaves]
 
-(Magicks, Neutral, right+150, fade) yeah, well, it’s not like ben’s played much shooting games before. i can’t imagine this will go well…
+(Magicks, Neutral, blank, right+150, fade) yeah, well, it’s not like ben’s played much shooting games before. i can’t imagine this will go well…
 
-(Connor|BLUE WHALE, neutral, left-150, fade) well, what do you know, i’m right again. narrative steaks: obliterated.
+(Connor|BLUE WHALE, neutral, blank, left-150, fade) well, what do you know, i’m right again. narrative steaks: obliterated.
 
 (Crocs, angry) Shut up Blue Whale.
 
@@ -1616,7 +1616,7 @@ Ben sprints across the map, making his way to Munchy’s base without hesitation
 
 (Munchy|Munchy, special, default, shockedMAX) AH, FUCK!
 
-(Ben|Ben, casual, dabbing) Heheheheheh… !dab
+(Ben|Ben, casual, dab) Heheheheheh… !dab
 
 (Munchy|Munchy, special, default, angryMIN) Agh, shit. Nice shot.
 
@@ -1633,7 +1633,7 @@ Ben plows through the dirt covering up Munchy’s intel with ease, taking it all
 
 Munchy starts tunneling like his life depended on it. My guess is that he got a good look at where Ben’s intel was located thanks to the split screen view. After a long while, he digs his way up, only to meet face to face with ben. The gunfire rings through the speakers once again.
 
-(Ben|Ben, casual, exasperated, shockedMAX) FUCK!
+(Ben|Ben, casual, exasp, shockedMAX) FUCK!
 
 (Munchy|Munchy, special, crossing, happyMED) Hehe, DIE Ben.
 
@@ -1665,7 +1665,7 @@ With Munchy’s view obscured, Ben manages to get another three captures in whil
 
 (K1P, Neutral, Offleft, slide, left-150) Only two more capture points. Heh, I think you’ll just have to take the MORAL victory this time, Rowdys.
 
-(Connor|BLUE WHALE, angry, Offright, slide, right+150) yeah, i guess anyone can win if they cheat hard enough huh.
+(Connor|BLUE WHALE, angry, blank, Offright, slide, right+150) yeah, i guess anyone can win if they cheat hard enough huh.
 
 (K1P, Neutral) Whatever, you guys shouldn’t be playing with this setup anyways.
 
@@ -1680,7 +1680,7 @@ This time, Munchy decides to spend some time digging an alternate route. He make
 
 (Munchy|Munchy, special, squatting, happyMAX) They call it ‘intelligence’ for a reason, Ben. Just like always, the Rowdys manage to clutch one out when the stakes are high.
 
-(Ben|Ben, casual, exasperated, sadMIN) No, no this isn’t true! You can’t outplay me like this!
+(Ben|Ben, casual, exasp, sadMIN) No, no this isn’t true! You can’t outplay me like this!
 
 (Munchy|Munchy, special, crossing, happyMIN) Too late, I already did.
 
@@ -1695,11 +1695,11 @@ Running back and forth through his hidden tunnel, Munchy manages to evade detect
 
 (Munchy|Munchy, special, squatting, happyMAX) !THRASH !THRASH !THRASH !THRASH !THRASH
 
-(Crocs, happy, Offleft, slide, left+350) !THRASH !THRASH !THRASH !THRASH !THRASH
+(Crocs, happy, blank, Offleft, slide, left+350) !THRASH !THRASH !THRASH !THRASH !THRASH
 
 (Kazee|Kazee, body1, face1, Offright, slide, right+150) !THRASH !THRASH !THRASH !THRASH !THRASH
 
-(Connor|BLUE WHALE, happy, Offleft, slide, left-150) !thrash !thrash !thrash !thrash !thrash
+(Connor|BLUE WHALE, happy, blank, Offleft, slide, left-150) !thrash !thrash !thrash !thrash !thrash
 
 (PCPG) !THRASH !THRASH !THRASH !THRASH !THRASH
 
@@ -1711,9 +1711,9 @@ Running back and forth through his hidden tunnel, Munchy manages to evade detect
 
 (Ben|Ben, casual, base, neutral, right-350, fade) …
 
-(Ben|Ben, casual, dabbing, neutral) !dab
+(Ben|Ben, casual, dab, neutral) !dab
 
-(Nate|Nate, campus, standing, angryMIN, shades, right+150, fade) Ah, damn.
+(Nate|Nate, campus, standing, angryMIN|shades, right+150, fade) Ah, damn.
 
 (Munchy|Munchy, special, defaul, happyMED) Easiest game of my fucking LIFE. How will the Killers ever recover?
 
@@ -1721,11 +1721,11 @@ Running back and forth through his hidden tunnel, Munchy manages to evade detect
 [Ben leaves]
 [Nate leaves]
 
-(K1P, Neutral, Offright, slide, left+350) Whatever, it’s not like I didn’t expect this to happen.
+(K1P, Neutral, blank, Offright, slide, left+350) Whatever, it’s not like I didn’t expect this to happen.
 
-(Magicks, Neutral, Offright, slide, right-350) just another slimefest for ya.
+(Magicks, Neutral, blank, Offright, slide, right-350) just another slimefest for ya.
 
-(Schrafft, Neutral, Offright, slide, right+150) What they said, yeah.
+(Schrafft, Neutral, blank, Offright, slide, right+150) What they said, yeah.
 
 [SLIDE, K1P, left+350, Offleft]
 [SLIDE, Magicks, right-350, Offleft]
@@ -1761,7 +1761,7 @@ Ben, Nate, and the Killers walk home with expressions on their face ranging from
 
 (Munchy|Munchy, special, defaul, smittenMIN) Throughout your time as a Rowdy, you have shown an incredible display of what it means to be on our side, the right side of history. You’ve made sick ass art, straight up BUSTED the Lord of Ghosts, and took part in a crucial battle at the lunch table, even managing to gank a Killer when tensions were high.
 
-(Munchy|Munchy, special, crossing, smittenMAX, blushies) Not only that, but you arguably won me this Slimefest. It sounds cliché as hell, but really, I couldn’t have done it without you. It’s only fair that I give you this in return.
+(Munchy|Munchy, special, crossing, smittenMAX|blushies) Not only that, but you arguably won me this Slimefest. It sounds cliché as hell, but really, I couldn’t have done it without you. It’s only fair that I give you this in return.
 
 He hands me a scroll with a grey ribbon binding it together.
 
@@ -1779,9 +1779,9 @@ Tears begin to well up in my eyes. I thought this day might come eventually but,
 
 [CG end]
 
-(Munchy|Munchy, special, squatting, angryMED, blushies) Wipe those fucking bitch tears off your face. You’ve been through hell, and things are only gonna get harder from here on out.
+(Munchy|Munchy, special, squatting, angryMED|blushies) Wipe those fucking bitch tears off your face. You’ve been through hell, and things are only gonna get harder from here on out.
 
-(Munchy|Munchy, special, crossing, smittenMIN, blushies) Good thing you’ve got powerful allies now though, don’t you think?
+(Munchy|Munchy, special, crossing, smittenMIN|blushies) Good thing you’ve got powerful allies now though, don’t you think?
 
 (PCPG) You’re right. I’ve got big shoes to fill now.
 

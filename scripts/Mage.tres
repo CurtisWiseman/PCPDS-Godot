@@ -168,16 +168,9 @@ The triangular girl’s fierce glare petrifies me.
 
 (Ben|Ben, campus, base, sadMIN) Yeah, it’s already getting late, and I’m definitely known as someone who’s never late! See you around Violet!
 
-<<<<<<< HEAD
 [SLIDE EndlessWar offright]
 [SLIDE Ben offleft]
-[Endless War leaves] 
-=======
-[SLIDE, EndlessWar, left, offright]
-[SLIDE, Ben, right, offleft]
-[EndlessWar leaves] 
-[Ben leaves]
->>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
+[EndlessWar leaves]
 [StopMusic]
 
 [Song: PCPDating_FallenGlass]
@@ -743,7 +736,7 @@ A distant, swelling chant makes the gang stop. It’s a cacophony of voices, pro
 [CG end]
 
 [Slide, Mage, center, right]
-[Cop Killers, dabbing, offleft, slide, center]
+[CopKillers, dabbing, offleft, slide, center]
 Suddenly the street is filled with purple characters, some hooded, some masked, some not even human. Besides their colour scheme, the only thing they have in common is that they are all dabbing in perfect unison. 
 
 (Endless War) Exclamation point dabbing, precisely.
@@ -778,13 +771,8 @@ The Cop Killer turns to the Indigo Interlopers.
 
 [CG: Indigo Interlopers Death]
 [Ben leaves]
-<<<<<<< HEAD
-[Endless War leaves]
-[Cop Killers leaves]
-=======
 [EndlessWar leaves]
-[Cop Killers leave]
->>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
+[CopKillers leave]
 [Mage leaves]
 [fade to black]
 [CG end]
@@ -808,17 +796,17 @@ Professor Bestman even performed a legitimately awesome rendition of Another One
 
 [Location: radprom1]
 
-(Digibro, casual, 4, happyMED, offright, slide, center) 
+(Digi, casual, 4, happyMED, offright, slide, center) 
 
-(Digibro|Professor Digibro) Hey PCPG! How have you been doing!
+(Digi|Professor Digibro) Hey PCPG! How have you been doing!
 
 (PCPG) I’m doing fine, Professor.
 
-(Digibro|Professor Digibro, casual, 2, happyMAX) I haven’t seen you in my class lately! Good, seems like you learned how retarded school actually is. Like the heroes, they drop out! Just look at our guidance teacher.
+(Digi|Professor Digibro, casual, 2, happyMAX) I haven’t seen you in my class lately! Good, seems like you learned how retarded school actually is. Like the heroes, they drop out! Just look at our guidance teacher.
 
 (PCPG) Eh that’s not it. I just had other things on my mind lately.
 
-(Digibro|Professor Digibro, casual, 2, smittenMED) Yeah, you’ve been seen hanging out with the Lethal Aurora Mage lately. Tell me, what’s going on there?
+(Digi|Professor Digibro, casual, 2, smittenMED) Yeah, you’ve been seen hanging out with the Lethal Aurora Mage lately. Tell me, what’s going on there?
 
 [SLIDE, Digibro, center, left]
 (Mage, casual, 1, sadMIN, offright, slide, center) 
@@ -829,23 +817,23 @@ Professor Bestman even performed a legitimately awesome rendition of Another One
 
 (Mage|Mage, casual, 2, happyMIN) Uhhhhhhh Digi have you seen this anime, it’s called Double Decker!
 
-(Digibro|Professor Digibro, casual, 5, confusedMIN) I don’t think so.
+(Digi|Professor Digibro, casual, 5, confusedMIN) I don’t think so.
 
 (PCPG) Don’t you make a whole thing about watching every single anime year after year?
 
-(Digibro|Professor Digibro, casual, 2, happyMIN) Maybe it was so unmemorable that I instantly forgot about it.
+(Digi|Professor Digibro, casual, 2, happyMIN) Maybe it was so unmemorable that I instantly forgot about it.
 
 (Mage|Mage, casual, 3, happyMED) No it is awesome! It has very cute boys in it too!
 
-(Digibro|Professor Digibro, casual, 1, happyMED) You’re like one of the biggest Fujoshi I know Mage. You don’t watch it dubbed, do you?
+(Digi|Professor Digibro, casual, 1, happyMED) You’re like one of the biggest Fujoshi I know Mage. You don’t watch it dubbed, do you?
 
 (Mage|Mage, casual, 3, angryMIN) Of course I do! Comedy anime especially are way better dubbed. The timing is just completely off when you read the punchlines in subs.
 
-(Digibro|Professor Digibro, casual, 4, happyMAX) Well, you just have to reach my level of anime watching. I learned perfect japanese from watching enough subbed anime, now I don’t even have to read the subtitles anymore!
+(Digi|Professor Digibro, casual, 4, happyMAX) Well, you just have to reach my level of anime watching. I learned perfect japanese from watching enough subbed anime, now I don’t even have to read the subtitles anymore!
 
 (Mage|Mage, casual, 4, angryMIN) I disagree.
 
-(Digibro|Professor Digibro, casual, 5, smittenMED) Ehh whatever! Have fun guys.
+(Digi|Professor Digibro, casual, 5, smittenMED) Ehh whatever! Have fun guys.
 
 [SLIDE: Digi, left, offleft]
 [Digibro leaves]
@@ -966,31 +954,31 @@ A few weeks have passed since the day of the Interloper attack. Mage hasn’t re
 
 RadProm day has come! I’ve never been to any proms in my old life, mainly because I never got a date and appearing without one was regarded as a sin, but this time it’s different.
 
-(Gibbontake|Gib, casual, default, neutral, offleft, slide, center) Heey!
+(Gibbon|Gib, casual, default, neutral, offleft, slide, center) Heey!
 
 (PCPG) Hi Gib, how are you enjoying the prom?
 
-(Gibbontake|Gib, casual, grabby, happyMIN) Eh I’m fine! Who is your date tonight?
+(Gibbon|Gib, casual, grabby, happyMIN) Eh I’m fine! Who is your date tonight?
 
 (PCPG) I’m supposed to meet with Mage, but I haven’t seen her yet.
 
-(Gibbontake|Gib, casual, press, angryMIN) Oh, Mage... Have you seen her lately? She seems… different.
+(Gibbon|Gib, casual, press, angryMIN) Oh, Mage... Have you seen her lately? She seems… different.
 
 (PCPG) Are you talking about her fashion change?
 
-(Gibbontake|Gib, casual, press, confusedMED) Well, I’m more worried about the number of eyes on her face. Are you sure she’s fine?
+(Gibbon|Gib, casual, press, confusedMED) Well, I’m more worried about the number of eyes on her face. Are you sure she’s fine?
 
 (PCPG) Nah, everything is alright. She says she feels better than ever. 
 
-(Gibbontake|Gib, casual, clenched, sadMIN) Since the incident with the Interlopers?
+(Gibbon|Gib, casual, clenched, sadMIN) Since the incident with the Interlopers?
 
 (PCPG) You heard of that?
 
-(Gibbontake|Gib, casual, handsup, confusedMED) Well, I’m friends with a famous detective you know? He told me that Mage lost control and slew a bunch of ruffians near Yang Street. The biggest massacre since the bicarbonate rain!
+(Gibbon|Gib, casual, handsup, confusedMED) Well, I’m friends with a famous detective you know? He told me that Mage lost control and slew a bunch of ruffians near Yang Street. The biggest massacre since the bicarbonate rain!
 
 (PCPG) It was self-defense! And anyway, since then she seems way more happy and confident. It’s like she finally got closure on her horrible past.
 
-(Gibbontake|Gib, casual, grabby, happyMIN) I'm sure you’re right. Excuse me, my slimegirl wants a dance. Have fun!
+(Gibbon|Gib, casual, grabby, happyMIN) I'm sure you’re right. Excuse me, my slimegirl wants a dance. Have fun!
 
 [SLIDE, Gibbontake, center, offleft]
 [Gibbontake leaves]
@@ -1058,7 +1046,7 @@ I can’t hold it in any longer. Mage is acting weird lately, and my guess is th
 
 (PCPG) Mage, I wanted to ask you something...
 
-(Letha|Lethal, 4, angryMIN) Please, PCPG, don’t call me that! She is long dead, I would rather you’d forget her.
+(Lethal|Lethal, 4, angryMIN) Please, PCPG, don’t call me that! She is long dead, I would rather you’d forget her.
 
 [StopMusic]
 [Song: PCPDating_Tension]
@@ -1099,7 +1087,7 @@ Where am I? How did I get here?
 
 Someone is standing in front of me. I’m recognizing the iconic silhouette.
 
-(Endless War|Endless War, cross, happyMED|blushiesMED) You fucked up, huh? /n Hehehehehe!
+(Endless War|Endless War, cross, happyMED|blushMED) You fucked up, huh? /n Hehehehehe!
 
 (PCPG) What do you mean?
 
@@ -1109,7 +1097,7 @@ I’m confused… but my memories are slowly coming back… Mage… I made a mis
 
 (PCPG) Eh… e-enlist?
 
-(Endless War|Endless War, knife, angryMIN|blushiesMED) Not e-enlist?, say !enlist, baka! Don’t you know how commands work?
+(Endless War|Endless War, knife, angryMIN|blushMED) Not e-enlist?, say !enlist, baka! Don’t you know how commands work?
 
 (PCPG) How.. did I get here?
 
@@ -1127,7 +1115,7 @@ I am baffled. Is Endless War-chan supposed to be the god who judges me?
 
 (PCPG) That sound kinda cool, but I have to fix some mistakes up there. Thanks for giving me this chance Endless War.
 
-(Endless War|Endless War, cross, happyMAX|blushiesMAX) Good luck, and remember that you now owe me a favour! Now say it!
+(Endless War|Endless War, cross, happyMAX|blushMAX) Good luck, and remember that you now owe me a favour! Now say it!
 
 [CHOICE]
 *!revive*

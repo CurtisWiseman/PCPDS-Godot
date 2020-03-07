@@ -41,8 +41,8 @@ func move(s, n, ty, i, t, x=null):
 
 # Calculates the movement of images across the screen.
 func _process(delta):
-	
-	position(nodepos + speed) # Move collider at speed.x.
+	if nodepos != null and speed != null:
+		position(nodepos + speed) # Move collider at speed.x.
 	
 	# If dest is null then ignore ending movement.
 	if dest != null:
@@ -59,10 +59,21 @@ func finish():
 	dest = null
 	yield(self, 'done_cleaning')
 	if reference.get_ref():
-		node.position.x = destination
-		parent.layers[index]['position'].x = destination
+		global.get_node_pos(node).x = destination
+		#More attempting to appease crashes that turbo-mode seems to incur
+		var _index = index
+		if parent.layers.size() <= index or not parent.layers[index].has("node") or parent.layers[index]["node"] != node:
+			for l in parent.layers:
+				if l.has("node") and l["node"] == node:
+					_index = parent.layers.find(l)
+					break
+			if _index == index:
+				#Well, guess it's really gone, it seems the results of this function are unneeded, so I'll just emit the signal and leave...
+				emit_signal('position_finish')
+				return null
+		parent.layers[_index]['position'].x = destination
 		emit_signal('position_finish')
-		return {'path': parent.layers[index]['path'], 'dest': destination}
+		return {'path': parent.layers[_index]['path'], 'dest': destination}
 
 
 

@@ -2,7 +2,7 @@
  
 (PCPG) !enlist killers
 
-(Munchy, campus, standing, neutral, right) I fucking knew it.
+(Munchy, campus, default, neutral, right) I fucking knew it.
  
 [CG: Purple Effect]
 Suddenly a purple light begins to envelop and circle around me and a near infinite amount of memories and experiences suddenly flash before my eyes. The light then calms down again, and at the end of it all, I feel like a changed man.
@@ -32,7 +32,7 @@ Woah.
 (Ben, campus, base, neutral, left) Anyways, come meet the rest of the Killers at the cafeteria, it’s almost time for lunch anyways. 
  
 [Munchy leaves]
-[Endless War leaves]
+[EndlessWar leaves]
 [SLIDE, Ben, center, offleft]
 We leave Munchy and Endless War behind and head for the cafeteria. I’m a certified Cop Killer now, I guess? Should I like, go find a cop to murder later or something? I’m not exactly sure how this all works.
  
@@ -67,13 +67,13 @@ We finish up ordering our food and make our way towards the cloud of vapour that
  
 [Location: dininghall.nokillers, dininghall.table.killersforeground]
 
-(Cop Killers, default, cloud, offleft, left)
+(Cop Killers, cloud, offleft, left)
 (Ben, campus, base, neutral, offright, right) Greetings my dear apostles. Please take care of this new soul for me, for I must attend to my Slime Time.
  
 (Ben, campus, base, neutral, right, slide, offright)
 Ben then quickly exits right back out through the vapour. The rest of the Killers intently watch him leave. Where is he going? Also, didn’t he just order food?
 
-[Cop Killers leave]
+[CopKillers leave]
 (K1P|K1P, default, offleft, center) Never willing to stick around too long huh Ben?
  
 [K1P leaves]
@@ -121,12 +121,12 @@ Ben then quickly exits right back out through the vapour. The rest of the Killer
 (Schrafft) That should be all of us, then.
 
 (Smearg, default, center, slide, offleft)
-(Cop Killers, default, cloud, offleft, center)
+(Cop Killers, cloud, offleft, center)
 (PCPG) Nice to finally formally meet all of ya. So like, I gotta ask, are there any rules I need to know now that I’m a Killer?
 
 (Schrafft) Oh don’t worry, the rules of the Cop Killers are simple. Kill cops, commit sick crimes, and most importantly, !dab. Follow in our lead.
  
-(Cop Killers|Cop Killers, dabbing, cloud) !dab
+(Cop Killers|Cop Killers, dabcloud) !dab
  
 How should I respond?
 
@@ -138,13 +138,13 @@ How should I respond?
 
 *dab*
 
-(Cop Killers|magicks, default, cloud) are you an idiot? don’t you know how commands work?
+(Cop Killers|magicks, cloud) are you an idiot? don’t you know how commands work?
 
 (PCPG) Uhh, commands?
 
-(Cop Killers|Smearg, default, cloud) You’ll need the exclamation mark before doing stuff. You don’t kill, you !kill. Similarly, you don’t dab, you !dab.
+(Cop Killers|Smearg, cloud) You’ll need the exclamation mark before doing stuff. You don’t kill, you !kill. Similarly, you don’t dab, you !dab.
 
-(Cop Killers|magicks, default, cloud) do it right this time
+(Cop Killers|magicks, cloud) do it right this time
 
 [CHOICE]
 *!dab*
@@ -154,15 +154,15 @@ How should I respond?
 
 *!dab*
  
-(Cop Killers|Schrafft, default, cloud) Excellent, you’re on your way to becoming a successful Killer. Meet us later today at Saint Ben’s Cathedral to familiarize yourself with our base and the rest of our members. You should be able to see it’s incredible spire in the midst of the Cop Killtown district. 
+(Cop Killers|Schrafft, cloud) Excellent, you’re on your way to becoming a successful Killer. Meet us later today at Saint Ben’s Cathedral to familiarize yourself with our base and the rest of our members. You should be able to see it’s incredible spire in the midst of the Cop Killtown district. 
  
-(Cop Killers|Schrafft, default, cloud) Actually, we also happen to be coordinating an attack on a high profile target this afternoon. While Killers mostly do lone work, this is a rare occasion, so it might be a cool idea to join us and see how the pros handle themselves on the battlefield.
+(Cop Killers|Schrafft, cloud) Actually, we also happen to be coordinating an attack on a high profile target this afternoon. While Killers mostly do lone work, this is a rare occasion, so it might be a cool idea to join us and see how the pros handle themselves on the battlefield.
  
 (PCPG) Sounds sick, I’ll be sure to join. Anything else I would wanna know as a Killer? 
  
-(Cop Killers|Ephraim, default, cloud) just be careful around those bustahs, never can be too trusting with them around
+(Cop Killers|Ephraim, cloud) just be careful around those bustahs, never can be too trusting with them around
  
-(Cop Killers|Ephraim, default, cloud) otherwise, just enjoy yourself you know? shoot a few cops, wear a rad beanie, engage in casual genocide. you know, fun stuff
+(Cop Killers|Ephraim, cloud) otherwise, just enjoy yourself you know? shoot a few cops, wear a rad beanie, engage in casual genocide. you know, fun stuff
  
 (PCPG) I see..
 *
@@ -171,26 +171,26 @@ How should I respond?
 
 (PCPG) ...
  
-(Cop Killers|Ephraim, default, cloud) oh you.. don’t want to !dab with us?
+(Cop Killers|Ephraim, cloud) oh you.. don’t want to !dab with us?
 
 (magicks) that seems kinda rude dude
  
 The table goes awkwardly quiet at the situation. Maybe I should’ve just played along?
  
-(Cop Killers|Schrafft, default, cloud) Anyways, if you want to you can meet us later today at Saint Ben’s Cathedral to familiarize yourself with our base and the rest of our members. You should be able to see it’s incredible spire in the midst of the Cop Killtown district. 
+(Cop Killers|Schrafft, cloud) Anyways, if you want to you can meet us later today at Saint Ben’s Cathedral to familiarize yourself with our base and the rest of our members. You should be able to see it’s incredible spire in the midst of the Cop Killtown district. 
  
-(Cop Killers|Schrafft, default, cloud) Actually, we also happen to be coordinating an attack on a high profile target this afternoon. While Killers mostly do lone work, this is a rare occasion, so you could join us and see how the pros handle themselves on the battlefield, if you care to that is.
+(Cop Killers|Schrafft, cloud) Actually, we also happen to be coordinating an attack on a high profile target this afternoon. While Killers mostly do lone work, this is a rare occasion, so you could join us and see how the pros handle themselves on the battlefield, if you care to that is.
  
 (PCPG) Sure, why not. Anything else I would wanna know as a Killer?
  
-(Cop Killers|Ephraim, default, cloud) uhh, nah, not really
+(Cop Killers|Ephraim, cloud) uhh, nah, not really
  
 (PCPG) Oh.. okay.
 *
 
 *!thrash*
 
-(Cop Killers|K1P, default, cloud) FUCKING goddamn it they got to him first after all.
+(Cop Killers|K1P, cloud) FUCKING goddamn it they got to him first after all.
 
 (Smearg) Now hold on a second, we don’t know that.
 
@@ -219,9 +219,9 @@ magicks then suddenly pulls out a gun and..
 
 (magicks) even if he was a newbie, nobody !thrash’s in front of us and gets away scot free
 
-(Ephraim, K1P, Schrafft, and Smearg) ...
+(Ephraim|Rest of the killers) ...
 
-(Ephraim, K1P, Schrafft, and Smearg) Yeah okay that makes sense.
+(Ephraim|Rest of the killers) Yeah okay that makes sense.
 
 Soo, why the fuck did I do that again?
 
@@ -294,7 +294,7 @@ However despite our easy victory, the day was not quite over yet, for there was 
 A call and a few minutes later, Ben storms in at the scene.
  
 (Cop Killers, default, center, slide, left)
-(Ben, casual, exasperated, angryMIN, offright, slide, center) I CAN’T FUCKING BELIEVE IT! This is most definitely the work of that elusive group, that eternal foe to all, the one and only...
+(Ben, casual, exasp, angryMIN, offright, slide, center) I CAN’T FUCKING BELIEVE IT! This is most definitely the work of that elusive group, that eternal foe to all, the one and only...
  
 (Ben, casual, base, angryMIN) Pizza Party University.
  
@@ -336,7 +336,7 @@ Ben faces me.
  
 And why would Ben choose me over anyone else? I mean I guess I sorta understand the “fresh set of eyes” point, but I’m like the most unqualified person here!
  
-(Ben, casual, exasperated, angryMIN) PCPG, we NEED to find the Pizza Party University. I can’t go another day without knowing they will inevitably suffer for their utter shittiness as an educational institute!
+(Ben, casual, exasp, angryMIN) PCPG, we NEED to find the Pizza Party University. I can’t go another day without knowing they will inevitably suffer for their utter shittiness as an educational institute!
  
 (PCPG) But how do you even expect [i]me[/i] to find them in the first place?
  
@@ -348,7 +348,7 @@ As soon as Ben finishes his sentence I feel a familiar terrifying gaze run acros
 [Song: PCPDating_LifeInEndlessWar]
 (Endless War|Endless War, knife, angryMIN, offright, slide, right) What the fuck do you mean you will use the Killers for something other than WAR? Killers are for killing, not to fucking jerk off with at pizza parties or whatever the fuck you’re thinking of doing with them.
  
-(Ben, casual, exasperated, angryMIN) The Pizza Party University is a threat to us all Endless War, which includes the WAR, can’t you see that?
+(Ben, casual, exasp, angryMIN) The Pizza Party University is a threat to us all Endless War, which includes the WAR, can’t you see that?
  
 (Ben, casual, base, happyMIN) Also, don’t you worry about the Killers being pulled away from manslaughter, I’m sure there are plenty of students at this supposed university that will help us with that, if you know what I mean, heh heh heh heh.
  
@@ -536,17 +536,17 @@ I decided to stay late investigating the scene of the crime before it was cleane
  
 (Ben, campus, base, neutral|cloud, right) Second, their shittiness is a shame to our great city of Boston, and if they continue to exist shittily others will be inspired to act just like them. 
  
-(Ben, campus, exasperated, sadMIN, right) Imagine if everything is as difficult to find as the Pizza Party University. I wouldn’t be able to get those unbeatable prices at Aldi without having to get lost for hours trying to find the place, now wouldn’t that be ridiculous?
+(Ben, campus, exasp, sadMIN, right) Imagine if everything is as difficult to find as the Pizza Party University. I wouldn’t be able to get those unbeatable prices at Aldi without having to get lost for hours trying to find the place, now wouldn’t that be ridiculous?
  
 (Nate|Professor Bestman, campus, smoking, confusedMIN|shades, left) Well did you consider that maybe the reason they don’t want to be found is because they are afraid of people like you out looking to harm them? Shouldn't they have the right to not be found?
  
-(Ben, campus, exasperated, angryMIN, right) Oh my god Nate you are actually retarded. Do you not see what’s wrong with that?
+(Ben, campus, exasp, angryMIN, right) Oh my god Nate you are actually retarded. Do you not see what’s wrong with that?
  
 (Nate|Professor Bestman, campus, standing, angryMIN|shades, left) No Ben, I don’t see. Honestly, you’re the one whose acting retarded here.
  
 (PCPG) Uh guys this isn’t really going anywhere.
  
-(Ben, campus, exasperated, angryMIN, right) Shut the fuck up PCPG. Nate, please tell me how I’m the one acting retarded here.
+(Ben, campus, exasp, angryMIN, right) Shut the fuck up PCPG. Nate, please tell me how I’m the one acting retarded here.
  
 (Nate|Professor Bestman, campus, standing, neutral|shades, left) You know, PCPG has a point, maybe we can just leave this for later. I do have another class coming up I need to prepare for.
  
@@ -583,7 +583,7 @@ And with that final remark Ben leaves too. I guess that means I better get back 
 (PCPG) Fuck, that. I could barely stand to listen to you guys right now. You both have no
 idea what you’re even talking about.
  
-(Ben, campus, exasperated, angryMIN, right) Oh yeah? And you do I guess?
+(Ben, campus, exasp, angryMIN, right) Oh yeah? And you do I guess?
  
 (Ben, campus, base, neutral, right)
 (Nate|Professor Bestman, campus, papers, neutral|shades, left) That’s enough Ben, if he doesn’t want to join the club that’s fine. We’ll just have to be better at convincing people in the future.
@@ -602,12 +602,12 @@ And with that final threat Ben leaves too, and I get the feeling he really wasn�
 
 [Location: scienceclass]
 [Song: PCP-AMBIENT_Classroom]
-(Ben, casual, exasperated, angryMIN)
+(Ben, casual, exasp, angryMIN)
 [fade from black]
  
 On this fine morning a late, undressed, hungover Ben Saint still has the gall to lecture us like we were the ones who fucked up.
  
-(Ben, casual, exasperated, angryMIN) Shut up class, shut the hell up and no interruptions! If you interrupt me I will personally destroy you like the savage I am!
+(Ben, casual, exasp, angryMIN) Shut up class, shut the hell up and no interruptions! If you interrupt me I will personally destroy you like the savage I am!
 
 [StopMusic]
  
@@ -670,7 +670,7 @@ As I revolt over the new unexplained weight gain of my teacher, he starts talkin
  
 (PCPG) What do you mean? Are you dying?
  
-(Ben, casual, exasperated, sadMAX) No, and that’s the problem. I don’t have anything else other than keto, literally that's all my personality boils down to, so without it, what's the point of even living?
+(Ben, casual, exasp, sadMAX) No, and that’s the problem. I don’t have anything else other than keto, literally that's all my personality boils down to, so without it, what's the point of even living?
  
 (PCPG) I mean, can’t you just start up keto again?
  
@@ -967,7 +967,7 @@ We enter the library and after a quick scan of the room Ben starts walking towar
  
 (Sophia|Sophia, happy) Vincent’s being a cheating asshole again, but that isn’t news, who’s the friend?
  
-(Ben, casual, base, happMIN, right) This is PCPG, a new face at the school. Little bit of a normie, but otherwise alright.
+(Ben, casual, base, happyMIN, right) This is PCPG, a new face at the school. Little bit of a normie, but otherwise alright.
  
 (PCPG) Hey, I’m not that normie, right? Anyways, what do you guys do here?
  
@@ -1172,12 +1172,12 @@ I stumble around in the vapour until I find the door.
  
 [Scene: !showoff art]
 
-(Ben, casual, exasperated, angryMIN)
+(Ben, casual, exasp, angryMIN)
 [Location: philosophyclass.d]
 [Song: PCPDating_ClassPhilosophy]
 [fade from black]
  
-(Ben, campus, exasperated, angryMIN) So basically that’s why capitalism is fucked, Bernie will be our savior, and we should all just hail our new commie overlords. The tides are changing students, and the future is no longer right or left, it’s forward. Are you ready for it?
+(Ben, campus, exasp, angryMIN) So basically that’s why capitalism is fucked, Bernie will be our savior, and we should all just hail our new commie overlords. The tides are changing students, and the future is no longer right or left, it’s forward. Are you ready for it?
  
 (Ben, campus, base, neutral) Okay that’s class dismissed. Make sure to watch all the videos I talked about in class today, some real good stuff in there, and definitely make sure to #VOTEBERNIEWEARYANG.
  
@@ -1237,7 +1237,7 @@ As we make our way to the counter the door opens and two people walk in, one of 
  
 (Ben, campus, base, neutral, right)
 (Vincent, neutral, offleft, slide, left)
-(Magda, neutral, offleft-100, slide, left-100)
+(Magda, neutral, blank, offleft-100, slide, left-100)
 (PCPG) Oh hey Vincent, fancy seeing you here.
  
 [Vincent leaves]
@@ -1248,7 +1248,7 @@ Vincent, seemingly ignoring us, and the girl he came in with continue walking in
  
 After a few seconds of staring they both walk around the store aimlessly for a few seconds only to finally come to a stop at the front desk. Vincent rings the bell on the desk a few times frustratingly, and only after a few seconds of waiting does he decide to address us.
  
-(Magda, neutral, offleft, center-100)
+(Magda, neutral, blank, offleft, center-100)
 (Vincent, confused, offleft, center) Where’s the... the desk girl?
  
 (PCPG) Uh.. do you mean the receptionist? We don’t know, nobody seems to be manning the store.
@@ -1273,7 +1273,7 @@ The room then becomes awkwardly quiet as no one finds anything to talk about. I 
 As we make our way to the counter the door opens and two people walk in. 
  
 (Vincent, neutral, offleft, slide, left)
-(Magda, neutral, offleft-100, slide, left-100)
+(Magda, neutral, blank, offleft-100, slide, left-100)
 (Ben, campus, base, neutral, right) Hey Vincent, Magda. What’s up?
  
 Friends of Ben? I guess they fit the profile, except for maybe not wearing any left leaning political shirts.
@@ -1284,7 +1284,7 @@ Despite Ben apparently knowing them they completely ignore him and continue walk
  
 After a few seconds of staring they leave the shelf and both walk around the store aimlessly for a few seconds only to finally come to a stop at the front desk. The guy Ben called Vincent frustratingly rings the bell on the desk a few times, but he eventually gives up and decides to finally address us.
  
-(Magda, neutral, offleft, center-100)
+(Magda, neutral, blank, offleft, center-100)
 (Vincent, confused, offleft, center) Where’s the... the desk girl?
  
 (PCPG) Uh, do you mean the receptionist? We don’t know, nobody seems to be manning the store.
@@ -1303,7 +1303,7 @@ The girl named Magda speaks up.
 The room then becomes awkwardly quiet as no one finds anything to talk about. Shouldn’t Ben like, introduce us or something?
 *
  
-(Magda, worried, center-100, slide, offleft, 5)
+(Magda, worried, blank, center-100, slide, offleft, 5)
 ...
  
 (PCPG) Is she.. okay? Should we go after her?
@@ -1374,21 +1374,21 @@ However, as I reach the Cathedral, I am unfortunately greeted by a familiar sigh
 
 [pause]
  
-(Russel, neutral, offright, right)
-(Russel|Russel, neutral, right, slide, offright, 30) Heh heh heh.
+(Russel, base, neutral, offright, right)
+(Russel|Russel, base, neutral, right, slide, offright, 30) Heh heh heh.
  
 Huh? What was that purple blur? Could that have been the infamous Magi-chan? Was he actually the one responsible for the Cathedral’s vandalism after all?
  
 (Cop Killers, default, offleft, left)
-(Ben, casual, exasperated, angryMIN, offleft, center) I CAN’T FUCKING BELIEVE IT! FUCK THE PIZZA PARTY UNIVERSITY TO THE ENDS OF THE UNIVERSE AND BACK!!!
+(Ben, casual, exasp, angryMIN, offleft, center) I CAN’T FUCKING BELIEVE IT! FUCK THE PIZZA PARTY UNIVERSITY TO THE ENDS OF THE UNIVERSE AND BACK!!!
  
 Ben, in a complete outrage, bursts into an anger filled spiel just as I arrive.
  
-(Ben, casual, exasperated, angryMIN) Surely. SURELY we have a single lead on where they could be, right?
+(Ben, casual, exasp, angryMIN) Surely. SURELY we have a single lead on where they could be, right?
  
 His gaze slides across the Killers until it rests on me.
  
-(Ben, casual, exasperated, angryMAX) PCPG! You of all people must know! I demand an answer now, and I better like it!
+(Ben, casual, exasp, angryMAX) PCPG! You of all people must know! I demand an answer now, and I better like it!
  
 (Ben, casual, base, angryMAX) WHERE is the Pizza Party University?
  
@@ -1415,14 +1415,14 @@ Shit. In my deep love for the man I have forsaken his original request of me, an
 [StopMusic]
 (Ben, casual, base, angryMIN) How fucking DARE you insinuate that the Pizza Party University doesn’t even exist. HOW FUCKING DARE YOU!
 
-(Ben, casual, exasperated, angryMIN) SO WHAT NOW? SHOULD WE JUST GIVE UP? JUST LET THE STATUS QUO CONTINUE AS IT WAS? NOT FIGHT BACK AGAINST THE SHITTINESS THE PPU REPRESENT?
+(Ben, casual, exasp, angryMIN) SO WHAT NOW? SHOULD WE JUST GIVE UP? JUST LET THE STATUS QUO CONTINUE AS IT WAS? NOT FIGHT BACK AGAINST THE SHITTINESS THE PPU REPRESENT?
  
 (PCPG) No that’s not wh-
  
 [Song: PCPDating_ShatteredGlass]
-(Ben, casual, exasperated, angryMIN) SHUT THE FUCK UP PCPG! You simply just don’t know what you’re talking about huh?
+(Ben, casual, exasp, angryMIN) SHUT THE FUCK UP PCPG! You simply just don’t know what you’re talking about huh?
  
-(Ben, casual, exasperated, angryMAX) I trusted you to find an enemy to us all, to help fight against evil, and all you want to do is to simply ignore the problem, but no not even that, to hope it doesn’t even exist so you don’t have to deal with it.
+(Ben, casual, exasp, angryMAX) I trusted you to find an enemy to us all, to help fight against evil, and all you want to do is to simply ignore the problem, but no not even that, to hope it doesn’t even exist so you don’t have to deal with it.
  
 (Ben, casual, base, angryMAX) Shame on you PCPG. I thought you were better than that. I thought you were different than the rest of the sheeples of this fucking world.
  
@@ -1453,7 +1453,7 @@ How could this have happened? What happened to everything we did together? Didn�
 
 [StopMusic] 
 [SFX: PCP-SFX_Gunshot]
-(Ben, casual, base, angryMAXl) !kill PCPG
+(Ben, casual, base, angryMAX) !kill PCPG
 
 [fade to black]
 
@@ -1535,7 +1535,7 @@ Another moment of silence passes and regret for what I said starts to settle in.
 [Song: PCPDating_HappyOrSomething]
 (Ben, casual, point, happyMIN) Yeah.. Yeah! I think I get what you mean!
  
-(Ben, casual, exasperated, happyMIN) Like, even though the Pizza Party University is shitty and is objectively bad for everyone, maybe for now, until we can find them and deal with them, we need to make sure we aren’t shitty ourselves to the people around us.
+(Ben, casual, exasp, happyMIN) Like, even though the Pizza Party University is shitty and is objectively bad for everyone, maybe for now, until we can find them and deal with them, we need to make sure we aren’t shitty ourselves to the people around us.
  
 (Ben, casual, base, neutral) I mean you still didn’t provide me a single legitimate lead on the PPU, which is fucking pathetic if I’m being honest here, but hey, maybe that ain’t too bad of a thing after all.
  
@@ -1573,18 +1573,18 @@ A few hours later and I find myself outside the RadProm venue, breathless to the
 
 I spot the man himself waiting near the doors and approach his smartly dressed body.
  
-(Ben, formal, base, neutral, offleft, center)
+(Ben, special, base, neutral, offleft, center)
 (PCPG) Hey there, you’re looking quite.. uh… what's the word?
  
-(Ben, formal, point, smittenMIN) Ben Saintlicious?
+(Ben, special, point, smittenMIN) Ben Saintlicious?
  
 (PCPG) Yes, exactly that. Though I feel like you’re supposed to have a matching hat with that outfit..
 
 (PCPG) Wait a second, Ephraim’s hat...
  
-(Ben, formal, base, angryMIN) Yeah that piece of shit Ephraim took it from me and refuses to give it back. Sneaky fucker wont let me steal it from him either. One of these days that hat will be mine once more..
+(Ben, special, base, angryMIN) Yeah that piece of shit Ephraim took it from me and refuses to give it back. Sneaky fucker wont let me steal it from him either. One of these days that hat will be mine once more..
 
-(Ben, formal, base, neutral) ..but for now, let’s make our way inside?
+(Ben, special, base, neutral) ..but for now, let’s make our way inside?
  
 (PCPG) Lets.
  
@@ -1594,21 +1594,21 @@ Ben leads the way into RadProm proper.
 [Location: radprom1]
 [Song: PCPDating_RADCON]
  
-(Ben, formal, base, neutral, offright, right)
+(Ben, special, base, neutral, offright, right)
 Inside all manner of student and teacher alike stand around and mingle. It seems like we’ve arrived slightly late and the first round of dancing has already finished.
  
-(Ben, formal, base, neutral, right, slide, left)
+(Ben, special, base, neutral, right, slide, left)
 Near the back I notice a tablet with a list of names. Curious I make my way towards it as Ben follows.
  
 (PCPG) So, what exactly are these lists?
  
-(Ben, formal, point, neutral) Well these, these are the famous PCP Grail and PCP Jail lists, who showcase the very best and very worst this school has to offer. Every student should aim to be ascended into Grail status and avoid being humiliated into Jail status, as to do so is to be immortalized forever as such.
+(Ben, special, point, neutral) Well these, these are the famous PCP Grail and PCP Jail lists, who showcase the very best and very worst this school has to offer. Every student should aim to be ascended into Grail status and avoid being humiliated into Jail status, as to do so is to be immortalized forever as such.
  
 My eye’s glitter with excitement as they scan through the names of students on the PCP Grail list. I recognize a few of them in some of my classes.
  
 (PCPG) So, how does one get themselves on the PCP Grail?
  
-(Ben, formal, base, neutral|cloud) Eh, there’s no real fast rule to it, but being really funny tends to help your case. The key thing though is to do something truly epic.
+(Ben, special, base, neutral|cloud) Eh, there’s no real fast rule to it, but being really funny tends to help your case. The key thing though is to do something truly epic.
  
 My mind begins to race on how I would possibly be so amazing as to get onto the PCP Grail. I wonder if creating a whole fan game about this school and its lore would do the trick?
  
@@ -1618,13 +1618,13 @@ As I think about the logistics of bringing a grand piano to school I notice the 
  
 (PCPG) Wait, so there is actually like a physical jail you put students into?
  
-(Ben, formal, point, shockMIN) Oh of course, and they fully deserve it for not being good enough for this school. I mean, don’t worry, we feed them..
+(Ben, special, point, shockMIN) Oh of course, and they fully deserve it for not being good enough for this school. I mean, don’t worry, we feed them..
  
 Ben goes quiet for a second.
  
-(Ben, formal, base, sadMIN) ..sometimes.
+(Ben, special, base, sadMIN) ..sometimes.
  
-(Ben, formal, base, neutral) We also have the PCP Purgatory and other PCP related spaces down the hall, though we kinda just forget about them, so they actually might have died of starvation.
+(Ben, special, base, neutral) We also have the PCP Purgatory and other PCP related spaces down the hall, though we kinda just forget about them, so they actually might have died of starvation.
 
 (PCPG) I see...
  
@@ -1632,50 +1632,50 @@ Ben goes quiet for a second.
 [SFX: PCP-SFX_USSR]
 I think about taking a peek behind the PCP Jail door and reach for the doorknob, but as soon as I place my hand on it a sinister chill runs down my spine.
 
-(Ben, formal, base, shockMIN) What’s wrong PCPG? Why don’t you open the door?
+(Ben, special, base, shockMIN) What’s wrong PCPG? Why don’t you open the door?
  
-(Ben, formal, base, happyMIN) Aren’t you curious? Don’t you want to be..
+(Ben, special, base, happyMIN) Aren’t you curious? Don’t you want to be..
  
-(Ben, formal, base, happyMAX|cloud) ..enlightened?
+(Ben, special, base, happyMAX|cloud) ..enlightened?
  
 (PCPG) Uhh...
  
 [StopSFX]
 I decide to let go of the doorknob.
  
-(Ben, formal, base, neutral)
+(Ben, special, base, neutral)
 (PCPG) Maybe another time. I mean, we [i]are [/i]at RadProm and we haven’t even started dancing yet. Should probably get to that.
  
-(Ben, formal, base, neutral) I [i]guess[/i] you are right.. Well, lead the way then.
+(Ben, special, base, neutral) I [i]guess[/i] you are right.. Well, lead the way then.
  
 [Song: PCPDating_ProCrastinatorShortLoop]
  
-(Ben, formal, base, neutral, left, slide, center)
+(Ben, special, base, neutral, left, slide, center)
 We make our way to the dancefloor and luckily find a slow song starts playing. Perfect, a slow dance will push us closer together and will be just the thing to #GetBenToGoGay.
  
 (PCPG) Hey, so uh, wanna like, slow dance together? Not in a gay kinda way, as we mentioned before, but like, in a teacher student kinda way.
  
-(Ben, formal, base, smittenMIN) Uhh.. uhhhh…
+(Ben, special, base, smittenMIN) Uhh.. uhhhh…
  
-(Ben, formal, base, smittenMAX) Yeah? Okay sure.
+(Ben, special, base, smittenMAX) Yeah? Okay sure.
 
 I quickly grab Ben’s hips before he changes his mind and soon enough we are swaying back and forth to the music. The smell of a freshly drunken Rockstar XDurance Marshmellow fills the air around us as I hold on to him tightly.
  
-(Ben, formal, point, smittenMIN) You know, I just wanted to say that I really enjoyed our time together this semester, despite how serious I took the whole PPU thing.
+(Ben, special, point, smittenMIN) You know, I just wanted to say that I really enjoyed our time together this semester, despite how serious I took the whole PPU thing.
  
 (PCPG) Yeah, I know Ben. I know
  
-(Ben, formal, exasperated, sadMIN) I mean, I feel like maybe I took things too far and soured the mood for everyone. I can just get so passionate about things sometimes that I do or say things I don’t actually mean.
+(Ben, special, exasp, sadMIN) I mean, I feel like maybe I took things too far and soured the mood for everyone. I can just get so passionate about things sometimes that I do or say things I don’t actually mean.
  
 (PCPG) Ben, can you shut the fuck up and let us enjoy this moment? Sometimes you talk too much dude.
  
-(Ben, formal, base, neutral) Yeah okay, fair enough. 
+(Ben, special, base, neutral) Yeah okay, fair enough. 
  
-(Ben, formal, exasperated, sadMIN) I mean, all I’m saying is that I’m sorry for acting the way I did. Wasn’t the best way to conduct myself personally.
+(Ben, special, exasp, sadMIN) I mean, all I’m saying is that I’m sorry for acting the way I did. Wasn’t the best way to conduct myself personally.
  
 (PCPG) It’s cool dude, stop worrying about it.
  
-(Ben, formal, base, smittenMIN) Okay, yeah I’ll stop now.
+(Ben, special, base, smittenMIN) Okay, yeah I’ll stop now.
  
 [fade to black]
 We continued dancing for a bit, but it’s not too long before we decide to bail early and just continue vaping at Ben’s place. That would have been the opportune time to “take advantage of the situation,” but I ended up never really having the balls to. 

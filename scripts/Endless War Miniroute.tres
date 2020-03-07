@@ -526,7 +526,7 @@ The next morning I go over to convince both gangs to join us, despite them both 
 [fade from black]
 
 (Ben, casual, base, neutral, offleft, slide, left)
-(Munchy, casual, standing, neutral, offright, slide, right)
+(Munchy, casual, default, neutral, offright, slide, right)
 We arrive at the monument and find Endless War excitedly waiting for us. Behind her is a white tarp covering something.. very big.
  
 (PCPG) What's going on? What’s behind you?
@@ -541,7 +541,7 @@ She looks at Munchy.
  
 (Endless War|Endless War, stand, happyMIN) Imagine if you can take all of your pent up anger and frustration of the Killers and fully express it on them and the rest of the population 24/7. 
  
-(Munchy, casual, standing, happyMIN, right)
+(Munchy, casual, default, happyMIN, right)
 She turns to face Ben.
  
 (Endless War|Endless War, stand, happyMIN) Imagine if we could keep mowing down Rowdies and ignorant juvies with those guns of yours without end or interruption.
@@ -549,7 +549,7 @@ She turns to face Ben.
 (Ben, casual, base, happyMIN, left)
 Munchy and Ben salivate at her propositions.
  
-(Ben|Ben, causal, point, happyMIN|cloud, left) Well, what are you suggesting then?
+(Ben|Ben, casual, point, happyMIN|cloud, left) Well, what are you suggesting then?
  
 (Endless War|Endless War, knife, neutral) You see, to truly engage in WAR, we need to first fully forgo our useless mortal bodies in preference of something.. slimier. We secondly need to indoctrinate everyone to the violence and bloodshed. To leave no person without the instinct to kill. No child without a deadly weapon.
 
@@ -565,7 +565,7 @@ Huh, that sounds a lot like that ever so popular branch of politics, anarcho-fac
 She then pulls down the tarp behind her revealing a monstrosity of a machine, with a nigh endless amount of pipes, wires, and machinery all caved in on each other. In the middle of it all is a seat, and strapped to that seat, is a gagged Davoo?
  
 (Ben, casual, base, shockedMIN, left)
-(Munchy, casual, standing, shockedMIN, right)
+(Munchy, casual, default, shockedMIN, right)
 (Endless War, stand, neutral, center, slide, center+50)
 (Davoo|Davoo, neutral, shockedMIN, offleft, slide, left-50) Mhhhmmmmm!!
  
@@ -587,7 +587,7 @@ She then pulls down the tarp behind her revealing a monstrosity of a machine, wi
 
 (Endless War, stand, happyMAX, center+50)
 (Ben, casual, base, happyMIN, left)
-(Munchy, casual, standing, happyMED, right)
+(Munchy, casual, default, happyMED, right)
 [CG end]
 
 Endless War continues to laugh as the crowd around her watches in shock and awe at her revelation.
@@ -621,21 +621,21 @@ I’m sorry Davoo, but progress requires sacrifices.
  
 (Ben, casual, base, happyMAX|cloud, left)
 (Munchy, casual, squatting, happyMAX, right)
-(Endless War, stand, blushMED|blushiesMIN, center+50)
+(Endless War, stand, smittenMED|blushMIN, center+50)
 (Davoo, neutral, shockedMAX, center-50) 
 (Ben and Munchy) HELL YEAH! FLIP THAT SWITCH BITCH!
 
 Endless War promptly complies and soon the machine behind her whirs into life as it sucks radioactive ooze from below and churns it into slime.
 
-(Endless War|Endless War, stand, blushMED|blushiesMED, center+50) AHAHAHA!! LET THE NEW AGE OF ENDLESS WAR BEGIN!!!
+(Endless War|Endless War, stand, smittenMED|blushMED, center+50) AHAHAHA!! LET THE NEW AGE OF ENDLESS WAR BEGIN!!!
 
 [Song: PCP-AMBIENT_Earthquake]
 
 The machine begins to speed up faster and faster, enough so that it almost seems like it will break apart at its hinges. Then just before it seems like everything will explode, the machine begins to turn in on itself, almost as though it’s falling into the tall monument behind it.
 
-(Endless War|Endless War, stand, blushMED|blushiesMED, center+50) And for the final ingredient! One who must sacrifice themselves so that the collective can function as one, who can incessantly chant to violence endlessly, a leader to direct this world to ENDLESS WAR!
+(Endless War|Endless War, stand, smittenMED|blushMED, center+50) And for the final ingredient! One who must sacrifice themselves so that the collective can function as one, who can incessantly chant to violence endlessly, a leader to direct this world to ENDLESS WAR!
 
-(Endless War|Endless War, stand, blushMAX|blushiesMAX, center+50) ME! Endless War!!
+(Endless War|Endless War, stand, smittenMAX|blushMAX, center+50) ME! Endless War!!
 
 [Davoo leaves]
 [EndlessWar leaves]

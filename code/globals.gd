@@ -8,6 +8,7 @@ var master_volume = 1
 var music_volume = 1
 var sfx_volume = 1
 var pause_input setget _pause_input_set
+var turbo_mode = false
 var loadedOnce = false
 var fading = false
 var sliding = false
@@ -230,3 +231,18 @@ func _input(event):
 func finish_fading():
 	fading = false
 	emit_signal('finished_fading')
+	
+#Sometimes the node is a videopalyer which use rect_position?
+func get_node_pos(given_node):
+	var pos
+	if given_node is VideoPlayer:
+		pos = given_node.rect_position
+	else:
+		pos = given_node.position
+	return pos
+	
+func set_node_pos(given_node, pos):
+	if given_node is VideoPlayer:
+		given_node.rect_position = pos
+	else:
+		given_node.position = pos

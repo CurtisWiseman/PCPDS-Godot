@@ -306,23 +306,49 @@ func switch(content, new, type, face=false, x=0, y=0):
 
 # Remove a layer based on it's name.
 func remove_name(cname):
-	
-	# Free the node at index and remove it from layers.
-	layers[getindex(cname)]['node'].queue_free()
-	layers.remove(getindex(cname))
+	var ind = getindex(cname)
+	if ind != null:
+		# Free the node at index and remove it from layers.
+		layers[ind]['node'].queue_free()
+		layers.remove(ind)
 
 # Remove a layer.
 func remove(node, i):
-	
-	node.queue_free()
-	layers.remove(i)
-	
+	if layers.size() <= i:
+		return
+	#Seems like tubro mode introduced some bad interactions RE: removing things,
+	#So I've made this MUCH safer. And remove attempts that are obviously bad shouldn't crash the game.
+	if is_instance_valid(node):
+		if layers[i]["node"] == node:
+			node.queue_free()
+			layers.remove(i)
+		else:
+			print("BAD ATTEMPT TO REMOVE LAYER, SMARTLY INTERVENING")
+			var interevened_successfully = false
+			for j in range(layers.size()):
+				if layers[j]["node"] == node:
+					interevened_successfully = true
+					node.queue_free()
+					layers.remove(j)
+					break
+			if not interevened_successfully:
+				prints("OH CRAP, TRIED TO REMOVE A LAYER THAT CLEARLY ISN'T THERE AT ALL'")
+				#breakpoint
+	else:
+		#Looks like free'd instances are looming around, let's cull those
+		remove_bad_layers()
 #	# Free the node at index and remove it from layers.
 #	layers[getindex(cname)]['node'].queue_free()
 #	layers.remove(getindex(cname))
 
-
-
+func remove_bad_layers():
+	var to_remove = []
+	for l in layers:
+		if not l.has("node") or not is_instance_valid(l["node"]):
+			to_remove.append(l)
+	for l in to_remove:
+		layers.erase(l)
+	
 # Function to move characters to specified positions.
 func position(cname, x, y=0, s=4, t=0, n='all'):
 	
@@ -350,7 +376,7 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	node = layers[index]['node'] # The node.
 	
 	# If x is null then keep x's current position.
-	if x == null: x = int(layers[index]['node'].position.x)
+	if x == null: x = int(global.get_node_pos(layers[index]['node']).x)
 	
 	# If y is a string then set mv to y, and y to 0.
 	if typeof(y) == TYPE_STRING:
@@ -383,11 +409,11 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 	if mv != null:
 		
 		# If the node position is the same as the destination do nothing and return.
-		if layers[index]['node'].position.x == x:
+		if global.get_node_pos(layers[index]['node']).x == x:
 			return
 		
 		# If the destination is negative then make the speed negative.
-		if x < layers[index]['node'].position.x:
+		if x < global.get_node_pos(layers[index]['node']).x:
 			s *= -1
 		
 		# If slide then do not interact with any characters on the way to destination.
@@ -655,19 +681,30 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 	if time <= 0:
 		print("Error: The 5th parameter on fadealpha only accepts values above 0.")
 		return
+		
 	
 	var ref
 	
 	if node != null: ref = weakref(node)
 	
+	#I somehow got a timer as the node once?!
+	if not is_instance_valid(node) or not node is CanvasItem:
+		#Again turbo mode does some bad thigns sometimes
+		remove_bad_layers()
+		#Making sure to wait before exiting since I imagine things don't expect this to exit immediately
+		ftimer.start(time) # Start the timer at 0.5 seconds.
+		yield(ftimer, 'timeout')
 	# If fade is out then fade out.
-	if fade == 'out':
+	elif fade == 'out':
 		percent = 100
 		# While percent isn't 0 fade to black.
 		while percent != 0 and global.fading:
 			percent -= spd # Subtract spd from percent.
 			if percent < 0: percent = 0 # Make percent 0 if it falls below.
 			p = float(percent)/100 # Make p percent/100
+			if not is_instance_valid(node):
+				#Welp, it's gone already!
+				break
 			if mod == 'self':
 				if ref: node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 				if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
@@ -677,7 +714,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
 		
-		if !global.fading:
+		if !global.fading and is_instance_valid(node):
 			if mod == 'self':
 				if ref: node.set_self_modulate(Color(1,1,1,0))
 			else:
@@ -692,6 +729,9 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 			if percent > 100: percent = 100 # Make percent 100 if it goes above.
 			p = float(percent)/100 # Make p percent/100
 			if mod == 'self':
+				if not is_instance_valid(node):
+					#Welp, it's gone already!
+					break
 				if ref: node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 				if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
 				if AFL: for afl in AFL: afl.set_self_modulate(Color(1,1,1,p)) # Modulate AFLs by p.
@@ -700,7 +740,7 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
 		
-		if !global.fading:
+		if !global.fading and is_instance_valid(node):
 			if mod == 'self':
 				if ref: node.set_self_modulate(Color(1,1,1,1))
 			else:
