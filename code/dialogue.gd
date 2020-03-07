@@ -79,7 +79,7 @@ func _process(delta):
 	if global.turbo_mode:
 		if turbo_timer < 0.0:
 			turbo = true
-			turbo_timer = 0.1
+			turbo_timer = 0.03
 		turbo_timer -= delta
 		
 	if turbo:
