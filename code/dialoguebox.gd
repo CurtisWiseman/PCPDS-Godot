@@ -973,6 +973,7 @@ func parse_outfit(info, parsedInfo, i, pos):
 func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	var blush = false
 	var shades = false
+	var kamina_shades = false
 	var beard = false
 	var knife = false
 	var ben_point = false
@@ -1002,6 +1003,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 				shades = true
 			elif tmp[k] == 'beard':
 				beard = true
+			elif tmp[k] == 'kaminashades':
+				kamina_shades = true
 #		if tmp.size() == 3:
 #			blushNum = int(parse_expnum(info[i], parsedInfo)[0]);
 #			blush = true
@@ -1016,12 +1019,16 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		var blushFace = search('return characterImages.'+parsedInfo+'.blush', info[i]) + 1
 		if blushFace != -1 and blushFace != -2: blushNum = blushNum -1 + blushFace
 		AFL += '\n\tsystems.display.face(characterImages.'+parsedInfo+'.blush['+str(blushNum)+'], '+body+', 0, 0, "blush")'
-	if shades:
-		AFL += '\n\tsystems.display.face(characterImages.nate.afl[0], '+body+', 0, 0, "shades")'
+	if shades or kamina_shades:
+		if kamina_shades or parsedInfo.find("casual") > -1:
+			AFL += '\n\tsystems.display.face(characterImages.nate.afl[1], '+body+', 0, 0, "kamina_shades")'
+		else:
+			AFL += '\n\tsystems.display.face(characterImages.nate.afl[0], '+body+', 0, 0, "shades")'
 	if beard:
 		AFL += '\n\tsystems.display.face(characterImages.nate.afl[2], '+body+', 0, 0, "shades")'
 	if ben_point:
 		AFL += '\n\tsystems.display.face(characterImages.ben.afl[2], '+body+', 0, 0, "point")'
+		
 		
 	var useDefault = false
 	if "happy".is_subsequence_of(info[i]):
