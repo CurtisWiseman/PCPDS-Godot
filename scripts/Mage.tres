@@ -1,17 +1,19 @@
 [Scene: Shortcut]
 
-[Location: pcpgroom]
+[Location: pcproom]
 [Song: PCPDating_HomeNight]
 
 Woah, that was a long-ass day. Time to clean up and head to bed.
 
 [SFX: PCP-SFX_DoorOpen]
-[Location: pcpgbathroom]
+
+[Location: pcpbathroom]
 
 The classes in this school may be exhausting, but they are definitely way more interesting than all the other schools I attended.
 
 [StopMusic]
 [SFX: PCP-SFX_DoorOpen]
+
 [Location: hallway2.dream]
 [Song: PCPDating_Tension]
 
@@ -37,7 +39,7 @@ I’m... in the university? But it seems... different. Something is clearly wron
 (Mage|Mage, campus, 3, angryMIN) Anyways, we have to hurry! There is a horde of zombies following me, they will be here any moment!
 
 
-[Song: PCP-AMBIENT_Zombies]
+[SFX: PCP-AMBIENT_Zombies]
 
 (PCPG) There are zombies here?
 
@@ -54,21 +56,17 @@ Ok, this is most definitely not the real university. The professors all hate nat
 
 (Mage|Mage, campus, 3, happyMAX, center, slide, left) There she is!
 
-<<<<<<< HEAD
-(Cerise|???, cerise, happy, offright, slide, center) Mage! What a pleasure to meet you here! And who’s this? Your new boyfriend?
-=======
+
 (Cerise|???, happy, offright, slide, center) Mage! What a pleasure to meet you here! And who’s this? Your new boyfriend?
->>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
+
 
 This conversation is somehow already more uncomfortable than getting chased by zombies.
 
 (Mage|Mage, campus, 1, angryMED|blushies) Quit joking Cerise, we have a problem! The zombies are back!
 
-<<<<<<< HEAD
-(cerise|Cerise, cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
-=======
+
 (Cerise|Cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
->>>>>>> 1fdf440c1b37676eaf1592c63b65ba2180811f72
+
 
 (Cerise) I will protect my Pokémon children!
 
@@ -79,7 +77,7 @@ This conversation is somehow already more uncomfortable than getting chased by z
 [SLIDE, Mage, left, offleft] 
 [SLIDE, Cerise, center, offright]
 
-[StopMusic]
+[StopSFX]
 [SFX: PCP-SFX_DemonScreetch]
 
 Wings grow out of the demon girl’s back, seeming to form giant claws, which start to slaughter the zombies as the horde enters from the hallways. Blood, organs and limbs fly through the air.
@@ -90,7 +88,7 @@ I feel nauseous.
 [Mage leaves]
 [cerise leaves]
 
-[Location: pcpgroom]
+[Location: pcproom]
 [StopMusic]
 
 AHHH!
@@ -103,7 +101,7 @@ This wacky university is like a world I never knew I wanted. A weird amalgam of 
 
 [fade to black]
 [StopMusic]
-[StopMusic]
+
 
 
 [Scene: Shadows of the Past]
