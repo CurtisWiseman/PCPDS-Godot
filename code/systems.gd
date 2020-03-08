@@ -90,7 +90,7 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	dialogue.name = 'Dialogue'
 	dialogue.bbcode_enabled = true
 	dialogue.margin_top = 80
-	dialogue.margin_bottom = 245
+	dialogue.margin_bottom = 345
 	dialogue.margin_left = 455
 	dialogue.margin_right = 1405
 	dialogue.set_theme(global.textTheme)

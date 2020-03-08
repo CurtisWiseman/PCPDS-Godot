@@ -568,11 +568,12 @@ func fade(content, from : Color, to : Color, time : float, mod='self', fadeSigna
 		global.finish_fading()
 		return
 	
-	# Reject time less <= 0.
-	if time <= 0:
-		print("Error: The 5th parameter on fadealpha only accepts values above 0.")
-		global.finish_fading()
-		return
+	#I use this to instantly shade things now too so....
+	### Reject time less <= 0.
+	#if time <= 0:
+	#	print("Error: The 5th parameter on fadealpha only accepts values above 0.")
+	#	global.finish_fading()
+	#	return
 	
 	var time_waited = 0.0
 	#I somehow got a timer as the node once?!
