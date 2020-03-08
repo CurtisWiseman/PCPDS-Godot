@@ -1,5 +1,4 @@
 [Scene: Shortcut]
-
 [Location: pcpgroom]
 [Song: PCPDating_HomeNight]
 
@@ -491,10 +490,10 @@ Where did that stray thought even come from? After scanning everything again, we
 [Scene: Don’t Let Your Dreams Be Memes]
 
 [Location: outsidepcpu.nightmare]
+[CG: Endless Eye]
 [fade from black]
 
 [Song: PCPDating_GameOver]
-[CG: endlesseye]
 
 (Endless War) Hey … don’t be afraid … you might be dead … slurp it down …
 
@@ -543,7 +542,7 @@ No…!
 
 [Location: mageforest.nightmare, overlay.bloodsplatter]
 [Lethal leaves]
-[CG: endlesseye]
+[CG: Endless Eye]
 (Endless War) Do you get it now, juve?
 [StopMusic]
 [Location: pcpgroom]
