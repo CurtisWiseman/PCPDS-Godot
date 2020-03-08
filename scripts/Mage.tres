@@ -1,13 +1,13 @@
 [Scene: Shortcut]
 
-[Location: pcproom]
+[Location: pcpgroom]
 [Song: PCPDating_HomeNight]
 
 Woah, that was a long-ass day. Time to clean up and head to bed.
 
 [SFX: PCP-SFX_DoorOpen]
 
-[Location: pcpbathroom]
+[Location: pcpgbathroom]
 
 The classes in this school may be exhausting, but they are definitely way more interesting than all the other schools I attended.
 
@@ -88,7 +88,7 @@ I feel nauseous.
 [Mage leaves]
 [cerise leaves]
 
-[Location: pcproom]
+[Location: pcpgroom]
 [StopMusic]
 
 AHHH!
@@ -328,7 +328,7 @@ I hadn’t noticed it before, but yes, every tree has a name. Even though their 
 
 
 [Scene: Let’s Go to the Mall]
-[Location: pcproom]
+[Location: pcpgroom]
 [fade from black]
 
 It’s finally weekend! I was really looking forward to this ... date? I guess it’s a date? I hope so at least.
@@ -548,7 +548,7 @@ No…!
 [CG: endlesseye]
 (Endless War) Do you get it now, juve?
 [StopMusic]
-[Location: pcproom]
+[Location: pcpgroom]
 [CG end]
 
 AHHHHHHHH!
