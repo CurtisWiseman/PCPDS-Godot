@@ -8,7 +8,7 @@ signal mouse_click
 signal transition_finish
 
 var dialogue := PoolStringArray() #All of the lines in the current text file. Not using a regular array for better performance
-var index := 0 #Index of current line of dialogue
+var index = 0 #Index of current line of dialogue
 var start := 0
 var dialogueScript: String
 var regex := RegEx.new()
@@ -32,6 +32,8 @@ var lastChoices
 var lastInChoice
 var lastChosenChoices
 var CG = null
+
+var lock = false
 
 func _ready(): 
 	systems = global.rootnode.get_node("Systems") # Assign the systems no to systems.
@@ -61,8 +63,7 @@ func _ready():
 func say(words, character = "", voice = null):
 	$Nametag.text = character
 	$Dialogue.say(words, voice)
-
-
+	
 # Function to calculate the number of unseen choices.
 func choice_calc(choice):
 	# Figure out if there are more unseen choices.
@@ -152,9 +153,17 @@ func choice_display(text, top, bot):
 func choice_pressed(choice, button):
 	
 	for item in displayChoices:
-		systems.canvas.remove_child(systems.canvas.get_node(item))
+		var n = systems.canvas.get_node(item)
+		
+		#seems godot likes to remove fullstops in node names?
+		#I'm curious that no one else has complained, so I'll have this be the fallback in case
+		#this is some weird version specific issue
+		if n == null:
+			n = systems.canvas.get_node(item.replace(".", ""))
+		systems.canvas.remove_child(n)
+		n.queue_free()
 	
-	waitTimer.wait_time = 1
+	waitTimer.wait_time = 0.5
 	waitTimer.start()
 	yield(waitTimer, 'timeout')
 	
@@ -364,7 +373,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				global.pause_input = false
 				game.safeToSave = true
 			
-			elif dialogue[index].findn('CG:') != -1:
+			elif dialogue[index].to_lower().findn('cg:') != -1:
 				global.pause_input = true
 				
 				var imageName = dialogue[index].lstrip('[')
@@ -375,13 +384,23 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				systems.display.image(imagePath, 10)
 				systems.display.fade(imagePath, Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1.0, 'self')
-				CG = imagePath
 				
+				#Remove the previous CG:
+				var old_cg = null
+				if CG != null:
+					old_cg = CG
+				CG = imagePath
 				yield(systems.display, 'transition_finish')
+				if old_cg != null:
+					systems.display.remove_name(old_cg)
 				global.pause_input = false
 			
-			elif dialogue[index].findn('CG|cut:') != -1:
+			elif dialogue[index].to_lower().findn('cg|cut:') != -1:
 				global.pause_input = true
+				
+				#Remove the previous CG:
+				if CG != null:
+					systems.display.remove_name(CG)
 				
 				var imageName = dialogue[index].lstrip('[')
 				imageName = imageName.rstrip(']')
@@ -394,7 +413,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				global.pause_input = false
 			
-			elif dialogue[index].findn('CG END|cut') != -1:
+			elif dialogue[index].to_lower().findn('cg end|cut') != -1:
 				global.pause_input = true
 				
 				if CG != null:
@@ -403,7 +422,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				global.pause_input = false
 			
-			elif dialogue[index].findn('CG END') != -1:
+			elif dialogue[index].to_lower().findn('cg end') != -1:
 				global.pause_input = true
 				if CG != null:
 					systems.display.fade(CG, Color(1, 1, 1, 1), Color(1, 1, 1, 0), 1.0, 'self')
@@ -589,16 +608,16 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					while dialogue[index] != '*':
 						index += 1
 				else:
-					# If chosenChoices is > 0 then determine if choice is a chosenChoice.
+					# Determine if we're in our choice!
 					for i in range(0, chosenChoices.size()):
-						# If choice is a chosenChoice then set inChoice to true.
 						if choice == chosenChoices[i]:
 							inChoice = true
-						# else skip the choice block.
-						else:
+							break
+					#If not, skip it
+					if not inChoice:
+						index += 1
+						while dialogue[index] != '*':
 							index += 1
-							while dialogue[index] != '*':
-								index += 1
 			# If an unseen choice then display it and adjacent unseen choices.
 			else:
 				global.pause_input = true
@@ -607,7 +626,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				yield(self, 'choiceChosen')
 				emit_signal('empty_line')
 				return
-			
 			index += 1
 			emit_signal('empty_line')
 		
@@ -623,8 +641,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			var noChar = false
 			
 			# Handle 'soft' newlines so that a newline does't sperate lines of dialogue when displayed.
-			if dialogue[index][dialogue[index].length()-1] == 'n' and dialogue[index][dialogue[index].length()-2] == '/':
-				dialogue[index+1] = dialogue[index].substr(0, dialogue[index].length()-1-1) + "\n" + dialogue[index+1]
+			while dialogue[index].ends_with("/n"):
+				dialogue[index+1] = dialogue[index].substr(0, dialogue[index].length()-2) + "\n" + dialogue[index+1]
 				index += 1
 			
 			# Replaces every instance of the word "PCPG" with the player name.
@@ -633,7 +651,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				dialogue[index] = regex.sub(dialogue[index], global.playerName, true)
 			
 			# If there is no text on the line then don't say anything.
-			if dialogue[index][dialogue[index].length()-1] == ')' or dialogue[index][dialogue[index].length()-1] == '$':
+			if dialogue[index].ends_with(')') or dialogue[index].ends_with('$'):
 				global.pause_input = true
 				say = false
 				if dialogue[index][dialogue[index].length()-1] == '$': wait = false
@@ -748,9 +766,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				dialogue[index] = regex.sub(dialogue[index], global.playerName, true)
 			
 			# Handle 'soft' newlines so that a newline does't sperate lines of dialogue when displayed.
-			var lastChar = dialogue[index].length()-1 # The position of the last character.
-			if dialogue[index][lastChar] == 'n' and dialogue[index][lastChar-1] == '/':
-				dialogue[index+1] = dialogue[index].substr(0, lastChar-1) + "\n" + dialogue[index+1]
+			while dialogue[index].ends_with("/n"):
+				dialogue[index+1] = dialogue[index].substr(0, dialogue[index].length()-2) + "\n" + dialogue[index+1]
 				index += 1
 			
 			if dialogue[index].begins_with("$(") and dialogue[index].ends_with(")"):
@@ -958,6 +975,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	var shades = false
 	var beard = false
 	var knife = false
+	var ben_point = false
 	var AFL = ''
 	var blushNum
 	var num
@@ -965,29 +983,25 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	if i == info.size(): # Don't use an expression if none is given.
 		parse_position(info, 'systems.display.image('+body+', 1)', body, i, pos)
 		return
+		
+	if info[0].to_lower() == "ben":
+		for e in info:
+			if e.to_lower() == "point":
+				ben_point = true
+				break
 	
 	if info[i].find('|') != -1:
 		var tmp = info[i].split('|', false)
 		info[i] = tmp[0]
 		
-		if tmp.size() == 2:
-			if 'blush'.is_subsequence_ofi(tmp[1]):
-				blushNum = int(parse_expnum(tmp[1], parsedInfo)[0])
+		for k in range(1, tmp.size()):
+			if 'blush'.is_subsequence_ofi(tmp[k]):
+				blushNum = int(parse_expnum(tmp[k], parsedInfo)[0]);
 				blush = true
-			elif tmp[1] == 'shades':
+			elif tmp[k] == 'shades':
 				shades = true
-			elif tmp[1] == 'beard':
+			elif tmp[k] == 'beard':
 				beard = true
-		else:
-			for k in range(1, tmp.size()):
-				if 'blush'.is_subsequence_ofi(tmp[k]):
-					blushNum = int(parse_expnum(tmp[k], parsedInfo)[0]);
-					blush = true
-				elif tmp[k] == 'shades':
-					shades = true
-				elif tmp[k] == 'beard':
-					beard = true
-		
 #		if tmp.size() == 3:
 #			blushNum = int(parse_expnum(info[i], parsedInfo)[0]);
 #			blush = true
@@ -1006,6 +1020,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		AFL += '\n\tsystems.display.face(characterImages.nate.afl[0], '+body+', 0, 0, "shades")'
 	if beard:
 		AFL += '\n\tsystems.display.face(characterImages.nate.afl[2], '+body+', 0, 0, "shades")'
+	if ben_point:
+		AFL += '\n\tsystems.display.face(characterImages.ben.afl[2], '+body+', 0, 0, "point")'
 		
 	var useDefault = false
 	if "happy".is_subsequence_of(info[i]):
@@ -1024,7 +1040,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		useDefault = true
 	elif "face".is_subsequence_of(info[i]):
 		useDefault = true
-	if not useDefault and (info[i] == 'right' or info[i] == 'left' or info[i] == 'center' or info[i] == 'offleft' or info[i] == 'offright' or info[i] == 'slide' or info[i] == 'off' or info[i] == 'silhouette'):
+	if not useDefault and (info[i] == 'right' or info[i] == 'left' or info[i] == 'center' or info[i] == 'offleft' or info[i] == 'offright' or info[i] == 'slide' or info[i] == 'off'):# or info[i] == 'silhouette'):
 		parse_position(info, 'systems.display.image('+body+', 1)'+AFL, body, i, pos)
 	else:
 		var expression_num_stuff = parse_expnum(info[i], parsedInfo)
@@ -1033,6 +1049,11 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		#STUPID HACK! People keep swapping between these two in the scripts...
 		if faceType == "shocked":
 			faceType = "shock"
+		#ANOTHER STUPID HACK! Gotta do this weird swap to squat for the faces...
+		#if parsedInfo.find("munchy") > -1:
+		#	var path = execreturn("return " + body)
+		#	if path.find("squatting") > -1:
+		#		parsedInfo += ".squatting"
 		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.'+faceType+'['+num+'], '+body+')'+AFL, body, i+1, pos)
 
 # Determines the correct face number for an epxression, returns
