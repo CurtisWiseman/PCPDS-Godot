@@ -12,6 +12,8 @@ var collidee = null # The node that get's collided.
 signal transition_finish # Signal that a transition function is finished.
 signal transition_finish_fade # Signal specifaclly for fade transitions.
 
+var faders = []
+
 # Set the background node to self by default.
 func _ready():
 	bgnode = self
@@ -21,7 +23,10 @@ func background(bg, type):
 	
 	# If the previous background was the same type then change the content and return.
 	if type == 'image' and bgtype == 'image':
-		bgnode.texture = load(bg)
+		var gfx = bgnode.get_node("gfx")
+		gfx.texture = load(bg)
+		gfx.scale.x = 1920.0/gfx.texture.get_width()
+		gfx.scale.y = 1080.0/gfx.texture.get_height()
 		return
 	if type == 'video' and bgtype == 'video':
 		bgnode.stream = load(bg)
@@ -32,10 +37,20 @@ func background(bg, type):
 	
 	# If of type image make the background a sprite.
 	if type == 'image':
-		bgnode = Sprite.new() # Create a new sprite node.
-		bgnode.set_name('BG') # Give the node the name BG.
-		bgnode.texture = load(bg) # Give bgnode the 'bg' image.
-		bgnode.centered = false # Uncenter the background.
+		bgnode = Node2D.new()
+		bgnode.set_name('BG')
+		#Characters are added as children of of the BG, so if we scale the bg, it'll mess
+		#with characters, by scaling a separate gfx child, we're fine
+		var gfx = Sprite.new()
+		gfx.texture = load(bg)
+		gfx.centered = false
+		
+		gfx.scale.x = 1920.0/gfx.texture.get_width()
+		gfx.scale.y = 1080.0/gfx.texture.get_height()
+		
+		bgnode.add_child(gfx)
+		gfx.name = "gfx"
+		
 		bgtype = type # Save the background type.
 	
 	# If of type video make the background a videoplayer.
@@ -497,36 +512,41 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 #			layers[index]['node'].set_scale(Vector2(1,1))
 #			layers[index]['node'].position = layers[index]['position']
 
-
-
-# Function to fade in an out from black.
-func fadeblack(content, fade, spd, mod='self', time=0.01):
-	
+# Function to fade 
+func fade(content, from : Color, to : Color, time : float, mod='self', fadeSignal=false):
+	var ftimer = Timer.new() # A timer node.
+	#For safety, only one thing can actually fade at a time.
+	#This helps prevent weird pseudo race conditions where two fades start on the same thing, etc
+	while faders.size() > 0:
+		ftimer.start(0.01)
+		yield(ftimer, 'timeout')
 	global.fading = true # Let the game know fading is occuring.
 	var node # The node to modulate from.
 	var index # Index of content node.
-	var percent # Used to calculate modulation.
-	var ftimer = Timer.new() # A timer node.
 	var face = null # If content has face.
 	var AFL = null # If content has AFLs.
 	var p # A var for percentage calculation.
 	add_child(ftimer) # Add the timer as a child.
 	ftimer.one_shot = true # Make the timer one shot.
 	
-	if typeof(content) == TYPE_STRING:
+	if typeof(content) == TYPE_STRING or content is CanvasItem:
 		# Get the node name of the path.
-		content = getname(content)
+		if typeof(content) == TYPE_STRING:
+			content = getname(content)
 	
 		# Find the index of content.
 		for i in range(layers.size()):
 			
-			if layers[i]['name'] == content:
+			if typeof(content) == TYPE_STRING and layers[i]['name'] == content:
 				index = i
 				break
-		
+			elif content is CanvasItem and content == layers[i]["node"]:
+				index = i
+				break
 		# If content node is not found then print an error and return.
 		if index == null:
 			print("Error: No node named " + content + " exists as a target for collision!")
+			global.finish_fading()
 			return
 		
 		node = layers[index]['node'] # Set node to the content node found by index.
@@ -541,152 +561,20 @@ func fadeblack(content, fade, spd, mod='self', time=0.01):
 		
 	elif content == bgnode:
 		node = bgnode
-	
-	# If speed is outside the range 1-50 then print an error and return.
-	if spd < 0 or spd > 100:
-		print('Error: The 3rd parameter on fadeblack only accepts values 0 <= x <= 100!')
-		return
-	
-	# Reject mod's that are not self or children.
-	if mod != 'self' and mod != 'children':
-		print("Error: The 4th parameter on fadeblack only accepts 'self' or 'children' as values!")
-		return
-	
-	# Reject time less <= 0.
-	if time <= 0:
-		print("Error: The 5th parameter on fadeblack only accepts values above 0.")
-		return
-	
-	# If speed is 0 then black/de-black the node.
-	if spd == 0:
-		if node.self_modulate == Color(0,0,0,1):
-			node.set_self_modulate(Color(1,1,1,1))
-			if face: face.set_self_modulate(Color(1,1,1,1))
-			if AFL: for afl in AFL: afl.set_self_modulate(Color(1,1,1,1))
-		else:
-			node.set_self_modulate(Color(0,0,0,1))
-			if face: face.set_self_modulate(Color(0,0,0,1))
-			if AFL: for afl in AFL: afl.set_self_modulate(Color(0,0,0,1))
-	
-	# If fade is out then fade out.
-	elif fade == 'out':
-		percent = 100
-		# While percent isn't 0 fade to black.
-		while percent != 0  and global.fading:
-			percent -= spd # Subtract spd from percent.
-			if percent < 0: percent = 0 # Make percent 0 if it falls below.
-			p = float(percent)/100 # Make p percent/100
-			if mod == 'self':
-				node.set_self_modulate(Color(p,p,p,1)) # Modulate the node by p.
-				if face: face.set_self_modulate(Color(p,p,p,1)) # Modulate the face by p.
-				if AFL: for afl in AFL: afl.set_self_modulate(Color(p,p,p,1)) # Modulate AFLs by p.
-			else:
-				node.set_modulate(Color(p,p,p,1)) # Modulate the node and all it's children by p.
-			ftimer.start(time) # Start the timer at 0.5 seconds.
-			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
-		
-		if !global.fading:
-			if mod == 'self':
-				node.set_self_modulate(Color(0,0,0,1))
-			else:
-				node.set_modulate(Color(0,0,0,1))
-	
-	# If fade is in then fade in.
-	elif fade == 'in':
-		percent = 0
-		# While percent isn't 0 fade from black.
-		while percent != 100 and global.fading:
-			percent += spd # Add spd to percent.
-			if percent > 100: percent = 100 # Make percent 100 if it goes above.
-			p = float(percent)/100 # Make p percent/100
-			if mod == 'self':
-				node.set_self_modulate(Color(p,p,p,1)) # Modulate the node by p.
-				if face: face.set_self_modulate(Color(p,p,p,1)) # Modulate the face by p.
-				if AFL: for afl in AFL: afl.set_self_modulate(Color(p,p,p,1)) # Modulate AFLs by p.
-			else:
-				node.set_modulate(Color(p,p,p,1)) # Modulate the node and all it's children by p.
-			ftimer.start(time) # Start the timer at 0.5 seconds.
-			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
-			
-		if !global.fading:
-			if mod == 'self':
-				node.set_self_modulate(Color(1,1,1,1))
-			else:
-				node.set_modulate(Color(1,1,1,1))
-	
-	# Else print an error if fade is not in or out.
-	else:
-		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
-	
-	emit_signal('transition_finish')
-	global.finish_fading()# Let the game know fading is done.
-	ftimer.queue_free() # Free the timer.
-
-
-
-# Function to fade in an out from black.
-func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
-	
-	global.fading = true # Let the game know fading is occuring.
-	var node # The node to modulate from.
-	var index # Index of content node.
-	var percent # Used to calculate modulation.
-	var ftimer = Timer.new() # A timer node.
-	var face = null # If content has face.
-	var AFL = null # If content has AFLs.
-	var p # A var for percentage calculation.
-	add_child(ftimer) # Add the timer as a child.
-	ftimer.one_shot = true # Make the timer one shot.
-	
-	if typeof(content) == TYPE_STRING:
-		# Get the node name of the path.
-		content = getname(content)
-	
-		# Find the index of content.
-		for i in range(layers.size()):
-			
-			if layers[i]['name'] == content:
-				index = i
-				break
-		
-		# If content node is not found then print an error and return.
-		if index == null:
-			print("Error: No node named " + content + " exists as a target for collision!")
-			return
-		
-		node = layers[index]['node'] # Set node to the content node found by index.
-		
-		# Get a face if it exists.
-		if layers[index].get('face') and mod == 'self':
-			face = layers[index]['face']
-		
-		# Get AFLs if they exists.
-		if layers[index].get('AFL') and mod == 'self':
-			AFL = layers[index]['AFL']
-		
-	elif content == bgnode:
-		node = bgnode
-	
-	# If speed is outside the range 1-50 then print an error and return.
-	if spd <= 0 or spd > 100:
-		print('Error: The 3rd parameter on fadealpha only accepts values 0 < x <= 100!')
-		return
 	
 	# Reject mod's that are not self or children.
 	if mod != 'self' and mod != 'children':
 		print("Error: The 4th parameter on fadealpha only accepts 'self' or 'children' as values!")
+		global.finish_fading()
 		return
 	
 	# Reject time less <= 0.
 	if time <= 0:
 		print("Error: The 5th parameter on fadealpha only accepts values above 0.")
+		global.finish_fading()
 		return
-		
 	
-	var ref
-	
-	if node != null: ref = weakref(node)
-	
+	var time_waited = 0.0
 	#I somehow got a timer as the node once?!
 	if not is_instance_valid(node) or not node is CanvasItem:
 		#Again turbo mode does some bad thigns sometimes
@@ -694,61 +582,41 @@ func fadealpha(content, fade, spd, mod='self', time=0.01, fadeSignal=false):
 		#Making sure to wait before exiting since I imagine things don't expect this to exit immediately
 		ftimer.start(time) # Start the timer at 0.5 seconds.
 		yield(ftimer, 'timeout')
+	
+	
+	faders.append(node)
+	
 	# If fade is out then fade out.
-	elif fade == 'out':
-		percent = 100
-		# While percent isn't 0 fade to black.
-		while percent != 0 and global.fading:
-			percent -= spd # Subtract spd from percent.
-			if percent < 0: percent = 0 # Make percent 0 if it falls below.
-			p = float(percent)/100 # Make p percent/100
-			if not is_instance_valid(node):
-				#Welp, it's gone already!
-				break
-			if mod == 'self':
-				if ref: node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
-				if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
-				if AFL: for afl in AFL: afl.set_self_modulate(Color(1,1,1,p)) # Modulate AFLs by p.
-			else:
-				if ref: node.set_modulate(Color(1,1,1,p)) # Modulate the node and all it's children by p.
-			ftimer.start(time) # Start the timer at 0.5 seconds.
-			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+	# While percent isn't 0 fade to black.
+	while time_waited < time and global.fading:
+		var cur_col = from.linear_interpolate(to, clamp(time_waited/time, 0.0, 1.0))
+		if not is_instance_valid(node):
+			#Welp, it's gone already!
+			break
+		if mod == 'self':
+			node.set_self_modulate(cur_col) # Modulate the node by p.
+			if face: face.set_self_modulate(cur_col) # Modulate the face by p.
+			if AFL: 
+				for afl in AFL: 
+					afl["node"].set_self_modulate(cur_col) # Modulate AFLs by p.
+		else:
+			node.set_modulate(cur_col) # Modulate the node and all it's children by p.
+		ftimer.start(0.01) # Start the timer at 0.5 seconds.
+		yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+		time_waited += 0.01
 		
-		if !global.fading and is_instance_valid(node):
-			if mod == 'self':
-				if ref: node.set_self_modulate(Color(1,1,1,0))
-			else:
-				if ref: node.set_modulate(Color(1,1,1,0))
-	
-	# If fade is in then fade in.
-	elif fade == 'in':
-		percent = 0
-		# While percent isn't 0 fade from black.
-		while percent != 100 and global.fading:
-			percent += spd # Add spd to percent.
-			if percent > 100: percent = 100 # Make percent 100 if it goes above.
-			p = float(percent)/100 # Make p percent/100
-			if mod == 'self':
-				if not is_instance_valid(node):
-					#Welp, it's gone already!
-					break
-				if ref: node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
-				if face: face.set_self_modulate(Color(1,1,1,p)) # Modulate the face by p.
-				if AFL: for afl in AFL: afl.set_self_modulate(Color(1,1,1,p)) # Modulate AFLs by p.
-			else:
-				if ref: node.set_modulate(Color(1,1,1,p)) # Modulate the node and all it's children by p.
-			ftimer.start(time) # Start the timer at 0.5 seconds.
-			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
-		
-		if !global.fading and is_instance_valid(node):
-			if mod == 'self':
-				if ref: node.set_self_modulate(Color(1,1,1,1))
-			else:
-				if ref: node.set_modulate(Color(1,1,1,1))
-	
-	# Else print an error if fade is not in or out.
-	else:
-		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
+	if is_instance_valid(node):
+		if mod == 'self':
+			node.set_self_modulate(to)
+			if face: face.set_self_modulate(to) # Modulate the face by p.
+			if AFL: 
+				for afl in AFL: 
+					afl["node"].set_self_modulate(to) # Modulate AFLs by p.
+		else:
+			node.set_modulate(to)
+			
+			
+	faders.erase(node)
 	
 	if !fadeSignal: emit_signal('transition_finish')
 	else: emit_signal('transition_finish_fade')
@@ -782,14 +650,13 @@ func getindex(content):
 
 # Function to get a unique node name for an image/video layer.
 func layernames(path):
-	
-	var layname = '' # Appended to to create a unique name.
-	
 	path = path.left(path.find_last('.')) # Remove the file extension.
 	
-	# Use the fact that '/' cannot be in file names to find the last slash, and thus the image name after it.
-	for i in range(path.find_last('/') + 1, path.length()):
-		layname += path[i]
+	var layname = path.substr(path.find_last("/")+1)
+		
+	#Redman's name is missing in his graphics :/
+	if path.to_lower().find("redman") != -1:
+		layname = "redman_" + layname
 		
 	# Check for duplicate file names.
 	for i in range(0, layers.size()):
@@ -988,13 +855,11 @@ func AddMeshShape(area, mesh):
 
 # Function to get the node name of a path.
 func getname(path):
-	var node = '' # Used to build node name.
-	
-	path = path.left(path.find_last('.')) # Remove the file extension.
-	
-	# Use the fact that '/' cannot be in file names to find the last slash, and thus the image name after it.
-	for i in range(path.find_last('/') + 1, path.length()):
-		node += path[i]
+	var node = path.left(path.find_last('.')) # Remove the file extension.
+	node = node.substr(node.find_last("/")+1)
+	#Redman's name is missing in his graphics :/
+	if path.to_lower().find("redman") != -1:
+		node = "redman_" + node
 	
 	return node
 
