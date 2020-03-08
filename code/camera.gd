@@ -32,51 +32,38 @@ func _ready():
 	add_child(shakeTimer)
 
 
-
-# Zoom to a given percent on a given point at a given speed from the current zoom.
-# The given position will be the center of the zoom, not the left/top sides.
-# Negative values for percent will zoom into the picture, flip it, and zoom back out to the given percent.
-func zoom(percent:int=100, x:int=offset.x, y:int=offset.y, speed:float=0.5):
-	if global.cameraMoving or compare(percent): return
+func zoom(zoom_factor : float, intended_offset : Vector2, speed : float):
+	if global.cameraMoving: return
 	global.pause_input = true
 	global.cameraMoving = true
-	lastZoom = Vector2(percent/100.0, percent/100.0)
-	lastOffset = Vector2(x,y)
+	var left = -1920.0*0.5
+	var right = -left
+	var top = -1080.0*0.5
+	var bottom = -top
 	
-	if speed <= 0:
-		print('Invalid value for parameter 4 of systems.camera.zoom()! Must be greater than 0.')
-		return
+	intended_offset = Vector2(right*intended_offset.x, bottom*intended_offset.y)
 	
-	if percent == 0:
-		print('Invalid value for parameter 1 of systems.camera.zoom()! Must not equal to 0.')
-		return
+	var start_offset = Vector2(offset.x, offset.y)-Vector2(posX, posY)
+	var start_zoom = Vector2(zoom.x, zoom.y)
+	var target_zoom = Vector2(zoom_factor, zoom_factor)
+	var time = 0.0
+	while time < speed:
+		zoom = start_zoom.linear_interpolate(target_zoom, time/speed)
+		#Clamp the offset so that it doesn't go outside the image
+		var cur_left = left*zoom.x 
+		var cur_right = right*zoom.x 
+		var cur_top = top*zoom.y
+		var cur_bottom = bottom*zoom.y 
+		
+		var offset_this_frame = start_offset.linear_interpolate(intended_offset, time/speed)
+		#offset_this_frame.x = clamp(offset_this_frame.x, left-cur_left, right-cur_right)
+		#offset_this_frame.y = clamp(offset_this_frame.y, top-cur_top, bottom-cur_bottom)
+		offset = offset_this_frame+Vector2(posX, posY)
+		waitTimer.start()
+		yield(waitTimer, 'timeout')
+		time += waitTimer.wait_time
 	
-	var zoomBy = zoom.x * 100
-	var offsetBy = abs((zoomBy - percent)/speed)
-	if offsetBy == 0: return
-	offsetBy = Vector2((offset.x - x)/offsetBy, (offset.y - y)/offsetBy)
-	var Offset = offset
-	
-	if percent < zoomBy:
-		while zoomBy > percent and !finishMovment:
-			if zoomBy - speed > percent: zoomBy -= speed
-			else: zoomBy = percent
-			Offset = Offset - offsetBy
-			zoom = Vector2(zoomBy/100.0, zoomBy/100.0)
-			offset = Offset
-			waitTimer.start()
-			yield(waitTimer, 'timeout')
-	elif percent > zoomBy:
-		while zoomBy < percent and !finishMovment:
-			if zoomBy + speed < percent: zoomBy += speed
-			else: zoomBy = percent
-			Offset = Offset - offsetBy
-			zoom = Vector2(zoomBy/100.0, zoomBy/100.0)
-			offset = Offset
-			waitTimer.start()
-			yield(waitTimer, 'timeout')
-	
-	offset = Vector2(x,y)
+	#offset = Vector2(x,y)
 	global.cameraMoving = false
 	global.pause_input = false
 	emit_signal('movement_finished')
