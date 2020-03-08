@@ -20,7 +20,6 @@ var displayChoices = []
 var displayingChoices := false
 var waitTimer := Timer.new()
 var numOfChoices := 0
-var fade = false
 var notsame
 var overlays = []
 var lastCG
@@ -186,7 +185,6 @@ func lastKeep(idx):
 
 # The main dialogue function.
 func _on_Dialogue_has_been_read(setIndex=false):
-	
 	if index < dialogue.size(): #Checks to see if end of document has been reached
 		#Skips empty lines e.g spacing
 		while dialogue[index].length() == 0:
@@ -219,10 +217,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				command = command.split(' ', false)
 				
 				var character = command[0].to_lower()
-				var speed = 3
+				var speed = 0.5
 				
-				if command.size() == 3:
-					speed = int(command[2])
+				if command.size() == 3 and command[2].is_valid_float():
+					speed = float(command[2])
 				
 				var characterToRemove = null
 				var rmIndex
@@ -241,8 +239,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 						rmIndex = i
 						break
 				
+				prints("Leaving:", character, characterToRemove != null)
+				
 				if characterToRemove != null:
-					systems.display.fadealpha(characterToRemove, 'out', speed)
+					systems.display.fade(characterToRemove, Color(1, 1, 1, 1), Color(1, 1, 1, 0), speed)
 					yield(systems.display, 'transition_finish')
 					systems.display.remove(characterToRemove, rmIndex)
 				
@@ -374,7 +374,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var imagePath = 'res://images/CG/' + imageName + '.png'
 				
 				systems.display.image(imagePath, 10)
-				systems.display.fadealpha(imagePath, 'in', 1, 'self', 0.01)
+				systems.display.fade(imagePath, Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1.0, 'self')
 				CG = imagePath
 				
 				yield(systems.display, 'transition_finish')
@@ -406,7 +406,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('CG END') != -1:
 				global.pause_input = true
 				if CG != null:
-					systems.display.fadealpha(CG, 'out', 1, 'self', 0.01)
+					systems.display.fade(CG, Color(1, 1, 1, 1), Color(1, 1, 1, 0), 1.0, 'self')
 					yield(systems.display, 'transition_finish')
 					#The yield means something else could fuck with it in between!
 					if CG != null:
@@ -520,7 +520,26 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			elif dialogue[index].findn('ENDING') != -1:
 				scene.change('main_menu', 'fadeblack', 1, 0.01)
-			
+			elif dialogue[index].find('ZOOM') == 1:
+				var line = dialogue[index].strip_edges()
+				var command = line.substr(1, line.length()-2).split(' ', false)
+				
+				var bad_zoom =  false
+				if command.size() != 5:
+					bad_zoom = true
+				else:
+					for v in command:
+						if v != 'ZOOM' and not v.is_valid_float():
+							bad_zoom = true
+							break
+				if bad_zoom:
+					prints("Bad zoom values:", command)
+				else:
+					var zoom_factor = float(command[1])
+					var intended_offset = Vector2(float(command[2]), float(command[3]))
+					var speed = float(command[4])
+					systems.camera.zoom(zoom_factor, intended_offset, speed)
+				
 			waitTimer.wait_time = 0.01
 			waitTimer.start()
 			yield(waitTimer, "timeout")
@@ -799,7 +818,7 @@ func parse_info(info):
 			remove_dupes(charName, info)
 			yield(self, 'dupeCheckFinished')
 			if notsame[0]: parse_outfit(info, charName, 1, notsame[1])
-
+	
 # Removes duplicate bodies of characters if they exist.
 func remove_dupes(character, info):
 	waitTimer.wait_time = 0.01
@@ -816,6 +835,9 @@ func remove_dupes(character, info):
 		var is_ag_layer = layer.begins_with('ag_')
 		
 		if layer.findn(character) != -1 or (removing_ag_dupes and is_ag_layer):
+			#STUPID HACK "MayGib" has "May" in the name...
+			if character == "may" and layer.find("maygib") != -1:
+				continue
 			if size == 1:
 				notsame = [false, null]
 				emit_signal('dupeCheckFinished')
@@ -1056,84 +1078,82 @@ func parse_911(info, parsedInfo, i, pos):
 
 # Parses the position for a character.
 func parse_position(info, parsedInfo, body, i, pos):
+	#Be EXTREMELY careful messing with this, it is VERY sensitive to changes and you may
+	#introduce graphics glitches
 	var transition = false
 	var extra = 0
 	var move = false
 	var num
 	
-	if i >= info.size():
-		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
-		return
-	
-	if info[i] == 'silhouette' or info[i] == 'fade':
-		var speed = 0.01
-		transition = info[i]
-		info.remove(i)
+	var j = i
+	while j < info.size():
+		if info[j] == 'silhouette' or info[j] == 'fade':
+			var speed = 0.01
+			transition = 'silhouette' if info[j] == 'silhouette' else 'fade'
+			info.remove(j)
+		else:
+			j += 1
+			
+	if i < info.size():
+		if i + 2 == info.size()-1:
+			move = true
+		elif i + 3 == info.size()-1:
+			for chr in info[i+3]:
+				if int(chr) == 0:
+					print('Invalid speed on line ' + String(index+1) + ' of the script!')
+					return
+			move = true
 		
-		if fade: info.remove(i)
-		
-		if i >= info.size():
-			if transition == 'silhouette': execute(parsedInfo+'\n\tsystems.display.fadeblack('+body+', "in", 0)\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
-			else: execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
+		if info[i].findn('+') != -1:
+			var tmp = info[i].split('+', true, 1)
+			info[i] = tmp[0]
+			extra = int(tmp[1])
+		elif info[i].findn('-') != -1:
+			var tmp = info[i].split('-', true, 1)
+			info[i] = tmp[0]
+			extra = int(tmp[1]) * -1
+		elif info[i] == 'slideNoChange':
+			info[i] = 'slide'
+			parse_move(info, body, i)
 			return
-	
-	if i + 2 == info.size()-1:
-		move = true
-	elif i + 3 == info.size()-1:
-		for chr in info[i+3]:
-			if int(chr) == 0:
-				print('Invalid speed on line ' + String(index+1) + ' of the script!')
-				return
-		move = true
-	
-	if info[i].findn('+') != -1:
-		var tmp = info[i].split('+', true, 1)
-		info[i] = tmp[0]
-		extra = int(tmp[1])
-	elif info[i].findn('-') != -1:
-		var tmp = info[i].split('-', true, 1)
-		info[i] = tmp[0]
-		extra = int(tmp[1]) * -1
-	elif info[i] == 'slideNoChange':
-		info[i] = 'slide'
-		parse_move(info, body, i)
-		return
-	elif info[i] == 'slide':
-		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
-		parse_move(info, body, i)
-		return
-	
-	if info[i].findn('|') != -1:
-		var cords = info[i].split('|', false, 1)
-		if transition: parsedInfo += _transition(transition, body, fade)
-		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+cords[0]+', '+cords[1]+')')
-		if move: parse_move(info, body, i+1)
-	elif info[i] == 'right':
-		num = 600 + extra
-		if transition: parsedInfo += _transition(transition, body, fade)
-		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
-		if move: parse_move(info, body, i+1)
-	elif info[i] == 'left':
-		num = -600 + extra
-		if transition: parsedInfo += _transition(transition, body, fade)
-		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
-		if move: parse_move(info, body, i+1)
-	elif info[i] == 'center':
-		if transition: parsedInfo += _transition(transition, body, fade)
-		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(extra)+', 0)')
-		if move: parse_move(info, body, i+1)
-	elif info[i] == 'offleft':
-		if transition: parsedInfo += _transition(transition, body, fade)
-		execute(parsedInfo+'\n\tsystems.display.position('+body+', -1650, 0)')
-		if move: parse_move(info, body, i+1)
-	elif info[i] == 'offright':
-		if transition: parsedInfo += _transition(transition, body, fade)
-		execute(parsedInfo+'\n\tsystems.display.position('+body+', 1650, 0)')
-		if move: parse_move(info, body, i+1)
-	elif info[i] == 'off':
-		pass # Do nothing if the character is speaking off screen.
+		elif info[i] == 'slide':
+			execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
+			parse_move(info, body, i)
+			return
+		
+		if info[i].findn('|') != -1:
+			var cords = info[i].split('|', false, 1)
+			if transition: parsedInfo += _transition(transition, body)
+			execute(parsedInfo+'\n\tsystems.display.position('+body+', '+cords[0]+', '+cords[1]+')')
+			if move: parse_move(info, body, i+1)
+		elif info[i] == 'right':
+			num = 600 + extra
+			if transition: parsedInfo += _transition(transition, body)
+			execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
+			if move: parse_move(info, body, i+1)
+		elif info[i] == 'left':
+			num = -600 + extra
+			if transition: parsedInfo += _transition(transition, body)
+			execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
+			if move: parse_move(info, body, i+1)
+		elif info[i] == 'center':
+			if transition: parsedInfo += _transition(transition, body)
+			execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(extra)+', 0)')
+			if move: parse_move(info, body, i+1)
+		elif info[i] == 'offleft':
+			if transition: parsedInfo += _transition(transition, body)
+			execute(parsedInfo+'\n\tsystems.display.position('+body+', -1650, 0)')
+			if move: parse_move(info, body, i+1)
+		elif info[i] == 'offright':
+			if transition: parsedInfo += _transition(transition, body)
+			execute(parsedInfo+'\n\tsystems.display.position('+body+', 1650, 0)')
+			if move: parse_move(info, body, i+1)
+		elif info[i] == 'off':
+			pass # Do nothing if the character is speaking off screen.
 	else:
-		return
+		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
+	if transition:
+		execute(_transition(transition, body))
 
 # Function to parse position movement.
 func parse_move(info, body, i):
@@ -1200,11 +1220,11 @@ func execreturn(parsedInfo):
 	return script.eval()
 
 # Function to return a transition of a character.
-func _transition(transition, body, fade):
+func _transition(transition, body):
 	if transition == 'silhouette':
-		return '\n\tsystems.display.fadeblack('+body+', "in", 0)'
-	elif fade:
-		return '\n\tsystems.display.fadealpha('+body+', "in", 10, "self", 0.01)'
+		return '\n\tsystems.display.fade('+body+', Color(0, 0, 0, 1), Color(0, 0, 0, 1), 0.0)'
+	elif transition == 'fade':
+		return '\n\tsystems.display.fade('+body+', Color(1, 1, 1, 0), Color(1, 1, 1, 1), 0.5)'
 	else:
 		return ''
 
@@ -1228,9 +1248,6 @@ func get_body(info, i=1):
 	return body
 
 
-
-
-
 func fadeblackalpha(node, fade, spd, time=0.5):
 	global.fading = true # Let the game know fading is occuring.
 	var percent # Used to calculate modulation.
@@ -1243,6 +1260,7 @@ func fadeblackalpha(node, fade, spd, time=0.5):
 	# If speed is outside the range 1-50 then print an error and return.
 	if spd <= 0 or spd > 100:
 		print('Error: The 3rd parameter on fadealpha only accepts values 0 < x <= 100!')
+		global.finish_fading()
 		return
 	
 	# If fade is out then fade out.
