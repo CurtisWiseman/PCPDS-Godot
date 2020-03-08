@@ -530,7 +530,7 @@ The gears start to turn in my head, and a downright disgusting picture slowly un
 [Scene: Rowdy Reflection]
 
 [StopMusic]
-[Location: pcpgroom]
+[Location: pcproom]
 [Song: PCPDating_HomeNight]
 
 Man, what a day…
@@ -1312,7 +1312,7 @@ Going back home and hitting the hay for the night is tempting, but I feel like t
 
 (PCPG) Ah, sure, yeah.
 
-[Location: pcpgroom]
+[Location: pcproom]
 
 What a godsend, I finally get to rest after all the shit I’ve been through today. Hopefully I won’t have to get into any fights tomorrow either, I think I’ve had enough bloodshed for one week.
 
@@ -1330,7 +1330,7 @@ ZZZzzz…
 
 (PCPG) ?!
 
-[Location: pcpgroom]
+[Location: pcproom]
 [Fade from black]
 
 What was up with that dream? I can’t remember much, but there was this weird guy in a bird mask, who… I felt like I’ve seen somewhere before…
@@ -1457,7 +1457,7 @@ ZZZzzz...
 [Munchy leaves]
 *
 
-[Location: pcpgroom]
+[Location: pcproom]
 [Song: PCPDating_ProCrastinatorShortLoop]
 
 Thank God, I’m finally home. As fucking haggard as I am, this day was packed with experiences I’ll never forget. Taking a Killer’s life, I finally did it! I’m finally a bonafide Rowdy, after all the trouble I went through. And tomorrow, I’ll just prove that fact once more, by standing with my Kingpin against the hordes of Killers that are sure to overstay their welcome at the Roughhouse.
@@ -1471,7 +1471,7 @@ Ah, what am I saying! Ben’s never won a Slimefest, and he never will! The batt
 
 ZZZzzz…
 
-[Location: pcpgroom]
+[Location: pcproom]
 [Fade from black]
 
 [SFX: PCP-SFX_AlarmClock]
