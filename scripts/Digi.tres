@@ -1,6 +1,5 @@
 [Scene: Writing in Fast Motion]
-
-[Song: PCPDating_ClassMemes_Simple & Clean]
+[Song: PCPDating_ClassMemes_Simple _ Clean]
 [Location: hallway2]
 
 With the tap of a finger, I add the entirety of Yu Yu Hakusho to my anime list, making it slightly less pathetic in the process. 
@@ -42,10 +41,10 @@ While something about coming to school and returning fifteen bucks poorer withou
 [StopMusic]
 [Location: japaneseclass.day, japaneseclass.day.foreground]
 [Song: PCPDating_ClassJapanese]
-
+[fade from black]
 (Digi|Professor Digibro, Campus, 5, HappyMED)
 
-[fade from black]
+
 
 [Screen shake]
 
@@ -600,7 +599,7 @@ I’m still fucking wasted.
 [credits]
 *
 
-*get something to eat*
+*Get something to eat*
 
 [==> The Way to a Man's Heart]
 *
@@ -789,8 +788,9 @@ The sun is rising.
 
 [Location: scienceclass]
 [Song: PCPDating_ClassScience]
-(Ben|Professor Saint, campus, base, neutral)
 [fade from black]
+(Ben|Professor Saint, campus, base, neutral)
+
 
 (Ben|Professor Saint, campus, base, neutral) …and of course, corporate funded science has nothing better to do than indulge the vanity of capital, even when there are multiple global crisis to be averted. 
 
@@ -853,9 +853,10 @@ PCPG, you did it again!
 [StopMusic]
 [Location: musicclass, musicclass.foreground]
 [Song: PCPDating_ClassJapanese]
+[fade from black]
 (Digi|Digi, Campus, 3, HappyMED)
 (Nate|Professor Bestman, Campus, Pointing, HappyMAX|shades, left)
-[fade from black]
+
 
 (Digi|Digi, Campus, 3, HappyMED)
 
@@ -2071,31 +2072,6 @@ All of the Digi-echs ten laserguns fire at once, leaving no trace of Mother’s 
 
 (PCPG) Okay, yeah. Sure. Let’s go to prom.
 
-[fade to black]
-[StopMusic]
-[Song: PCPDating_HappyOrSomething]
-[Location: outsidepcpu.day]
-[fade from black]
-
-(PCPG) So, are we gonna seal the dimensional rift?
-
-(Digi|Digi, Campus, 3, ConfusedMIN) Are you kidding? This is a direct gateway to all of anime, of course we’re leaving it open.
-
-(Digi|Digi, Campus, 3, SmittenMAX) We are essentially gods now.
-
-(PCPG) Huh, neat. You wanna find an interesting world and live there then?
-
-(Digi|Digi, Campus, 2, SmittenMAX) This whole “When will they build the world I wanna live in”-thing is bullshit. Just fucking build it yourself.
-
-(Digi|Digi, Campus, 2, SmittenMED) That’s what this school is. In fact:... 
-
-(Digi|Digi, Campus, 2, SmittenMED) Do you want to go to RadProm with me?
-
-(PCPG) As literal gods with anime power beyond comprehension?
-
-(Digi|Digi, Campus, 5, SmittenMED) Yeah, that’s why it’s fucking hilarious.
-
-(PCPG) Okay, yeah. Sure. Let’s go to prom.
 
 [fade to black]
 [StopMusic]

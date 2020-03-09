@@ -1,8 +1,8 @@
 [Scene: Chicken in a Basketball]
+
 [Location: gibbonroom]
 [Song: PCPDating_HomeNight]
 [fade from black]
-
 We enter the room and immediately I see a bunch of cool shit, including a guitar, some plushies I haven’t seen before, and an impressive suit of armour crafted out of paper plates and paper clips. It’s a good thing that Bang Energy cured my pet allergies, because there’s even a cute cat and an even cuter dog sitting on and beside his bed. 
 (Gibbon|Gibbon, casual, default, happyMIN, offright, slide, center) Hey Alley-Oop how’s it going? 
 But nothing replies. Is he trying to talk to one of his plushies? 
@@ -424,7 +424,7 @@ A Pokémon Tournament? I mean, I guess I have nothing else to do, so I might as 
 [fade to black]
 [Location: citypark.bleachers]
 [Song: PCPDating_ActionFun]
-[Song: PCP-AMBIENT_Classroom]
+[SFX: PCP-AMBIENT_Classroom]
 [fade from black]
 I arrive at the park and find huge stands erected all around, assumably for the event. The place is completely packed with competitors, Pokémon, and audience members, and I can notice quite a few PCPU students among them. An announcer’s voice sounds from the various speakers placed about but the crowd is so loud you can barely make out what they’re saying.
 Among the crowd I notice Brunswick’s hairy mass next to Ben in the distance and make my way towards them. It seems like Ben is talking to some of the other competitors.
@@ -443,7 +443,7 @@ Among the crowd I notice Brunswick’s hairy mass next to Ben in the distance an
 [SLIDE, Ben, left]
 [SLIDE, Nate, center]
 [SLIDE, Digi, offright]
-[StopMusic]
+[StopSFX]
 (Mage|Mage, casual, 1, shockMED, offright, slide, right) I mean I think just using the most recent games makes the most sense though. I personally thought Bloom and Doom were the best of the series.
 (PCPG) Uhh, guys?
 (Ben|Ben, casual, point, happyMIN) I mean, okay, they aren’t actually that bad, but they don’t come anywhere close to being like the glory days of Pokémon Rowdy and Killer. Now THAT was peak Pokémon right there.
