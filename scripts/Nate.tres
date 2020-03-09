@@ -222,16 +222,16 @@ I turn around and start heading down the hallway to leave.
 I finished another Soy Bang Energy that I got from the 7-Eleven. Yet again, there is no trash can in sight.
 
 [Choice]
-*Toss the can on the ground*
-*[i]You’re Gonna Carry That Can[/i]*
+*Toss the can on the ground.*
+*You’re Gonna Carry That Can*
 
-*Toss the can on the ground*
+*Toss the can on the ground.*
 With a cavalier attitude, I toss the can on the ground beside me, and continue walking toward Nate’s apartment..
 
 [i]The Can will remember that.[/i]
 *
 
-*[i]You’re Gonna Carry That Can[/i]*
+*You’re Gonna Carry That Can*
 I guess I’m going to carry this can. I keep walking toward Nate’s apartment.
 *
 
@@ -255,9 +255,9 @@ I stand, [i]cocked…….[/i]
 
 [i]cocked…….[/i]
 
-[i][b]cock…….[/i][/b]
+[i][b]cock…….[/b][/i]
 
-[i][b]GO!!!![/i][/b]
+[i][b]GO!!!![/b][/i]
 
 [SFX: PCP-SFX_DoorKnock]
 
@@ -323,7 +323,7 @@ Suddenly, I feel really guilty about once again throwing that empty energy drink
 Professor Bestman very obviously held onto his refuse can until he had an opportunity to dispose of it properly.
 *
 
-*[i]You’re Gonna Carry That Can.[/i]*
+*You’re Gonna Carry That Can*
 Professor Bestman very obviously held onto his refuse can until he had an opportunity to dispose of it properly.
 
 He sees you’re still carrying that empty can of energy drink from earlier.
@@ -2599,7 +2599,7 @@ I'm a little stumped and startled myself at this point, but I’m glad Digi is n
 
 (Digi|Digi, campus, 4, happyMIN) Nate’s one of my closest friends. I’ve known him for a while.
 
-(Digi|Digi, campus, 3, smittenMAX) We often get together to produce a lot of [i][b]KHANNNNTTEENENEHTHTTHTHTTTTTT!!!!11111[/i][/b]
+(Digi|Digi, campus, 3, smittenMAX) We often get together to produce a lot of [i][b]KHANNNNTTEENENEHTHTTHTHTTTTTT!!!!11111[/b][/i]
 
 (Digi, campus, 2, smittenMED)
 
