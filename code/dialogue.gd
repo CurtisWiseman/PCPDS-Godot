@@ -37,10 +37,7 @@ func _input(event):
 		get_parent().emit_signal('mouse_click')
 		
 		
-func advance_text():
-	if lock:
-		return
-	lock = true
+func finish_fades_and_slides():
 	var display = get_node('../../../../Display')
 	global.finish_fading()
 	if display.faders.size() > 0:
@@ -51,9 +48,14 @@ func advance_text():
 	if global.sliding:
 		for child in display.get_children():
 			if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
-				print(child.name)
 				child.finish()
 		global.sliding = false
+		
+func advance_text():
+	if lock:
+		return
+	lock = true
+	finish_fades_and_slides()
 	
 	# Stop camera movment if it is moving
 	if global.cameraMoving:

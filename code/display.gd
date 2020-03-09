@@ -8,11 +8,13 @@ var speed # The speed and direction to move.
 var timer # How long it takes a character to stop.
 var collider = null # The node told to move.
 var collidee = null # The node that get's collided.
+var animation = null
 
 signal transition_finish # Signal that a transition function is finished.
 signal transition_finish_fade # Signal specifaclly for fade transitions.
 
 var faders = []
+var fader_targets = {}
 
 # Set the background node to self by default.
 func _ready():
@@ -90,7 +92,7 @@ func background(bg, type):
 
 
 # Display the given image on the scene on the given layer.
-func image(imgpath, z, modulate=Color(1,1,1,1)):
+func image(imgpath, z):
 	
 	# If z is 0 print error then exit function.
 	if z == 0:
@@ -154,6 +156,7 @@ func video(vidpath, z, loop=true):
 	vidnode.set_name(info[0]) # Give the node vidname as its node name.
 	layers[info[1]]['node'] = vidnode # Add the node under the node key.
 	layers[info[1]]['type'] = 'video' # The node's type.
+	layers[info[1]]['path'] = vidpath
 	vidnode.stream = info[2] # Set the node's video steam to video.
 	vidnode.rect_size = Vector2(1920, 1080)
 	if loop:
@@ -171,6 +174,7 @@ func animation(vidpath):
 	vidnode.rect_size = Vector2(1920, 1080)
 	vidnode.volume_db = -1000 # Mute the video.
 	vidnode.modulate.a = 0
+	animation = vidnode
 	get_parent().canvas.add_child(vidnode)
 	vidnode.play() # Play the video.
 	var ftimer = Timer.new() 
@@ -195,6 +199,7 @@ func animation(vidpath):
 		
 	vidnode.queue_free()
 	ftimer.queue_free()
+	animation = null
 	emit_signal('transition_finish')
 
 
@@ -229,6 +234,7 @@ func mask(mask, path, type, z):
 		layers[info[1]]['node'] = imgnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'image' # The node's type.
 		layers[info[1]]['mask'] = mask # Store the mask path.
+		layers[info[1]]['path'] = path
 		imgnode.centered = false # Uncenter the node.
 		imgnode.texture = info[2] # Set the node's texture to the image.
 		
@@ -253,6 +259,7 @@ func mask(mask, path, type, z):
 		layers[info[1]]['node'] = vidnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'video' # The node's type.
 		layers[info[1]]['mask'] = mask # Store the mask path.
+		layers[info[1]]['path'] = path
 		vidnode.stream = info[2] # Set the node's video steam to video.
 		vidnode.rect_size = Vector2(1920, 1080)
 		vidnode.volume_db = -1000 # Mute the video.
@@ -550,19 +557,19 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 
 # Function to fade 
 func fade(content, from : Color, to : Color, time : float, mod='self', fadeSignal=false):
+	global.fading = true # Let the game know fading is occuring.
 	var ftimer = Timer.new() # A timer node.
+	add_child(ftimer) # Add the timer as a child.
 	#For safety, only one thing can actually fade at a time.
 	#This helps prevent weird pseudo race conditions where two fades start on the same thing, etc
 	while faders.size() > 0:
 		ftimer.start(0.01)
 		yield(ftimer, 'timeout')
-	global.fading = true # Let the game know fading is occuring.
 	var node # The node to modulate from.
 	var index # Index of content node.
 	var face = null # If content has face.
 	var AFL = null # If content has AFLs.
 	var p # A var for percentage calculation.
-	add_child(ftimer) # Add the timer as a child.
 	ftimer.one_shot = true # Make the timer one shot.
 	
 	if typeof(content) == TYPE_STRING or content is CanvasItem:
@@ -622,6 +629,7 @@ func fade(content, from : Color, to : Color, time : float, mod='self', fadeSigna
 	
 	
 	faders.append(node)
+	fader_targets[node] = to
 	
 	# If fade is out then fade out.
 	# While percent isn't 0 fade to black.
@@ -654,7 +662,9 @@ func fade(content, from : Color, to : Color, time : float, mod='self', fadeSigna
 			
 	if faders.find(node) > -1:
 		faders.erase(node)
-	
+	if fader_targets.has(node):
+		fader_targets.erase(node)
+		
 	if !fadeSignal: emit_signal('transition_finish')
 	else: emit_signal('transition_finish_fade')
 	global.finish_fading() # Let the game know fading is done.

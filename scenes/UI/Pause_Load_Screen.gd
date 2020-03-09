@@ -40,9 +40,7 @@ func displaySaves():
 	
 	for save in listOfSaves:
 		file.open_encrypted_with_pass('user://saves/' + save, File.READ, 'G@Y&D3@D')
-		file.get_line()
-		var saveBox = file.get_line()
-		var saveName = save.substr(0, save.length() - 4)
+		var saveName = save.substr(0, save.length() - 5)
 		var saveImage = null
 		var box
 		
@@ -53,7 +51,7 @@ func displaySaves():
 		
 		for page in $"Save Pages".get_children():
 			for node in page.get_children():
-				if saveBox == node.name:
+				if saveName == "save" + node.name.substr(7):
 					box = node
 		
 		if saveImage:
@@ -104,8 +102,8 @@ func _on_LoadBox_pressed(saveBoxName):
 	
 	for save in listOfSaves:
 		if save == saveFile:
-			get_tree().paused = true
-			game.load(saveFile)
+			game.newLoad(saveFile)
+			global.toggle_pause()
 			break
 
 

@@ -56,7 +56,8 @@ func _ready():
 	add_child(waitTimer)
 	
 	global.pause_input = true # Pause input during first load.
-	emit_signal("empty_line") #Signals to display first line of dialogue
+	if not game.loadSaveFile:
+		emit_signal("empty_line") #Signals to display first line of dialogue
 
 
 #Nametag is the label above the textbox, dialogue's say is what updates the textbox.
@@ -82,33 +83,34 @@ func choice_calc(choice):
 	
 	# If no more unseen choices then display the gathered choices.
 	if dialogue[index].length() == 0 or dialogue[index][0] != '*' or pastChoice:
-		if numOfChoices == 1:
-			choice_display(displayChoices[0], 370, 420)
-		elif numOfChoices == 2:
-			choice_display(displayChoices[0], 335, 385)
-			choice_display(displayChoices[1], 405, 455)
-		elif numOfChoices == 3:
-			choice_display(displayChoices[0], 300, 350)
-			choice_display(displayChoices[1], 370, 420)
-			choice_display(displayChoices[2], 440, 490)
-		elif numOfChoices == 4:
-			choice_display(displayChoices[0], 265, 315)
-			choice_display(displayChoices[1], 335, 385)
-			choice_display(displayChoices[2], 405, 455)
-			choice_display(displayChoices[3], 475, 525)
-		elif numOfChoices == 5:
-			choice_display(displayChoices[0], 230, 280)
-			choice_display(displayChoices[1], 300, 350)
-			choice_display(displayChoices[2], 370, 420)
-			choice_display(displayChoices[3], 440, 490)
-			choice_display(displayChoices[4], 510, 560)
-		
+		display_cur_choices()
 		return
 	
 	choice  = dialogue[index].lstrip('*')
 	choice = choice.rstrip('*')
 	choice_calc(choice) # Recusivly call until choice_display() is called.
 
+func display_cur_choices():
+	if numOfChoices == 1:
+		choice_display(displayChoices[0], 370, 420)
+	elif numOfChoices == 2:
+		choice_display(displayChoices[0], 335, 385)
+		choice_display(displayChoices[1], 405, 455)
+	elif numOfChoices == 3:
+		choice_display(displayChoices[0], 300, 350)
+		choice_display(displayChoices[1], 370, 420)
+		choice_display(displayChoices[2], 440, 490)
+	elif numOfChoices == 4:
+		choice_display(displayChoices[0], 265, 315)
+		choice_display(displayChoices[1], 335, 385)
+		choice_display(displayChoices[2], 405, 455)
+		choice_display(displayChoices[3], 475, 525)
+	elif numOfChoices == 5:
+		choice_display(displayChoices[0], 230, 280)
+		choice_display(displayChoices[1], 300, 350)
+		choice_display(displayChoices[2], 370, 420)
+		choice_display(displayChoices[3], 440, 490)
+		choice_display(displayChoices[4], 510, 560)
 
 # Function to display unseen choices.
 func choice_display(text, top, bot):
@@ -173,7 +175,7 @@ func choice_pressed(choice, button):
 	emit_signal('choiceChosen')
 	global.pause_input = false
 	displayingChoices = false
-
+	emit_signal('empty_line')
 
 # Functions to change color when hovered/unhovered.
 func choice_hovered(choiceNode): choiceNode.texture = load('res://images/dialoguebox/choiceButtonHovered.png')
@@ -194,8 +196,10 @@ func lastKeep(idx):
 
 # The main dialogue function.
 func _on_Dialogue_has_been_read(setIndex=false):
+	if displayingChoices:
+		return
+		
 	if index < dialogue.size(): #Checks to see if end of document has been reached
-		#Skips empty lines e.g spacing
 		while dialogue[index].length() == 0:
 			index += 1
 		
@@ -400,7 +404,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					old_cg = CG
 				
 				systems.display.image(imagePath, 10)
-				systems.display.fade(imagePath, Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1.0, 'self')
+				systems.display.fade(imagePath, Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1.0)
 				#Remove the previous CG:
 				CG = imagePath
 				yield(systems.display, 'transition_finish')
@@ -438,7 +442,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].to_lower().findn('cg end') != -1:
 				global.pause_input = true
 				if CG != null:
-					systems.display.fade(CG, Color(1, 1, 1, 1), Color(1, 1, 1, 0), 1.0, 'self')
+					systems.display.fade(CG, Color(1, 1, 1, 1), Color(1, 1, 1, 0), 1.0)
 					yield(systems.display, 'transition_finish')
 					#The yield means something else could fuck with it in between!
 					if CG != null:
@@ -553,6 +557,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('ENDING') != -1:
 				scene.change('main_menu', 'fadeblack', 1, 0.01)
 			elif dialogue[index].find('ZOOM') == 1:
+				global.pause_input = true
 				var line = dialogue[index].strip_edges()
 				var command = line.substr(1, line.length()-2).split(' ', false)
 				
@@ -571,6 +576,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					var intended_offset = Vector2(float(command[2]), float(command[3]))
 					var speed = float(command[4])
 					systems.camera.zoom(zoom_factor, intended_offset, speed)
+				global.pause_input = false
 				
 			waitTimer.wait_time = 0.01
 			waitTimer.start()
@@ -637,7 +643,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				displayingChoices = true
 				choice_calc(choice)
 				yield(self, 'choiceChosen')
-				emit_signal('empty_line')
 				return
 			index += 1
 			emit_signal('empty_line')

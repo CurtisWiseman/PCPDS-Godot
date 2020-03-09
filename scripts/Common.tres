@@ -1556,7 +1556,7 @@ Oh, well that’s just great. Fuck you Russel. Fuck you.
 
 [Scene: Right Hand Manic]
 
-[Location: japaneseclass.day]
+[Location: japaneseclass.day, japaneseclass.day.foreground]
 [Song: PCPDating_ClassJapanese]
 [fade from black]
 
@@ -1618,7 +1618,7 @@ Besides, whenever the topic did bore me a little, I could just enjoy the sakuga 
 
 (PCPG) I guess I...
 
-(Davoo, thinking, neutral) The point about abstraction was really interesting, especially when you extend it to other mediums, so I added some examples where the concept can be applied to video games especially in the powerpoint to really drive it home.
+(Davoo, thinking) The point about abstraction was really interesting, especially when you extend it to other mediums, so I added some examples where the concept can be applied to video games especially in the powerpoint to really drive it home.
 
 I admit to my verbal assailant that, without the powerpoint presentation, I likely wouldn’t have grasped half as much as I did of the lecture.
 
@@ -1641,7 +1641,7 @@ Oh shit, he seems to consider this the end of our conversation and is about to l
 
 (PCPG) Hey, you still haven’t told me your name! I can’t just call you “powerpoint-guy”.
 
-(Davoo, fidgeting, smittenMIN) Oh, I’m the Davoo, but you can just call me Davoo if you want
+(Davoo, fidgeting) Oh, I’m the Davoo, but you can just call me Davoo if you want
 .
 (Davoo, greeting, neutral) Anyways, I’ve got to go now. Important stuff. Bye!
 
