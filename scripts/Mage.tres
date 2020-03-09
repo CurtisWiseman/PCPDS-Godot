@@ -6,14 +6,12 @@
 Woah, that was a long-ass day. Time to clean up and head to bed.
 
 [SFX: PCP-SFX_DoorOpen]
-
 [Location: pcpgbathroom]
 
 The classes in this school may be exhausting, but they are definitely way more interesting than all the other schools I attended.
 
 [StopMusic]
 [SFX: PCP-SFX_DoorOpen]
-
 [Location: hallway2.dream]
 [Song: PCPDating_Tension]
 
@@ -56,22 +54,19 @@ Ok, this is most definitely not the real university. The professors all hate nat
 
 (Mage|Mage, campus, 3, happyMAX, center, slide, left) There she is!
 
-
 (Cerise|???, cerise, happy, offright, slide, center) Mage! What a pleasure to meet you here! And who’s this? Your new boyfriend?
-
 
 This conversation is somehow already more uncomfortable than getting chased by zombies.
 
 (Mage|Mage, campus, 1, angryMED|blushies) Quit joking Cerise, we have a problem! The zombies are back!
 
+(cerise|Cerise, cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
 
-(Cerise|Cerise, cerise, serious) Aww damn, and I thought we had completely annihilated them last night.
-
-(Cerise, cerise, serious) I will protect my Pokémon children!
+(Cerise) I will protect my Pokémon children!
 
 (Mage|Mage, campus, 2, angryMED) You have the power, I know you can beat them up!
 
-(Cerise, cerise, serious) Of course! And you cuties run and take my babies with you, or you will all take damage.
+(Cerise) Of course! And you cuties run and take my babies with you, or you will all take damage.
 
 [SLIDE, Mage, left, offleft] 
 [SLIDE, Cerise, center, offright]
@@ -480,8 +475,6 @@ No you are…
 (PCPG) …fair
 
 Where did that stray thought even come from? After scanning everything again, we grab our stuff and head out into the warm evening.
-
-...
 
 [fade to black]
 [StopMusic]
@@ -1121,6 +1114,7 @@ I am baffled. Is Endless War-chan supposed to be the god who judges me?
 *!revive*
 
 *!revive*
+
 *
 [fade to black]
 [EndlessWar leaves]
