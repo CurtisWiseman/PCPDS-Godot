@@ -404,7 +404,7 @@ She kicks off from the chair and electric slides straight into the door, not rea
 [StopMusic]
 [==> Chemistry]
 *
-*Tell her to get out there*
+*Tell her to get out there and make some friends*
 (PCPG) So the best thing you can do is start meeting people! At lunchtime, go check out the different tables in the cafeteria. Plenty of different groups. You’ll find someone there for sure that you’ll hit it off right with.
 (V|V, 2, happy) A simple answer for a simple problem, I see that now. Thank you sir, I will do as you suggest. Look out school, ‘cause V is here!
 [V leaves]
@@ -414,6 +414,7 @@ She kicks off from the chair and electric slides straight into the door, not rea
 [fade to black]
 [StopMusic]
 *
+[StopMusic]
 [Scene: Chemistry]
 Friday, 2:16 PM
 [Location: scienceclass]
@@ -576,11 +577,13 @@ Ben-Phantom-whatever absconds the scene rather abruptly after checking his watch
 (PCPG) Whoah, nearly 11 PM? How in the heck were we out here for seven hours?!
 [SLIDE Jesse center]
 (Jesse, campus, 5, smittenMIN) Correction: you were out here for seven hours. Tube-head and I were out for eight!
-[Song: PCP-AMBIENT_Rain]
+[SFX: PCP-AMBIENT_Rain]
 [Location: 7eleven.night, overlay.rain]
 (Jesse, campus, 2, shockMED)
 It starts to drizzle, then rain, then downpour all in the space of a few seconds. We duck into the 7-Eleven, but the cashier Mr. 9/11 makes it clear they’re closing and we can’t stay for long.
+[StopSFX]
 [SFX: PCP-SFX_DoorOpen]
+[SFX: PCP-AMBIENT_Rain]
 [Location: 7eleven.inside]
 (PCPG) Either way, I don’t know my way home from here, not in the dark, and this rain won’t help!
 (Jesse, campus, 5, happyMIN)
@@ -590,7 +593,7 @@ Heh. That’s a deep cut. Back when we first met, I offered him the same damn th
 (PCPG) And likewise, I’m in the position to answer. But unlike you, I’m sane enough to accept! Thanks, Jesse.
 (Jesse, campus, 1, smittenMIN|blush) Daww, it’s nothing. Hey, you let it slip to my street pals that I’ve gone soft, and you’re in for a suplex! Now come on, there’s a break in the rain, let’s beat it.
 [fade to black]
-[StopMusic]
+[StopSFX]
 [StopMusic]
 [Jesse leaves]
 (Jesse) …
@@ -638,7 +641,7 @@ I stride up to him, close my eyes, and hug the shit out of him. Once my dumb bra
 [Jesse leaves]
 Holding my tongue in humiliation, I silently crawl onto the couch. I hope and pray that my actions of the last five minutes will be all but forgotten by the morning, though I sincerely doubt it. Still… he didn’t seem off-put by it? I settle into a comfy dream, clutching the Hello Kitty cushion that bears his faint scent…
 [StopMusic]
-[StopMusic]
+[StopSFX]
 [Scene: It’s Still Raining]
 The next morning...
 …
@@ -659,7 +662,7 @@ Once dressed, I carefully pad my way around the desk to go wash my face in the b
 It all returns to nothing, and keeps on tumbling down; like the tears of a clown when there’s no-one around./n
 Be excellent to your future companions, and party on dude.
 [CG end]
-[StopMusic]
+[StopSFX]
 [StopMusic]
 …
 ……

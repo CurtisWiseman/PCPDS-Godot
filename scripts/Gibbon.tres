@@ -1,8 +1,8 @@
 [Scene: Chicken in a Basketball]
+
 [Location: gibbonroom]
 [Song: PCPDating_HomeNight]
 [fade from black]
-
 We enter the room and immediately I see a bunch of cool shit, including a guitar, some plushies I haven’t seen before, and an impressive suit of armour crafted out of paper plates and paper clips. It’s a good thing that Bang Energy cured my pet allergies, because there’s even a cute cat and an even cuter dog sitting on and beside his bed. 
 (Gibbon|Gibbon, casual, default, happyMIN, offright, slide, center) Hey Alley-Oop how’s it going? 
 But nothing replies. Is he trying to talk to one of his plushies? 
@@ -72,12 +72,12 @@ Quick as a flash, Munchy types a few lines of code on his computer. The moment h
 As the computers clap, Gibbon enters through the classroom door pushing what looks like one of those game show wheels with all the fancy lights and thingamabobs. A gaudy panel held above the wheel reads “The Wheel of Waifu.”
 (Gibbon|Gibbon, campus, handsup, happyMED) Hello and welcome to the first ever “Drawing Your Waifu As If It Was Vriska!”
 (Gibbon|Gibbon, campus, grabby, happyMIN) As the resident expert on Vriska and therefore waifus, I am here to show you the ways of the draw, by showing you how to turn YOUR waifu into the BEST waifu.
-[Song: PCP-AMBIENT_Classroom]
+[SFX: PCP-AMBIENT_Classroom]
 The class slowly begins to rile up, as they argue amongst themselves about which waifu truly can be called the best. Students are beginning to get heated on the subject, and soon are threatening each other with attempts at “lewding” their waifus.
 Somebody better stop this madness before it becomes a full on waifu war!
 [SLIDE, Gibbon, right]
 (Munchy|Munchy, campus, squatting, angryMAX, offleft, slide, left) OH MY GOD SHUT THE FUCK UP! Nobody cares about which 2D dyke bitch you want sucking your dick, bitches! This class is about doing ART, so can we PUH-LEASE get back to the topic at hand?
-[StopMusic]
+[StopSFX]
 [SLIDE, Munchy, offleft]
 (Gibbon|Gibbon, campus, default, confusedMIN) Ahem, yes so as I was saying, it’s time to turn your waifu into the best waifu.
 (Gibbon|Gibbon, campus, default, happyMIN) But first, we need a waifu to start with, and so we will spin…
@@ -424,7 +424,7 @@ A Pokémon Tournament? I mean, I guess I have nothing else to do, so I might as 
 [fade to black]
 [Location: citypark.bleachers]
 [Song: PCPDating_ActionFun]
-[Song: PCP-AMBIENT_Classroom]
+[SFX: PCP-AMBIENT_Classroom]
 [fade from black]
 I arrive at the park and find huge stands erected all around, assumably for the event. The place is completely packed with competitors, Pokémon, and audience members, and I can notice quite a few PCPU students among them. An announcer’s voice sounds from the various speakers placed about but the crowd is so loud you can barely make out what they’re saying.
 Among the crowd I notice Brunswick’s hairy mass next to Ben in the distance and make my way towards them. It seems like Ben is talking to some of the other competitors.
@@ -443,7 +443,7 @@ Among the crowd I notice Brunswick’s hairy mass next to Ben in the distance an
 [SLIDE, Ben, left]
 [SLIDE, Nate, center]
 [SLIDE, Digi, offright]
-[StopMusic]
+[StopSFX]
 (Mage|Mage, casual, 1, shockMED, offright, slide, right) I mean I think just using the most recent games makes the most sense though. I personally thought Bloom and Doom were the best of the series.
 (PCPG) Uhh, guys?
 (Ben|Ben, casual, point, happyMIN) I mean, okay, they aren’t actually that bad, but they don’t come anywhere close to being like the glory days of Pokémon Rowdy and Killer. Now THAT was peak Pokémon right there.
