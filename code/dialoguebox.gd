@@ -372,7 +372,20 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				yield(self, 'mouse_click')
 				global.pause_input = false
 				game.safeToSave = true
-			
+			elif dialogue[index].to_lower().strip_edges() == "[credits]":
+				get_tree().change_scene("res://scenes/Main_Menu.tscn")
+			elif dialogue[index].find('video:') != -1:
+				global.pause_input = true
+				
+				var video_name = dialogue[index].lstrip('[')
+				video_name = video_name.rstrip(']')
+				video_name = video_name.substr(7, dialogue[index].length()-1)
+				
+				var video_path = 'res://images/CG/' + video_name + '.ogv'
+				
+				systems.display.animation(video_path)
+				yield(systems.display, 'transition_finish')
+				global.pause_input = false
 			elif dialogue[index].to_lower().findn('cg:') != -1:
 				global.pause_input = true
 				
@@ -382,13 +395,13 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				var imagePath = 'res://images/CG/' + imageName + '.png'
 				
-				systems.display.image(imagePath, 10)
-				systems.display.fade(imagePath, Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1.0, 'self')
-				
-				#Remove the previous CG:
 				var old_cg = null
 				if CG != null:
 					old_cg = CG
+				
+				systems.display.image(imagePath, 10)
+				systems.display.fade(imagePath, Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1.0, 'self')
+				#Remove the previous CG:
 				CG = imagePath
 				yield(systems.display, 'transition_finish')
 				if old_cg != null:

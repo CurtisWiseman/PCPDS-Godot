@@ -70,8 +70,6 @@ func _ready():
 	blackScreen.set_self_modulate(Color(1,1,1,0))
 	canvas.add_child(blackScreen);
 
-
-
 # Function to view the dialogue box on a scene and add the pause menu.
 func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoicesArray=[], CG=null):
 	

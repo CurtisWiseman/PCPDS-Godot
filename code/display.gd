@@ -141,7 +141,7 @@ func image(imgpath, z, modulate=Color(1,1,1,1)):
 
 
 # Display the given video on the scene on the given layer.
-func video(vidpath, z):
+func video(vidpath, z, loop=true):
 	
 	# If z is 0 print error then exit function.
 	if z == 0:
@@ -155,11 +155,47 @@ func video(vidpath, z):
 	layers[info[1]]['node'] = vidnode # Add the node under the node key.
 	layers[info[1]]['type'] = 'video' # The node's type.
 	vidnode.stream = info[2] # Set the node's video steam to video.
-	vidnode.rect_size = global.size # Set the size to the global size.
-	vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
+	vidnode.rect_size = Vector2(1920, 1080)
+	if loop:
+		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 	vidnode.play() # Play the video.
+	return vidnode
 
+# Display the given video as a fullscreen animation
+func animation(vidpath):
+	var node_name = layernames(vidpath)
+	var vidnode = VideoPlayer.new()
+	vidnode.set_name(node_name)
+	vidnode.stream = load(vidpath)
+	vidnode.rect_size = Vector2(1920, 1080)
+	vidnode.volume_db = -1000 # Mute the video.
+	vidnode.modulate.a = 0
+	get_parent().canvas.add_child(vidnode)
+	vidnode.play() # Play the video.
+	var ftimer = Timer.new() 
+	var time = 1.0
+	add_child(ftimer) 
+	ftimer.one_shot = true
+	
+	while time > 0:
+		ftimer.start(0.01)
+		yield(ftimer, 'timeout')
+		vidnode.modulate.a = 1.0 - clamp(time/1.0, 0.0, 1.0)
+		time -= 0.01
+		
+	yield(vidnode, "finished")
+	
+	time = 1.0
+	while time > 0:
+		ftimer.start(0.01)
+		yield(ftimer, 'timeout')
+		vidnode.modulate.a = clamp(time/1.0, 0.0, 1.0)
+		time -= 0.01
+		
+	vidnode.queue_free()
+	ftimer.queue_free()
+	emit_signal('transition_finish')
 
 
 # Create a mask
@@ -218,7 +254,7 @@ func mask(mask, path, type, z):
 		layers[info[1]]['type'] = 'video' # The node's type.
 		layers[info[1]]['mask'] = mask # Store the mask path.
 		vidnode.stream = info[2] # Set the node's video steam to video.
-		vidnode.rect_size = global.size # Set the size to the global size.
+		vidnode.rect_size = Vector2(1920, 1080)
 		vidnode.volume_db = -1000 # Mute the video.
 		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		
@@ -616,8 +652,8 @@ func fade(content, from : Color, to : Color, time : float, mod='self', fadeSigna
 		else:
 			node.set_modulate(to)
 			
-			
-	faders.erase(node)
+	if faders.find(node) > -1:
+		faders.erase(node)
 	
 	if !fadeSignal: emit_signal('transition_finish')
 	else: emit_signal('transition_finish_fade')
