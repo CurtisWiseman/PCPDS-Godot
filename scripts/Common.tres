@@ -1,7 +1,7 @@
 ﻿[Scene: Walking to School]
 
 [Song: PCPDating_HomeMorning]
-Wow. My first day at PCP University! 
+Wow. My first day at PCP University!
 
 My last school threw me out for being too retarded and not being able to finish my assignments.
  
@@ -311,7 +311,7 @@ Another has a group of students complaining about their food to each other as th
 [SLIDE Gibbon offright]
 I don’t think I’m quite comfortable with the implication here, but if Gibbon says they’re just being cool, then I guess they’re just being cool.
 
-(Mage|???, campus, 1, silhouette) Hey! I haven’t seen you around before.
+(Mage|???, campus, 1, neutral, silhouette) Hey! I haven’t seen you around before.
 
 A female voice from behind catches my attention.
 
@@ -381,7 +381,7 @@ Careful of the “mud puddle,” I sit down in front of Gibbon and pop some blue
 (PCPG) Dominated by slime?
 
 [SLIDE Gibbon left]
-(Endless War|???, stand, silhouette) You heard him right.
+(Endless War|???, stand, neutral, silhouette) You heard him right.
 
 A new female voice replies from behind me, and this time she doesn’t sound so happy to see me. I look back and see her gesturing to the cafeteria table enveloped by vapor.
 
@@ -1556,7 +1556,7 @@ Oh, well that’s just great. Fuck you Russel. Fuck you.
 
 [Scene: Right Hand Manic]
 
-[Location: japaneseclass.day]
+[Location: japaneseclass.day, japaneseclass.day.foreground]
 [Song: PCPDating_ClassJapanese]
 [fade from black]
 
@@ -1618,7 +1618,7 @@ Besides, whenever the topic did bore me a little, I could just enjoy the sakuga 
 
 (PCPG) I guess I...
 
-(Davoo, thinking, neutral) The point about abstraction was really interesting, especially when you extend it to other mediums, so I added some examples where the concept can be applied to video games especially in the powerpoint to really drive it home.
+(Davoo, thinking) The point about abstraction was really interesting, especially when you extend it to other mediums, so I added some examples where the concept can be applied to video games especially in the powerpoint to really drive it home.
 
 I admit to my verbal assailant that, without the powerpoint presentation, I likely wouldn’t have grasped half as much as I did of the lecture.
 
@@ -1641,7 +1641,7 @@ Oh shit, he seems to consider this the end of our conversation and is about to l
 
 (PCPG) Hey, you still haven’t told me your name! I can’t just call you “powerpoint-guy”.
 
-(Davoo, fidgeting, smittenMIN) Oh, I’m the Davoo, but you can just call me Davoo if you want
+(Davoo, fidgeting) Oh, I’m the Davoo, but you can just call me Davoo if you want
 .
 (Davoo, greeting, neutral) Anyways, I’ve got to go now. Important stuff. Bye!
 

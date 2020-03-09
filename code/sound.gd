@@ -23,7 +23,7 @@ func music(path, loop=false, volume=0):
 	playing.path = path
 	playing.loop = loop
 	playing.volume = volume
-
+	return music
 
 
 # Function to play sound effect.
@@ -41,7 +41,7 @@ func sfx(path, volume=0):
 	# Save the values of the currently playing sfx.
 	playingSFX.path = path
 	playingSFX.volume = volume
-
+	return sfx
 
 
 # Add music to the queue.

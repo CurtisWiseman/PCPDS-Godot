@@ -22,6 +22,7 @@ var defaultFontBold
 var defaultFont
 var textTheme
 var playerName
+var pauseScreen = null
 
 # Signal to say a that a scene is done loading.
 signal finished_loading
@@ -246,3 +247,12 @@ func set_node_pos(given_node, pos):
 		given_node.rect_position = pos
 	else:
 		given_node.position = pos
+
+func toggle_pause():
+	get_tree().paused = not get_tree().paused
+	var a = 0 if get_tree().paused else 1
+	global.dialogueBox.set_self_modulate(Color(1,1,1,a))
+	global.dialogueBox.get_node('Nametag').set_self_modulate(Color(1,1,1,a))
+	global.dialogueBox.get_node('Dialogue').set_self_modulate(Color(1,1,1,a))
+	if pauseScreen != null:
+		pauseScreen.visible = not pauseScreen.visible

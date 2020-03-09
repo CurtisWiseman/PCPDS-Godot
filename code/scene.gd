@@ -4,6 +4,7 @@ signal scene_changed
 var directory = 'res://scenes/'
 var current
 var last
+var cur_scene = null
 
 signal transition_finish
 
@@ -18,7 +19,7 @@ func _ready():
 func change(scenechange, transition=null, speed=10, time=0.5):
 	global.pause_input = true;
 	game.safeToSave = false;
-	
+	cur_scene = scenechange
 	# Variables for directory manipulation.
 	var scenes = []
 	var scene

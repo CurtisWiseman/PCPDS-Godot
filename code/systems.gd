@@ -21,14 +21,11 @@ func _ready():
 	# Set the global rootnode to the root of the current scene.
 	global.rootnode = get_node('..')
 	
-	
-	
 	# Load the camera under the camera variable.
 	camera = Camera2D.new() # Create a new node.
 	camera.set_name('Camera') # Give it the name Camera.
 	camera.set_script(load('res://code/camera.gd')) # Attatch the camera script.
 	add_child(camera) # Add the node under the Systems node.
-	
 	
 	
 	# Load the image system under the display variable.
@@ -69,9 +66,7 @@ func _ready():
 	blackScreen.texture = load("res://images/misc/black_screen.png")
 	blackScreen.set_self_modulate(Color(1,1,1,0))
 	canvas.add_child(blackScreen);
-
-
-
+	
 # Function to view the dialogue box on a scene and add the pause menu.
 func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoicesArray=[], CG=null):
 	

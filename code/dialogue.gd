@@ -17,6 +17,8 @@ signal speech_done
 
 var turbo_timer = 0.1
 
+var lock = false
+
 func _ready():
 	self.connect("substring_has_been_read", self, "read_substring")
 	self.connect("compartmentalise_text", self, "compartmentalise")
@@ -35,13 +37,25 @@ func _input(event):
 		get_parent().emit_signal('mouse_click')
 		
 		
-func advance_text():
+func finish_fades_and_slides():
+	var display = get_node('../../../../Display')
+	global.finish_fading()
+	if display.faders.size() > 0:
+		prints(display.faders)
+		lock = false
+		return
+		
 	if global.sliding:
-		for child in get_node('../../../../Display').get_children():
+		for child in display.get_children():
 			if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
-				print(child.name)
 				child.finish()
 		global.sliding = false
+		
+func advance_text():
+	if lock:
+		return
+	lock = true
+	finish_fades_and_slides()
 	
 	# Stop camera movment if it is moving
 	if global.cameraMoving:
@@ -68,12 +82,13 @@ func advance_text():
 			emit_signal("finished_document")
 		# Sentence is finished - load next line
 		else:
-			emit_signal("has_been_read")
+			get_parent()._on_Dialogue_has_been_read()
 			currentLine += 1
 #			Finish sentence if still in progress
 	else:
 		set_visible_characters(get_total_character_count())
-
+	lock = false
+	
 func _process(delta):
 	var turbo = false
 	if global.turbo_mode:

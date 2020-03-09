@@ -3,7 +3,6 @@ extends Control
 # Scenes
 var saveScene
 var loadScene
-var isVisible = 0
 
 var reloadLoad = false # Whether or not to reload the load scene.
 
@@ -20,7 +19,9 @@ func _ready():
 	loadScene = load('res://scenes/UI/Pause_Load_Screen.tscn').instance()
 	loadScene.visible = false
 	add_child(loadScene)
-
+	
+	global.pauseScreen = self
+	
 func _physics_prcoess(delta):
 	if $VBoxContainer/Save.is_hovered(): $VBoxContainer/Save.grab_focus()
 	if $VBoxContainer/Load.is_hovered(): $VBoxContainer/Load.grab_focus()
@@ -31,15 +32,8 @@ func _physics_prcoess(delta):
 func _input(event):
 	if event.is_action_pressed("pause") and !game.blockInput: #Originally, this was using ui_cancel. I created my own input_map type in Project Settings -> Input Map
 		$VBoxContainer/Save.grab_focus() #It is linked to the Escape key and the Start button on controllers
-		get_tree().paused = not get_tree().paused
-		global.dialogueBox.set_self_modulate(Color(1,1,1,isVisible))
-		global.dialogueBox.get_node('Nametag').set_self_modulate(Color(1,1,1,isVisible))
-		global.dialogueBox.get_node('Dialogue').set_self_modulate(Color(1,1,1,isVisible))
-		if isVisible: isVisible = 0
-		else: isVisible = 1
-#		global.dialogueBox.visible = not global.dialogueBox.visible
-		visible = not visible
-
+		global.toggle_pause()
+		
 func _on_Save_pressed():
 	loadScene.visible = false
 	saveScene.visible = true

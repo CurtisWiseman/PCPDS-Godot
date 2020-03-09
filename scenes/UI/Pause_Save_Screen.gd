@@ -18,9 +18,18 @@ func _ready():
 	
 	for button in $"Page Buttons".get_children():
 		button.connect('pressed', self, '_on_PageButton_pressed', [button.name])
+	connect("visibility_changed", self , "visible_changed")
 
-
-
+func visible_changed():
+	var mod
+	if (global.pause_input and not global.dialogueBox.displayingChoices) or not game.safeToSave:
+		mod = Color(0.1, 0.1, 0.1, 1.0)
+	else:
+		mod = Color(1.0, 1.0, 1.0, 1.0)
+	for page in $"Save Pages".get_children():
+		for node in page.get_children():
+			node.modulate = mod
+	
 # Function to congregate loading functions.
 func loadSaveGames():
 	loadSaves()
@@ -35,9 +44,7 @@ func displaySaves():
 	
 	for save in listOfSaves:
 		file.open_encrypted_with_pass('user://saves/' + save, File.READ, 'G@Y&D3@D')
-		file.get_line()
-		var saveBox = file.get_line()
-		var saveName = save.substr(0, save.length() - 4)
+		var saveName = save.substr(0, save.length() - 5)
 		var saveImage = null
 		var box
 		
@@ -48,7 +55,7 @@ func displaySaves():
 		
 		for page in $"Save Pages".get_children():
 			for node in page.get_children():
-				if saveBox == node.name:
+				if saveName == "save" + node.name.substr(7):
 					box = node
 		
 		if saveImage:
@@ -94,56 +101,60 @@ func loadSaves():
 
 # Function to make a new save and link it to the clicked box.
 func _on_LoadBox_pressed(saveBoxName):
-	if game.safeToSave:
+	if (not global.pause_input or global.dialogueBox.displayingChoices) and game.safeToSave:
 		PauseScreen.visible = false
 		
+		global.pause_input = true
+			
 		# Stop any sliding characters.
-		var sliders = []
-		if global.sliding:
-			var display = global.rootnode.get_node('Systems/Display')
-			global.pause_input = true
-			get_tree().paused = false
-			for child in display.get_children():
-				if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
-					sliders.append(child.finish())
-			global.sliding = false
-			get_tree().paused = true
-			global.pause_input = false
-		
+		var display = global.rootnode.get_node('Systems/Display')
+		#var sliders = []
+		#var still_sliders = false
+		#while global.sliding or still_sliders:
+		#	#get_tree().paused = false
+		#	still_sliders = false
+		#	for child in display.get_children():
+		#		if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
+		#			sliders.append(child.finish())
+		#			still_sliders = true
+		#	global.sliding = false
+		#	#get_tree().paused = true
+		#	var ogTime = $Wait.wait_time
+		#	$Wait.wait_time = 1
+		#	$Wait.start()
+		#	yield($Wait, 'timeout')
+		#	$Wait.wait_time = ogTime
 		# Stop camera movment if it is moving
-		if global.cameraMoving:
-			var camera = global.rootnode.get_node('Systems/Camera')
-			global.pause_input = true
-			get_tree().paused = false
-			camera.finishCameraMovment()
-			yield(camera, 'camera_movment_finished')
-			camera.zoom = camera.lastZoom
-			camera.offset = camera.lastOffset
-			get_tree().paused = true
-			global.pause_input = false
+		#if global.cameraMoving:
+		#	var camera = global.rootnode.get_node('Systems/Camera')
+		#	global.pause_input = true
+		#	get_tree().paused = false
+		#	camera.finishCameraMovment()
+		#	yield(camera, 'camera_movment_finished')
+		#	camera.zoom = camera.lastZoom
+		#	camera.offset = camera.lastOffset
+		#	get_tree().paused = true
+		#	global.pause_input = false
 		
 		# Stop any fading if it is happening
-		if global.fading:
-			global.pause_input = true
-			get_tree().paused = false
-			global.finish_fading()
-			var ogTime = $Wait.wait_time
-			$Wait.wait_time = 1
-			$Wait.start()
-			yield($Wait, 'timeout')
-			$Wait.wait_time = ogTime
-			get_tree().paused = true
-			global.pause_input = false
+		#while global.fading or display.faders.size() > 0:
+		#	#get_tree().paused = false
+		#	global.finish_fading()
+		#	var ogTime = $Wait.wait_time
+		#	$Wait.wait_time = 1
+		#	$Wait.start()
+		#	yield($Wait, 'timeout')
+		#	$Wait.wait_time = ogTime
+		#	#get_tree().paused = true
 		
 		$Wait.start()
 		yield($Wait, 'timeout')
 		var saveBoxNum : int = int(saveBoxName.substr(7, saveBoxName.length()))
-		game.save(saveBoxName, saveBoxNum, sliders)
+		game.newSave(saveBoxNum)
 		loadSaveGames()
 		PauseScreen.reloadLoad = true
+		global.pause_input = false
 		PauseScreen.visible = true
-
-
 
 # Goes to the page left of the current if it exists.
 func _on_LeftPage_pressed():

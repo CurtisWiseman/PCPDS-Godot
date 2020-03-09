@@ -58,8 +58,10 @@ func _process(delta):
 func finish():
 	dest = null
 	yield(self, 'done_cleaning')
-	if reference.get_ref():
-		global.get_node_pos(node).x = destination
+	if is_instance_valid(node):
+		var p = global.get_node_pos(node)
+		p.x = destination
+		global.set_node_pos(node, p)
 		#More attempting to appease crashes that turbo-mode seems to incur
 		var _index = index
 		if parent.layers.size() <= index or not parent.layers[index].has("node") or parent.layers[index]["node"] != node:
