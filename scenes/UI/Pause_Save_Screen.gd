@@ -43,7 +43,7 @@ func displaySaves():
 	var file = File.new()
 	
 	for save in listOfSaves:
-		file.open_encrypted_with_pass('user://saves/' + save, File.READ, 'G@Y&D3@D')
+		#file.open_encrypted_with_pass(game.SAVE_FOLDER + '/' + save, File.READ, 'G@Y&D3@D')
 		var saveName = save.substr(0, save.length() - 5)
 		var saveImage = null
 		var box
@@ -61,7 +61,7 @@ func displaySaves():
 		if saveImage:
 			var img = Image.new()
 			var texture = ImageTexture.new()
-			img.load('user://saves/' + saveImage)
+			img.load(game.SAVE_FOLDER + '/' + saveImage)
 			texture.create_from_image(img)
 			box.texture_normal = texture
 			box.texture_hover = null
@@ -80,10 +80,10 @@ func loadSaves():
 	listOfImages = []
 	var directory = Directory.new()
 	
-	if !directory.dir_exists("user://saves"):
-		directory.make_dir("user://saves")
+	if !directory.dir_exists(game.SAVE_FOLDER):
+		directory.make_dir(game.SAVE_FOLDER)
 	
-	directory.open("user://saves")
+	directory.open(game.SAVE_FOLDER)
 	directory.list_dir_begin(true)
 		
 	while true:

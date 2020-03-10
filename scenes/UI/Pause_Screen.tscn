@@ -10,6 +10,9 @@
 [node name="pause_screen" type="Control"]
 pause_mode = 2
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Pause_Background" type="ColorRect" parent="."]
 margin_right = 1920.0
@@ -43,7 +46,6 @@ margin_bottom = 589.0
 texture_normal = ExtResource( 4 )
 
 [node name="MainMenu" type="TextureButton" parent="VBoxContainer"]
-editor/display_folded = true
 margin_top = 609.0
 margin_right = 600.0
 margin_bottom = 709.0
