@@ -222,16 +222,16 @@ I turn around and start heading down the hallway to leave.
 I finished another Soy Bang Energy that I got from the 7-Eleven. Yet again, there is no trash can in sight.
 
 [Choice]
-*Toss the can on the ground*
-*[i]You’re Gonna Carry That Can[/i]*
+*Toss the can on the ground.*
+*You’re Gonna Carry That Can*
 
-*Toss the can on the ground*
+*Toss the can on the ground.*
 With a cavalier attitude, I toss the can on the ground beside me, and continue walking toward Nate’s apartment..
 
 [i]The Can will remember that.[/i]
 *
 
-*[i]You’re Gonna Carry That Can[/i]*
+*You’re Gonna Carry That Can*
 I guess I’m going to carry this can. I keep walking toward Nate’s apartment.
 *
 
@@ -255,9 +255,9 @@ I stand, [i]cocked…….[/i]
 
 [i]cocked…….[/i]
 
-[i][b]cock…….[/i][/b]
+[i][b]cock…….[/b][/i]
 
-[i][b]GO!!!![/i][/b]
+[i][b]GO!!!![/b][/i]
 
 [SFX: PCP-SFX_DoorKnock]
 
@@ -323,7 +323,7 @@ Suddenly, I feel really guilty about once again throwing that empty energy drink
 Professor Bestman very obviously held onto his refuse can until he had an opportunity to dispose of it properly.
 *
 
-*[i]You’re Gonna Carry That Can.[/i]*
+*You’re Gonna Carry That Can*
 Professor Bestman very obviously held onto his refuse can until he had an opportunity to dispose of it properly.
 
 He sees you’re still carrying that empty can of energy drink from earlier.
@@ -573,7 +573,7 @@ I look at my watch and see that it is now a little past nine. Two hours have pas
 
 (Nate, casual, standing, happyMED|shades)
 
-The profess-- [i][b]Nate[/i][/b] is smiling. Confident and happy as ever.
+The profess-- [i][b]Nate[/b][/i] is smiling. Confident and happy as ever.
 
 (Nate, casual, standing, neutral|shades, center, slide, offleft)
 
@@ -949,7 +949,9 @@ Nate and I continued to talk after the fateful library discussion a couple weeks
 
 I see Nate in the distance running on a treadmill.
 
-As I approach, it’s very obvious that he is listening to a mixtape of various anime OP’s while running. If I squint my ears, I think I can hear [i]Dragon Maid OP[/i] bleeding from his earphones.
+As I approach, it’s very obvious that he is listening to a mixtape of various anime OP’s while running.
+
+If I squint my ears, I think I can hear [i]Dragon Maid OP[/i] bleeding from his earphones.
 
 (Nate, casual, standing, smittenMED|shades)
 
@@ -1043,7 +1045,7 @@ He doesn’t seem to notice me as I approach beside him.
 
 As he often does, Nate is gazing into the distance seemingly lost in thought, although this feels a little different from normal as his stare is much more resolved and focused.
 
-[b][i]jiiiiiiiiiiiiiiiiii--[/i][/b]
+[i][b]jiiiiiiiiiiiiiiiiii--[/b][/i]
 
 Following his line of sight, I find that the subject of his glare is a young woman in the distance. She’s fiddling with a large piece of gym machinery.
 
@@ -1061,9 +1063,13 @@ The young woman appears to be struggling to set up and use the machine. The [i]S
 
 (Nate, casual, standing, angryMED|shades)
 
-She eventually turns visibly flustered and her sudden frustration triggers Nate to jump up from the bench. Nate’s mouth tightens and his eyes close slightly to match his now [i]piercing[/i] gaze. Nate’s right hand is closing into a fist in tension.
+She eventually turns visibly flustered and her sudden frustration triggers Nate to jump up from the bench.
 
-It’s a bewildering scene that would be confusing to any of the gym passersby, if they weren’t all so focused on their routines. Getting to know Nate much more in the past month, I have a good idea of what’s going on.
+Nate’s mouth tightens and his eyes close slightly to match his now [i]piercing[/i] gaze. Nate’s right hand is closing into a fist in tension.
+
+It’s a bewildering scene that would be confusing to any of the gym passersby, if they weren’t all so focused on their routines.
+
+Getting to know Nate much more in the past month, I have a good idea of what’s going on.
 
 (PCPG) Nate, I’m sure you know what to do next.
 
@@ -1123,11 +1129,15 @@ I decide it judicious and discreet to abstain from the voyeuristic observance th
 
 When I emerge from the back of the gym, back to where I was before, I see Nate and the woman at the Smith machine.
 
-Nate seems to have succeeded in his endeavor and is now guiding the woman on form as she utilizes the machinery. He’s poised in a very familiar, didactic but gentle, tone and stature as he tenderly oversees the woman’s technique.
+Nate seems to have succeeded in his endeavor and is now guiding the woman on form as she utilizes the machinery.
+
+He’s poised in a very familiar, didactic but gentle, tone and stature as he tenderly oversees the woman’s technique.
 
 Nate calls it a Smith machine, but the woman seems to be doing squats, plain and simple.
 
-The woman finishes her rep and they both burst out in mutual jovial laughter and smiles, giving each other a high five and a hug. I’m reminded at just how charming Nate can be, despite his sometimes stilted and cautious nature. Perhaps he has [i]more[/i] complex affectations that I still don’t know about.
+The woman finishes her rep and they both burst out in mutual jovial laughter and smiles, giving each other a high five and a hug.
+
+I’m reminded at just how charming Nate can be, despite his sometimes stilted and cautious nature. Perhaps he has [i]more[/i] complex affectations that I still don’t know about.
 
 Nate makes his way back to the dumbbells.
 
@@ -1147,7 +1157,9 @@ He’s a lot more comfortable with these dramatic pauses than I am.
 
 (Nate|Nate, casual, smoking, happyMIN|shades) It wasn’t bad at all.
 
-It goes without saying that for Nate, this was all more than just simply giving a quick tip on technique. Nate overcame his worries about lack of preparation, and managed to help a struggling newbie get closer to their true potential.
+It goes without saying that for Nate, this was all more than just simply giving a quick tip on technique.
+
+Nate overcame his worries about lack of preparation, and managed to help a struggling newbie get closer to their true potential.
 
 Nate [i]accomplished[/i] something.
 
@@ -1181,7 +1193,7 @@ I’m in an emotionally painful daze.
 
 My heart’s racing. My hands feel tight and numb. My chest is hot with pain, and my senses are muddled and off balance.
 
-(PCPG) What happened?
+(PCPG) What happened?!
 
 How much time has it been? I start staggering and stumbling through the alleyway.
 
@@ -1189,9 +1201,9 @@ A faintly familiar and disconcerting voice lurches forward from the back of my m
 
 [fade to black]
 
-[i][b]It’s not my fault…[/i][/b]
+[i][b]It’s not my fault…[/b][/i]
 
-I can’t tell if I feel totally empty or completely stuffed with emotion.
+I can’t tell if I feel totally empty or completely stuffed with emotion...
 
 [Location: 7eleven.night]
 
@@ -1205,7 +1217,9 @@ Wasn’t I [i]just[/i] at the gym a couple hours ago with Nate? I remember he ha
 
 The rest I don’t remember right now….
 
-Without even directing it consciously, my body seems to shuffle slowly over to the doors of the 7-Eleven. Unfortunately, I think I know what this is about. It’s not just today. I don't think I’ve ever enjoyed this.
+Without even directing it consciously, my body seems to shuffle slowly over to the doors of the 7-Eleven. Unfortunately, I think I know what this is about.
+
+It’s not just today. I don't think I’ve ever enjoyed this.
 
 [fade to black]
 
@@ -1215,7 +1229,9 @@ Without even directing it consciously, my body seems to shuffle slowly over to t
 
 I slowly make my way over to the energy drink section. There’s flashbacks in my mind quickly going through the rising dramatic scenes that led me to this moment.
 
-Nate had started me on the bicep curls, which weren’t so bad by themselves, but things had changed by the third new exercise. My body was sore and tired all over. Nate showed no sign of ceasing his forward-prodding.
+Nate had started me on the bicep curls, which weren’t so bad by themselves, but things had changed by the third new exercise.
+
+My body was sore and tired all over. Nate showed no sign of ceasing his forward-prodding.
 
 I suddenly couldn’t think of a single good reason as to why I was at the gym at all.
 
@@ -1229,17 +1245,23 @@ Why?!
 
 …
 
-(PCPG) [i][b]This is Nate’s fault.[/i][/b]
+(PCPG) [i][b]This is Nate’s fault.[/b][/i]
 
 [i]So why do I feel so guilty?[/i]
 
-Although I haven’t done this in weeks, I know exactly what aisle to go to, which refrigerator door to open, and which shelf to scan. I’ve always pretended and lied to myself about the Soy Bang Energy.
+Although I haven’t done this in weeks, I know exactly what aisle to go to, which refrigerator door to open, and which shelf to scan.
+
+I’ve always pretended and lied to myself about the Soy Bang Energy.
 
 The truth is that I’ve always gotten it on purpose; There was never any kind of choice to it.
 
-It’s funny how it works. These kinds of quick indulgences are only ever enjoyable in anticipation. Every sip and bite past the first is propelled purely out of habit and aimless obligation.
+It’s funny how it works. These kinds of quick indulgences are only ever enjoyable in anticipation.
 
-I look at my watch. I’m sure Nate is still at the gym finishing up his [i]own[/i] workout. A determined echo within me makes sure I realize that I can still meet up with him if I head back now, but I know there’s no type of rationalization I could give myself that would stop me at this point.
+Every sip and bite past the first is propelled purely out of habit and aimless obligation.
+
+I look at my watch. I’m sure Nate is still at the gym finishing up his [i]own[/i] workout.
+
+A determined echo within me makes sure I realize that I can still meet up with him if I head back now, but I know there’s no type of rationalization I could give myself that would stop me at this point.
 
 I’ve made my bed.
 
@@ -1255,7 +1277,7 @@ I’ve made my bed.
 
 But maybe I can actually make a good choice for once and stop this vicious maelstrom.
 
-An entire shelf dedicated to the various Bang Energy flavors. There’s [i][b]two[/i][/b] that are especially familiar.
+An entire shelf dedicated to the various Bang Energy flavors. There’s [i][b]two[/b][/i] that are especially familiar.
 
 I reach up and grab a can.
 
@@ -1275,9 +1297,9 @@ This is important.
 [==> Fall Down]
 *
 
-[StopMusic]
-
 [Scene: Gesamtkunstwerk]
+
+[StopMusic]
 
 [Song: PCPDating_PurpleForest]
 
@@ -1345,7 +1367,9 @@ Nate’s embrace calms all my worries and placates the constricting storm of emo
 
 (Nate, casual, standing, happyMED|shades)
 
-Staring into his eyes and beaming countenance assuages the rest of my concerns. I think Nate’s always going to have no problem taking in the emotional brunt of all his relationships. It’s not fair, but it’s the kind of person he is. 
+Staring into his eyes and beaming countenance assuages the rest of my concerns.
+
+I think Nate’s always going to have no problem taking in the emotional brunt of all his relationships. It’s not fair, but it’s the kind of person he is. 
 
 He is a shining Greek pillar that lifts everyone up above him, supporting them, and standing resolute and strong as an ideal model.
 
@@ -1365,7 +1389,7 @@ At hearing that, Nate immediately lights up. This is one of the rare times where
 
 Nate gets pumped and flexes his bicep.
 
-(Nate|Nate, casual, maniacal) [i][b]Fuck yeah! Let’s do it!![/i][/b]
+(Nate|Nate, casual, maniacal) [i][b]Fuck yeah! Let’s do it!![/b][/i]
 
 My body still hurts and it’s been a long day, but I realize now that anything really worth doing necessitates struggle and sacrifice.
 
@@ -1381,7 +1405,9 @@ I managed to finish up the set with Nate, say our goodbyes to each other, and th
 
 The session ended up being a lot of work, but it feels incredible to have accomplished it. I haven’t felt this kind of satisfaction in a while.
 
-My body feels relatively fine and normal considering the exercise I got, but Nate made sure to remind me that I’ll likely feel the most physical impact tomorrow. He said I should take it easy.
+My body feels relatively fine and normal considering the exercise I got, but Nate made sure to remind me that I’ll likely feel the most physical impact tomorrow.
+
+He said I should take it easy.
 
 My phone lights up. It rouses me from my wandering thoughts and reflections.
 
@@ -1411,9 +1437,13 @@ I’m glad I’m no longer wasting time lounging around at home or at the 7-Elev
 
 I’ve become a regular gym rat and don’t even require Nate’s help anymore. Now we just work out [i]together[/i] and spot for each other.
 
-I’ve also made more time for friends. Tom’s shown me how much fun playing [i]PS2[/i] games are, while Nate’s gotten me into the satisfyingly difficult [i]Souls[/i] games. Hanging out with Nate has especially been rewarding. I don’t think I’ve ever had as special a relationship as this.
+I’ve also made more time for friends. Tom’s shown me how much fun playing [i]PS2[/i] games are, while Nate’s gotten me into the satisfyingly difficult [i]Souls[/i] games. 
 
-Nate’s going to be doing a lecture at the upcoming conference, which is very important due to the event’s [i]clout[/i] and [i]cachet[/i]. At first he was worried about the fact that he wouldn’t be able to prepare properly in time.
+Hanging out with Nate has especially been rewarding. I don’t think I’ve ever had as special a relationship as this.
+
+Nate’s going to be doing a lecture at the upcoming conference, which is very important due to the event’s [i]clout[/i] and [i]cachet[/i].
+
+At first he was worried about the fact that he wouldn’t be able to prepare properly in time.
 
 Nate’s normal approach to life can be described as [i]cautious[/i] and [i]considered[/i], but it seems he’s grown this semester and has come to terms with the reality of the event. He’s not going to let an opportunity pass by due to fear. He’s going to drive forward without letting his concerns slow him down.
 
@@ -1429,7 +1459,9 @@ I’ve gained about two pounds of muscle in the last month. I borrowed some equi
 
 This is the best I’ve ever physically felt.
 
-Nate says that it’s reflecting in my confidence as well. My GPA is also the highest it’s ever been. At this point, I’m even on track to receive an extra scholarship for next semester.
+Nate says that it’s reflecting in my confidence as well. My GPA is also the highest it’s ever been.
+
+At this point, I’m even on track to receive an extra scholarship for next semester.
 
 Things are...
 
@@ -1442,6 +1474,8 @@ Things are...
 [==> Dating Fight!]
 
 [Scene: Fall Down]
+
+[Stop Music]
 
 [Location: 7eleven.night]
 
@@ -1459,7 +1493,7 @@ I found myself pro crastinating the meeting with Professor Bestman by taking a d
 
 [i]I found myself pro crastinating the meeting with Professor Bestman by taking a detour for refreshment.[/i]
 
-[i][b]You found yourself pro crastinating--[/i][/b]
+[i][b]You found yourself pro crastinating--[/b][/i]
 
 [cut from black]
 
@@ -1591,7 +1625,9 @@ Tom seems satisfied and content with this answer. Everyone is being perfectly pl
 
 [Tom leaves]
 
-They both go in opposite directions. Normally this would be unfortunate, because I would usually love to continue catching up with them, but I’m actually pretty tired and should be heading to bed anyways.
+They both go in opposite directions.
+
+Normally this would be unfortunate, because I would usually love to continue catching up with them, but I’m actually pretty tired and should be heading to bed anyways.
 
 Tomorrow’s another day full of possibility and opportunity!
 
@@ -1659,7 +1695,9 @@ Nate emerges from the shadows of the hallway.
 
 (Nate, casual, standing, confusedMIN|beard)
 
-Upon closer inspection of Nate, I notice he’s in a similar state as his living room. His hair is a greasy mess, he stopped shaving, and he’s wearing the same clothes from when I saw him two days ago. This [i]guy[/i] looks like he hasn’t been out of the house since you last saw him.
+Upon closer inspection of Nate, I notice he’s in a similar state as his living room.
+
+His hair is a greasy mess, he stopped shaving, and he’s wearing the same clothes from when I saw him two days ago. This [i]guy[/i] looks like he hasn’t been out of the house since you last saw him.
 
 His eyes are watery red. He looks [i]tired[/i].
 
@@ -1781,13 +1819,13 @@ Nate adjusts his posture, as if to speak, but takes a brief hold before continui
 
 Nate starts smiling demurely.
 
-(Nate|Nate, casual, standing, happyMED|beard, blush) Thanks, PCPG.
+(Nate|Nate, casual, standing, happyMED|beard|blush) Thanks, PCPG.
 
 (Nate|Nate, casual, pointing, smittenMED|beard) You’re absolutely right! Life is about continuously getting back up.
 
-Nate’s getting pumped and passionate.
-
 (Nate, casual, standing, neutral|beard, center, slide, offleft)
+
+Nate’s getting pumped and passionate.
 
 (Nate, casual, standing, smittenMIN|shades, offleft, slide, center)
 
@@ -1799,23 +1837,23 @@ He’s back to the same ol’ Nate!
 
 (Nate|Nate, casual, pointing, happyMED|shades) Life is about driving forward without fear. Life is about taking the reins. Life is about flying head-first into the flames!
 
-In all the excitement, Nate goes through a series of bodybuilding poses as a physical manifestation of his extreme passion!
+In all the excitement, Nate goes through a series of bodybuilding poses as a physical manifestation of his extreme passion; Complete with catchphrases!
 
-(Nate, casual, pointing, happyMIN|shades)
+(Nate|Nate, casual, pointing, happyMIN|shades) Ha!
 
-(Nate, casual, papers, smittenMIN|shades)
+(Nate|Nate, casual, papers, smittenMIN|shades) Take this!
 
-(Nate, casual, standing, confusedMIN|shades)
+(Nate|Nate, casual, standing, confusedMIN|shades) This is it!
 
-(Nate, casual, smoking, confusedMED|shades)
+(Nate|Nate, casual, smoking, confusedMED|shades) See ya!
 
-(Nate, casual, standing, confusedMAX|shades)
+(Nate|Nate, casual, standing, confusedMAX|shades) Here!
 
-(Nate, casual, pointing, smittenMIN|shades)
+(Nate|Nate, casual, pointing, smittenMIN|shades) Take that!
 
-(Nate, casual, maniacal)
+(Nate|Nate, casual, maniacal) Come on!
 
-(Nate, casual, pointing, smittenMED|shades)
+(Nate|Nate, casual, pointing, smittenMED|shades) It's over!
 
 First the [i]Side Chest[/i] and then the [i]Front Double Bicep[/i].
 
@@ -1863,7 +1901,7 @@ Nate’s giving me that familiar comforting smile.
 
 That makes more sense. I often see Ben walking around campus with an [i]XDurance[/i] in his hand.
 
-(Nate, casual, standing, neutral|shades, center, slide right)
+(Nate, casual, standing, neutral|shades, center, slide, right)
 
 Nate walks over to his desk and picks up the ziploc bag of white powder.
 
@@ -2057,7 +2095,9 @@ You don’t vape. Not anymore.
 
 Not that you don’t have your vices.
 
-He opens up a mini fridge beside him to reveal a grand assortment of different brands, colors, and flavors of energy drinks. As a bit of an energy drink connoisseur yourself, you can’t help but be astonished.
+He opens up a mini fridge beside him to reveal a grand assortment of different brands, colors, and flavors of energy drinks.
+
+As a bit of an energy drink connoisseur yourself, you can’t help but be astonished.
 
 After grabbing a [i]Rip It[/i] from the fridge, he notices your surprised gaze.
 
@@ -2289,7 +2329,9 @@ This is awkward...
 
 (Tom, 1, neutral, center, slide, right)
 
-Tom walks over and opens up the trunk of his car to reveal a grand assortment of different colors and flavours of what seems to be nutritional bars. He’s also got large white packages of unknown contents in his car.
+Tom walks over and opens up the trunk of his car to reveal a grand assortment of different colors and flavours of what seems to be nutritional bars.
+
+He’s also got large white packages of unknown contents in his car.
 
 All you can read from the packaging is the word: [i]Huel[/i].
 
@@ -2357,7 +2399,9 @@ You have so many questions and concerns, but his calm yet confident tone of voic
 
 (Tom, 1, angryMIN)
 
-He directs you closer to his car and turns on the light inside. You see that he’s taken out the back seat of his car and replaced it with a series of carefully-placed blankets and pillows overtop a foam cot.
+He directs you closer to his car and turns on the light inside.
+
+You see that he’s taken out the back seat of his car and replaced it with a series of carefully-placed blankets and pillows overtop a foam cot.
 
 (Tom|Tom, 3, neutral) It’s actually pretty nice to sleep under the stars or underneath the rain at night.
 
@@ -2385,7 +2429,9 @@ He gestures with his hand.
 
 You believe him as the inside of his car goes instantly pitch black when he turns off the light inside.
 
-It now makes sense as to why he’s got so much [i]Huel[/i] food material in the trunk of his car. The only thing this dude can eat besides fast food is [i]Huel[/i] since he doesn’t have access to kitchen appliances or a fridge…
+It now makes sense as to why he’s got so much [i]Huel[/i] food material in the trunk of his car.
+
+The only thing this dude can eat besides fast food is [i]Huel[/i] since he doesn’t have access to kitchen appliances or a fridge…
 
 (PCPG) How do you take showers?
 
@@ -2493,7 +2539,9 @@ Tom calls to you one last time.
 
 It’s the day of the conference.
 
-I’ve gone to the address on the ticket and now I’m at the front entrance. I thought this would be at a proper conference hall, hotel, or convention center, but this just seems like a reasonably-sized house.
+I’ve gone to the address on the ticket and now I’m at the front entrance.
+
+I thought this would be at a proper conference hall, hotel, or convention center, but this just seems like a reasonably-sized house.
 
 I knock on the front door.
 
@@ -2575,7 +2623,7 @@ Thankfully, that declarative statement seemed to allay his irritability and buy 
 
 Digi suddenly darts forward and aggressively pushes his index finger into my chest. He looms over me threateningly, without blinking.
 
-(Digi|Digi, campus, 3, angryMAX) [i][b]Who do you know here!?[/i][/b]
+(Digi|Digi, campus, 3, angryMAX) [i][b]Who do you know here!?[/b][/i]
 
 [i]oh god...[/i]
 
@@ -2599,7 +2647,7 @@ I'm a little stumped and startled myself at this point, but I’m glad Digi is n
 
 (Digi|Digi, campus, 4, happyMIN) Nate’s one of my closest friends. I’ve known him for a while.
 
-(Digi|Digi, campus, 3, smittenMAX) We often get together to produce a lot of [i][b]KHANNNNTTEENENEHTHTTHTHTTTTTT!!!!11111[/i][/b]
+(Digi|Digi, campus, 3, smittenMAX) We often get together to produce a lot of [i][b]KHANNNNTTEENENEHTHTTHTHTTTTTT!!!!11111[/b][/i]
 
 (Digi, campus, 2, smittenMED)
 
@@ -2655,9 +2703,13 @@ The individuals of the house are comprised of seemingly the most outlandish and 
 
 Everyone is participating in an array of recreational activities that run the gamut between calm and casual discourse to what appears to be [i]extreme trampolining[/i] in the backyard. I approach a window near the back to get a closer look at the activity outside.
 
-I see Davoo and his wild and unkempt light-brown hair doing flips and [i]Alley Oop[/i]’s on a large trampoline. The whole situation seems rather precarious as there is no safety net to prevent a dangerous incident.
+I see Davoo and his wild and unkempt light-brown hair doing flips and [i]Alley Oop[/i]’s on a large trampoline.
 
-It doesn’t help that both of the dude’s feet are encased in full orthopedic casts. The whole thing is a rather impressive display of gymnastics and acrobatics. Somehow, despite all this, Davoo continues to bounce as happily as ever. It’s inspiring!
+The whole situation seems rather precarious as there is no safety net to prevent a dangerous incident.
+
+It doesn’t help that both of the dude’s feet are encased in full orthopedic casts. The whole thing is a rather impressive display of gymnastics and acrobatics.
+
+Somehow, despite all this, Davoo continues to bounce as happily as ever. It’s inspiring!
 
 (Davoo, campus, neutral, offright, slide, center)
 
@@ -2681,9 +2733,11 @@ He’s playing what appears to be a high fantasy rpg with orcs, magic spells, an
 
 (PCPG) Oh yeah. I think I heard about something like that. I wonder why they would release an older version of their product?
 
-(Gibbon|Gibbon, campus, default, shockMIN) The game has changed a lot over the past decade and a half. The gamefeel and audience are completely different now
+(Gibbon|Gibbon, campus, default, shockMIN) The game has changed a lot over the past decade and a half. The gamefeel and audience are completely different now.
 
-(Gibbon|Gibbon, campus, clenched, angryMED) It’s similar to a mobile game in some ways. In the modern [i]WoW[/i], everyone wins, everyone is powerful, and you don’t have to work particularly hard to get anything in the game.
+(Gibbon|Gibbon, campus, clenched, angryMED) It’s similar to a mobile game in some ways. 
+
+(Gibbon|Gibbon, campus, clenched, angryMED) In the modern [i]WoW[/i], everyone wins, everyone is powerful, and you don’t have to work particularly hard to get anything in the game.
 
 (Gibbon|Gibbon, campus, default, confusedMIN) That’s all different in [i]Classic WoW[/i]. In [i]Classic[/i], everything is a pain in the ass.
 
@@ -2765,7 +2819,9 @@ But I’ve only ever seen him use the showers…
 
 [Tom leaves]
 
-I walk past a closed door and a distinct, but very familiar, high-pitched lemony scent drifts past my nose. It’s impossible to describe exactly, but I often encounter the same scent when walking past Digi’s office at school...
+I walk past a closed door and a distinct, but very familiar, high-pitched lemony scent drifts past my nose.
+
+It’s impossible to describe exactly, but I often encounter the same scent when walking past Digi’s office at school...
 
 I decide not to investigate and instead scurry by.
 
@@ -2775,7 +2831,9 @@ I notice Jesse out of the corner of my eye.
 
 (Jesse, campus, 4, confusedMED)$
 
-He’s entrenched himself on the first floor in a constructed bulwark of rope, wooden planks, and metals against a wall within the atrium of the house. Now I see what he meant by ‘project’.
+He’s entrenched himself on the first floor in a constructed bulwark of rope, wooden planks, and metals against a wall within the atrium of the house.
+
+Now I see what he meant by ‘project’.
 
 (Jesse, campus, 3, neutral)$
 
@@ -2791,7 +2849,7 @@ The mechanical and wooden contraption creaks and crows as Jesse strains to pull 
 
 (Jesse, campus, 5, shockMED)$
 
-(Mage|Mage, campus, 2, shockMAX, offright, slide, center)
+(Mage, campus, 2, shockMAX, offright, slide, center)
 
 I see the Student Council Vice President, Mage, briskly run over and attempt to guide him to the stairs a couple feet over, but the Sewer Priest remains staunch, stalwart, and steadfast.
 
@@ -2813,11 +2871,11 @@ I remember I used to look at people like this and think they were being idiotic,
 
 [Location: radprom3]
 
-(Ben, campus, base, neutral, offleft, left)$
+(Ben, campus, base, neutral, offleft, slide, left)$
 
-(Tom, 1, neutral, offright, right)$
+(Tom, 1, neutral, offright, slide, right)$
 
-(Nate, campus, standing, neutral, offright, center)
+(Nate, campus, standing, neutral, offright, slide, center)
 
 I decide to go outside for some fresh air, and see Tom, Ben, and Nate in a group together, standing rather idly. I walk over.
 
@@ -2889,7 +2947,7 @@ From out of the blue, I hear Mage’s voice. She’s addressing everybody in the
 
 (Nate|Nate, campus, standing, happyMIN|shades) Thanks, guys!
 
-(Ben|Ben, casual, exasp, shockMIN) Let’s go, Tom. I want to make sure we get good seats.
+(Ben|Ben, campus, exasp, shockMIN) Let’s go, Tom. I want to make sure we get good seats.
 
 (Ben, campus, base, neutral, left, slide, offleft)$
 
@@ -2923,9 +2981,9 @@ After a bit of time everyone starts shuffling toward the lecture hall.
 
 [Location: radprom2]
 
-(Nate, campus, standing, neutral|shades, offright, right)$
+(Nate, campus, standing, neutral|shades, offright, slide, right)$
 
-(Mage, campus, 5, happyMIN, offleft, center)
+(Mage, campus, 5, happyMIN, offleft, slide, center)
 
 Nate is up on stage. Mage is standing before the audience, about to speak.
 
@@ -2951,7 +3009,7 @@ I can tell this is going to be the start of another incredible Nate lecture.
 
 [StopMusic]
 
-[Song: PCPDating_Michelle’sTheme]
+[Song: PCPDating_MichellesTheme]
 
 [Location: white]
 
@@ -2985,6 +3043,8 @@ It’s her again...
 
 [CG: nate kamin]
 
+[StopMusic]
+
 [fade from black]
 
 [pause]
@@ -2992,8 +3052,6 @@ It’s her again...
 [fade to black]
 
 [CG end]
-
-[StopMusic]
 
 [credits]
 
@@ -3085,7 +3143,9 @@ You made it to the top of the stairs. Your sources were correct; access was easy
 
 [i]Obviously[/i] Professor Bestman wasn’t going to be there.
 
-You grab an energy drink from your white plastic bag and open it on the way to the boundary at the edge of the roof. You hang your arm on the fence while casually taking sips from your beverage.
+You grab an energy drink from your white plastic bag and open it on the way to the boundary at the edge of the roof.
+
+You hang your arm on the fence while casually taking sips from your beverage.
 
 The view isn’t perfect, but it’s passable.
 
@@ -3101,11 +3161,15 @@ It’s a pretty quiet town, especially at night, but it’s surprisingly even mo
 
 Your thoughts continue to wander.
 
-At no point in your life have you generated as little productive output as you have in the last month, but [i]it[/i] still somehow feels like you were running on fumes. It’s hard to get true, genuine rest.
+At no point in your life have you generated as little productive output as you have in the last month, but it [i]still[/i] somehow feels like you were running on fumes.
+
+It’s hard to get true, genuine rest.
 
 While you were lost in thought, the liquid in your drink seems to have disappeared. Guess you just blocked out the experience...
 
-You haven’t really enjoyed the taste of energy drinks in a while, but at least it used to be [i]something[/i]. You had a few more drinks planned, but there’s obviously gonna’ be no point.
+You haven’t really enjoyed the taste of energy drinks in a while, but at least it used to be [i]something[/i].
+
+You had a few more drinks planned, but there’s obviously gonna’ be no point.
 
 In the end, it was foolish to think that there’d be anything satisfying or satiating about any of this.
 
@@ -3211,7 +3275,7 @@ At least you don’t feel the pain anymore...
 
 You’re so tired…
 
-[Song: PCPDating_Michelle’sTheme]
+[Song: PCPDating_MichellesTheme]
 
 [Location: white]
 

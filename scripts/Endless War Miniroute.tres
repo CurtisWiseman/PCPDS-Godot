@@ -1,5 +1,4 @@
 [Scene: An Offering of Wealth]
-
 [Location: roof.day]
 [Song: PCPDating_HomeMorning]
 [fade from black]
@@ -629,7 +628,7 @@ Endless War promptly complies and soon the machine behind her whirs into life as
 
 (Endless War|Endless War, stand, smittenMED|blushMED, center+50) AHAHAHA!! LET THE NEW AGE OF ENDLESS WAR BEGIN!!!
 
-[Song: PCP-AMBIENT_Earthquake]
+[SFX: PCP-AMBIENT_Earthquake]
 
 The machine begins to speed up faster and faster, enough so that it almost seems like it will break apart at its hinges. Then just before it seems like everything will explode, the machine begins to turn in on itself, almost as though it’s falling into the tall monument behind it.
 
@@ -643,7 +642,7 @@ The machine begins to speed up faster and faster, enough so that it almost seems
 
 Endless War then jumps into the collapsing machine and along with Davoo is sucked into the monument itself. The monument then morphs and changes with the machine until they are fully combined as one, as a single entity. The monument, nay Endless War herself, then begins to quietly chant, drowning all other thoughts I may have had.
 
-[StopMusic]
+[StopSFX]
 [StopMusic]
 [Ben leaves]
 [Munchy leaves]
