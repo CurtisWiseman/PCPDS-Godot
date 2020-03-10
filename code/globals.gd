@@ -16,9 +16,11 @@ var cameraMoving = false
 var screenshotsTaken = 1
 var defaultChoiceFontItalic
 var defaultChoiceFontBold
+var defaultChoiceFontBoldItalic
 var defaultChoiceFont
 var defaultFontItalic
 var defaultFontBold
+var defaultFontBoldItalic
 var defaultFont
 var textTheme
 var playerName
@@ -127,6 +129,11 @@ func _ready():
 	defaultFontItalic = DynamicFont.new()
 	defaultFontItalic.font_data = defaultFontDATAItalic
 	defaultFontItalic.size = 35
+	var defaultFontDATABoldItalic = DynamicFontData.new()
+	defaultFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Lato-BoldItalic.ttf'
+	defaultFontBoldItalic = DynamicFont.new()
+	defaultFontBoldItalic.font_data = defaultFontDATABoldItalic
+	defaultFontBoldItalic.size = 35
 	
 	var defaultChoiceFontDATA = DynamicFontData.new()
 	defaultChoiceFontDATA.font_path = 'res://fonts/Dialogue/Lato-Regular.ttf'
@@ -143,6 +150,11 @@ func _ready():
 	defaultChoiceFontItalic = DynamicFont.new()
 	defaultChoiceFontItalic.font_data = defaultChoiceFontDATAItalic
 	defaultChoiceFontItalic.size = 25
+	var defaultChoiceFontDATABoldItalic = DynamicFontData.new()
+	defaultChoiceFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Lato-BoldItalic.ttf'
+	defaultChoiceFontBoldItalic = DynamicFont.new()
+	defaultChoiceFontBoldItalic.font_data = defaultChoiceFontDATABoldItalic
+	defaultChoiceFontBoldItalic.size = 25
 	
 	textTheme = Theme.new()
 	textTheme.set_color('font_color_shadow', 'RichTextLabel', Color(0.4, 0.4, 0.4, 1))

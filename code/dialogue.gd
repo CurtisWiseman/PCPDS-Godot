@@ -41,7 +41,6 @@ func finish_fades_and_slides():
 	var display = get_node('../../../../Display')
 	global.finish_fading()
 	if display.faders.size() > 0:
-		prints(display.faders)
 		lock = false
 		return
 		
@@ -112,6 +111,7 @@ func _process(delta):
 		global.turbo_mode = true
 
 func say(text, voice=null):
+	text = text.strip_edges()
 	set_visible_characters(0) # Remove current line
 	
 #	Compartmentalize long line into smaller strings

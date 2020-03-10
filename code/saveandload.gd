@@ -1,5 +1,6 @@
 extends Node
 
+#When we change major versions and saves become unsupported, change to like saves_v2 etc to ignore old ones
 var SAVE_FOLDER = 'user://saves'
 var SAVE_NAME_TEMPLATE = 'save%d.tres'
 var SAVE_IMAGE_NAME_TEMPLATE = 'save%d.png'
@@ -418,10 +419,15 @@ func newSave(save_num):
 	image.save_png(SAVE_FOLDER.plus_file(SAVE_IMAGE_NAME_TEMPLATE % save_num))
 	
 	data_payload["playername"] = global.playerName
+	#Use this in the future if you need to handle supporting older save formats
+	data_payload["save_minor_version"] = 1
 	
 	#Display
 	var layer_details = []
 	for l in display.layers:
+		#Don't save one's that are just being deleted
+		if l.get("removing", false):
+			continue
 		var AFL = []
 		if l.has("face"):
 			var p = [l["facepos"].x, l["facepos"].y]
@@ -463,6 +469,7 @@ func newSave(save_num):
 	data_payload["dialogue_script"] = dialogue_box.dialogueScript
 	data_payload["cg"] = dialogue_box.CG
 	data_payload["in_choice"] = dialogue_box.inChoice
+	data_payload["overlays"] = dialogue_box.overlays
 	#The name of this is very weird, it relates to character positions I think?
 	var notsame = dialogue_box.notsame
 	if notsame != null:
@@ -587,6 +594,8 @@ func newLoad(save_file):
 		dialogue_box.display_cur_choices()
 		dialogue_box.displayingChoices = dialogue_box.displayChoices.size() > 0
 	
+	dialogue_box.overlays = data_payload["overlays"]
+	
 	#Sounds
 	if data_payload.has("sfx"):
 		var n = sound.sfx(data_payload["sfx"]["path"], data_payload["sfx"]["volume"])
@@ -596,4 +605,6 @@ func newLoad(save_file):
 		n.seek(data_payload["music"]["position"])
 		
 	global.pause_input = false
+	global.fading = false
+	global.sliding = false
 	game.loadSaveFile = false

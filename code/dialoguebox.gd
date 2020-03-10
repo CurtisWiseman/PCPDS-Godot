@@ -35,6 +35,8 @@ var CG = null
 
 var lock = false
 
+var transitioning = false
+
 func _ready(): 
 	systems = global.rootnode.get_node("Systems") # Assign the systems no to systems.
 
@@ -62,7 +64,10 @@ func _ready():
 
 #Nametag is the label above the textbox, dialogue's say is what updates the textbox.
 func say(words, character = "", voice = null):
-	$Nametag.text = character
+	if words.strip_edges() == "":
+		$Nametag.text = ""
+	else:
+		$Nametag.text = character
 	$Dialogue.say(words, voice)
 	
 # Function to calculate the number of unseen choices.
@@ -139,6 +144,7 @@ func choice_display(text, top, bot):
 	choicetext.add_font_override("normal_font", global.defaultChoiceFont)
 	choicetext.add_font_override("italics_font", global.defaultChoiceFontItalic)
 	choicetext.add_font_override("bold_font", global.defaultChoiceFontBold)
+	choicetext.add_font_override("bold_italics_font", global.defaultChoiceFontBoldItalic)
 	choicetext.set_theme(global.textTheme)
 	choicetext.bbcode_text = '[center]' + text + '[/center]'
 	
@@ -155,13 +161,15 @@ func choice_display(text, top, bot):
 func choice_pressed(choice, button):
 	
 	for item in displayChoices:
-		var n = systems.canvas.get_node(item)
+		var probable_name = item.replace("/", "")
+		var n = systems.canvas.get_node(probable_name)
 		
 		#seems godot likes to remove fullstops in node names?
 		#I'm curious that no one else has complained, so I'll have this be the fallback in case
 		#this is some weird version specific issue
+		
 		if n == null:
-			n = systems.canvas.get_node(item.replace(".", ""))
+			n = systems.canvas.get_node(probable_name.replace(".", ""))
 		systems.canvas.remove_child(n)
 		n.queue_free()
 	
@@ -194,9 +202,15 @@ func lastKeep(idx):
 	lastBGType = systems.display.bgtype
 
 
+func things_sliding():
+	for child in systems.display.get_children():
+		if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
+			return true
+	return false
+	
 # The main dialogue function.
 func _on_Dialogue_has_been_read(setIndex=false):
-	if displayingChoices:
+	if displayingChoices or things_sliding():
 		return
 		
 	if index < dialogue.size(): #Checks to see if end of document has been reached
@@ -217,7 +231,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			global.emit_signal('finished_loading')
 		
 		# COMMENTS/COMMANDS
-		if  dialogue[index].begins_with("["):
+		if  dialogue[index].begins_with("[") and dialogue[index].ends_with("]") and dialogue[index].count("[") == 1  and dialogue[index].count("]") == 1:
 			
 			if dialogue[index].findn('9/11') != -1:
 				regex.compile('9/11')
@@ -262,21 +276,26 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				global.pause_input = false
 			
 			elif dialogue[index].findn('fade to black') != -1:
-				if global.fading: yield(global, 'finished_fading')
 				global.pause_input = true
+				if global.fading: yield(global, 'finished_fading')
+				
+				if dialogue[index].find('keeptext') == -1:
+					say("","")
 				fadeblackalpha(systems.blackScreen, 'out', 1, 0.01)
-				yield(self, 'transition_finish')
 				global.pause_input = false
-			
 			elif dialogue[index].findn('fade from black') != -1:
-				if global.fading: yield(global, 'finished_fading')
 				global.pause_input = true
+				if global.fading: yield(global, 'finished_fading')
+				
+				if dialogue[index].find('keeptext') == -1:
+					say("","")
 				fadeblackalpha(systems.blackScreen, 'in', 1, 0.01)
 				yield(self, 'transition_finish')
 				global.pause_input = false
-			
-			elif dialogue[index].findn('cut to black') != -1: fadeblackalpha(systems.blackScreen, 'out', 100)
-			elif dialogue[index].findn('cut from black') != -1: fadeblackalpha(systems.blackScreen, 'in', 100)
+			elif dialogue[index].findn('cut to black') != -1: 
+				fadeblackalpha(systems.blackScreen, 'out', 100)
+			elif dialogue[index].findn('cut from black') != -1: 
+				fadeblackalpha(systems.blackScreen, 'in', 100)
 			
 			elif dialogue[index].findn('SLIDE') != -1:
 				var command = dialogue[index].lstrip('[')
@@ -284,16 +303,19 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				command = command.replace(',', '')
 				command = command.split(' ')
 				var did_slide = false
+				var positioning = null
 				for i in range(0, systems.display.layers.size()):
 					var layer = systems.display.layers[i]['name']
 					if layer.findn(command[1].to_lower()) != -1:
 						if command.size() == 3:
 							did_slide = true
-							parse_move(['slide', command[2]], '"'+systems.display.layers[i]['path']+'"', 0)
+							positioning = parse_move(['slide', command[2]], '"'+systems.display.layers[i]['path']+'"', 0)
 						elif command.size() == 4:
 							did_slide = true
-							parse_move(['slide', command[2], command[3]], '"'+systems.display.layers[i]['path']+'"', 0)
+							positioning = parse_move(['slide', command[3]], '"'+systems.display.layers[i]['path']+'"', 0)
 						break
+				if positioning != null:
+					yield(positioning, 'position_finish')
 				if not did_slide:
 					prints("WARNING: BAD SLIDE COMMAND: ", command)
 					#unpause it here because parse_move would noramlly do that for us, but this is a safety fallback
@@ -315,16 +337,21 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			elif dialogue[index].findn('StopSFX') != -1:
 				systems.sound.stop_SFX(systems.sound.audioname(systems.sound.playingSFX['path']))
-			
+			elif dialogue[index].find("Forget ") == 1:
+				var forget_choice = dialogue[index].lstrip('[Forget ').rstrip(']')
+				chosenChoices.erase(forget_choice)
+				choices.erase(forget_choice)
 			elif dialogue[index].findn('Location:') != -1:
+				var old_bg = systems.display.bgnode if systems.display.bgnode != systems.display else null
+				if dialogue[index].find('keeptext') == -1:
+					say("","")
+				#if overlays != []:
+				#	for path in overlays:
+				#		systems.display.remove_name(path)
+				#	
+				#	overlays = []
 				
-				if overlays != []:
-					for path in overlays:
-						systems.display.remove_name(path)
-					
-					overlays = []
-				
-				var loc = dialogue[index].lstrip('[')
+				var loc = dialogue[index].lstrip('[').replace("keeptext", "")
 				var ovr = null
 				
 				loc = loc.strip_edges(true, true)
@@ -337,38 +364,72 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					loc = arr[0]
 					ovr = [arr[1]]
 				
+				var fade_time = 0.75
+				
 				var locIndex = global.locationNames.find(loc)
 				if locIndex != -1:
+					global.pause_input = true
 					systems.display.background(global.locations[locIndex], 'image')
+					
+					if old_bg != null:
+						systems.display.bgnode.add_child(old_bg)
+						systems.display.bgnode.move_child(old_bg,1)
+					
+					var old_overlays_to_remove = overlays.duplicate(true)
+					overlays = []
+					var dont_fade_old_overlays = false
+					if ovr != null:
+						var ovrLayer = [3]
+						
+						if ovr[0].find(',') != -1:
+							ovr = ovr[0].split(',', false)
+							
+							ovrLayer = []
+							for i in range(0, ovr.size()):
+								ovrLayer.append(3)
+						
+						for i in range(0, ovr.size()):
+							ovr[i] = ovr[i].strip_edges(true, true)
+							
+							if ovr[i].find('|') != -1:
+								var arr = ovr[i].split('|', false, 1)
+								ovr[i] = arr[0]
+								ovrLayer[i] = int(arr[1])
+								
+
+						for i in range(0, ovr.size()):
+							var ovrIndex = global.locationNames.find(ovr[i])
+							if ovrIndex != -1:
+								if old_overlays_to_remove.find(global.locations[ovrIndex]) == -1:
+									systems.display.image(global.locations[ovrIndex], ovrLayer[i])
+									systems.display.fade(global.locations[ovrIndex], Color(0, 0, 0, 0), Color(1, 1, 1, 1), fade_time)
+								overlays.append(global.locations[ovrIndex])
+							else:
+								print('Error: No overlay named ' + ovr[i])
+					for o in old_overlays_to_remove:
+						if overlays.find(o) == -1:
+							systems.display.fade(o, Color(1, 1, 1, 1), Color(0, 0, 0, 0), fade_time)
+					
+					if old_bg != null:
+						var ftimer = Timer.new()
+						add_child(ftimer)
+						
+						ftimer.one_shot = true
+						var time = fade_time
+						while time > 0:
+							ftimer.start(0.01) # Start the timer at 0.5 seconds.
+							yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
+							
+							old_bg.modulate = Color(1, 1, 1, time/fade_time)
+							time -= 0.01
+						old_bg.queue_free()
+						ftimer.queue_free()
+					for o in old_overlays_to_remove:
+						systems.display.remove_name(o)
+					
+					global.pause_input = false
 				else:
 					print('Error: No background named ' + loc)
-				
-				if ovr != null:
-					var ovrLayer = [3]
-					
-					if ovr[0].find(',') != -1:
-						ovr = ovr[0].split(',', false)
-						
-						ovrLayer = []
-						for i in range(0, ovr.size()):
-							ovrLayer.append(3)
-					
-					for i in range(0, ovr.size()):
-						ovr[i] = ovr[i].strip_edges(true, true)
-						
-						if ovr[i].find('|') != -1:
-							var arr = ovr[i].split('|', false, 1)
-							ovr[i] = arr[0]
-							ovrLayer[i] = int(arr[1])
-					
-					for i in range(0, ovr.size()):
-						var ovrIndex = global.locationNames.find(ovr[i])
-						if ovrIndex != -1:
-							systems.display.image(global.locations[ovrIndex], ovrLayer[i])
-							overlays.append(global.locations[ovrIndex])
-						else:
-							print('Error: No overlay named ' + ovr[i])
-			
 			elif dialogue[index].findn('pause') != -1:
 				game.safeToSave = false
 				global.pause_input = true
@@ -498,7 +559,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					index += 1
 					return
 				global.pause_input = true
-				
+				inChoice = false
 				var sceneName = '[Scene: ' + dialogue[index].substr(5,dialogue[index].length()-1)
 				var found = null
 				
@@ -585,7 +646,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			var halt = global.rootnode.scene(dialogue[index], index+1, self)
 			index += 1
 			emit_signal('empty_line')
-		
 		
 		# CHOICES
 		elif dialogue[index].begins_with("*"):
@@ -869,7 +929,7 @@ func remove_dupes(character, info):
 		
 		var is_ag_layer = layer.begins_with('ag_')
 		
-		if layer.findn(character) != -1 or (removing_ag_dupes and is_ag_layer):
+		if layer.findn(character) != -1 or (removing_ag_dupes and is_ag_layer) and not systems.display.layers[i].get("removing", false):
 			#STUPID HACK "MayGib" has "May" in the name...
 			if character == "may" and layer.find("maygib") != -1:
 				continue
@@ -901,6 +961,10 @@ func remove_dupes(character, info):
 					if !global.pause_input: global.pause_input = true
 					var display_node = systems.display.layers[i]['node']
 					systems.display.remove(display_node, i)
+					#var cur_mod = display_node.self_modulate
+					#var end_mod = Color(cur_mod.r, cur_mod.g, cur_mod.b, 0)
+					#systems.display.layers[i]['removing'] =  true
+					#systems.display.fade(systems.display.layers[i]['path'], cur_mod, end_mod, 0.2, true)
 					notsame = [true, global.get_node_pos(display_node)]
 					emit_signal('dupeCheckFinished')
 					if global.pause_input: global.pause_input = false
@@ -944,6 +1008,17 @@ func parse_outfit(info, parsedInfo, i, pos):
 			else:
 				next = 2
 			parsedInfo += '.casual'
+			var extra = ''
+			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
+			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
+		"cross":
+			num = str(search('return characterImages.'+parsedInfo+'.cross.body', info[i+1]))
+			if num == '-1' or num == '-2':
+				num = '0'
+				next = 1
+			else:
+				next = 2
+			parsedInfo += '.cross'
 			var extra = ''
 			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
@@ -1037,11 +1112,10 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		var blushFace = search('return characterImages.'+parsedInfo+'.blush', info[i]) + 1
 		if blushFace != -1 and blushFace != -2: blushNum = blushNum -1 + blushFace
 		AFL += '\n\tsystems.display.face(characterImages.'+parsedInfo+'.blush['+str(blushNum)+'], '+body+', 0, 0, "blush")'
-	if shades or kamina_shades:
-		if kamina_shades or parsedInfo.find("casual") > -1:
-			AFL += '\n\tsystems.display.face(characterImages.nate.afl[1], '+body+', 0, 0, "kamina_shades")'
-		else:
-			AFL += '\n\tsystems.display.face(characterImages.nate.afl[0], '+body+', 0, 0, "shades")'
+	if kamina_shades:
+		AFL += '\n\tsystems.display.face(characterImages.nate.afl[1], '+body+', 0, 0, "kamina_shades")'
+	if shades:
+		AFL += '\n\tsystems.display.face(characterImages.nate.afl[0], '+body+', 0, 0, "shades")'
 	if beard:
 		AFL += '\n\tsystems.display.face(characterImages.nate.afl[2], '+body+', 0, 0, "shades")'
 	if ben_point:
@@ -1131,6 +1205,17 @@ func parse_position(info, parsedInfo, body, i, pos):
 	var move = false
 	var num
 	
+	#Stupid hack, we don't do the fade if this body is already on screen:
+	var useFade = false#true
+	var path = execreturn("return " + body);
+	for l in systems.display.layers:
+		if l["path"] == path:
+			useFade = false
+			break
+		
+	if useFade:
+		parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.2)"
+	
 	var j = i
 	while j < info.size():
 		if info[j] == 'silhouette' or info[j] == 'fade':
@@ -1212,27 +1297,28 @@ func parse_move(info, body, i):
 		speed = info[i+2]
 	
 	if info[i] == 'slide':
-		
+		var res = null
 		if info[i+1].findn('|') != -1:
 			var cords = info[i+1].split('|', false, 1)
-			execute('systems.display.position('+body+', '+cords[0]+', "slide", '+speed+')')
+			res = execreturn('return systems.display.position('+body+', '+cords[0]+', "slide", '+speed+')')
 		elif info[i+1] == 'right':
 			num = 600 + extra
-			execute('systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
+			res = execreturn('return systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
 		elif info[i+1] == 'left':
 			num = -600 + extra
-			execute('systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
+			res = execreturn('return systems.display.position('+body+', '+str(num)+', "slide", '+speed+')')
 		elif info[i+1] == 'center':
-			execute('systems.display.position('+body+', '+str(extra)+', "slide", '+speed+')')
+			res = execreturn('return systems.display.position('+body+', '+str(extra)+', "slide", '+speed+')')
 		elif info[i+1] == 'offleft':
-			execute('systems.display.position('+body+', -1650, "slide", '+speed+')')
+			res = execreturn('return systems.display.position('+body+', -1650, "slide", '+speed+')')
 		elif info[i+1] == 'offright':
-			execute('systems.display.position('+body+', 1650, "slide", '+speed+')')
+			res = execreturn('return systems.display.position('+body+', 1650, "slide", '+speed+')')
 		else:
 			return
 		
 		lastBody = execreturn('return ' + body) # For saving purposes.
-
+		return res
+		
 # Function to execute the code generated through parsing.
 func execute(parsedInfo):
 	var source = GDScript.new()
@@ -1320,23 +1406,22 @@ func fadeblackalpha(node, fade, spd, time=0.5):
 			node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
-	
+		node.set_self_modulate(Color(1,1,1,0))
 	# If fade is in then fade in.
 	elif fade == 'out':
 		percent = 0
 		# While percent isn't 0 fade from black.
-		while percent != 100:
+		while percent != 100 and global.fading:
 			percent += spd # Add spd to percent.
 			if percent > 100: percent = 100 # Make percent 100 if it goes above.
 			p = float(percent)/100 # Make p percent/100
 			node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
-	
+		node.set_self_modulate(Color(1,1,1,1))
 	# Else print an error if fade is not in or out.
 	else:
 		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")
-	
 	emit_signal('transition_finish')
 	global.finish_fading()
 	ftimer.queue_free()

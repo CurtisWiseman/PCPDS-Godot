@@ -23,20 +23,25 @@ func _ready():
 # Make the given image 'bg' a background.
 func background(bg, type):
 	
-	# If the previous background was the same type then change the content and return.
-	if type == 'image' and bgtype == 'image':
-		var gfx = bgnode.get_node("gfx")
-		gfx.texture = load(bg)
-		gfx.scale.x = 1920.0/gfx.texture.get_width()
-		gfx.scale.y = 1080.0/gfx.texture.get_height()
-		return
-	if type == 'video' and bgtype == 'video':
-		bgnode.stream = load(bg)
-		bgnode.play()
-		return
+	## If the previous background was the same type then change the content and return.
+	#if type == 'image' and bgtype == 'image':
+	#	var gfx = bgnode.get_node("gfx")
+	#	gfx.texture = load(bg)
+	#	gfx.scale.x = 1920.0/gfx.texture.get_width()
+	#	gfx.scale.y = 1080.0/gfx.texture.get_height()
+	#	return
+	#if type == 'video' and bgtype == 'video':
+	#	bgnode.stream = load(bg)
+	#	bgnode.play()
+	#	return
+	
+	
+	
 	
 	var prevbg = bgnode # Keeps the previous background node.
 	
+	if prevbg != self:
+		remove_child(prevbg)
 	# If of type image make the background a sprite.
 	if type == 'image':
 		bgnode = Node2D.new()
@@ -80,12 +85,14 @@ func background(bg, type):
 	else:
 		var children = prevbg.get_children()
 		for i in range(0, children.size()):
+			#This was the old layers graphics!
+			if children[i].name == "gfx":
+				continue
 			prevbg.remove_child(children[i])
 			bgnode.add_child(children[i])
 #			bgnode.add_child(layers[layers.size() - 1 - i]['node'])
 	
 	add_child(bgnode) # Add the new bgnode.
-	
 	if type == 'video':
 		bgnode.play() # Begin playing the video.
 
@@ -139,7 +146,6 @@ func image(imgpath, z):
 	imgnode.texture = info[2] # Set the node's texture to the image.
 	imgnode.z_index = z # Set the z index of the node to z.
 	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
-
 
 
 # Display the given video on the scene on the given layer.
@@ -204,7 +210,7 @@ func animation(vidpath):
 
 
 # Create a mask
-func mask(mask, path, type, z):
+func mask(mask, path, type, z, fade_in=true):
 	
 	# If z is 0 print error then exit function.
 	if z == 0:
@@ -276,7 +282,8 @@ func mask(mask, path, type, z):
 		
 		nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 		vidnode.play() # Play the video.
-
+	if fade_in:
+		fade(path, Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.2)
 
 
 # Add a face to an alreadyt existing body.
@@ -318,7 +325,6 @@ func face(facepath, body, x=0, y=0, type='face'):
 		if type == 'below': 
 			facenode.z_as_relative = false
 			facenode.z_index = 0
-
 
 
 # Switch content with a new texture.
@@ -480,8 +486,8 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 			position.set_script(load('res://code/positioning.gd')) # Give position the positioning script.
 			position.set_name(cname + '(Position)') # Give it the image name + (Position)
 			add_child(position) # Add it as a child of Display.
-			get_node(cname + '(Position)').move(Vector2(s,0), node, type, index, 0, x) # Call position's move function.
-		
+			get_node(cname + '(Position)').move(Vector2(s*6,0), node, type, index, 0, x) # Call position's move function.
+			return position
 		if mv == 'collide':
 			
 			# If n is a specific node then set it as collidee.
@@ -523,9 +529,7 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 			speed = Vector2(s, 0)
 			timer = t
 			collider = node
-
-
-
+			return position
 ## Resize the given image.
 #func resize(path, x=100, y=100, xpos=0, ypos=0, face=false):
 #
@@ -556,15 +560,15 @@ func position(cname, x, y=0, s=4, t=0, n='all'):
 #			layers[index]['node'].position = layers[index]['position']
 
 # Function to fade 
-func fade(content, from : Color, to : Color, time : float, mod='self', fadeSignal=false):
+func fade(content, from : Color, to : Color, time : float, remove_on_fade = false, mod='self', fadeSignal=false):
 	global.fading = true # Let the game know fading is occuring.
 	var ftimer = Timer.new() # A timer node.
 	add_child(ftimer) # Add the timer as a child.
 	#For safety, only one thing can actually fade at a time.
 	#This helps prevent weird pseudo race conditions where two fades start on the same thing, etc
-	while faders.size() > 0:
-		ftimer.start(0.01)
-		yield(ftimer, 'timeout')
+	#while faders.size() > 0:
+	#	ftimer.start(0.01)
+	#	yield(ftimer, 'timeout')
 	var node # The node to modulate from.
 	var index # Index of content node.
 	var face = null # If content has face.
@@ -628,37 +632,49 @@ func fade(content, from : Color, to : Color, time : float, mod='self', fadeSigna
 		yield(ftimer, 'timeout')
 	
 	
+	if remove_on_fade:
+		layers[index]["removing"] = true
+		layers[index]["node"].name += " REMOVING"
+		layers[index]["name"] = layers[index]["node"].name
 	faders.append(node)
 	fader_targets[node] = to
 	
 	# If fade is out then fade out.
 	# While percent isn't 0 fade to black.
 	while time_waited < time and global.fading:
+		if not remove_on_fade:
+			pass
+			
 		var cur_col = from.linear_interpolate(to, clamp(time_waited/time, 0.0, 1.0))
 		if not is_instance_valid(node):
 			#Welp, it's gone already!
 			break
-		if mod == 'self':
+		if mod != 'children':
 			node.set_self_modulate(cur_col) # Modulate the node by p.
-			if face: face.set_self_modulate(cur_col) # Modulate the face by p.
-			if AFL: 
-				for afl in AFL: 
-					afl["node"].set_self_modulate(cur_col) # Modulate AFLs by p.
-		else:
-			node.set_modulate(cur_col) # Modulate the node and all it's children by p.
+		if face: face.set_self_modulate(cur_col) # Modulate the face by p.
+		if AFL: 
+			for afl in AFL: 
+				afl["node"].set_self_modulate(cur_col) # Modulate AFLs by p.
+		#elif 
+		#	
+		#else:
+		#	node.set_modulate(cur_col) # Modulate the node and all it's children by p.
 		ftimer.start(0.01) # Start the timer at 0.5 seconds.
 		yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
 		time_waited += 0.01
 		
 	if is_instance_valid(node):
-		if mod == 'self':
-			node.set_self_modulate(to)
-			if face: face.set_self_modulate(to) # Modulate the face by p.
-			if AFL: 
-				for afl in AFL: 
-					afl["node"].set_self_modulate(to) # Modulate AFLs by p.
-		else:
-			node.set_modulate(to)
+		if mod != 'children':
+			node.set_self_modulate(to) # Modulate the node by p.
+		if face: face.set_self_modulate(to) # Modulate the face by p.
+		if AFL: 
+			for afl in AFL: 
+				afl["node"].set_self_modulate(to) # Modulate AFLs by p.
+		#else:
+		#	node.set_modulate(to)
+			
+		if remove_on_fade:
+			remove(node, index)
 			
 	if faders.find(node) > -1:
 		faders.erase(node)
@@ -670,7 +686,7 @@ func fade(content, from : Color, to : Color, time : float, mod='self', fadeSigna
 	global.finish_fading() # Let the game know fading is done.
 	ftimer.queue_free() # Free the timer.
 
-
+	
 
 # Function to get the index of a node.
 func getindex(content):

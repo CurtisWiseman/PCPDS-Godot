@@ -328,6 +328,17 @@ var endlesswar = {
 					'smitten': ['res://images/characters/Endless War/Knife Faces/endlesswar_face_knife_smitten1.png', 'res://images/characters/Endless War/Knife Faces/endlesswar_face_knife_smitten2.png', 'res://images/characters/Endless War/Knife Faces/endlesswar_face_knife_smitten3.png'],
 					'blush': ['res://images/characters/Endless War/AFL/endlesswar_face_knife_blushies1.png', 'res://images/characters/Endless War/AFL/endlesswar_face_knife_blushies2.png', 'res://images/characters/Endless War/AFL/endlesswar_face_knife_blushies3.png'],
 					'body': ['res://images/characters/Endless War/endlesswar_campus2_knife.png']
+					},
+				'cross': {
+					'happy': ['res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_happy1.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_happy2.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_happy3.png'],
+					'angry': ['res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_angry1.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_angry2.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_angry3.png'],
+					'confused': ['res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_confused1.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_confused2.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_confused3.png'],
+					'neutral': ['res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_neutral.png'],
+					'sad': ['res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_sad1.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_sad2.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_sad3.png'],
+					'shock': ['res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_shock1.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_shock2.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_shock3.png'],
+					'smitten': ['res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_smitten1.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_smitten2.png', 'res://images/characters/Endless War/Cross Faces/endlesswar_face_cross_smitten3.png'],
+					'blush': ['res://images/characters/Endless War/AFL/endlesswar_face_cross_blushies1.png', 'res://images/characters/Endless War/AFL/endlesswar_face_cross_blushies2.png', 'res://images/characters/Endless War/AFL/endlesswar_face_cross_blushies3.png'],
+					'body': ['res://images/characters/Endless War/endlesswar_campus3_cross.png']
 					}
 				}
 

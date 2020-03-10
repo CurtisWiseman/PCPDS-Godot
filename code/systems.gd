@@ -95,6 +95,7 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	dialogue.add_font_override("normal_font", global.defaultFont)
 	dialogue.add_font_override("bold_font", global.defaultFontBold)
 	dialogue.add_font_override("italics_font", global.defaultFontItalic)
+	dialogue.add_font_override("bold_italics_font", global.defaultFontBoldItalic)
 	dialogueBox.add_child(dialogue);
 	
 	# Load the Namteag under dialogueBox.

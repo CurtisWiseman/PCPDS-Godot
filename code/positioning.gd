@@ -37,8 +37,6 @@ func move(s, n, ty, i, t, x=null):
 	connect('position_finish', self, 'free_node') # Connects signal 'position_finish' to free_node().
 	global.sliding = true; # Let the game know a node is sliding.
 
-
-
 # Calculates the movement of images across the screen.
 func _process(delta):
 	if nodepos != null and speed != null:
