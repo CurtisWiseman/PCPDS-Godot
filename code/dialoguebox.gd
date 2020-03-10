@@ -68,6 +68,7 @@ func say(words, character = "", voice = null):
 		$Nametag.text = ""
 	else:
 		$Nametag.text = character
+		systems.textBoxBackground.swap_character(character.to_lower())
 	$Dialogue.say(words, voice)
 	
 # Function to calculate the number of unseen choices.
@@ -296,7 +297,9 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				fadeblackalpha(systems.blackScreen, 'out', 100)
 			elif dialogue[index].findn('cut from black') != -1: 
 				fadeblackalpha(systems.blackScreen, 'in', 100)
-			
+			elif dialogue[index].to_lower().find('preload') == 1:
+				var character = dialogue[index].to_lower().strip_edges().substr("[preloadtext ".length()).rstrip("]")
+				systems.textBoxBackground.queue_load(character)
 			elif dialogue[index].findn('SLIDE') != -1:
 				var command = dialogue[index].lstrip('[')
 				command = command.rstrip(']')
@@ -908,11 +911,31 @@ func parse_info(info):
 			yield(self, 'dupeCheckFinished')
 			if notsame[0]: parse_outfit(info, charName+'.'+info[1], 1, notsame[1])
 		_:
+			if (info[0].to_lower() == "digi" or info[0].to_lower() == "artsofartso") and info[1].to_lower() == "special":
+				remove_dupes(info[0].to_lower(), info)
+				yield(self, 'dupeCheckFinished')
+				parse_special_digi(info, info[0].to_lower(), 1, notsame[1])
+				return
 			var charName = info[0].to_lower();
 			charName = charName.replace(' ', '');
 			remove_dupes(charName, info)
 			yield(self, 'dupeCheckFinished')
 			if notsame[0]: parse_outfit(info, charName, 1, notsame[1])
+	
+func parse_special_digi(info, parsedInfo, i, pos):
+	var num = str(search('return characterImages.'+parsedInfo+'.special.body', info[i+1]))
+	var video = 'characterImages.'+parsedInfo+'.special.body[' + str(num) + ']'
+	var mask =  'characterImages.'+parsedInfo+'.special.mask[' + str(num) + ']'
+	var expression_num_stuff = parse_expnum(info[i+2], parsedInfo)
+	var face_num = expression_num_stuff[0]
+	var faceType = expression_num_stuff[1]
+	#STUPID HACK! People keep swapping between these two in the scripts...
+	if faceType == "shocked":
+		faceType = "shock"
+	var forced_mask_name = mask#"/"+parsedInfo +'_special_' + str(num)
+	var face = '\n\tsystems.display.face(characterImages.'+parsedInfo+'.special.'+faceType+'['+face_num+'], "'+forced_mask_name+'")'
+	parse_position(info, 'systems.display.mask(' + mask + ', ' + video + ', "video", 1, false, "' + forced_mask_name + '")' + face, video, i+3, pos)
+	return
 	
 # Removes duplicate bodies of characters if they exist.
 func remove_dupes(character, info):
@@ -1023,11 +1046,12 @@ func parse_outfit(info, parsedInfo, i, pos):
 			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"special":
-			#Crocs is another weird case
 			if (info[0].to_lower() == "crocs"):
 				num = str(search('return characterImages.'+parsedInfo+'.body', info[i]))
 				parse_expression(info, parsedInfo, 'characterImages.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
 				return
+			#Crocs is another weird case
+			
 			num = str(search('return characterImages.'+parsedInfo+'.special.body', info[i+1]))
 			if num == '-1' or num == '-2':
 				num = '0'
@@ -1206,15 +1230,15 @@ func parse_position(info, parsedInfo, body, i, pos):
 	var num
 	
 	#Stupid hack, we don't do the fade if this body is already on screen:
-	var useFade = false#true
-	var path = execreturn("return " + body);
-	for l in systems.display.layers:
-		if l["path"] == path:
-			useFade = false
-			break
+	#var useFade = false#true
+	#var path = execreturn("return " + body);
+	#for l in systems.display.layers:
+	#	if l["path"] == path:
+	#		useFade = false
+	#		break
 		
-	if useFade:
-		parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.2)"
+	#if useFade:
+	#	parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.2)"
 	
 	var j = i
 	while j < info.size():
