@@ -133,7 +133,7 @@ A cool looking giraffe catches the teachers attention.
 (Nate|???, campus, pointing, happyMED|shades) See PCPG? Be more like Action Giraffe here and realize your dreams to their fullest, no matter what. I won’t accept anything less.
 
 [SLIDE Nate offright]
-
+[Nate leaves]
 (PCPG) Who was that?
 
 (Gibbon|Gib, campus, grabby, happyMED, offright, slide, right) That was Professor Bestman, he teaches the Memes and Philosophy classes.
@@ -276,7 +276,7 @@ I was kind of afraid of this whole university thing at first. It’s good to kno
 All these wacky introductions have left me starving, I can’t wait to finally chow down.
 [fade to black]
 [Location: dininghall.demo]
-
+[SFX: PCP-SFX_DoorOpen]
 [fade from black]
 As I push open the doors to the cafeteria, I find myself at an unexpected scene.
 
@@ -315,10 +315,9 @@ I don’t think I’m quite comfortable with the implication here, but if Gibbon
 
 A female voice from behind catches my attention.
 
-(Mage|???, campus, 4, fade, happyMED)
 (PCPG) Hm? Oh, right! Yes, I haven’t. Haven’t been here before, that is! I’m the new guy. That’s me.
 
-(Mage|???, campus, 5, neutral) There’s no need to be so nervous, I won't bite. I know this school can be a bit overwhelming sometimes, but you’ll get used to it.
+(Mage|???, campus, 4, happyMED) There’s no need to be so nervous, I won't bite. I know this school can be a bit overwhelming sometimes, but you’ll get used to it.
 
 (Mage|???, campus, 3, happyMIN) If you ever have any problems, just talk to the student council! I’m the vice president, always happy to help out a fellow student.
 
@@ -383,7 +382,7 @@ Careful of the “mud puddle,” I sit down in front of Gibbon and pop some blue
 [SLIDE Gibbon left]
 (Endless War|???, stand, neutral, silhouette) You heard him right.
 
-A new female voice replies from behind me, and this time she doesn’t sound so happy to see me. I look back and see her gesturing to the cafeteria table enveloped by vapor.
+A new female voice replies from behind me, and this one doesn’t sound so happy to see me. I look back and see her gesturing to the cafeteria table enveloped by vapor.
 
 As I look over I see a blob of slime shoot out of the vapor and splash onto the nearby table of rowdy students who were shaking about. They don’t look pleased at the donation and begin to retaliate with their own slime.
 
@@ -454,11 +453,11 @@ I follow Gibbon as this “Endless War” girl stays behind at the table. As I l
 [EndlessWar leaves]
 [StopMusic]
 [Location: hallway1.percyjackson]
-
+[SFX: PCPDating_School_Bell]
 [fade from black]
 
 As soon as we exit the cafeteria the bell rings for the next class. 
-
+[StopSFX]
 (Gibbon, campus, default, neutral, offright, slide, right) Don’t worry about the WAR too much, it’s not as bad as Endless War makes it out to be.
 
 I don’t quite believe him, but I let it slide for now.
@@ -490,12 +489,12 @@ Gibbon nods, and so we make our way towards the arts classroom.
 (Mage, campus, 4, confusedMIN) I really wonder how that happened...
 
 [Screen shakes]
-
+[SFX: PCP-SFX_DoorSlam]
 Before I was able to quip on how she might be a dude or something, the door to the classroom bursts open.
 
 [SLIDE Gibbon offleft]
 [SLIDE Mage offleft]
-(Munchy|???, campus, 3, angryMED, offright, slide, center)  HELLO CHILDREN! Listen! You may not know who I am, but you’re gonna find out WAY MORE, than you’ve ever DREAMED of knowing!
+(Munchy|???, campus, 3, angryMED, offright, slide, center) HELLO CHILDREN! Listen! You may not know who I am, but you’re gonna find out WAY MORE, than you’ve ever DREAMED of knowing!
 
 (Munchy, campus, 2, happyMAX) I’m gonna introduce you to the finest of arts, because - if you haven’t figured it out yet - I’m Munchy J. Shatsky, a.k.a. “Professor Tinyhats,” a.k.a. “Munchy” if your attention span’s too fucking short to remember how to address me properly.
 
@@ -539,14 +538,14 @@ Huh? What is that even supposed to mean?
 
 [SLIDE Munchy offright]
 [pause]
-
+[SFX: PCP-SFX_DoorOpen]
 [SLIDE Munchy right]
 [pause]
 [SLIDE Tom offright]
 [SLIDE Munchy offright]
-
+[SFX: PCP-SFX_DoorSlam]
 [Munchy leaves]
-
+[Tom leaves]
 (Mage, campus, 3, angryMIN, offleft, slide, left) That’s mean! Just throwing him out like that...
 
 (PCPG) Yeah, that was harsh. Hope he’s not suicidal or anything.
@@ -593,7 +592,7 @@ What a bizarre guy...
 (PCPG) Thanks for all your help showing me around school. That was really nice, Gibbon.
 (Gibbon, campus, default, neutral|blushMIN) Oh, it’s nothing. ‘Til tomorrow, PCPG!
 [SLIDE Gibbon offright]
-
+[Gibbon leaves]
 Hmm, now what? School is done, so where should I spend the afternoon?
 
 [CHOICE]
