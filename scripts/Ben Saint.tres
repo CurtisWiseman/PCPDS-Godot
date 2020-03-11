@@ -3,7 +3,7 @@
 (PCPG) !enlist killers
 
 (Munchy, campus, default, neutral, right) I fucking knew it.
- 
+
 [CG: Purple Effect]
 Suddenly a purple light begins to envelop and circle around me and a near infinite amount of memories and experiences suddenly flash before my eyes. The light then calms down again, and at the end of it all, I feel like a changed man.
  
@@ -67,17 +67,17 @@ We finish up ordering our food and make our way towards the cloud of vapour that
  
 [Location: dininghall.nokillers, dininghall.table.killersforeground]
 
-(Cop Killers, cloud, offleft, left)
-(Ben, campus, base, neutral, offright, right) Greetings my dear apostles. Please take care of this new soul for me, for I must attend to my Slime Time.
+(Cop Killers, cloud, offleft, slide, left)
+(Ben, campus, base, neutral, offright, slide, right) Greetings my dear apostles. Please take care of this new soul for me, for I must attend to my Slime Time.
  
 (Ben, campus, base, neutral, right, slide, offright)
 Ben then quickly exits right back out through the vapour. The rest of the Killers intently watch him leave. Where is he going? Also, didn’t he just order food?
 
-[CopKillers leave]
-(K1P|K1P, default, offleft, center) Never willing to stick around too long huh Ben?
+[CopKillers leaves]
+(K1P|K1P, base, offleft, slide, center) Never willing to stick around too long huh Ben?
  
 [K1P leaves]
-(Schrafft, default, offleft, center) [i]Anyways[/i], @Killers get your ASSES in gear, some introductions are in order. I'm Schrafft, I try to keep things running in this gang while our negligent leader does whatever it is he does.
+(Schrafft, default, offleft, slide, center) [i]Anyways[/i], @Killers get your ASSES in gear, some introductions are in order. I'm Schrafft, I try to keep things running in this gang while our negligent leader does whatever it is he does.
 
 [Schrafft leaves]
 (Ephraim, default, offright, slide, center)
@@ -97,14 +97,14 @@ Ben then quickly exits right back out through the vapour. The rest of the Killer
 
 (Smearg) Ok chill chill.
 
-(K1P, default)
+(K1P, base)
 (Schrafft) This little pocket-sized monster thing is K1P, he's uh, a controversial figure.
 
 (Ephraim) a huge fuckin gameplay goon
 
 (K1P) Aw come on I just care about the game balance.
 
-(K1P, default, center, slide, offleft)
+(K1P, base, center, slide, offleft)
 (magicks, default, offright, slide, center)
 (magicks) hah, sure
 
@@ -234,7 +234,7 @@ Soo, why the fuck did I do that again?
 
 [Scene: !find PPU]
 
-[Cop Killers leave]
+[Cop Killers leaves]
 [StopMusic]
 [Location: copkilltown]
 [Song: PCPDating_LifeInEndlessWar]
@@ -283,7 +283,7 @@ While there was more opposition than was expected, we finally succeed at bringin
  
 However despite our easy victory, the day was not quite over yet, for there was a surprise waiting for us when we returned.
  
-[Cop Killers leave]
+[Cop Killers leaves]
 [Song: PCPDating_SuspiciousFigga]
 [Location: saintbencathedral.pizzaparty]
 
@@ -405,7 +405,7 @@ Ben then faces the group of Killers surrounding us.
 (Ben, casual, base, angryMAX) And you, PCPG, I better not see you around here anymore. You may technically be a Killer, but you’re no Killer of mine.
  
 [Ben leaves]
-[Cop Killers leave]
+[Cop Killers leaves]
 Ben then leaves the Cathedral while the Killers around us head inside.
  
 (Endless War|Endless War, stand, angryMED, right, slide, center) AAARGH! Fuck Ben and his fucking stupid pizza party! The Killers are wasting their goddamn time with this fucking shit!

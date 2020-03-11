@@ -138,7 +138,7 @@ Suddenly, someone enters the school roof.
 
 (Mage|Mage, campus, 5, angryMIN) Oh, it’s you.
 
-(Endless War|Endless War, cross, smittenMIN|blushiesMED) You know it. I assume you haven’t changed your opinion regarding the offer I made you last Monday?
+(Endless War|Endless War, cross, smittenMIN|blushMED) You know it. I assume you haven’t changed your opinion regarding the offer I made you last Monday?
 
 (Mage|Mage, campus, 5, angryMED)  No, I haven’t. And stop asking me, I told you, time and time again!
 
@@ -164,7 +164,7 @@ The triangular girl’s fierce glare petrifies me.
 
 [SLIDE EndlessWar offright]
 [SLIDE Ben offleft]
-[Endless War leaves] 
+[EndlessWar leaves] 
 [StopMusic]
 
 [Song: PCPDating_FallenGlass]
@@ -258,7 +258,6 @@ My parents were surprisingly unconcerned about me going out, considering the cir
 
 (PCPG) Your enemies? Do you mean school bullies or what?
 
-[CG: end|cut]
 [CG: Mage CG2]
  
 (Mage) The gang called the Indigo Interlopers. Older kids, ruffians and school delinquents who had a problem with a seven year old Mage claiming a part of their city. And I hated them, of course, because of their colour. 
@@ -283,14 +282,12 @@ My parents were surprisingly unconcerned about me going out, considering the cir
 
 (PCPG) I guess this didn’t end well?
 
-[CG: end|cut]
 [CG: Mage CG3]
 
 (Mage) I’m scared of who I was back then. I killed without hesitation, was a merciless warrior.
 
 (Mage) But I had to pay a horrible price for my ruthless behavior.
 
-[CG: end|cut]
 [CG: Mage CG4]
 
 (Mage) One day, my gang was ambushed by the Indigo Interlopers. Shortly before, we killed their leader. Understandably, they wanted revenge.
@@ -299,7 +296,7 @@ My parents were surprisingly unconcerned about me going out, considering the cir
 
 (Mage) After months, I found myself in America, and my new friends found me. The teachers and students of the University. I actually named the University, you know? It had another name first, “Horseshoe University” or something like that, but when I first became Student Council President, I decided on a more fitting name.
 
-[CG: end|cut]
+[CG: end]
 
 (Mage) I came here and turned this forest purple as a living memorial for my fallen friends. Every tree here is named after one of my Tigers. I burned their names into the bark with purple magic, without hurting the trees of course.
 
@@ -487,10 +484,11 @@ Where did that stray thought even come from? After scanning everything again, we
 [Scene: Don’t Let Your Dreams Be Memes]
 
 [Location: outsidepcpu.nightmare]
+
+[CG: Endless Eye]
 [fade from black]
 
 [Song: PCPDating_GameOver]
-[CG: endlesseye]
 
 (Endless War) Hey … don’t be afraid … you might be dead … slurp it down …
 
@@ -539,7 +537,7 @@ No…!
 
 [Location: mageforest.nightmare, overlay.bloodsplatter]
 [Lethal leaves]
-[CG: endlesseye]
+[CG: Endless Eye]
 (Endless War) Do you get it now, juve?
 [StopMusic]
 [Location: pcpgroom]
@@ -634,7 +632,7 @@ Wait! The - their colour! they are all clothed in the same shade of blue!
 
 (Mage) How is that my problem?
 
-(Indigo Interlopers) You escaped us! You are still a symbol to these fools, even if they are from other colours. Since you precious tigers are destroyed-
+(Indigo Interlopers) You escaped us! You are still a symbol to these fools, even if they are from other colours. Since your precious tigers are destroyed-
 
 [CG end]
 
@@ -642,7 +640,7 @@ Wait! The - their colour! they are all clothed in the same shade of blue!
 
 Mage takes an angry step forwards and I hold her back.
 
-(Indigo Interlopers) Aww, you think you can fight us? Stupid Violet! We’re gonna overwhelm and capture you! We’re bringing you back to Lithuania, and execute you publicly, for all our enemies to see! After that, nobody will question our authority anymore!
+(Indigo Interlopers) Aww, you think you can fight us? Stupid Violet! We’re gonna overwhelm and capture you! We’re bringing you back to Lithuania, and executing you publicly, for all our enemies to see! After that, nobody will question our authority anymore!
 
 The Interlopers are drawing knives, swords, swinging clubs and morning stars, I even see one or two firearms. How did they get this stuff over the border?
 
@@ -730,7 +728,7 @@ A distant, swelling chant makes the gang stop. It’s a cacophony of voices, pro
 [CG end]
 
 [Slide, Mage, center, right]
-[Cop Killers, dabbing, offleft, slide, center]
+[CopKillers, dab, offleft, slide, center]
 Suddenly the street is filled with purple characters, some hooded, some masked, some not even human. Besides their colour scheme, the only thing they have in common is that they are all dabbing in perfect unison. 
 
 (Endless War) Exclamation point dabbing, precisely.
@@ -765,8 +763,8 @@ The Cop Killer turns to the Indigo Interlopers.
 
 [CG: Indigo Interlopers Death]
 [Ben leaves]
-[Endless War leaves]
-[Cop Killers leaves]
+[EndlessWar leaves]
+[CopKillers leaves]
 [Mage leaves]
 [fade to black]
 [CG end]
@@ -790,19 +788,19 @@ Professor Bestman even performed a legitimately awesome rendition of Another One
 
 [Location: radprom1]
 
-(Digibro, casual, 4, happyMED, offright, slide, center) 
+(Digi, casual, 4, happyMED, offright, slide, center) 
 
-(Digibro|Professor Digibro) Hey PCPG! How have you been doing!
+(Digi|Professor Digibro) Hey PCPG! How have you been doing!
 
 (PCPG) I’m doing fine, Professor.
 
-(Digibro|Professor Digibro, casual, 2, happyMAX) I haven’t seen you in my class lately! Good, seems like you learned how retarded school actually is. Like the heroes, they drop out! Just look at our guidance teacher.
+(Digi|Professor Digibro, casual, 2, happyMAX) I haven’t seen you in my class lately! Good, seems like you learned how retarded school actually is. Like the heroes, they drop out! Just look at our guidance teacher.
 
 (PCPG) Eh that’s not it. I just had other things on my mind lately.
 
-(Digibro|Professor Digibro, casual, 2, smittenMED) Yeah, you’ve been seen hanging out with the Lethal Aurora Mage lately. Tell me, what’s going on there?
+(Digi|Professor Digibro, casual, 2, smittenMED) Yeah, you’ve been seen hanging out with the Lethal Aurora Mage lately. Tell me, what’s going on there?
 
-[SLIDE, Digibro, center, left]
+[SLIDE, Digi, center, left]
 (Mage, casual, 1, sadMIN, offright, slide, center) 
 
 (Mage) Hey, what have you been talking about?
@@ -811,26 +809,26 @@ Professor Bestman even performed a legitimately awesome rendition of Another One
 
 (Mage|Mage, casual, 2, happyMIN) Uhhhhhhh Digi have you seen this anime, it’s called Double Decker!
 
-(Digibro|Professor Digibro, casual, 5, confusedMIN) I don’t think so.
+(Digi|Professor Digibro, casual, 5, confusedMIN) I don’t think so.
 
 (PCPG) Don’t you make a whole thing about watching every single anime year after year?
 
-(Digibro|Professor Digibro, casual, 2, happyMIN) Maybe it was so unmemorable that I instantly forgot about it.
+(Digi|Professor Digibro, casual, 2, happyMIN) Maybe it was so unmemorable that I instantly forgot about it.
 
 (Mage|Mage, casual, 3, happyMED) No it is awesome! It has very cute boys in it too!
 
-(Digibro|Professor Digibro, casual, 1, happyMED) You’re like one of the biggest Fujoshi I know Mage. You don’t watch it dubbed, do you?
+(Digi|Professor Digibro, casual, 1, happyMED) You’re like one of the biggest Fujoshi I know Mage. You don’t watch it dubbed, do you?
 
 (Mage|Mage, casual, 3, angryMIN) Of course I do! Comedy anime especially are way better dubbed. The timing is just completely off when you read the punchlines in subs.
 
-(Digibro|Professor Digibro, casual, 4, happyMAX) Well, you just have to reach my level of anime watching. I learned perfect japanese from watching enough subbed anime, now I don’t even have to read the subtitles anymore!
+(Digi|Professor Digibro, casual, 4, happyMAX) Well, you just have to reach my level of anime watching. I learned perfect japanese from watching enough subbed anime, now I don’t even have to read the subtitles anymore!
 
 (Mage|Mage, casual, 4, angryMIN) I disagree.
 
-(Digibro|Professor Digibro, casual, 5, smittenMED) Ehh whatever! Have fun guys.
+(Digi|Professor Digibro, casual, 5, smittenMED) Ehh whatever! Have fun guys.
 
 [SLIDE: Digi, left, offleft]
-[Digibro leaves]
+[Digi leaves]
 
 (PCPG) I’ve never seen you guys talk, like ever.
 
@@ -854,7 +852,7 @@ We walk outside the hall, down the terrace into the garden.
 
 (Mage|Mage, casual, 4, happyMIN) You really are a great friend, PCPG.
 
-(Lethal???) Ughh… you guys are so cheesy.
+(Lethal|???) Ughh… you guys are so cheesy.
 
 (Mage|Mage, casual, 4, happyMED) Come on Lethal. Just let us have this moment.
 
@@ -885,7 +883,7 @@ Building a beautiful purple Minecraft house next to her forest, to live there in
 
 Have I been friendzoned? Nah, I’m fine, I’m pretty happy with this entire situation. 
 
-[CG: Date with EW]
+[CG: Endless War Date]
 
 Actually, miraculously I’ve been on a few successful dates with Endless War now. She’s actually surprisingly likeable since I’ve started mining slime for here. I gifted Mage some slimoids, and now she can play Slime Ranger in real life!
 
@@ -936,6 +934,7 @@ One of the Indigo interlopers tries to say something, but Lethal cuts him off
 [Lethal leaves]
 [pause]
 [cut to black]
+[cg end]
 [StopMusic]
 
 [Scene: BadProm]
@@ -943,39 +942,39 @@ One of the Indigo interlopers tries to say something, but Lethal cuts him off
 A few weeks have passed since the day of the Interloper attack. Mage hasn’t returned to her old form yet, but I think that will happen soon, now that there is no-one left to fight.
 
 [Song: PCPDating_RADCON]
-[cut from black]
 [Location: radprom1]
+[cut from black]
 
 RadProm day has come! I’ve never been to any proms in my old life, mainly because I never got a date and appearing without one was regarded as a sin, but this time it’s different.
 
-(Gibbontake|Gib, casual, default, neutral, offleft, slide, center) Heey!
+(Gibbon|Gib, casual, default, neutral, offleft, slide, center) Heey!
 
 (PCPG) Hi Gib, how are you enjoying the prom?
 
-(Gibbontake|Gib, casual, grabby, happyMIN) Eh I’m fine! Who is your date tonight?
+(Gibbon|Gib, casual, grabby, happyMIN) Eh I’m fine! Who is your date tonight?
 
 (PCPG) I’m supposed to meet with Mage, but I haven’t seen her yet.
 
-(Gibbontake|Gib, casual, press, angryMIN) Oh, Mage... Have you seen her lately? She seems… different.
+(Gibbon|Gib, casual, press, angryMIN) Oh, Mage... Have you seen her lately? She seems… different.
 
 (PCPG) Are you talking about her fashion change?
 
-(Gibbontake|Gib, casual, press, confusedMED) Well, I’m more worried about the number of eyes on her face. Are you sure she’s fine?
+(Gibbon|Gib, casual, press, confusedMED) Well, I’m more worried about the number of eyes on her face. Are you sure she’s fine?
 
 (PCPG) Nah, everything is alright. She says she feels better than ever. 
 
-(Gibbontake|Gib, casual, clenched, sadMIN) Since the incident with the Interlopers?
+(Gibbon|Gib, casual, clenched, sadMIN) Since the incident with the Interlopers?
 
 (PCPG) You heard of that?
 
-(Gibbontake|Gib, casual, handsup, confusedMED) Well, I’m friends with a famous detective you know? He told me that Mage lost control and slew a bunch of ruffians near Yang Street. The biggest massacre since the bicarbonate rain!
+(Gibbon|Gib, casual, handsup, confusedMED) Well, I’m friends with a famous detective you know? He told me that Mage lost control and slew a bunch of ruffians near Yang Street. The biggest massacre since the bicarbonate rain!
 
 (PCPG) It was self-defense! And anyway, since then she seems way more happy and confident. It’s like she finally got closure on her horrible past.
 
-(Gibbontake|Gib, casual, grabby, happyMIN) I'm sure you’re right. Excuse me, my slimegirl wants a dance. Have fun!
+(Gibbon|Gib, casual, grabby, happyMIN) I'm sure you’re right. Excuse me, my slimegirl wants a dance. Have fun!
 
-[SLIDE, Gibbontake, center, offleft]
-[Gibbontake leaves]
+[SLIDE, Gibbon, center, offleft]
+[Gibbon leaves]
 
 (PCPG) Same!
 
@@ -985,7 +984,7 @@ I’m surprised how crowded the dancefloor is. Till now I assumed most students 
 
 Excited I turn around.
 
-[CG: Lethal at the bar]
+[CG: mage at the bar final]
 
 (Lethal) Come here!
 
@@ -1011,7 +1010,7 @@ I don’t really get her reasoning, but I guess that’s a no.
 
 (Lethal|Lethal, 4, angryMIN) They came together here with the intention of making quality content, to change the artistic paradigm in their little circle of creators.
 
-(Lethal,Lethal, 4, angryMAX) But they are all just fucking around and never get anything done! Their popularity is dwindling, the attendance in their classes is going downhill.  
+(Lethal|Lethal, 4, angryMAX) But they are all just fucking around and never get anything done! Their popularity is dwindling, the attendance in their classes is going downhill.  
 
 (PCPG) But, how is that important? As long as they are happy, what is wrong with not being absolute creative geniuses?
 
@@ -1040,7 +1039,7 @@ I can’t hold it in any longer. Mage is acting weird lately, and my guess is th
 
 (PCPG) Mage, I wanted to ask you something...
 
-(Letha|Lethal, 4, angryMIN) Please, PCPG, don’t call me that! She is long dead, I would rather you’d forget her.
+(Lethal|Lethal, 4, angryMIN) Please, PCPG, don’t call me that! She is long dead, I would rather you’d forget her.
 
 [StopMusic]
 [Song: PCPDating_Tension]
@@ -1065,11 +1064,11 @@ I’m feeling dizzy. Lethal steps closer. The scent of violets is overwhelming.
 
 [SFX: PCP-SFX_DemonScreetch]
 
-[Animation Mage kills PCPG]
+[video: Mage kills PCPG]
 [Lethal leaves]
 [StopMusic]
 
-[Scene 10b: “Revival”]
+[Scene: Revival]
 [Song: PCPDating_BotBustah]
 [Location: sewers]
 
@@ -1077,11 +1076,12 @@ Huh…?
 
 Where am I? How did I get here?
 
-[Endless War, silhouette, offright, slide, center]
+(Endless War, stand, happyMED, silhouette, offright, slide, center)
 
 Someone is standing in front of me. I’m recognizing the iconic silhouette.
 
-(Endless War|Endless War, cross, happyMED|blushiesMED) You fucked up, huh? /n Hehehehehe!
+(Endless War|Endless War, cross, happyMED|blushMED) You fucked up, huh?/n
+Hehehehehe!
 
 (PCPG) What do you mean?
 
@@ -1091,7 +1091,7 @@ I’m confused… but my memories are slowly coming back… Mage… I made a mis
 
 (PCPG) Eh… e-enlist?
 
-(Endless War|Endless War, knife, angryMIN|blushiesMED) Not e-enlist?, say !enlist, baka! Don’t you know how commands work?
+(Endless War|Endless War, knife, angryMIN|blushMED) Not e-enlist?, say !enlist, baka! Don’t you know how commands work?
 
 (PCPG) How.. did I get here?
 
@@ -1109,7 +1109,7 @@ I am baffled. Is Endless War-chan supposed to be the god who judges me?
 
 (PCPG) That sound kinda cool, but I have to fix some mistakes up there. Thanks for giving me this chance Endless War.
 
-(Endless War|Endless War, cross, happyMAX|blushiesMAX) Good luck, and remember that you now owe me a favour! Now say it!
+(Endless War|Endless War, cross, happyMAX|blushMAX) Good luck, and remember that you now owe me a favour! Now say it!
 
 [CHOICE]
 *!revive*
@@ -1118,6 +1118,7 @@ I am baffled. Is Endless War-chan supposed to be the god who judges me?
 
 *
 [fade to black]
+[EndlessWar leaves]
 
 [StopMusic]
 

@@ -1,43 +1,44 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Main_Menu.gd" type="Script" id=1]
 [ext_resource path="res://code/systems.gd" type="Script" id=2]
+[ext_resource path="res://scenes/menu_gfx.gd" type="Script" id=3]
+[ext_resource path="res://scenes/main_menu_button.gd" type="Script" id=4]
 
 [node name="Main_Menu" type="Node"]
 script = ExtResource( 1 )
 
+[node name="menu_gfx" type="Sprite" parent="."]
+centered = false
+script = ExtResource( 3 )
+
 [node name="Systems" type="Node" parent="."]
 script = ExtResource( 2 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="NewButtons" type="CanvasLayer" parent="."]
 
-[node name="Start" type="Button" parent="CanvasLayer"]
-margin_left = 1696.87
-margin_top = 490.2
-margin_right = 1759.87
-margin_bottom = 510.2
-text = "Start"
+[node name="start" type="Sprite" parent="NewButtons"]
+visible = false
+position = Vector2( 1530, 580 )
+script = ExtResource( 4 )
 
-[node name="Load" type="Button" parent="CanvasLayer"]
-margin_left = 1696.87
-margin_top = 530.2
-margin_right = 1759.87
-margin_bottom = 550.2
-text = "Load"
+[node name="load" type="Sprite" parent="NewButtons"]
+visible = false
+position = Vector2( 1530, 710 )
+script = ExtResource( 4 )
+button_num = 2
 
-[node name="Settings" type="Button" parent="CanvasLayer"]
-margin_left = 1696.87
-margin_top = 570.2
-margin_right = 1759.87
-margin_bottom = 590.2
-text = "Settings"
+[node name="settings" type="Sprite" parent="NewButtons"]
+visible = false
+position = Vector2( 1530, 840 )
+script = ExtResource( 4 )
+button_num = 3
 
-[node name="Exit" type="Button" parent="CanvasLayer"]
-margin_left = 1696.87
-margin_top = 610.2
-margin_right = 1759.87
-margin_bottom = 630.2
-text = "Exit"
+[node name="quit" type="Sprite" parent="NewButtons"]
+visible = false
+position = Vector2( 1530, 970 )
+script = ExtResource( 4 )
+button_num = 4
 
 [node name="RouteButtons" type="CanvasLayer" parent="."]
 
@@ -110,10 +111,10 @@ margin_top = 375.739
 margin_right = 255.487
 margin_bottom = 395.739
 text = "Tom"
-[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="CanvasLayer/Load" to="." method="_on_Load_pressed"]
-[connection signal="pressed" from="CanvasLayer/Settings" to="." method="_on_Settings_pressed"]
-[connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_Quit_pressed"]
+[connection signal="click_finish" from="NewButtons/start" to="." method="_on_Start_pressed"]
+[connection signal="click_finish" from="NewButtons/load" to="." method="_on_Load_pressed"]
+[connection signal="click_finish" from="NewButtons/settings" to="." method="_on_Settings_pressed"]
+[connection signal="click_finish" from="NewButtons/quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="RouteButtons/Digibro" to="." method="_on_Digibro_pressed"]
 [connection signal="pressed" from="RouteButtons/Ben Saint" to="." method="_on_Ben_Saint_pressed"]
 [connection signal="pressed" from="RouteButtons/Davoo" to="." method="_on_Davoo_pressed"]

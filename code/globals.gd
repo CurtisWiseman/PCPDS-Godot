@@ -9,6 +9,7 @@ var music_volume = 1
 var sfx_volume = 1
 var pause_input setget _pause_input_set
 var turbo_mode = false
+var turbo_crash_mode = false
 var loadedOnce = false
 var fading = false
 var sliding = false
@@ -16,9 +17,11 @@ var cameraMoving = false
 var screenshotsTaken = 1
 var defaultChoiceFontItalic
 var defaultChoiceFontBold
+var defaultChoiceFontBoldItalic
 var defaultChoiceFont
 var defaultFontItalic
 var defaultFontBold
+var defaultFontBoldItalic
 var defaultFont
 var textTheme
 var playerName
@@ -127,6 +130,11 @@ func _ready():
 	defaultFontItalic = DynamicFont.new()
 	defaultFontItalic.font_data = defaultFontDATAItalic
 	defaultFontItalic.size = 35
+	var defaultFontDATABoldItalic = DynamicFontData.new()
+	defaultFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Lato-BoldItalic.ttf'
+	defaultFontBoldItalic = DynamicFont.new()
+	defaultFontBoldItalic.font_data = defaultFontDATABoldItalic
+	defaultFontBoldItalic.size = 35
 	
 	var defaultChoiceFontDATA = DynamicFontData.new()
 	defaultChoiceFontDATA.font_path = 'res://fonts/Dialogue/Lato-Regular.ttf'
@@ -143,6 +151,11 @@ func _ready():
 	defaultChoiceFontItalic = DynamicFont.new()
 	defaultChoiceFontItalic.font_data = defaultChoiceFontDATAItalic
 	defaultChoiceFontItalic.size = 25
+	var defaultChoiceFontDATABoldItalic = DynamicFontData.new()
+	defaultChoiceFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Lato-BoldItalic.ttf'
+	defaultChoiceFontBoldItalic = DynamicFont.new()
+	defaultChoiceFontBoldItalic.font_data = defaultChoiceFontDATABoldItalic
+	defaultChoiceFontBoldItalic.size = 25
 	
 	textTheme = Theme.new()
 	textTheme.set_color('font_color_shadow', 'RichTextLabel', Color(0.4, 0.4, 0.4, 1))
@@ -201,10 +214,6 @@ func returnlocations():
 	return files
 
 
-
-
-
-
 # Handle screenshot event.
 func _input(event):
 	
@@ -254,5 +263,3 @@ func toggle_pause():
 	global.dialogueBox.set_self_modulate(Color(1,1,1,a))
 	global.dialogueBox.get_node('Nametag').set_self_modulate(Color(1,1,1,a))
 	global.dialogueBox.get_node('Dialogue').set_self_modulate(Color(1,1,1,a))
-	if pauseScreen != null:
-		pauseScreen.visible = not pauseScreen.visible

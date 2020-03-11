@@ -41,7 +41,6 @@ func finish_fades_and_slides():
 	var display = get_node('../../../../Display')
 	global.finish_fading()
 	if display.faders.size() > 0:
-		prints(display.faders)
 		lock = false
 		return
 		
@@ -108,10 +107,12 @@ func _process(delta):
 	if Input.is_action_just_released("force_unpause"):
 		print("Input pause forcibly broken out of!")
 		global.pause_input = false
-	if Input.is_key_pressed(KEY_Y) and Input.is_key_pressed(KEY_P):
-		global.turbo_mode = true
+	global.turbo_mode = Input.is_key_pressed(KEY_T)
+	global.turbo_crash_mode = Input.is_key_pressed(KEY_P)
+		
 
 func say(text, voice=null):
+	text = text.strip_edges()
 	set_visible_characters(0) # Remove current line
 	
 #	Compartmentalize long line into smaller strings

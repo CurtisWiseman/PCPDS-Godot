@@ -1943,7 +1943,7 @@ I’m starting to get [i]really[/i] sleepy. Man... I didn’t get... much sleep.
 
 What’s happening? Is this a dream?
 
-(Michelle, body2, face1, silhouette, offright, center)
+(Michelle, body2, face1, silhouette, offright, slide, center)
 [i]Woah[/i]
 
 (Michelle, body2, face1)
@@ -2121,7 +2121,7 @@ Endless War gives me a menacing look.
 (Cop Killers, default)  
 But before I can give an answer, a group of thugs I’ve never met before burst into the room.
 
-(Cop Killers leaves)
+[CopKillers leaves]
 (Schrafft|???, Neutral, center) Hold on here just a sec ma’am, I think this guy could use some information before he jumps into such a life-changing decision.
 
 (K1P|???, Neutral, left) Does he, though? Let’s be honest here, the only reason we’re lacking in recruits is because we fail to get to them before the Rowdys do. Thank God that isn’t the case this time.

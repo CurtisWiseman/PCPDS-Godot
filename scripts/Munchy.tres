@@ -1,5 +1,7 @@
 [Scene: Enlisting]
 
+[CG: PCPDS_CG_RoughhouseDrawing_Bad]
+
 (PCPG) !enlist rowdys
 
 (Ben|Ben, campus, slouch, neutral) Well, shit.
@@ -210,7 +212,7 @@ After Crocs and Blue Whale are defeated, I manage to secure victory by throwing 
 
 (PCPG) Oh yeah, sure. I’ll think of something.
 
-[Fade to black]
+[fade to black]
 
 [Connor leaves]
 [Crocs leaves]
@@ -319,6 +321,7 @@ What is this place? Is it heaven? Is it hell?
 No… /n No!! /n NOOOOOOOOOOOOOO!!!
 
 [BAD END]
+[credits]
 
 [Scene: Artisan]
 
@@ -343,7 +346,7 @@ Fuck.
 
 Maybe I’m not cut out for this shit.
 
-[CG End]
+[CG end]
 
 (Munchy|Munchy, campus, crossing, shockMIN) Lol, nice. Next time, you might wanna try laying out a sketch first, it looks like you just did this in one go without any layering.
 
@@ -368,7 +371,7 @@ We spend a short while going over the drawing. To my surprise, he gave it a bit 
 (Munchy|Munchy, campus, squatting, angryMIN) If you’re just autistically drawing the same thing over and over, the only thing you’re ever gonna be viewed as is just that: an autisticperson, or perhaps a savant. Whatever the case, art isn’t just…
 
 [Fade to black]
-[Fade from black
+[Fade from black]
 
 (Munchy|Munchy, campus, default, neutral) Blah Blah Blah...
 
@@ -1552,7 +1555,7 @@ A trail of smoke billows into the room. It can only mean one thing, that the sam
 
 (Crocs, neutral, blank, left+350, fade) You’re on our turf now, Benhead. The least you could do is mind your own business.
 
-(K1P, default, blank, right-350) I’m just waiting to get this over with. Ben has no chance, considering that the guy who basically picked the game is the one who trained Munchy.
+(K1P, base, blank, right-350) I’m just waiting to get this over with. Ben has no chance, considering that the guy who basically picked the game is the one who trained Munchy.
 
 (PCPG) What? You guys had every opportunity to help him out too, y’know.
 
