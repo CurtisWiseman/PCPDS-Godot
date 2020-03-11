@@ -1,14 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Main_Menu.gd" type="Script" id=1]
 [ext_resource path="res://code/systems.gd" type="Script" id=2]
 [ext_resource path="res://scenes/menu_gfx.gd" type="Script" id=3]
 [ext_resource path="res://scenes/main_menu_button.gd" type="Script" id=4]
-[ext_resource path="res://images/UI/Title screen/Title out with buttons/title_out.ogv" type="VideoStream" id=5]
 
 [node name="Main_Menu" type="Node"]
 script = ExtResource( 1 )
-menu_out_vid = ExtResource( 5 )
 
 [node name="menu_gfx" type="Sprite" parent="."]
 centered = false
