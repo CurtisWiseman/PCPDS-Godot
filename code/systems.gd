@@ -90,7 +90,7 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	dialogue = RichTextLabel.new();
 	dialogue.name = 'Dialogue'
 	dialogue.bbcode_enabled = true
-	dialogue.margin_top = 80
+	dialogue.margin_top = 50
 	dialogue.margin_bottom = 345
 	dialogue.margin_left = 455
 	dialogue.margin_right = 1405
@@ -108,9 +108,9 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	nametag = Label.new();
 	nametag.name = 'Nametag'
 	nametag.valign = 1
-	nametag.margin_top = -120
+	nametag.margin_top = -165
 	nametag.margin_bottom = 30
-	nametag.margin_left = 465
+	nametag.margin_left = 470
 	nametag.margin_right = 680
 	
 #	# Set the default font for nametags.

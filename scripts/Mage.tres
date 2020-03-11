@@ -770,7 +770,7 @@ The Cop Killer turns to the Indigo Interlopers.
 [CG: Indigo Interlopers Death]
 [Ben leaves]
 [EndlessWar leaves]
-[CopKillers leave]
+[CopKillers leaves]
 [Mage leaves]
 [fade to black]
 [CG end]
@@ -806,7 +806,7 @@ Professor Bestman even performed a legitimately awesome rendition of Another One
 
 (Digi|Professor Digibro, casual, 2, smittenMED) Yeah, you’ve been seen hanging out with the Lethal Aurora Mage lately. Tell me, what’s going on there?
 
-[SLIDE, Digibro, center, left]
+[SLIDE, Digi, center, left]
 (Mage, casual, 1, sadMIN, offright, slide, center) 
 
 (Mage) Hey, what have you been talking about?

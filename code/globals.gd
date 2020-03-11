@@ -9,6 +9,7 @@ var music_volume = 1
 var sfx_volume = 1
 var pause_input setget _pause_input_set
 var turbo_mode = false
+var turbo_crash_mode = false
 var loadedOnce = false
 var fading = false
 var sliding = false
@@ -213,10 +214,6 @@ func returnlocations():
 	return files
 
 
-
-
-
-
 # Handle screenshot event.
 func _input(event):
 	
@@ -266,5 +263,3 @@ func toggle_pause():
 	global.dialogueBox.set_self_modulate(Color(1,1,1,a))
 	global.dialogueBox.get_node('Nametag').set_self_modulate(Color(1,1,1,a))
 	global.dialogueBox.get_node('Dialogue').set_self_modulate(Color(1,1,1,a))
-	if pauseScreen != null:
-		pauseScreen.visible = not pauseScreen.visible

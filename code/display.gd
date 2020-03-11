@@ -16,10 +16,39 @@ signal transition_finish_fade # Signal specifaclly for fade transitions.
 var faders = []
 var fader_targets = {}
 
+var vids_precached = {}
+
+# The code to mask using a shader.
+var mask_shader_code = """shader_type canvas_item;
+	uniform sampler2D mask_texture;
+	void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	color.a *= texture(mask_texture, UV).a;
+	color.rgb *= texture(mask_texture, UV).rgb;
+	COLOR = color;
+	}"""
+		
+		
 # Set the background node to self by default.
 func _ready():
 	bgnode = self
 
+func precache_vid(path):
+	vids_precached[path] = []
+	#Caching a few in case swapping them is a thing I need to think about later
+	for i in range(0):
+		var vidnode = VideoPlayer.new() # Create a new videoplayer node.
+		vidnode.set_name(path+"_cached")
+		vidnode.stream = load(path)
+		vidnode.rect_size = Vector2(1920, 1080)
+		vidnode.volume_db = -1000 # Mute the video.
+		
+		vidnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
+		vidnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
+		vidnode.material.shader.code = mask_shader_code # Set the shader's code to code.
+		vidnode.self_modulate.a = 0.001
+		vids_precached[path].append(vidnode)
+		characterImages.add_child(vidnode)
 # Make the given image 'bg' a background.
 func background(bg, type):
 	
@@ -210,7 +239,7 @@ func animation(vidpath):
 
 
 # Create a mask
-func mask(mask, path, type, z, fade_in=true):
+func mask(mask, path, type, z, fade_in=false, force_name=null):
 	
 	# If z is 0 print error then exit function.
 	if z == 0:
@@ -218,17 +247,7 @@ func mask(mask, path, type, z, fade_in=true):
 		return
 	
 	var info # Results of layersetup().
-	var maskname = layernames(mask) # The name of the node.
-	
-	# The code to mask using a shader.
-	var code = """shader_type canvas_item;
-		uniform sampler2D mask_texture;
-		void fragment() {
-		vec4 color = texture(TEXTURE, UV);
-		color.a *= texture(mask_texture, UV).a;
-		color.rgb *= texture(mask_texture, UV).rgb;
-		COLOR = color;
-		}"""
+	var maskname = layernames(mask if force_name == null else force_name) # The name of the node.
 	
 	# If of type image the create mask over the image.
 	if type == 'image':
@@ -246,7 +265,7 @@ func mask(mask, path, type, z, fade_in=true):
 		
 		imgnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
 		imgnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
-		imgnode.material.shader.code = code # Set the shader's code to code.
+		imgnode.material.shader.code = mask_shader_code # Set the shader's code to code.
 		imgnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
 		
 		# Check for a mesh.
@@ -269,12 +288,12 @@ func mask(mask, path, type, z, fade_in=true):
 		vidnode.stream = info[2] # Set the node's video steam to video.
 		vidnode.rect_size = Vector2(1920, 1080)
 		vidnode.volume_db = -1000 # Mute the video.
-		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		
 		vidnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
 		vidnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
-		vidnode.material.shader.code = code # Set the shader's code to code.
+		vidnode.material.shader.code = mask_shader_code # Set the shader's code to code.
 		vidnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
+		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		
 		# Check for a mesh.
 		if model.file_exists('res://models/' + maskname + '.tres'):
@@ -323,8 +342,9 @@ func face(facepath, body, x=0, y=0, type='face'):
 		
 		# Set below the character if of type below.
 		if type == 'below': 
-			facenode.z_as_relative = false
-			facenode.z_index = 0
+			facenode.show_behind_parent = true
+			#facenode.z_as_relative = false
+			#facenode.z_index = 0
 
 
 # Switch content with a new texture.
@@ -372,9 +392,7 @@ func switch(content, new, type, face=false, x=0, y=0):
 func remove_name(cname):
 	var ind = getindex(cname)
 	if ind != null:
-		# Free the node at index and remove it from layers.
-		layers[ind]['node'].queue_free()
-		layers.remove(ind)
+		remove(layers[ind]["node"], ind)
 
 # Remove a layer.
 func remove(node, i):
@@ -384,7 +402,14 @@ func remove(node, i):
 	#So I've made this MUCH safer. And remove attempts that are obviously bad shouldn't crash the game.
 	if is_instance_valid(node):
 		if layers[i]["node"] == node:
-			node.queue_free()
+			#if layers[i]['mask'] != null and layers[i]['type'] == 'video' and vids_precached.has(layers[i]['path']):
+			#	vids_precached[layers[i]['path']].append(layers[i]['node'])
+			#	layers[i]['node'].get_parent().remove_child(layers[i]['node'])
+			#	characterImages.add_child(layers[i]['node'])
+			#	layers[i]['node'].self_modulate.a = 0.001
+			#else:
+			#	# Free the node at index and remove it from layers.
+			layers[i]['node'].queue_free()
 			layers.remove(i)
 		else:
 			print("BAD ATTEMPT TO REMOVE LAYER, SMARTLY INTERVENING")
@@ -392,8 +417,7 @@ func remove(node, i):
 			for j in range(layers.size()):
 				if layers[j]["node"] == node:
 					interevened_successfully = true
-					node.queue_free()
-					layers.remove(j)
+					remove(node, j)
 					break
 			if not interevened_successfully:
 				prints("OH CRAP, TRIED TO REMOVE A LAYER THAT CLEARLY ISN'T THERE AT ALL'")
@@ -594,6 +618,9 @@ func fade(content, from : Color, to : Color, time : float, remove_on_fade = fals
 		if index == null:
 			print("Error: No node named " + content + " exists as a target for collision!")
 			global.finish_fading()
+			if !fadeSignal: emit_signal('transition_finish')
+			else: emit_signal('transition_finish_fade')
+			ftimer.queue_free()
 			return
 		
 		node = layers[index]['node'] # Set node to the content node found by index.
@@ -613,6 +640,9 @@ func fade(content, from : Color, to : Color, time : float, remove_on_fade = fals
 	if mod != 'self' and mod != 'children':
 		print("Error: The 4th parameter on fadealpha only accepts 'self' or 'children' as values!")
 		global.finish_fading()
+		if !fadeSignal: emit_signal('transition_finish')
+		else: emit_signal('transition_finish_fade')
+		ftimer.queue_free()
 		return
 	
 	#I use this to instantly shade things now too so....

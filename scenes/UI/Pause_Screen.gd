@@ -5,6 +5,7 @@ var saveScene
 var loadScene
 
 var reloadLoad = false # Whether or not to reload the load scene.
+var transitioning = false
 
 func _ready():
 	saveScene = Control.new()
@@ -30,10 +31,30 @@ func _physics_prcoess(delta):
 	if $VBoxContainer/Quit.is_hovered(): $VBoxContainer/Quit.grab_focus()
 
 func _input(event):
-	if event.is_action_pressed("pause") and !game.blockInput: #Originally, this was using ui_cancel. I created my own input_map type in Project Settings -> Input Map
+	if event.is_action_pressed("pause") and !game.blockInput and not transitioning: #Originally, this was using ui_cancel. I created my own input_map type in Project Settings -> Input Map
 		$VBoxContainer/Save.grab_focus() #It is linked to the Escape key and the Start button on controllers
-		global.toggle_pause()
+		if visible:
+			menu_out()
+		else:
+			menu_in()
 		
+func menu_in():
+	transitioning = true
+	$background.menu_in()
+	
+	visible = true
+	yield($background, "intro_finished")
+	transitioning = false
+	global.toggle_pause()
+	
+func menu_out():
+	transitioning = true
+	$background.menu_out()
+	yield($background, "outro_finished")
+	visible = false
+	transitioning = false
+	global.toggle_pause()
+	
 func _on_Save_pressed():
 	loadScene.visible = false
 	saveScene.visible = true

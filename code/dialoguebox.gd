@@ -37,6 +37,9 @@ var lock = false
 
 var transitioning = false
 
+
+var last_black_fade_dir = null
+
 func _ready(): 
 	systems = global.rootnode.get_node("Systems") # Assign the systems no to systems.
 
@@ -63,12 +66,14 @@ func _ready():
 
 
 #Nametag is the label above the textbox, dialogue's say is what updates the textbox.
-func say(words, character = "", voice = null):
+func say(words, character = "", character_identifier = "", voice = null):
 	if words.strip_edges() == "":
 		$Nametag.text = ""
+		systems.textBoxBackground.make_invisible()
 	else:
 		$Nametag.text = character
-		systems.textBoxBackground.swap_character(character.to_lower())
+		systems.textBoxBackground.swap_character(character_identifier.to_lower())
+		systems.textBoxBackground.make_visible()
 	$Dialogue.say(words, voice)
 	
 # Function to calculate the number of unseen choices.
@@ -279,27 +284,28 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('fade to black') != -1:
 				global.pause_input = true
 				if global.fading: yield(global, 'finished_fading')
-				
+				last_black_fade_dir = 0
 				if dialogue[index].find('keeptext') == -1:
 					say("","")
 				fadeblackalpha(systems.blackScreen, 'out', 1, 0.01)
+				yield(self, 'transition_finish')
 				global.pause_input = false
 			elif dialogue[index].findn('fade from black') != -1:
 				global.pause_input = true
-				if global.fading: yield(global, 'finished_fading')
-				
+				if global.fading: 
+					yield(global, 'finished_fading')
+				last_black_fade_dir = 1
 				if dialogue[index].find('keeptext') == -1:
 					say("","")
 				fadeblackalpha(systems.blackScreen, 'in', 1, 0.01)
 				yield(self, 'transition_finish')
 				global.pause_input = false
-			elif dialogue[index].findn('cut to black') != -1: 
+			elif dialogue[index].findn('cut to black') != -1:
+				last_black_fade_dir = 0
 				fadeblackalpha(systems.blackScreen, 'out', 100)
 			elif dialogue[index].findn('cut from black') != -1: 
+				last_black_fade_dir = 1
 				fadeblackalpha(systems.blackScreen, 'in', 100)
-			elif dialogue[index].to_lower().find('preload') == 1:
-				var character = dialogue[index].to_lower().strip_edges().substr("[preloadtext ".length()).rstrip("]")
-				systems.textBoxBackground.queue_load(character)
 			elif dialogue[index].findn('SLIDE') != -1:
 				var command = dialogue[index].lstrip('[')
 				command = command.rstrip(']')
@@ -359,7 +365,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				loc = loc.strip_edges(true, true)
 				loc = loc.rstrip(']')
-				loc = loc.substr(10,dialogue[index].length()-1)
+				loc = loc.substr("Location:".length(),dialogue[index].length()-1)
 				loc = loc.strip_edges(true, true)
 				
 				if loc.find(',') != -1:
@@ -442,6 +448,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				game.safeToSave = true
 			elif dialogue[index].to_lower().strip_edges() == "[credits]":
 				get_tree().change_scene("res://scenes/Main_Menu.tscn")
+			elif dialogue[index].to_lower().strip_edges() == "[hidetext]":
+				systems.textBoxBackground.make_invisible()
 			elif dialogue[index].find('video:') != -1:
 				global.pause_input = true
 				
@@ -558,7 +566,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				file.close()
 			
 			elif dialogue[index].findn('==>') != -1:
-				if global.turbo_mode:
+				if global.turbo_mode and global.turbo_crash_mode:
 					index += 1
 					return
 				global.pause_input = true
@@ -604,7 +612,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				global.pause_input = false
 			
 			elif dialogue[index].findn('CHANGE') != -1:
-				if global.turbo_mode:
+				if global.turbo_mode and global.turbo_crash_mode:
 					index += 1
 					return
 				global.pause_input = true
@@ -652,7 +660,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 		
 		# CHOICES
 		elif dialogue[index].begins_with("*"):
-			if global.turbo_mode:
+			if global.turbo_mode and global.turbo_crash_mode:
 				index += 1
 				return
 			# Deal with the end of a choice.
@@ -803,7 +811,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				lastKeep(index)
 				var halt = global.rootnode.scene(dialogue[index], index+1, self) # Send the dialogue to the scene function in the root of the scene.
-				say(text, chrName, voice)
+				say(text, chrName, info[0], voice)
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
 #				emit_signal('sentence_end', dialogue[index])
 				index += 1
@@ -1011,6 +1019,10 @@ func parse_outfit(info, parsedInfo, i, pos):
 	if 'knife'.is_subsequence_ofi(info[i]):
 		parsedInfo += '.knife'
 	
+	if info[i] == "base" and parsedInfo == "russel":
+		parse_expression(info, parsedInfo+'.base', 'characterImages.'+parsedInfo+'.base.body[0]', i+1, info[i+1], pos)
+		return
+		
 	match info[i]:
 		"campus":
 			num = str(search('return characterImages.'+parsedInfo+'.campus.body', info[i+1]))
@@ -1046,11 +1058,12 @@ func parse_outfit(info, parsedInfo, i, pos):
 			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"special":
+			
+			#Crocs is another weird case
 			if (info[0].to_lower() == "crocs"):
 				num = str(search('return characterImages.'+parsedInfo+'.body', info[i]))
 				parse_expression(info, parsedInfo, 'characterImages.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
 				return
-			#Crocs is another weird case
 			
 			num = str(search('return characterImages.'+parsedInfo+'.special.body', info[i+1]))
 			if num == '-1' or num == '-2':
@@ -1066,8 +1079,6 @@ func parse_outfit(info, parsedInfo, i, pos):
 			#GIBB IS THE ONLY NEWGLE CASE! ANd ITS VERY SIMPLE!
 			var body = "characterImages.gibbon.newgle.body[0]"
 			parse_position(info, 'systems.display.image('+body+', 1)', body, 2, notsame[1])
-		"base":
-			parse_expression(info, parsedInfo+'.base', 'characterImages.'+parsedInfo+'.base.body[0]', i+1, info[i+1], pos)
 		"bigboi":
 			parse_expression(info, parsedInfo+'.bigboi', 'characterImages.'+parsedInfo+'.bigboi.body[0]', i+1, info[i+1], pos)
 		"hazmat":
@@ -1094,6 +1105,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	var beard = false
 	var knife = false
 	var ben_point = false
+	var ben_cloud = false
 	var AFL = ''
 	var blushNum
 	var num
@@ -1122,6 +1134,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 				beard = true
 			elif tmp[k] == 'kaminashades':
 				kamina_shades = true
+			elif tmp[k] == 'cloud':
+				ben_cloud = true
 #		if tmp.size() == 3:
 #			blushNum = int(parse_expnum(info[i], parsedInfo)[0]);
 #			blush = true
@@ -1144,7 +1158,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		AFL += '\n\tsystems.display.face(characterImages.nate.afl[2], '+body+', 0, 0, "shades")'
 	if ben_point:
 		AFL += '\n\tsystems.display.face(characterImages.ben.afl[2], '+body+', 0, 0, "point")'
-		
+	if ben_cloud:
+		AFL += '\n\tsystems.display.face(characterImages.ben.afl[0], '+body+', 0, 0, "below")'
 		
 	var useDefault = false
 	if "happy".is_subsequence_of(info[i]):
@@ -1224,7 +1239,8 @@ func parse_911(info, parsedInfo, i, pos):
 func parse_position(info, parsedInfo, body, i, pos):
 	#Be EXTREMELY careful messing with this, it is VERY sensitive to changes and you may
 	#introduce graphics glitches
-	var transition = false
+	var fading = false
+	var silhouette = false
 	var extra = 0
 	var move = false
 	var num
@@ -1242,9 +1258,11 @@ func parse_position(info, parsedInfo, body, i, pos):
 	
 	var j = i
 	while j < info.size():
-		if info[j] == 'silhouette' or info[j] == 'fade':
-			var speed = 0.01
-			transition = 'silhouette' if info[j] == 'silhouette' else 'fade'
+		if info[j] == 'silhouette':
+			silhouette = true
+			info.remove(j)
+		elif info[j] == 'fade':
+			fading = true
 			info.remove(j)
 		else:
 			j += 1
@@ -1267,7 +1285,8 @@ func parse_position(info, parsedInfo, body, i, pos):
 			var tmp = info[i].split('-', true, 1)
 			info[i] = tmp[0]
 			extra = int(tmp[1]) * -1
-		elif info[i] == 'slideNoChange':
+		
+		if info[i] == 'slideNoChange':
 			info[i] = 'slide'
 			parse_move(info, body, i)
 			return
@@ -1278,43 +1297,52 @@ func parse_position(info, parsedInfo, body, i, pos):
 		
 		if info[i].findn('|') != -1:
 			var cords = info[i].split('|', false, 1)
-			if transition: parsedInfo += _transition(transition, body)
+			if fading or silhouette: parsedInfo += _transition(fading, silhouette, body)
 			execute(parsedInfo+'\n\tsystems.display.position('+body+', '+cords[0]+', '+cords[1]+')')
 			if move: parse_move(info, body, i+1)
 		elif info[i] == 'right':
 			num = 600 + extra
-			if transition: parsedInfo += _transition(transition, body)
+			if fading or silhouette: parsedInfo += _transition(fading, silhouette, body)
 			execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
 			if move: parse_move(info, body, i+1)
 		elif info[i] == 'left':
 			num = -600 + extra
-			if transition: parsedInfo += _transition(transition, body)
+			if fading or silhouette: parsedInfo += _transition(fading, silhouette, body)
 			execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(num)+', 0)')
 			if move: parse_move(info, body, i+1)
 		elif info[i] == 'center':
-			if transition: parsedInfo += _transition(transition, body)
+			if fading or silhouette: parsedInfo += _transition(fading, silhouette, body)
 			execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(extra)+', 0)')
 			if move: parse_move(info, body, i+1)
 		elif info[i] == 'offleft':
-			if transition: parsedInfo += _transition(transition, body)
+			if fading or silhouette: parsedInfo += _transition(fading, silhouette, body)
 			execute(parsedInfo+'\n\tsystems.display.position('+body+', -1650, 0)')
 			if move: parse_move(info, body, i+1)
 		elif info[i] == 'offright':
-			if transition: parsedInfo += _transition(transition, body)
+			if fading or silhouette: parsedInfo += _transition(fading, silhouette, body)
 			execute(parsedInfo+'\n\tsystems.display.position('+body+', 1650, 0)')
 			if move: parse_move(info, body, i+1)
 		elif info[i] == 'off':
 			pass # Do nothing if the character is speaking off screen.
 	else:
 		execute(parsedInfo+'\n\tsystems.display.position('+body+', '+str(pos[0])+', '+str(pos[1])+')')
-	if transition:
-		execute(_transition(transition, body))
+	if fading or silhouette:
+		execute(_transition(fading, silhouette, body))
 
 # Function to parse position movement.
 func parse_move(info, body, i):
 	var speed = '20'
 	var extra = 0
 	var num
+	
+	if info[i+1].findn('+') != -1:
+		var tmp = info[i+1].split('+', true, 1)
+		info[i+1] = tmp[0]
+		extra = int(tmp[1])
+	elif info[i+1].findn('-') != -1:
+		var tmp = info[i+1].split('-', true, 1)
+		info[i+1] = tmp[0]
+		extra = int(tmp[1]) * -1
 	
 	#the second part of this and checks that if the speed param is a string, it BETTER be valid float (integers are valid for that too)
 	if info.size()-1 > i+1 and ((typeof(info[i+2]) == TYPE_STRING) == (info[i+2].is_valid_float())):
@@ -1376,11 +1404,18 @@ func execreturn(parsedInfo):
 	return script.eval()
 
 # Function to return a transition of a character.
-func _transition(transition, body):
-	if transition == 'silhouette':
+func _transition(fading, silhouette, body):
+
+		
+	if not fading and silhouette:
 		return '\n\tsystems.display.fade('+body+', Color(0, 0, 0, 1), Color(0, 0, 0, 1), 0.0)'
-	elif transition == 'fade':
-		return '\n\tsystems.display.fade('+body+', Color(1, 1, 1, 0), Color(1, 1, 1, 1), 0.5)'
+	elif fading:
+		var rgb
+		if silhouette:
+			rgb = "0, 0, 0, "
+		else:
+			rgb = "1, 1, 1, "
+		return '\n\tsystems.display.fade('+body+', Color('+rgb+' 0), Color('+rgb+' 1), 0.5)'
 	else:
 		return ''
 
@@ -1419,30 +1454,35 @@ func fadeblackalpha(node, fade, spd, time=0.5):
 		global.finish_fading()
 		return
 	
+	ftimer.start(time) # Start the timer at 0.5 seconds.
+	yield(ftimer, 'timeout')
+			
 	# If fade is out then fade out.
 	if fade == 'in':
-		percent = 100
+		percent = int(100.0*node.self_modulate.a)
 		# While percent isn't 0 fade to black.
-		while percent != 0 and global.fading:
+		while percent > 0 and global.fading and last_black_fade_dir == 1:
 			percent -= spd # Subtract spd from percent.
 			if percent < 0: percent = 0 # Make percent 0 if it falls below.
 			p = float(percent)/100 # Make p percent/100
 			node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
-		node.set_self_modulate(Color(1,1,1,0))
+		if last_black_fade_dir == 1:
+			node.set_self_modulate(Color(1,1,1,0))
 	# If fade is in then fade in.
 	elif fade == 'out':
-		percent = 0
+		percent = int(100.0*node.self_modulate.a)
 		# While percent isn't 0 fade from black.
-		while percent != 100 and global.fading:
+		while percent < 100 and global.fading and last_black_fade_dir == 0:
 			percent += spd # Add spd to percent.
 			if percent > 100: percent = 100 # Make percent 100 if it goes above.
 			p = float(percent)/100 # Make p percent/100
 			node.set_self_modulate(Color(1,1,1,p)) # Modulate the node by p.
 			ftimer.start(time) # Start the timer at 0.5 seconds.
 			yield(ftimer, 'timeout') # Wait for the timer to finish before continuing.
-		node.set_self_modulate(Color(1,1,1,1))
+		if last_black_fade_dir == 0:
+			node.set_self_modulate(Color(1,1,1,1))
 	# Else print an error if fade is not in or out.
 	else:
 		print("Error: The 2nd parameter on fadeblack can only be 'in' or 'out'!")

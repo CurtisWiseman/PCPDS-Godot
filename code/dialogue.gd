@@ -107,8 +107,9 @@ func _process(delta):
 	if Input.is_action_just_released("force_unpause"):
 		print("Input pause forcibly broken out of!")
 		global.pause_input = false
-	if Input.is_key_pressed(KEY_Y) and Input.is_key_pressed(KEY_P):
-		global.turbo_mode = true
+	global.turbo_mode = Input.is_key_pressed(KEY_T)
+	global.turbo_crash_mode = Input.is_key_pressed(KEY_P)
+		
 
 func say(text, voice=null):
 	text = text.strip_edges()
