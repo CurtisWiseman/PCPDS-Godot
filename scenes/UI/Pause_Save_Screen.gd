@@ -1,11 +1,15 @@
 extends Control
 
+signal intro_finished
+signal outro_finished
+
 var listOfSaves = []
 var listOfImages = []
 var currentPage = 1
 var numOfPages = 0
 var PauseScreen
 
+var current_selected_button = null
 
 # Function to display saves and connect node signals.
 func _ready():
@@ -17,9 +21,38 @@ func _ready():
 			node.connect('pressed', self, '_on_LoadBox_pressed', [node.name])
 	
 	for button in $"Page Buttons".get_children():
-		button.connect('pressed', self, '_on_PageButton_pressed', [button.name])
+		button.connect('pressed', self, '_on_PageButton_pressed', [button])
+		
+	current_selected_button = $"Page Buttons".get_child(0)
+	var tmp = current_selected_button.texture_normal
+	current_selected_button.texture_normal = current_selected_button.texture_disabled
+	current_selected_button.texture_disabled = tmp
+	
 	connect("visibility_changed", self , "visible_changed")
 
+func menu_in():
+	$"Save Pages".visible = false
+	$"Page Buttons".visible = false
+	visible = true
+	$background.menu_in()
+	yield($background, "intro_finished")
+	$"Save Pages".visible = true
+	$"Page Buttons".visible = true
+	emit_signal("intro_finished")
+	
+func menu_out():
+	$background.menu_out()
+	$"Save Pages".visible = false
+	$"Page Buttons".visible = false
+	yield($background, "outro_finished")
+	visible = false
+	emit_signal("outro_finished")
+	
+func _process(delta):
+	for page in $"Save Pages".get_children():
+		for button in page.get_children():
+			button.get_node("hover").visible = button.is_hovered()
+			
 func visible_changed():
 	var mod
 	if (global.pause_input and not global.dialogueBox.displayingChoices) or not game.safeToSave:
@@ -56,18 +89,19 @@ func displaySaves():
 		for page in $"Save Pages".get_children():
 			for node in page.get_children():
 				if saveName == "save" + node.name.substr(7):
-					box = node
-		
+					box = node.get_node("gfx")
+				
 		if saveImage:
 			var img = Image.new()
 			var texture = ImageTexture.new()
 			img.load(game.SAVE_FOLDER + '/' + saveImage)
 			texture.create_from_image(img)
-			box.texture_normal = texture
-			box.texture_hover = null
+			box.texture = texture
+			box.scale.x = 390.0/texture.get_width()
+			box.scale.y = 217.0/texture.get_height()
+			box.position = Vector2(14, 16)
 		else:
-			box.texture_normal = load('res://images/loadscreen/empty_tile_no_image.png')
-			box.texture_hover = load('res://images/loadscreen/empty_tile_hovered_no_image.png')
+			box.texture = null
 		
 		file.close()
 
@@ -170,8 +204,20 @@ func _on_RightPage_pressed():
 		currentPage += 1
 		get_node('Save Pages/Page' + str(currentPage)).visible = true
 
+func change_texture(button):
+	var deltah = button.texture_disabled.get_height()-button.texture_normal.get_height()
+	var deltaw = button.texture_disabled.get_width()-button.texture_normal.get_width()
+	button.rect_position -= Vector2(deltah*0.5, deltaw*0.5)
+	var tmp = button.texture_normal
+	button.texture_normal = button.texture_disabled
+	button.texture_disabled = tmp
+
 # Goes to the page specified by the selected button.
-func _on_PageButton_pressed(buttonName):
+func _on_PageButton_pressed(button):
+	change_texture(current_selected_button)
+	
 	get_node('Save Pages/Page' + str(currentPage)).visible = false
-	currentPage = int(buttonName.substr(5, buttonName.length()))
+	currentPage = int(button.name.substr(5))
 	get_node('Save Pages/Page' + str(currentPage)).visible = true
+	current_selected_button = button
+	change_texture(current_selected_button)

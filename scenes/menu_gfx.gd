@@ -3,6 +3,9 @@ extends Sprite
 signal intro_finished
 signal outro_finished
 
+#so they don't get ARC'd
+var old_frames = {}
+
 enum Track {
 	In,
 	Out,
@@ -58,5 +61,7 @@ func _process(delta):
 		var num_text = str(frame_num+num_offset)
 		while num_text.length() < 3:
 			num_text = "0"+num_text
+		var ticks = OS.get_ticks_msec()
 		texture = load(path + num_text + ".png")
+		old_frames[texture.resource_path] = texture
 	timer += delta

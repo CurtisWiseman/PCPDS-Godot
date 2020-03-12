@@ -1,13 +1,20 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/UI/Pause_Screen.gd" type="Script" id=1]
-[ext_resource path="res://images/pausescreen/save.png" type="Texture" id=2]
-[ext_resource path="res://images/pausescreen/load.png" type="Texture" id=3]
-[ext_resource path="res://images/pausescreen/texthistory.png" type="Texture" id=4]
-[ext_resource path="res://images/pausescreen/mainmenu.png" type="Texture" id=5]
-[ext_resource path="res://images/pausescreen/quit.png" type="Texture" id=6]
+[ext_resource path="res://images/UI/In-game menus/Pause menu/Intro/intro 10.png" type="Texture" id=2]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Save game/Unhover/Save Game Comp 1_00021.png" type="Texture" id=3]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Main menu/Unhover/Main Menu Comp 1_00023.png" type="Texture" id=4]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Main menu/Unhover/Main Menu Comp 1_00025.png" type="Texture" id=5]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Main menu/Unhover/Main Menu Comp 1_00021.png" type="Texture" id=6]
 [ext_resource path="res://scenes/UI/pause_background.gd" type="Script" id=7]
-[ext_resource path="res://images/UI/In-game menus/Pause menu/Loop/pause menu exporter_00013.png" type="Texture" id=8]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Save game/Unhover/Save Game Comp 1_00023.png" type="Texture" id=8]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Save game/Unhover/Save Game Comp 1_00025.png" type="Texture" id=9]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Load game/Unhover/Load Game Comp 1_00025.png" type="Texture" id=10]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Load game/Unhover/Load Game Comp 1_00021.png" type="Texture" id=11]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Load game/Unhover/Load Game Comp 1_00023.png" type="Texture" id=12]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Quit/Unhover/Quit Comp 1_00021.png" type="Texture" id=13]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Quit/Unhover/Quit Comp 1_00025.png" type="Texture" id=14]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Quit/Unhover/Quit Comp 1_00023.png" type="Texture" id=15]
 
 
 [node name="pause_screen" type="Control"]
@@ -28,43 +35,58 @@ __meta__ = {
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 1400, 6.021 )
 scale = Vector2( 1, 1.08 )
-texture = ExtResource( 8 )
+texture = ExtResource( 2 )
 centered = false
 script = ExtResource( 7 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 1320.0
-margin_top = 4.0
-margin_right = 1920.0
-margin_bottom = 1082.0
-custom_constants/separation = 20
-alignment = 1
+[node name="buttons" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Save" type="TextureButton" parent="VBoxContainer"]
-margin_top = 249.0
-margin_right = 600.0
-margin_bottom = 349.0
-texture_normal = ExtResource( 2 )
+[node name="Save" type="TextureButton" parent="buttons"]
+margin_left = 1465.0
+margin_top = 277.0
+margin_right = 1800.0
+margin_bottom = 368.0
+rect_scale = Vector2( 1, 1.3 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Load" type="TextureButton" parent="VBoxContainer"]
-margin_top = 369.0
-margin_right = 600.0
-margin_bottom = 469.0
-texture_normal = ExtResource( 3 )
+[node name="Load" type="TextureButton" parent="buttons"]
+margin_left = 1468.0
+margin_top = 415.0
+margin_right = 1804.0
+margin_bottom = 506.0
+rect_scale = Vector2( 1, 1.3 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="History" type="TextureButton" parent="VBoxContainer"]
-margin_top = 489.0
-margin_right = 600.0
-margin_bottom = 589.0
-texture_normal = ExtResource( 4 )
-
-[node name="MainMenu" type="TextureButton" parent="VBoxContainer"]
-margin_top = 609.0
-margin_right = 600.0
-margin_bottom = 709.0
+[node name="MainMenu" type="TextureButton" parent="buttons"]
+margin_left = 1461.95
+margin_top = 559.031
+margin_right = 2061.95
+margin_bottom = 659.031
+rect_scale = Vector2( 1, 1.3 )
 texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="MainMenu_Confirmation" type="ConfirmationDialog" parent="VBoxContainer/MainMenu"]
+[node name="MainMenu_Confirmation" type="ConfirmationDialog" parent="buttons/MainMenu"]
 margin_left = -389.0
 margin_top = -47.0
 margin_right = -179.0
@@ -72,23 +94,29 @@ margin_bottom = 23.0
 window_title = "Confirm Exit"
 dialog_text = "Are you sure you want to return to the main menu? All unsaved data will be lost."
 
-[node name="Quit" type="TextureButton" parent="VBoxContainer"]
-margin_top = 729.0
-margin_right = 600.0
-margin_bottom = 829.0
-texture_normal = ExtResource( 6 )
+[node name="Quit" type="TextureButton" parent="buttons"]
+margin_left = 1541.0
+margin_top = 699.0
+margin_right = 1708.0
+margin_bottom = 791.0
+rect_scale = Vector2( 1, 1.3 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Quit_Confirmation" type="ConfirmationDialog" parent="VBoxContainer/Quit"]
+[node name="Quit_Confirmation" type="ConfirmationDialog" parent="buttons/Quit"]
 margin_left = -389.0
 margin_top = -167.0
 margin_right = -179.0
 margin_bottom = -97.0
 window_title = "Confirm Exit"
 dialog_text = "Are you sure you want to quit? All unsaved data will be lost."
-[connection signal="pressed" from="VBoxContainer/Save" to="." method="_on_Save_pressed"]
-[connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_Load_pressed"]
-[connection signal="pressed" from="VBoxContainer/History" to="." method="_on_History_pressed"]
-[connection signal="pressed" from="VBoxContainer/MainMenu" to="." method="_on_MainMenu_pressed"]
-[connection signal="confirmed" from="VBoxContainer/MainMenu/MainMenu_Confirmation" to="." method="_on_MainMenu_Confirmation_confirmed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
-[connection signal="confirmed" from="VBoxContainer/Quit/Quit_Confirmation" to="." method="_on_Quit_Confirmation_confirmed"]
+[connection signal="pressed" from="buttons/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="buttons/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="buttons/MainMenu" to="." method="_on_MainMenu_pressed"]
+[connection signal="confirmed" from="buttons/MainMenu/MainMenu_Confirmation" to="." method="_on_MainMenu_Confirmation_confirmed"]
+[connection signal="pressed" from="buttons/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="confirmed" from="buttons/Quit/Quit_Confirmation" to="." method="_on_Quit_Confirmation_confirmed"]
