@@ -28,8 +28,12 @@ func _process(delta):
 			desired_move_pt.x = $min_x.position.x
 		if desired_move_pt.x > $max_x.position.x:
 			desired_move_pt.x = $max_x.position.x
-		if desired_move_pt.distance_to($knob.position) > 5:
+		if desired_move_pt.distance_to($knob.position) > 1:
 			var factor = clamp((desired_move_pt.x-$min_x.position.x)/($max_x.position.x-$min_x.position.x), 0.0, 1.0)
-			var db = lerp(-25.0, 0, factor)
+			var db
+			if factor < 0.01:
+				db = -1000
+			else:
+				db = lerp(-45.0, 0, factor)
 			AudioServer.set_bus_volume_db(AudioServer.get_bus_index(affected_bus), db)
 		$knob.position = desired_move_pt
