@@ -68,21 +68,25 @@ func menu_out():
 	
 func _on_Save_pressed():
 	if current_screen != saveScene:
-		current_screen.menu_out()
+		#current_screen.menu_out()
+		current_screen.visible = false
 		#yield($current_screen, "outro_finished")
 		current_screen = saveScene
-		current_screen.menu_in()
+		#current_screen.menu_in()
+		current_screen.visible = true
 		
 func _on_Load_pressed():
 	if reloadLoad:
 		loadScene.loadSaveGames()
 		reloadLoad = false
 	if current_screen != loadScene:
-		current_screen.menu_out()
+		#current_screen.menu_out()
+		current_screen.visible = false
 		#yield(current_screen, "outro_finished")
 		current_screen = loadScene
-		current_screen.menu_in()
-
+		#current_screen.menu_in()
+		current_screen.visible = true
+		
 func _on_History_pressed():
 	saveScene.visible = false
 	loadScene.visible = false
