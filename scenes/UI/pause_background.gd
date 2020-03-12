@@ -14,6 +14,8 @@ var frame_num = 0
 const FRAME_TIME = 1.0/30.0
 var timer = 0.0
 
+var old_frames = {}
+
 #
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,6 +32,8 @@ func menu_in():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if not visible:
+		return
 	if timer >= FRAME_TIME:
 		while timer >= FRAME_TIME:
 			frame_num = (frame_num+1)
@@ -42,7 +46,7 @@ func _process(delta):
 					cur_track = Track.Idle
 					frame_num = 0
 			Track.Out:
-				if frame_num >= 18:
+				if frame_num >= 11:
 					emit_signal("outro_finished")
 					frame_num = 0
 			Track.Idle:
@@ -67,4 +71,5 @@ func _process(delta):
 		while num_text.length() < min_digits:
 			num_text = "0"+num_text
 		texture = load(path + num_text + ".png")
+		old_frames[texture.resource_path] = texture
 	timer += delta

@@ -16,6 +16,9 @@ var frame_num = 0
 const FRAME_TIME = 1.0/30.0
 var timer = 0.0
 
+#To stop them getting ARC'd
+var old_frames = {}
+
 #
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,8 +33,10 @@ func clicking():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if not visible:
+		return
 	var mouse_p = get_global_mouse_position()
-	if visible and not get_parent().get_parent().input_locked:
+	if not get_parent().get_parent().input_locked:
 		if Rect2(global_position-get_rect().size*0.5, get_rect().size).has_point(mouse_p):
 			if Input.is_action_just_pressed("advance_text") and not cur_track == Track.Click:
 				cur_track = Track.Click
@@ -92,10 +97,14 @@ func _process(delta):
 					frame_num = 0
 		
 		if cur_track == Track.Idle:
-			texture = load(path + "Menu_Button"+str(button_num)+"_Unselected.png")
+			if texture == null or texture.resource_path != "Menu_Button"+str(button_num)+"_Unselected.png":
+				texture = load(path + "Menu_Button"+str(button_num)+"_Unselected.png")
+				old_frames[texture.resource_path] = texture
 			frame_num = 0
 		elif cur_track == Track.Selected:
-			texture = load(path + "Menu_Button"+str(button_num)+"_Selected.png")
+			if texture == null or texture.resource_path != "Menu_Button"+str(button_num)+"_Selected.png":
+				texture = load(path + "Menu_Button"+str(button_num)+"_Selected.png")
+				old_frames[texture.resource_path] = texture
 			frame_num = 0
 		else:
 			match cur_track:
@@ -112,4 +121,5 @@ func _process(delta):
 				
 				
 			texture = load(path + num_text + ".png")
+			old_frames[texture.resource_path] = texture
 	timer += delta

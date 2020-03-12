@@ -4,8 +4,6 @@ var systems # Define systems for use globally.
 var settings # Settings instance.
 var loadscreen # Load screen instance.
 
-export (Resource) var menu_out_vid = null
-
 var input_locked = false
 func _ready():
 	systems = $Systems # Load systems with the Systems node.
@@ -52,7 +50,8 @@ func _on_Settings_pressed():
 	input_locked = true
 	for node in $NewButtons.get_children():
 		node.visible = false
-	settings.menu_in()
+	#settings.menu_in()
+	settings.visible = true
 	input_locked = false
 	
 func _on_Load_pressed():
@@ -74,8 +73,9 @@ func _on_Quit_pressed():
 	
 func _on_X_pressed(scene):
 	if scene == 'settings': 
-		settings.menu_out()
-		yield(settings, "closed")
+		#settings.menu_out()
+		#yield(settings, "closed")
+		settings.visible = false
 		
 	elif scene == 'loadscreen': 
 		loadscreen.visible = false

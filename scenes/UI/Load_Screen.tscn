@@ -26,10 +26,8 @@ margin_bottom = 1080.0
 color = Color( 0, 0, 0, 0.156863 )
 
 [node name="Save Pages" type="Control" parent="."]
-editor/display_folded = true
 
 [node name="Page1" type="Control" parent="Save Pages"]
-editor/display_folded = true
 
 [node name="SaveBox1" type="TextureButton" parent="Save Pages/Page1"]
 margin_left = 120.0
@@ -122,7 +120,6 @@ texture_hover = ExtResource( 3 )
 expand = true
 
 [node name="Page2" type="Control" parent="Save Pages"]
-editor/display_folded = true
 visible = false
 
 [node name="SaveBox10" type="TextureButton" parent="Save Pages/Page2"]
@@ -216,7 +213,6 @@ texture_hover = ExtResource( 3 )
 expand = true
 
 [node name="Page3" type="Control" parent="Save Pages"]
-editor/display_folded = true
 visible = false
 
 [node name="SaveBox19" type="TextureButton" parent="Save Pages/Page3"]
@@ -310,7 +306,6 @@ texture_hover = ExtResource( 3 )
 expand = true
 
 [node name="Page4" type="Control" parent="Save Pages"]
-editor/display_folded = true
 visible = false
 
 [node name="SaveBox28" type="TextureButton" parent="Save Pages/Page4"]
@@ -422,7 +417,6 @@ expand = true
 stretch_mode = 5
 
 [node name="Page Buttons" type="Control" parent="."]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
