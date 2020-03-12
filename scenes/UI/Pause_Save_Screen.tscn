@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scenes/UI/Pause_Save_Screen.gd" type="Script" id=1]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Save squares/testArtboard 13square.png" type="Texture" id=2]
@@ -11,14 +11,16 @@
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Page numbers/testArtboard 114.png" type="Texture" id=9]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Page numbers/testArtboard 116.png" type="Texture" id=10]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Page numbers/testArtboard 116click.png" type="Texture" id=11]
-[ext_resource path="res://scenes/UI/save_background.gd" type="Script" id=12]
-[ext_resource path="res://images/UI/In-game menus/Save menu/Loop/Main_00018.png" type="Texture" id=13]
+[ext_resource path="res://scenes/UI/generic_menu_background.gd" type="Script" id=12]
+[ext_resource path="res://images/UI/In-game menus/Save menu/In/Save menu exporter_00017.png" type="Texture" id=13]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Save squares/testArtboard 13sheen.png" type="Texture" id=14]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Page numbers/testArtboard 113click.png" type="Texture" id=15]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Page numbers/testArtboard 114click.png" type="Texture" id=16]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Page numbers/testArtboard 115click.png" type="Texture" id=17]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Page numbers/testArtboard 112click.png" type="Texture" id=18]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/Page numbers/testArtboard 111click.png" type="Texture" id=19]
+[ext_resource path="res://images/UI/In-game menus/Static Buttons/X/testArtboard 11xclick.png" type="Texture" id=20]
+[ext_resource path="res://images/UI/In-game menus/Static Buttons/X/testArtboard 11x.png" type="Texture" id=21]
 
 [node name="Pause_Save_Screen" type="Control"]
 anchor_right = 1.0
@@ -32,6 +34,13 @@ __meta__ = {
 texture = ExtResource( 13 )
 centered = false
 script = ExtResource( 12 )
+idle_prefix = "Save menu/Loop/Main_"
+in_prefix = "Save menu/In/Save menu exporter_"
+out_prefix = "Save menu/Out/Out_"
+idle_duration = 61
+in_duration = 18
+out_duration = 18
+idle_offset = 18
 
 [node name="Wait" type="Timer" parent="."]
 wait_time = 0.3
@@ -160,7 +169,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SaveBox7" type="TextureButton" parent="Save Pages/Page2"]
+[node name="SaveBox1" type="TextureButton" parent="Save Pages/Page2"]
 margin_left = 111.59
 margin_top = 329.0
 margin_right = 525.59
@@ -172,18 +181,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox7"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox1"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox7"]
+[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox1"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox8" type="TextureButton" parent="Save Pages/Page2"]
-margin_left = 584.0
-margin_top = 329.0
-margin_right = 998.0
-margin_bottom = 584.0
+[node name="SaveBox2" type="TextureButton" parent="Save Pages/Page2"]
+margin_left = 569.75
+margin_top = 329.95
+margin_right = 983.75
+margin_bottom = 584.95
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
@@ -191,76 +200,75 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox8"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox2"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox8"]
+[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox2"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox9" type="TextureButton" parent="Save Pages/Page2"]
-margin_left = 1050.0
-margin_top = 330.0
-margin_right = 1469.0
-margin_bottom = 585.0
+[node name="SaveBox3" type="TextureButton" parent="Save Pages/Page2"]
+margin_left = 1034.84
+margin_top = 328.834
+margin_right = 1453.84
+margin_bottom = 583.834
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox9"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox3"]
+centered = false
+
+[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox3"]
 position = Vector2( 0, -0.999969 )
-centered = false
-
-[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox9"]
-position = Vector2( 0, -0.999969 )
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox10" type="TextureButton" parent="Save Pages/Page2"]
-margin_left = 111.0
-margin_top = 640.0
-margin_right = 525.0
-margin_bottom = 895.0
+[node name="SaveBox4" type="TextureButton" parent="Save Pages/Page2"]
+margin_left = 113.216
+margin_top = 604.543
+margin_right = 527.216
+margin_bottom = 859.543
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox10"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox4"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox10"]
+[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox4"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox11" type="TextureButton" parent="Save Pages/Page2"]
-margin_left = 584.0
-margin_top = 640.0
-margin_right = 998.0
-margin_bottom = 895.0
+[node name="SaveBox5" type="TextureButton" parent="Save Pages/Page2"]
+margin_left = 571.966
+margin_top = 605.493
+margin_right = 985.966
+margin_bottom = 860.493
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox11"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox5"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox11"]
+[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox5"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox12" type="TextureButton" parent="Save Pages/Page2"]
-margin_left = 1050.0
-margin_top = 640.0
-margin_right = 1473.0
-margin_bottom = 895.0
+[node name="SaveBox6" type="TextureButton" parent="Save Pages/Page2"]
+margin_left = 1037.05
+margin_top = 603.377
+margin_right = 1460.05
+margin_bottom = 858.377
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox12"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page2/SaveBox6"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox12"]
+[node name="hover" type="Sprite" parent="Save Pages/Page2/SaveBox6"]
 texture = ExtResource( 14 )
 centered = false
 
@@ -270,7 +278,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SaveBox13" type="TextureButton" parent="Save Pages/Page3"]
+[node name="SaveBox1" type="TextureButton" parent="Save Pages/Page3"]
 margin_left = 111.59
 margin_top = 329.0
 margin_right = 525.59
@@ -282,18 +290,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox13"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox1"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox13"]
+[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox1"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox14" type="TextureButton" parent="Save Pages/Page3"]
-margin_left = 584.0
-margin_top = 329.0
-margin_right = 998.0
-margin_bottom = 584.0
+[node name="SaveBox2" type="TextureButton" parent="Save Pages/Page3"]
+margin_left = 569.75
+margin_top = 329.95
+margin_right = 983.75
+margin_bottom = 584.95
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
@@ -301,79 +309,75 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox14"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox2"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox14"]
+[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox2"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox15" type="TextureButton" parent="Save Pages/Page3"]
-margin_left = 1050.0
-margin_top = 330.0
-margin_right = 1469.0
-margin_bottom = 585.0
+[node name="SaveBox3" type="TextureButton" parent="Save Pages/Page3"]
+margin_left = 1034.84
+margin_top = 328.834
+margin_right = 1453.84
+margin_bottom = 583.834
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox15"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox3"]
+centered = false
+
+[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox3"]
 position = Vector2( 0, -0.999969 )
-centered = false
-
-[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox15"]
-position = Vector2( 0, -0.999969 )
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox16" type="TextureButton" parent="Save Pages/Page3"]
-margin_left = 111.0
-margin_top = 640.0
-margin_right = 525.0
-margin_bottom = 895.0
+[node name="SaveBox4" type="TextureButton" parent="Save Pages/Page3"]
+margin_left = 113.216
+margin_top = 604.543
+margin_right = 527.216
+margin_bottom = 859.543
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox16"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox4"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox16"]
+[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox4"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox17" type="TextureButton" parent="Save Pages/Page3"]
-margin_left = 584.0
-margin_top = 640.0
-margin_right = 998.0
-margin_bottom = 895.0
+[node name="SaveBox5" type="TextureButton" parent="Save Pages/Page3"]
+margin_left = 571.966
+margin_top = 605.493
+margin_right = 985.966
+margin_bottom = 860.493
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox17"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox5"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox17"]
+[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox5"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox18" type="TextureButton" parent="Save Pages/Page3"]
-margin_left = 1050.0
-margin_top = 640.0
-margin_right = 1473.0
-margin_bottom = 895.0
+[node name="SaveBox6" type="TextureButton" parent="Save Pages/Page3"]
+margin_left = 1037.05
+margin_top = 603.377
+margin_right = 1460.05
+margin_bottom = 858.377
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox18"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page3/SaveBox6"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox18"]
+[node name="hover" type="Sprite" parent="Save Pages/Page3/SaveBox6"]
 texture = ExtResource( 14 )
 centered = false
 
@@ -383,7 +387,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SaveBox19" type="TextureButton" parent="Save Pages/Page4"]
+[node name="SaveBox1" type="TextureButton" parent="Save Pages/Page4"]
 margin_left = 111.59
 margin_top = 329.0
 margin_right = 525.59
@@ -395,18 +399,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox19"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox1"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox19"]
+[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox1"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox20" type="TextureButton" parent="Save Pages/Page4"]
-margin_left = 584.0
-margin_top = 329.0
-margin_right = 998.0
-margin_bottom = 584.0
+[node name="SaveBox2" type="TextureButton" parent="Save Pages/Page4"]
+margin_left = 569.75
+margin_top = 329.95
+margin_right = 983.75
+margin_bottom = 584.95
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
@@ -414,82 +418,75 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox20"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox2"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox20"]
+[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox2"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox21" type="TextureButton" parent="Save Pages/Page4"]
-margin_left = 1050.0
-margin_top = 330.0
-margin_right = 1469.0
-margin_bottom = 585.0
+[node name="SaveBox3" type="TextureButton" parent="Save Pages/Page4"]
+margin_left = 1034.84
+margin_top = 328.834
+margin_right = 1453.84
+margin_bottom = 583.834
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox21"]
-position = Vector2( 0, -0.999969 )
+[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox3"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox21"]
+[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox3"]
 position = Vector2( 0, -0.999969 )
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox22" type="TextureButton" parent="Save Pages/Page4"]
-margin_left = 111.0
-margin_top = 640.0
-margin_right = 525.0
-margin_bottom = 895.0
+[node name="SaveBox4" type="TextureButton" parent="Save Pages/Page4"]
+margin_left = 113.216
+margin_top = 604.543
+margin_right = 527.216
+margin_bottom = 859.543
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox22"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox4"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox22"]
+[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox4"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox23" type="TextureButton" parent="Save Pages/Page4"]
-margin_left = 584.0
-margin_top = 640.0
-margin_right = 998.0
-margin_bottom = 895.0
+[node name="SaveBox5" type="TextureButton" parent="Save Pages/Page4"]
+margin_left = 571.966
+margin_top = 605.493
+margin_right = 985.966
+margin_bottom = 860.493
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox23"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox5"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox23"]
+[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox5"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox24" type="TextureButton" parent="Save Pages/Page4"]
-margin_left = 1050.0
-margin_top = 640.0
-margin_right = 1473.0
-margin_bottom = 895.0
+[node name="SaveBox6" type="TextureButton" parent="Save Pages/Page4"]
+margin_left = 1037.05
+margin_top = 603.377
+margin_right = 1460.05
+margin_bottom = 858.377
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox24"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page4/SaveBox6"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox24"]
+[node name="hover" type="Sprite" parent="Save Pages/Page4/SaveBox6"]
 texture = ExtResource( 14 )
 centered = false
 
@@ -499,7 +496,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SaveBox25" type="TextureButton" parent="Save Pages/Page5"]
+[node name="SaveBox1" type="TextureButton" parent="Save Pages/Page5"]
 margin_left = 111.59
 margin_top = 329.0
 margin_right = 525.59
@@ -511,18 +508,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox25"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox1"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox25"]
+[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox1"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox26" type="TextureButton" parent="Save Pages/Page5"]
-margin_left = 584.0
-margin_top = 329.0
-margin_right = 998.0
-margin_bottom = 584.0
+[node name="SaveBox2" type="TextureButton" parent="Save Pages/Page5"]
+margin_left = 569.75
+margin_top = 329.95
+margin_right = 983.75
+margin_bottom = 584.95
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
@@ -530,82 +527,75 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox26"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox2"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox26"]
+[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox2"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox27" type="TextureButton" parent="Save Pages/Page5"]
-margin_left = 1050.0
-margin_top = 330.0
-margin_right = 1469.0
-margin_bottom = 585.0
+[node name="SaveBox3" type="TextureButton" parent="Save Pages/Page5"]
+margin_left = 1034.84
+margin_top = 328.834
+margin_right = 1453.84
+margin_bottom = 583.834
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox27"]
-position = Vector2( 0, -0.999969 )
+[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox3"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox27"]
+[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox3"]
 position = Vector2( 0, -0.999969 )
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox28" type="TextureButton" parent="Save Pages/Page5"]
-margin_left = 111.0
-margin_top = 640.0
-margin_right = 525.0
-margin_bottom = 895.0
+[node name="SaveBox4" type="TextureButton" parent="Save Pages/Page5"]
+margin_left = 113.216
+margin_top = 604.543
+margin_right = 527.216
+margin_bottom = 859.543
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox28"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox4"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox28"]
+[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox4"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox29" type="TextureButton" parent="Save Pages/Page5"]
-margin_left = 584.0
-margin_top = 640.0
-margin_right = 998.0
-margin_bottom = 895.0
+[node name="SaveBox5" type="TextureButton" parent="Save Pages/Page5"]
+margin_left = 571.966
+margin_top = 605.493
+margin_right = 985.966
+margin_bottom = 860.493
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox29"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox5"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox29"]
+[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox5"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox30" type="TextureButton" parent="Save Pages/Page5"]
-margin_left = 1050.0
-margin_top = 640.0
-margin_right = 1473.0
-margin_bottom = 895.0
+[node name="SaveBox6" type="TextureButton" parent="Save Pages/Page5"]
+margin_left = 1037.05
+margin_top = 603.377
+margin_right = 1460.05
+margin_bottom = 858.377
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox30"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page5/SaveBox6"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox30"]
+[node name="hover" type="Sprite" parent="Save Pages/Page5/SaveBox6"]
 texture = ExtResource( 14 )
 centered = false
 
@@ -615,7 +605,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SaveBox31" type="TextureButton" parent="Save Pages/Page6"]
+[node name="SaveBox1" type="TextureButton" parent="Save Pages/Page6"]
 margin_left = 111.59
 margin_top = 329.0
 margin_right = 525.59
@@ -627,18 +617,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox31"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox1"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox31"]
+[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox1"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox32" type="TextureButton" parent="Save Pages/Page6"]
-margin_left = 584.0
-margin_top = 329.0
-margin_right = 998.0
-margin_bottom = 584.0
+[node name="SaveBox2" type="TextureButton" parent="Save Pages/Page6"]
+margin_left = 569.75
+margin_top = 329.95
+margin_right = 983.75
+margin_bottom = 584.95
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
@@ -646,82 +636,75 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox32"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox2"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox32"]
+[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox2"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox33" type="TextureButton" parent="Save Pages/Page6"]
-margin_left = 1050.0
-margin_top = 330.0
-margin_right = 1469.0
-margin_bottom = 585.0
+[node name="SaveBox3" type="TextureButton" parent="Save Pages/Page6"]
+margin_left = 1034.84
+margin_top = 328.834
+margin_right = 1453.84
+margin_bottom = 583.834
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox33"]
-position = Vector2( 0, -0.999969 )
+[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox3"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox33"]
+[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox3"]
 position = Vector2( 0, -0.999969 )
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox34" type="TextureButton" parent="Save Pages/Page6"]
-margin_left = 111.0
-margin_top = 640.0
-margin_right = 525.0
-margin_bottom = 895.0
+[node name="SaveBox4" type="TextureButton" parent="Save Pages/Page6"]
+margin_left = 113.216
+margin_top = 604.543
+margin_right = 527.216
+margin_bottom = 859.543
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox34"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox4"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox34"]
+[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox4"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox35" type="TextureButton" parent="Save Pages/Page6"]
-margin_left = 584.0
-margin_top = 640.0
-margin_right = 998.0
-margin_bottom = 895.0
+[node name="SaveBox5" type="TextureButton" parent="Save Pages/Page6"]
+margin_left = 571.966
+margin_top = 605.493
+margin_right = 985.966
+margin_bottom = 860.493
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox35"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox5"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox35"]
+[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox5"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="SaveBox36" type="TextureButton" parent="Save Pages/Page6"]
-margin_left = 1050.0
-margin_top = 640.0
-margin_right = 1473.0
-margin_bottom = 895.0
+[node name="SaveBox6" type="TextureButton" parent="Save Pages/Page6"]
+margin_left = 1037.05
+margin_top = 603.377
+margin_right = 1460.05
+margin_bottom = 858.377
 texture_normal = ExtResource( 2 )
 expand = true
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox36"]
+[node name="gfx" type="Sprite" parent="Save Pages/Page6/SaveBox6"]
 centered = false
 
-[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox36"]
+[node name="hover" type="Sprite" parent="Save Pages/Page6/SaveBox6"]
 texture = ExtResource( 14 )
 centered = false
 
@@ -804,6 +787,20 @@ margin_right = 1168.09
 margin_bottom = 1018.16
 texture_normal = ExtResource( 10 )
 texture_disabled = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close_button" type="TextureButton" parent="."]
+anchor_right = 0.021
+anchor_bottom = 0.037
+margin_left = 1406.86
+margin_top = 38.9503
+margin_right = 1450.54
+margin_bottom = 110.99
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }

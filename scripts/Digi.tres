@@ -1,8 +1,8 @@
 [Scene: Writing in Fast Motion]
-[Song: PCPDating_ClassMemes_Simple _ Clean]
 
+[Song: PCPDating_ClassMemes_Simple & Clean]
 [Location: hallway2]
-
+ 
 With the tap of a finger, I add the entirety of Yu Yu Hakusho to my anime list, making it slightly less pathetic in the process. 
 
 Some part of me wonders whether the tremendous spike in my consumption of Japanese media over the past few days is purely a result of wanting to impress Professor Digibro, 
@@ -46,12 +46,12 @@ those unpleasant memories are easily outweighed by the joy of hearing the profes
 
 [fade to black]
 [StopMusic]
+(Digi|Professor Digibro, Campus, 5, HappyMED)
 [Location: japaneseclass.day, japaneseclass.day.foreground]
 [Song: PCPDating_ClassJapanese]
+
+
 [fade from black]
-(Digi|Professor Digibro, Campus, 5, HappyMED)
-
-
 
 [Screen shake]
 
@@ -201,7 +201,7 @@ I leave for home devastated and with a rotten feeling in the depths of my stomac
 [Scene: Corrupting Your Kids]
 
 [Location: outsidepcpu.night]
-[Song: PCPDating_SuspiciousFigga] 
+[Song: PCPDating_SuspiciousFigga]
 [fade from black]
  
 The bastion of academia looming above the city is easy to spot, despite the only source of light being an enormous, illuminated billboard on the other side of the street. 
@@ -523,7 +523,7 @@ And so the evening proceeds with us drowning ourselves in green slurry and discu
 [StopMusic]
 [Song: PCPDating_Drugz]
 [Location: pubcrawl.cider]
-(Digi|Professor Digibro, Casual, 1, SadMAX, left)  
+(Digi|Professor Digibro, Casual, 1, SadMAX, left)
 [fade from black]
 
 (Cider) Wake up you two, I have to get this place ready.
@@ -780,14 +780,16 @@ It was for the greater good.
 
 (PCPG) Digi, get down, quick!
 
-(Digi|Digi, Casual, Crouch)
+(Digi|Digi, Crouch)
 
-As the prof ducks under the table./n
+As the prof ducks under the table,/n
 I throw his phone out of the window.
 
-(Digi|Digi, Casual, Crouch) What happened?
+(Digi|Digi, Crouch) What happened?
 
-(PCPG) Some guy with a katana came sprinting toward our desk and yelled something along the lines of “Hey, that’s the contrarian asshole who made like five billion videos incessantly shitting on the asterisk war.”
+(PCPG) Some guy with a katana came sprinting toward our desk and yelled something along the lines of:
+
+(PCPG) “Hey, that’s the contrarian asshole who made like five billion videos incessantly shitting on the asterisk war.”
 
 (Digi|Digi, Casual, 2, ConfusedMIN) I didn’t hear any yelling
 
@@ -814,9 +816,8 @@ The sun is rising.
 
 [Location: scienceclass]
 [Song: PCPDating_ClassScience]
-[fade from black]
 (Ben|Professor Saint, campus, base, neutral)
-
+[fade from black]
 
 (Ben|Professor Saint, campus, base, neutral) …and of course, corporate funded science has nothing better to do than indulge the vanity of capital, even when there are multiple global crisis to be averted. 
 
@@ -828,7 +829,9 @@ Ben gestures toward a small flask on his desk.
 
 (Ben|Professor Saint, campus, point, neutral) Well I’m gonna tell you: It literally turns you into an anime girl.
 
-(Ben|Professor Saint, campus, point, angryMIN) It was pitched as some kind of rejuvenation elixir, which is obviously an affront to god, because anyone who reaches their thirties and isn’t thoroughly ambivalent toward their own existence needs to fucking grow up already.
+(Ben|Professor Saint, campus, point, angryMIN) It was pitched as some kind of rejuvenation elixir, which is obviously an affront to god, 
+
+(Ben|Professor Saint, campus, point, angryMIN) because anyone who reaches their thirties and isn’t thoroughly ambivalent toward their own existence needs to fucking grow up already.
 
 (Ben|Professor Saint, campus, point, shockMIN) But also it’s made from slime, so of course it has weird side effects.
 
@@ -879,10 +882,9 @@ PCPG, you did it again!
 [StopMusic]
 [Location: musicclass, musicclass.foreground]
 [Song: PCPDating_ClassJapanese]
-[fade from black]
 (Digi|Digi, Campus, 3, HappyMED)
 (Nate|Professor Bestman, Campus, Pointing, HappyMAX|shades, left)
-
+[fade from black]
 
 (Digi|Digi, Campus, 3, HappyMED)
 
@@ -1050,14 +1052,14 @@ Someone around here is isekaiing randos to and from Boston.
 
 (Digi|Digi, Casual, 2, AngryMIN) Incompetent shitheads, but yes, if they have a means of causing these incidents on a citywide scale, there’s no way they won’t be coming after me.
 
-(Digi|Digi, Casual, 3, AngryMED, center, slide, left-150) I’ve made a lot of enemies over the years, PCPG, and I’m not fucking sorry about it./n
+(Digi|Digi, Casual, 3, AngryMED, slide, left-150) I’ve made a lot of enemies over the years, PCPG, and I’m not fucking sorry about it./n
 Bring it on you pieces of shit.
 
-(Michelle|???, body2, face2, right-350) Well well well, If it isn’t mister phimosis cock himself, big D digibro and whoever your pathetic little tag-along is. 
+(Michelle|???, body2, face2, offright, slide, right-350) Well well well, If it isn’t mister phimosis cock himself, big D digibro and whoever your pathetic little tag-along is. 
 
-(Kazee, body1, face1, left+350)
+(Kazee, body1, face1, offright, slide, left+350)
 
-(May, body1, face3, right+150)
+(May, body1, face3, offright, slide, right+150)
 
 (Michelle|???, body2, face5) Do you fuck your students now, Conrad?/n
 That’s pretty gay dude.
@@ -1123,8 +1125,9 @@ Do you want to spend a night in the locker again?
 
 (Michelle|Michelle, body2, face1) Good, because I’m prettier than this vile creature, so I make the rules.
 
-(Michelle|Michelle, body2, face3) Like, It really is such a privilege that I am this smart, funny and good looking./n
-Like, It’s not even fair, but I guess that’s what you get for being a pure and perfectly moral child of god.
+(Michelle|Michelle, body2, face3) It really is such a privilege that I am this smart, funny and good looking.
+
+(Michelle|Michelle, body2, face3) Like, It’s not even fair, but I guess that’s what you get for being a pure and perfectly moral child of god.
 
 (Michelle|Michelle, body2, face5) What’s even your name, heathen?
 
@@ -1133,17 +1136,12 @@ Like, It’s not even fair, but I guess that’s what you get for being a pure a
 (Michelle|Michelle, body3, face2) May, put that on the list for when we cleanse the world of furfag scum./n
 I’ve got to pee now
 
-[SLIDE, May, right+150, offright]
+[SLIDE, May, offright]
 
-[SLIDE, Michelle, right-350, offright]
+[SLIDE, Michelle, offright]
 
-[SLIDE, Kazee, left+150, offright]
+[SLIDE, Kazee, offright]
 
-[Michelle leaves]
-
-[Kazee leaves]
-
-[May leaves]
 [StopMusic]
 [Song: PCPDating_HomeNight]
 
@@ -1152,19 +1150,32 @@ I’ve got to pee now
 (PCPG) What to you mean “really are”?/n
 Or is that just the standard assumption for students at PCPU.
 
+[Michelle leaves]
+
+[Kazee leaves]
+
+[May leaves]
+
 (Digi|Digi, Casual, 1, HappyMED) You’ve got the voice.
 
 (PCPG) What voice?/n
 What does my voice have to do with anything?
 
-(Digi|Digi, Casual, 5, ConfusedMIN) There’s just this very distinct quality to the voice of most furries./n
-Not everyone has it, and there are some people who do have it and at least claim to not be furries, but it’s a damn good fucking indicator.
+(Digi|Digi, Casual, 5, ConfusedMIN) There’s just this very distinct quality to the voice of most furries.
+
+(Digi|Digi, Casual, 5, ConfusedMIN) Not everyone has it, and there are some people who do have it and at least claim to not be furries, 
+
+(Digi|Digi, Casual, 5, ConfusedMIN) but it’s a damn good fucking indicator.
 
 (PCPG) That’s ridiculous.
 
 (Digi|Digi, Casual, 5, HappyMIN) Listen homie, I’ve been to brony conventions, they all talk like that.
 
-(Digi|Digi, Casual, 5, ShockMIN) Maybe it’s just that they mostly communicate amongst each other and create their own kind of subculture dialect because of that, or it’s another symptom of the autism you have to have to even be a furry in the first place, but it definitely exists.
+(Digi|Digi, Casual, 5, ShockMIN) Maybe it’s just that they mostly communicate amongst each other and create their own kind of subculture dialect because of that, 
+
+(Digi|Digi, Casual, 5, ShockMIN) or it’s another symptom of the autism you have to have to even be a furry in the first place, 
+
+(Digi|Digi, Casual, 5, ShockMIN) but it definitely exists.
 
 After some more teasing about my furry ass voice, we both return home.
 
@@ -1178,7 +1189,7 @@ After some more teasing about my furry ass voice, we both return home.
 (PCPG) It’s a pimp ass fur coat. I buy drugs and hang around in front of 7/11s./n
 Clearly I’m a rapper.
 
-(May, gib version) Oh yeah? Let’s hear it white boy!
+(May, body3, face5) Oh yeah? Let’s hear it white boy!
 
 Fuck, I guess that’s it for the bluff./n
 It’s probably also not worth explaining to her that this is just the art style and that I am either Japanese or aracial. 
@@ -1227,11 +1238,11 @@ You’re right.
 
 (Michelle|Michelle, body2, face4) But call May, or you won’t get away so easily next time.
 
-[SLIDE, May, right+150, offright]
+[SLIDE, May, offright]
 
-[SLIDE, Michelle, right-350, offright]
+[SLIDE, Michelle, offright]
 
-[SLIDE, Kazee, left+150, offright]
+[SLIDE, Kazee, offright]
 
 [Michelle leaves]
 
@@ -1332,7 +1343,27 @@ It was sort of a chore even just finding all of them.
 (Digi|Digi, Campus, 2, HappyMAX) What are your thoughts though?/n
 I hope you have a loving thesis prepared.
 
-(PCPG) Um… I can see how it informs your perspective on… well… individual perspective. The reader learns about the events that transpired through these narrators with incomplete information, but it’s not just a stylistic flourish. There could just as easily be one character who investigated after the fact and found the whole truth as the narrator, but it wouldn’t really be the truth. While it’s not necessarily that distorted, it’s just facts rather than the story. An essential aspect of the events is their absurdity, and absurdity is lost when it is fully understood. The real intrigue comes from how these different characters disseminate information and integrate it into their worldviews. Boogiepop draws a direct parallel to its examination of the neurologically atypical. For abnormality to mean anything, it must be looked at from the inside, because a third person narrator will always conflate the ability to function with normalcy, which is the exact reductionist attitude that becomes a problem. In a way, it could be seen as a mystery novel, which treats its mystery the way a drama would, in that understanding the “what” isn’t really the goal, but rather understanding how these people deal with that which they know. A singular truth can only ever be unjustifiably truncated, and a perspective cannot ever encompass the whole truth. Only a plurality of incomplete perspectives…
+(PCPG) Um… I can see how it informs your perspective on… well… individual perspective. 
+
+(PCPG) The reader learns about the events that transpired through these narrators with incomplete information, but it’s not just a stylistic flourish. 
+
+(PCPG) There could just as easily be one character who investigated after the fact and found the whole truth as the narrator, but it wouldn’t really be the truth. 
+
+(PCPG) While it’s not necessarily that distorted, it’s just facts rather than the story. An essential aspect of the events is their absurdity, 
+
+(PCPG) and absurdity is lost when it is fully understood. 
+
+(PCPG) The real intrigue comes from how these different characters disseminate information and integrate it into their worldviews. 
+
+(PCPG) Boogiepop draws a direct parallel to its examination of the neurologically atypical. 
+
+(PCPG) For abnormality to mean anything, it must be looked at from the inside, because a third person narrator will always conflate the ability to function with normalcy, 
+
+(PCPG) which is the exact reductionist attitude that becomes a problem. In a way, it could be seen as a mystery novel, which treats its mystery the way a drama would, 
+
+(PCPG) in that understanding the “what” isn’t really the goal, but rather understanding how these people deal with that which they know. 
+
+(PCPG) A singular truth can only ever be unjustifiably truncated, and a perspective cannot ever encompass the whole truth. Only a plurality of incomplete perspectives…
 
 (PCPG) ...or at least I think that’s what It’s supposed to mean?
 
@@ -1341,7 +1372,9 @@ I hope you have a loving thesis prepared.
 (Digi|Digi, Campus, 2, SmittenMIN) But yeah, I can see how you would take that away from it./n
 I’ve read these books so many goddamn times, I could probably tell their story verbatim.
 
-(Digi|Digi, Campus, 5, SmittenMIN) Sometimes your mind just resonates with a certain piece of media so much that it’s hard to even deal with; it seeds so many new thoughts that the outside world loses relevance for a while.
+(Digi|Digi, Campus, 5, SmittenMIN) Sometimes your mind just resonates with a certain piece of media so much that it’s hard to even deal with. 
+
+(Digi|Digi, Campus, 5, SmittenMIN) It seeds so many new thoughts that the outside world loses relevance for a while.
 
 (Digi|Digi, Campus, 2, HappyMAX) You’re at your limit, about to overflow, thinking any more is impossible.
 
@@ -1373,7 +1406,9 @@ A kind of experience so potent you only get to have it a few times, especially w
 (Digi|Digi, Campus, 3, SmittenMAX) I can be a fucking alicorn princess and anyone who tells me I can’t be because I look like a clusterpunk hobo can eat a dick./n
 You really didn’t get that from reading Boogiepop?
 
-(PCPG) I guess I’ve never really thought of myself as a gendered entity in the first place. Not in a shitty “I don’t feel like someone of a certain gender, I just act the role and it doesn’t bother me”-way.
+(PCPG) I guess I’ve never really thought of myself as a gendered entity in the first place. 
+
+(PCPG) Not in a shitty “I don’t feel like someone of a certain gender, I just act the role and it doesn’t bother me”-way.
 
 (PCPG) I more mean that it feels like the entire concept of gender doesn’t apply to me on a metatextual level.
 
@@ -1414,7 +1449,9 @@ So where is this thing?
 
 (Digi|Digi, Campus, 2, HappyMED)
 
-Digi rants some more about his “perfect loli body”, which as it turns out isn’t just a loli, but also a magical girl and half-squid for some unfathomable reason, before I shut him up by handing him the vial.
+Digi rants some more about his “perfect loli body”, which as it turns out isn’t just a loli, but also a magical girl and half-squid for some unfathomable reason, 
+
+before I shut him up by handing him the vial.
 
 (PCPG) Quick word of warning; this shit definitely isn’t safe by any metric, so yeah, take at your own ris…
 
@@ -1488,7 +1525,9 @@ So uncool.
 
 (PCPG) That’s not what hypocri… Digi, who is this old fuck? I can barely understand him.
 
-(Digi|Digi, Campus, 2, AngryMED) Someone who’s seen a bunch of shit and thinks that’s enough qualification to do analysis, despite being a complete incompetent moron, who thinks that a point which can be made in a minute isn’t too shallow to even be worth making. But most of all…
+(Digi|Digi, Campus, 2, AngryMED) Someone who’s seen a bunch of shit and thinks that’s enough qualification to do analysis, 
+
+(Digi|Digi, Campus, 2, AngryMED) despite being a complete incompetent moron, who thinks that a point which can be made in a minute isn’t too shallow to even be worth making. But most of all…
 
 The janitor’s intrusion had kind of distracted me from the whole elixir-incident, but something in definitely wrong with Digi. 
 
@@ -1640,9 +1679,9 @@ Despite the strange, all-encompassing feeling of dread that characterizes the wa
 
 (Michelle|Michelle, body2, face5) Who the fuck are you?
 
-(May, body2, face4, left) ...
+(May, body2, face4, offleft, slide, left) ...
 
-(Kazee, body1, face1, right)
+(Kazee, body1, face1, offright, slide, right)
 
 Oh god, speaking of psychopaths.
 
@@ -1671,7 +1710,9 @@ Oh god, speaking of psychopaths.
 
 (Michelle|Michelle, body2, face3) Went home and smothered yourself with your hug-pillow.
 
-(Michelle|Michelle, body2, face2) The world would be so much better if everyone who’s not beautiful just, y’know, offed themselves. Having to deal with all of these pathetic losers makes life so hard for me personally.
+(Michelle|Michelle, body2, face2) The world would be so much better if everyone who’s not beautiful just, y’know, offed themselves. 
+
+(Michelle|Michelle, body2, face2) Having to deal with all of these pathetic losers makes life so hard for me personally.
 
 (Michelle|Michelle, body1, face4) So like; how dare you? This is a hate crime.
 
@@ -1706,9 +1747,11 @@ I turn around to see the face plastered on every billboard in town.
 [StopMusic]
 [Song: PCPDating_ActionFun]
 
-(Geoff, default, neutral, right+150) Be that as it may, I…
+(Geoff, default, neutral, offright, slide, right+150) Be that as it may, I…
 
-[SLIDE, Kazee, right-350, offright]
+[SLIDE, Kazee, offright]
+[SLIDE, Michelle, offright]
+[SLIDE, May, right-600]
 
 (Digi|Digi,Campus, 3, SmittenMAX, left-150) Ah, everyone’s here already.
 
@@ -1736,33 +1779,39 @@ Almost nothing.
 Why?/n
 HOW?!
 
-(Geoff) It wasn’t exactly “me” who did that.
+(Geoff, default, neutral) It wasn’t exactly “me” who did that.
 
-(Geoff) May, show them!
+(Geoff, default, neutral) May, show them!
 
 [CG: may opens a portal with may]
 
 (PCPG) Digi, why can she do that?
 
+[Michelle leaves]
+
 (Digi) Do I really have to explain the long and storied history of mahou shoujo to you?/n
 Weren’t you paying attention in class?
 
+[Geoff leaves]
+
 (May) Yeah, why do you waste your time on this uncultured piece of shit, Digi?
+
+[Digi leaves]
 
 (May) Do you really think I WANT to work with Geoff to get you all to myself?/n
 These are desperate times!
 
+[Kazee leaves]
+
 Huh, so she really is jealous.
+
+[May leaves]
+[cut to black]
 
 (Geoff) Can we cut this pointless bullshit already?/n
 It’s time to settle who the real top anime academic is once and for all.
 
-[cut to black]
 [CG end]
-[Geoff leaves]
-[Digi leaves]
-[Michelle leaves]
-[May leaves]
 [StopMusic]
 [Song: PCPDating_ActionSerious]
 [Location: outsidemech]
@@ -2037,16 +2086,15 @@ Oh.
 We continue to hop through dimensions while recruiting Digis, each more insane than the last, before finally returning to the mech.
 
 [fade to black]
-[Location: insidemech]
-[fade from black]
-
+[Location: insidemech.empty]
 (Digi|Digi, Campus, 5, ShockMAX, left)
 
 (ArtsoFartso|Artso Fartso, special, 1, HappyMAX, right)
+[fade from black]
 
 (PCPG) Digi, open the com-channel!
 
-[Location: insidemech, insidemech.geoff]
+[Location: insidemech.full]
 
 (Geoff) Who are these people?
 
@@ -2054,7 +2102,7 @@ We continue to hop through dimensions while recruiting Digis, each more insane t
 
 (ArtsoFartso|Artso Fartso, special, 1, confusedMAX) Prepare to get your shit fucked, course we’re on that Ragnarok shit now, baby!
 
-(Digi|Digi, Campus, 5, ShockMAX) Holy fuck, that worked?
+(Digi|Digi, Campus, 5, ShockMED) Holy fuck, that worked?
 
 (PCPG) Apparently every single multiverse version of you has reality warping powers and is incredibly willing to go to war against shitty reviewers.
 
@@ -2074,6 +2122,7 @@ All of the Digi-echs ten laserguns fire at once, leaving no trace of Mother’s 
 
 [fade to black]
 [StopMusic]
+[ArtsoFartso leaves]
 [Song: PCPDating_HappyOrSomething]
 [Location: outsidepcpu.day]
 [fade from black]
@@ -2096,17 +2145,17 @@ All of the Digi-echs ten laserguns fire at once, leaving no trace of Mother’s 
 
 (PCPG) Okay, yeah. Sure. Let’s go to prom.
 
-
 [fade to black]
 [StopMusic]
+[Digi leaves]
 [Location: radprom1]
 [Song: PCPDating_RADCON]
-(Digi|Digi, Special, 2, SmittenMED|blush2) 
+(Digi|Digi, casual, 2, SmittenMIN) 
 [fade from black]
 
 (PCPG) Come to think of it: That’s two assholes with garbage opinions on anime down now. How many are even left?
 
-(Digi|Digi, Special, 2, SmittenMIN|blush2) You wanna see the list?
+(Digi|Digi, casual, 2, SmittenMAX) You wanna see the list?
 
 (PCPG) Nah, that’d ruin the moment.
 [StopMusic]

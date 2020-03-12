@@ -23,12 +23,13 @@ func _ready():
 	settings.get_node("close").connect('pressed', self, '_on_X_pressed', ['settings'])
 	
 	# Make an instance of the load screen scene.
-	loadscreen = Control.new()
-	loadscreen.name = 'Load Screen'
-	loadscreen = load('res://scenes/UI/Load_Screen.tscn').instance()
-	add_child(loadscreen)
+	loadscreen = load('res://scenes/UI/Pause_Load_Screen.tscn').instance()
+	loadscreen.name = 'Pause_Load_Screen'
 	loadscreen.visible = false
-	loadscreen.get_node("CloseLoadScreen").connect('pressed', self, '_on_X_pressed', ['loadscreen'])
+	add_child(loadscreen)
+	loadscreen.get_node("close_button").connect('pressed', self, '_on_X_pressed', ['loadscreen'])
+	
+
 
 
 func title_in_finished():
@@ -40,6 +41,9 @@ func _on_Start_pressed():
 		return
 	input_locked = true
 	$menu_gfx.menu_out()
+	yield($menu_gfx, "frame_changed")
+	for node in $NewButtons.get_children():
+		node.visible = false
 	yield($menu_gfx, "outro_finished")
 	scene.change('common')
 	input_locked = false
@@ -68,6 +72,9 @@ func _on_Quit_pressed():
 		return
 	input_locked = true
 	$menu_gfx.menu_out()
+	yield($menu_gfx, "frame_changed")
+	for node in $NewButtons.get_children():
+		node.visible = false
 	yield($menu_gfx, "outro_finished")
 	get_tree().quit()
 	

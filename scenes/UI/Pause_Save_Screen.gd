@@ -9,6 +9,8 @@ var currentPage = 1
 var numOfPages = 0
 var PauseScreen
 
+export var loads_instead_of_saves = false
+
 var current_selected_button = null
 
 # Function to display saves and connect node signals.
@@ -18,7 +20,7 @@ func _ready():
 	for page in $"Save Pages".get_children():
 		numOfPages += 1
 		for node in page.get_children():
-			node.connect('pressed', self, '_on_LoadBox_pressed', [node.name])
+			node.connect('pressed', self, '_on_LoadBox_pressed', [node])
 	
 	for button in $"Page Buttons".get_children():
 		button.connect('pressed', self, '_on_PageButton_pressed', [button])
@@ -33,17 +35,20 @@ func _ready():
 func menu_in():
 	$"Save Pages".visible = false
 	$"Page Buttons".visible = false
+	$close_button.visible = false
 	visible = true
 	$background.menu_in()
 	yield($background, "intro_finished")
 	$"Save Pages".visible = true
 	$"Page Buttons".visible = true
+	$close_button.visible = true
 	emit_signal("intro_finished")
 	
 func menu_out():
 	$background.menu_out()
 	$"Save Pages".visible = false
 	$"Page Buttons".visible = false
+	$close_button.visible = false
 	yield($background, "outro_finished")
 	visible = false
 	emit_signal("outro_finished")
@@ -55,7 +60,7 @@ func _process(delta):
 			
 func visible_changed():
 	var mod
-	if (global.pause_input and not global.dialogueBox.displayingChoices) or not game.safeToSave:
+	if not loads_instead_of_saves and ((global.pause_input and not global.dialogueBox.displayingChoices) or not game.safeToSave):
 		mod = Color(0.1, 0.1, 0.1, 1.0)
 	else:
 		mod = Color(1.0, 1.0, 1.0, 1.0)
@@ -87,11 +92,14 @@ func displaySaves():
 				break
 		
 		for page in $"Save Pages".get_children():
+			var pageNum = int(page.name.right(1))
 			for node in page.get_children():
-				if saveName == "save" + node.name.substr(7):
+				var saveInPageNum = int(node.name.right(1))
+				var saveNum = (pageNum-1)*6+saveInPageNum
+				if saveName == "save" + str(saveNum):
 					box = node.get_node("gfx")
 				
-		if saveImage:
+		if saveImage and box != null:
 			var img = Image.new()
 			var texture = ImageTexture.new()
 			img.load(game.SAVE_FOLDER + '/' + saveImage)
@@ -134,8 +142,18 @@ func loadSaves():
 
 
 # Function to make a new save and link it to the clicked box.
-func _on_LoadBox_pressed(saveBoxName):
-	if (not global.pause_input or global.dialogueBox.displayingChoices) and game.safeToSave:
+func _on_LoadBox_pressed(saveBox):
+	var pageNum = int(saveBox.get_parent().name.right(1))
+	var saveBoxNum = (pageNum-1)*6+int(saveBox.name.right(1))
+	
+	if loads_instead_of_saves:
+		var saveFile = 'save' + str(saveBoxNum) + '.tres'
+		for save in listOfSaves:
+			if save == saveFile:
+				game.newLoad(saveFile)
+				global.toggle_pause()
+				break
+	elif (not global.pause_input or global.dialogueBox.displayingChoices) and game.safeToSave:
 		PauseScreen.visible = false
 		
 		global.pause_input = true
@@ -183,7 +201,8 @@ func _on_LoadBox_pressed(saveBoxName):
 		
 		$Wait.start()
 		yield($Wait, 'timeout')
-		var saveBoxNum : int = int(saveBoxName.substr(7, saveBoxName.length()))
+		
+		
 		game.newSave(saveBoxNum)
 		loadSaveGames()
 		PauseScreen.reloadLoad = true
@@ -217,7 +236,7 @@ func _on_PageButton_pressed(button):
 	change_texture(current_selected_button)
 	
 	get_node('Save Pages/Page' + str(currentPage)).visible = false
-	currentPage = int(button.name.substr(5))
+	currentPage = int(button.name.right(1))
 	get_node('Save Pages/Page' + str(currentPage)).visible = true
 	current_selected_button = button
 	change_texture(current_selected_button)

@@ -11,7 +11,7 @@ enum Track {
 	Selected
 }
 var cur_track = Track.Idle
-var frame_num = 0
+var frame_num = -1
 
 const FRAME_TIME = 1.0/30.0
 var timer = 0.0
@@ -26,14 +26,14 @@ func _ready():
 
 func click():
 	cur_track = Track.Click
-	frame_num = 0
+	frame_num = -1
 	
 func clicking():
 	return cur_track == Track.Click
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if not visible:
+	if not is_visible_in_tree() and frame_num != -1:
 		return
 	var mouse_p = get_global_mouse_position()
 	if not get_parent().get_parent().input_locked:

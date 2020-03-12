@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/UI/Pause_Screen.gd" type="Script" id=1]
 [ext_resource path="res://images/UI/In-game menus/Pause menu/Intro/intro 10.png" type="Texture" id=2]
@@ -15,6 +15,15 @@
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Quit/Unhover/Quit Comp 1_00021.png" type="Texture" id=13]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Quit/Unhover/Quit Comp 1_00025.png" type="Texture" id=14]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Quit/Unhover/Quit Comp 1_00023.png" type="Texture" id=15]
+[ext_resource path="res://images/UI/In-game menus/Quit menu/testArtboard 12quitdesknobutt.png" type="Texture" id=16]
+[ext_resource path="res://images/UI/In-game menus/Quit menu/testArtboard 11quityesclick.png" type="Texture" id=17]
+[ext_resource path="res://images/UI/In-game menus/Quit menu/testArtboard 11quitno.png" type="Texture" id=18]
+[ext_resource path="res://images/UI/In-game menus/Quit menu/testArtboard 11quityes.png" type="Texture" id=19]
+[ext_resource path="res://images/UI/In-game menus/Quit menu/testArtboard 12quitmainmenunobutt.png" type="Texture" id=20]
+[ext_resource path="res://images/UI/In-game menus/Quit menu/testArtboard 11quitnoclick.png" type="Texture" id=21]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.792157 )
 
 [node name="pause_screen" type="Control"]
 pause_mode = 2
@@ -39,7 +48,6 @@ centered = false
 script = ExtResource( 7 )
 
 [node name="buttons" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -85,13 +93,43 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MainMenu_Confirmation" type="ConfirmationDialog" parent="buttons/MainMenu"]
-margin_left = -389.0
-margin_top = -47.0
-margin_right = -179.0
-margin_bottom = 23.0
-window_title = "Confirm Exit"
-dialog_text = "Are you sure you want to return to the main menu? All unsaved data will be lost."
+[node name="fade_out" type="Panel" parent="buttons/MainMenu"]
+visible = false
+margin_left = -1461.95
+margin_top = -430.024
+margin_right = 458.05
+margin_bottom = 649.976
+custom_styles/panel = SubResource( 1 )
+
+[node name="menu_popup" type="Sprite" parent="buttons/MainMenu"]
+visible = false
+position = Vector2( -745, 0 )
+texture = ExtResource( 20 )
+
+[node name="yes" type="TextureButton" parent="buttons/MainMenu"]
+visible = false
+margin_left = -925.89
+margin_top = -15.816
+margin_right = -824.89
+margin_bottom = 65.184
+texture_normal = ExtResource( 19 )
+texture_hover = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="no" type="TextureButton" parent="buttons/MainMenu"]
+visible = false
+margin_left = -726.68
+margin_top = -16.3815
+margin_right = -625.68
+margin_bottom = 64.6185
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 21 )
+expand = true
+stretch_mode = 4
 
 [node name="Quit" type="TextureButton" parent="buttons"]
 margin_left = 1541.0
@@ -106,16 +144,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit_Confirmation" type="ConfirmationDialog" parent="buttons/Quit"]
-margin_left = -389.0
-margin_top = -167.0
-margin_right = -179.0
-margin_bottom = -97.0
-window_title = "Confirm Exit"
-dialog_text = "Are you sure you want to quit? All unsaved data will be lost."
+[node name="fade_out" type="Panel" parent="buttons/Quit"]
+visible = false
+margin_left = -1541.0
+margin_top = -537.692
+margin_right = 379.0
+margin_bottom = 542.308
+custom_styles/panel = SubResource( 1 )
+
+[node name="desktop_popup" type="Sprite" parent="buttons/Quit"]
+visible = false
+position = Vector2( -824.05, -107.668 )
+texture = ExtResource( 16 )
+
+[node name="yes" type="TextureButton" parent="buttons/Quit"]
+visible = false
+margin_left = -1004.94
+margin_top = -123.484
+margin_right = -903.94
+margin_bottom = -42.4845
+texture_normal = ExtResource( 19 )
+texture_hover = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="no" type="TextureButton" parent="buttons/Quit"]
+visible = false
+margin_left = -805.73
+margin_top = -124.05
+margin_right = -704.73
+margin_bottom = -43.0499
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 21 )
+expand = true
+stretch_mode = 4
 [connection signal="pressed" from="buttons/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="buttons/Load" to="." method="_on_Load_pressed"]
 [connection signal="pressed" from="buttons/MainMenu" to="." method="_on_MainMenu_pressed"]
-[connection signal="confirmed" from="buttons/MainMenu/MainMenu_Confirmation" to="." method="_on_MainMenu_Confirmation_confirmed"]
+[connection signal="pressed" from="buttons/MainMenu/yes" to="." method="_on_MainMenu_Confirmation_confirmed"]
+[connection signal="pressed" from="buttons/MainMenu/no" to="." method="_on_mainmenu_closed"]
 [connection signal="pressed" from="buttons/Quit" to="." method="_on_Quit_pressed"]
-[connection signal="confirmed" from="buttons/Quit/Quit_Confirmation" to="." method="_on_Quit_Confirmation_confirmed"]
+[connection signal="pressed" from="buttons/Quit/yes" to="." method="_on_Quit_Confirmation_confirmed"]
+[connection signal="pressed" from="buttons/Quit/no" to="." method="_on_quit_closed"]

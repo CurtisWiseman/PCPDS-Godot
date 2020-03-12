@@ -14,18 +14,21 @@ func _ready():
 	saveScene.name = 'Pause_Save_Screen'
 	saveScene = load('res://scenes/UI/Pause_Save_Screen.tscn').instance()
 	saveScene.PauseScreen = self
-	saveScene.visible = true
+	saveScene.visible = false
 	saveScene.rect_position.x = -80
 	add_child(saveScene)
 	move_child(saveScene, 1)
 	current_screen = saveScene
+	saveScene.get_node("close_button").connect("pressed", self, "_on_close_pressed")
 	
 	loadScene = Control.new()
 	loadScene.name = 'Pause_Load_Screen'
 	loadScene = load('res://scenes/UI/Pause_Load_Screen.tscn').instance()
 	loadScene.visible = false
+	loadScene.rect_position.x = -80
 	add_child(loadScene)
 	move_child(loadScene, 1)
+	loadScene.get_node("close_button").connect("pressed", self, "_on_close_pressed")
 	
 	global.pauseScreen = self
 	
@@ -44,6 +47,12 @@ func _input(event):
 		else:
 			menu_in()
 		
+func _on_close_pressed():
+	if not transitioning:
+		menu_out()
+	else:
+		print("whoops")
+		
 func menu_in():
 	transitioning = true
 	$background.menu_in()
@@ -53,13 +62,13 @@ func menu_in():
 	$buttons.visible = true
 	transitioning = false
 	global.toggle_pause()
-	#current_screen.menu_in()
+	current_screen.menu_in()
 	
 func menu_out():
 	transitioning = true
 	$buttons.visible = false
-	#current_screen.menu_out()
-	#yield(current_screen, "outro_finished")
+	current_screen.menu_out()
+	yield(current_screen, "outro_finished")
 	$background.menu_out()
 	yield($background, "outro_finished")
 	visible = false
@@ -68,24 +77,24 @@ func menu_out():
 	
 func _on_Save_pressed():
 	if current_screen != saveScene:
-		#current_screen.menu_out()
-		current_screen.visible = false
-		#yield($current_screen, "outro_finished")
+		current_screen.menu_out()
+		#current_screen.visible = false
+		yield(current_screen, "outro_finished")
 		current_screen = saveScene
-		#current_screen.menu_in()
-		current_screen.visible = true
+		current_screen.menu_in()
+		#current_screen.visible = true
 		
 func _on_Load_pressed():
 	if reloadLoad:
 		loadScene.loadSaveGames()
 		reloadLoad = false
 	if current_screen != loadScene:
-		#current_screen.menu_out()
-		current_screen.visible = false
-		#yield(current_screen, "outro_finished")
+		current_screen.menu_out()
+		#current_screen.visible = false
+		yield(current_screen, "outro_finished")
 		current_screen = loadScene
-		#current_screen.menu_in()
-		current_screen.visible = true
+		current_screen.menu_in()
+		#current_screen.visible = true
 		
 func _on_History_pressed():
 	saveScene.visible = false
@@ -93,15 +102,25 @@ func _on_History_pressed():
 	# text history not implemented yet.
 
 func _on_MainMenu_pressed():
-	$buttons/MainMenu/MainMenu_Confirmation.popup_centered()
-
+	for c in $buttons/MainMenu.get_children():
+		c.show()
+	
 func _on_MainMenu_Confirmation_confirmed():
 	visible = false
 	get_tree().paused = false
 	get_tree().change_scene("res://scenes/Main_Menu.tscn")
 
+func _on_mainmenu_closed():
+	for c in $buttons/MainMenu.get_children():
+		c.hide()
+		
 func _on_Quit_pressed():
-	$buttons/Quit/Quit_Confirmation.popup_centered()
-
+	for c in $buttons/Quit.get_children():
+		c.show()
+		
 func _on_Quit_Confirmation_confirmed():
 	get_tree().quit()
+
+func _on_quit_closed():
+	for c in $buttons/Quit.get_children():
+		c.hide()
