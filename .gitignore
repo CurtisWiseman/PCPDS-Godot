@@ -1,7 +1,5 @@
 .import
 sounds
 images/backgrounds
-images/text box
-images/Title screen
-images/In-game menus
+images/UI
 *.import
