@@ -31,7 +31,6 @@ centered = false
 script = ExtResource( 3 )
 
 [node name="master_volume" type="Sprite" parent="."]
-visible = false
 position = Vector2( 796, 473 )
 texture = ExtResource( 5 )
 script = ExtResource( 10 )
@@ -56,7 +55,6 @@ position = Vector2( -504.705, 30.3582 )
 position = Vector2( 496, 27.8254 )
 
 [node name="music_volume" type="Sprite" parent="."]
-visible = false
 position = Vector2( 803, 606 )
 texture = ExtResource( 6 )
 script = ExtResource( 10 )
@@ -82,7 +80,6 @@ position = Vector2( -504.705, -102.642 )
 position = Vector2( 496, -105.175 )
 
 [node name="sfx_volume" type="Sprite" parent="."]
-visible = false
 position = Vector2( 800, 745 )
 texture = ExtResource( 7 )
 script = ExtResource( 10 )
@@ -108,7 +105,6 @@ position = Vector2( -504.705, -241.642 )
 position = Vector2( 496, -244.175 )
 
 [node name="close" type="TextureButton" parent="."]
-visible = false
 margin_left = 1407.85
 margin_top = 40.1102
 margin_right = 1467.85
