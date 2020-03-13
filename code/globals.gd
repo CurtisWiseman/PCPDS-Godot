@@ -26,6 +26,7 @@ var defaultFont
 var textTheme
 var playerName
 var pauseScreen = null
+var voicesOn = true
 
 # Signal to say a that a scene is done loading.
 signal finished_loading
@@ -116,43 +117,43 @@ func _ready():
 	
 	# Create the default fonts.
 	var defaultFontDATA = DynamicFontData.new()
-	defaultFontDATA.font_path = 'res://fonts/Dialogue/Lato-Regular.ttf'
+	defaultFontDATA.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Regular.ttf'
 	defaultFont= DynamicFont.new()
 	defaultFont.font_data = defaultFontDATA
 	defaultFont.size = 35
 	var defaultFontDATABold = DynamicFontData.new()
-	defaultFontDATABold.font_path = 'res://fonts/Dialogue/Lato-Bold.ttf'
+	defaultFontDATABold.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Bold.ttf'
 	defaultFontBold = DynamicFont.new()
 	defaultFontBold.font_data = defaultFontDATABold
 	defaultFontBold.size = 35
 	var defaultFontDATAItalic = DynamicFontData.new()
-	defaultFontDATAItalic.font_path = 'res://fonts/Dialogue/Lato-Italic.ttf'
+	defaultFontDATAItalic.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Italic.ttf'
 	defaultFontItalic = DynamicFont.new()
 	defaultFontItalic.font_data = defaultFontDATAItalic
 	defaultFontItalic.size = 35
 	var defaultFontDATABoldItalic = DynamicFontData.new()
-	defaultFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Lato-BoldItalic.ttf'
+	defaultFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Roboto/Roboto-BoldItalic.ttf'
 	defaultFontBoldItalic = DynamicFont.new()
 	defaultFontBoldItalic.font_data = defaultFontDATABoldItalic
 	defaultFontBoldItalic.size = 35
 	
 	var defaultChoiceFontDATA = DynamicFontData.new()
-	defaultChoiceFontDATA.font_path = 'res://fonts/Dialogue/Lato-Regular.ttf'
+	defaultChoiceFontDATA.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Regular.ttf'
 	defaultChoiceFont= DynamicFont.new()
 	defaultChoiceFont.font_data = defaultChoiceFontDATA
 	defaultChoiceFont.size = 25
 	var defaultChoiceFontDATABold = DynamicFontData.new()
-	defaultChoiceFontDATABold.font_path = 'res://fonts/Dialogue/Lato-Bold.ttf'
+	defaultChoiceFontDATABold.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Bold.ttf'
 	defaultChoiceFontBold = DynamicFont.new()
 	defaultChoiceFontBold.font_data = defaultChoiceFontDATABold
 	defaultChoiceFontBold.size = 25
 	var defaultChoiceFontDATAItalic = DynamicFontData.new()
-	defaultChoiceFontDATAItalic.font_path = 'res://fonts/Dialogue/Lato-Italic.ttf'
+	defaultChoiceFontDATAItalic.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Italic.ttf'
 	defaultChoiceFontItalic = DynamicFont.new()
 	defaultChoiceFontItalic.font_data = defaultChoiceFontDATAItalic
 	defaultChoiceFontItalic.size = 25
 	var defaultChoiceFontDATABoldItalic = DynamicFontData.new()
-	defaultChoiceFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Lato-BoldItalic.ttf'
+	defaultChoiceFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Roboto/Roboto-BoldItalic.ttf'
 	defaultChoiceFontBoldItalic = DynamicFont.new()
 	defaultChoiceFontBoldItalic.font_data = defaultChoiceFontDATABoldItalic
 	defaultChoiceFontBoldItalic.size = 25

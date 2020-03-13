@@ -72,7 +72,16 @@ func say(words, character = "", character_identifier = "", voice = null):
 		systems.textBoxBackground.make_invisible()
 	else:
 		$Nametag.text = character
-		systems.textBoxBackground.swap_character(character_identifier.to_lower())
+		var special_voice = null
+		#Stupid hacks for special voice cases
+		if character.to_lower() == "sword" and character_identifier.to_lower() == "azumi":
+			special_voice = "sword"
+		elif character.to_lower().find("phantom horn") > -1:
+			special_voice = "phantom_horn"
+		elif character.to_lower().find("horseshoes") > -1 and character_identifier.to_lower() == "jesse":
+			special_voice = "dr-horseshoes"
+		
+		systems.textBoxBackground.swap_character(character_identifier.to_lower(), special_voice)
 		systems.textBoxBackground.make_visible()
 	$Dialogue.say(words, voice)
 	

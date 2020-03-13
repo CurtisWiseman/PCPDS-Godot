@@ -115,10 +115,10 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	
 #	# Set the default font for nametags.
 	var defaultFontNametagDATA = DynamicFontData.new()
-	defaultFontNametagDATA.font_path = 'res://fonts/Nametag/coolvetica/coolvetica rg.ttf'
+	defaultFontNametagDATA.font_path = 'res://fonts/Nametag/RobotoSlab/RobotoSlab-SemiBold.ttf'
 	var defaultFontNametag = DynamicFont.new()
 	defaultFontNametag.font_data = defaultFontNametagDATA
-	defaultFontNametag.size = 45
+	defaultFontNametag.size = 40
 	nametag.add_font_override("font", defaultFontNametag)
 	dialogueBox.add_child(nametag);
 	
