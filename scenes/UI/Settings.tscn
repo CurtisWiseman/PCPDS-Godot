@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://code/systems.gd" type="Script" id=1]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/X/testArtboard 11x.png" type="Texture" id=2]
 [ext_resource path="res://scenes/UI/settings_background.gd" type="Script" id=3]
 [ext_resource path="res://scenes/UI/Settings.gd" type="Script" id=4]
@@ -21,9 +20,6 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Systems" type="Node" parent="."]
-script = ExtResource( 1 )
 
 [node name="background" type="Sprite" parent="."]
 texture = ExtResource( 8 )
@@ -104,7 +100,7 @@ position = Vector2( -504.705, -241.642 )
 [node name="max_x" type="Node2D" parent="sfx_volume"]
 position = Vector2( 496, -244.175 )
 
-[node name="close" type="TextureButton" parent="."]
+[node name="close_button" type="TextureButton" parent="."]
 margin_left = 1407.85
 margin_top = 40.1102
 margin_right = 1467.85

@@ -1,7 +1,7 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/UI/Pause_Screen.gd" type="Script" id=1]
-[ext_resource path="res://images/UI/In-game menus/Pause menu/Intro/intro 10.png" type="Texture" id=2]
+[ext_resource path="res://images/UI/In-game menus/Pause menu/Intro/pause menu exporter_00009.png" type="Texture" id=2]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Save game/Unhover/Save Game Comp 1_00021.png" type="Texture" id=3]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Main menu/Unhover/Main Menu Comp 1_00023.png" type="Texture" id=4]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Main menu/Unhover/Main Menu Comp 1_00025.png" type="Texture" id=5]
@@ -21,6 +21,9 @@
 [ext_resource path="res://images/UI/In-game menus/Quit menu/testArtboard 11quityes.png" type="Texture" id=19]
 [ext_resource path="res://images/UI/In-game menus/Quit menu/testArtboard 12quitmainmenunobutt.png" type="Texture" id=20]
 [ext_resource path="res://images/UI/In-game menus/Quit menu/testArtboard 11quitnoclick.png" type="Texture" id=21]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Settings/Unhover/Layer 14-pause menu exporter2.ai Comp 1_00027.png" type="Texture" id=22]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Settings/Unhover/Layer 14-pause menu exporter2.ai Comp 1_00029.png" type="Texture" id=23]
+[ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Settings/Unhover/Layer 14-pause menu exporter2.ai Comp 1_00031.png" type="Texture" id=24]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.792157 )
@@ -41,25 +44,24 @@ __meta__ = {
 }
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 1400, 6.021 )
-scale = Vector2( 1, 1.08 )
+position = Vector2( 1450, 6.021 )
 texture = ExtResource( 2 )
 centered = false
 script = ExtResource( 7 )
 
 [node name="buttons" type="Control" parent="."]
-margin_right = 40.0
+margin_left = 50.0
+margin_right = 90.0
 margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Save" type="TextureButton" parent="buttons"]
-margin_left = 1465.0
-margin_top = 277.0
-margin_right = 1800.0
-margin_bottom = 368.0
-rect_scale = Vector2( 1, 1.3 )
+margin_left = 1483.2
+margin_top = 363.662
+margin_right = 1818.2
+margin_bottom = 454.662
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 8 )
 texture_hover = ExtResource( 3 )
@@ -68,11 +70,10 @@ __meta__ = {
 }
 
 [node name="Load" type="TextureButton" parent="buttons"]
-margin_left = 1468.0
-margin_top = 415.0
-margin_right = 1804.0
-margin_bottom = 506.0
-rect_scale = Vector2( 1, 1.3 )
+margin_left = 1485.1
+margin_top = 454.911
+margin_right = 1821.1
+margin_bottom = 545.911
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 12 )
 texture_hover = ExtResource( 11 )
@@ -81,11 +82,10 @@ __meta__ = {
 }
 
 [node name="MainMenu" type="TextureButton" parent="buttons"]
-margin_left = 1461.95
-margin_top = 559.031
-margin_right = 2061.95
-margin_bottom = 659.031
-rect_scale = Vector2( 1, 1.3 )
+margin_left = 1479.05
+margin_top = 550.071
+margin_right = 2079.05
+margin_bottom = 650.071
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 6 )
@@ -95,10 +95,10 @@ __meta__ = {
 
 [node name="fade_out" type="Panel" parent="buttons/MainMenu"]
 visible = false
-margin_left = -1461.95
-margin_top = -430.024
-margin_right = 458.05
-margin_bottom = 649.976
+margin_left = -1806.0
+margin_top = -901.0
+margin_right = 788.0
+margin_bottom = 980.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="menu_popup" type="Sprite" parent="buttons/MainMenu"]
@@ -131,12 +131,24 @@ texture_hover = ExtResource( 21 )
 expand = true
 stretch_mode = 4
 
+[node name="Settings" type="TextureButton" parent="buttons"]
+margin_left = 1477.46
+margin_top = 647.122
+margin_right = 1828.46
+margin_bottom = 738.122
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 22 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Quit" type="TextureButton" parent="buttons"]
-margin_left = 1541.0
-margin_top = 699.0
-margin_right = 1708.0
-margin_bottom = 791.0
-rect_scale = Vector2( 1, 1.3 )
+margin_left = 1558.04
+margin_top = 746.882
+margin_right = 1725.04
+margin_bottom = 838.882
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 15 )
 texture_hover = ExtResource( 13 )
@@ -146,10 +158,10 @@ __meta__ = {
 
 [node name="fade_out" type="Panel" parent="buttons/Quit"]
 visible = false
-margin_left = -1541.0
-margin_top = -537.692
-margin_right = 379.0
-margin_bottom = 542.308
+margin_left = -1920.0
+margin_top = -1163.0
+margin_right = 688.0
+margin_bottom = 739.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="desktop_popup" type="Sprite" parent="buttons/Quit"]
@@ -186,6 +198,7 @@ stretch_mode = 4
 [connection signal="pressed" from="buttons/MainMenu" to="." method="_on_MainMenu_pressed"]
 [connection signal="pressed" from="buttons/MainMenu/yes" to="." method="_on_MainMenu_Confirmation_confirmed"]
 [connection signal="pressed" from="buttons/MainMenu/no" to="." method="_on_mainmenu_closed"]
+[connection signal="pressed" from="buttons/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="buttons/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="buttons/Quit/yes" to="." method="_on_Quit_Confirmation_confirmed"]
 [connection signal="pressed" from="buttons/Quit/no" to="." method="_on_quit_closed"]

@@ -19,6 +19,19 @@ var blackScreen
 # Load nodes for all game systems.
 func _ready():
 	
+	
+	var config = ConfigFile.new()
+	var err = config.load("user://settings.cfg")
+	if err == OK:
+		if config.has_section_key("audio", "sfx"):
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Sfx"), config.get_value("audio", "sfx"))
+		if config.has_section_key("audio", "music"):
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), config.get_value("audio", "music"))
+		if config.has_section_key("audio", "master"):
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), config.get_value("audio", "master"))
+		if config.has_section_key("audio", "voice"):
+			global.voicesOn = config.get_value("audio", "voice")
+	
 	# Set the global rootnode to the root of the current scene.
 	global.rootnode = get_node('..')
 	

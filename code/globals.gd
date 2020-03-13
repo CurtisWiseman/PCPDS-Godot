@@ -24,7 +24,7 @@ var defaultFontBold
 var defaultFontBoldItalic
 var defaultFont
 var textTheme
-var playerName
+var playerName = "PlayerName"
 var pauseScreen = null
 var voicesOn = true
 
@@ -57,54 +57,6 @@ func _ready():
 	
 	
 	size = OS.get_screen_size() # Get the size of the screen.
-	
-	
-	# If the usersettings file does not exist then create it.
-	var file = File.new()
-	var filepath = OS.get_user_data_dir() + '/usersettings.tres'
-	if file.file_exists(filepath) == false:
-		file.open("user://usersettings.tres", File.WRITE)
-		file.close()
-	
-	# Get user settings and create those that don't exist.
-	file.open("user://usersettings.tres", File.READ_WRITE)
-	var settings = file.get_as_text()
-	
-	
-	# Get the master volume or create it.
-	if settings.find('master_volume:', 0) == -1:
-		file.open("user://usersettings.tres", File.READ_WRITE)
-		file.store_line(settings + 'master_volume:1.000')
-		settings = file.get_as_text()
-		file.close()
-	else:
-		master_volume = float(settings.substr(settings.find('master_volume:', 0) + 14, 5))
-	
-	# Get the music volume or create it.
-	if settings.find('music_volume:', 0) == -1:
-		file.open("user://usersettings.tres", File.READ_WRITE)
-		file.store_line(settings + 'music_volume:1.000')
-		settings = file.get_as_text()
-		file.close()
-	else:
-		music_volume = float(settings.substr(settings.find('music_volume:', 0) + 13, 5))
-	
-	# Get the sfx volume or create it.
-	if settings.find('sfx_volume:', 0) == -1:
-		file.open("user://usersettings.tres", File.READ_WRITE)
-		file.store_line(settings + 'sfx_volume:1.000')
-		settings = file.get_as_text()
-		file.close()
-	else:
-		sfx_volume = float(settings.substr(settings.find('sfx_volume:', 0) + 11, 5))
-	
-	# Get the player name if it exists
-	if file.file_exists(OS.get_user_data_dir() + '/playername.tres'):
-		file.open("user://playername.tres", File.READ)
-		playerName = file.get_as_text()
-		file.close()
-	else:
-		playerName = null;
 	
 	# If the directory for screenshots doesn't exists create it.
 	var directory = Directory.new()
@@ -264,3 +216,12 @@ func toggle_pause():
 	global.dialogueBox.set_self_modulate(Color(1,1,1,a))
 	global.dialogueBox.get_node('Nametag').set_self_modulate(Color(1,1,1,a))
 	global.dialogueBox.get_node('Dialogue').set_self_modulate(Color(1,1,1,a))
+	
+func save_settings():
+	var config = ConfigFile.new()
+	config.set_value("audio", "sfx", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Sfx")))
+	config.set_value("audio", "master", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
+	config.set_value("audio", "music", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
+	config.set_value("audio", "voice", global.voicesOn)
+	prints(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Sfx")), AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
+	config.save("user://settings.cfg")

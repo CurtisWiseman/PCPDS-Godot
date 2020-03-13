@@ -20,7 +20,7 @@ var old_frames = {}
 #
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	texture = null
 
 func menu_out():
 	cur_track = Track.Out
@@ -70,4 +70,5 @@ func _process(delta):
 			num_text = "0"+num_text
 		texture = load(path + num_text + ".png")
 		old_frames[texture.resource_path] = texture
+		emit_signal("frame_changed")
 	timer += delta

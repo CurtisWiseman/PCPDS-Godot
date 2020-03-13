@@ -75,9 +75,9 @@ func say(words, character = "", character_identifier = "", voice = null):
 		var special_voice = null
 		#Stupid hacks for special voice cases
 		if character.to_lower() == "sword" and character_identifier.to_lower() == "azumi":
-			special_voice = "sword"
+			special_voice = "sword-akumaru"
 		elif character.to_lower().find("phantom horn") > -1:
-			special_voice = "phantom_horn"
+			special_voice = "phantom-horn"
 		elif character.to_lower().find("horseshoes") > -1 and character_identifier.to_lower() == "jesse":
 			special_voice = "dr-horseshoes"
 		
@@ -355,8 +355,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			elif dialogue[index].findn('StopSFX') != -1:
 				systems.sound.stop_SFX(systems.sound.audioname(systems.sound.playingSFX['path']))
-			elif dialogue[index].find("Forget ") == 1:
-				var forget_choice = dialogue[index].lstrip('[Forget ').rstrip(']')
+			elif dialogue[index].to_lower().find("forget ") == 1:
+				var forget_choice = dialogue[index].substr("[forget ".length()).strip_edges().rstrip(']')
 				chosenChoices.erase(forget_choice)
 				choices.erase(forget_choice)
 			elif dialogue[index].findn('Location:') != -1:
@@ -749,7 +749,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				dialogue[index] = regex.sub(dialogue[index], global.playerName, true)
 			
 			# If there is no text on the line then don't say anything.
-			if dialogue[index].ends_with(')') or dialogue[index].ends_with('$'):
+			if dialogue[index].strip_edges().ends_with(')') or dialogue[index].strip_edges().ends_with('$'):
 				global.pause_input = true
 				say = false
 				if dialogue[index][dialogue[index].length()-1] == '$': wait = false
@@ -833,10 +833,25 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					waitTimer.start()
 					yield(waitTimer, 'timeout')
 					game.safeToSave = true
-					
+				
+				#quick hack so that slide empty dialogue lines go immediately
+				#because if the emit happens while the slide is still happening, then you don't auto-progress
+				for instruction in info:
+					if instruction.to_lower() =="slide":
+						var sliding = true
+						while sliding:
+							waitTimer.wait_time = 0.1
+							waitTimer.start()
+							yield(waitTimer, 'timeout')
+							sliding = false
+							for child in systems.display.get_children():
+								if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
+									sliding = true
+									break
+						
+				global.pause_input = false
 				index += 1
 				emit_signal('empty_line')
-				global.pause_input = false
 		
 		# Don't display anything but call scene function.
 		elif dialogue[index] == ("&&&&&"):
@@ -1115,6 +1130,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	var knife = false
 	var ben_point = false
 	var ben_cloud = false
+	var ben_horn = false
 	var AFL = ''
 	var blushNum
 	var num
@@ -1145,6 +1161,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 				kamina_shades = true
 			elif tmp[k] == 'cloud':
 				ben_cloud = true
+			elif tmp[k] == 'horn':
+				ben_horn = true
 #		if tmp.size() == 3:
 #			blushNum = int(parse_expnum(info[i], parsedInfo)[0]);
 #			blush = true
@@ -1169,6 +1187,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		AFL += '\n\tsystems.display.face(characterImages.ben.afl[2], '+body+', 0, 0, "point")'
 	if ben_cloud:
 		AFL += '\n\tsystems.display.face(characterImages.ben.afl[0], '+body+', 0, 0, "below")'
+	if ben_horn:
+		AFL += '\n\tsystems.display.face(characterImages.ben.afl[1], '+body+', 0, 0, "horn")'
 		
 	var useDefault = false
 	if "happy".is_subsequence_of(info[i]):

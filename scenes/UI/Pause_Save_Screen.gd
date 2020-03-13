@@ -36,8 +36,9 @@ func menu_in():
 	$"Save Pages".visible = false
 	$"Page Buttons".visible = false
 	$close_button.visible = false
-	visible = true
 	$background.menu_in()
+	yield($background, "frame_changed")
+	visible = true
 	yield($background, "intro_finished")
 	$"Save Pages".visible = true
 	$"Page Buttons".visible = true

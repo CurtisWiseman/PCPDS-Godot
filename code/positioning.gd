@@ -40,7 +40,7 @@ func move(s, n, ty, i, t, x=null):
 # Calculates the movement of images across the screen.
 func _process(delta):
 	if nodepos != null and speed != null:
-		position(nodepos + speed) # Move collider at speed.x.
+		position(nodepos + speed*delta/0.025) # Move collider at speed.x.
 	
 	# If dest is null then ignore ending movement.
 	if dest != null:

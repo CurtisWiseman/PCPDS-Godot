@@ -3,6 +3,7 @@ extends Control
 # Scenes
 var saveScene
 var loadScene
+var settingsScene
 
 var reloadLoad = false # Whether or not to reload the load scene.
 var transitioning = false
@@ -10,12 +11,19 @@ var transitioning = false
 var current_screen = null
 
 func _ready():
+	settingsScene = load('res://scenes/UI/Settings.tscn').instance()
+	settingsScene.visible = false
+	#settingsScene.rect_position.x = -80
+	add_child(settingsScene)
+	move_child(settingsScene, 1)
+	settingsScene.get_node("close_button").connect("pressed", self, "_on_close_pressed")
+
 	saveScene = Control.new()
 	saveScene.name = 'Pause_Save_Screen'
 	saveScene = load('res://scenes/UI/Pause_Save_Screen.tscn').instance()
 	saveScene.PauseScreen = self
 	saveScene.visible = false
-	saveScene.rect_position.x = -80
+	#saveScene.rect_position.x = -80
 	add_child(saveScene)
 	move_child(saveScene, 1)
 	current_screen = saveScene
@@ -25,10 +33,12 @@ func _ready():
 	loadScene.name = 'Pause_Load_Screen'
 	loadScene = load('res://scenes/UI/Pause_Load_Screen.tscn').instance()
 	loadScene.visible = false
-	loadScene.rect_position.x = -80
+	#loadScene.rect_position.x = -80
 	add_child(loadScene)
 	move_child(loadScene, 1)
 	loadScene.get_node("close_button").connect("pressed", self, "_on_close_pressed")
+	
+
 	
 	global.pauseScreen = self
 	
@@ -50,8 +60,6 @@ func _input(event):
 func _on_close_pressed():
 	if not transitioning:
 		menu_out()
-	else:
-		print("whoops")
 		
 func menu_in():
 	transitioning = true
@@ -65,11 +73,13 @@ func menu_in():
 	current_screen.menu_in()
 	
 func menu_out():
+	global.save_settings()
 	transitioning = true
-	$buttons.visible = false
 	current_screen.menu_out()
 	yield(current_screen, "outro_finished")
 	$background.menu_out()
+	yield($background, "frame_changed")
+	$buttons.visible = false
 	yield($background, "outro_finished")
 	visible = false
 	transitioning = false
@@ -83,8 +93,10 @@ func _on_Save_pressed():
 		current_screen = saveScene
 		current_screen.menu_in()
 		#current_screen.visible = true
-		
+	global.save_settings()
+	
 func _on_Load_pressed():
+	global.save_settings()
 	if reloadLoad:
 		loadScene.loadSaveGames()
 		reloadLoad = false
@@ -104,6 +116,7 @@ func _on_History_pressed():
 func _on_MainMenu_pressed():
 	for c in $buttons/MainMenu.get_children():
 		c.show()
+	global.save_settings()
 	
 func _on_MainMenu_Confirmation_confirmed():
 	visible = false
@@ -117,10 +130,21 @@ func _on_mainmenu_closed():
 func _on_Quit_pressed():
 	for c in $buttons/Quit.get_children():
 		c.show()
-		
+	global.save_settings()
+	
 func _on_Quit_Confirmation_confirmed():
 	get_tree().quit()
 
 func _on_quit_closed():
 	for c in $buttons/Quit.get_children():
 		c.hide()
+
+func _on_Settings_pressed():
+	if current_screen != settingsScene:
+		current_screen.menu_out()
+		#current_screen.visible = false
+		yield(current_screen, "outro_finished")
+		current_screen = settingsScene
+		current_screen.menu_in()
+		#current_screen.visible = true
+	global.save_settings()

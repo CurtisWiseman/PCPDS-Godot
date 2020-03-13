@@ -20,7 +20,7 @@ func _ready():
 	settings = load('res://scenes/UI/Settings.tscn').instance()
 	add_child(settings)
 	settings.visible = false
-	settings.get_node("close").connect('pressed', self, '_on_X_pressed', ['settings'])
+	settings.get_node("close_button").connect('pressed', self, '_on_X_pressed', ['settings'])
 	
 	# Make an instance of the load screen scene.
 	loadscreen = load('res://scenes/UI/Pause_Load_Screen.tscn').instance()
@@ -89,6 +89,8 @@ func _on_X_pressed(scene):
 	
 	for N in $NewButtons.get_children():
 		N.visible = true
+		
+	global.save_settings()
 
 #######################################################
 
