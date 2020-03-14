@@ -29,6 +29,8 @@ This is all starting to freak me out a little bit. Feeling? Touch? What is this 
 
 [Scene: !data rowdies]
 
+[CG end]
+
 [StopMusic]
 [Location: dininghall.norowdies, dininghall.table.rowdiesforeground]
 [Song: PCPDating_HomeMorning]
@@ -103,9 +105,11 @@ At first I didn’t realize what Crocs meant by that, but after not too long it 
 [StopMusic]
 [Location: rowdyroughhouse]
 [Fade from black]
-[Song: PCPDS_YungMan]
+[Song: PCPDating_LifeinEndlessWar]
 
 When I enter into the depths, my senses are assaulted on all fronts by the disruptive aura this place oozes and radiates. The halls and walls, floors and ceilings, no spot is left unpainted or undyed. It fucking reeks in here, and what’s more, there are speakers left and right, all with the label ‘LIL D00P’ plastered on them. Close by, there's a digital jukebox that’s running through a playlist called ‘the-rowdy-themes’. Looking at the queue, it’s just a repeat of the same song for hours - ‘YMCA reworked to Minor Key’.
+
+Sure doesn't sound like the YMCA song, minor or not.
 
 After wandering around for a little while, I heard some commotion coming from a nearby room, loud enough to overpower the clangorous “YOUNG MAN”s and “Y! M! C! A!”s.
 
@@ -190,9 +194,9 @@ What an easy decision. This dame has clearly lost her marbles, wanting me to cut
 [EndlessWar leaves]
 [SFX: PCP-SFX_DoorSlam]
 
-[SLIDE, Crocs,left-150, right]
+[SLIDE, Crocs, left-150, right]
 [SLIDE, Connor, left+350, left]
-[SLIDE, Munchy, right-350, right]
+[SLIDE, Munchy, right-350, center]
 
 Endless War leaves in a stomping tantrum, but that ‘Slimefest’ thing she mentioned caught my attention.
 
@@ -219,6 +223,9 @@ After Crocs and Blue Whale are defeated, I manage to secure victory by throwing 
 [Munchy leaves]
 
 I walk home, filled with comradery. I guess being in a gang isn’t such a bad thing after all, if it means I can experience moments like these. I just hope I don’t run into Endless War again, what with the heated gamer moment I had earlier.
+[==> Artisan]
+
+*
 
 *Hey you know what, you’re right.*
 
@@ -259,7 +266,10 @@ I leave the confines of the Rowdy Roughhouse, with Endless War walking just a fe
 (PCPG) What do you mean by that? What exactly are we gonna ‘create’?
 
 (Endless War|Endless War, knife, neutral) Explaining such concepts to your feeble mind would take ages. With that in mind, I’ll just keep things simple enough for you to understand: do you want to help me or not? Your mission, should you choose to accept it, will be elaborated on later.
+[==> Endless War?]
+*
 
+[Scene: Endless War?]
 [CHOICE]
 *Hell yeah, I want a new age of WAR*
 *Er, I don’t think I’m cut out for this ‘WAR’ thing after all.*
@@ -271,10 +281,13 @@ I leave the confines of the Rowdy Roughhouse, with Endless War walking just a fe
 (Endless War|Endless War, stand, neutral) Of course. Meet me tomorrow on the school roof at the beginning of lunch. We have much to do before we can truly bring upon this new age.
 
 [fade to black]
+
+[EndlessWar leaves]
+
 [ENDLESS WAR ROUTE START]
+*
 
-
-*Er, I don’t think I’m cut out for this ‘WAR’ thing*
+*Er, I don’t think I’m cut out for this ‘WAR’ thing after all.*
 
 (PCPG) Uhh, sorry, but I think I might not be the right fit for this. I’m not even sure what exactly I’m getting into here, so I’ll just have to decline. Sorry.
 
@@ -288,12 +301,14 @@ Suddenly, the air grows cold around me, and Endless War begins to radiate a thre
 
 (Endless War|Endless War, knife, shockedMAX) Why can’t things just be simple, like the old days. You’ve let me down PCPG. With you at my side, I thought that things could get better around here for once, but I guess not. Perish.
 
-[SFX: PCP-SFX_KatanaSlash] 
+[SFX: PCP-SFX_KatanaSlash]
 [Blood splatter]
 
 Before I know it, I’ve got a hole in my gut. I fucked up, big time. Using the last of my strength, I crawl on my hands and feet back into the Roughhouse.
 
 [StopMusic]
+
+[EndlessWar leaves]
 [Location: rowdyroughhouse]
 [Fade from black]
 [Song: PCPDating_GameOver]
@@ -318,16 +333,19 @@ What is this place? Is it heaven? Is it hell?
 
 (PCPG) Oh God…
 
-No… /n No!! /n NOOOOOOOOOOOOOO!!!
+No…
+No!!
+NOOOOOOOOOOOOOO!!!
 
 [BAD END]
 [credits]
+*
 
 [Scene: Artisan]
 
 [StopMusic]
-[Fade from black]
 [Location: artclass]
+[Fade from black]
 [Song: PCPDating_ClassMemes_Buttchugger]
 
 Time for a new day.
@@ -442,6 +460,7 @@ We don’t waste any time rushing through the lunch line. I’m shaking in antic
 (PCPG) A “goon”?
 
 (Crocs, neutral) I’ll get to that in a second.
+*
 
 *So we can uh… kill them and make Munchy, proud, I think?*
 
@@ -454,6 +473,7 @@ We don’t waste any time rushing through the lunch line. I’m shaking in antic
 (PCPG) R-right…
 
 Before the pain in my shoulder even hit me, the flash of his revolver blinded my eyes. I knew he was one of the more famous Rowdys out there, but it looks like it’s bad to show weakness around Paradox Crocs. I manage to blot out the minor wound with my t-shirt.
+*
 
 (Crocs, neutral) In any case, slime is a complex substance. Whenever we take out a Killer in the heat of battle, something strange happens. Half of their slime goes directly to Munchy! Can you believe it? 
 
@@ -544,6 +564,8 @@ Becoming a Rowdy has given my life so many twists and turns, it’s no wonder pe
 
 As far as art class goes, however, I think it might be the first time in my life where I’m actually enjoying doing schoolwork. Even though what I made today was borderline shit, Munchy saw potential in it. Well, maybe it’s just him doing his job, encouraging me and all.
 
+[Location: black]
+
 On my way to the Roughhouse, I start to feel anxious about what the others are gonna think about what I brought to game night.
 
 [CG: Battle Builder]
@@ -556,11 +578,15 @@ Still though, it’s better than nothing. I’m sure everyone will have a good l
 
 [Scene: Game of Thrones]
 
+[fade to black]
+
 The familiar hum of the subwoofers guides me all the way to the Roughhouse proper, except this time they don’t bother me as much. At this rate I think I could get used to hanging around here. What does surprise me though, is what song the speakers are blasting this time around.
 
 [StopMusic]
 [Location: rowdyroughhouse]
 [Song: PCPDating_Karkalicious]
+
+[fade from black]
 
 Apparently someone cleared the queue of ‘YMCA reworked to Minor Key’ and instead put on something called ‘Karkalicious+++ Deluxe DLC Bonus Chapter Pro Premium Edition’. It’s intentionally grating on the ears, and although I want to consider myself a Rowdy at heart, I don’t know if blatant self-inflicted torture on the eardrums (more so than usual) is a part of what being a Rowdy truly is. 
 
@@ -593,7 +619,7 @@ I head into the main room again with Munchy. Just like the other day, Crocs and 
 
 (Connor|BLUE WHALE, angry) this is bullshit, i don’t want to play anymore. someone else tag in.
 
-[SLIDE, Connor, right, Offright]
+[SLIDE, Connor, right, offright]
 [SLIDE, Munchy, center, right]
 
 (Munchy|Munchy, casual, default, confusedMED) Perfect timing… Wait. Oh God, Crocs, why the fuck are you playing as Frog, this is a disaster.
@@ -779,7 +805,7 @@ I walk back into art class and… holy shit! He works fast in setting everything
 *
 *Head to the lunchroom.*
 
-    Nah, I’m sure he’s probably busy. I’ll just meet up with the Rowdys instead.
+Nah, I’m sure he’s probably busy. I’ll just meet up with the Rowdys instead.
 *
 
 [Scene: Bustin’ in Boston]
@@ -1161,7 +1187,7 @@ Out of nowhere, Endless War walks slowly into the lunchroom.
 [SLIDE, Ben, center, left+350]
 [SLIDE, Munchy, right, right-350]
 
-(Endless War|Endless War, cross, neutral, Offright, slide, right+150, 10) Don’t worry about him, or anyone who may have perished here for that matter. Because of our glorious slime, I’ll always revive those who engage in some good old fashioned WAR, if they so wish. In a WAR of slime, no one is truly gone for good.
+(Endless War|Endless War, cross, neutral, offright, slide, right+150, 10) Don’t worry about him, or anyone who may have perished here for that matter. Because of our glorious slime, I’ll always revive those who engage in some good old fashioned WAR, if they so wish. In a WAR of slime, no one is truly gone for good.
 
 (PCPG) People can come back to life… with slime?
 
@@ -1171,14 +1197,17 @@ Out of nowhere, Endless War walks slowly into the lunchroom.
 
 (Ben|Ben, campus, base, shockedMIN) Uh, sure.
 
-[Crocs, leaves]
+[Crocs leaves]
 [Ben leaves]
 [Munchy leaves]
 [EndlessWar leaves]
 
 [StopMusic]
+[StopMusic]
 
 The lunchroom goes dead quiet as everyone files out. When Crocs asked for his gun back, I noticed that I had a firm grip on the gun the entire time Munchy was talking. It seems like gang violence is affecting me on not just a physical level, but a mental one as well…
+[==> Ready Player Blue]
+
 *
 
 *Spare him his life.*
@@ -1216,6 +1245,7 @@ The pain only grows with each minute. Looking down at my hands, I notice they’
 What were once gangsters are now almost entirely skeletons. It isn’t long before the rain drives itself right into my skull, cleansing the slime from my body.
 
 [StopMusic]
+[StopMusic]
 [Location: sewers]
 [Song: PCPDating_GameOver]
 
@@ -1241,6 +1271,7 @@ The phantoms of my former comrades all dissipate one by one as they rise up thro
 I just don’t have the heart to. Maybe the life of a ghost is a better fit for someone as worthless as me. Goodbye WAR. Goodbye… Rowdys…
 
 [BAD END]
+[credits]
 *
 
 [Scene: Ready Player Blue]
@@ -1315,6 +1346,8 @@ Going back home and hitting the hay for the night is tempting, but I feel like t
 
 (PCPG) Ah, sure, yeah.
 
+[Munchy leaves]
+
 [Location: pcpgroom]
 
 What a godsend, I finally get to rest after all the shit I’ve been through today. Hopefully I won’t have to get into any fights tomorrow either, I think I’ve had enough bloodshed for one week.
@@ -1382,6 +1415,7 @@ To feel ashamed is an understatement. Even being in this room feels wrong. I can
 (PCPG) !renounce
 
 [BAD END]
+[credits]
 *
 
 *Fight through your sleep deprivation*
@@ -1524,7 +1558,7 @@ Professor Bestman is Ben’s brother? Never would’ve guessed.
 
 A trail of smoke billows into the room. It can only mean one thing, that the same threatening aura found at the Killer lunch table has stepped into the Rowdy base.
 
-(Ben|Ben, casual, base, Offright, slide, right) What’s up guys?
+(Ben|Ben, casual, base, offright, slide, right) What’s up guys?
 
 (Munchy|Munchy, special, squatting, angryMIN) Jesus Christ Ben, did you really have to come dressed like a homeless person? Oh, and cool it with that Juul of yours, or whatever the fuck it is.
 
@@ -1603,7 +1637,7 @@ A trail of smoke billows into the room. It can only mean one thing, that the sam
 
 (PCPG) Oh fuck, who put on the music?
 
-(Crocs, happy, Offleft, slide, left) Don’t mind me, just lightening the mood with some rowdy tunes. It’s a lot better than the sheer silence the game normally has, don’t you think?
+(Crocs, happy, offleft, slide, left) Don’t mind me, just lightening the mood with some rowdy tunes. It’s a lot better than the sheer silence the game normally has, don’t you think?
 
 (PCPG) Heh, fair enough. It has a nice ring to it.
 
