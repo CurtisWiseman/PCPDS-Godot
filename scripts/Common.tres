@@ -1487,22 +1487,22 @@ But despite Ben’s pleas, Brunswick continues slowly towards his doom. Students
 Just before Brunswick falls into the portal and is consumed once more by the fire he escaped from, a commanding shout sounds from the classroom door.
 
 [StopMusic]
-(Lord of Ghosts|???, shock, offright, slide, right) STOP!
+(Lord of Ghosts|???, shock, blank, offright, slide, right) STOP!
 
-(Lord of Ghosts, neutral, right)
+(Lord of Ghosts, neutral, blank, right)
 Somehow this gets to Brunswicks ears, stopping him inches from the portal’s edge.
 
 (Russel, base, worried, center-50) The Lord of Ghosts himself? But sir what are you doing here?
 
-(Lord of Ghosts|The Lord of Ghosts, angry, right) I WANT YOU TO LET GO OF THAT POKÉMON.
+(Lord of Ghosts|The Lord of Ghosts, angry, blank, right) I WANT YOU TO LET GO OF THAT POKÉMON.
 
 (Russel, base, worried, center-50) B-but sir, he belongs in Pokémon Hell! I made a whole campaign to #LetRusselWrestle in order to defeat and capture him at the third PCP Royal Rumble, but I unfortunately missed my chance. This is now my time to drag him down to where he belongs!
 
-(Lord of Ghosts|The Lord of Ghosts, neutral, right) I DO NOT CARE. I AM THE LORD OF GHOSTS AND SO ALL GHOSTS MUST OBEY ME. THAT’S HOW IT WORKS.
+(Lord of Ghosts|The Lord of Ghosts, neutral, blank, right) I DO NOT CARE. I AM THE LORD OF GHOSTS AND SO ALL GHOSTS MUST OBEY ME. THAT’S HOW IT WORKS.
 
 (Russel, base, worried, center-50) I guess... you are right sir.
 
-(Lord of Ghosts, happy, right)
+(Lord of Ghosts, happy, blank, right)
 (Brunswick, worried, 1, right-300, slide, right-150, 10)
 Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. After shaking off his confusion he steps away from the portal and lowers himself to let the student’s on top of him off. 
 
@@ -1523,11 +1523,11 @@ Russel then enters back through the portal and closes it behind him, seemingly r
 (Brunswick, worried, 1, center+50, slide, left, 10)
 (Ben, campus, base, happyMIN, left, slide, center) Wow, uh thanks for the save Lord of Ghosts. Even though we were previously enemies bent on dominating one another that one time, you helped me out big here.
 
-(Lord of Ghosts|The Lord of Ghosts, blushMED, right) DO NOT MENTION IT, FOR I AM THE LORD OF GHOSTS, THAT IS WHAT I DO.
+(Lord of Ghosts|The Lord of Ghosts, blushMED, blank, right) DO NOT MENTION IT, FOR I AM THE LORD OF GHOSTS, THAT IS WHAT I DO.
 
-(Lord of Ghosts|The Lord of Ghosts, neutral, right) I HOWEVER MUST GO NOW, SO BYE BYE...
+(Lord of Ghosts|The Lord of Ghosts, neutral, blank, right) I HOWEVER MUST GO NOW, SO BYE BYE...
 
-(Lord of Ghosts, neutral, right, slide, offright)
+(Lord of Ghosts, neutral, blank, right, slide, offright)
 Unlike Russel, the Lord of Ghosts uses the classroom door to leave us, a far more considerate exit for those who are easily spooked. That Lord of Ghosts guy must be a real samaritan though, helping Brunswick out like that out of the blue. 
 
 His voice sounded awfully familiar. Have I met him before?
