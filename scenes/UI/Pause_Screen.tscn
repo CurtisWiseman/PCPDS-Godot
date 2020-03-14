@@ -26,12 +26,12 @@
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Settings/Unhover/Layer 14-pause menu exporter2.ai Comp 1_00031.png" type="Texture" id=24]
 [ext_resource path="res://fonts/Nametag/RobotoSlab/RobotoSlab-SemiBold.ttf" type="DynamicFontData" id=25]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0, 0, 0.792157 )
-
 [sub_resource type="DynamicFont" id=2]
 size = 30
 font_data = ExtResource( 25 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.792157 )
 
 [node name="pause_screen" type="Control"]
 pause_mode = 2
@@ -98,44 +98,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="fade_out" type="Panel" parent="buttons/MainMenu"]
-visible = false
-margin_left = -1806.0
-margin_top = -901.0
-margin_right = 788.0
-margin_bottom = 980.0
-custom_styles/panel = SubResource( 1 )
-
-[node name="menu_popup" type="Sprite" parent="buttons/MainMenu"]
-visible = false
-position = Vector2( -745, 0 )
-texture = ExtResource( 20 )
-
-[node name="yes" type="TextureButton" parent="buttons/MainMenu"]
-visible = false
-margin_left = -925.89
-margin_top = -15.816
-margin_right = -824.89
-margin_bottom = 65.184
-texture_normal = ExtResource( 19 )
-texture_hover = ExtResource( 17 )
-expand = true
-stretch_mode = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="no" type="TextureButton" parent="buttons/MainMenu"]
-visible = false
-margin_left = -726.68
-margin_top = -16.3815
-margin_right = -625.68
-margin_bottom = 64.6185
-texture_normal = ExtResource( 18 )
-texture_hover = ExtResource( 21 )
-expand = true
-stretch_mode = 4
-
 [node name="Settings" type="TextureButton" parent="buttons"]
 margin_left = 1477.46
 margin_top = 647.122
@@ -161,44 +123,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="fade_out" type="Panel" parent="buttons/Quit"]
-visible = false
-margin_left = -1920.0
-margin_top = -1163.0
-margin_right = 688.0
-margin_bottom = 739.0
-custom_styles/panel = SubResource( 1 )
-
-[node name="desktop_popup" type="Sprite" parent="buttons/Quit"]
-visible = false
-position = Vector2( -824.05, -107.668 )
-texture = ExtResource( 16 )
-
-[node name="yes" type="TextureButton" parent="buttons/Quit"]
-visible = false
-margin_left = -1004.94
-margin_top = -123.484
-margin_right = -903.94
-margin_bottom = -42.4845
-texture_normal = ExtResource( 19 )
-texture_hover = ExtResource( 17 )
-expand = true
-stretch_mode = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="no" type="TextureButton" parent="buttons/Quit"]
-visible = false
-margin_left = -805.73
-margin_top = -124.05
-margin_right = -704.73
-margin_bottom = -43.0499
-texture_normal = ExtResource( 18 )
-texture_hover = ExtResource( 21 )
-expand = true
-stretch_mode = 4
-
 [node name="scene_name" type="Label" parent="."]
 margin_left = 286.0
 margin_top = 1027.0
@@ -210,12 +134,95 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="pop_ups" type="Control" parent="."]
+visible = false
+margin_left = 50.0
+margin_right = 90.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fade_out" type="Panel" parent="pop_ups"]
+margin_left = -326.95
+margin_top = -350.929
+margin_right = 2267.05
+margin_bottom = 1530.07
+custom_styles/panel = SubResource( 1 )
+
+[node name="menu" type="Control" parent="pop_ups"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_popup" type="Sprite" parent="pop_ups/menu"]
+position = Vector2( 734.05, 550.071 )
+texture = ExtResource( 20 )
+
+[node name="yes" type="TextureButton" parent="pop_ups/menu"]
+margin_left = 553.16
+margin_top = 534.255
+margin_right = 654.16
+margin_bottom = 615.255
+texture_normal = ExtResource( 19 )
+texture_hover = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="no" type="TextureButton" parent="pop_ups/menu"]
+margin_left = 752.37
+margin_top = 533.689
+margin_right = 853.37
+margin_bottom = 614.689
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 21 )
+expand = true
+stretch_mode = 4
+
+[node name="desktop" type="Control" parent="pop_ups"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="desktop_popup" type="Sprite" parent="pop_ups/desktop"]
+position = Vector2( 733.99, 639.214 )
+texture = ExtResource( 16 )
+
+[node name="yes" type="TextureButton" parent="pop_ups/desktop"]
+margin_left = 553.1
+margin_top = 623.398
+margin_right = 654.1
+margin_bottom = 704.398
+texture_normal = ExtResource( 19 )
+texture_hover = ExtResource( 17 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="no" type="TextureButton" parent="pop_ups/desktop"]
+margin_left = 752.31
+margin_top = 622.832
+margin_right = 853.31
+margin_bottom = 703.832
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 21 )
+expand = true
+stretch_mode = 4
 [connection signal="pressed" from="buttons/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="buttons/Load" to="." method="_on_Load_pressed"]
 [connection signal="pressed" from="buttons/MainMenu" to="." method="_on_MainMenu_pressed"]
-[connection signal="pressed" from="buttons/MainMenu/yes" to="." method="_on_MainMenu_Confirmation_confirmed"]
-[connection signal="pressed" from="buttons/MainMenu/no" to="." method="_on_mainmenu_closed"]
 [connection signal="pressed" from="buttons/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="buttons/Quit" to="." method="_on_Quit_pressed"]
-[connection signal="pressed" from="buttons/Quit/yes" to="." method="_on_Quit_Confirmation_confirmed"]
-[connection signal="pressed" from="buttons/Quit/no" to="." method="_on_quit_closed"]
+[connection signal="pressed" from="pop_ups/menu/yes" to="." method="_on_MainMenu_Confirmation_confirmed"]
+[connection signal="pressed" from="pop_ups/menu/no" to="." method="_on_mainmenu_closed"]
+[connection signal="pressed" from="pop_ups/desktop/yes" to="." method="_on_Quit_Confirmation_confirmed"]
+[connection signal="pressed" from="pop_ups/desktop/no" to="." method="_on_quit_closed"]

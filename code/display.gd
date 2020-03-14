@@ -38,8 +38,20 @@ var mask_shader_code = """shader_type canvas_item;
 		COLOR = color;
 	}
 }"""
-		
-		
+
+
+var mask_out_head_overlap = """
+shader_type canvas_item;
+
+uniform sampler2D head;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	color.a *= 1.0-texture(head, UV).a;
+	COLOR = color;
+}
+"""
+
 # Set the background node to self by default.
 func _ready():
 	bgnode = self
@@ -185,6 +197,13 @@ func image(imgpath, z):
 	imgnode.centered = false # Uncenter the node.
 	imgnode.texture = info[2] # Set the node's texture to the image.
 	imgnode.z_index = z # Set the z index of the node to z.
+	
+	imgnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
+	imgnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
+	imgnode.material.shader.code = mask_out_head_overlap # Set the shader's code to code.
+	imgnode.material.shader.set_default_texture_param('mask_texture', load("res://images/blank.png"))
+	
+	
 	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 
 
@@ -349,6 +368,7 @@ func face(facepath, body, x=0, y=0, type='face'):
 	if type == 'face':
 		layers[index]['face'] = facenode # Add the face node the dictionary.
 		layers[index]['facepos'] = Vector2(x,y) # Add the coordinates.
+		layers[index]['node'].material.set_shader_param("head", facenode.texture)
 	else:
 		if !layers[index].has('AFL'):
 			layers[index]['AFL'] = []
@@ -678,7 +698,7 @@ func fade(content, from : Color, to : Color, time : float, remove_on_fade = fals
 	
 	if remove_on_fade:
 		layers[index]["removing"] = true
-		layers[index]["node"].name += " REMOVING"
+		layers[index]["node"].name = "REMOVING"
 		layers[index]["name"] = layers[index]["node"].name
 	faders.append(node)
 	fader_targets[node] = to

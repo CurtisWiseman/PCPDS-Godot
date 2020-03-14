@@ -118,11 +118,11 @@ func _ready():
 	# Create the Music bus.
 	AudioServer.add_bus(1) 
 	AudioServer.set_bus_name(1, 'Music')
-	AudioServer.set_bus_volume_db(1, log(master_volume * music_volume) * 20)
+	#AudioServer.set_bus_volume_db(1, log(master_volume * music_volume) * 20)
 	# Create the SFX bus.
 	AudioServer.add_bus(2)
 	AudioServer.set_bus_name(2, 'SFX')
-	AudioServer.set_bus_volume_db(2, log(master_volume * sfx_volume) * 20)
+	#AudioServer.set_bus_volume_db(2, log(master_volume * sfx_volume) * 20)
 	
 	# Load the location images.
 	locations = returnlocations()
@@ -220,9 +220,8 @@ func toggle_pause():
 	
 func save_settings():
 	var config = ConfigFile.new()
-	config.set_value("audio", "sfx", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Sfx")))
+	config.set_value("audio", "sfx", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
 	config.set_value("audio", "master", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	config.set_value("audio", "music", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
 	config.set_value("audio", "voice", global.voicesOn)
-	prints(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Sfx")), AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	config.save("user://settings.cfg")

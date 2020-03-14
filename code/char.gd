@@ -644,9 +644,9 @@ func _ready():
 	davoo.drunksmile = davoo.campus.drunksmile
 	davoo.drunkdrool = davoo.campus.drunkdrool
 	davoo.catboy = davoo.campus.catboy
-	check_all_character_art_exists_and_precache_video()
+	#check_all_character_art_exists()
 	
-func check_all_character_art_exists_and_precache_video():
+func check_all_character_art_exists():
 	var file = File.new()
 	var characters_to_check = ["nine11", "ephraim", "k1p", "magicks", "schrafft", "smearg", "copkillers", "kazee", "may", "michelle", "actiongiraffe", "digi", "artsofartso", "adelram", "azumi", "brunswick", "cerise", "coltcorona", "connor", "crocs", "drugdealer", "geoff", "gungirl", "lethal", "lordofghosts", "magda", "mumkeyjones", "pcpguy", "redman", "russel", "snob", "sophia", "hussiefox", "v", "vincent", "clara", "maygib", "thoth", "gibbon", "mage", "munchy", "nate", "jesse", "tom", "endlesswar", "ben", "davoo"]
 	for character in characters_to_check:
@@ -663,25 +663,3 @@ func check_all_character_art_exists_and_precache_video():
 			elif typeof(first) == TYPE_STRING:
 				if not file.file_exists(first):
 					print('Error: The given content ' + first + ' does not exist!')
-				if first.ends_with(".ogv"):
-					load(first)
-					
-func precache_videos(display):
-	var file = File.new()
-	var characters_to_check = ["digi", "artsofartso"]
-	for character in characters_to_check:
-		var art = get(character)
-		var depth_search = [art]
-		while depth_search.size() > 0:
-			var first = depth_search.pop_front()
-			if typeof(first) == TYPE_DICTIONARY:
-				for val in first.values():
-					depth_search.append(val)
-			elif typeof(first) == TYPE_ARRAY:
-				for val in first:
-					depth_search.append(val)
-			elif typeof(first) == TYPE_STRING:
-				if not file.file_exists(first):
-					print('Error: The given content ' + first + ' does not exist!')
-				if first.ends_with(".ogv"):
-					display.precache_vid(first)

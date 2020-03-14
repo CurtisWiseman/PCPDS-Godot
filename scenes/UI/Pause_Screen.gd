@@ -74,6 +74,9 @@ func menu_in():
 	current_screen.menu_in()
 	
 func menu_out():
+	$pop_ups.hide()
+	$pop_ups/desktop.hide()
+	$pop_ups/menu.hide()
 	global.save_settings()
 	transitioning = true
 	current_screen.menu_out()
@@ -115,8 +118,8 @@ func _on_History_pressed():
 	# text history not implemented yet.
 
 func _on_MainMenu_pressed():
-	for c in $buttons/MainMenu.get_children():
-		c.show()
+	$pop_ups.show()
+	$pop_ups/menu.show()
 	global.save_settings()
 	
 func _on_MainMenu_Confirmation_confirmed():
@@ -125,20 +128,20 @@ func _on_MainMenu_Confirmation_confirmed():
 	get_tree().change_scene("res://scenes/Main_Menu.tscn")
 
 func _on_mainmenu_closed():
-	for c in $buttons/MainMenu.get_children():
-		c.hide()
+	$pop_ups.hide()
+	$pop_ups/menu.hide()
 		
 func _on_Quit_pressed():
-	for c in $buttons/Quit.get_children():
-		c.show()
+	$pop_ups.show()
+	$pop_ups/desktop.show()
 	global.save_settings()
 	
 func _on_Quit_Confirmation_confirmed():
 	get_tree().quit()
 
 func _on_quit_closed():
-	for c in $buttons/Quit.get_children():
-		c.hide()
+	$pop_ups.hide()
+	$pop_ups/desktop.hide()
 
 func _on_Settings_pressed():
 	if current_screen != settingsScene:

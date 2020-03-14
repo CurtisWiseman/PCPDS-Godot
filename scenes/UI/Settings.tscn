@@ -80,7 +80,7 @@ position = Vector2( 496, -105.175 )
 position = Vector2( 800, 745 )
 texture = ExtResource( 7 )
 script = ExtResource( 10 )
-affected_bus = "Sfx"
+affected_bus = "SFX"
 
 [node name="knob" type="Sprite" parent="sfx_volume"]
 position = Vector2( 493.436, 27.693 )

@@ -1019,11 +1019,11 @@ func remove_dupes(character, info):
 				else:
 					if !global.pause_input: global.pause_input = true
 					var display_node = systems.display.layers[i]['node']
-					systems.display.remove(display_node, i)
-					#var cur_mod = display_node.self_modulate
-					#var end_mod = Color(cur_mod.r, cur_mod.g, cur_mod.b, 0)
-					#systems.display.layers[i]['removing'] =  true
-					#systems.display.fade(systems.display.layers[i]['path'], cur_mod, end_mod, 0.2, true)
+					#systems.display.remove(display_node, i)
+					var cur_mod = display_node.self_modulate
+					var end_mod = Color(cur_mod.r, cur_mod.g, cur_mod.b, 0)
+					systems.display.layers[i]['removing'] =  true
+					systems.display.fade(systems.display.layers[i]['path'], cur_mod, end_mod, 0.2, true)
 					notsame = [true, global.get_node_pos(display_node)]
 					emit_signal('dupeCheckFinished')
 					if global.pause_input: global.pause_input = false
@@ -1279,16 +1279,13 @@ func parse_position(info, parsedInfo, body, i, pos):
 	var num
 	
 	#Stupid hack, we don't do the fade if this body is already on screen:
-	#var useFade = false#true
-	#var path = execreturn("return " + body);
-	#for l in systems.display.layers:
-	#	if l["path"] == path:
-	#		useFade = false
-	#		break
+	var useFade = true
+	var path = execreturn("return " + body);
+	for l in systems.display.layers:
+		if l["path"] == path:
+			useFade = false
+			break
 		
-	#if useFade:
-	#	parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.2)"
-	
 	var j = i
 	while j < info.size():
 		if info[j] == 'silhouette':
@@ -1297,9 +1294,15 @@ func parse_position(info, parsedInfo, body, i, pos):
 		elif info[j] == 'fade':
 			fading = true
 			info.remove(j)
+		elif info[j] == 'slide':
+			useFade = false
+			j += 1
 		else:
 			j += 1
 			
+	if useFade:
+		parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.2)"
+	
 	if i < info.size():
 		if i + 2 == info.size()-1:
 			move = true

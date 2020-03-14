@@ -33,7 +33,7 @@ func _ready():
 	centered = false
 	position.x = 335
 	position.y = -120
-	check_all_texboxes()
+	#check_all_texboxes()
 	
 func check_all_texboxes():
 	var all_speakers = ['???', '9/11', 'action giraffe', 'adelram', 'announcer', 'artsofartso', 'azumi', 'ben', 'ben and munchy', 'ben & jesse', 'brunswick', 'bush', 'cafeteria lady', 'cerise', 'cider', 'clara', 'colt corona', 'connor', 'copkillers', 'cop killers', 'crocs', 'davoo', 'davoo collective', 'digi', 'donatello', 'drug dealer', 'drunken man', 'endlesswar', 'endless war', 'ephraim', 'geoff', 'gibbon', 'god', 'gungirl', 'hussiefox', 'indigo interlopers', 'interlopers', 'jesse', 'k1p', 'kazee', 'lethal', 'lord of ghosts', 'magda', 'mage', 'magicks', 'may', 'maygib', 'michelle', 'mumkey jones', 'munchy', 'nate', 'pcpg', 'phone', 'redman', 'russel', 'schrafft', 'smearg', 'snob', 'sophia', 'thoth', 'tom', 'uwupedy', 'v', 'vincent', 'voice from downstairs']

@@ -24,7 +24,7 @@ func _ready():
 	var err = config.load("user://settings.cfg")
 	if err == OK:
 		if config.has_section_key("audio", "sfx"):
-			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Sfx"), config.get_value("audio", "sfx"))
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), config.get_value("audio", "sfx"))
 		if config.has_section_key("audio", "music"):
 			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), config.get_value("audio", "music"))
 		if config.has_section_key("audio", "master"):
