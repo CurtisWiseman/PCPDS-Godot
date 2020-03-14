@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/UI/Pause_Screen.gd" type="Script" id=1]
 [ext_resource path="res://images/UI/In-game menus/Pause menu/Intro/pause menu exporter_00009.png" type="Texture" id=2]
@@ -24,9 +24,14 @@
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Settings/Unhover/Layer 14-pause menu exporter2.ai Comp 1_00027.png" type="Texture" id=22]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Settings/Unhover/Layer 14-pause menu exporter2.ai Comp 1_00029.png" type="Texture" id=23]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Settings/Unhover/Layer 14-pause menu exporter2.ai Comp 1_00031.png" type="Texture" id=24]
+[ext_resource path="res://fonts/Nametag/RobotoSlab/RobotoSlab-SemiBold.ttf" type="DynamicFontData" id=25]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.792157 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 25 )
 
 [node name="pause_screen" type="Control"]
 pause_mode = 2
@@ -193,6 +198,18 @@ texture_normal = ExtResource( 18 )
 texture_hover = ExtResource( 21 )
 expand = true
 stretch_mode = 4
+
+[node name="scene_name" type="Label" parent="."]
+margin_left = 286.0
+margin_top = 1027.0
+margin_right = 1251.0
+margin_bottom = 1069.0
+custom_fonts/font = SubResource( 2 )
+text = "SCENE NAME"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="buttons/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="buttons/Load" to="." method="_on_Load_pressed"]
 [connection signal="pressed" from="buttons/MainMenu" to="." method="_on_MainMenu_pressed"]

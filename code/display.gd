@@ -21,12 +21,23 @@ var vids_precached = {}
 # The code to mask using a shader.
 var mask_shader_code = """shader_type canvas_item;
 	uniform sampler2D mask_texture;
+	uniform sampler2D still;
+	uniform float start_time;
+	
 	void fragment() {
-	vec4 color = texture(TEXTURE, UV);
-	color.a *= texture(mask_texture, UV).a;
-	color.rgb *= texture(mask_texture, UV).rgb;
-	COLOR = color;
-	}"""
+	if (TIME < start_time-0.10) {
+		vec2 offset = vec2(0.0, 0.0035); //the stills seem weirdly offset compared to video? This seems to make it not awful
+		vec4 color = texture(still, UV+offset);
+		color.a *= texture(mask_texture, UV).a;
+		color.rgb *= texture(mask_texture, UV).rgb;
+		COLOR = color;
+	} else {
+		vec4 color = texture(TEXTURE, UV);
+		color.a *= texture(mask_texture, UV).a;
+		color.rgb *= texture(mask_texture, UV).rgb;
+		COLOR = color;
+	}
+}"""
 		
 		
 # Set the background node to self by default.
@@ -239,7 +250,7 @@ func animation(vidpath):
 
 
 # Create a mask
-func mask(mask, path, type, z, fade_in=false, force_name=null):
+func mask(mask, path, still, type, z, fade_in=false, force_name=null):
 	
 	# If z is 0 print error then exit function.
 	if z == 0:
@@ -284,6 +295,7 @@ func mask(mask, path, type, z, fade_in=false, force_name=null):
 		layers[info[1]]['node'] = vidnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'video' # The node's type.
 		layers[info[1]]['mask'] = mask # Store the mask path.
+		layers[info[1]]['still'] = still
 		layers[info[1]]['path'] = path
 		vidnode.stream = info[2] # Set the node's video steam to video.
 		vidnode.rect_size = Vector2(1920, 1080)
@@ -293,6 +305,8 @@ func mask(mask, path, type, z, fade_in=false, force_name=null):
 		vidnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
 		vidnode.material.shader.code = mask_shader_code # Set the shader's code to code.
 		vidnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
+		vidnode.material.set_shader_param('start_time', float(OS.get_ticks_msec())/1000.0)
+		vidnode.material.shader.set_default_texture_param('still', load(still))
 		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		
 		# Check for a mesh.

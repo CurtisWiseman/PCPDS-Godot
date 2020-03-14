@@ -16,6 +16,7 @@ var character_map = {}
 var node_to_character = {}
 var cur_frame = 0
 var current_char = null
+var current_voice = null
 
 #So they don't get ARC'd
 var old_frames = {}
@@ -44,6 +45,8 @@ func check_all_texboxes():
 			prints("BAD VOICE PATH:", s, get_voice_path(s))
 			
 func get_prefix(character):
+	if character == null:
+		return get_prefix("blank")
 	var char_id = character.to_lower().replace(" ", "")
 	if char_id == "":
 		return get_prefix("blank")
@@ -101,6 +104,8 @@ func get_prefix(character):
 		return "res://images/UI/Text box/" + char_id + "/textbox_" + char_id + "_"
 		
 func get_voice_path(character):
+	if character == null:
+		return null
 	var char_id = character.to_lower().replace(" ", "-")
 	if char_id == "" or char_id == "pcpg" or character == global.playerName:
 		return null
@@ -213,8 +218,10 @@ func swap_character(character, special_voice=null):
 	var vpath
 	if special_voice == null:
 		vpath = get_voice_path(character)
+		current_voice = character
 	else:
-		vpath =get_voice_path(special_voice)
+		vpath = get_voice_path(special_voice)
+		current_voice = special_voice
 	if vpath != null:
 		$voice.stream = load(vpath)
 	else:

@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
+[ext_resource path="res://images/UI/In-game menus/Static Buttons/Sliders/testArtboard 13voicesyn.png" type="Texture" id=1]
 [ext_resource path="res://images/UI/In-game menus/Static Buttons/X/testArtboard 11x.png" type="Texture" id=2]
 [ext_resource path="res://scenes/UI/settings_background.gd" type="Script" id=3]
 [ext_resource path="res://scenes/UI/Settings.gd" type="Script" id=4]
@@ -111,3 +112,18 @@ texture_hover = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="voices_button" type="TextureButton" parent="."]
+margin_left = 573.078
+margin_top = 853.571
+margin_right = 1641.08
+margin_bottom = 976.571
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cross" type="Sprite" parent="voices_button"]
+position = Vector2( 76, 62 )
+texture = ExtResource( 11 )
+[connection signal="pressed" from="voices_button" to="." method="_on_voices_button_pressed"]

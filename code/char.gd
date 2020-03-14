@@ -1,7 +1,9 @@
 extends Node
 
 # Initialize the characters with dictionaries.
-var nine11 = {'video': ['res://images/characters/9-11/911_boi.ogv', 'res://images/characters/9-11/911_concern.ogv', 'res://images/characters/9-11/911_pewpew.ogv', 'res://images/characters/9-11/911_standin.ogv'], 'body': ['res://images/characters/9-11/911_boi.png', 'res://images/characters/9-11/911_concern.png', 'res://images/characters/9-11/911_pewpew.png', 'res://images/characters/9-11/911_standin.png']}
+var nine11 = {'video': ['res://images/characters/9-11/911_boi.ogv', 'res://images/characters/9-11/911_concern.ogv', 'res://images/characters/9-11/911_pewpew.ogv', 'res://images/characters/9-11/911_standin.ogv'], 
+				'body': ['res://images/characters/9-11/911_boi.png', 'res://images/characters/9-11/911_concern.png', 'res://images/characters/9-11/911_pewpew.png', 'res://images/characters/9-11/911_standin.png'],
+				'still': ['res://images/characters/9-11/911_boi_still.png', 'res://images/characters/9-11/911_concern_still.png', 'res://images/characters/9-11/911_pewpew_still.png', 'res://images/characters/9-11/911_standin_still.png']}
 
 var ephraim = {'body': ['res://images/characters/Cop Killers/ephraim_base.png', 'res://images/characters/Cop Killers/ephraim_dab.png']}
 var k1p = {'body': ['res://images/characters/Cop Killers/k1p_base.png', 'res://images/characters/Cop Killers/k1p_dab.png'], "blank": ["res://images/blank.png"]}
@@ -145,6 +147,12 @@ var digi = {
 			"res://images/characters/Digibro/digi_special2_mask.png",
 			"res://images/characters/Digibro/digi_special3_mask.png",
 			"res://images/characters/Digibro/digi_special4_mask.png"
+		],
+		"still": [
+			"res://images/characters/ArtsoFartso/artsofartso_special1_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special2_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special3_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special4_4.png"
 		]
 	}
 }
@@ -173,10 +181,6 @@ var artsofartso = {
 			"res://images/characters/ArtsoFartso/Faces_Special/artsofartso_face_special_smittenMIN.png",
 			"res://images/characters/ArtsoFartso/Faces_Special/artsofartso_face_special_smittenMAX.png"
 		],
-		"blush": [
-			"res://images/characters/ArtsoFartso/AFL/artsofartso_face_special_blushiesMIN.png",
-			"res://images/characters/ArtsoFartso/AFL/artsofartso_face_special_blushiesMAX.png"
-		],
 		"body": [
 			"res://images/characters/ArtsoFartso/artsofartso_special1.ogv",
 			"res://images/characters/ArtsoFartso/artsofartso_special2.ogv",
@@ -188,6 +192,12 @@ var artsofartso = {
 			"res://images/characters/ArtsoFartso/artsofartso_special2_mask.png",
 			"res://images/characters/ArtsoFartso/artsofartso_special3_mask.png",
 			"res://images/characters/ArtsoFartso/artsofartso_special4_mask.png"
+		],
+		"still": [
+			"res://images/characters/ArtsoFartso/artsofartso_special1_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special2_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special3_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special4_4.png"
 		]
 	}
 }

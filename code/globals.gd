@@ -27,6 +27,7 @@ var textTheme
 var playerName = "PlayerName"
 var pauseScreen = null
 var voicesOn = true
+var current_scene_name = ""
 
 # Signal to say a that a scene is done loading.
 signal finished_loading

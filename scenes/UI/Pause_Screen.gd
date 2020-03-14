@@ -62,6 +62,7 @@ func _on_close_pressed():
 		menu_out()
 		
 func menu_in():
+	$scene_name.text = "Scene: " + global.current_scene_name
 	transitioning = true
 	$background.menu_in()
 	$buttons.visible = false

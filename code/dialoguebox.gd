@@ -33,7 +33,7 @@ var lastInChoice
 var lastChosenChoices
 var CG = null
 
-var lock = false
+var waiting_for_player_name = false
 
 var transitioning = false
 
@@ -225,7 +225,7 @@ func things_sliding():
 	
 # The main dialogue function.
 func _on_Dialogue_has_been_read(setIndex=false):
-	if displayingChoices or things_sliding():
+	if displayingChoices or things_sliding() or waiting_for_player_name:
 		return
 		
 	if index < dialogue.size(): #Checks to see if end of document has been reached
@@ -531,48 +531,48 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					CG = null
 				global.pause_input = false
 			
-			elif dialogue[index].findn('Scene:') != -1:
-				
-				var saveChosenChoices = chosenChoices
-				var saveInChoice = inChoice
-				var saveChoices = choices
-				
-				if saveChoices == []:
-					saveChoices = "NULL"
-				else:
-					var choiceArray = saveChoices
-					saveChoices = ''
-					var i = 1
-					for choice in choiceArray:
-						if i == choiceArray.size():
-							saveChoices += choice
-							break
-						else:
-							saveChoices += choice + ','
-							i += 1
-				
-				if saveChosenChoices == []:
-					saveChosenChoices = "NULL"
-				else:
-					var choiceArray = saveChosenChoices
-					saveChosenChoices = ''
-					var i = 1
-					for choice in choiceArray:
-						if i == choiceArray.size():
-							saveChosenChoices += choice
-							break
-						else:
-							saveChosenChoices += choice + ','
-							i += 1
-				
-				var sceneSave = dialogue[index].substr(8,dialogue[index].length()-1).rstrip(']')
-				
-				var file = File.new()
-				file.open_encrypted_with_pass('user://scenes/' + sceneSave, File.WRITE, 'HELPLETMEOUT')
-				file.store_line(str(saveInChoice))
-				file.store_line(saveChoices)
-				file.store_line(saveChosenChoices)
-				file.close()
+			elif dialogue[index].strip_edges().to_lower().find('[scene:') == 0:
+				global.current_scene_name = dialogue[index].strip_edges().substr('[Scene:'.length()).rstrip("]").strip_edges()
+				#var saveChosenChoices = chosenChoices
+				#var saveInChoice = inChoice
+				#var saveChoices = choices
+				#
+				#if saveChoices == []:
+				#	saveChoices = "NULL"
+				#else:
+				#	var choiceArray = saveChoices
+				#	saveChoices = ''
+				#	var i = 1
+				#	for choice in choiceArray:
+				#		if i == choiceArray.size():
+				#			saveChoices += choice
+				#			break
+				#		else:
+				#			saveChoices += choice + ','
+				#			i += 1
+				#
+				#if saveChosenChoices == []:
+				#	saveChosenChoices = "NULL"
+				#else:
+				#	var choiceArray = saveChosenChoices
+				#	saveChosenChoices = ''
+				#	var i = 1
+				#	for choice in choiceArray:
+				#		if i == choiceArray.size():
+				#			saveChosenChoices += choice
+				#			break
+				#		else:
+				#			saveChosenChoices += choice + ','
+				#			i += 1
+				#
+				#var sceneSave = dialogue[index].substr(8,dialogue[index].length()-1).rstrip(']')
+				#
+				#var file = File.new()
+				#file.open_encrypted_with_pass('user://scenes/' + sceneSave, File.WRITE, 'HELPLETMEOUT')
+				#file.store_line(str(saveInChoice))
+				#file.store_line(saveChoices)
+				#file.store_line(saveChosenChoices)
+				#file.close()
 			
 			elif dialogue[index].findn('==>') != -1:
 				if global.turbo_mode and global.turbo_crash_mode:
@@ -828,11 +828,14 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					global.pause_input = false
 			else:
 				if wait:
-					game.safeToSave = false
 					waitTimer.wait_time = 0.1
-					waitTimer.start()
-					yield(waitTimer, 'timeout')
-					game.safeToSave = true
+				else:
+					#Not having a wait actually causes deep problems, so I just make it reeeeally short.
+					waitTimer.wait_time = 0.01
+				game.safeToSave = false
+				waitTimer.start()
+				yield(waitTimer, 'timeout')
+				game.safeToSave = true
 				
 				#quick hack so that slide empty dialogue lines go immediately
 				#because if the emit happens while the slide is still happening, then you don't auto-progress
@@ -957,7 +960,8 @@ func parse_info(info):
 func parse_special_digi(info, parsedInfo, i, pos):
 	var num = str(search('return characterImages.'+parsedInfo+'.special.body', info[i+1]))
 	var video = 'characterImages.'+parsedInfo+'.special.body[' + str(num) + ']'
-	var mask =  'characterImages.'+parsedInfo+'.special.mask[' + str(num) + ']'
+	var mask = 'characterImages.'+parsedInfo+'.special.mask[' + str(num) + ']'
+	var still = 'characterImages.'+parsedInfo+'.special.still[' + str(num) + ']'
 	var expression_num_stuff = parse_expnum(info[i+2], parsedInfo)
 	var face_num = expression_num_stuff[0]
 	var faceType = expression_num_stuff[1]
@@ -966,7 +970,7 @@ func parse_special_digi(info, parsedInfo, i, pos):
 		faceType = "shock"
 	var forced_mask_name = mask#"/"+parsedInfo +'_special_' + str(num)
 	var face = '\n\tsystems.display.face(characterImages.'+parsedInfo+'.special.'+faceType+'['+face_num+'], "'+forced_mask_name+'")'
-	parse_position(info, 'systems.display.mask(' + mask + ', ' + video + ', "video", 1, false, "' + forced_mask_name + '")' + face, video, i+3, pos)
+	parse_position(info, 'systems.display.mask(' + mask + ', ' + video + ', ' + still + ', "video", 1, false, "' + forced_mask_name + '")' + face, video, i+3, pos)
 	return
 	
 # Removes duplicate bodies of characters if they exist.
@@ -1256,13 +1260,13 @@ func parse_expnum(expression, parsedInfo):
 func parse_911(info, parsedInfo, i, pos):
 	
 	if 'pew'.is_subsequence_ofi(info[i]):
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[2], characterImages.'+parsedInfo+'.video[2], "video", 1)', 'characterImages.'+parsedInfo+'.body[2]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[2], characterImages.'+parsedInfo+'.video[2], characterImages.'+parsedInfo+'.still[2], "video", 1)', 'characterImages.'+parsedInfo+'.body[2]', 2, pos)
 	elif 'boi' == info[i]:
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[0], characterImages.'+parsedInfo+'.video[0], "video", 1)', 'characterImages.'+parsedInfo+'.body[0]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[0], characterImages.'+parsedInfo+'.video[0], characterImages.'+parsedInfo+'.still[0], "video", 1)', 'characterImages.'+parsedInfo+'.body[0]', 2, pos)
 	elif 'standin'.is_subsequence_ofi(info[i]):
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[3], characterImages.'+parsedInfo+'.video[3], "video", 1)', 'characterImages.'+parsedInfo+'.body[3]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[3], characterImages.'+parsedInfo+'.video[3], characterImages.'+parsedInfo+'.still[3], "video", 1)', 'characterImages.'+parsedInfo+'.body[3]', 2, pos)
 	elif 'concern' == info[i]:
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[1], characterImages.'+parsedInfo+'.video[1], "video", 1)', 'characterImages.'+parsedInfo+'.body[1]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[1], characterImages.'+parsedInfo+'.video[1], characterImages.'+parsedInfo+'.still[1], "video", 1)', 'characterImages.'+parsedInfo+'.body[1]', 2, pos)
 
 # Parses the position for a character.
 func parse_position(info, parsedInfo, body, i, pos):

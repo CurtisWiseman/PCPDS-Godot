@@ -422,6 +422,9 @@ func newSave(save_num):
 	#Use this in the future if you need to handle supporting older save formats
 	data_payload["save_minor_version"] = 1
 	
+	data_payload["current_scene_name"] = global.current_scene_name
+	
+	
 	#Display
 	var layer_details = []
 	for l in display.layers:
@@ -449,6 +452,8 @@ func newSave(save_num):
 		
 		if l.has("mask"):
 			v["mask"] = l["mask"]
+		if l.has("still"):
+			v["still"] = l["still"]
 		layer_details.append(v)
 		
 	data_payload["layers"] = layer_details
@@ -479,6 +484,9 @@ func newSave(save_num):
 		else:
 			notsame[1] = null
 	data_payload["notsame"] = notsame
+	
+	data_payload["current_text_character"] = global.textBoxBackground.current_char
+	data_payload["current_voice_character"] = global.textBoxBackground.current_voice
 	
 	#Sound
 	if sound.playingSFX["path"] != "NULL":
@@ -534,6 +542,7 @@ func newLoad(save_file):
 	display = systems.get_node('Display')
 	
 	global.playerName = data_payload["playername"]
+	global.current_scene_name = data_payload["current_scene_name"]
 	
 	#Display
 	var layers_by_z = {}
@@ -557,7 +566,7 @@ func newLoad(save_file):
 		#	cur_z = data_payload
 		var z = int(l["z"])
 		if l.has("mask"):
-			display.mask(l["mask"], l["path"], l["type"], z)
+			display.mask(l["mask"], l["path"], l["still"], l["type"], z)
 		elif l["type"] == "video":
 			display.video(l["path"], z)
 		else:
@@ -595,6 +604,8 @@ func newLoad(save_file):
 		dialogue_box.displayingChoices = dialogue_box.displayChoices.size() > 0
 	
 	dialogue_box.overlays = data_payload["overlays"]
+	global.textBoxBackground.swap_character(data_payload["current_text_character"], data_payload["current_voice_character"])
+	global.textBoxBackground.make_visible()
 	
 	#Sounds
 	if data_payload.has("sfx"):
@@ -608,3 +619,4 @@ func newLoad(save_file):
 	global.fading = false
 	global.sliding = false
 	game.loadSaveFile = false
+	

@@ -16,32 +16,28 @@ func _ready():
 
 # Where all non-script processing of a scene takes place.
 func scene(lineText, index, dialogueNode):
-	
 	# Use the index to match what line to make something happen on.
 	match(index):
 		26:	# Take User Input
 			game.blockInput = true
 			global.pause_input = true
-
+			global.dialogueBox.waiting_for_player_name = true
+			game.safeToSave = false
+			
 			input = LineEdit.new()
 			input.name = 'HandleMyInput'
 			input = load('res://scenes/UI/HandleInput.tscn').instance()
 			input.node = self
-			input.rect_size.x = 500
-			input.position = Vector2(990,870)
+			input.rect_size.x = 1000
+			input.position = Vector2(960,839.3)
 			input.connect('return_signal', self, 'HandleMyInput')
 			systems.canvas.add_child(input)
 			yield(self, "MyInput_Handled")
 
 			global.playerName = playerName;
-
-			# Create a player name file.
-			var file = File.new()
-			file.open("user://playername.tres", File.WRITE)
-			file.store_string(playerName)
-			file.close()
-
+			global.dialogueBox.waiting_for_player_name = false
 			global.pause_input = false
+			game.safeToSave = true
 			game.blockInput = false
 			dialogueNode.emit_signal('empty_line')
 			systems.canvas.remove_child(input)
