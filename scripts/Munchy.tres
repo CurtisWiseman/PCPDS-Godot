@@ -54,9 +54,9 @@ After getting our food, we walk on over to the absolute cacophony that is the Ro
 (Munchy|Munchy, campus, crossing, angryMIN) ALRIGHT EVERYONE, LISTEN THE FUCK UP! WE HAVE A NEW! RECRUIT!! Gentlemen, if you would do me the honors.
 
 
-(Crocs, happy, Offleft, slide, left) !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH
+(Crocs, happy, offleft, slide, left) !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH
 
-(Connor|BLUE WHALE, happy, Offright, slide, right) !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH
+(Connor|BLUE WHALE, happy, offright, slide, right) !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH
 
 (Munchy|Munchy, campus, squatting, angryMAX) !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH !THRASH
 
@@ -131,7 +131,7 @@ We play for a few rounds. It dawns on me that these guys actually suck at this g
 
 I hear some shuffling coming from the hallway. Munchy walks in with a few boxes of Papa Gino’s pizza. The scent of it is welcoming, but I guess anything would be compared to the fragrance of piss and energy drinks that litters this place.
 
-(Munchy|Munchy, casual, crossing, happyMED, Offleft, slide, center) Pass the controller bros. I’m just about fucking clamoring for some quality gaming with my fellow Rowdys.
+(Munchy|Munchy, casual, crossing, happyMED, offleft, slide, center) Pass the controller bros. I’m just about fucking clamoring for some quality gaming with my fellow Rowdys.
 
 As soon as Munchy plugs his controller in and selects his character, I notice him do something a bit strange. For some reason, he puts Crocs, Blue Whale, and himself all on the same team, leaving it a 1-on-3 for me.
 
@@ -223,8 +223,8 @@ After Crocs and Blue Whale are defeated, I manage to secure victory by throwing 
 [Munchy leaves]
 
 I walk home, filled with comradery. I guess being in a gang isn’t such a bad thing after all, if it means I can experience moments like these. I just hope I don’t run into Endless War again, what with the heated gamer moment I had earlier.
-[==> Artisan]
 
+[==> Artisan]
 *
 
 *Hey you know what, you’re right.*
@@ -466,7 +466,7 @@ We don’t waste any time rushing through the lunch line. I’m shaking in antic
 
 [SFX: PCP-SFX_Gunshot]
 
-(Connor|BLUE WHALE, disappointed, right, fade) jesus fucking christ, crocs!
+(Connor|BLUE WHALE, disappointed, center, fade) jesus fucking christ, crocs!
 
 (Crocs, special) Boy oh boy. Technically you’re right about what you just said, but if you ask me, your heart’s just not in the right place. Consider yourself lucky that I just grazed you.
 
@@ -596,7 +596,7 @@ Then again, that could just as easily be the case, there’s really no telling w
 
 What the hell? I guess it’s locked to higher level Rowdys only.
 
-(Munchy|Munchy, casual, default, neutral, Offleft, slide, center) Ah, is LIL’ D00P giving you trouble? Don’t worry man, I got you.
+(Munchy|Munchy, casual, default, neutral, offleft, slide, center) Ah, is LIL’ D00P giving you trouble? Don’t worry man, I got you.
 
 [StopMusic]
 [Song: PCPDating_Feed]
@@ -999,10 +999,10 @@ In the corner of my eye, I can see Munchy and Ben having a heated discussion in 
 
 Munchy starts staring over at the Rowdys, and Ben at the Killers. For whatever reason, I can feel myself start to sweat, and I feel a weird sense of dread in my stomach. I hope it’s just the coleslaw.
 
-[SLIDE, Ben, left, Offleft]
-[SLIDE, Munchy, right, Offleft]
+[SLIDE, Ben, left, offleft]
+[SLIDE, Munchy, right, offleft]
 
-(Crocs, special outfit, Offright, slide, left) Hey kid, catch!
+(Crocs, special outfit, offright, slide, left) Hey kid, catch!
 
 Out of nowhere, Crocs hands me one of his spare pistols.
 
@@ -1010,14 +1010,14 @@ Out of nowhere, Crocs hands me one of his spare pistols.
 
 (PCPG) What do you mean?
 
-(Connor|BLUE WHALE, neutral, Offright, slide, right) too late to ask questions.
+(Connor|BLUE WHALE, neutral, offright, slide, right) too late to ask questions.
 
 [Connor leaves]
 [Crocs leaves]
 
-(Munchy|Munchy, campus, crossing, angryMED, Offright, slide, right) ROWDY.
+(Munchy|Munchy, campus, crossing, angryMED, offright, slide, right) ROWDY.
 
-(Ben|Ben, campus, base, happyMAX, Offleft, slide, left) FUCKERS.
+(Ben|Ben, campus, base, happyMAX, offleft, slide, left) FUCKERS.
 
 (Munchy|Munchy, campus, squatting, angryMAX) COP.
 
@@ -1108,7 +1108,7 @@ It didn’t hit me until now, but my hands are shaking. The cold, metal grip in 
 
 I just start firing at random, hoping to land some hits on the guy with the VR headset. One of them ricochets off the wall, and lands right into the amphibian.
 
-[SLIDE, K1P, Offleft, left]
+[SLIDE, K1P, offleft, left]
 
 (K1P, Neutral) Gah! Fucking RNG bullshit!
 
@@ -1118,7 +1118,7 @@ I just start firing at random, hoping to land some hits on the guy with the VR h
 
 [SLIDE, Crocs, right, left]
 
-(Schrafft, Neutral, Offright, slide, right) Damn, all on my own again. Guess now’s a better time than ever.
+(Schrafft, Neutral, offright, slide, right) Damn, all on my own again. Guess now’s a better time than ever.
 
 The VR headset begins to flash bright red. With a gun in his hand, his arm jerks back and forth, like it’s trying to lock on to me and Crocs.
 
@@ -1159,13 +1159,13 @@ With slime on his face, the man on the ground starts staring at me. What do I do
 
 (PCPG) No.. you’re wrong. The time for reflection is over. I made the decision to live a life of crime long ago. My time spent as a Rowdy has enlightened me to the true nature of the WAR. No second chances. No regrets.
 
-[SFX:PCP-SFX_Gunshot]
+[SFX: PCP-SFX_Gunshot]
 
 [Schrafft leaves]
 
 (Crocs, special outfit) Fucking epic dude.
 
-(Munchy|Munchy, campus, crossing, smittenMED, Offright, slide, right) I can’t believe it. You’ve become a real Rowdy right in front of my eyes, PCPG. I would congratulate you, but the best is yet to come.
+(Munchy|Munchy, campus, crossing, smittenMED, offright, slide, right) I can’t believe it. You’ve become a real Rowdy right in front of my eyes, PCPG. I would congratulate you, but the best is yet to come.
 
 (Munchy|Munchy, campus, squatting, happyMED) Ben. You know what this means, don’t you?
 
@@ -1284,7 +1284,7 @@ Not long after what happened in the lunchroom, Munchy contacted me and told me t
 
 Finding my way to the Rowdy Roughhouse this time was easy. As soon as I got out of school, it was like I was being drawn there against my will, as if some unforeseen force was guiding me straight to it. The will to fight for my Kingpin, perhaps? Whatever the case was, I was glad to be there again. It was like a second home to me at this point.
 
-(Munchy|Munchy, casual, crossing, happyMED, Offleft, slide, center) Good to see you make it. Blue Whale and Crocs came as well, they’ve been practicing while I was waiting for you to get here.
+(Munchy|Munchy, casual, crossing, happyMED, offleft, slide, center) Good to see you make it. Blue Whale and Crocs came as well, they’ve been practicing while I was waiting for you to get here.
 
 (PCPG) I see…
 
@@ -1541,7 +1541,7 @@ I’m damn near out of breath once I get into the building.
 [K1P leaves]
 [Crocs leaves]
 
-(Nate|Nate, campus, smoking, happyMED|shades, Offright, slide, right) Classic Ben.
+(Nate|Nate, campus, smoking, happyMED|shades, offright, slide, right) Classic Ben.
 
 (PCPG) Nate? What are you doing here?
 
@@ -1700,9 +1700,9 @@ With Munchy’s view obscured, Ben manages to get another three captures in whil
 [SLIDE, Munchy, right, right-350]
 [SLIDE, Ben, left, left+350]
 
-(K1P, Neutral, Offleft, slide, left-150) Only two more capture points. Heh, I think you’ll just have to take the MORAL victory this time, Rowdys.
+(K1P, Neutral, offleft, slide, left-150) Only two more capture points. Heh, I think you’ll just have to take the MORAL victory this time, Rowdys.
 
-(Connor|BLUE WHALE, angry, blank, Offright, slide, right+150) yeah, i guess anyone can win if they cheat hard enough huh.
+(Connor|BLUE WHALE, angry, blank, offright, slide, right+150) yeah, i guess anyone can win if they cheat hard enough huh.
 
 (K1P, Neutral) Whatever, you guys shouldn’t be playing with this setup anyways.
 
@@ -1732,11 +1732,11 @@ Running back and forth through his hidden tunnel, Munchy manages to evade detect
 
 (Munchy|Munchy, special, squatting, happyMAX) !THRASH !THRASH !THRASH !THRASH !THRASH
 
-(Crocs, happy, blank, Offleft, slide, left+350) !THRASH !THRASH !THRASH !THRASH !THRASH
+(Crocs, happy, blank, offleft, slide, left+350) !THRASH !THRASH !THRASH !THRASH !THRASH
 
-(Kazee|Kazee, body1, face1, Offright, slide, right+150) !THRASH !THRASH !THRASH !THRASH !THRASH
+(Kazee|Kazee, body1, face1, offright, slide, right+150) !THRASH !THRASH !THRASH !THRASH !THRASH
 
-(Connor|BLUE WHALE, happy, blank, Offleft, slide, left-150) !thrash !thrash !thrash !thrash !thrash
+(Connor|BLUE WHALE, happy, blank, offleft, slide, left-150) !thrash !thrash !thrash !thrash !thrash
 
 (PCPG) !THRASH !THRASH !THRASH !THRASH !THRASH
 
@@ -1758,15 +1758,15 @@ Running back and forth through his hidden tunnel, Munchy manages to evade detect
 [Ben leaves]
 [Nate leaves]
 
-(K1P, Neutral, blank, Offright, slide, left+350) Whatever, it’s not like I didn’t expect this to happen.
+(K1P, Neutral, blank, offright, slide, left+350) Whatever, it’s not like I didn’t expect this to happen.
 
-(Magicks, Neutral, blank, Offright, slide, right-350) just another slimefest for ya.
+(Magicks, Neutral, blank, offright, slide, right-350) just another slimefest for ya.
 
-(Schrafft, Neutral, blank, Offright, slide, right+150) What they said, yeah.
+(Schrafft, Neutral, blank, offright, slide, right+150) What they said, yeah.
 
-[SLIDE, K1P, left+350, Offleft]
-[SLIDE, Magicks, right-350, Offleft]
-[Slide, Schrafft, right+150, Offright]
+[SLIDE, K1P, left+350, offleft]
+[SLIDE, Magicks, right-350, offleft]
+[Slide, Schrafft, right+150, offright]
 
 [K1P leaves]
 [Magicks leaves]
