@@ -201,7 +201,7 @@ func image(imgpath, z):
 	imgnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
 	imgnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
 	imgnode.material.shader.code = mask_out_head_overlap # Set the shader's code to code.
-	imgnode.material.shader.set_default_texture_param('mask_texture', load("res://images/blank.png"))
+	imgnode.material.shader.set_default_texture_param("head", load("res://images/blank.png"))
 	
 	
 	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
@@ -364,6 +364,8 @@ func face(facepath, body, x=0, y=0, type='face'):
 	facenode.texture = load(facepath) # Set the node's texture to the face image.
 	facenode.position = Vector2(x,y) # Set the face's position to x and y.
 	layers[index]['node'].add_child(facenode) # Add as a child of the body node.
+	#facenode.self_modulate = layers[index]['node'].self_modulate
+	
 	
 	if type == 'face':
 		layers[index]['face'] = facenode # Add the face node the dictionary.
@@ -446,7 +448,7 @@ func remove(node, i):
 			layers[i]['node'].queue_free()
 			layers.remove(i)
 		else:
-			print("BAD ATTEMPT TO REMOVE LAYER, SMARTLY INTERVENING")
+			print("BAD ATTEMPT TO REMOVE LAYER, SMARTLY INTERVENING", node.name)
 			var interevened_successfully = false
 			for j in range(layers.size()):
 				if layers[j]["node"] == node:
@@ -651,6 +653,8 @@ func fade(content, from : Color, to : Color, time : float, remove_on_fade = fals
 		# If content node is not found then print an error and return.
 		if index == null:
 			print("Error: No node named " + content + " exists as a target for collision!")
+			ftimer.start(0.01) #we yield a bit first here so that if our calling is yielding for our transition, they'll still resume.
+			yield(ftimer, 'timeout')
 			global.finish_fading()
 			if !fadeSignal: emit_signal('transition_finish')
 			else: emit_signal('transition_finish_fade')
@@ -672,6 +676,8 @@ func fade(content, from : Color, to : Color, time : float, remove_on_fade = fals
 	
 	# Reject mod's that are not self or children.
 	if mod != 'self' and mod != 'children':
+		ftimer.start(0.01) #we yield a bit first here so that if our calling is yielding for our transition, they'll still resume.
+		yield(ftimer, 'timeout')
 		print("Error: The 4th parameter on fadealpha only accepts 'self' or 'children' as values!")
 		global.finish_fading()
 		if !fadeSignal: emit_signal('transition_finish')

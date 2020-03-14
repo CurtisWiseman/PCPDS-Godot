@@ -443,7 +443,7 @@ Should I accept?
 [fade to black]
 [StopMusic]
 
-[CHANGE Endless War miniroute fade]
+[CHANGE endlesswarminiroute fade]
 *
  
 *I’m not sure…*
@@ -1400,7 +1400,7 @@ Shit. In my deep love for the man I have forsaken his original request of me, an
 *Maybe the real Pizza Party University was..*
  
 *Well, I don’t know, but..*
- 
+
 (PCPG) Well, to be honest, I don’t know where the Pizza Party University is. It seems that nobody does, and all my leads on them are mere speculation or lies made by people who want their five minutes of fame.
  
 (PCPG) But during my investigations, I’ve thought about why the PPU would come after our base like that, despite them being so secretive and subtle otherwise. Why would they jeopardize their secrecy?
@@ -1504,11 +1504,12 @@ Oh god it is.
 
 [fade to black]
 [StopMusic]
-
+[Forget Well, I don’t know, but..]
+[Forget Maybe the real Pizza Party University was..]
 [==> !decide fate]
 *
 
-*Maybe the real Pizza Party University..*
+*Maybe the real Pizza Party University was..*
  
 (PCPG) You know this whole time we’ve been searching for this Pizza Party University as though it were a physical location or a group of people, but maybe it’s actually something else.
  

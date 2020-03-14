@@ -1019,12 +1019,23 @@ func remove_dupes(character, info):
 				else:
 					if !global.pause_input: global.pause_input = true
 					var display_node = systems.display.layers[i]['node']
-					#systems.display.remove(display_node, i)
-					var cur_mod = display_node.self_modulate
-					var end_mod = Color(cur_mod.r, cur_mod.g, cur_mod.b, 0)
-					systems.display.layers[i]['removing'] =  true
-					systems.display.fade(systems.display.layers[i]['path'], cur_mod, end_mod, 0.2, true)
 					notsame = [true, global.get_node_pos(display_node)]
+					var is_slide = false
+					for inf in info:
+						if inf.to_lower() == "slide":
+							is_slide = true
+							break
+					
+					if is_slide:
+						systems.display.remove(display_node, i)
+					else:
+						var cur_mod = display_node.self_modulate
+						var end_mod = Color(cur_mod.r, cur_mod.g, cur_mod.b, 0)
+						systems.display.layers[i]['removing'] =  true
+						systems.display.layers[i]['node'].name = "REMOVING"
+						systems.display.layers[i]['name'] = systems.display.layers[i]['node'].name
+						systems.display.fade(systems.display.layers[i]['node'], cur_mod, end_mod, 0.5, true)
+					
 					emit_signal('dupeCheckFinished')
 					if global.pause_input: global.pause_input = false
 					return
@@ -1301,7 +1312,7 @@ func parse_position(info, parsedInfo, body, i, pos):
 			j += 1
 			
 	if useFade:
-		parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.2)"
+		parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.25)"
 	
 	if i < info.size():
 		if i + 2 == info.size()-1:

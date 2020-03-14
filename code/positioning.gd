@@ -55,8 +55,14 @@ func _process(delta):
 # Function so that other nodes can end position movement.
 func finish():
 	dest = null
+	#So we do this twice, once before and once after the yield,
+	#because if the node is null or not valid, I'm not sure if done_cleaning will happen,
+	#but also, if we check before hand, it may become null AFTER we yield
+	if node == null or not is_instance_valid(node):
+		emit_signal('position_finish')
+		return
 	yield(self, 'done_cleaning')
-	if is_instance_valid(node):
+	if node != null and is_instance_valid(node):
 		var p = global.get_node_pos(node)
 		p.x = destination
 		global.set_node_pos(node, p)
@@ -74,6 +80,9 @@ func finish():
 		parent.layers[_index]['position'].x = destination
 		emit_signal('position_finish')
 		return {'path': parent.layers[_index]['path'], 'dest': destination}
+	else:
+		#I'm going to always emit this in order for the interpreter to always get this message, because it yields to it
+		emit_signal('position_finish')
 
 
 
@@ -95,8 +104,9 @@ func free_node():
 # Calculates position movement of node.
 func position(shift):
 	nodepos = shift
-	
-	if type == 'image' and dest != null:
+	if node == null or not is_instance_valid(node):
+		emit_signal("done_cleaning")
+	elif type == 'image' and dest != null:
 		if reference.get_ref(): node.position = shift
 	
 	elif type == 'video' and dest != null:

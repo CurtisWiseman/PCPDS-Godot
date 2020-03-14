@@ -206,7 +206,7 @@ func load_single_frame_into_sprite(sprite, num, prefix):
 	#sprite.name = "frame_" + str(num)
 	
 func voice_on():
-	if global.voicesOn and not $voice.playing:
+	if global.voicesOn and not global.turbo_mode and not $voice.playing:
 		$voice.playing = true
 
 func voice_off():
