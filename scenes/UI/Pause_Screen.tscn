@@ -33,6 +33,7 @@ font_data = ExtResource( 25 )
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.792157 )
 
+
 [node name="pause_screen" type="Control"]
 pause_mode = 2
 script = ExtResource( 1 )
