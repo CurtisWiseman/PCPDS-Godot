@@ -487,7 +487,7 @@ var tom = {
 			'smitten':['res://images/characters/Tom/faces_4/tom_face_4_smittenMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_smittenMAX.png'],
 			'drunk':['res://images/characters/Tom/faces_4/tom_face_4_drunkMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_drunkMAX.png'],
 			'blush': null, 
-			'body': ['res://images/characters/Tom/tom_3.png']
+			'body': ['res://images/characters/Tom/tom_4.png']
 			},
 		}
 

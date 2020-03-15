@@ -255,16 +255,25 @@ func animation(vidpath):
 		
 	yield(vidnode, "finished")
 	
-	time = 1.0
-	while time > 0:
+	emit_signal('transition_finish')
+	
+func hide_animation():
+	var ftimer = Timer.new() 
+	var time = 1.0
+	add_child(ftimer) 
+	ftimer.one_shot = true
+	
+	if animation != null:
+		while time > 0:
+			ftimer.start(0.01)
+			yield(ftimer, 'timeout')
+			animation.modulate.a = clamp(time/1.0, 0.0, 1.0)
+			time -= 0.01
+	else:
 		ftimer.start(0.01)
 		yield(ftimer, 'timeout')
-		vidnode.modulate.a = clamp(time/1.0, 0.0, 1.0)
-		time -= 0.01
-		
-	vidnode.queue_free()
+			
 	ftimer.queue_free()
-	animation = null
 	emit_signal('transition_finish')
 
 

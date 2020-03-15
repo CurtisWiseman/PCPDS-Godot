@@ -315,7 +315,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('cut from black') != -1: 
 				last_black_fade_dir = 1
 				fadeblackalpha(systems.blackScreen, 'in', 100)
-			elif dialogue[index].findn('SLIDE') != -1:
+			elif dialogue[index].to_lower().find('[slide') != -1:
 				var command = dialogue[index].lstrip('[')
 				command = command.rstrip(']')
 				command = command.replace(',', '')
@@ -470,6 +470,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				systems.display.animation(video_path)
 				yield(systems.display, 'transition_finish')
 				global.pause_input = false
+			elif dialogue[index].to_lower().find('end video') == 1:
+				global.pause_input = true
+				systems.display.hide_animation()
+				yield(systems.display, 'transition_finish')
+				global.pause_input = false
 			elif dialogue[index].to_lower().findn('cg:') != -1:
 				global.pause_input = true
 				
@@ -529,7 +534,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 						systems.display.remove_name(CG)
 					CG = null
 				global.pause_input = false
-			
 			elif dialogue[index].strip_edges().to_lower().find('[scene:') == 0:
 				global.current_scene_name = dialogue[index].strip_edges().substr('[Scene:'.length()).rstrip("]").strip_edges()
 				#var saveChosenChoices = chosenChoices

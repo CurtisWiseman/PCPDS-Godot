@@ -11,6 +11,8 @@ var index
 var destination
 var reference
 
+var starting_x
+
 signal done_cleaning
 
 # Position function variables, to lessen calculation time.
@@ -33,6 +35,7 @@ func move(s, n, ty, i, t, x=null):
 	
 	if type == 'image': nodepos = node.position
 	else: nodepos = node.rect_position
+	starting_x = nodepos.x
 	
 	connect('position_finish', self, 'free_node') # Connects signal 'position_finish' to free_node().
 	global.sliding = true; # Let the game know a node is sliding.
@@ -40,12 +43,12 @@ func move(s, n, ty, i, t, x=null):
 # Calculates the movement of images across the screen.
 func _process(delta):
 	if nodepos != null and speed != null:
-		position(nodepos + speed*delta/0.025) # Move collider at speed.x.
+		position(nodepos + speed*min(0.016,delta)/0.025) # Move collider at speed.x.
 	
 	# If dest is null then ignore ending movement.
 	if dest != null:
 		# Else check if the destination has been reached then emit the 'position_finish' signal.
-		if speed.x < 0:
+		if starting_x > destination:
 			if nodepos.x <= dest: finish()
 		else:
 			if nodepos.x >= dest: finish()
@@ -83,7 +86,6 @@ func finish():
 	else:
 		#I'm going to always emit this in order for the interpreter to always get this message, because it yields to it
 		emit_signal('position_finish')
-
 
 
 # Called after 'position_finish' is emitted.
