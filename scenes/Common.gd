@@ -29,7 +29,7 @@ func scene(lineText, index, dialogueNode):
 			input = load('res://scenes/UI/HandleInput.tscn').instance()
 			input.node = self
 			input.rect_size.x = 1000
-			var x_offset = global.defaultFont.get_string_size("Well, nice to meet you Gibbon. I’m").x
+			var x_offset = global.defaultFont.get_string_size("Well, nice to meet you Gibbon. I’m ").x
 			input.position = global.dialogueBox.get_node("Dialogue").get_global_position()+Vector2(x_offset, 0)
 			input.connect('return_signal', self, 'HandleMyInput')
 			systems.canvas.add_child(input)
