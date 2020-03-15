@@ -78,7 +78,6 @@ func loadSaveGames():
 
 # Displays the gathered saves on their corresponding SaveBox.
 func displaySaves():
-	
 	var file = File.new()
 	
 	for save in listOfSaves:
@@ -88,7 +87,7 @@ func displaySaves():
 		var box
 		
 		for image in listOfImages:
-			if saveName.is_subsequence_of(image):
+			if saveName + ".png" == image:
 				saveImage = image
 				break
 		
