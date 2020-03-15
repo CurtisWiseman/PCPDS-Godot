@@ -214,9 +214,10 @@ func set_node_pos(given_node, pos):
 func toggle_pause():
 	get_tree().paused = not get_tree().paused
 	var a = 0 if get_tree().paused else 1
-	global.dialogueBox.set_self_modulate(Color(1,1,1,a))
-	global.dialogueBox.get_node('Nametag').set_self_modulate(Color(1,1,1,a))
-	global.dialogueBox.get_node('Dialogue').set_self_modulate(Color(1,1,1,a))
+	if global.dialogueBox != null:
+		global.dialogueBox.set_self_modulate(Color(1,1,1,a))
+		global.dialogueBox.get_node('Nametag').set_self_modulate(Color(1,1,1,a))
+		global.dialogueBox.get_node('Dialogue').set_self_modulate(Color(1,1,1,a))
 	
 func save_settings():
 	var config = ConfigFile.new()

@@ -400,6 +400,7 @@ func newSave(save_num):
 		directory.make_dir(SAVE_FOLDER)
 		
 	# Get relevant system nodes.
+	var systems = global.rootnode.get_node('Systems')
 	var sound = global.rootnode.get_node('Systems/Sound')
 	var camera = global.rootnode.get_node('Systems/Camera')
 	var display = global.rootnode.get_node('Systems/Display')
@@ -464,6 +465,7 @@ func newSave(save_num):
 	
 	#Camera
 	data_payload["zoom"] = [camera.zoom.x, camera.zoom.y]
+	data_payload["offset"] = [camera.offset.x, camera.offset.y]
 	
 	#Dialogue box
 	data_payload["seen_choices"] = dialogue_box.choices
@@ -485,8 +487,9 @@ func newSave(save_num):
 			notsame[1] = null
 	data_payload["notsame"] = notsame
 	
-	data_payload["current_text_character"] = global.textBoxBackground.current_char
-	data_payload["current_voice_character"] = global.textBoxBackground.current_voice
+	data_payload["current_name_tag"] = dialogue_box.get_node("Nametag").text
+	data_payload["current_text_character"] = systems.textBoxBackground.current_char
+	data_payload["current_voice_character"] = systems.textBoxBackground.current_voice
 	
 	#Sound
 	if sound.playingSFX["path"] != "NULL":
@@ -508,6 +511,8 @@ func newSave(save_num):
 	saveLock = false
 	
 func newLoad(save_file):
+	if game.loadSaveFile:
+		return
 	game.loadSaveFile = true
 	if global.dialogueBox != null and is_instance_valid(global.dialogueBox):
 		global.dialogueBox.get_parent().remove_child(global.dialogueBox)
@@ -587,6 +592,7 @@ func newLoad(save_file):
 		
 	#Camera
 	camera.zoom = Vector2(data_payload["zoom"][0], data_payload["zoom"][1])
+	camera.offset = Vector2(data_payload["offset"][0], data_payload["offset"][1])
 	
 	#Dialogue box
 	systems.dialogue(data_payload["dialogue_script"], data_payload["dialogue_index"], data_payload["seen_choices"], data_payload["in_choice"], data_payload["chosen_choices"], data_payload["cg"])
@@ -597,6 +603,7 @@ func newLoad(save_file):
 		dialogue_box.notsame[1] = Vector2(dialogue_box.notsame[1][0], dialogue_box.notsame[1][1])
 		
 	dialogue_box.get_node("Dialogue").text = data_payload["text"]
+	dialogue_box.get_node("Dialogue").visible_characters = data_payload["text"].length()
 	dialogue_box.numOfChoices = data_payload["current_choices"].size()
 	if data_payload["current_choices"].size() > 0:
 		dialogue_box.displayChoices = data_payload["current_choices"]
@@ -604,8 +611,9 @@ func newLoad(save_file):
 		dialogue_box.displayingChoices = dialogue_box.displayChoices.size() > 0
 	
 	dialogue_box.overlays = data_payload["overlays"]
-	global.textBoxBackground.swap_character(data_payload["current_text_character"], data_payload["current_voice_character"])
-	global.textBoxBackground.make_visible()
+	dialogue_box.get_node("Nametag").text = data_payload["current_name_tag"]
+	systems.textBoxBackground.swap_character(data_payload["current_text_character"], data_payload["current_voice_character"])
+	systems.textBoxBackground.make_visible()
 	
 	#Sounds
 	if data_payload.has("sfx"):

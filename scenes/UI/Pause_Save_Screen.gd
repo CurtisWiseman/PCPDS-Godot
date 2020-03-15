@@ -152,7 +152,8 @@ func _on_LoadBox_pressed(saveBox):
 		for save in listOfSaves:
 			if save == saveFile:
 				game.newLoad(saveFile)
-				global.toggle_pause()
+				if get_tree().paused:
+					global.toggle_pause()
 				break
 	elif (not global.pause_input or global.dialogueBox.displayingChoices) and game.safeToSave:
 		PauseScreen.visible = false
