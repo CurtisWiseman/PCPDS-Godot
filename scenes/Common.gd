@@ -29,7 +29,8 @@ func scene(lineText, index, dialogueNode):
 			input = load('res://scenes/UI/HandleInput.tscn').instance()
 			input.node = self
 			input.rect_size.x = 1000
-			input.position = Vector2(960,839.3)
+			var x_offset = global.defaultFont.get_string_size("Well, nice to meet you Gibbon. I’m").x
+			input.position = global.dialogueBox.get_node("Dialogue").get_global_position()+Vector2(x_offset, 0)
 			input.connect('return_signal', self, 'HandleMyInput')
 			systems.canvas.add_child(input)
 			yield(self, "MyInput_Handled")
@@ -43,12 +44,7 @@ func scene(lineText, index, dialogueNode):
 			systems.canvas.remove_child(input)
 		
 		30: # Read the player name
-			var file = File.new()
-			file.open("user://playername.tres", File.READ)
-			var username = file.get_as_text()
-			file.close()
-			
-			if username.findn('Brad Garlinghouse') == -1 and username.findn('BradGarlinghouse') == -1:
+			if global.playerName.to_lower().replace(" ", "").find('bradgarlinghouse') == -1 :
 				dialogueNode.index = 43
 	
 	return true
