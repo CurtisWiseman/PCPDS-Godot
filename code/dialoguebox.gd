@@ -351,10 +351,9 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				systems.sound.sfx("res://sounds/sfx/" + sfx + ".ogg")
 			
 			elif dialogue[index].findn('StopMusic') != -1:
-				systems.sound.stop(systems.sound.audioname(systems.sound.playing['path']))
-			
+				systems.sound.stop_music()
 			elif dialogue[index].findn('StopSFX') != -1:
-				systems.sound.stop_SFX(systems.sound.audioname(systems.sound.playingSFX['path']))
+				systems.sound.stop_SFX()
 			elif dialogue[index].to_lower().find("forget ") == 1:
 				var forget_choice = dialogue[index].substr("[forget ".length()).strip_edges().rstrip(']')
 				chosenChoices.erase(forget_choice)

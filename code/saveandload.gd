@@ -492,17 +492,23 @@ func newSave(save_num):
 	data_payload["current_voice_character"] = systems.textBoxBackground.current_voice
 	
 	#Sound
-	if sound.playingSFX["path"] != "NULL":
-		data_payload["sfx"] = sound.playingSFX
-		var sfx_node = sound.get_node(sound.audioname(sound.playingSFX.path))
+	data_payload["sfx"] = []
+	data_payload["music"] = []
+	for sfx in sound.playingSFX:
+		var new_val = sfx.duplicate()
+		var sfx_node = new_val["node"]
+		new_val.erase("node")
 		if sfx_node != null and sfx_node is AudioStreamPlayer:
-			data_payload["sfx"]["position"] = sfx_node.get_playback_position()
-	if sound.playing["path"] != "NULL":
-		data_payload["music"] = sound.playing
-		var music_node = sound.get_node(sound.audioname(sound.playing.path))
+			new_val["position"] = sfx_node.get_playback_position()
+		data_payload["sfx"].append(new_val)
+	for music in sound.playing:
+		var new_val = music.duplicate()
+		var music_node = new_val["node"]
+		new_val.erase("node")
 		if music_node != null and music_node is AudioStreamPlayer:
-			data_payload["music"]["position"] = music_node.get_playback_position()
-
+			new_val["position"]= music_node.get_playback_position()
+		data_payload["music"].append(new_val)
+		
 	var save_path = SAVE_FOLDER.plus_file(SAVE_NAME_TEMPLATE % save_num)
 	file.open(save_path, File.WRITE)#, 'G@Y&D3@D')
 	file.store_line(to_json(data_payload))
@@ -617,11 +623,13 @@ func newLoad(save_file):
 	
 	#Sounds
 	if data_payload.has("sfx"):
-		var n = sound.sfx(data_payload["sfx"]["path"], data_payload["sfx"]["volume"])
-		n.seek(data_payload["sfx"]["position"])
+		for sfx in data_payload["sfx"]:
+			var n = sound.sfx(sfx["path"], sfx["volume"])
+			n.seek(sfx["position"])
 	if data_payload.has("music"):
-		var n = sound.music(data_payload["music"]["path"], data_payload["music"]["loop"], data_payload["music"]["volume"])
-		n.seek(data_payload["music"]["position"])
+		for music in data_payload["music"]:
+			var n = sound.music(music["path"], music["loop"], music["volume"])
+			n.seek(music["position"])
 		
 	global.pause_input = false
 	global.fading = false
