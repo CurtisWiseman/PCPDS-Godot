@@ -1,14 +1,15 @@
 extends Node
 
 var queue = [] # Queue of music to play.
-var playing = {'path': "NULL", 'loop': "NULL", 'volume': "NULL"} # The current song.
-var playingSFX = {'path': "NULL", 'volume': "NULL"} # The current sfx.
+var playing = [] # The current songs
+var playingSFX = [] # The current sfx.
 
 
 # Function to play music.
 func music(path, loop=false, volume=0):
-	if path == playing.path:
-		return
+	for m in playing:
+		if m["path"] == path:
+			return
 	var music = AudioStreamPlayer.new() # Create a new AudioSteamPlayer node.
 	music.stream = load(path) # Set the steam to path.
 	#Doing some stupid hacks out the moment using SFX/Music interchangably, so we set this based on path
@@ -26,9 +27,7 @@ func music(path, loop=false, volume=0):
 	add_child(music) # Add as a child of sound.
 	
 	# Save the values of the currently playing music.
-	playing.path = path
-	playing.loop = loop
-	playing.volume = volume
+	playing.append({'path': path, 'loop': loop, 'volume': volume, "node": music})
 	return music
 
 
@@ -50,8 +49,7 @@ func sfx(path, volume=0):
 	add_child(sfx) # Add as a child of sound.
 	
 	# Save the values of the currently playing sfx.
-	playingSFX.path = path
-	playingSFX.volume = volume
+	playingSFX.append({'path': path, 'volume': volume, "node": sfx})
 	return sfx
 
 
@@ -76,26 +74,18 @@ func unpause(audio):
 
 
 # Function to remove the audio entirely.
-func stop(audio):
-	
-	if get_node(audio):
-		get_node(audio).queue_free()
-		playing.path = "NULL"
-		playing.loop = "NULL"
-		playing.volume = "NULL"
-	else:
-		print('Error: No audio node named ' + audio + ' to stop.')
+func stop_music():
+	for audio in playing:
+		audio["node"].queue_free()
+	playing = []
 
 
 
 # Function to remove playing SFX.
-func stop_SFX(audio):
-	if get_node(audio):
-		get_node(audio).queue_free()
-		playingSFX.path = "NULL"
-		playingSFX.volume = "NULL"
-	else:
-		print('Error: No audio node named ' + audio + ' to stop.')
+func stop_SFX():
+	for audio in playingSFX:
+		audio["node"].queue_free()
+	playingSFX = []
 
 # Get the name of the audio using path.
 func audioname(path):

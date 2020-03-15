@@ -19,6 +19,19 @@ var blackScreen
 # Load nodes for all game systems.
 func _ready():
 	
+	
+	var config = ConfigFile.new()
+	var err = config.load("user://settings.cfg")
+	if err == OK:
+		if config.has_section_key("audio", "sfx"):
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), config.get_value("audio", "sfx"))
+		if config.has_section_key("audio", "music"):
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), config.get_value("audio", "music"))
+		if config.has_section_key("audio", "master"):
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), config.get_value("audio", "master"))
+		if config.has_section_key("audio", "voice"):
+			global.voicesOn = config.get_value("audio", "voice")
+	
 	# Set the global rootnode to the root of the current scene.
 	global.rootnode = get_node('..')
 	
@@ -115,10 +128,10 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	
 #	# Set the default font for nametags.
 	var defaultFontNametagDATA = DynamicFontData.new()
-	defaultFontNametagDATA.font_path = 'res://fonts/Nametag/coolvetica/coolvetica rg.ttf'
+	defaultFontNametagDATA.font_path = 'res://fonts/Nametag/RobotoSlab/RobotoSlab-SemiBold.ttf'
 	var defaultFontNametag = DynamicFont.new()
 	defaultFontNametag.font_data = defaultFontNametagDATA
-	defaultFontNametag.size = 45
+	defaultFontNametag.size = 40
 	nametag.add_font_override("font", defaultFontNametag)
 	dialogueBox.add_child(nametag);
 	

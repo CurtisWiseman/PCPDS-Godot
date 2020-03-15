@@ -102,13 +102,27 @@ func _process(delta):
 		else:
 			advance_text()
 		
+	if visible_characters >= get_total_character_count():
+		if not global.pause_input:
+			get_node("../text_box/indicator").finished()
+		else:
+			get_node("../text_box/indicator").speaking()
+		get_node("../text_box").voice_off()
+	else:
+		get_node("../text_box/indicator").speaking()
+		var curchar = text.substr(get_visible_characters()-1, get_visible_characters())
+		if curchar.strip_edges() != "":
+			get_node("../text_box").voice_on()
+		else:
+			get_node("../text_box").voice_off()
+			
 	if Input.is_action_just_pressed("ui_debug"):
 		debug()
 	if Input.is_action_just_released("force_unpause"):
 		print("Input pause forcibly broken out of!")
 		global.pause_input = false
-	global.turbo_mode = Input.is_key_pressed(KEY_T)
-	global.turbo_crash_mode = Input.is_key_pressed(KEY_P)
+	global.turbo_mode = Input.is_key_pressed(KEY_S)
+	#global.turbo_crash_mode = Input.is_key_pressed(KEY_P) #Dev testing purposes only 
 		
 
 func say(text, voice=null):
@@ -120,12 +134,12 @@ func say(text, voice=null):
 		compartmentalise(text)
 # 	Display new line if of appropriate length
 	elif text != "" and voice != null:
-		speech = AudioStreamPlayer.new()
-		speech.stream = load("res://sounds/speech/pcp-voice_brunswick.ogg")
-		speech.bus = 'SFX'
-		speech.volume_db = 0
-		speech.play()
-		add_child(speech)
+		#speech = AudioStreamPlayer.new()
+		#speech.stream = load("res://sounds/speech/pcp-voice_brunswick.ogg")
+		#speech.bus = 'SFX'
+		#speech.volume_db = 0
+		#speech.play()
+		#add_child(speech)
 		set_bbcode(text)
 	else:
 		set_bbcode(text)

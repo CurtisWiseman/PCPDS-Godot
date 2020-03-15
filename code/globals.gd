@@ -24,8 +24,10 @@ var defaultFontBold
 var defaultFontBoldItalic
 var defaultFont
 var textTheme
-var playerName
+var playerName = "PlayerName"
 var pauseScreen = null
+var voicesOn = true
+var current_scene_name = ""
 
 # Signal to say a that a scene is done loading.
 signal finished_loading
@@ -57,54 +59,6 @@ func _ready():
 	
 	size = OS.get_screen_size() # Get the size of the screen.
 	
-	
-	# If the usersettings file does not exist then create it.
-	var file = File.new()
-	var filepath = OS.get_user_data_dir() + '/usersettings.tres'
-	if file.file_exists(filepath) == false:
-		file.open("user://usersettings.tres", File.WRITE)
-		file.close()
-	
-	# Get user settings and create those that don't exist.
-	file.open("user://usersettings.tres", File.READ_WRITE)
-	var settings = file.get_as_text()
-	
-	
-	# Get the master volume or create it.
-	if settings.find('master_volume:', 0) == -1:
-		file.open("user://usersettings.tres", File.READ_WRITE)
-		file.store_line(settings + 'master_volume:1.000')
-		settings = file.get_as_text()
-		file.close()
-	else:
-		master_volume = float(settings.substr(settings.find('master_volume:', 0) + 14, 5))
-	
-	# Get the music volume or create it.
-	if settings.find('music_volume:', 0) == -1:
-		file.open("user://usersettings.tres", File.READ_WRITE)
-		file.store_line(settings + 'music_volume:1.000')
-		settings = file.get_as_text()
-		file.close()
-	else:
-		music_volume = float(settings.substr(settings.find('music_volume:', 0) + 13, 5))
-	
-	# Get the sfx volume or create it.
-	if settings.find('sfx_volume:', 0) == -1:
-		file.open("user://usersettings.tres", File.READ_WRITE)
-		file.store_line(settings + 'sfx_volume:1.000')
-		settings = file.get_as_text()
-		file.close()
-	else:
-		sfx_volume = float(settings.substr(settings.find('sfx_volume:', 0) + 11, 5))
-	
-	# Get the player name if it exists
-	if file.file_exists(OS.get_user_data_dir() + '/playername.tres'):
-		file.open("user://playername.tres", File.READ)
-		playerName = file.get_as_text()
-		file.close()
-	else:
-		playerName = null;
-	
 	# If the directory for screenshots doesn't exists create it.
 	var directory = Directory.new()
 	if !directory.dir_exists('user://screenshots'):
@@ -116,43 +70,43 @@ func _ready():
 	
 	# Create the default fonts.
 	var defaultFontDATA = DynamicFontData.new()
-	defaultFontDATA.font_path = 'res://fonts/Dialogue/Lato-Regular.ttf'
+	defaultFontDATA.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Regular.ttf'
 	defaultFont= DynamicFont.new()
 	defaultFont.font_data = defaultFontDATA
 	defaultFont.size = 35
 	var defaultFontDATABold = DynamicFontData.new()
-	defaultFontDATABold.font_path = 'res://fonts/Dialogue/Lato-Bold.ttf'
+	defaultFontDATABold.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Bold.ttf'
 	defaultFontBold = DynamicFont.new()
 	defaultFontBold.font_data = defaultFontDATABold
 	defaultFontBold.size = 35
 	var defaultFontDATAItalic = DynamicFontData.new()
-	defaultFontDATAItalic.font_path = 'res://fonts/Dialogue/Lato-Italic.ttf'
+	defaultFontDATAItalic.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Italic.ttf'
 	defaultFontItalic = DynamicFont.new()
 	defaultFontItalic.font_data = defaultFontDATAItalic
 	defaultFontItalic.size = 35
 	var defaultFontDATABoldItalic = DynamicFontData.new()
-	defaultFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Lato-BoldItalic.ttf'
+	defaultFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Roboto/Roboto-BoldItalic.ttf'
 	defaultFontBoldItalic = DynamicFont.new()
 	defaultFontBoldItalic.font_data = defaultFontDATABoldItalic
 	defaultFontBoldItalic.size = 35
 	
 	var defaultChoiceFontDATA = DynamicFontData.new()
-	defaultChoiceFontDATA.font_path = 'res://fonts/Dialogue/Lato-Regular.ttf'
+	defaultChoiceFontDATA.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Regular.ttf'
 	defaultChoiceFont= DynamicFont.new()
 	defaultChoiceFont.font_data = defaultChoiceFontDATA
 	defaultChoiceFont.size = 25
 	var defaultChoiceFontDATABold = DynamicFontData.new()
-	defaultChoiceFontDATABold.font_path = 'res://fonts/Dialogue/Lato-Bold.ttf'
+	defaultChoiceFontDATABold.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Bold.ttf'
 	defaultChoiceFontBold = DynamicFont.new()
 	defaultChoiceFontBold.font_data = defaultChoiceFontDATABold
 	defaultChoiceFontBold.size = 25
 	var defaultChoiceFontDATAItalic = DynamicFontData.new()
-	defaultChoiceFontDATAItalic.font_path = 'res://fonts/Dialogue/Lato-Italic.ttf'
+	defaultChoiceFontDATAItalic.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Italic.ttf'
 	defaultChoiceFontItalic = DynamicFont.new()
 	defaultChoiceFontItalic.font_data = defaultChoiceFontDATAItalic
 	defaultChoiceFontItalic.size = 25
 	var defaultChoiceFontDATABoldItalic = DynamicFontData.new()
-	defaultChoiceFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Lato-BoldItalic.ttf'
+	defaultChoiceFontDATABoldItalic.font_path = 'res://fonts/Dialogue/Roboto/Roboto-BoldItalic.ttf'
 	defaultChoiceFontBoldItalic = DynamicFont.new()
 	defaultChoiceFontBoldItalic.font_data = defaultChoiceFontDATABoldItalic
 	defaultChoiceFontBoldItalic.size = 25
@@ -164,11 +118,11 @@ func _ready():
 	# Create the Music bus.
 	AudioServer.add_bus(1) 
 	AudioServer.set_bus_name(1, 'Music')
-	AudioServer.set_bus_volume_db(1, log(master_volume * music_volume) * 20)
+	#AudioServer.set_bus_volume_db(1, log(master_volume * music_volume) * 20)
 	# Create the SFX bus.
 	AudioServer.add_bus(2)
 	AudioServer.set_bus_name(2, 'SFX')
-	AudioServer.set_bus_volume_db(2, log(master_volume * sfx_volume) * 20)
+	#AudioServer.set_bus_volume_db(2, log(master_volume * sfx_volume) * 20)
 	
 	# Load the location images.
 	locations = returnlocations()
@@ -259,7 +213,17 @@ func set_node_pos(given_node, pos):
 
 func toggle_pause():
 	get_tree().paused = not get_tree().paused
-	var a = 0 if get_tree().paused else 1
-	global.dialogueBox.set_self_modulate(Color(1,1,1,a))
-	global.dialogueBox.get_node('Nametag').set_self_modulate(Color(1,1,1,a))
-	global.dialogueBox.get_node('Dialogue').set_self_modulate(Color(1,1,1,a))
+	#I don't know why this was ever a thing?
+	#var a = 0 if get_tree().paused else 1
+	#if global.dialogueBox != null:
+	#	global.dialogueBox.set_self_modulate(Color(1,1,1,a))
+	#	global.dialogueBox.get_node('Nametag').set_self_modulate(Color(1,1,1,a))
+	#	global.dialogueBox.get_node('Dialogue').set_self_modulate(Color(1,1,1,a))
+	
+func save_settings():
+	var config = ConfigFile.new()
+	config.set_value("audio", "sfx", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
+	config.set_value("audio", "master", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
+	config.set_value("audio", "music", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
+	config.set_value("audio", "voice", global.voicesOn)
+	config.save("user://settings.cfg")

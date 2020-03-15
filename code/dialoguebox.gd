@@ -33,7 +33,7 @@ var lastInChoice
 var lastChosenChoices
 var CG = null
 
-var lock = false
+var waiting_for_player_name = false
 
 var transitioning = false
 
@@ -72,7 +72,16 @@ func say(words, character = "", character_identifier = "", voice = null):
 		systems.textBoxBackground.make_invisible()
 	else:
 		$Nametag.text = character
-		systems.textBoxBackground.swap_character(character_identifier.to_lower())
+		var special_voice = null
+		#Stupid hacks for special voice cases
+		if character.to_lower() == "sword" and character_identifier.to_lower() == "azumi":
+			special_voice = "sword-akumaru"
+		elif character.to_lower().find("phantom horn") > -1:
+			special_voice = "phantom-horn"
+		elif character.to_lower().find("horseshoes") > -1 and character_identifier.to_lower() == "jesse":
+			special_voice = "dr-horseshoes"
+		
+		systems.textBoxBackground.swap_character(character_identifier.to_lower(), special_voice)
 		systems.textBoxBackground.make_visible()
 	$Dialogue.say(words, voice)
 	
@@ -216,7 +225,7 @@ func things_sliding():
 	
 # The main dialogue function.
 func _on_Dialogue_has_been_read(setIndex=false):
-	if displayingChoices or things_sliding():
+	if displayingChoices or things_sliding() or waiting_for_player_name:
 		return
 		
 	if index < dialogue.size(): #Checks to see if end of document has been reached
@@ -306,7 +315,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('cut from black') != -1: 
 				last_black_fade_dir = 1
 				fadeblackalpha(systems.blackScreen, 'in', 100)
-			elif dialogue[index].findn('SLIDE') != -1:
+			elif dialogue[index].to_lower().find('[slide') != -1:
 				var command = dialogue[index].lstrip('[')
 				command = command.rstrip(']')
 				command = command.replace(',', '')
@@ -342,12 +351,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				systems.sound.sfx("res://sounds/sfx/" + sfx + ".ogg")
 			
 			elif dialogue[index].findn('StopMusic') != -1:
-				systems.sound.stop(systems.sound.audioname(systems.sound.playing['path']))
-			
+				systems.sound.stop_music()
 			elif dialogue[index].findn('StopSFX') != -1:
-				systems.sound.stop_SFX(systems.sound.audioname(systems.sound.playingSFX['path']))
-			elif dialogue[index].find("Forget ") == 1:
-				var forget_choice = dialogue[index].lstrip('[Forget ').rstrip(']')
+				systems.sound.stop_SFX()
+			elif dialogue[index].to_lower().find("forget ") == 1:
+				var forget_choice = dialogue[index].substr("[forget ".length()).strip_edges().rstrip(']')
 				chosenChoices.erase(forget_choice)
 				choices.erase(forget_choice)
 			elif dialogue[index].findn('Location:') != -1:
@@ -462,6 +470,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				systems.display.animation(video_path)
 				yield(systems.display, 'transition_finish')
 				global.pause_input = false
+			elif dialogue[index].to_lower().find('end video') == 1:
+				global.pause_input = true
+				systems.display.hide_animation()
+				yield(systems.display, 'transition_finish')
+				global.pause_input = false
 			elif dialogue[index].to_lower().findn('cg:') != -1:
 				global.pause_input = true
 				
@@ -521,49 +534,48 @@ func _on_Dialogue_has_been_read(setIndex=false):
 						systems.display.remove_name(CG)
 					CG = null
 				global.pause_input = false
-			
-			elif dialogue[index].findn('Scene:') != -1:
-				
-				var saveChosenChoices = chosenChoices
-				var saveInChoice = inChoice
-				var saveChoices = choices
-				
-				if saveChoices == []:
-					saveChoices = "NULL"
-				else:
-					var choiceArray = saveChoices
-					saveChoices = ''
-					var i = 1
-					for choice in choiceArray:
-						if i == choiceArray.size():
-							saveChoices += choice
-							break
-						else:
-							saveChoices += choice + ','
-							i += 1
-				
-				if saveChosenChoices == []:
-					saveChosenChoices = "NULL"
-				else:
-					var choiceArray = saveChosenChoices
-					saveChosenChoices = ''
-					var i = 1
-					for choice in choiceArray:
-						if i == choiceArray.size():
-							saveChosenChoices += choice
-							break
-						else:
-							saveChosenChoices += choice + ','
-							i += 1
-				
-				var sceneSave = dialogue[index].substr(8,dialogue[index].length()-1).rstrip(']')
-				
-				var file = File.new()
-				file.open_encrypted_with_pass('user://scenes/' + sceneSave, File.WRITE, 'HELPLETMEOUT')
-				file.store_line(str(saveInChoice))
-				file.store_line(saveChoices)
-				file.store_line(saveChosenChoices)
-				file.close()
+			elif dialogue[index].strip_edges().to_lower().find('[scene:') == 0:
+				global.current_scene_name = dialogue[index].strip_edges().substr('[Scene:'.length()).rstrip("]").strip_edges()
+				#var saveChosenChoices = chosenChoices
+				#var saveInChoice = inChoice
+				#var saveChoices = choices
+				#
+				#if saveChoices == []:
+				#	saveChoices = "NULL"
+				#else:
+				#	var choiceArray = saveChoices
+				#	saveChoices = ''
+				#	var i = 1
+				#	for choice in choiceArray:
+				#		if i == choiceArray.size():
+				#			saveChoices += choice
+				#			break
+				#		else:
+				#			saveChoices += choice + ','
+				#			i += 1
+				#
+				#if saveChosenChoices == []:
+				#	saveChosenChoices = "NULL"
+				#else:
+				#	var choiceArray = saveChosenChoices
+				#	saveChosenChoices = ''
+				#	var i = 1
+				#	for choice in choiceArray:
+				#		if i == choiceArray.size():
+				#			saveChosenChoices += choice
+				#			break
+				#		else:
+				#			saveChosenChoices += choice + ','
+				#			i += 1
+				#
+				#var sceneSave = dialogue[index].substr(8,dialogue[index].length()-1).rstrip(']')
+				#
+				#var file = File.new()
+				#file.open_encrypted_with_pass('user://scenes/' + sceneSave, File.WRITE, 'HELPLETMEOUT')
+				#file.store_line(str(saveInChoice))
+				#file.store_line(saveChoices)
+				#file.store_line(saveChosenChoices)
+				#file.close()
 			
 			elif dialogue[index].findn('==>') != -1:
 				if global.turbo_mode and global.turbo_crash_mode:
@@ -740,7 +752,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				dialogue[index] = regex.sub(dialogue[index], global.playerName, true)
 			
 			# If there is no text on the line then don't say anything.
-			if dialogue[index].ends_with(')') or dialogue[index].ends_with('$'):
+			if dialogue[index].strip_edges().ends_with(')') or dialogue[index].strip_edges().ends_with('$'):
 				global.pause_input = true
 				say = false
 				if dialogue[index][dialogue[index].length()-1] == '$': wait = false
@@ -819,15 +831,33 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					global.pause_input = false
 			else:
 				if wait:
-					game.safeToSave = false
 					waitTimer.wait_time = 0.1
-					waitTimer.start()
-					yield(waitTimer, 'timeout')
-					game.safeToSave = true
-					
+				else:
+					#Not having a wait actually causes deep problems, so I just make it reeeeally short.
+					waitTimer.wait_time = 0.01
+				game.safeToSave = false
+				waitTimer.start()
+				yield(waitTimer, 'timeout')
+				game.safeToSave = true
+				
+				#quick hack so that slide empty dialogue lines go immediately
+				#because if the emit happens while the slide is still happening, then you don't auto-progress
+				for instruction in info:
+					if instruction.to_lower() =="slide":
+						var sliding = true
+						while sliding:
+							waitTimer.wait_time = 0.1
+							waitTimer.start()
+							yield(waitTimer, 'timeout')
+							sliding = false
+							for child in systems.display.get_children():
+								if child.name.match("*(*P*o*s*i*t*i*o*n*)*"):
+									sliding = true
+									break
+						
+				global.pause_input = false
 				index += 1
 				emit_signal('empty_line')
-				global.pause_input = false
 		
 		# Don't display anything but call scene function.
 		elif dialogue[index] == ("&&&&&"):
@@ -933,7 +963,8 @@ func parse_info(info):
 func parse_special_digi(info, parsedInfo, i, pos):
 	var num = str(search('return characterImages.'+parsedInfo+'.special.body', info[i+1]))
 	var video = 'characterImages.'+parsedInfo+'.special.body[' + str(num) + ']'
-	var mask =  'characterImages.'+parsedInfo+'.special.mask[' + str(num) + ']'
+	var mask = 'characterImages.'+parsedInfo+'.special.mask[' + str(num) + ']'
+	var still = 'characterImages.'+parsedInfo+'.special.still[' + str(num) + ']'
 	var expression_num_stuff = parse_expnum(info[i+2], parsedInfo)
 	var face_num = expression_num_stuff[0]
 	var faceType = expression_num_stuff[1]
@@ -942,7 +973,7 @@ func parse_special_digi(info, parsedInfo, i, pos):
 		faceType = "shock"
 	var forced_mask_name = mask#"/"+parsedInfo +'_special_' + str(num)
 	var face = '\n\tsystems.display.face(characterImages.'+parsedInfo+'.special.'+faceType+'['+face_num+'], "'+forced_mask_name+'")'
-	parse_position(info, 'systems.display.mask(' + mask + ', ' + video + ', "video", 1, false, "' + forced_mask_name + '")' + face, video, i+3, pos)
+	parse_position(info, 'systems.display.mask(' + mask + ', ' + video + ', ' + still + ', "video", 1, false, "' + forced_mask_name + '")' + face, video, i+3, pos)
 	return
 	
 # Removes duplicate bodies of characters if they exist.
@@ -991,12 +1022,23 @@ func remove_dupes(character, info):
 				else:
 					if !global.pause_input: global.pause_input = true
 					var display_node = systems.display.layers[i]['node']
-					systems.display.remove(display_node, i)
-					#var cur_mod = display_node.self_modulate
-					#var end_mod = Color(cur_mod.r, cur_mod.g, cur_mod.b, 0)
-					#systems.display.layers[i]['removing'] =  true
-					#systems.display.fade(systems.display.layers[i]['path'], cur_mod, end_mod, 0.2, true)
 					notsame = [true, global.get_node_pos(display_node)]
+					var is_slide = false
+					for inf in info:
+						if inf.to_lower() == "slide":
+							is_slide = true
+							break
+					
+					if is_slide:
+						systems.display.remove(display_node, i)
+					else:
+						var cur_mod = display_node.self_modulate
+						var end_mod = Color(cur_mod.r, cur_mod.g, cur_mod.b, 0)
+						systems.display.layers[i]['removing'] =  true
+						systems.display.layers[i]['node'].name = "REMOVING"
+						systems.display.layers[i]['name'] = systems.display.layers[i]['node'].name
+						systems.display.fade(systems.display.layers[i]['node'], cur_mod, end_mod, 0.5, true)
+					
 					emit_signal('dupeCheckFinished')
 					if global.pause_input: global.pause_input = false
 					return
@@ -1106,6 +1148,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	var knife = false
 	var ben_point = false
 	var ben_cloud = false
+	var ben_horn = false
 	var AFL = ''
 	var blushNum
 	var num
@@ -1136,6 +1179,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 				kamina_shades = true
 			elif tmp[k] == 'cloud':
 				ben_cloud = true
+			elif tmp[k] == 'horn':
+				ben_horn = true
 #		if tmp.size() == 3:
 #			blushNum = int(parse_expnum(info[i], parsedInfo)[0]);
 #			blush = true
@@ -1160,6 +1205,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		AFL += '\n\tsystems.display.face(characterImages.ben.afl[2], '+body+', 0, 0, "point")'
 	if ben_cloud:
 		AFL += '\n\tsystems.display.face(characterImages.ben.afl[0], '+body+', 0, 0, "below")'
+	if ben_horn:
+		AFL += '\n\tsystems.display.face(characterImages.ben.afl[1], '+body+', 0, 0, "horn")'
 		
 	var useDefault = false
 	if "happy".is_subsequence_of(info[i]):
@@ -1227,13 +1274,13 @@ func parse_expnum(expression, parsedInfo):
 func parse_911(info, parsedInfo, i, pos):
 	
 	if 'pew'.is_subsequence_ofi(info[i]):
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[2], characterImages.'+parsedInfo+'.video[2], "video", 1)', 'characterImages.'+parsedInfo+'.body[2]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[2], characterImages.'+parsedInfo+'.video[2], characterImages.'+parsedInfo+'.still[2], "video", 1)', 'characterImages.'+parsedInfo+'.body[2]', 2, pos)
 	elif 'boi' == info[i]:
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[0], characterImages.'+parsedInfo+'.video[0], "video", 1)', 'characterImages.'+parsedInfo+'.body[0]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[0], characterImages.'+parsedInfo+'.video[0], characterImages.'+parsedInfo+'.still[0], "video", 1)', 'characterImages.'+parsedInfo+'.body[0]', 2, pos)
 	elif 'standin'.is_subsequence_ofi(info[i]):
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[3], characterImages.'+parsedInfo+'.video[3], "video", 1)', 'characterImages.'+parsedInfo+'.body[3]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[3], characterImages.'+parsedInfo+'.video[3], characterImages.'+parsedInfo+'.still[3], "video", 1)', 'characterImages.'+parsedInfo+'.body[3]', 2, pos)
 	elif 'concern' == info[i]:
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[1], characterImages.'+parsedInfo+'.video[1], "video", 1)', 'characterImages.'+parsedInfo+'.body[1]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[1], characterImages.'+parsedInfo+'.video[1], characterImages.'+parsedInfo+'.still[1], "video", 1)', 'characterImages.'+parsedInfo+'.body[1]', 2, pos)
 
 # Parses the position for a character.
 func parse_position(info, parsedInfo, body, i, pos):
@@ -1246,16 +1293,13 @@ func parse_position(info, parsedInfo, body, i, pos):
 	var num
 	
 	#Stupid hack, we don't do the fade if this body is already on screen:
-	#var useFade = false#true
-	#var path = execreturn("return " + body);
-	#for l in systems.display.layers:
-	#	if l["path"] == path:
-	#		useFade = false
-	#		break
+	var useFade = true
+	var path = execreturn("return " + body);
+	for l in systems.display.layers:
+		if l["path"] == path:
+			useFade = false
+			break
 		
-	#if useFade:
-	#	parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.2)"
-	
 	var j = i
 	while j < info.size():
 		if info[j] == 'silhouette':
@@ -1264,9 +1308,15 @@ func parse_position(info, parsedInfo, body, i, pos):
 		elif info[j] == 'fade':
 			fading = true
 			info.remove(j)
+		elif info[j] == 'slide':
+			useFade = false
+			j += 1
 		else:
 			j += 1
 			
+	if useFade:
+		parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.25)"
+	
 	if i < info.size():
 		if i + 2 == info.size()-1:
 			move = true

@@ -39,7 +39,7 @@ var timer = 0.0
 #
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	texture = null
 
 func menu_in():
 	cur_track = Track.In

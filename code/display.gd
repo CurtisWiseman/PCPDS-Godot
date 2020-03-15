@@ -21,14 +21,37 @@ var vids_precached = {}
 # The code to mask using a shader.
 var mask_shader_code = """shader_type canvas_item;
 	uniform sampler2D mask_texture;
+	uniform sampler2D still;
+	uniform float start_time;
+	
 	void fragment() {
+	if (TIME < start_time-0.10) {
+		vec2 offset = vec2(0.0, 0.0035); //the stills seem weirdly offset compared to video? This seems to make it not awful
+		vec4 color = texture(still, UV+offset);
+		color.a *= texture(mask_texture, UV).a;
+		color.rgb *= texture(mask_texture, UV).rgb;
+		COLOR = color;
+	} else {
+		vec4 color = texture(TEXTURE, UV);
+		color.a *= texture(mask_texture, UV).a;
+		color.rgb *= texture(mask_texture, UV).rgb;
+		COLOR = color;
+	}
+}"""
+
+
+var mask_out_head_overlap = """
+shader_type canvas_item;
+
+uniform sampler2D head;
+
+void fragment() {
 	vec4 color = texture(TEXTURE, UV);
-	color.a *= texture(mask_texture, UV).a;
-	color.rgb *= texture(mask_texture, UV).rgb;
+	color.a *= 1.0-texture(head, UV).a;
 	COLOR = color;
-	}"""
-		
-		
+}
+"""
+
 # Set the background node to self by default.
 func _ready():
 	bgnode = self
@@ -174,6 +197,13 @@ func image(imgpath, z):
 	imgnode.centered = false # Uncenter the node.
 	imgnode.texture = info[2] # Set the node's texture to the image.
 	imgnode.z_index = z # Set the z index of the node to z.
+	
+	imgnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
+	imgnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
+	imgnode.material.shader.code = mask_out_head_overlap # Set the shader's code to code.
+	imgnode.material.shader.set_default_texture_param("head", load("res://images/blank.png"))
+	
+	
 	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 
 
@@ -225,21 +255,30 @@ func animation(vidpath):
 		
 	yield(vidnode, "finished")
 	
-	time = 1.0
-	while time > 0:
+	emit_signal('transition_finish')
+	
+func hide_animation():
+	var ftimer = Timer.new() 
+	var time = 1.0
+	add_child(ftimer) 
+	ftimer.one_shot = true
+	
+	if animation != null:
+		while time > 0:
+			ftimer.start(0.01)
+			yield(ftimer, 'timeout')
+			animation.modulate.a = clamp(time/1.0, 0.0, 1.0)
+			time -= 0.01
+	else:
 		ftimer.start(0.01)
 		yield(ftimer, 'timeout')
-		vidnode.modulate.a = clamp(time/1.0, 0.0, 1.0)
-		time -= 0.01
-		
-	vidnode.queue_free()
+			
 	ftimer.queue_free()
-	animation = null
 	emit_signal('transition_finish')
 
 
 # Create a mask
-func mask(mask, path, type, z, fade_in=false, force_name=null):
+func mask(mask, path, still, type, z, fade_in=false, force_name=null):
 	
 	# If z is 0 print error then exit function.
 	if z == 0:
@@ -284,6 +323,7 @@ func mask(mask, path, type, z, fade_in=false, force_name=null):
 		layers[info[1]]['node'] = vidnode # Add the node under the node key.
 		layers[info[1]]['type'] = 'video' # The node's type.
 		layers[info[1]]['mask'] = mask # Store the mask path.
+		layers[info[1]]['still'] = still
 		layers[info[1]]['path'] = path
 		vidnode.stream = info[2] # Set the node's video steam to video.
 		vidnode.rect_size = Vector2(1920, 1080)
@@ -293,6 +333,8 @@ func mask(mask, path, type, z, fade_in=false, force_name=null):
 		vidnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
 		vidnode.material.shader.code = mask_shader_code # Set the shader's code to code.
 		vidnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
+		vidnode.material.set_shader_param('start_time', float(OS.get_ticks_msec())/1000.0)
+		vidnode.material.shader.set_default_texture_param('still', load(still))
 		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		
 		# Check for a mesh.
@@ -331,10 +373,13 @@ func face(facepath, body, x=0, y=0, type='face'):
 	facenode.texture = load(facepath) # Set the node's texture to the face image.
 	facenode.position = Vector2(x,y) # Set the face's position to x and y.
 	layers[index]['node'].add_child(facenode) # Add as a child of the body node.
+	#facenode.self_modulate = layers[index]['node'].self_modulate
+	
 	
 	if type == 'face':
 		layers[index]['face'] = facenode # Add the face node the dictionary.
 		layers[index]['facepos'] = Vector2(x,y) # Add the coordinates.
+		layers[index]['node'].material.set_shader_param("head", facenode.texture)
 	else:
 		if !layers[index].has('AFL'):
 			layers[index]['AFL'] = []
@@ -412,7 +457,7 @@ func remove(node, i):
 			layers[i]['node'].queue_free()
 			layers.remove(i)
 		else:
-			print("BAD ATTEMPT TO REMOVE LAYER, SMARTLY INTERVENING")
+			print("BAD ATTEMPT TO REMOVE LAYER, SMARTLY INTERVENING", node.name)
 			var interevened_successfully = false
 			for j in range(layers.size()):
 				if layers[j]["node"] == node:
@@ -617,6 +662,8 @@ func fade(content, from : Color, to : Color, time : float, remove_on_fade = fals
 		# If content node is not found then print an error and return.
 		if index == null:
 			print("Error: No node named " + content + " exists as a target for collision!")
+			ftimer.start(0.01) #we yield a bit first here so that if our calling is yielding for our transition, they'll still resume.
+			yield(ftimer, 'timeout')
 			global.finish_fading()
 			if !fadeSignal: emit_signal('transition_finish')
 			else: emit_signal('transition_finish_fade')
@@ -638,6 +685,8 @@ func fade(content, from : Color, to : Color, time : float, remove_on_fade = fals
 	
 	# Reject mod's that are not self or children.
 	if mod != 'self' and mod != 'children':
+		ftimer.start(0.01) #we yield a bit first here so that if our calling is yielding for our transition, they'll still resume.
+		yield(ftimer, 'timeout')
 		print("Error: The 4th parameter on fadealpha only accepts 'self' or 'children' as values!")
 		global.finish_fading()
 		if !fadeSignal: emit_signal('transition_finish')
@@ -664,7 +713,7 @@ func fade(content, from : Color, to : Color, time : float, remove_on_fade = fals
 	
 	if remove_on_fade:
 		layers[index]["removing"] = true
-		layers[index]["node"].name += " REMOVING"
+		layers[index]["node"].name = "REMOVING"
 		layers[index]["name"] = layers[index]["node"].name
 	faders.append(node)
 	fader_targets[node] = to

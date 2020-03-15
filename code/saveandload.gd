@@ -400,6 +400,7 @@ func newSave(save_num):
 		directory.make_dir(SAVE_FOLDER)
 		
 	# Get relevant system nodes.
+	var systems = global.rootnode.get_node('Systems')
 	var sound = global.rootnode.get_node('Systems/Sound')
 	var camera = global.rootnode.get_node('Systems/Camera')
 	var display = global.rootnode.get_node('Systems/Display')
@@ -421,6 +422,9 @@ func newSave(save_num):
 	data_payload["playername"] = global.playerName
 	#Use this in the future if you need to handle supporting older save formats
 	data_payload["save_minor_version"] = 1
+	
+	data_payload["current_scene_name"] = global.current_scene_name
+	
 	
 	#Display
 	var layer_details = []
@@ -449,6 +453,8 @@ func newSave(save_num):
 		
 		if l.has("mask"):
 			v["mask"] = l["mask"]
+		if l.has("still"):
+			v["still"] = l["still"]
 		layer_details.append(v)
 		
 	data_payload["layers"] = layer_details
@@ -459,6 +465,7 @@ func newSave(save_num):
 	
 	#Camera
 	data_payload["zoom"] = [camera.zoom.x, camera.zoom.y]
+	data_payload["offset"] = [camera.offset.x, camera.offset.y]
 	
 	#Dialogue box
 	data_payload["seen_choices"] = dialogue_box.choices
@@ -480,18 +487,28 @@ func newSave(save_num):
 			notsame[1] = null
 	data_payload["notsame"] = notsame
 	
+	data_payload["current_name_tag"] = dialogue_box.get_node("Nametag").text
+	data_payload["current_text_character"] = systems.textBoxBackground.current_char
+	data_payload["current_voice_character"] = systems.textBoxBackground.current_voice
+	
 	#Sound
-	if sound.playingSFX["path"] != "NULL":
-		data_payload["sfx"] = sound.playingSFX
-		var sfx_node = sound.get_node(sound.audioname(sound.playingSFX.path))
+	data_payload["sfx"] = []
+	data_payload["music"] = []
+	for sfx in sound.playingSFX:
+		var new_val = sfx.duplicate()
+		var sfx_node = new_val["node"]
+		new_val.erase("node")
 		if sfx_node != null and sfx_node is AudioStreamPlayer:
-			data_payload["sfx"]["position"] = sfx_node.get_playback_position()
-	if sound.playing["path"] != "NULL":
-		data_payload["music"] = sound.playing
-		var music_node = sound.get_node(sound.audioname(sound.playing.path))
+			new_val["position"] = sfx_node.get_playback_position()
+		data_payload["sfx"].append(new_val)
+	for music in sound.playing:
+		var new_val = music.duplicate()
+		var music_node = new_val["node"]
+		new_val.erase("node")
 		if music_node != null and music_node is AudioStreamPlayer:
-			data_payload["music"]["position"] = music_node.get_playback_position()
-
+			new_val["position"]= music_node.get_playback_position()
+		data_payload["music"].append(new_val)
+		
 	var save_path = SAVE_FOLDER.plus_file(SAVE_NAME_TEMPLATE % save_num)
 	file.open(save_path, File.WRITE)#, 'G@Y&D3@D')
 	file.store_line(to_json(data_payload))
@@ -500,6 +517,8 @@ func newSave(save_num):
 	saveLock = false
 	
 func newLoad(save_file):
+	if game.loadSaveFile:
+		return
 	game.loadSaveFile = true
 	if global.dialogueBox != null and is_instance_valid(global.dialogueBox):
 		global.dialogueBox.get_parent().remove_child(global.dialogueBox)
@@ -534,6 +553,7 @@ func newLoad(save_file):
 	display = systems.get_node('Display')
 	
 	global.playerName = data_payload["playername"]
+	global.current_scene_name = data_payload["current_scene_name"]
 	
 	#Display
 	var layers_by_z = {}
@@ -557,7 +577,7 @@ func newLoad(save_file):
 		#	cur_z = data_payload
 		var z = int(l["z"])
 		if l.has("mask"):
-			display.mask(l["mask"], l["path"], l["type"], z)
+			display.mask(l["mask"], l["path"], l["still"], l["type"], z)
 		elif l["type"] == "video":
 			display.video(l["path"], z)
 		else:
@@ -578,6 +598,7 @@ func newLoad(save_file):
 		
 	#Camera
 	camera.zoom = Vector2(data_payload["zoom"][0], data_payload["zoom"][1])
+	camera.offset = Vector2(data_payload["offset"][0], data_payload["offset"][1])
 	
 	#Dialogue box
 	systems.dialogue(data_payload["dialogue_script"], data_payload["dialogue_index"], data_payload["seen_choices"], data_payload["in_choice"], data_payload["chosen_choices"], data_payload["cg"])
@@ -588,6 +609,7 @@ func newLoad(save_file):
 		dialogue_box.notsame[1] = Vector2(dialogue_box.notsame[1][0], dialogue_box.notsame[1][1])
 		
 	dialogue_box.get_node("Dialogue").text = data_payload["text"]
+	dialogue_box.get_node("Dialogue").visible_characters = data_payload["text"].length()
 	dialogue_box.numOfChoices = data_payload["current_choices"].size()
 	if data_payload["current_choices"].size() > 0:
 		dialogue_box.displayChoices = data_payload["current_choices"]
@@ -595,16 +617,22 @@ func newLoad(save_file):
 		dialogue_box.displayingChoices = dialogue_box.displayChoices.size() > 0
 	
 	dialogue_box.overlays = data_payload["overlays"]
+	dialogue_box.get_node("Nametag").text = data_payload["current_name_tag"]
+	systems.textBoxBackground.swap_character(data_payload["current_text_character"], data_payload["current_voice_character"])
+	systems.textBoxBackground.make_visible()
 	
 	#Sounds
 	if data_payload.has("sfx"):
-		var n = sound.sfx(data_payload["sfx"]["path"], data_payload["sfx"]["volume"])
-		n.seek(data_payload["sfx"]["position"])
+		for sfx in data_payload["sfx"]:
+			var n = sound.sfx(sfx["path"], sfx["volume"])
+			n.seek(sfx["position"])
 	if data_payload.has("music"):
-		var n = sound.music(data_payload["music"]["path"], data_payload["music"]["loop"], data_payload["music"]["volume"])
-		n.seek(data_payload["music"]["position"])
+		for music in data_payload["music"]:
+			var n = sound.music(music["path"], music["loop"], music["volume"])
+			n.seek(music["position"])
 		
 	global.pause_input = false
 	global.fading = false
 	global.sliding = false
 	game.loadSaveFile = false
+	
