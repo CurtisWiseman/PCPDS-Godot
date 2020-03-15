@@ -1,7 +1,5 @@
 [Scene: Enlisting]
 
-[CG: PCPDS_CG_RoughhouseDrawing_Bad]
-
 (PCPG) !enlist rowdys
 
 (Ben|Ben, campus, slouch, neutral) Well, shit.
@@ -281,10 +279,9 @@ I leave the confines of the Rowdy Roughhouse, with Endless War walking just a fe
 (Endless War|Endless War, stand, neutral) Of course. Meet me tomorrow on the school roof at the beginning of lunch. We have much to do before we can truly bring upon this new age.
 
 [fade to black]
-
 [EndlessWar leaves]
 
-[ENDLESS WAR ROUTE START]
+[CHANGE endlesswarminiroute fade]
 *
 
 *Er, I don’t think I’m cut out for this ‘WAR’ thing after all.*
@@ -875,9 +872,9 @@ The gooey remains of a white cabbage mixed with mayo trickles down my gullet. It
 
 (Crocs, neutral) Perfect. Now, all we gotta do is find-
 
-(Lord of Ghosts|The Lord of Ghosts, neutral, silhouette, center) …
+(Lord of Ghosts|The Lord of Ghosts, neutral, blank, silhouette, center) …
 
-(Lord of Ghosts|The Lord of Ghosts, neutral) HELLO THERE, MORTALS.
+(Lord of Ghosts|The Lord of Ghosts, neutral, blank) HELLO THERE, MORTALS.
 
 (Connor|BLUE WHALE, disappointed) oh god oh fuck
 
@@ -885,7 +882,7 @@ The gooey remains of a white cabbage mixed with mayo trickles down my gullet. It
 
 (PCPG) Oh I know you! You’re the Lord of Gho-
 
-(Lord of Ghosts|The Lord of Ghosts, angry) BOO!
+(Lord of Ghosts|The Lord of Ghosts, angry, blank) BOO!
 
 (PCPG) AAAAAAHHHHHHHHHHHHHHH!!
 
@@ -898,13 +895,13 @@ The gooey remains of a white cabbage mixed with mayo trickles down my gullet. It
 
 The two Rowdys book it, leaving me in the dust. I’m spooked right onto the hard floor, just inches away from the ghastly apparition that can only have the worst of intentions.
 
-(Lord of Ghosts|The Lord of Ghosts, happy) SPOOKED YA, DIDN’T I?
+(Lord of Ghosts|The Lord of Ghosts, happy, blank) SPOOKED YA, DIDN’T I?
 
 (PCPG) L-l-look, you can have my slime! Just don’t kill me, please!
 
-(Lord of Ghosts|The Lord of Ghosts, blush2) KILL YOU? WHY, IT NEVER ENTERED MY MIND.
+(Lord of Ghosts|The Lord of Ghosts, blush2, blank) KILL YOU? WHY, IT NEVER ENTERED MY MIND.
 
-(Lord of Ghosts|The Lord of Ghosts, blush1) I MEAN YOU NO HARM, YOU POOR SOUL. INSTEAD, I HAVE COME TO CONGRATULATE YOU.
+(Lord of Ghosts|The Lord of Ghosts, blush1, blank) I MEAN YOU NO HARM, YOU POOR SOUL. INSTEAD, I HAVE COME TO CONGRATULATE YOU.
 
 The ghost begins to shuffle around a bit, revealing something in the process…
 
@@ -1021,7 +1018,7 @@ Out of nowhere, Crocs hands me one of his spare pistols.
 
 (Munchy|Munchy, campus, squatting, angryMAX) COP.
 
-(Ben|Ben, campus, dab, neutral) KILLERS.
+(Ben|Ben, campus, dab) KILLERS.
 
 (Munchy|Munchy, campus, squatting, angryMAX) ENDLESS WARRRRRRRR!
 
@@ -1558,7 +1555,7 @@ Professor Bestman is Ben’s brother? Never would’ve guessed.
 
 A trail of smoke billows into the room. It can only mean one thing, that the same threatening aura found at the Killer lunch table has stepped into the Rowdy base.
 
-(Ben|Ben, casual, base, offright, slide, right) What’s up guys?
+(Ben|Ben, casual, base, neutral, offright, slide, right) What’s up guys?
 
 (Munchy|Munchy, special, squatting, angryMIN) Jesus Christ Ben, did you really have to come dressed like a homeless person? Oh, and cool it with that Juul of yours, or whatever the fuck it is.
 
@@ -1748,7 +1745,7 @@ Running back and forth through his hidden tunnel, Munchy manages to evade detect
 
 (Ben|Ben, casual, base, neutral, right-350, fade) …
 
-(Ben|Ben, casual, dab, neutral) !dab
+(Ben|Ben, casual, dab) !dab
 
 (Nate|Nate, campus, standing, angryMIN|shades, right+150, fade) Ah, damn.
 

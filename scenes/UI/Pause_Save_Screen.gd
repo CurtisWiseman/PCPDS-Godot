@@ -36,8 +36,9 @@ func menu_in():
 	$"Save Pages".visible = false
 	$"Page Buttons".visible = false
 	$close_button.visible = false
-	visible = true
 	$background.menu_in()
+	yield($background, "frame_changed")
+	visible = true
 	yield($background, "intro_finished")
 	$"Save Pages".visible = true
 	$"Page Buttons".visible = true
@@ -77,7 +78,6 @@ func loadSaveGames():
 
 # Displays the gathered saves on their corresponding SaveBox.
 func displaySaves():
-	
 	var file = File.new()
 	
 	for save in listOfSaves:
@@ -87,7 +87,7 @@ func displaySaves():
 		var box
 		
 		for image in listOfImages:
-			if saveName.is_subsequence_of(image):
+			if saveName + ".png" == image:
 				saveImage = image
 				break
 		
@@ -151,7 +151,8 @@ func _on_LoadBox_pressed(saveBox):
 		for save in listOfSaves:
 			if save == saveFile:
 				game.newLoad(saveFile)
-				global.toggle_pause()
+				if get_tree().paused:
+					global.toggle_pause()
 				break
 	elif (not global.pause_input or global.dialogueBox.displayingChoices) and game.safeToSave:
 		PauseScreen.visible = false

@@ -443,7 +443,7 @@ Should I accept?
 [fade to black]
 [StopMusic]
 
-[CHANGE Endless War miniroute fade]
+[CHANGE endlesswarminiroute fade]
 *
  
 *I’m not sure…*
@@ -476,7 +476,7 @@ A sharp pain suddenly pierces my stomach before I have a chance to process it. B
 [Remove Overlay]
 And then everything went black.
  
-[BAD END] 
+[CREDITS]
 *
 *
 
@@ -798,7 +798,7 @@ I’m due for my weekly report to Ben on my progress in finding the Pizza Party 
  
 Schrafft also sent out a cap call for a zone recently, a nice diversion from this search, so I’ll probably go join them afterwards.
  
-[Location: saintbencathedral] 
+[Location: saintbencathedral]
 I find Ben alone on the steps in front of the Cathedral.
  
 (Ben, casual, base, neutral, offleft, center) Hey PCPG, got a dead cop on ya?
@@ -882,7 +882,7 @@ Uh oh.
 (Brunswick, neutral, right, slide, left) SWINE!
  
 [SFX: PCP-SFX_PokeballReturn]
-[Brunswick leaves] 
+[Brunswick leaves]
 But before Brunswick has a chance to trample us and destroy Ben’s room in the process, Ben pulls out a Pokéball and returns him to it.
 
 [Song: PCPDating_DateTheme]
@@ -1400,7 +1400,7 @@ Shit. In my deep love for the man I have forsaken his original request of me, an
 *Maybe the real Pizza Party University was..*
  
 *Well, I don’t know, but..*
- 
+
 (PCPG) Well, to be honest, I don’t know where the Pizza Party University is. It seems that nobody does, and all my leads on them are mere speculation or lies made by people who want their five minutes of fame.
  
 (PCPG) But during my investigations, I’ve thought about why the PPU would come after our base like that, despite them being so secretive and subtle otherwise. Why would they jeopardize their secrecy?
@@ -1451,7 +1451,7 @@ How could this have happened? What happened to everything we did together? Didn�
  
 (Ben, casual, base, sadMIN) I guess that’s a no. Goodbye, normie.
 
-[StopMusic] 
+[StopMusic]
 [SFX: PCP-SFX_Gunshot]
 (Ben, casual, base, angryMAX) !kill PCPG
 
@@ -1504,11 +1504,12 @@ Oh god it is.
 
 [fade to black]
 [StopMusic]
-
+[Forget Well, I don’t know, but..]
+[Forget Maybe the real Pizza Party University was..]
 [==> !decide fate]
 *
 
-*Maybe the real Pizza Party University..*
+*Maybe the real Pizza Party University was..*
  
 (PCPG) You know this whole time we’ve been searching for this Pizza Party University as though it were a physical location or a group of people, but maybe it’s actually something else.
  

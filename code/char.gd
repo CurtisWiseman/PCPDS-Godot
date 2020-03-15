@@ -1,7 +1,9 @@
 extends Node
 
 # Initialize the characters with dictionaries.
-var nine11 = {'video': ['res://images/characters/9-11/911_boi.ogv', 'res://images/characters/9-11/911_concern.ogv', 'res://images/characters/9-11/911_pewpew.ogv', 'res://images/characters/9-11/911_standin.ogv'], 'body': ['res://images/characters/9-11/911_boi.png', 'res://images/characters/9-11/911_concern.png', 'res://images/characters/9-11/911_pewpew.png', 'res://images/characters/9-11/911_standin.png']}
+var nine11 = {'video': ['res://images/characters/9-11/911_boi.ogv', 'res://images/characters/9-11/911_concern.ogv', 'res://images/characters/9-11/911_pewpew.ogv', 'res://images/characters/9-11/911_standin.ogv'], 
+				'body': ['res://images/characters/9-11/911_boi.png', 'res://images/characters/9-11/911_concern.png', 'res://images/characters/9-11/911_pewpew.png', 'res://images/characters/9-11/911_standin.png'],
+				'still': ['res://images/characters/9-11/911_boi_still.png', 'res://images/characters/9-11/911_concern_still.png', 'res://images/characters/9-11/911_pewpew_still.png', 'res://images/characters/9-11/911_standin_still.png']}
 
 var ephraim = {'body': ['res://images/characters/Cop Killers/ephraim_base.png', 'res://images/characters/Cop Killers/ephraim_dab.png']}
 var k1p = {'body': ['res://images/characters/Cop Killers/k1p_base.png', 'res://images/characters/Cop Killers/k1p_dab.png'], "blank": ["res://images/blank.png"]}
@@ -145,6 +147,12 @@ var digi = {
 			"res://images/characters/Digibro/digi_special2_mask.png",
 			"res://images/characters/Digibro/digi_special3_mask.png",
 			"res://images/characters/Digibro/digi_special4_mask.png"
+		],
+		"still": [
+			"res://images/characters/ArtsoFartso/artsofartso_special1_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special2_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special3_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special4_4.png"
 		]
 	}
 }
@@ -173,10 +181,6 @@ var artsofartso = {
 			"res://images/characters/ArtsoFartso/Faces_Special/artsofartso_face_special_smittenMIN.png",
 			"res://images/characters/ArtsoFartso/Faces_Special/artsofartso_face_special_smittenMAX.png"
 		],
-		"blush": [
-			"res://images/characters/ArtsoFartso/AFL/artsofartso_face_special_blushiesMIN.png",
-			"res://images/characters/ArtsoFartso/AFL/artsofartso_face_special_blushiesMAX.png"
-		],
 		"body": [
 			"res://images/characters/ArtsoFartso/artsofartso_special1.ogv",
 			"res://images/characters/ArtsoFartso/artsofartso_special2.ogv",
@@ -188,13 +192,19 @@ var artsofartso = {
 			"res://images/characters/ArtsoFartso/artsofartso_special2_mask.png",
 			"res://images/characters/ArtsoFartso/artsofartso_special3_mask.png",
 			"res://images/characters/ArtsoFartso/artsofartso_special4_mask.png"
+		],
+		"still": [
+			"res://images/characters/ArtsoFartso/artsofartso_special1_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special2_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special3_4.png",
+			"res://images/characters/ArtsoFartso/artsofartso_special4_4.png"
 		]
 	}
 }
 
 var adelram = { 'blush': ['res://images/characters/Adelram/afl/adelram_face_blush.png'], 'body': ['res://images/characters/Adelram/adelram.png'], 'face': ['res://images/characters/Adelram/face/adelram_face_1.png', 'res://images/characters/Adelram/face/adelram_face_2.png']}
 var azumi = {'campus': {'happy': ['res://images/characters/Azumi/face/azumi_face_happyMIN.png', 'res://images/characters/Azumi/face/azumi_face_happyMAX.png'], 'angry': ['res://images/characters/Azumi/face/azumi_face_angryMIN.png', 'res://images/characters/Azumi/face/azumi_face_angryMAX.png'], 'confused': ['res://images/characters/Azumi/face/azumi_face_confusedMIN.png', 'res://images/characters/Azumi/face/azumi_face_confusedMAX.png'], 'neutral': ['res://images/characters/Azumi/face/azumi_face_neutral.png'], 'sad': ['res://images/characters/Azumi/face/azumi_face_sadMIN.png', 'res://images/characters/Azumi/face/azumi_face_sadMAX.png'], 'shock': ['res://images/characters/Azumi/face/azumi_face_shockMIN.png', 'res://images/characters/Azumi/face/azumi_face_shockMAX.png'], 'smitten': ['res://images/characters/Azumi/face/azumi_face_smittenMIN.png', 'res://images/characters/Azumi/face/azumi_face_smittenMAX.png'], 'blush': ['res://images/characters/Azumi/afl/azumi_face_angryMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_angryMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_confusedMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_confusedMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_happyMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_happyMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_neutral_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_neutral_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_sadMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_sadMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_shockMAX_blushMIN.png' ,'res://images/characters/Azumi/afl/azumi_face_shockMAX_blushMAX.png', 'res://images/characters/Azumi/afl/azumi_face_smittenMAX_blushMIN.png', 'res://images/characters/Azumi/afl/azumi_face_smittenMAX_blushMAX.png'], 'body': ['res://images/characters/Azumi/azumi_campus.png']}, 'casual': {'happy': [], 'angry': [], 'confused': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': ['res://images/characters/Azumi/azumi_casual.png']}}
-var brunswick = {'confused': ['res://images/characters/Brunswick/faces/brunswick_face_confused.png'], 'neutral': ['res://images/characters/Brunswick/faces/brunswick_face_neutral.png'], 'worried': ['res://images/characters/Brunswick/faces/brunswick_face_worried.png'], 'body': ['res://images/characters/Brunswick/brunswick.png']}
+var brunswick = {'confused': ['res://images/characters/Brunswick/faces/brunswick_fblace_confused.png'], 'neutral': ['res://images/characters/Brunswick/faces/brunswick_face_neutral.png'], 'worried': ['res://images/characters/Brunswick/faces/brunswick_face_worried.png'], 'body': ['res://images/characters/Brunswick/brunswick.png']}
 var cerise = {'happy': ['res://images/characters/Cerise/faces/cerise_face_happy.png'], 'serious': ['res://images/characters/Cerise/faces/cerise_face_serious.png'], 'body': ['res://images/characters/Cerise/cerise.png']}
 var coltcorona = {'cani': {'angry': ['res://images/characters/Colt Corona/faces/coltcorona_face1_angryMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_angryMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_angryMAX.png'], 'confused': ['res://images/characters/Colt Corona/faces/coltcorona_face1_confusedMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_confusedMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_confusedMAX.png'], 'happy': ['res://images/characters/Colt Corona/faces/coltcorona_face1_happyMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_happyMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_happyMAX.png'], 'neutral': ['res://images/characters/Colt Corona/faces/coltcorona_face1_neutral.png'], 'sad': ['res://images/characters/Colt Corona/faces/coltcorona_face1_sadMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_sadMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_sadMAX.png'], 'shock': ['res://images/characters/Colt Corona/faces/coltcorona_face1_shockMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_shockMED.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_shockMAX.png'], 'smitten': ['res://images/characters/Colt Corona/faces/coltcorona_face1_smittenMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face1_smittenMAX.png'], 'blush': ['res://images/characters/Colt Corona/afls/coltcorona_face1_angryMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_confusedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_happyMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_neutral_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_sadMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_shockedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face1_smittenMAX_blush.png'], 'body': ['res://images/characters/Colt Corona/coltcorona_1_cani.png']}, 'feetguitar': {'angry': ['res://images/characters/Colt Corona/faces/coltcorona_face3_angryMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_angryMAX.png'], 'confused': ['res://images/characters/Colt Corona/faces/coltcorona_face3_confusedMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_confusedMAX.png'], 'happy': ['res://images/characters/Colt Corona/faces/coltcorona_face3_happyMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_happyMAX.png'], 'neutral': ['res://images/characters/Colt Corona/faces/coltcorona_face3_neutral.png'], 'sad': ['res://images/characters/Colt Corona/faces/coltcorona_face3_sadMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_sadMAX.png'], 'shock': ['res://images/characters/Colt Corona/faces/coltcorona_face3_shockMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_shockMAX.png'], 'smitten': ['res://images/characters/Colt Corona/faces/coltcorona_face3_smittenMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face3_smittenMAX.png'], 'blush': ['res://images/characters/Colt Corona/afls/coltcorona_face3_angryMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_confusedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_happyMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_neutral_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_sadMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_shockedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face3_smittenMAX_blush.png'], 'body': ['res://images/characters/Colt Corona/coltcorona_2_feetguitar.png']}, 'gun': {'angry': [], 'confused': [], 'happy': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': ['res://images/characters/Colt Corona/coltcorona_2_gun.png']}, 'thisvideo': {'angry': [], 'confused': [], 'happy': [], 'neutral': [], 'sad': [], 'shock': [], 'smitten': [], 'blush': [], 'body': ['res://images/characters/Colt Corona/coltcorona_2_thisvideo.png']}, 'bein': {'angry': ['res://images/characters/Colt Corona/faces/coltcorona_face2_angryMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_angryMAX.png'], 'confused': ['res://images/characters/Colt Corona/faces/coltcorona_face2_confusedMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_confusedMAX.png'], 'happy': ['res://images/characters/Colt Corona/faces/coltcorona_face2_happyMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_happyMAX.png'], 'neutral': ['res://images/characters/Colt Corona/faces/coltcorona_face2_neutral.png'], 'sad': ['res://images/characters/Colt Corona/faces/coltcorona_face2_sadMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_sadMAX.png'], 'shock': ['res://images/characters/Colt Corona/faces/coltcorona_face2_shockMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_shockMAX.png'], 'smitten': ['res://images/characters/Colt Corona/faces/coltcorona_face2_smittenMIN.png', 'res://images/characters/Colt Corona/faces/coltcorona_face2_smittenMAX.png'], 'blush': ['res://images/characters/Colt Corona/afls/coltcorona_face2_angryMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_confusedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_happyMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_neutral_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_sadMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_shockedMAX_blush.png', 'res://images/characters/Colt Corona/afls/coltcorona_face2_smittenMAX_blush.png'], 'body': ['res://images/characters/Colt Corona/coltcorona_3_bein.png']}}
 var connor = {'body': ['res://images/characters/Connor/connor_happy.png', 'res://images/characters/Connor/connor_angry.png', 'res://images/characters/Connor/connor_disappointed.png', 'res://images/characters/Connor/connor_neutral.png'], "blank": ["res://images/blank.png"]} 
@@ -204,7 +214,7 @@ var drugdealer = {'body': ['res://images/characters/Drug dealer/drugdealer_angry
 var geoff = {'body': ['res://images/characters/Geoff/geoff_dead.png', 'res://images/characters/Geoff/geoff_default.png', 'res://images/characters/Geoff/geoff_face_smug.png'], 'angry': ['res://images/characters/Geoff/geoff_face_angry.png'], 'happy': ['res://images/characters/Geoff/geoff_face_happy.png'], 'kawaii': ['res://images/characters/Geoff/geoff_face_kawaii.png'], 'kawaii_sad': ['res://images/characters/Geoff/geoff_face_kawaii_sad.png'], 'neutral': ['res://images/characters/Geoff/geoff_face_neutral.png'], 'sad': ['res://images/characters/Geoff/geoff_face_sad.png'], 'shock': ['res://images/characters/Geoff/geoff_face_shock.png'], 'smug': ['res://images/characters/Geoff/geoff_face_smug2.png']}
 var gungirl = {'body': ['res://images/characters/Gungirl/gungirl_1.png', 'res://images/characters/Gungirl/gungirl_2.png', 'res://images/characters/Gungirl/gungirl_3.png', 'res://images/characters/Gungirl/gungirl_4.png', 'res://images/characters/Gungirl/gungirl_5.png', 'res://images/characters/Gungirl/gungirl_6.png', 'res://images/characters/Gungirl/gungirl_7.png', 'res://images/characters/Gungirl/gungirl_8.png', 'res://images/characters/Gungirl/gungirl_9.png']}
 var lethal = {'body': ['res://images/characters/Lethal/lethal_1.png', 'res://images/characters/Lethal/lethal_2.png', 'res://images/characters/Lethal/lethal_3.png', 'res://images/characters/Lethal/lethal_4.png', 'res://images/characters/Lethal/lethal_5.png', 'res://images/characters/Lethal/lethal_silouette.png'], 'angry': ['res://images/characters/Lethal/lethal_face_angryMIN.png', 'res://images/characters/Lethal/lethal_face_angryMAX.png'], 'crazy': ['res://images/characters/Lethal/lethal_face_crazyMIN.png', 'res://images/characters/Lethal/lethal_face_crazyMAX.png'], 'happy': ['res://images/characters/Lethal/lethal_face_happyMIN.png', 'res://images/characters/Lethal/lethal_face_happyMAX.png'], 'lewd': ['res://images/characters/Lethal/lethal_face_lewdMIN.png', 'res://images/characters/Lethal/lethal_face_lewdMAX.png'], 'smug': ['res://images/characters/Lethal/lethal_face_smugMIN.png', 'res://images/characters/Lethal/lethal_face_smugMAX.png']}
-var lordofghosts = {'body': ['res://images/characters/Lord of Ghosts/lordofghosts_angry.png', 'res://images/characters/Lord of Ghosts/lordofghosts_blush1.png', 'res://images/characters/Lord of Ghosts/lordofghosts_blush2.png', 'res://images/characters/Lord of Ghosts/lordofghosts_blush3.png', 'res://images/characters/Lord of Ghosts/lordofghosts_confuse.png', 'res://images/characters/Lord of Ghosts/lordofghosts_happy.png', 'res://images/characters/Lord of Ghosts/lordofghosts_neutral.png', 'res://images/characters/Lord of Ghosts/lordofghosts_sad.png', 'res://images/characters/Lord of Ghosts/lordofghosts_shock.png']}
+var lordofghosts = {'body': ['res://images/characters/Lord of Ghosts/lordofghosts_angry.png', 'res://images/characters/Lord of Ghosts/lordofghosts_blush1.png', 'res://images/characters/Lord of Ghosts/lordofghosts_blush2.png', 'res://images/characters/Lord of Ghosts/lordofghosts_blush3.png', 'res://images/characters/Lord of Ghosts/lordofghosts_confuse.png', 'res://images/characters/Lord of Ghosts/lordofghosts_happy.png', 'res://images/characters/Lord of Ghosts/lordofghosts_neutral.png', 'res://images/characters/Lord of Ghosts/lordofghosts_sad.png', 'res://images/characters/Lord of Ghosts/lordofghosts_shock.png'], "blank": ["res://images/blank.png"]}
 var magda = {'body': ['res://images/characters/Magda/magda_neutral.png', 'res://images/characters/Magda/magda_worried.png'], "blank": ["res://images/blank.png"]}
 var mumkeyjones = {'body': ['res://images/characters/Mumkey Jones/mumkey.png']}
 var pcpguy = {'body': ['res://images/characters/PCPG/pcpg_1.png', 'res://images/characters/PCPG/pcpg_2.png']}
@@ -477,7 +487,7 @@ var tom = {
 			'smitten':['res://images/characters/Tom/faces_4/tom_face_4_smittenMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_smittenMAX.png'],
 			'drunk':['res://images/characters/Tom/faces_4/tom_face_4_drunkMIN.png', 'res://images/characters/Tom/faces_4/tom_face_4_drunkMAX.png'],
 			'blush': null, 
-			'body': ['res://images/characters/Tom/tom_3.png']
+			'body': ['res://images/characters/Tom/tom_4.png']
 			},
 		}
 
@@ -634,9 +644,9 @@ func _ready():
 	davoo.drunksmile = davoo.campus.drunksmile
 	davoo.drunkdrool = davoo.campus.drunkdrool
 	davoo.catboy = davoo.campus.catboy
-	check_all_character_art_exists_and_precache_video()
+	#check_all_character_art_exists()
 	
-func check_all_character_art_exists_and_precache_video():
+func check_all_character_art_exists():
 	var file = File.new()
 	var characters_to_check = ["nine11", "ephraim", "k1p", "magicks", "schrafft", "smearg", "copkillers", "kazee", "may", "michelle", "actiongiraffe", "digi", "artsofartso", "adelram", "azumi", "brunswick", "cerise", "coltcorona", "connor", "crocs", "drugdealer", "geoff", "gungirl", "lethal", "lordofghosts", "magda", "mumkeyjones", "pcpguy", "redman", "russel", "snob", "sophia", "hussiefox", "v", "vincent", "clara", "maygib", "thoth", "gibbon", "mage", "munchy", "nate", "jesse", "tom", "endlesswar", "ben", "davoo"]
 	for character in characters_to_check:
@@ -653,25 +663,3 @@ func check_all_character_art_exists_and_precache_video():
 			elif typeof(first) == TYPE_STRING:
 				if not file.file_exists(first):
 					print('Error: The given content ' + first + ' does not exist!')
-				if first.ends_with(".ogv"):
-					load(first)
-					
-func precache_videos(display):
-	var file = File.new()
-	var characters_to_check = ["digi", "artsofartso"]
-	for character in characters_to_check:
-		var art = get(character)
-		var depth_search = [art]
-		while depth_search.size() > 0:
-			var first = depth_search.pop_front()
-			if typeof(first) == TYPE_DICTIONARY:
-				for val in first.values():
-					depth_search.append(val)
-			elif typeof(first) == TYPE_ARRAY:
-				for val in first:
-					depth_search.append(val)
-			elif typeof(first) == TYPE_STRING:
-				if not file.file_exists(first):
-					print('Error: The given content ' + first + ' does not exist!')
-				if first.ends_with(".ogv"):
-					display.precache_vid(first)

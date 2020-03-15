@@ -41,7 +41,7 @@ func _process(delta):
 			
 		match cur_track:
 			Track.In:
-				if frame_num >= 11:
+				if frame_num >= 10:
 					emit_signal("intro_finished")
 					cur_track = Track.Idle
 					frame_num = 0
@@ -57,7 +57,8 @@ func _process(delta):
 		#Done seperately so the above match can change tracks
 		match cur_track:
 			Track.In:
-				path += "Intro/intro "
+				min_digits = 5
+				path += "Intro/pause menu exporter_"
 			Track.Out:
 				#for node in $"../NewButtons".get_children():
 				#	node.visible = false
@@ -71,5 +72,7 @@ func _process(delta):
 		while num_text.length() < min_digits:
 			num_text = "0"+num_text
 		texture = load(path + num_text + ".png")
-		old_frames[texture.resource_path] = texture
+		if texture != null:
+			old_frames[texture.resource_path] = texture
+		emit_signal("frame_changed")
 	timer += delta

@@ -1,6 +1,6 @@
 ﻿[Scene: Walking to School]
-
 [Song: PCPDating_HomeMorning]
+
 Wow. My first day at PCP University!
 
 My last school threw me out for being too retarded and not being able to finish my assignments.
@@ -284,25 +284,25 @@ The hall itself is pretty normal looking. Grey rubber floors, scratched peach wa
 
 However, while the people at the tables are separated into different cliques, the cliques themselves are kinda different from what I expected.
 
-[Zoom in slightly to Po D. Cast table]
+[ZOOM 0.5 -0.5 -0.1 0.66]
 
 There’s a table full of what appear to be pirates speaking in weebanese and playing cool music.
 
-[Zoom in slightly to Rowdy’s table]
+[ZOOM 0.5 0 -0.1 0.66]
 
 Another has a bunch of rowdy students madly shaking about like they all are having a stroke. What the fuck?
 
-[Zoom in slightly to Killer’s table]
+[ZOOM 0.5 0.5 -0.2 0.66]
 
 Another is just consumed by a huge cloud of smoke, or wait, is that vapor?
 
-[Zoom in slightly to Dads table]
+[ZOOM 0.5 -0.5 -0.25 0.66]
 
 Another has a group of students complaining about their food to each other as they’re eating it. But the weird part is that massive bag next to them labeled ‘Dads.’
 
 (PCPG) Uh, Gibbon, are there... people... in that bag?
 
-[Zoom out to original background]
+[ZOOM 1.0 0.0 0.0 0.66]
 
 (Gibbon, campus, default, happyMIN, offright, slide, right) Yeah don’t worry about it, they’re just being cool you know?
 
@@ -797,7 +797,7 @@ I don’t get it.
 
 (9/11, standin) You know what’s another annoying thing I hear on campus, these rumours that Bush somehow “did” me. I am not THAT easy okay. Even though Bush is a handsome hunk of a man, I am in no way homosexually attracted- 
 
-(???) YOU BETTER NOT BE TALKING SMACK ABOUT ME BEHIND MY BACK 9/11! QUIT FUCKING AROUND AND GET THE FUCK BACK IN HERE!
+(???|Bush) YOU BETTER NOT BE TALKING SMACK ABOUT ME BEHIND MY BACK 9/11! QUIT FUCKING AROUND AND GET THE FUCK BACK IN HERE!
 
 (Munchy, campus, 1, confusedMED) Wait... that voice... is that the 43rd president of the United States George W. Bush himself?!?!
 
@@ -1489,22 +1489,22 @@ But despite Ben’s pleas, Brunswick continues slowly towards his doom. Students
 Just before Brunswick falls into the portal and is consumed once more by the fire he escaped from, a commanding shout sounds from the classroom door.
 
 [StopMusic]
-(Lord of Ghosts|???, shock, offright, slide, right) STOP!
+(Lord of Ghosts|???, shock, blank, offright, slide, right) STOP!
 
-(Lord of Ghosts, neutral, right)
+(Lord of Ghosts, neutral, blank, right)
 Somehow this gets to Brunswicks ears, stopping him inches from the portal’s edge.
 
 (Russel, base, worried, center-50) The Lord of Ghosts himself? But sir what are you doing here?
 
-(Lord of Ghosts|The Lord of Ghosts, angry, right) I WANT YOU TO LET GO OF THAT POKÉMON.
+(Lord of Ghosts|The Lord of Ghosts, angry, blank, right) I WANT YOU TO LET GO OF THAT POKÉMON.
 
 (Russel, base, worried, center-50) B-but sir, he belongs in Pokémon Hell! I made a whole campaign to #LetRusselWrestle in order to defeat and capture him at the third PCP Royal Rumble, but I unfortunately missed my chance. This is now my time to drag him down to where he belongs!
 
-(Lord of Ghosts|The Lord of Ghosts, neutral, right) I DO NOT CARE. I AM THE LORD OF GHOSTS AND SO ALL GHOSTS MUST OBEY ME. THAT’S HOW IT WORKS.
+(Lord of Ghosts|The Lord of Ghosts, neutral, blank, right) I DO NOT CARE. I AM THE LORD OF GHOSTS AND SO ALL GHOSTS MUST OBEY ME. THAT’S HOW IT WORKS.
 
 (Russel, base, worried, center-50) I guess... you are right sir.
 
-(Lord of Ghosts, happy, right)
+(Lord of Ghosts, happy, blank, right)
 (Brunswick, worried, 1, right-300, slide, right-150, 10)
 Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. After shaking off his confusion he steps away from the portal and lowers himself to let the student’s on top of him off. 
 
@@ -1525,11 +1525,11 @@ Russel then enters back through the portal and closes it behind him, seemingly r
 (Brunswick, worried, 1, center+50, slide, left, 10)
 (Ben, campus, base, happyMIN, left, slide, center) Wow, uh thanks for the save Lord of Ghosts. Even though we were previously enemies bent on dominating one another that one time, you helped me out big here.
 
-(Lord of Ghosts|The Lord of Ghosts, blushMED, right) DO NOT MENTION IT, FOR I AM THE LORD OF GHOSTS, THAT IS WHAT I DO.
+(Lord of Ghosts|The Lord of Ghosts, blushMED, blank, right) DO NOT MENTION IT, FOR I AM THE LORD OF GHOSTS, THAT IS WHAT I DO.
 
-(Lord of Ghosts|The Lord of Ghosts, neutral, right) I HOWEVER MUST GO NOW, SO BYE BYE...
+(Lord of Ghosts|The Lord of Ghosts, neutral, blank, right) I HOWEVER MUST GO NOW, SO BYE BYE...
 
-(Lord of Ghosts, neutral, right, slide, offright)
+(Lord of Ghosts, neutral, blank, right, slide, offright)
 Unlike Russel, the Lord of Ghosts uses the classroom door to leave us, a far more considerate exit for those who are easily spooked. That Lord of Ghosts guy must be a real samaritan though, helping Brunswick out like that out of the blue. 
 
 His voice sounded awfully familiar. Have I met him before?
@@ -2246,7 +2246,7 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 
 *Cop Killer, obviously*
 
-[CHANGE Ben]
+[CHANGE BenSaint]
 *
 
 *I don’t want to enlist into the WAR*
@@ -2822,7 +2822,7 @@ I guess it was clear from the beginning. I’m too damn autistic to make any mea
 I mean really, don’t I deserve more?
 
 [SFX: PCP-SFX_DoorOpen]
-[Location: mothersbasement] 
+[Location: mothersbasement]
 [Song: PCPDating_SuspiciousFigga]
 [SFX: PCP-SFX_FallDamage]
 
@@ -2853,7 +2853,7 @@ The monkey man starts telling me his story. It at first just sounds like patheti
 
 (Mumkey Jones) Well you were kicked just cause you’re just a boring shill. I excelled at the classes, they just didn’t see my true brilliance for what it’s worth, so don’t you dare compare yourself to me!
 
-[SFX: PCP-SFX_Gunshot] 
+[SFX: PCP-SFX_Gunshot]
 (Geoff, dead, left, slide, offleft)
 (PCPG) Holy shit Mumkey, what the fuck! Wasn’t he your friend?!
 

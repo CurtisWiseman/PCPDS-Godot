@@ -16,43 +16,35 @@ func _ready():
 
 # Where all non-script processing of a scene takes place.
 func scene(lineText, index, dialogueNode):
-	
 	# Use the index to match what line to make something happen on.
 	match(index):
 		26:	# Take User Input
 			game.blockInput = true
 			global.pause_input = true
-
+			global.dialogueBox.waiting_for_player_name = true
+			game.safeToSave = false
+			
 			input = LineEdit.new()
 			input.name = 'HandleMyInput'
 			input = load('res://scenes/UI/HandleInput.tscn').instance()
 			input.node = self
-			input.rect_size.x = 500
-			input.position = Vector2(990,870)
+			input.rect_size.x = 1000
+			var x_offset = global.defaultFont.get_string_size("Well, nice to meet you Gibbon. I’m ").x
+			input.position = global.dialogueBox.get_node("Dialogue").get_global_position()+Vector2(x_offset, 0)
 			input.connect('return_signal', self, 'HandleMyInput')
 			systems.canvas.add_child(input)
 			yield(self, "MyInput_Handled")
 
 			global.playerName = playerName;
-
-			# Create a player name file.
-			var file = File.new()
-			file.open("user://playername.tres", File.WRITE)
-			file.store_string(playerName)
-			file.close()
-
+			global.dialogueBox.waiting_for_player_name = false
 			global.pause_input = false
+			game.safeToSave = true
 			game.blockInput = false
 			dialogueNode.emit_signal('empty_line')
 			systems.canvas.remove_child(input)
 		
 		30: # Read the player name
-			var file = File.new()
-			file.open("user://playername.tres", File.READ)
-			var username = file.get_as_text()
-			file.close()
-			
-			if username.findn('Brad Garlinghouse') == -1 and username.findn('BradGarlinghouse') == -1:
+			if global.playerName.to_lower().replace(" ", "").find('bradgarlinghouse') == -1 :
 				dialogueNode.index = 43
 	
 	return true

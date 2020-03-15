@@ -48,7 +48,7 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 	# Compare the scenechange vs all scenes to find a match.
 	for i in range(0, len(scenes)):
 		
-		if scenechange.to_lower() == scenes[i].to_lower():
+		if scenechange.replace(" ", "").to_lower() == scenes[i].replace(" ", "").to_lower():
 			found = true
 			last = current
 			

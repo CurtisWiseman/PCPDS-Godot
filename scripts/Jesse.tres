@@ -451,11 +451,11 @@ I fumble around and hand him the third pipette from the left. He’s kept everyt
 [Location: scienceclass]
 I look over at the other table to see if they’re faring any better. Not that I can really tell.
 (Action Giraffe, neutral, left)
-(Lord of Ghosts, neutral, right)
+(Lord of Ghosts, neutral, blank, right)
 (Action Giraffe, neutral) I have AIDS.
-(Lord of Ghosts, neutral) BUT WHY IS IT SO CORROSIVE
+(Lord of Ghosts, neutral, blank) BUT WHY IS IT SO CORROSIVE
 (Action Giraffe, angry) I have AIDS.
-(Lord of Ghosts, confused) POINT TAKEN
+(Lord of Ghosts, confused, blank) POINT TAKEN
 I have no idea what they’re talking about.
 [ActionGiraffe leaves]
 [LordofGhosts leaves]
@@ -473,7 +473,7 @@ Davoo hands Mr. Saint the school-grade lined paper we wrote down all the ingredi
 [SLIDE Ben left]
 He dabs over to the other table with a little more spring in his step than usual. However, his mood immediately sours once he approaches Action Giraffe and the ghost’s pungent brew.
 (Action Giraffe, sad, center)
-(Lord of Ghosts, sad, right)
+(Lord of Ghosts, sad, blank, right)
 [Song: PCPDating_ActionFun]
 (Ben|Professor Saint, campus, exasp, shockMIN) Eugh, god, what is that? It reeks!
 (Action Giraffe, sad) I Have AIDS.
@@ -481,7 +481,7 @@ He picks up the flask of “I Have AIDS” to take a closer look.
 (Ben|Professor Saint, campus, exasp, shockMAX) AAAHHH! Hot!!
 …only to hurriedly slam it back down on the table, which spills some of the corrosive liquid on the Lord of Ghosts.
 [SFX: PCP-SFX_DemonScreetch]
-(Lord of Ghosts, shock) WAAAIIIIIIIIIIEEEEEEEEIIIIII!!! MY GHOSTLY ESSENCE FUCK OW OWIE
+(Lord of Ghosts, shock, blank) WAAAIIIIIIIIIIEEEEEEEEIIIIII!!! MY GHOSTLY ESSENCE FUCK OW OWIE
 Burning holes in his, uh, skin, the concoction gives off a visible smoke trail that would no doubt set off the fire alarm, if its batteries had been replaced at all in the last ten years.
 [SLIDE, LordofGhosts, offleft]
 (Ben, campus, exasp, angryMAX)
