@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/911_standin.png-d1ddc4ca3d9c7c120ed54faea65ca7c3.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://images/characters/9-11/911_standin.png"
+dest_files=[ "res://.import/911_standin.png-d1ddc4ca3d9c7c120ed54faea65ca7c3.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
