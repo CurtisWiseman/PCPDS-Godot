@@ -132,6 +132,8 @@ func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoice
 	var defaultFontNametag = DynamicFont.new()
 	defaultFontNametag.font_data = defaultFontNametagDATA
 	defaultFontNametag.size = 40
+	defaultFontNametag.outline_size = 2
+	defaultFontNametag.outline_color = Color(0.5,0.5,0.5,1.0)
 	nametag.add_font_override("font", defaultFontNametag)
 	dialogueBox.add_child(nametag);
 	

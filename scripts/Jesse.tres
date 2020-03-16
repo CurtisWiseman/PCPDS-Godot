@@ -442,7 +442,7 @@ Professor Saint is already halfway out the door by the time I reply.
 (Ben|Professor Saint, campus, point, shockMIN, fade, center) Of course not, think about it...
 He scoffs at me, vape pen clenched between his teeth and arms full of a clutter of documents and comic manuscripts.
 [Ben leaves]
-(Professor Saint) It wouldn’t be an experiment if you were just following a script!
+(Ben|Professor Saint) It wouldn’t be an experiment if you were just following a script!
 [SFX: PCP-SFX_DoorSlam]
 ... and he’s gone. Well, better pair up. Looks like Action Giraffe on my right already has a partner, so that leaves...
 (Davoo, campus, explaining, happyMED, offleft, slide, left) I was born for this! Are you ready?
@@ -463,11 +463,11 @@ I fumble around and hand him the third pipette from the left. He’s kept everyt
 (Davoo) Gah! No no no, that was the Indigo Carmine pipette! Now it’s oxidised and turned the mixture all green and viscous! Well, hopefully the “Davoo Goo” will still be fit for purpose...
 [CG end]
 I look over at the other table to see if they’re faring any better. Not that I can really tell.
-(Action Giraffe, default, neutral, fade, left+100)
-(Lord of Ghosts, default, neutral, fade, right-100)
-(Action Giraffe, neutral) I have AIDS.
+(Action Giraffe, gesture1, neutral, fade, left+100)
+(Lord of Ghosts, neutral, blank, fade, right-100)
+(Action Giraffe, gesture1, neutral) I have AIDS.
 (Lord of Ghosts, neutral) BUT WHY IS IT SO CORROSIVE
-(Action Giraffe, angry) I have AIDS.
+(Action Giraffe, gesture2, angry) I have AIDS.
 (Lord of Ghosts, confused) POINT TAKEN
 I have no idea what they’re talking about.
 [ActionGiraffe leaves]
@@ -478,17 +478,17 @@ When did he get back? Not one to announce his presence like Mr. Bestman, I guess
 (Davoo, campus, explaining, happyMAX, offleft, slide, left) Well professor, it’s an all-purpose cleaning fluid called-
 (Ben|Professor Saint, campus, point, happyMIN) Slime, huh? I like it! It’s got a good gelatinous consistency to it, and it’s the perfect shade of green. Can I take a look at your experiment notes?
 Davoo hands Mr. Saint the school-grade lined paper we wrote down all the ingredients and observations on. He looks over it with uncharacteristically feverish curiosity, before casually stuffing the sheet into his jacket pocket.
-(Ben|Professor Saint, campus, point, happyMAX) Excellent work you two, you each get one Yang dollar as a reward. But I’m out of cash right now, so you can redeem it as a discount when you buy one of my “I’m just being cool” t-shirts. Moving on!
+(Ben|Professor Saint, campus, point, happyMAX) Excellent work you two, you each get one Yang dollar as a reward. But I’m out of cash right now, so you can redeem it as a discount when you buy one of my “I’m just being cool” t-shirts.
 [Davoo leaves]
 [StopMusic]
-(Ben, campus, dab)
+(Ben, campus, dab) Moving on!
 [SLIDE, Ben, left]
 He dabs over to the other table with a little more spring in his step than usual. However, his mood immediately sours once he approaches Action Giraffe and the ghost’s pungent brew.
-(Action Giraffe, default, sad, fade, center)
-(Lord of Ghosts, default, sad, fade, right)
+(Action Giraffe, gesture2, sad, fade, center)
+(Lord of Ghosts, sad, blank, fade, right)
 [Song: PCPDating_ActionFun]
 (Ben|Professor Saint, campus, exasp, shockMIN) Eugh, god, what is that? It reeks!
-(Action Giraffe, sad) I Have AIDS.
+(Action Giraffe, gesture3, sad) I Have AIDS.
 He picks up the flask of “I Have AIDS” to take a closer look.
 (Ben|Professor Saint, campus, exasp, shockMAX) AAAHHH! Hot!!
 ...only to hurriedly slam it back down on the table, which spills some of the corrosive liquid on the Lord of Ghosts.
@@ -497,8 +497,8 @@ He picks up the flask of “I Have AIDS” to take a closer look.
 Burning holes in his, uh, skin, the concoction gives off a visible smoke trail that would no doubt set off the fire alarm, if its batteries had been replaced at all in the last ten years.
 [SLIDE LordofGhosts offleft]
 (Ben, campus, exasp, angryMAX)
-[LordofGhosts leaves]
 [SFX: PCP-SFX_DoorSlam]
+[LordofGhosts leaves]
 Panicking, he rushes out the door so quickly that he knocks over the flask and spills it all over Professor Saint’s jacket!
 (Ben|Professor Saint, campus, exasp, angryMAX) Gah! Get back here you specter of torment!
 (Ben|Professor Saint, campus, slouch, angryMIN) ...bleh. If he hadn’t zoomed around so recklessly, my jacket would be fine goddammit...
@@ -558,7 +558,7 @@ And with that, the two dance out the door arm-in-arm - leaving me to tidy up the
 [fade to black]
 [StopMusic]
 Hm? A text message?
-(Jesse 3:25 PM) “lol sorry about leaving you in the dark there come down to the 711 ill get you some chick n tea my treat”
+(Jesse|Jesse 3:25 PM) “lol sorry about leaving you in the dark there come down to the 711 ill get you some chick n tea my treat”
 Well, looks like that’s my afternoon plans sorted. Off I go!
 [Scene: Chicken and Tea]
 (Ben & Jesse) Fuck ‘em!
@@ -716,13 +716,13 @@ Using all the adrenaline-boosted strength and virgin rage I can muster, I lift t
 ...
 ...
 (PHONE) The number you are trying to call has been disconnected.
-[CG: PCPG phone in hand]
 [fade from black]
 (PCPG) ...shit. Of course he nuked his phone number.
 (PCPG) Wait... my lock screen! The forest! The cool trees!
 (PCPG) Oh fuck. Trees.
 (PCPG) Hold on Jesse, I’m coming to stop you, before you make a horrible mistake!
 [fade to black]
+[CG end]
 [StopMusic]
 [==> The End]
 *
@@ -738,7 +738,7 @@ I consider calling out his name again, but now I’m having second thoughts. Wha
 [Song: PCPDating_ActionSerious]
 [CG: Donatello V1]
 (PCPG) For real? A fucking ninja turtle?!
-(???) Woah there horsey, calm your androgynously ambiguous tits! Who are you and why are you in my den of deviancy?
+(Donatello|???) Woah there horsey, calm your androgynously ambiguous tits! Who are you and why are you in my den of deviancy?
 (PCPG) Ah, um, sorry? I’m a little on edge. Looking for a friend, I think he might be in serious trouble.
 The turtle strokes his slimy chin and nods.
 (Donatello) Hmm, I see. Why don’t you come sit on Uncle Donatello’s lap and tell him all about it?
@@ -761,13 +761,12 @@ Grim disgust washes over Donatello’s face immediately.
 (Donatello) Hey, wanna see a secret passage? There’s a side tunnel that goes all the way to the furnace room in the PCP University! I like to use my well-trained sneaking skills to grab people who pass by there and bring them here. Then I rape them, hehehehe.
 (Donatello) Ever wonder why the Cauckcast chicks aren’t in this story route? Hehehehe. Yeeeeeees.
 [cut to black]
-[CG end]
 (PCPG) I’m calling the police.
 [StopMusic]
 [Song: PCPDating_GameOver]
 I never did end up finding Jesse. I tried everything. His phone number - disconnected. The police - thought I was either Mad or a load of Bull. No matter what, it really seemed like he was gone for good. Maybe it’s better I didn’t find him, not now anyway. At least now I can pretend he really is living happily on a desert island...
 [StopMusic]
-[BAD END]
+[Credits]
 [Prompt to return to scene The Search, last save, or title screen]
 [Scene: The End]
 (PCPG) Hah... hah... hoo... It’s a lot further than I remembered, yowza!
@@ -781,7 +780,7 @@ I enter the clearing of the White Tree and the Cursed Tree. My feet are burning,
 I hear a rustling noise to my left.
 I turn and see... a chair? The chair with a hole cut in it. For when you wanna take a crap in the woods.
 [CG: Jesse just hanging out]
-And on the chair stands a man dressed in full pirate garb, reaching up for a branch and fastening a rope to it-!
+And on the chair stands a man dressed in iconic scruffy clothes, reaching up for a branch and fastening a rope to it-!
 [StopMusic]
 (PCPG) JESSE!
 [SFX: PCP-SFX_FallDamage]
@@ -794,12 +793,12 @@ I realize all too late that we are dangling by Jesse’s arm, caught in the rope
 SNAP!!!
 We crash to the ground pretty hard. Caught unawares, I blacked out for a second. As I come to, I don’t feel the leaves and dirt beneath me I expected to, but rather something warm and comforting--
 [CG: Forest_Floor_embrace_V1]
-[Song: PCPDating_ProCrastinatorShortLoop]
 [fade from black]
 (PCPG) Ah! Sorry! Did I fall on you?! I-I-I didn’t mean it, I was just-!
 (PCPG) pleasedontkillyourselfjesseiloveyouandwantyoutostayaliveandtheworldisntallthatbad
 whenyouthinkaboutitespeciallyconsideringallthefriendsyouvemadealongtheway-
 [CG: Forest_Floor_embrace_V2]
+[Song: PCPDating_DescendentofHamboi]
 (Jesse) Heyyy now, put the brakes on, partner! I’m not trying to off myself! If I was gonna do it, it wouldn’t be like this, that’s for sure, I’d at least have enough self-respect to rocket up to the moon and be the first man to blow his own brains out in space.
 (Jesse) No, before you yanked me off my precarious perch I was putting up a hammock! Gonna live in the woods, I decided. Off the grid. Get back to my roots, back to nature. Away from all the obnoxious R-tards in the city, but still close enough that I can swipe some chicken n’ tea until I master the art of self-sufficiency. Might have to forget how to dumpster-dive to learn that, though.
 I feel waves of relief flush over my face with every word that passes his lips, but I’m still a little confused...
@@ -816,7 +815,7 @@ I try to hold back tears, but they won’t stop coming. Clasping his shirt and p
 (Jesse) Welcome to the Endlett Treehouse, partner.
 [CG: Forest_Floor_embrace_V4]
 [pause]
-[StopMusic]
 [fade to black]
-[GOOD END]
+[StopMusic]
+[Credits]
 [Prompt to return to scene The Search, last save, or title screen]
