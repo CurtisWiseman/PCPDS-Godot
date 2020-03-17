@@ -388,13 +388,13 @@ As I look over I see a blob of slime shoot out of the vapor and splash onto the 
 
 (Endless War|???, stand, happyMIN) Hello there Gibbon, or perhaps I should call you-
 
-(Gibbon, campus, handsup, angryMED, left, slide, center-100)
+(Gibbon, campus, handsup, angryMED, left, slide, left+350)
 (Endless War|???, stand, shockedMIN) !!!
 Before the girl finishes her sentence Gibbon quickly shuts her up with his hand.
 
 (Gibbon, campus, clenched, angryMIN) Hey Endless War.
 
-(Gibbon, campus, clenched, angryMIN, center-100, slide, left)
+(Gibbon, campus, clenched, angryMIN, left+350, slide, left)
 (Endless War, stand, smittenMIN) Oh, shy are we now? 
 
 (Endless War, stand, confusedMIN) You wouldn’t happen to know where Gun Girl is nowadays? I hardly see her ‘round the Cop Killers anymore.
@@ -431,7 +431,7 @@ She moves her finger to the vapor table, where the vapor is starting to clear up
 [Quickly zoom back out]
 [StopMusic]
 [Song: PCP-AMBIENT_War]
-[Location: dininghall.demo, dininghall.foodfight|1, dininghall.table.mudpuddleforeground]
+[Location: dininghall.demo, dininghall.foodfight|1, dininghall.table.mudpuddleforeground|3]
 
 (Endless War, knife, smittenMIN|blushMIN, slide, center)
 (Gibbon, campus, grabby, neutral, slide, left)
@@ -758,9 +758,9 @@ I check the clock. It is getting pretty late, so I decide to head home for the e
 [==> Don’t Wanna Do It]
 
 [Scene: Loitering with Tinyhats]
-
 [Location: 7eleven.day]
-
+[Music: PCPDating_SuspiciousFigga]
+[fade from black]
 Why did Munchy mention this place for a meeting? A 7 Eleven doesn’t seem like a place where anyone would want to spend their time. This one in particular seems like a hot spot for homeless guys and losers. I wonder if that sewer guy from this morning hangs around here too.
 
 (Munchy, campus, 2, happyMIN, center, slide) Oh, there you are. I knew someone would come!

@@ -2,29 +2,29 @@
 [Location: waytoschool.nojesse]
 [Song: PCPDating_SuspiciousFigga]
 [Fade from black]
-I slept like a fat cat, though I can’t imagine the same is true of that Jesse guy. We agreed to meet here this morning, now where is he…?
+I slept like a fat cat, though I can’t imagine the same is true of that Jesse guy. We agreed to meet here this morning, now where is he...?
 Movement catches the corner of my eye, but not before my ears are treated to the cacophony of boots clanging against the thick metal of a dumpster.
 Ah. I see.
 Evidently, he sees me as well, as he leaps down from his trash mountain and gallops over to me like a puppy dog boy that smells sausages.
 (Jesse, special, 1, happyMED) Howdy friend! You’ll have to excuse the mess, I was grabbing some light breakfast to appease the hunger demons. Some tortilla chip shards and soda droplets can really wake ya up in the morning!
-(PCPG) Oh god, you’ve been eating out of there? I mean, I didn’t know what to expect, but still…
+(PCPG) Oh god, you’ve been eating out of there? I mean, I didn’t know what to expect, but still...
 (Jesse, special, 1, shockMIN) It’s not so bad, really. You learn to watch out for signs of mold, and as long as you avoid that like the plague you should be alright. Also avoid the plague. The rats aren’t exactly models of cleanliness.
 (Jesse, special, 4, angryMED)
-He barfs a little in his mouth, but I don’t see anything come out. As much as I’d like to help him out again, I don’t have any food on me and I definitely don’t trust him with money. If only there was some way to… wait, that’s it!
+He barfs a little in his mouth, but I don’t see anything come out. As much as I’d like to help him out again, I don’t have any food on me and I definitely don’t trust him with money. If only there was some way to... wait, that’s it!
 (PCPG) Hey, Jesse, listen here. I’ve got a plan to get you some proper food, but you’re gonna have to follow me, act natural, and keep quiet. Can you do that?
 (Jesse, special, 1, smittenMIN) Depends on my nature, doesn’t it? Can’t act natural [i]and[/i] keep quiet if I’m as much of a wordsmith as I let on. My natural state of being might be to talk your ear off like Fi from Skyward Sword, for all you know. Although I’d have a functioning brain instead of her ten outta ten booty, a tragic but ultimately worthwhile trade.
 I give him a look that indicates my disdain at what I assume is meant to be a joke.
 (Jesse, special, 3, sadMIN) I get the message, sailor, but can I at least ask how far we’re going? The dumpster is right here and I’m working on grinding out my 10,000 hours of dumpster diving. Then I’ll be a master of yet another artform to add to my ever-growing portfolio, which already includes staving away demons and crying myself to sleep.
 I honestly can’t even tell where the jokes begin and the real shit ends anymore.
-(PCPG) None… none of those are really “art.” Look, we’re going to the school, it’s not far-
+(PCPG) None... none of those are really “art.” Look, we’re going to the school, it’s not far-
 (Jesse, special, 5, angryMAX) HEY! Don’t you throw shade on unorthodox artforms like that!
 (Jesse, special, 5, angryMED) I put a lot of passion and effort into my work, too much for some chump to come up and tell me it’s not real art. Tell me wise guy, just what IS art then, huh? Huh?
 (PCPG) I dunno, like drawings and music and stuff. Making things.
 (Jesse, special, 3, angryMED) What about acting then? Stage acting, particularly. You don’t make something there, but you’d be hard-pressed to find even one geek or loser who’d say that isn’t art.
-(PCPG) Well, yeah, but…
+(PCPG) Well, yeah, but...
 (Jesse, special, 3, angryMIN) “But” what? You make something HAPPEN? Yeah. You know what else is a person making something happen? That’s right, popping the lid off of one of these treasure chests and taking inventory of the booty inside.
 (Jesse, special, 3, angryMIN) And not the Fi kind of booty, although I certainly wouldn’t mind finding one of those amongst my doubloons and ship’s biscuits. Best I can hope for is a Buttman porno mag from the 80s that’s had all the pictures cut out, no doubt to be preserved in some kind of obscene scrapbook under a cum-soaked raggedy old bed. Now THAT’S living.
-(PCPG) …
+(PCPG) ...
 (PCPG) Yeah. Okay. On that note, we should really get going, school starts in five minutes and I don’t wanna attract too much attention!
 (Jesse, special, 2, happyMIN) Lead the way, mi hombre.
 [fade to black]
@@ -44,11 +44,11 @@ Turns out getting here late worked in our favor; everyone’s in class, so the h
 With an affirmative nod, I turn to leave, but before I can reach the cafeteria door, someone opens it from the other side!
 [SFX: PCP-SFX_DoorSlam]
 [Song: PCPDating_Feed]
-(Digi|Professor Digibro, campus, 3, shockMIN) Well if it ain’t the new blood! And… who’s this rag-tag misfit?
-(PCPG) Ah, Professor Digi! This is, uhh…
+(Digi|Professor Digibro, campus, 3, shockMIN) Well if it ain’t the new blood! And... who’s this rag-tag misfit?
+(PCPG) Ah, Professor Digi! This is, uhh...
 (Jesse, special, 3, happyMED)
-[SLIDE Jesse left+50]
-[SLIDE Digi right-50]
+[SLIDE Jesse left+250]
+[SLIDE Digi right-250]
 (Jesse, special, 3, happyMED) Allow me to introduce myself. My name is Dr. Donatello Horseshoes PhD, but you can call me Donnie. And before you ask, my parents named me after the renaissance artist, not the ninja turtle. I was actually on my way to see you, Mr. Digi, when I caught this student trying to sneak food out of the cafeteria.
 I’m startled by the speed at which he came up with that excuse. Did he practice this routine in his head on the way here?
 (Digi|Professor Digibro, campus, 5, neutral) Eh, no biggie, [i]I[/i] steal cafeteria food all the time. Like right now, for example. A verbal warning is all we need to give, apparently. Hey kid, run along to class, and, like, don’t steal food or something.
@@ -56,49 +56,50 @@ I’m startled by the speed at which he came up with that excuse. Did he practic
 [SFX: PCP-SFX_DoorOpen]
 I do as he says and leave the cafeteria. But instead of going to class, I hang by the door and peek through the window so I can keep an eye on them. Despite how grimy I thought the window was, the view is crystal clear and I can still hear them perfectly. Funny how that works out.
 (Digi|Professor Digibro, campus, 4, neutral) But more importantly, why did you wanna see me, Doc?
-(Jesse|Dr. Horseshoes, special, 3, happyMED) Well that’s simple… autism.
+(Jesse|Dr. Horseshoes, special, 3, happyMED) Well that’s simple... autism.
 (Digi|Professor Digibro, campus, 1, happyMAX)
-Professor Digi’s face lights up at the word. Gibbon had told me stories about Digi’s little obsession with the subject, and the lengths he goes to just to prove something “is an autism”, whatever that means. I don’t have any time to dwell on it though, as “Donnie” continues…
+Professor Digi’s face lights up at the word. Gibbon had told me stories about Digi’s little obsession with the subject, and the lengths he goes to just to prove something “is an autism”, whatever that means. I don’t have any time to dwell on it though, as “Donnie” continues...
 (Jesse|Dr. Horseshoes, special, 3, happyMED) I got my PhD in the study of neuroatypicality among different populations. This school intrigued me; did you know it has the highest autism-to-student-body ratio in the whole United States?
 (Digi|Professor Digibro, campus, 1, happyMED) A man of culture, I see! So if I’m getting this right, you want to study our students to see what makes them tick and what makes them ‘tism?
-(Jesse|Dr. Horseshoes, special, 3, happyMED) See, I like you, you understand me already. Now, if you have any relevant data on the students, including but not limited to their mothers’ phone numbers, I’ll take that and be on my way…
+(Jesse|Dr. Horseshoes, special, 3, happyMED) See, I like you, you understand me already. Now, if you have any relevant data on the students, including but not limited to their mothers’ phone numbers, I’ll take that and be on my way...
 (Digi|Professor Digibro, campus, 3, smittenMAX) Oh no, you aren’t getting away that easily!
-Uh-oh. Did he figure Jesse out? I have to admit, his clothes aren’t half as convincing as his acting. Looks like the jig is up for Donnie Horseshoes…
+Uh-oh. Did he figure Jesse out? I have to admit, his clothes aren’t half as convincing as his acting. Looks like the jig is up for Donnie Horseshoes...
 (Digi|Professor Digibro, campus, 3, happyMAX) A real-life psychiatrist, who wants to study MY students’ autism! No way buddy, I’m making sure you stick around as long as possible.
-(Digi|Professor Digibro, campus, 2, happyMED) You know, I could pull a few strings, get you a job here. Then you can get data straight from the source! I’m thinking… 
+(Digi|Professor Digibro, campus, 2, happyMED) You know, I could pull a few strings, get you a job here. Then you can get data straight from the source! I’m thinking... 
 (Digi|Professor Digibro, campus, 2, happyMED) Ooh! A guidance counsellor! That would be perfect. Students can come to you with their problems and hang-ups, and you can use your Doctorate smarts to help them out, while at the same time taking notes on their situations and lives to further your research!
-(Jesse|Dr. Horseshoes, special, 1, smittenMIN) Well, I wasn’t exactly planning on staying long, I’m just passing through town on my way to, uhh… Sakura Con?
+(Jesse|Dr. Horseshoes, special, 1, smittenMIN) Well, I wasn’t exactly planning on staying long, I’m just passing through town on my way to, uhh... Sakura Con?
 (Digi|Professor Digibro, campus, 5, happyMAX) And you love Japan, period?! That’s it, you’re getting a job here and I won’t take no for an answer! I’ll make it worth your while, in a monetary sense. You know, moolah, coinage, cash. And you can have my secretary’s office, she spends more time in mine anyway, hehe.
 (Jesse|Dr. Horseshoes, special, 1, smittenMIN) Very tempting Professor! Tell you what, I’ll do it, on one condition. Let me sleep in the office for a few nights. I still gotta find a place to live if I’m staying in this town, don’t I?
 [Jesse leaves]
 [Digi leaves]
 I can’t believe it. I brought him here for food and he’s walking out with a high-salary job? His charisma is insane! Still though, this is great news. I was just giving him a quick fix, but now he’s gonna be self-sufficient. Teach a man to fish, and all that.
+[StopMusic]
+[SFX: PCPDating_School_Bell]
 The bell tolls, signifying the end of class.
 Aw crap, I’ve been standing here for so long, first period’s already over! I better catch up with the others. I’ll just say my alarm went off late.
 [fade to black]
-[StopMusic]
 [Scene: Colt Corona’s Crappy Confession]
 Two days later...
 [Location: philosophyclass.b]
 [Song: PCPDating_ClassPhilosophy]
 [fade from black]
-(Nate|Professor Bestman, campus, pointing, happyMIN|shades, right) ...and that’s why the only way to achieve long-term happiness is by setting yourself goals and working towards them every day. Be the chads you wanna see! Any questions? Colt Corona?
-(Colt Corona|Colt Corona, cani, angryMIN, left) Mr Bestman I dont wanna set goals they make me feel poopy for not doing them /n
+(Nate|Professor Bestman, campus, pointing, happyMIN|shades, fade, right-100) ...and that’s why the only way to achieve long-term happiness is by setting yourself goals and working towards them every day. Be the chads you wanna see! Any questions? Colt Corona?
+(Colt Corona|Colt Corona, cani, angryMIN, fade, left+50) Mr Bestman I dont wanna set goals they make me feel poopy for not doing them /n
 Its a genetic thing for reverse centaurs dontcha know I cant help it/n
 Youre not being very inclusive to folks who are equinally challenged
 (Nate|Professor Bestman, campus, papers, shockMIN|shades) Colt, we’ve been over this. There’s nothing wrong with you, you have a human brain inside that stallion’s head of yours. You can achieve great things just like anyone else!
 (Colt Corona|Colt Corona, thisvideo, angryMIN) But Im retaaaaaaaaardeeeeeeeed
 (Nate|Professor Bestman, campus, standing, angryMIN|shades) Oh that’s no excuse, some of the most influential minds in history were considered retarded by their peers. All they had to do was believe in themselves and use their talents to the fullest. What’s your special talent, my little horseboy?
 (Colt Corona|Colt Corona, cani, neutral) I got giant balls
-(Nate|Professor Bestman, campus, standing, neutral|shades) That’s not-
+(Nate|Professor Bestman, campus, standing, shockMIN|shades) That’s not-
 (Colt Corona|Colt Corona, bein, angryMAX) I GOT GIANT BALLS
-(Nate|Professor Bestman, campus, standing, neutral|shades) …
-(Nate|Professor Bestman, campus, standing, neutral|shades) Okay then, let’s try and think of a way to apply your… enlarged globes… to the real world. Sex is a great motivator for any man. Do you have any sexual experience?
+(Nate|Professor Bestman, campus, standing, angryMIN|shades) ...
+(Nate|Professor Bestman, campus, standing, angryMIN|shades) Okay then, let’s try and think of a way to apply your... enlarged globes... to the real world. Sex is a great motivator for any man. Do you have any sexual experience?
 [SLIDE Colt offleft]
-[SLIDE Nate left]
-(Tom, 1, angryMAX, offright, slide, right) Mr Bestman! I hardly think that’s appropriate to discuss with your students!
+[SLIDE Nate left+50]
+(Tom, 1, angryMAX, offright, slide, right-100) Mr Bestman! I hardly think that’s appropriate to discuss with your students!
 (Nate|Professor Bestman, campus, pointing, angryMED|shades) Quit your whining, Tom, or I’ll dock your grades for “excessive negativity.” Look, we’re all adults here, and if Colt doesn’t wanna talk about it, I’m not gonna force him. How are we gonna cultivate a sexually mature society if we don’t encourage people to feel comfortable talking about it?
-I’m not sure where I stand in this discussion. On the one hand, it does feel icky, but Nate brings up some good points too. Maybe I should take a stance…?
+I’m not sure where I stand in this discussion. On the one hand, it does feel icky, but Nate brings up some good points too. Maybe I should take a stance...?
 [CHOICE]
 *Side with Nate*
 *Side with Tom*
@@ -109,11 +110,14 @@ I’m not sure where I stand in this discussion. On the one hand, it does feel i
 *
 *Side with Tom*
 (PCPG) I’m with Tom, it’s a weird invasion of privacy. How do we know you’re not gonna blackmail us, or trade sex for grades or something?
-(Nate|Professor Bestman, campus, papers, confusedMED|shades) I hear what you’re saying… buuuuut I’m also THE single most trustworthy teacher in this school. I value responsibility, dignity, and the wellbeing of everyone. Let’s not turn this into a witch hunt against me, I’m just trying to help Colt on the road to getting some mad puss.
+(Nate|Professor Bestman, campus, papers, confusedMED|shades) I hear what you’re saying... buuuuut I’m also THE single most trustworthy teacher in this school. I value responsibility, dignity, and the wellbeing of everyone. Let’s not turn this into a witch hunt against me, I’m just trying to help Colt on the road to getting some mad puss.
 (Tom, 1, angryMIN) I’ve heard enough, I’m outta here. Have fun in your little den of deviancy, I’ll be the first one to call the cops if anything suspicious happens.
 *
+[SLIDE Tom offright]
 [Tom leaves]
 Tom packs up his stationary and leaves the room with a look of disgruntlement on his face. His footsteps stop shortly outside the door though, so he evidently hasn’t gone far.
+[SLIDE Coltcorona left+50]
+[SLIDE Nate right-100]
 (Nate|Professor Bestman, campus, standing, neutral|shades)
 (Colt Corona|Colt Corona, cani, neutral) I dont know what all the fuss is about /n
 I wanted to talk about my sex life in front of you people /n
@@ -125,29 +129,31 @@ Always the same one it keeps getting lost under a pile of underwear
 (Colt Corona|Colt Corona, feetguitar, angryMED) Hell no I dont have a tape player /n
 I stick my WEINER in it /n
 Through the little spinny hole
-(Nate|Professor Bestman, campus, standing, shockMIN|shades) And that’s it? That’s your sex life? I hate to break it to ya buddy, but uhh… that doesn’t count. It’s empty satisfaction at best, and it’s not going to improve your life. In fact, it’s more likely to make you more depressed. There are studies done on the effects of excessive masturb-
+(Nate|Professor Bestman, campus, standing, shockMIN|shades) And that’s it? That’s your sex life? I hate to break it to ya buddy, but uhh... that doesn’t count. It’s empty satisfaction at best, and it’s not going to improve your life. In fact, it’s more likely to make you more depressed. There are studies done on the effects of excessive masturb-
 (Colt Corona|Colt Corona, gun, angryMAX) I DONT CARE AAAAGH /n
 I JUST WANNA STICK MY WEINER IN THE TAPE /n
 FUCK YOU NATE /n
 FUCK YOU
+[SLIDE Coltcorona offright]
+[SFX: PCP-SFX_DoorSlam]
 [Coltcorona leaves]
 Colt storms off, stomping his way down the hall. As he leaves I hear him screaming about going to see Dr. Horseshoes. Speaking of whom, I haven’t seen him since he got that job. Maybe I should go say hi at lunchtime. For now though, I gotta finish this class.
-(EndlessWar, stand, angryMED)
+(EndlessWar, stand, angryMED, fade, left)
 After those two deserted, it’s just me and Endless War left, and she’s giving me one hell of a stink-eye. I get the feeling that if I try to leave she’ll familiarize me with my internal organs.
 [fade to black]
 [StopMusic]
 [Nate leaves]
 [EndlessWar leaves]
 [Scene: New Horizons]
-Lunchtime…
+Lunchtime...
 [Location: hallway2]
 [Song: PCP-AMBIENT_Hallway]
 [fade from black]
-(PCPG) Now let’s see… I think his office is this way.
+(PCPG) Now let’s see... I think his office is this way.
 The characteristic footprints of Colt Corona lead the way. That guy’s feet are filthy, he should really put some shoes on. As I approach the door, still emblazoned with the words “Secretary to Professor Digibro,” I notice Colt has yet to leave. Much like every other room in this building, the soundproofing is nonexistent.
 [Location: horseshoesclinic.day, overlay.door.secretary|3]
-(Jesse, campus, 5, happyMIN, right-50)
-(Colt Corona, cani, neutral, left+50)
+(Jesse, campus, 5, happyMIN, fade, right-250)
+(Colt Corona, cani, neutral, fade, left+250)
 (Jesse|Dr. Horseshoes, campus, 5, happyMIN) Sounds to me like you just need some more experience. There’s this great whorehouse down on Thanksgiving Street, dirt cheap poon at prices that’ll make you go, “Wowzers, Penny!” as you go-go-gadget extendo-dick. Just tell ‘em Jesse sent ya.
 (Colt Corona|Colt Corona, cani, neutral) Wow that sounds great and all but i thought your name was donnie horseshoes
 (Jesse|Dr. Horseshoes, campus, 5, happyMIN) Oh come one, you don’t really think I’d use my real name in a place like that, do you? Work hard and play hard, but never let the other side know your secret identity.
@@ -156,10 +162,12 @@ The characteristic footprints of Colt Corona lead the way. That guy’s feet are
 (Colt Corona|Colt Corona, bein, confusedMIN) Are you winking at me /n
 Should I wink back
 (Jesse|Dr. Horseshoes, campus, 3, angryMIN) Just go to the damn whorehouse, Colt.
-[Coltcorona leaves]
 [StopMusic]
 [CG: pcp colt corona has left the clinic 2]
+[SFX: PCP-SFX_DoorOpen]
+[Coltcorona leaves]
 Colt leaves and walks directly into what I believe is the school’s furnace room across the hall, closing the door behind him.
+[SFX: PCP-SFX_DoorSlam]
 [CG: pcp colt corona has left the clinic 1]
 Through the door, I can barely make out the muffled tones of off-key singing.
 [CG end]
@@ -175,19 +183,19 @@ Through the door, I can barely make out the muffled tones of off-key singing.
 (Jesse, campus, 1, happyMED|blush) Daww, thanks. Speaking of money, I even have enough to afford a small apartment now! Just moved in last night. You should come over some time, we can hang out. Oh, but before that, I wanted to thank you for all your help. If it weren’t for you, I’d still be face down in a gutter emanating the faint smell of rum, instead of reclining in this chair with the faint smell of rum.
 (PCPG) Thanks, but really, I’m not the one who hired you or anything, I can’t take credit for this.
 (Jesse, campus, 2, shockMIN) You were the one who took pity on me. You were the one who snuck me into the school. Really, I owe you. How about we go grab a beer after school? My treat.
-(PCPG) No can do, not beer. I’m only 20. but I could get like a pineapple juice or something.
+(PCPG) No can do, not beer. I’m only 20. But I could get like a pineapple juice or something.
 I'm lying through my teeth of course, I shared a drink with Tom just a few days ago. However, I have a weird feeling that getting drunk with this guy wouldn't end well.
 (Jesse, campus, 4, angryMED) That’s this country in a nutshell, huh? You can vote and you can drive, two of the most dangerous activities of all, but you can’t get a little tipsy. Well you’ve just reminded me that I hate beer anyway, tastes like piss vinegar. I’d rather go for a classy wine. Know any places I could get one of those?
-(PCPG) Ummm… oh, there is that new place that just opened up. The Gamer’s Tavern, I think it’s called.
+(PCPG) Ummm... oh, there is that new place that just opened up. The Gamer’s Tavern, I think it’s called.
 (Jesse, campus, 3, happyMIN) With a name like that, it’s either as retarded as Digibro or the coolest place this side of the intergalactic breastaurant BooBies. Either way it’s a win!
 (PCPG) So, meet you outside the front gate after school?
 (Jesse, campus, 3, happyMIN) Mark it on your calendar, because it’s a date.
 [fade to black]
 [StopMusic]
-[Jesse leaves]
 [Scene: The Tavern]
 [Location: gamerstavern]
 [Song: PCPDating_Misato]
+(Jesse, casual, 2, happyMAX)
 [fade from black]
 (Jesse, casual, 2, happyMAX) ...and then I BECAME the Altered Beast. I'm tellin' ya, 70s drugs are powerful things and should only be used for the forces of good. If any Robotnik-Bowser-Wesker sort got his hands on 70s drugs, we'd all be fucked.
 He nurses his cup of wine. Not quite sure why he specifically requested a plastic cup when they had plenty of glasses available, but he seems to have some aversion to glass.
@@ -196,17 +204,17 @@ Meanwhile I'm mulling over a Monster Energy, debating whether to take the plunge
 (Jesse, casual, 3, shockMIN) That's probably the sensible way to do it. But the right ones, like Adderall, can really help you focus when you wanna be creative and get shit done. Just gotta make sure you don't get dependant on 'em.
 (PCPG) Can't say I have much of a need then. I don't really do creative. Or getting shit done, haha.
 (Jesse, casual, 3, sadMIN) Aww come on now, I'm sure there's something you wanna do. Goals, aspirations, childhood dreams? Anything?
-(PCPG) Well I guess passing university, then finding a job… probably something simple so I don't have to think too hard… uhh…
+(PCPG) Well I guess passing university, then finding a job... probably something simple so I don't have to think too hard... uhh...
 (PCPG) H-how about you? I bet your life goals are cool.
 (Jesse, casual, 1, happyMED) Cool? Nah, nothing short of coolamundo! Ever since I was a child, I'd been watching wrasslin'. But when I first saw Stone Cold tackle The Rock in Wrestlemania X-Seven, my eyes were opened, I wanted to be a pro wrestler!
 (PCPG) Yeah?
-(Jesse, casual, 1, happyMED) Hell yeah. Still do! That dream ain't dying any time soon. Give it five years, you'll be seeing my name in lights: Endless Jess, the immortal soul of rock n roll. Forever King of the wrasslin' ring. Deathly cold and blazing hot, the sultan of scha-wing and the rest I forgot.
+(Jesse, casual, 1, happyMED) Hell yeah. Still do! That dream ain't dying any time soon. Give it five years, you'll be seeing my name in lights: Endless Jess, the immortal soul of rock n roll. Forever King of the wrasslin' ring. Deathly cold and blazing hot, the sovereign of scha-wing and the rest I forgot.
 He goes on like this for a while, and I just give the occasional "huh", "neat" etc. I'm not exactly invested in wrestling, but I'm just happy to be off the topic of myself. I'm not interesting enough to hold a conversation, I'm just an average Joe. He only offered to buy me a drink so we're even on the whole job thing.
-(Jesse, casual, 4, angryMED) …that's where I come crashing into the cell from the outside, tearing those prison bars apart and climbing into the ring like a juggernaut. AJ Styles is gonna be quivering in his boots when he sees me struttin' up!
+(Jesse, casual, 4, angryMED) ...that's where I come crashing into the cell from the outside, tearing those prison bars apart and climbing into the ring like a juggernaut. AJ Styles is gonna be quivering in his boots when he sees me struttin' up!
 (Jesse, casual, 3, happyMAX) And I'm gonna stand so tall above his frail old form that he'll be completely enveloped in my shadow, but I won't finish him off right away; gotta respect the greats. I'll only fight him using one arm, two fingers and my kneecaps, and it'll be the fight of the century!
 (PCPG) Hearing you describe your rise to glory is actually getting me pumped! I guess this is what wrestling fans feel like, huh? This shit IS pretty coolamundo. Say, on the way home I'm gonna grab some WWF pay-per-views from the VHS store that still exists for some reason.
 [Jesse leaves]
-...along with a vhs player. Who even owns one of those?
+...along with a VHS [i]player.[/i] Who even owns one of those?
 (PCPG) Anyway, don't let me interrupt y- ...Jesse?
 [StopMusic]
 He’s gone, without warning. I turn around and look for him. The bar's very busy, so it's hard to see his face among the crowd. But the boom of his voice is unmistakable...
@@ -216,33 +224,34 @@ He’s gone, without warning. I turn around and look for him. The bar's very bus
 (Drunken man) Exac'ly what I said, dumbass! The Eva Rebuild movies are better than the show!
 (Jesse) God, how can you be so stuuupid? Just because it's got shiny HD modern graphics, that doesn't make it better! There is zero, I repeat, ZERO artistic integrity in the Rebuilds.
 (Jesse) Can't you see this is George Lucas's Star Wars recuts all over again? Anno made the story fine the first time, it doesn't need to be made again with asinine changes that make the ending make no sense!
-(Drunken man) Heh… more like, Evangelion 4.44: You Can (not) Enjoy… 'cause you're bein' a real stick in the mud bruh…
-(Jesse) I'd rather be a stick in the mud than a fart in the wind! Oh and speaking of spineless flatulence, don’t get me started on that fucking Netflix dub…
-Hoo boy. I didn’t think it was possible to get “angry drunk” off of one cup of wine, but Jesse’s full of surprises. I wanna intervene, but… nah, this is probably best settled between the two of them. I definitely don’t wanna get tangled up in anything if it turns violent… maybe I should just slip out, it is getting pretty late after all. 
-I feel kinda bad about leaving him here, but it’s not like I could help him home if I tried. Plus, I’m not even sure about hanging around a guy who gets this worked up over something so trivial. I’m… I’m gonna give him some space for a little while.
+(Drunken man) Heh... more like, Evangelion 4.44: You Can (not) Enjoy... 'cause you're bein' a real stick in the mud bruh...
+(Jesse) I'd rather be a stick in the mud than a fart in the wind! Oh and speaking of spineless flatulence, don’t get me started on that fucking Netflix dub...
+Hoo boy. I didn’t think it was possible to get “angry drunk” off of one cup of wine, but Jesse’s full of surprises. I wanna intervene, but... nah, this is probably best settled between the two of them. I definitely don’t wanna get tangled up in anything if it turns violent... maybe I should just slip out, it is getting pretty late after all. 
+I feel kinda bad about leaving him here, but it’s not like I could help him home if I tried. Plus, I’m not even sure about hanging around a guy who gets this worked up over something so trivial. I’m... I’m gonna give him some space for a little while.
 [fade to black]
 [StopMusic]
 [CG end]
 [Scene: Digi Too OP, Please Nerf]
-A few days later…
-[Location: musicclass]
+A few days later...
+[Location: musicclass, musicclass.foreground]
 [Song: PCPDating_ClassJapanese]
+(Gibbon, campus, default, neutral)
 [fade from black]
-(Gibbon, campus, default, neutral)
-(Gibbon, campus, default, neutral)
 (PCPG) Ah jeez Gibbon, I can’t stop thinking about Jesse.
-(Gibbon, campus, pressing, confusedMIN) Jesse who?
+(Gibbon, campus, press, confusedMIN) Jesse who?
 (PCPG) Oh, uh, I mean Dr. Horseshoes. Donnie. The counsellor guy.
-(Gibbon, campus, pressing, confusedMIN) Riiiiight. Um, any particular reason, or…?
+(Gibbon, campus, press, confusedMIN) Riiiiight. Um, any particular reason, or...?
 (PCPG) I ditched him at a bar the other day. He’s probably real mad at me.
-(Gibbon, campus, handsup, confusedMED) Uh- wha- hubwuh? Even… even putting aside the fact you’re not old enough to drink in this country, which IS dumb, but whatever, and the fact that going to a bar with a faculty member, y’know, raises a few eyebrows.. 
+(Gibbon, campus, handsup, confusedMED) Uh- wha- hubwuh? Even... even putting aside the fact you’re not old enough to drink in this country, which IS dumb, but whatever, and the fact that going to a bar with a faculty member, y’know, raises a few eyebrows.. 
 (Gibbon, campus, handsup, confusedMIN) ..putting all that aside, why would he be mad? I’ve never talked to him much, personally, but he seems pretty calm and understanding, not like the kinda guy that would blow up in your face.
-(PCPG) Hmmm… I guess. Ha, yeah, you’re right, what am I even saying? I’ll just apologize, and then things’ll go back to normal. He doesn’t hold grud-
+(PCPG) Hmmm... I guess. Ha, yeah, you’re right, what am I even saying? I’ll just apologize, and then things’ll go back to normal. He doesn’t hold grud-
 [SLIDE Gibbon offleft]
+[Gibbon leaves]
+[SFX: PCP-SFX_DoorSlam]
 (Digi|Professor Digibro, campus, 3, happyMAX, offright, slide, center) ALRIGHT LISTEN UP, IT’S TIME TO ROCK! Today’s lesson is all about Shaft Inc.’s anime OPs. Perhaps the most defining factor in what makes a Shaft OP distinct from any other studio’s, is the pure visual weirdness on display. But it wasn’t always that way; in fact, the studio dates all the way back to 1982.
-(Digi|Professor Digibro, campus, 3, happyMAX) Look here, I’ve put together a marathon of all their OPs in release order. I’ll put it on all the screens, so just look at whichever one kills your neck the least. Pay attention around the 2000-2005 mark, you can see the exact moment where the animators started taking drugs…
+(Digi|Professor Digibro, campus, 3, happyMAX) Look here, I’ve put together a marathon of all their OPs in release order. I’ll put it on all the screens, so just look at whichever one kills your neck the least. Pay attention around the 2000-2005 mark, you can see the exact moment where the animators started taking drugs...
 The whole class collectively slumps in their chairs, preparing for the long haul. Digi dims the lights and starts the video. We’re immediately greeted by the explosive MIDI trumpets and drums of “Mada Mada” playing on the loudest sound system I’ve ever heard.
-Whenever anyone tries to talk, Digi drowns them out by scream-singing along to whatever OP is currently playing. That doesn’t seem to matter for the “Zetsubou Sensei” songs, which he seems intent on screaming over regardless. I try to tune him out and close my eyes to make the time pass a little faster…
+Whenever anyone tries to talk, Digi drowns them out by scream-singing along to whatever OP is currently playing. That doesn’t seem to matter for the “Zetsubou Sensei” songs, which he seems intent on screaming over regardless. I try to tune him out and close my eyes to make the time pass a little faster...
 [fade to black]
 [StopMusic]
 [pause]
@@ -258,23 +267,24 @@ I get up to leave, but as everybody starts filtering out of the rickety door, Di
 (Digi|Professor Digibro, campus, 4, neutral) So that means you’ll be assisting the doctor instead of attending my lessons from now on. Do it without any complaints and I’ll get you that passing grade, no sweat. Besides, I think you’ll learn better by helping people than you would in my classroom anyway. My teaching style doesn’t exactly mesh with you. Whaddaya say?
 (PCPG) Well, I guess it beats failing.
 (Digi|Professor Digibro, campus, 4, neutral) Alright, awesome. I haven’t told Donnie yet, just in case you turned the offer down. Can you head over to his office and tell him yourself?
-(PCPG) Uh sure, I meant to go speak with him anyway. Not because I have a problem or anything, just… eh nevermind, it’s not important.
+(PCPG) Uh sure, I meant to go speak with him anyway. Not because I have a problem or anything, just... eh nevermind, it’s not important.
 [fade to black]
+[Digi leaves]
 [StopMusic]
 [Scene: ZOOM]
 [Location: hallway2]
 [fade from black]
-I grab a keto pizza slice on my way to Jesse’s office. It’s… food, at least. As I approach the door, I hear what sounds like the soft whimpering of a puppy dog boy coming from inside. Must be a student having a moment. My first instinct is to wait outside, but if I’m gonna be this guy’s assistant I should go in and help.
+I grab a keto pizza slice on my way to Jesse’s office. It’s... food, at least. As I approach the door, I hear what sounds like the soft whimpering of a puppy dog boy coming from inside. Must be a student having a moment. My first instinct is to wait outside, but if I’m gonna be this guy’s assistant I should go in and help.
 [Location: horseshoesclinic.day.colt]
 [Song: PCPDating_Forsaken]
-(Jesse, campus, 3, sadMAX)
+(Jesse, campus, 3, sadMAX, fade, center)
 Wait, that’s not a student, it’s Jesse!
-(Jesse, campus, 3, sadMAX) … *sniffle*… hi…
-He’s curled up in the corner, and crying… hoo boy.
+(Jesse, campus, 3, sadMAX) ... *sniffle*... hi...
+He’s curled up in the corner, and crying... hoo boy.
 (PCPG) Woah woah woah, hey man what’s going on?
-(Jesse, campus, 2, sadMED) Sorry you had to see me like this… It’s stress, man. Stress from all these students…
+(Jesse, campus, 2, sadMED) Sorry you had to see me like this... It’s stress, man. Stress from all these students...
 (PCPG) They workin’ you too hard? Got a huge batch of clients?
-(Jesse, campus, 3, sadMIN) Nah, that ain’t it…
+(Jesse, campus, 3, sadMIN) Nah, that ain’t it...
 (Jesse, campus, 4, angryMED) It’s all these goddamn zoomers! They come in here with their pissy baby problems, and I gotta pretend like I know what they’re talking about. And it’s not like I can’t help them, but they use all this 2010s techno-jargon and obfuscate their real issues by hiding behind seventeen different layers of abstraction.
 (Jesse, campus, 4, angryMED) Makes me wanna abstractly pull out seventeen bullets and layer them into my head! This ain’t the real America, this ain’t the world outside the Matrix. We’re still IN the Matrix and everyone’s taken the red pill ‘cept me!
 (PCPG) Oof, yeah man I get that. I’m right on the fringe of millennial and zoomer myself, and even I get alienated by these iPad Kids sometimes. 
@@ -284,12 +294,12 @@ He’s curled up in the corner, and crying… hoo boy.
 (PCPG) Yeah Jesse, of course. In fact, I could be something of a bridge between the generations! I can deal with the zoomer shit and you can come up with the actual good advice, haha.
 (Jesse, campus, 3, neutral)
 He’s cheered up a bit, but I notice he still looks a little stifled when he looks around the room. Maybe a change of scenery will help.
-(PCPG) Hey, there’s still some time before lunch break ends. How about we go get some fresh air for a bit? There’s this park downtown, I’m sure you know it…
-(Jesse, campus, 3, happyMIN) …yeah. I’d like that. Clear this crusty nose and get out of this musty hole for a bit. Oh, but lemme change real quick. Don’t wanna get this nice suit dirty!
+(PCPG) Hey, there’s still some time before lunch break ends. How about we go get some fresh air for a bit? There’s this park downtown, I’m sure you know it...
+(Jesse, campus, 3, happyMIN) ...yeah. I’d like that. Clear this crusty nose and get out of this musty hole for a bit. Oh, but lemme change real quick. Don’t wanna get this nice suit dirty!
 [Jesse leaves]
 He swiftly spins his way into the furnace room across the hall, and emerges not half a second later fully changed into his outdoor clothes.
 [Song: PCPDating_Misato]
-(Jesse, casual, 1, happyMED) Let’s beat feet!
+(Jesse, casual, 1, happyMED, fade, center) Let’s beat feet!
 [fade to black]
 [Jesse leaves]
 [StopMusic]
@@ -298,7 +308,7 @@ He swiftly spins his way into the furnace room across the hall, and emerges not 
 [Song: PCPDating_DateTheme]
 [fade from black]
 We soon arrive at the park. Since it’s during work hours on a weekday, there aren’t many people here. Jesse breathes deep and savors the lush green view.
-(Jesse, casual, 1, happyMED) Aaaah, now this is nice. No sound criminals polluting the air with their leaf blowers and lawn mowers, just you, me, the duckies and the trees. Hey, let’s go sit by the lake.
+(Jesse, casual, 1, happyMED, fade, center) Aaaah, now this is nice. No sound criminals polluting the air with their leaf blowers and lawn mowers, just you, me, the duckies and the trees. Hey, let’s go sit by the lake.
 I oblige. The lake is calm and serene, its surface only broken by a small group of ducks.
 (PCPG) What do you even call a group of ducks? Is it a flock? I know some birds have weird names for a group of ‘em.
 (Jesse, casual, 2, happyMED) Ooh, I know this one! It’s a flock if they’re flying, but if they’re swimmin’ like these li’l guys then it’s a team. Yeah, a team of ducks. But yeah you’re right, a bunch of birds have strange collective nouns. My favourites are ravens and crows. Put ‘em in the same room and you’ve got both a Conspiracy and a Murder, but the only crime being committed is imprisoning birds in an enclosed space.
@@ -312,7 +322,7 @@ I oblige. The lake is calm and serene, its surface only broken by a small group 
 *
 *I dunno man, birds aren’t so hot.*
 (PCPG) I dunno man, birds aren’t so hot. They’re just discount-aisle dinosaurs, you know?
-(Jesse, casual, 5, happyMAX) Oh, don’t get me started on dinosaurs! They’re the coolest for sure. Actually yeah, fuck birds, dinos are where it’s at. If I had a time machine right now, I’d go stompin’ around with Littlefoot any day. No people back in Jurassic times either, which is a blessing and a curse. I’d definitely have to bring some hot slut with me. Land Before Time, more like Land Before… Vagine.
+(Jesse, casual, 5, happyMAX) Oh, don’t get me started on dinosaurs! They’re the coolest for sure. Actually yeah, fuck birds, dinos are where it’s at. If I had a time machine right now, I’d go stompin’ around with Littlefoot any day. No people back in Jurassic times either, which is a blessing and a curse. I’d definitely have to bring some hot slut with me. Land Before Time, more like Land Before... Vagine.
 *
 (Jesse, casual, 3, happyMIN)
 Amused by his joke, I turn to the side and giggle in a way that I desperately hope came off as cute and endearing, rather than goofy and doofy. Unfortunately, Jesse’s own expression is so hard to read that I can only shrug it off and act like it didn’t happen.
@@ -322,23 +332,23 @@ Amused by his joke, I turn to the side and giggle in a way that I desperately ho
 [Song: PCPDating_PurpleForest]
 [Location: woods]
 We begin walking through the dense trees of the park’s forest. The path is soon swallowed by mulched leaves and dirt, to the point where we are most certainly lost.
-(Jesse, casual, 3, neutral)
-(PCPG) These woods are like the TARDIS…
+(Jesse, casual, 3, neutral, fade, center)
+(PCPG) These woods are like the TARDIS...
 (Jesse, casual, 3, shockMIN) Two Awesome Radical Dudes In Space?
 (PCPG) What? No, bigger on the in- oh you’re messing with me, aren’t you?
 (Jesse, casual, 3, happyMED) Hehe, gotcha.
 We keep walking deeper, figuring if we turned back now we’d just end up more lost. As we approach some more purple-tinted trees, a familiar bunny-nosed lady stops us in our tracks, wagging her finger (and tail...) left and right, like a mother telling her child to stop eating the play-doh.
-[SLIDE Jesse right]
-(Mage|Mage, casual, 5, happyMIN, offleft, slide, left) Oh no no, sweet travellers, not this way! Not yet… you want to go that way, towards the tree with two knots in its trunk, then keep going in that direction.
+[SLIDE Jesse right-100]
+(Mage|Mage, casual, 5, happyMIN, offleft, slide, left+100) Oh no no, sweet travellers, not this way! Not yet... you want to go that way, towards the tree with two knots in its trunk, then keep going in that direction.
 (PCPG) Hey, shouldn’t you be in school right now?
 (Mage|Mage, casual, 5, happyMED) Maybe I am, consider that?
 [Mage leaves]
 A gust of wind blows up a storm of leaves, and when it passes she's gone.
-(Jesse, casual, 5, neutral) …some people defy all explanation. Let’s make like Miss Purple-Pants and leaf. Might as well go the way she told us to. We aren’t finding our own way out, after all…
+(Jesse, casual, 5, neutral) ...some people defy all explanation. Let’s make like Miss Purple-Pants and leaf. Might as well go the way she told us to. We aren’t finding our own way out, after all...
 [Jesse leaves]
 [Location: nexusofalllife]
 We reach a small clearing landmarked by two out-of-place trees. One is stark white, a contrast against the darkness of what is quickly becoming a dusk-lit scene. The other is gnarled and pitted, and seems to drain the color from the leaves all around its base.
-(Jesse, casual, 2, shockMED) Whoah, this place is crazy… hey it’s like, this is the nexus of all life! The white tree and the cursed tree, the energies of the whole planet course between them. You stand right here in the middle and just let the vibes of mother nature imbue your soul with all five of Captain Planet’s elements…
+(Jesse, casual, 2, shockMED, fade, right-100) Whoah, this place is crazy... hey it’s like, this is the nexus of all life! The white tree and the cursed tree, the energies of the whole planet course between them. You stand right here in the middle and just let the vibes of mother nature imbue your soul with all five of Captain Planet’s elements...
 (PCPG) You know, this place does feel kinda magical. I wonder how many people know about it?
 (Jesse, casual, 2, shockMED) Probably not a whole lot. This sort of holy ground would only reveal itself to people as cool as us. It’s a Fortress of Solitude hidden in a Batcave and locked behind the Riddler’s most devious puzzles. Oh my god, there’s even a chair with a hole cut in it for when you wanna take a crap in the woods! This place has it all!
 As I watch Jesse saunter over to the rusty-legged plastic chair, I notice how his chiseled face reflects the distant glow of street lamps and lights up the night. Wait, night? Holy shit, how long have we been here?
@@ -346,17 +356,18 @@ As I watch Jesse saunter over to the rusty-legged plastic chair, I notice how hi
 (Jesse, casual, 3, happyMED|blush) Hell yeah. Cleared the static in my attic, that’s for sure. I think I’ll chill by these cool trees for a bit longer then head home. You haven’t seen my place yet, have you? I’ll have to show you sometime. Stay safe on the way back to your own place, y’hear?
 (Jesse, casual, 2, shockMAX) OH! Wait, before you go, I have something for you!
 He digs around in his jacket pockets, and pulls out a piece of cloth that looks far too large to fit inside. He holds it up to me with a look of sincere joy on his face. It’s getting hard to see in the dark, but I can see the silhouette of a t-shirt and vaguely make out the lettering on the front, spelling “Gamer’s Tavern”.
-(Jesse, casual, 1, happyMIN|blush) It’s uh, an apology for acting up at the bar. I tend to get a bit… impassioned about things from my childhood, like Evangelion. I think it’s because I had a pretty dang cool childhood and it made me the man I am today, so I want others to benefit from that experience as much as I did. But I also don’t think too much about how it comes off to people who aren’t used to it…
+(Jesse, casual, 1, happyMIN|blush) It’s uh, an apology for acting up at the bar. I tend to get a bit... impassioned about things from my childhood, like Evangelion. I think it’s because I had a pretty dang cool childhood and it made me the man I am today, so I want others to benefit from that experience as much as I did. But I also don’t think too much about how it comes off to people who aren’t used to it...
 (PCPG) Calm down Dr. Horseshoes, no need for the psychoanalysis here, haha. It’s alright, I forgive you. Honestly I should be the one apologizing, I left without telling you or making sure you could get home safe. So, sorry dude.
-(Jesse, casual, 5, smittenMIN|blush) I guess we break even on the apologies then, huh? But I still wanna give you this shirt… let’s call it a thank you gift, for taking me here today. And… for sticking by me when I needed it most.
+(Jesse, casual, 5, smittenMIN|blush) I guess we break even on the apologies then, huh? But I still wanna give you this shirt... let’s call it a thank you gift, for taking me here today. And... for sticking by me when I needed it most.
 (Jesse, casual, 5, smittenMIN|blush) Truth is, I need someone like you around. Someone who can inject a healthy dose of normalcy into my batshit insane life. Someone who isn’t TOO turned away by my antics, and cares about what’s best for me...
-My heart races. At first I thought he was just thanking me for the day out, but now it feels like… something more. This… is this romance? My face turns beet red. I snatch the shirt from his outstretched hand and hurriedly make for the street.
+My heart races. At first I thought he was just thanking me for the day out, but now it feels like... something more. This... is this romance? My face turns beet red. I snatch the shirt from his outstretched hand and hurriedly make for the street.
 (PCPG) Th-thanks Jesse, um, see you tomorrow at s-school, yeah? Okay bye!
 [fade to black]
-I skedaddle right outta there and only look back once… to see a warm smile that melts the frigid air of the night.
+[Jesse leaves]
+I skedaddle right outta there and only look back once... to see a warm smile that melts the frigid air of the night.
 [StopMusic]
 [Scene: Out of This World]
-Two weeks later…
+Two weeks later...
 [Location: horseshoesclinic.day, overlay.door.horseshoes|3]
 [fade from black]
 Normally, I would have had Japanese class this morning, but because of my new responsibilities I instead approach the newly-rebranded Horseshoes Clinic. Man, took them a while to get some new lettering on the door.
@@ -364,43 +375,45 @@ Normally, I would have had Japanese class this morning, but because of my new re
 [SFX: PCP-SFX_DoorOpen]
 I’ve been working with “Dr. Horseshoes” for a little over two weeks now, although I’ve not yet had the confidence to handle a client on my own. He’s always had to take the lead. Maybe I can change that today?
 [Song: PCPDating_Misato]
-(Jesse, campus, 1, neutral) Well how-dy, partner! Take a seat behind the desk with me, I found it in the teachers’ lounge and nabbed it for ya. But make it snappy, word is on the grapevine that we got a special guest coming to see us this morning, and she could show up at any time. If I were a betting man, I’d say riiight aboooouuuuut…
-[SLIDE Jesse right]
-(V, 1, neutral, offleft, slide, left)
+(Jesse, campus, 1, neutral, fade, center) Well how-dy, partner! Take a seat behind the desk with me, I found it in the teachers’ lounge and nabbed it for ya. But make it snappy, word is on the grapevine that we got a special guest coming to see us this morning, and she could show up at any time. If I were a betting man, I’d say riiight aboooouuuuut...
+[SLIDE Jesse right-150]
+(V, 1, neutral, offleft, slide, left+150)
 A young lady - around my age by the looks of her - knocks on the door exactly once while already walking through it. She spins the guest seat around to face backwards and sits her jeans-clad butt down on the cushion.
 (V|???, 2, neutral) Zdravstvuyte, eto klinika podkovy?
-…and she’s Russian, I think. Jesse and I both look at each other, then back to her.
+...and she’s Russian, I think. Jesse and I both look at each other, then back to her.
 (V|???, 1, confused) Oh I forgot, English. I asked if this is the Horseshoes Clinic?
-(Jesse|Dr. Horseshoes, campus, 3, happyMIN) Ah, yeah, this is the place. I am the one and only Dr. Horseshoes, the Sultan of Smarts and the King of Kmarts. You must be the foreign exchange student I was told about. What was your name again?
+(Jesse|Dr. Horseshoes, campus, 3, happyMIN) Ah, yeah, this is the place. I am the one and only Dr. Horseshoes, the Sultan of Smarts and the King of K-marts. You must be the foreign exchange student I was told about. What was your name again?
 (V|V, 2, neutral) It wouldn’t matter if I told you, you wouldn’t be able to pronounce it. Just call me V for now.
-During the introductions, I get a better look at V. Her jet-black hair falls down to her waist, and her retro glasses frame golden eyes. At least, one of them. The other lens is blacked out for some reason. Also one of her hands looks kind of… metallic?
+During the introductions, I get a better look at V. Her jet-black hair falls down to her waist, and retro glasses frame her pretty eyes. At least, one of them. The other lens is blacked out for some reason. Also her skin looks kind of... gray?
 (V|V, 1, angry) I’m here on the foreign exchange program from the Motherland. I was supposed to arrive at the start of the semester, but it took me this long to find the place on some dusty old paper map, because you weren’t on Navi-Gator. I thought every point of interest in this country was on Navi-Gator.
-(Jesse, campus, 5, smittenMIN)
+(Jesse, campus, 5, smittenMED)
 Jesse rolls his head to the side with a confident smile and almost imperceptibly nods in my direction in a way that says “this zoomer bitch needs some zoomer advice”.
 I find myself turning beet red - he wants me to take charge?
 (V, 1, neutral)
-(PCPG) Um, well, uh, V… m-maybe it’s just that this school, you know, isn’t on the map because it’s, uh, so underground! B-but anyways, it’s on Newgle Maps…
+(PCPG) Um, well, uh, V... m-maybe it’s just that this school, you know, isn’t on the map because it’s, uh, so underground! B-but anyways, it’s on Newgle Maps...
 (V|V, 3, shock) Ugh, do you know how much data Newgle collects without your permission? They probably know where you live, what you had for breakfast this morning and the last time you called your mother.
 (V|V, 1, neutral) Anyway, the whole reason I came in here is because I need help fitting in with the other students. I don’t want to draw too much attention for being foreign and weird. Can you help me with that or not?
-I turn a yet brighter shade of crimson as I try to think of a witty retort like Jesse would - no, I need to be thinking about how I would do things, not him… gah, why is this so hard?
+I turn a yet brighter shade of crimson as I try to think of a witty retort like Jesse would - no, I need to be thinking about how I would do things, not him... gah, why is this so hard?
 (Jesse, campus, 3, happyMIN)
-As if he were reading my thoughts - or more likely, reading my tomato-cheeked expression - Jesse gently places his hand on my shoulder. It’s warm… and comforting. I breathe deep and my anxiety and fear disappear.
+As if he were reading my thoughts - or more likely, reading my tomato-cheeked expression - Jesse gently places his hand on my shoulder. It’s warm... and comforting. I breathe deep and my anxiety and fear disappear.
 (PCPG) Okay, well, I think what you need to do is stop focusing on what other people think of you. Hmm. Uh, in this school, you’ll find, you’re never gonna be the weirdest one in the room. Everyone’s different and nobody cares. If you try too hard to fit in, that’s what’ll make you stand out!
 (PCPG) Instead, just act however you want and be confident in that. Find a niche you can fill and fill it. You’re unique, but you can still slot right in with people who compliment you. You know, like Yin and Yang shit.
 [CHOICE]
 *Offer to show her around like Gibbon did for you*
 *Tell her to get out there and make some friends*
-*Offer to show her around like Gibbon did for you
+*Offer to show her around like Gibbon did for you*
 (PCPG) If you want, I could give you a tour of the campus. When I first got here, someone did the same for me and it really helped me feel less intimidated to have someone around to explain all the weirdness, haha.
 (V|V, 2, happy) That sounds good. I would like that. Can you show me around right now?
 (PCPG) Ah, it’s best if we wait until tomorrow. I’m not working with Je-uh, Dr. Horseshoes tomorrow, so I can help throughout the whole day. Sound good?
 (V|V, 3, happy) Yes, this will do. I will see you tomorrow then, at art class for first period.
 (PCPG) Sure thing V, now take care for the rest of today!
+[SLIDE V offleft]
 [V leaves]
 She kicks off from the chair and electric slides straight into the door, not realizing it doesn’t open outwards. She regains her composure, opens the door inward, and leaves without closing it.
 (PCPG) Ah shit, speaking of class, I better get to my history lesson. See you in a couple days, Jesse! Oh, and thanks for just now. I almost broke down but you saved me!
 (Jesse, campus, 2, happyMIN) No no, that was all you. All I did was calm your jitters like a newborn critter. See ya, partner!
 [fade to black]
+[Jesse leaves]
 [StopMusic]
 [==> Chemistry]
 *
@@ -412,84 +425,83 @@ She kicks off from the chair and electric slides straight into the door, not rea
 (PCPG) Ah shit, speaking of class, I better get to my history lesson. See you in a couple days, Jesse! Oh, and thanks for just now. I almost broke down but you saved me!
 (Jesse, campus, 2, happyMIN) No no, that was all you. All I did was calm your jitters like a newborn critter. See ya, partner!
 [fade to black]
+[Jesse leaves]
 [StopMusic]
 *
-[StopMusic]
 [Scene: Chemistry]
 Friday, 2:16 PM
 [Location: scienceclass]
 [Song: PCPDating_ClassScience]
+(Ben|Professor Saint, campus, base, angryMIN)
 [fade from black]
 (Ben|Professor Saint, campus, base, angryMIN) Alright class, we’ll be taking a break from our usual timetable. I know you were all dying to learn about the physiological effects of prolonged ketosis and how it has NO relation to kidney stones, but alas I have been told, incorrectly I might add, that the lesson plan wasn’t approved. So I gotta haul all this paperwork up the chain of command.
 (Ben|Professor Saint, campus, point, neutral) So while I do that, you guys are gonna do some chemistry experiments. Split off into pairs, whoever’s sitting next to you will do. There’s bottles of all sorts of shit in the cupboards, mix them up and examine the results. I’ll be back later to check up on you.
 [Ben leaves]
 Professor Saint is already halfway out the door by the time I reply. 
 (PCPG) Wait, professor! Uh, shouldn’t we have a bit more instruction? Like, to make sure we don’t blow up the school or something?
-(Ben|Professor Saint, campus, point, shockMIN) Of course not, think about it…
+(Ben|Professor Saint, campus, point, shockMIN, fade, center) Of course not, think about it...
 He scoffs at me, vape pen clenched between his teeth and arms full of a clutter of documents and comic manuscripts.
 [Ben leaves]
-(Ben) It wouldn’t be an experiment if you were just following a script!
+(Ben|Professor Saint) It wouldn’t be an experiment if you were just following a script!
 [SFX: PCP-SFX_DoorSlam]
-… and he’s gone. Well, better pair up. Looks like Action Giraffe on my right already has a partner, so that leaves…
-(Davoo, campus, explaining, happyMED) I was born for this! Are you ready?
+... and he’s gone. Well, better pair up. Looks like Action Giraffe on my right already has a partner, so that leaves...
+(Davoo, campus, explaining, happyMED, offleft, slide, left) I was born for this! Are you ready?
 Classic Davoo, always coming out of left field.
 (PCPG) Okay, but uh, I don’t really know what I’m doing.
 (Davoo, campus, greeting, happyMED) That’s fine, I already have an idea of what to make. Can you look through that cupboard there for some Isopropanolamine and Sodium Dodecylbenzene Sulfonate?
-(PCPG) S-suuuuuure… lemme just write that down real quick…
+(PCPG) S-suuuuuure... lemme just write that down real quick...
 [Davoo leaves]
 Over the next half an hour, Davoo measures out and mixes exact quantities of various chemicals I can’t even begin to remember the names of. I just run around different cupboards looking for ingredients for his concoction, but I don’t really contribute anything intellectually.
 [StopMusic]
 [Song: PCPDating_Slimefests]
 [CG: DavooGooV1]
-(Davoo) …hmm, needs just a touch more Ammonium Hydroxide. Could you pass me the Ammonium Hydroxide pipette?
+(Davoo) ...hmm, needs just a touch more Ammonium Hydroxide. Could you pass me the Ammonium Hydroxide pipette?
 I fumble around and hand him the third pipette from the left. He’s kept everything very well-organised, but it’s only labelled in his head.
 [CG: DavooGooV2]
-(Davoo) Thanks. Five milliliters should be plenty…
+(Davoo) Thanks. Five milliliters should be plenty...
 [CG: DavooGooV3]
-(Davoo) Gah! No no no, that was the Indigo Carmine pipette! Now it’s oxidised and turned the mixture all green and viscous! Well, hopefully the “Davoo Goo” will still be fit for purpose…
+(Davoo) Gah! No no no, that was the Indigo Carmine pipette! Now it’s oxidised and turned the mixture all green and viscous! Well, hopefully the “Davoo Goo” will still be fit for purpose...
 [CG end]
-[Location: scienceclass]
 I look over at the other table to see if they’re faring any better. Not that I can really tell.
-(Action Giraffe, neutral, left)
-(Lord of Ghosts, neutral, blank, right)
-(Action Giraffe, neutral) I have AIDS.
-(Lord of Ghosts, neutral, blank) BUT WHY IS IT SO CORROSIVE
-(Action Giraffe, angry) I have AIDS.
-(Lord of Ghosts, confused, blank) POINT TAKEN
+(Action Giraffe, gesture1, neutral, fade, left+100)
+(Lord of Ghosts, neutral, blank, fade, right-100)
+(Action Giraffe, gesture1, neutral) I have AIDS.
+(Lord of Ghosts, neutral) BUT WHY IS IT SO CORROSIVE
+(Action Giraffe, gesture2, angry) I have AIDS.
+(Lord of Ghosts, confused) POINT TAKEN
 I have no idea what they’re talking about.
 [ActionGiraffe leaves]
 [LordofGhosts leaves]
-(Ben|Professor Saint, campus, slouch, angryMIN) Okay, let’s get this over with. Time to judge your work.
+(Ben|Professor Saint, campus, slouch, angryMIN, offright, slide, right-100) Okay, let’s get this over with. Time to judge your work.
 When did he get back? Not one to announce his presence like Mr. Bestman, I guess.
-(Ben|Professor Saint, campus, base, angryMIN) Davoo, and kid whose name I can’t remember, what have you got there?
-[SLIDE Ben right]
+(Ben|Professor Saint, campus, base, angryMIN) Davoo, and kid whose name I can’t remember, whatcha got there?
 (Davoo, campus, explaining, happyMAX, offleft, slide, left) Well professor, it’s an all-purpose cleaning fluid called-
-(Ben|Professor Saint, campus, point, happyMIN) Slime, huh? I like it! It’s got a good gelatinous consistency to it, and it’s the perfect shade of green. May you share with me a look at your experiment notes?
+(Ben|Professor Saint, campus, point, happyMIN) Slime, huh? I like it! It’s got a good gelatinous consistency to it, and it’s the perfect shade of green. Can I take a look at your experiment notes?
 Davoo hands Mr. Saint the school-grade lined paper we wrote down all the ingredients and observations on. He looks over it with uncharacteristically feverish curiosity, before casually stuffing the sheet into his jacket pocket.
-(Ben|Professor Saint, campus, point, happyMAX) Excellent work you two, you each get one Yang dollar as a reward. But I’m out of cash right now, so you can redeem it as a discount when you buy one of my “I’m just being cool” t-shirts. Moving on!
+(Ben|Professor Saint, campus, point, happyMAX) Excellent work you two, you each get one Yang dollar as a reward. But I’m out of cash right now, so you can redeem it as a discount when you buy one of my “I’m just being cool” t-shirts.
 [Davoo leaves]
 [StopMusic]
-(Ben, campus, dab)
-[SLIDE Ben left]
+(Ben, campus, dab) Moving on!
+[SLIDE, Ben, left]
 He dabs over to the other table with a little more spring in his step than usual. However, his mood immediately sours once he approaches Action Giraffe and the ghost’s pungent brew.
-(Action Giraffe, sad, center)
-(Lord of Ghosts, sad, blank, right)
+(Action Giraffe, gesture2, sad, fade, center)
+(Lord of Ghosts, sad, blank, fade, right)
 [Song: PCPDating_ActionFun]
 (Ben|Professor Saint, campus, exasp, shockMIN) Eugh, god, what is that? It reeks!
-(Action Giraffe, sad) I Have AIDS.
+(Action Giraffe, gesture3, sad) I Have AIDS.
 He picks up the flask of “I Have AIDS” to take a closer look.
 (Ben|Professor Saint, campus, exasp, shockMAX) AAAHHH! Hot!!
-…only to hurriedly slam it back down on the table, which spills some of the corrosive liquid on the Lord of Ghosts.
+...only to hurriedly slam it back down on the table, which spills some of the corrosive liquid on the Lord of Ghosts.
 [SFX: PCP-SFX_DemonScreetch]
-(Lord of Ghosts, shock, blank) WAAAIIIIIIIIIIEEEEEEEEIIIIII!!! MY GHOSTLY ESSENCE FUCK OW OWIE
+(Lord of Ghosts, shock) WAAAIIIIIIIIIIEEEEEEEEIIIIII!!! MY GHOSTLY ESSENCE FUCK OW OWIE
 Burning holes in his, uh, skin, the concoction gives off a visible smoke trail that would no doubt set off the fire alarm, if its batteries had been replaced at all in the last ten years.
-[SLIDE, LordofGhosts, offleft]
+[SLIDE LordofGhosts offleft]
 (Ben, campus, exasp, angryMAX)
-[LordofGhosts leaves]
 [SFX: PCP-SFX_DoorSlam]
+[LordofGhosts leaves]
 Panicking, he rushes out the door so quickly that he knocks over the flask and spills it all over Professor Saint’s jacket!
 (Ben|Professor Saint, campus, exasp, angryMAX) Gah! Get back here you specter of torment!
-(Ben|Professor Saint, campus, slouch, angryMIN) ...bleh. If he hadn’t zoomed around so recklessly, my jacket would be fine goddammit…
+(Ben|Professor Saint, campus, slouch, angryMIN) ...bleh. If he hadn’t zoomed around so recklessly, my jacket would be fine goddammit...
 (Ben|Professor Saint, campus, exasp, angryMAX) Rage quit! That’s it, class is over. Everybody go home.
 [SLIDE ActionGiraffe offleft]
 [SLIDE Ben center]
@@ -497,7 +509,7 @@ Panicking, he rushes out the door so quickly that he knocks over the flask and s
 [StopMusic]
 Class filters out, but on my way to the door I stop to talk with Mr. Saint.
 (PCPG) Hey, professor? I know your jacket’s gonna need some patching up. Gibbon told me a few days ago, there’s this great fabricsman named Dan who has a shop set up downtown. He’ll get that jacket looking better than new. Oh, but just make sure you don’t let him sell you a new toilet seat. He’s REALLY pushy about it for some reason.
-(Ben|Professor Saint, campus, base, neutral) Hrrrrr… thanks kid…
+(Ben|Professor Saint, campus, base, neutral) Hrrrrr... thanks kid...
 [fade to black]
 [Ben leaves]
 Since class ended early, I still have a little while until school ends. Might as well go see Jesse. I don’t normally get to help out on a Friday afternoon, after all.
@@ -506,13 +518,13 @@ Since class ended early, I still have a little while until school ends. Might as
 [Song: PCPDating_WorkTheme]
 [fade from black]
 I enter the clinic to find Jesse looking more than a little frazzled, with papers strewn about the desk and a few new dents in the wall.
-(Jesse, campus, 2, shockMIN) Ah, hey there li’l buddy! Sorry about the mess. It’s been something of a long week for ol’ Horseshoes McGee, and woe is me, but Horseshoes McGee needs some chicken and tea, y’see? I’m gonna pack up and hit the 7-Eleven on my way home, is what I’m saying.
+(Jesse, campus, 2, shockMIN, fade, center) Ah, hey there li’l buddy! Sorry about the mess. It’s been something of a long week for ol’ Horseshoes McGee, and woe is me, but Horseshoes McGee needs some chicken and tea, y’see? I’m gonna pack up and hit the 7-Eleven on my way home, is what I’m saying.
 Before I can chime in with my own thoughts, we’re greeted by an all-too-familiar, sudden, unannounced presence.
 (Ben, campus, base, neutral|horn, offleft)
 [StopMusic]
 [Song: PCPDating_BotBustah]
-[SLIDE Ben left]
-(Jesse|Dr. Horseshoes, campus, 2, happyMIN, center, slide, right) Ah, welcome to the Horseshoes Clinic! I was about to wrap up for the day, but if you’re in need then I’m… in… peeeeeeeeed.
+[SLIDE Ben left+100]
+(Jesse|Dr. Horseshoes, campus, 2, neutral, center, slide, right-100) Hey, uh, welcome to the Horseshoes Clinic. I was about to wrap up for the day, but if you’re in need then I’m... in... peeeeeeeeed.
 (Jesse, campus, 3, confusedMED)
 (PCPG) Want me to handle this one? You seem to be a little out of sorts.
 (Jesse, campus, 5, happyMIN|blush) I must swallow my pride and accept your help yet again, I suppose. Knock ‘em dead, el tigre.
@@ -521,7 +533,7 @@ Before I can chime in with my own thoughts, we’re greeted by an all-too-famili
 (PCPG) Hi Mr. Saint, I didn’t expec-
 (Ben|Phantom Horn, campus, point, angryMIN|horn) Nononono, I’m not Ben Saint, you’re getting me mixed up with that handsome devil from Science class. My name’s Phantom Horn. I’m from the cooler side of school, we’ve never met.
 What a shitty disguise. Does he really think it’s enough to fool anyone? He didn’t even change his jacket.
-(PCPG) Okay… well, what’s on your mind, Mr. Horn? Oh, and please take a seat.
+(PCPG) Okay... well, what’s on your mind, Mr. Horn? Oh, and please take a seat.
 (Ben|Phantom Horn, campus, base, neutral|horn) Please, Mr. Horn was my father. Wait no he wasn’t, he was Gold Standard, shit! Either way, call me Phantom.
 “Phantom” dramatically flops onto the therapist couch that’s been here the whole time but I never really noticed until now. One arm draped daintily over his forehead, he continues:
 (Ben|Phantom Horn, campus, slouch, sadMIN|horn) My troubles begin and end with a certain sect of the population, specifically the younger generation of today. I’m talkin’ ZOOMERS!
@@ -530,12 +542,12 @@ No sooner had Jesse settled into the plush back of his chair than he pricked bac
 (Ben, campus, exasp, angryMIN|horn)
 (PCPG) Well... I think maybe you’re being a bit harsh with the blanket statements, but-
 (Jesse, campus, 3, angryMIN)
-[SLIDE Jesse right]
-[SLIDE Ben left]
+[SLIDE Jesse right-100]
+[SLIDE Ben left+100]
 (Jesse|Dr. Horseshoes, campus, 3, angryMIN) Fuck ‘em.
 (Ben|Phantom Horn, campus, base, confusedMAX|horn) “Fuck ‘em”?
 (Jesse|Dr. Horseshoes, campus, 4, happyMED) Fuck ‘em!
-(Ben|Phantom Horn, campus, slouch, neutral|horn) Fuck ‘em…
+(Ben|Phantom Horn, campus, slouch, neutral|horn) Fuck ‘em...
 (Jesse|Dr. Horseshoes, campus, 1, happyMAX) Fuck ‘em!!
 (Ben|Phantom Horn, campus, exasp, happyMAX|horn) Yeah, fuck ‘em!
 [SLIDE Jesse offleft]
@@ -546,19 +558,19 @@ And with that, the two dance out the door arm-in-arm - leaving me to tidy up the
 [fade to black]
 [StopMusic]
 Hm? A text message?
-(Jesse 3:25 PM) “lol sorry about leaving you in the dark there come down to the 711 ill get you some chick n tea my treat”
+(Jesse|Jesse 3:25 PM) “lol sorry about leaving you in the dark there come down to the 711 ill get you some chick n tea my treat”
 Well, looks like that’s my afternoon plans sorted. Off I go!
 [Scene: Chicken and Tea]
 (Ben & Jesse) Fuck ‘em!
 [Location: 7eleven.night]
 [Song: PCPDating_RADCON]
+(Jesse, campus, 1, happyMED, right-100)
+(Ben, campus, base, happyMIN, left+100)
 [fade from black]
-(Jesse, campus, 1, happyMED, right)
-(Ben, campus, base, happyMIN, left)
 Tea in hand, the three of us clink together our bottles in a toast to an evening well spent. Phantom’s horn had fallen off by the time I arrived, but he’s still keeping up the act. Since then, we’ve been munching on various kinds of chicken and shooting the shit with whatever pre-zoomer nonsense crosses our minds.
 (Ben|Phantom Hornless, campus, point, happyMIN) Okay okay I got one - favorite 80s cartoon-
 (Jesse, campus, 5, happyMIN) Easy, Dragon B-
-(Ben|Phantom Hornless, campus, point, happyMIN) Upupup! Hold on, favourite 80s cartoon… villain!
+(Ben|Phantom Hornless, campus, point, happyMIN) Upupup! Hold on, favourite 80s cartoon... villain!
 (Jesse, campus, 3, confusedMIN) Whew, now that’s a little tougher. I was always quite partial to Skeletor, or the Shredder, but really who can compare to the Prince himself, Vegeta?
 (Ben|Phantom Hornless, campus, base, confusedMIN) Mmm, he is a good one. My pick is Scrooge McDuck. No-one should have that much money! He’s despicable for not redistributing his wealth to the masses of Duckburg.
 (Jesse, campus, 4, happyMED) Remember the DuckTales game on NES?
@@ -596,28 +608,28 @@ Heh. That’s a deep cut. Back when we first met, I offered him the same damn th
 [StopSFX]
 [StopMusic]
 [Jesse leaves]
-(Jesse) …
+(Jesse) ...
 (Jesse) Bastard.
 (Jesse) That paper-tube rube didn’t pay me back for his chicken!
 [Scene: Shelter]
 Thankfully, Jesse’s house wasn’t far.
-…unfortunately, when we got there it was flooded, and totally inhospitable. So we darted back to the school, and into Jesse’s office. We got drenched, but hey, it’s still closer than my house.
+...unfortunately, when we got there it was flooded, and totally inhospitable. So we darted back to the school, and into Jesse’s office. We got drenched, but hey, it’s still closer than my house.
 [SFX: PCP-SFX_DoorOpen]
 [Location: horseshoesclinic.night]
 [SFX: PCP-AMBIENT_Rain]
 [Song: PCPDating_HomeNight]
 [fade from black]
-(Jesse, campus, 5, neutral)
+(Jesse, campus, 5, neutral, fade, center)
 (PCPG) I hate to be a bother, but do you have a towel I can use?
 (Jesse, campus, 5, shockMIN) Oh! Of course. Lemme go grab you one.
 [Jesse leaves]
 I take a moment to survey the clinic, taking a proper look at it despite the dim lighting. It’s small and a little cluttered, but still far better than the alleyway he was living in before. The shelves are adorned with anime figures, and the walls are all covered with some form of poster or another. How much of this was left over from Digi’s secretary, I wonder?
 (Jesse) Hey buddy, can you turn on the space heater? It’s behind the couch, by the raven. Mind your step, it’s leaky!
-“Leaky”? Does he mean the heater, the couch, or the raven…?
+“Leaky”? Does he mean the heater, the couch, or the raven...?
 (PCPG) Oh, uh, sure.
 I trapse my way over the pirate rug to the heater and flick the switch. I also notice some VHS tapes, but no player to watch them on.
 The heating machine starts up immediately, making a slightly worrying low whirring sound and occasionally dripping an oily-yellow liquid onto the floor, which I now see is collecting in a small puddle. By some miracle, it narrowly avoids both the couch and the rug - or perhaps they were placed to avoid it?
-(Jesse, campus, 2, happyMIN) Here ya go! One towel for the guest of honor. I got you some dry clothes too, they might be a bit loose on you but I hope they’re okay. Bathroom’s out the door and on the left, if you wanna change.
+(Jesse, campus, 2, happyMIN, fade, center) Here ya go! One towel for the guest of honor. I got you some dry clothes too, they might be a bit loose on you but I hope they’re okay. Bathroom’s out the door and on the left, if you wanna change.
 He hands me the towel, along with a large Asuka t-shirt and a pair of tracksuit pants. For some reason I was expecting them to be dirtier, but they’re very clean.
 (PCPG) Ah, thanks.
 [fade to black]
@@ -626,36 +638,38 @@ He hands me the towel, along with a large Asuka t-shirt and a pair of tracksuit 
 I towel off and get into the dry clothes. The fact they’re too big is kinda comfy, actually. When I return, there’s a surprise waiting for me...
 [Location: horseshoesclinic.night]
 [Song: PCPDating_Beloved]
+(Jesse, special, 1, happyMED)
 [fade from black]
 (Jesse, special, 1, happyMED) So, the clothes fit alright?
 (PCPG) Yeah, thanks. What’s with the pirate gear? Hang on, are those the clothes you were wearing when we first met?
 (Jesse, special, 3, happyMIN|blush) Heh, you remembered? I like to keep ‘em around, don’t wear ‘em much anymore though. Reminds me of the old days, and the day I met you.
-(Jesse, special, 3, sadMIN) You know as well as I do, but back then I couldn’t have dreamed of all this. A roof over my head - when it’s not flooded, anyway - food that I can be reasonably sure hasn’t been pooped on by rats, and… friends. Friends like you.
+(Jesse, special, 3, sadMIN) You know as well as I do, but back then I couldn’t have dreamed of all this. A roof over my head - when it’s not flooded, anyway - food that I can be reasonably sure hasn’t been pooped on by rats, and... friends. Friends like you.
 (Jesse, special, 3, sadMED) Friends that help me get through the daily grind that lets me live like this. In these four walls...
-Jesse chokes on his words. He’s practically tearing up. I should… no, what if he thinks it’s weird? Gah, screw it!
-(Jesse, special, 2, shockMIN|blush) …?
-I stride up to him, close my eyes, and hug the shit out of him. Once my dumb brains catches up to what I’m doing, I pull away and cover my tomato-red face in embarrassment.
+Jesse chokes on his words. He’s practically tearing up. I should... no, what if he thinks it’s weird? Gah, screw it!
+(Jesse, special, 2, shockMIN|blush) ...?
+I stride up to him, close my eyes, and hug the shit out of him. Once my dumb brain catches up to what I’m doing, I pull away and cover my tomato-red face in embarrassment.
 (Jesse, special, 3, smittenMED|blush) Hoo boy, somebody call Phil Collins! I should, uh, really be getting to bed. Nighty-night! Oh, speaking of which, I only got the couch...
 (Jesse, special, 2, shockMAX|blush) B-before you say anything, I’m not going where you think I’m going with that! I mean I’ll sleep on the rug! You’re the guest, you should have the couch. Now go on, get, lights out in five.
 [fade to black]
 [Jesse leaves]
-Holding my tongue in humiliation, I silently crawl onto the couch. I hope and pray that my actions of the last five minutes will be all but forgotten by the morning, though I sincerely doubt it. Still… he didn’t seem off-put by it? I settle into a comfy dream, clutching the Hello Kitty cushion that bears his faint scent…
+Holding my tongue in humiliation, I silently crawl onto the couch. I hope and pray that my actions of the last five minutes will be all but forgotten by the morning, though I sincerely doubt it. Still... he didn’t seem off-put by it? I settle into a comfy dream, clutching the Hello Kitty cushion that bears his faint scent...
 [StopMusic]
 [StopSFX]
 [Scene: It’s Still Raining]
 The next morning...
-…
+...
 [Location: horseshoesclinic.day]
 [fade from black]
 [SFX: PCP-AMBIENT_Rain]
-I feel myself waking up to the sound of pitter-patter on the roof. Still in Jesse’s office? Yep. Looks like that wasn’t a dream. And… yep. Definitely on his couch, while the rug is hastily tugged straight after he slept on it. Although, he’s not there.
-Maybe he woke up already. What time is… ah! 11 AM? Even without an alarm, I usually get up around 10. Must be a combination of the late night, and the small windows that let in very little of what daylight manages to peek through the rain and clouds.
-As I lumber over to the space heater to retrieve my own clothes, which Jesse kindly left to dry (although I do worry about that being a fire hazard) I realize the man has pulled an Elvis and left the building. 
+I feel myself waking up to the sound of pitter-patter on the roof. Still in Jesse’s office? Yep. Looks like that wasn’t a dream. And... yep. Definitely on his couch, while the rug is hastily tugged straight after he slept on it. Although, he’s not there.
+Maybe he woke up already. What time is... ah! 11 AM? Even without an alarm, I usually get up around 10. Must be a combination of the late night, and the small windows that let in very little of what daylight manages to peek through the rain and clouds.
+As I lumber over to the space heater to retrieve my own clothes, which Jesse kindly left to dry (although I do worry about that being a fire hazard), I realize the man has pulled an Elvis and left the building. 
 Once dressed, I carefully pad my way around the desk to go wash my face in the bathroom. However, I don’t reach the door before discovering a hand-written note on the desktop.
 [CG: JesseNote]
 [Song: PCPDating_Forsaken]
 (Jesse) Good morning, my faithful assistant and dearest friend. At least, it’s morning when I’m writing this, for all i know it could be the dead of night three days from now by the time you read it. Now i don’t wanna be like that 7-Eleven worker and beat around the Bush, so let’s beat feet to the beat of the drum, the heartbeat at the center of this whole ordeal.
 (Jesse) Fact is, I ain’t about all this frilly fru-fru kooky-doo. I appreciate my job, my house, and you. But it’s not my style. It’s hard. It’s stressful. I’m too deep in the system and the water pressure’s poppin’ my eardrums. But there’s a way out. A hatch in the wall that leads to calmer waters, and a desert island unto myself. And i declare that to be The Real America, where freedom really is free and i don’t have to pay my buck-o-five.
+(Jesse) I won't be drowning anymore.
 (Jesse) But that brings me to the hardest part about this, and that’s writing “so long, amigo.” I don’t wanna drag you into what I’m about to do, so don’t go looking for me. This is my burden to bear. Barring the unforeseen, last night was the last time we’ll see each other, so i just wanna make sure you get this message: Thanks.
 (Jesse) Thanks for building me up, even if I’m about to tear all that back down. In a way, i owe all my earthly possessions to you, and so to you i return them. I don’t know much about the paperwork side of things, but if anyone comes knockin’ about the house or the comics just tell ‘em Jesse gave them to you.
 (Jesse) And with that, I bid you adieu./n
@@ -664,29 +678,29 @@ Be excellent to your future companions, and party on dude.
 [CG end]
 [StopSFX]
 [StopMusic]
-…
-……
-………………………………
+...
+......
+....................................
 FUCK.
 ohfuckohfuckohfuckohfuckohfuckohfuckohfuckohfuck
 [cut to black]
 [Scene: The Search]
 [Song: PCPDating_ShatteredGlass]
 (PCPG) Ah, come on, think, think! Where would he go?
-(PCPG) His house? No, he straight-up said he was giving me the place. And I already checked the Gamer’s Tavern on the way to… wherever I’m going. He probably went somewhere no-one would find him. Ah! Maybe…
+(PCPG) His house? No, he straight-up said he was giving me the place. And I already checked the Gamer’s Tavern on the way to... wherever I’m going. He probably went somewhere no-one would find him. Ah! Maybe...
 [Location: waytoschool.nojesse]
 [fade from black]
-(PCPG) Jesse! … Jesse!
+(PCPG) Jesse! ... Jesse!
 (PCPG) Gah, no luck. I’ve checked every dumpster and nook and cranny in the whole neighborhood. At least the rain stopped. Okay. So he’s not where we first met. What other places are special to him?
 [CG: JesseFlashback]
 (Jesse) DONATELLOOOOOO!!
 [CG end]
-A flash of a memory, but one that hardly puts my mind at ease. I mean, what could it possibly- wait! Of course! I just need to…
+A flash of a memory, but one that hardly puts my mind at ease. I mean, what could it possibly- wait! Of course! I just need to...
 [CHOICE]
 *Look for him in the sewers*
 *Call his phone number*
 *Look for him in the sewers
-(PCPG) Oh geez. Could he really be…? I swear, if he’s down there I’m gonna kill him for making me go in after him…
+(PCPG) Oh geez. Could he really be...? I swear, if he’s down there I’m gonna kill him for making me go in after him...
 Using all the adrenaline-boosted strength and virgin rage I can muster, I lift the cover off the manhole and peer down into the depths.
 (PCPG) Well, here goes... 
 [fade to black]
@@ -696,19 +710,19 @@ Using all the adrenaline-boosted strength and virgin rage I can muster, I lift t
 *Call his phone number
 (PCPG) Idiot! Idiot idiot idiot! Why didn’t I think of this before?
 [CG: PCPG phone in hand]
-(PCPG) Contacts… Jesse… mobile… call!
+(PCPG) Contacts... Jesse... mobile... call!
 [fade to black]
-…
-…
-…
+...
+...
+...
 (PHONE) The number you are trying to call has been disconnected.
-[CG: PCPG phone in hand]
 [fade from black]
 (PCPG) ...shit. Of course he nuked his phone number.
 (PCPG) Wait... my lock screen! The forest! The cool trees!
 (PCPG) Oh fuck. Trees.
 (PCPG) Hold on Jesse, I’m coming to stop you, before you make a horrible mistake!
 [fade to black]
+[CG end]
 [StopMusic]
 [==> The End]
 *
@@ -720,89 +734,88 @@ Using all the adrenaline-boosted strength and virgin rage I can muster, I lift t
 No reply. Well, it’s a big sewer system. No matter how echoey, I don’t know how well sound travels down here. Gotta keep looking.
 I search on for what feels like hours, trudging through spooky grime and poopy slime in every direction. I begin to wonder if I can even find my way back out, let alone find Jesse.
 Just as all hope seems lost, a light at the end of the tunnel! In the most literal sense, that is. A faint flickering flame just around the corner - a sign of life!
-I consider calling out his name again, but now I’m having second thoughts. What if it scares him off? He did want to be left alone, it seemed… still, I make my way over towards the light. I peer around the corner and…
+I consider calling out his name again, but now I’m having second thoughts. What if it scares him off? He did want to be left alone, it seemed... still, I make my way over towards the light. I peer around the corner and...
 [Song: PCPDating_ActionSerious]
 [CG: Donatello V1]
 (PCPG) For real? A fucking ninja turtle?!
-(???) Woah there horsey, calm your androgynously ambiguous tits! Who are you and why are you in my den of deviancy?
+(Donatello|???) Woah there horsey, calm your androgynously ambiguous tits! Who are you and why are you in my den of deviancy?
 (PCPG) Ah, um, sorry? I’m a little on edge. Looking for a friend, I think he might be in serious trouble.
 The turtle strokes his slimy chin and nods.
 (Donatello) Hmm, I see. Why don’t you come sit on Uncle Donatello’s lap and tell him all about it?
-(PCPG) I’m not gonna… look, he’s about this tall, he’s got shoulder-length hair and a beard, and his name’s Jesse. Have you seen anyone like that?
+(PCPG) I’m not gonna... look, he’s about this tall, he’s got shoulder-length hair and a beard, and his name’s Jesse. Have you seen anyone like that?
 [CG: Donatello V2]
 Grim disgust washes over Donatello’s face immediately.
-(Donatello) Jesse… Jesse, Jesse, Jesse… now there’s a name I’d hoped never to hear again.
+(Donatello) Jesse... Jesse, Jesse, Jesse... now there’s a name I’d hoped never to hear again.
 (PCPG) You know him? Is he here?!
 (Donatello) He ain’t here, but I could never forget him no matter how hard I try. Me an’ him used to be best buds. All through our childhood, in fact. We were orphans, cast out into the streets with nothing but each other.
 (PCPG) What about your brothers? Leonardo, Raphael, Michaelangelo? Splinter?
 (Donatello) Who? Gee buddy, are you getting me confused with someone else? Anyway...
-(Donatello) I was only a little turtle-let back then, he’d give me piggy-back rides all over the neighborhood. We’d sneak into the library and learn to read, sneak into movies… a lot of sneaking.
-(Donatello) Then everything changed when puberty hit… I felt the need, the primal urge, to get busy. And I did. Found this cutie called April. Jesse laughed at me when I told him her name. But I wasn’t laughing. Neither was she.
+(Donatello) I was only a little turtle-let back then, he’d give me piggy-back rides all over the neighborhood. We’d sneak into the library and learn to read, sneak into movies... a lot of sneaking.
+(Donatello) Then everything changed when puberty hit... I felt the need, the primal urge, to get busy. And I did. Found this cutie called April. Jesse laughed at me when I told him her name. But I wasn’t laughing. Neither was she.
 (PCPG) Well, I can see where Jesse’s coming from, but at the same time I can also see how you’d take it as mean. Now, if you haven’t seen Jesse, I’d better go-
 (Donatello) ‘course, the reason SHE wasn’t laughing was because I had my massive turtle dong down her throat, but still. That was the last time I heard Jesse laugh. After that, he got really angry and told me I should have asked the bitch for “consent” or something. Like, what are you talking about dude? What, am I just supposed to NOT fuck her?
-(PCPG) …
+(PCPG) ...
 [CG: Donatello V1]
 (Donatello) I learned a new word that day: Rape. I like that word. Jesse didn’t like that word. He left me all alone, and April didn’t stick around either. Eventually I ended up finding this comfy little spot down here, where a turtle can live and rape in peace.
-(PCPG) …
+(PCPG) ...
 (Donatello) Hey, wanna see a secret passage? There’s a side tunnel that goes all the way to the furnace room in the PCP University! I like to use my well-trained sneaking skills to grab people who pass by there and bring them here. Then I rape them, hehehehe.
 (Donatello) Ever wonder why the Cauckcast chicks aren’t in this story route? Hehehehe. Yeeeeeees.
 [cut to black]
-[CG end]
 (PCPG) I’m calling the police.
 [StopMusic]
 [Song: PCPDating_GameOver]
-I never did end up finding Jesse. I tried everything. His phone number - disconnected. The police - thought I was either Mad or a load of Bull. No matter what, it really seemed like he was gone for good. Maybe it’s better I didn’t find him, not now anyway. At least now I can pretend he really is living happily on a desert island…
+I never did end up finding Jesse. I tried everything. His phone number - disconnected. The police - thought I was either Mad or a load of Bull. No matter what, it really seemed like he was gone for good. Maybe it’s better I didn’t find him, not now anyway. At least now I can pretend he really is living happily on a desert island...
 [StopMusic]
-[BAD END]
+[Credits]
 [Prompt to return to scene The Search, last save, or title screen]
 [Scene: The End]
-(PCPG) Hah… hah… hoo... It’s a lot further than I remembered, yowza!
+(PCPG) Hah... hah... hoo... It’s a lot further than I remembered, yowza!
 [Location: woods]
 [Song: PCPDating_ShatteredGlass]
 [fade from black]
-(PCPG) Almost there! He’s definitely there, I can feel it! Just gotta get there before… before...
-(PCPG) Ah, focus! Let’s see… go past the tree with two knots…
+(PCPG) Almost there! He’s definitely there, I can feel it! Just gotta get there before... before...
+(PCPG) Ah, focus! Let’s see... go past the tree with two knots...
 [Location: nexusofalllife]
 I enter the clearing of the White Tree and the Cursed Tree. My feet are burning, my heart pounding, and my breath ragged. But none of that matters right now.
 I hear a rustling noise to my left.
-I turn and see… a chair? The chair with a hole cut in it. For when you wanna take a crap in the woods.
+I turn and see... a chair? The chair with a hole cut in it. For when you wanna take a crap in the woods.
 [CG: Jesse just hanging out]
-And on the chair stands a man dressed in full pirate garb, reaching up for a branch and fastening a rope to it-!
+And on the chair stands a man dressed in iconic scruffy clothes, reaching up for a branch and fastening a rope to it-!
 [StopMusic]
 (PCPG) JESSE!
 [SFX: PCP-SFX_FallDamage]
 [CG: dab to death]
 I break into a sprint, vault off a fallen branch, and tackle Jesse off of the chair with full force! Gripping his midsection in the tightest bear hug I can muster, I barely even notice we didn’t hit the ground.
 (Jesse) What the-yow!!!! Fuck, my hand, my hand!!
-I realize all too late that we are dangling by Jesse’s arm, caught in the rope and fastened to the branch. I don’t have time to dwell on it though, as the branch begins to fracture and…
+I realize all too late that we are dangling by Jesse’s arm, caught in the rope and fastened to the branch. I don’t have time to dwell on it though, as the branch begins to fracture and...
 [cut to black]
 [SFX: body fall]
 SNAP!!!
 We crash to the ground pretty hard. Caught unawares, I blacked out for a second. As I come to, I don’t feel the leaves and dirt beneath me I expected to, but rather something warm and comforting--
 [CG: Forest_Floor_embrace_V1]
-[Song: PCPDating_ProCrastinatorShortLoop]
 [fade from black]
 (PCPG) Ah! Sorry! Did I fall on you?! I-I-I didn’t mean it, I was just-!
 (PCPG) pleasedontkillyourselfjesseiloveyouandwantyoutostayaliveandtheworldisntallthatbad
 whenyouthinkaboutitespeciallyconsideringallthefriendsyouvemadealongtheway-
 [CG: Forest_Floor_embrace_V2]
+[Song: PCPDating_DescendentofHamboi]
 (Jesse) Heyyy now, put the brakes on, partner! I’m not trying to off myself! If I was gonna do it, it wouldn’t be like this, that’s for sure, I’d at least have enough self-respect to rocket up to the moon and be the first man to blow his own brains out in space.
 (Jesse) No, before you yanked me off my precarious perch I was putting up a hammock! Gonna live in the woods, I decided. Off the grid. Get back to my roots, back to nature. Away from all the obnoxious R-tards in the city, but still close enough that I can swipe some chicken n’ tea until I master the art of self-sufficiency. Might have to forget how to dumpster-dive to learn that, though.
 I feel waves of relief flush over my face with every word that passes his lips, but I’m still a little confused...
 (PCPG) Why did you write your letter like that, you big bully! You had me worried sick! All that stuff about being “your burden to bear” and “not wanting to drag me into it”, what was that all about?!
-(Jesse) Aw come on, like you don’t know me well enough to figure that out. I don’t want you to end up like me. A washed up fraud who can’t live his best life when it’s handed to him on a silver platter. But you… you’re different. You’re good at stuff, and well… I love stuff.
+(Jesse) Aw come on, like you don’t know me well enough to figure that out. I don’t want you to end up like me. A washed up fraud who can’t live his best life when it’s handed to him on a silver platter. But you... you’re different. You’re good at stuff, and well... I love stuff.
 (Jesse) I just want you to be happy with the life you’ve got, hotshot.
 [CG: Forest_Floor_embrace_V3]
-I try to hold back tears, but they won’t stop coming. Clasping his shirt and pulling myself in closer, I bury my face in his chest and… laugh. Laugh at this whole situation. Here I am, lying on the forest floor on top of a man with his wrist tied to a broken branch, crying my eyes out. It’s comical.
-(PCPG) Jesse… can I ask you something, before you cut ties with the world entirely?
+I try to hold back tears, but they won’t stop coming. Clasping his shirt and pulling myself in closer, I bury my face in his chest and... laugh. Laugh at this whole situation. Here I am, lying on the forest floor on top of a man with his wrist tied to a broken branch, crying my eyes out. It’s comical.
+(PCPG) Jesse... can I ask you something, before you cut ties with the world entirely?
 (Jesse) Go ahead, shoot.
-(PCPG) Please… can you take me with you? Let me live in the woods with you… keep you company…? I couldn’t bear to live knowing you were all alone again… so please. Let me be more than your office partner - your life partner!
-(Jesse) …
+(PCPG) Please... can you take me with you? Let me live in the woods with you... keep you company...? I couldn’t bear to live knowing you were all alone again... so please. Let me be more than your office partner - your life partner!
+(Jesse) ...
 (Jesse) Back then, when you asked me to get off the streets and stay with you, I never imagined that one day the tables would turn quite like this. But unlike back then, I’m sane enough now to accept your help when I need it.
 (Jesse) Welcome to the Endlett Treehouse, partner.
 [CG: Forest_Floor_embrace_V4]
 [pause]
-[StopMusic]
 [fade to black]
-[GOOD END]
+[StopMusic]
+[Credits]
 [Prompt to return to scene The Search, last save, or title screen]
