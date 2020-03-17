@@ -592,32 +592,34 @@ func _on_Dialogue_has_been_read(setIndex=false):
 						break
 				
 				if found != null:
-					if found < index:
-						var loadInChoice = false
-						var loadChoices = []
-						var loadChosenChoices = []
-						
-						var file = File.new()
-						var sceneSave = dialogue[index].substr(5,dialogue[index].length()-1).rstrip(']')
-						file.open_encrypted_with_pass('user://scenes/' + sceneSave, File.READ, 'HELPLETMEOUT')
-						var choiceText = file.get_as_text().split('\n', false, 3)
-						file.close()
-						
-						if choiceText[0] == 'True': loadInChoice = true
-						if choiceText[1] != 'NULL':
-							var stringArray = choiceText[1].split(',', true)
-							for string in stringArray: loadChoices.append(string)
-						if choiceText[2] != 'NULL':
-							var stringArray = choiceText[2].split(',', true)
-							for string in stringArray: loadChosenChoices.append(string)
-						
-						choices = loadChoices
-						inChoice = loadInChoice
-						chosenChoices = loadChosenChoices
-						
-						index = found
-					else:
-						index = found
+					index = found
+					global.current_scene_name = sceneName.strip_edges().substr('[Scene:'.length()).rstrip("]").strip_edges()
+#					if found < index:
+#						var loadInChoice = false
+#						var loadChoices = []
+#						var loadChosenChoices = []
+#
+#						var file = File.new()
+#						var sceneSave = dialogue[index].substr(5,dialogue[index].length()-1).rstrip(']')
+#						file.open_encrypted_with_pass('user://scenes/' + sceneSave, File.READ, 'HELPLETMEOUT')
+#						var choiceText = file.get_as_text().split('\n', false, 3)
+#						file.close()
+#
+#						if choiceText[0] == 'True': loadInChoice = true
+#						if choiceText[1] != 'NULL':
+#							var stringArray = choiceText[1].split(',', true)
+#							for string in stringArray: loadChoices.append(string)
+#						if choiceText[2] != 'NULL':
+#							var stringArray = choiceText[2].split(',', true)
+#							for string in stringArray: loadChosenChoices.append(string)
+#
+#						choices = loadChoices
+#						inChoice = loadInChoice
+#						chosenChoices = loadChosenChoices
+#
+#						index = found
+#					else:
+#						index = found
 				else:
 					print('Could not find: ' + sceneName)
 				
@@ -660,6 +662,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					var intended_offset = Vector2(float(command[2]), float(command[3]))
 					var speed = float(command[4])
 					systems.camera.zoom(zoom_factor, intended_offset, speed)
+					yield(systems.camera, 'movement_finished')
 				global.pause_input = false
 				
 			waitTimer.wait_time = 0.01
@@ -972,8 +975,8 @@ func parse_special_digi(info, parsedInfo, i, pos):
 	if faceType == "shocked":
 		faceType = "shock"
 	var forced_mask_name = mask#"/"+parsedInfo +'_special_' + str(num)
-	var face = '\n\tsystems.display.face(characterImages.'+parsedInfo+'.special.'+faceType+'['+face_num+'], "'+forced_mask_name+'")'
-	parse_position(info, 'systems.display.mask(' + mask + ', ' + video + ', ' + still + ', "video", 1, false, "' + forced_mask_name + '")' + face, video, i+3, pos)
+	var face = '\n\tsystems.display.face(characterImages.'+parsedInfo+'.special.'+faceType+'['+face_num+'], '+forced_mask_name+')'
+	parse_position(info, 'systems.display.mask(' + mask + ', ' + video + ', ' + still + ', "video", 1, false, ' + forced_mask_name + ')' + face, forced_mask_name, i+3, pos)
 	return
 	
 # Removes duplicate bodies of characters if they exist.
@@ -1293,10 +1296,11 @@ func parse_position(info, parsedInfo, body, i, pos):
 	var num
 	
 	#Stupid hack, we don't do the fade if this body is already on screen:
+	#So this is the auto-pose fading
 	var useFade = true
 	var path = execreturn("return " + body);
 	for l in systems.display.layers:
-		if l["path"] == path:
+		if l["path"] == path or l.get("mask", null) == path: #Video masked characters are odd because teh path ends up being the video
 			useFade = false
 			break
 		
@@ -1314,8 +1318,14 @@ func parse_position(info, parsedInfo, body, i, pos):
 		else:
 			j += 1
 			
-	if useFade:
-		parsedInfo += "\n\tsystems.display.fade("+body+", Color(0, 0, 0, 0), Color(1, 1, 1, 1), 0.25)"
+	if useFade and not fading:
+		var colour_base
+		if silhouette:
+			silhouette = false
+			colour_base = "Color(0, 0, 0, "
+		else:
+			colour_base = "Color(1, 1, 1, "
+		parsedInfo += "\n\tsystems.display.fade("+body+", " + colour_base + "0), " + colour_base + "1), 0.25)"
 	
 	if i < info.size():
 		if i + 2 == info.size()-1:

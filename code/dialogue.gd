@@ -57,18 +57,18 @@ func advance_text():
 	finish_fades_and_slides()
 	
 	# Stop camera movment if it is moving
-	if global.cameraMoving:
-		var camera = global.rootnode.get_node('Systems/Camera')
-		global.pause_input = true
-		get_tree().paused = false
-		camera.finishCameraMovment()
-		yield(camera, 'camera_movment_finished')
-		camera.zoom = camera.lastZoom
-		camera.offset = camera.lastOffset
-		get_tree().paused = true
-		global.pause_input = false
+	#if global.cameraMoving:
+	#	var camera = global.rootnode.get_node('Systems/Camera')
+	#	global.pause_input = true
+	#	get_tree().paused = false
+	#	camera.finishCameraMovment()
+	#	yield(camera, 'camera_movment_finished')
+	#	camera.zoom = camera.lastZoom
+	#	camera.offset = camera.lastOffset
+	#	get_tree().paused = true
+	#	global.pause_input = false
 	
-	elif get_visible_characters() == get_total_character_count():
+	if get_visible_characters() == get_total_character_count():
 		if speech != null:
 			speech.queue_free()
 			speech = null

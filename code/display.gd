@@ -16,25 +16,32 @@ signal transition_finish_fade # Signal specifaclly for fade transitions.
 var faders = []
 var fader_targets = {}
 
-var vids_precached = {}
+var vids_to_swap_stills = {}
 
 # The code to mask using a shader.
 var mask_shader_code = """shader_type canvas_item;
 	uniform sampler2D mask_texture;
 	uniform sampler2D still;
-	uniform float start_time;
+	uniform bool use_still;
+	uniform sampler2D head;
 	
 	void fragment() {
-	if (TIME < start_time-0.10) {
+	if (use_still) {
 		vec2 offset = vec2(0.0, 0.0035); //the stills seem weirdly offset compared to video? This seems to make it not awful
 		vec4 color = texture(still, UV+offset);
 		color.a *= texture(mask_texture, UV).a;
 		color.rgb *= texture(mask_texture, UV).rgb;
+		if (texture(head, UV).a > 0.99) {
+			color.a = 0.0;
+		}
 		COLOR = color;
 	} else {
 		vec4 color = texture(TEXTURE, UV);
 		color.a *= texture(mask_texture, UV).a;
 		color.rgb *= texture(mask_texture, UV).rgb;
+		if (texture(head, UV).a > 0.99) {
+			color.a = 0.0;
+		}
 		COLOR = color;
 	}
 }"""
@@ -47,7 +54,9 @@ uniform sampler2D head;
 
 void fragment() {
 	vec4 color = texture(TEXTURE, UV);
-	color.a *= 1.0-texture(head, UV).a;
+	if (texture(head, UV).a > 0.99) {
+		color.a = 0.0;
+	}
 	COLOR = color;
 }
 """
@@ -55,23 +64,21 @@ void fragment() {
 # Set the background node to self by default.
 func _ready():
 	bgnode = self
+	
+func _process(delta):
+	var to_remove = []
+	for vid_node in vids_to_swap_stills.keys():
+		if not is_instance_valid(vid_node):
+			to_remove.append(vid_node)
+		else:
+			vids_to_swap_stills[vid_node] -= delta
+			if vids_to_swap_stills[vid_node] <= 0.0:
+				to_remove.append(vid_node)
+				vid_node.material.set_shader_param('use_still', false)
+			
+	for vid in to_remove:
+		vids_to_swap_stills.erase(vid)
 
-func precache_vid(path):
-	vids_precached[path] = []
-	#Caching a few in case swapping them is a thing I need to think about later
-	for i in range(0):
-		var vidnode = VideoPlayer.new() # Create a new videoplayer node.
-		vidnode.set_name(path+"_cached")
-		vidnode.stream = load(path)
-		vidnode.rect_size = Vector2(1920, 1080)
-		vidnode.volume_db = -1000 # Mute the video.
-		
-		vidnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
-		vidnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
-		vidnode.material.shader.code = mask_shader_code # Set the shader's code to code.
-		vidnode.self_modulate.a = 0.001
-		vids_precached[path].append(vidnode)
-		characterImages.add_child(vidnode)
 # Make the given image 'bg' a background.
 func background(bg, type):
 	
@@ -333,9 +340,11 @@ func mask(mask, path, still, type, z, fade_in=false, force_name=null):
 		vidnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
 		vidnode.material.shader.code = mask_shader_code # Set the shader's code to code.
 		vidnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
-		vidnode.material.set_shader_param('start_time', float(OS.get_ticks_msec())/1000.0)
+		vidnode.material.set_shader_param('use_still', true)
+		vidnode.material.shader.set_default_texture_param("head", load("res://images/blank.png"))
 		vidnode.material.shader.set_default_texture_param('still', load(still))
 		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
+		vids_to_swap_stills[vidnode] = 0.2
 		
 		# Check for a mesh.
 		if model.file_exists('res://models/' + maskname + '.tres'):
