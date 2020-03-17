@@ -383,10 +383,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				var fade_time = 0.75
 				
-				var locIndex = global.locationNames.find(loc)
-				if locIndex != -1:
+				#var locIndex = global.locationNames.find(loc)
+				var path = "res://images/backgrounds/" + loc + ".png"
+				if ResourceLoader.exists(path):
 					global.pause_input = true
-					systems.display.background(global.locations[locIndex], 'image')
+					systems.display.background(path, 'image')
 					
 					if old_bg != null:
 						systems.display.bgnode.add_child(old_bg)
@@ -1078,7 +1079,7 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 2
 			parsedInfo += '.campus'
 			var extra = ''
-			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
+			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"casual":
 			num = str(search('return characterImages.'+parsedInfo+'.casual.body', info[i+1]))
@@ -1089,7 +1090,7 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 2
 			parsedInfo += '.casual'
 			var extra = ''
-			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
+			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"cross":
 			num = str(search('return characterImages.'+parsedInfo+'.cross.body', info[i+1]))
@@ -1100,7 +1101,7 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 2
 			parsedInfo += '.cross'
 			var extra = ''
-			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
+			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"special":
 			
@@ -1118,7 +1119,7 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 2
 			parsedInfo += '.special'
 			var extra = ''
-			if 'squat'.is_subsequence_ofi(info[i+1]): extra += '.squatting'
+			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
 			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"newgle":
 			#GIBB IS THE ONLY NEWGLE CASE! ANd ITS VERY SIMPLE!
