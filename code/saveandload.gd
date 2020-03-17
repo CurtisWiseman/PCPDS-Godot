@@ -425,6 +425,7 @@ func newSave(save_num):
 	
 	data_payload["current_scene_name"] = global.current_scene_name
 	
+	data_payload["is_black"] = dialogue_box.last_black_fade_dir == 0
 	
 	#Display
 	var layer_details = []
@@ -630,9 +631,13 @@ func newLoad(save_file):
 		for music in data_payload["music"]:
 			var n = sound.music(music["path"], music["loop"], music["volume"])
 			n.seek(music["position"])
-		
+			
+	if data_payload.get("is_black", false):
+		systems.blackScreen.set_self_modulate(Color(1,1,1,1))
 	global.pause_input = false
 	global.fading = false
 	global.sliding = false
 	game.loadSaveFile = false
+	
+
 	

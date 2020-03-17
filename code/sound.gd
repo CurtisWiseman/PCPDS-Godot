@@ -44,7 +44,7 @@ func sfx(path, volume=0):
 		sfx.bus = 'Music'
 	sfx.name = audioname(path) # Make the node name the audio name.
 	sfx.volume_db = volume # Set the volume to volume.
-	#sfx.connect('finished', self, 'stop_SFX', [sfx]) # Delete the node when finished.
+	sfx.connect('finished', self, 'remove_sfx', [sfx]) # Delete the node when finished.
 	sfx.play() # Play the sound effect.
 	add_child(sfx) # Add as a child of sound.
 	
@@ -52,6 +52,17 @@ func sfx(path, volume=0):
 	playingSFX.append({'path': path, 'volume': volume, "node": sfx})
 	return sfx
 
+
+func remove_sfx(sfx_node):
+	var index = -1
+	for i in range(playingSFX.size()):
+		if playingSFX[i]["node"] == sfx_node:
+			index = i
+			break
+			
+	if index != -1:
+		sfx_node.queue_free()
+		playingSFX.remove(index)
 
 # Add music to the queue.
 func queue(path, loop=false, volume=0):

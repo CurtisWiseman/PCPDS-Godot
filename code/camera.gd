@@ -33,7 +33,7 @@ func _ready():
 
 
 func zoom(zoom_factor : float, intended_offset : Vector2, speed : float):
-	if global.cameraMoving: return
+	#if global.cameraMoving: return
 	global.pause_input = true
 	global.cameraMoving = true
 	var left = -1920.0*0.5
