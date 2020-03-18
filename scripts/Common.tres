@@ -759,11 +759,11 @@ I check the clock. It is getting pretty late, so I decide to head home for the e
 
 [Scene: Loitering with Tinyhats]
 [Location: 7eleven.day]
-[Music: PCPDating_SuspiciousFigga]
+[Song: PCPDating_SuspiciousFigga]
 [fade from black]
 Why did Munchy mention this place for a meeting? A 7 Eleven doesn’t seem like a place where anyone would want to spend their time. This one in particular seems like a hot spot for homeless guys and losers. I wonder if that sewer guy from this morning hangs around here too.
 
-(Munchy, campus, 2, happyMIN, center, slide) Oh, there you are. I knew someone would come!
+(Munchy, campus, 2, happyMIN, offright, slide, center) Oh, there you are. I knew someone would come!
 
 (PCPG) Hey Professor! So, what’s this private tutoring all about?
 
@@ -777,8 +777,9 @@ He points at some spray paint on one of the windows that reads “!THRASH”
 
 (PCPG) Uhh, sure.
 
-[SLIDE Munchy left]
-(9/11, standin, right)
+[SLIDE Munchy left+150]
+(9/11, standin, offright)
+[SLIDE 9/11 right-100]
 (9/11|???, standin) Sorry to crash into your little party here, but I’ve been ordered to tell you that you need to leave.
 
 (Munchy, campus, 3, happyMAX) HEYYY, 9/11! My favorite fuckin’ abstract character! What are you doing here!?
@@ -797,7 +798,7 @@ I don’t get it.
 
 (9/11, standin) You know what’s another annoying thing I hear on campus, these rumours that Bush somehow “did” me. I am not THAT easy okay. Even though Bush is a handsome hunk of a man, I am in no way homosexually attracted- 
 
-(???|Bush) YOU BETTER NOT BE TALKING SMACK ABOUT ME BEHIND MY BACK 9/11! QUIT FUCKING AROUND AND GET THE FUCK BACK IN HERE!
+(Bush|???) YOU BETTER NOT BE TALKING SMACK ABOUT ME BEHIND MY BACK 9/11! QUIT FUCKING AROUND AND GET THE FUCK BACK IN HERE!
 
 (Munchy, campus, 1, confusedMED) Wait... that voice... is that the 43rd president of the United States George W. Bush himself?!?!
 
@@ -1016,7 +1017,7 @@ Not that it was a particularly bad day, au contraire. I experienced a lot of pre
  
 I had my doubts about this new school, this new city, questioned if it was the right choice to come here, but I don’t regret it. The subjects in this university actually interested me, and the professors show real passion and excitement! 
 
-In their.. own special way.
+In their... own special way.
 
 [Location: pcpgbathroom]
 
@@ -1058,7 +1059,7 @@ Let’s see... I have to find Professor Nate Bestman’s Philosophy classroom...
 [Location: philosophyclass.b]
 [StopMusic]
 [Song: PCPDating_ClassPhilosophy]
-(Nate, campus, standing, neutral|shades, offright, center)
+(Nate, campus, standing, neutral|shades, offright, slide, center)
 
 I try my best to sneak in as inconspicuously as possible while the professor continues his lecture. Hopefully he doesn’t catch me coming in.
 
