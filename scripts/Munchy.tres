@@ -254,6 +254,11 @@ It was a tough choice, but I went with what my heart was telling me.
 
 [Fade to black]
 
+[==> Initiation]
+*
+
+[Scene: Initiation]
+
 I leave the confines of the Rowdy Roughhouse, with Endless War walking just a few feet ahead of me.
 
 [Location: outsidepcpu.night]
@@ -264,10 +269,7 @@ I leave the confines of the Rowdy Roughhouse, with Endless War walking just a fe
 (PCPG) What do you mean by that? What exactly are we gonna ‘create’?
 
 (Endless War|Endless War, knife, neutral) Explaining such concepts to your feeble mind would take ages. With that in mind, I’ll just keep things simple enough for you to understand: do you want to help me or not? Your mission, should you choose to accept it, will be elaborated on later.
-[==> Endless War?]
-*
 
-[Scene: Endless War?]
 [CHOICE]
 *Hell yeah, I want a new age of WAR*
 *Er, I don’t think I’m cut out for this ‘WAR’ thing after all.*
