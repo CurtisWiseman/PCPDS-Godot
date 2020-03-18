@@ -138,6 +138,9 @@ func _ready():
 
 # Function to retrieve all backgrounds into a locations array.
 func returnlocations():
+	#
+	# THIS METHOD IS POINTLESS BECAUSE THESE FILES DON'T EXIST DURING AN EXPORTED PROJECT
+	#
 	# Make the directory path of a characters folder.
 	var directory = 'images/backgrounds/'
 	

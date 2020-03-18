@@ -21,27 +21,28 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 	game.safeToSave = false;
 	cur_scene = scenechange
 	# Variables for directory manipulation.
-	var scenes = []
-	var scene
-	
-	# Open the directory as dir.
-	var dir = Directory.new()
-	dir.open(directory)
-	dir.list_dir_begin()
-	
-	# Until the end of the directory is reached append to scenes.
-	while true:
-		# Get the next scene in the directory.
-		scene = dir.get_next()
-		
-		# If scene exists then append it to scenes, else break.
-		if scene != "" :
-			if !dir.dir_exists(scene) and scene.findn('.gd') == -1:
-				scenes.append(scene.left(len(scene) - 5))
-		else:
-			break
-	
-	dir.list_dir_end() # End the directory.
+	#These folders don't exist in exported projects!
+	var scenes = ["Ben Saint", "Mage", "Gibbon", "Jesse", "Tom", "Digi", "Munchy", "Davoo", "Endless War Miniroute", "Nate", "Common"]
+#	var scene
+#
+#	# Open the directory as dir.
+#	var dir = Directory.new()
+#	dir.open(directory)
+#	dir.list_dir_begin()
+#
+#	# Until the end of the directory is reached append to scenes.
+#	while true:
+#		# Get the next scene in the directory.
+#		scene = dir.get_next()
+#
+#		# If scene exists then append it to scenes, else break.
+#		if scene != "" :
+#			if !dir.dir_exists(scene) and scene.findn('.gd') == -1:
+#				scenes.append(scene.left(len(scene) - 5))
+#		else:
+#			break
+#	
+#	dir.list_dir_end() # End the directory.
 	var found = false # Directory has not yet been found.
 	var display
 	

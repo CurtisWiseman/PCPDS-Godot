@@ -863,7 +863,7 @@ func nodupelayername(path):
 func layersetup(path, z):
 	
 	# If the file doesn't exist then say so, let the user fix the rest.
-	if not model.file_exists(path):
+	if not ResourceLoader.exists(path):
 		print('Error: The given content ' + path + ' does not exist!')
 	
 	var content = load(path) # Load the content using it's path.
