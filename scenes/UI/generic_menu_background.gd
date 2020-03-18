@@ -67,7 +67,7 @@ func _process(delta):
 			Track.Out:
 				if frame_num >= out_duration:
 					emit_signal("outro_finished")
-					frame_num = out_duration
+					frame_num = out_duration-1
 			Track.Idle:
 				frame_num = frame_num%idle_duration
 		var path = base_prefix
