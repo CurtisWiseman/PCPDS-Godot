@@ -458,11 +458,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				global.pause_input = false
 				game.safeToSave = true
 			elif dialogue[index].to_lower().strip_edges() == "[credits]":
-				#global.pause_input = true
-				#var video_path = 'res://images/credits/Credits non-scribbled mumkey.webm'
-				#systems.display.animation(video_path)
-				#yield(systems.display, 'transition_finish')
-				#global.pause_input = false
+				global.pause_input = true
+				var video_path = 'res://images/credits/Credits scribbled.ogv'
+				systems.display.animation(video_path)
+				yield(systems.display, 'transition_finish')
+				global.pause_input = false
 				get_tree().change_scene("res://scenes/Main_Menu.tscn")
 			elif dialogue[index].to_lower().strip_edges() == "[hidetext]":
 				systems.textBoxBackground.make_invisible()
