@@ -74,11 +74,23 @@ func _ready():
 	defaultFont= DynamicFont.new()
 	defaultFont.font_data = defaultFontDATA
 	defaultFont.size = 35
+	
+	#Added for Kanji
+	var defaultFallbackFontDATA = DynamicFontData.new()
+	defaultFallbackFontDATA.font_path = 'res://fonts/Dialogue/NotoSans/NotoSansJP-Regular.otf'
+	defaultFont.add_fallback(defaultFallbackFontDATA)
+	
 	var defaultFontDATABold = DynamicFontData.new()
 	defaultFontDATABold.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Bold.ttf'
 	defaultFontBold = DynamicFont.new()
 	defaultFontBold.font_data = defaultFontDATABold
 	defaultFontBold.size = 35
+	
+	#Added for Kanji
+	var defaultFallbackBoldFontDATA = DynamicFontData.new()
+	defaultFallbackBoldFontDATA.font_path = 'res://fonts/Dialogue/NotoSans/NotoSansJP-Bold.otf'
+	defaultFontBold.add_fallback(defaultFallbackBoldFontDATA)
+	
 	var defaultFontDATAItalic = DynamicFontData.new()
 	defaultFontDATAItalic.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Italic.ttf'
 	defaultFontItalic = DynamicFont.new()
@@ -95,6 +107,7 @@ func _ready():
 	defaultChoiceFont= DynamicFont.new()
 	defaultChoiceFont.font_data = defaultChoiceFontDATA
 	defaultChoiceFont.size = 25
+	
 	var defaultChoiceFontDATABold = DynamicFontData.new()
 	defaultChoiceFontDATABold.font_path = 'res://fonts/Dialogue/Roboto/Roboto-Bold.ttf'
 	defaultChoiceFontBold = DynamicFont.new()

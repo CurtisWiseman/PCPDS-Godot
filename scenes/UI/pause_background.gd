@@ -46,7 +46,7 @@ func _process(delta):
 					cur_track = Track.Idle
 					frame_num = 0
 			Track.Out:
-				if frame_num >= 11:
+				if frame_num >= 10:
 					emit_signal("outro_finished")
 					frame_num = 0
 			Track.Idle:

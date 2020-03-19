@@ -252,7 +252,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				regex.compile('9/11')
 				dialogue[index] = regex.sub(dialogue[index], "911", true)
 			
-			if dialogue[index].findn('leaves') != -1:
+			if dialogue[index].findn('leaves]') != -1 and dialogue[index].find(":") == -1 and dialogue[index].find("==>") == -1:
 				global.pause_input = true
 				var command = dialogue[index].lstrip('[')
 				command = command.rstrip(']')
@@ -416,12 +416,14 @@ func _on_Dialogue_has_been_read(setIndex=false):
 								
 
 						for i in range(0, ovr.size()):
-							var ovrIndex = global.locationNames.find(ovr[i])
-							if ovrIndex != -1:
-								if old_overlays_to_remove.find(global.locations[ovrIndex]) == -1:
-									systems.display.image(global.locations[ovrIndex], ovrLayer[i])
-									systems.display.fade(global.locations[ovrIndex], Color(0, 0, 0, 0), Color(1, 1, 1, 1), fade_time)
-								overlays.append(global.locations[ovrIndex])
+						#	var ovrIndex = global.locationNames.find(ovr[i])
+						#	if ovrIndex != -1:
+							var fore_path = "res://images/backgrounds/" + ovr[i] + ".png"
+							if ResourceLoader.exists(fore_path):
+								if old_overlays_to_remove.find(fore_path) == -1:
+									systems.display.image(fore_path, ovrLayer[i])
+									systems.display.fade(fore_path, Color(0, 0, 0, 0), Color(1, 1, 1, 1), fade_time)
+								overlays.append(fore_path)
 							else:
 								print('Error: No overlay named ' + ovr[i])
 					for o in old_overlays_to_remove:
@@ -456,6 +458,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				global.pause_input = false
 				game.safeToSave = true
 			elif dialogue[index].to_lower().strip_edges() == "[credits]":
+				#global.pause_input = true
+				#var video_path = 'res://images/credits/Credits non-scribbled mumkey.webm'
+				#systems.display.animation(video_path)
+				#yield(systems.display, 'transition_finish')
+				#global.pause_input = false
 				get_tree().change_scene("res://scenes/Main_Menu.tscn")
 			elif dialogue[index].to_lower().strip_edges() == "[hidetext]":
 				systems.textBoxBackground.make_invisible()
@@ -535,7 +542,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 						systems.display.remove_name(CG)
 					CG = null
 				global.pause_input = false
-			elif dialogue[index].strip_edges().to_lower().find('[scene:') == 0:
+			elif dialogue[index].strip_edges().to_lower().find('[scene:') == 0 and dialogue[index].to_lower().find("|hidename") == -1:
 				global.current_scene_name = dialogue[index].strip_edges().substr('[Scene:'.length()).rstrip("]").strip_edges()
 				#var saveChosenChoices = chosenChoices
 				#var saveInChoice = inChoice

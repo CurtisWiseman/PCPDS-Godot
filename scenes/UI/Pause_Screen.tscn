@@ -26,13 +26,12 @@
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Settings/Unhover/Layer 14-pause menu exporter2.ai Comp 1_00031.png" type="Texture" id=24]
 [ext_resource path="res://fonts/Nametag/RobotoSlab/RobotoSlab-SemiBold.ttf" type="DynamicFontData" id=25]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 25 )
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 0.792157 )
-
 
 [node name="pause_screen" type="Control"]
 pause_mode = 2
@@ -129,7 +128,7 @@ margin_left = 286.0
 margin_top = 1027.0
 margin_right = 1251.0
 margin_bottom = 1069.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "SCENE NAME"
 align = 1
 __meta__ = {
@@ -150,7 +149,7 @@ margin_left = -326.95
 margin_top = -350.929
 margin_right = 2267.05
 margin_bottom = 1530.07
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 
 [node name="menu" type="Control" parent="pop_ups"]
 visible = false
