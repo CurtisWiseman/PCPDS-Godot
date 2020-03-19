@@ -10,7 +10,7 @@ var k1p = {'body': ['res://images/characters/Cop Killers/k1p_base.png', 'res://i
 var magicks = {'body': ['res://images/characters/Cop Killers/magicks_base.png', 'res://images/characters/Cop Killers/magicks_dab.png'], "blank": ["res://images/blank.png"]}
 var schrafft = {'body': ['res://images/characters/Cop Killers/schrafft_base.png', 'res://images/characters/Cop Killers/schrafft_dab.png'], "blank": ["res://images/blank.png"]}
 var smearg = {'body': ['res://images/characters/Cop Killers/smearg_base.png', 'res://images/characters/Cop Killers/smearg_dab.png'], "blank": ["res://images/blank.png"]}
-var copkillers = { 'body': ['res://images/characters/Cop Killers/killers1.png', 'res://images/characters/Cop Killers/Killerscloud.png', 'res://images/characters/Cop Killers/killersdab1.png', 'res://images/characters/Cop Killers/killersdabcloud.png']}
+var copkillers = { 'body': ['res://images/characters/Cop Killers/copkillers1.png', 'res://images/characters/Cop Killers/copkillerscloud.png', 'res://images/characters/Cop Killers/copkillersdab1.png', 'res://images/characters/Cop Killers/copkillersdabcloud.png']}
 
 var kazee = {'face': ['res://images/characters/Kazee/face/kazee_face.png'], 'body': ['res://images/characters/Kazee/kazee_1.png', 'res://images/characters/Kazee/kazee_2.png', 'res://images/characters/Kazee/kazee_3.png']}
 var may = {'face': ['res://images/characters/May/faces/may_face_1.png', 'res://images/characters/May/faces/may_face_2.png', 'res://images/characters/May/faces/may_face_3.png', 'res://images/characters/May/faces/may_face_4.png', 'res://images/characters/May/faces/may_face_5.png'], 'body': ['res://images/characters/May/may_1.png', 'res://images/characters/May/may_2.png', 'res://images/characters/May/may_3.png']}

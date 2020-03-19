@@ -7,7 +7,7 @@ var grab_mouse_pt = null
 var grab_knob_pt = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var factor = 1.0-(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(affected_bus))/-45.0)
+	var factor = clamp(1.0-(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(affected_bus))/-45.0), 0.0, 1.0)
 	$knob.position.x = lerp($min_x.position.x, $knob.position.x, factor)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
