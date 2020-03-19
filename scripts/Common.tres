@@ -63,7 +63,7 @@ Ah! There he is! What's he doing crouching over a manhole cover?
 
 He screams desperately into the sewers.
 
-(???) DONATELLO! Come back to me! Come on dude!
+(Jesse|???) DONATELLO! Come back to me! Come on dude!
 
 (PCPG) Is... is that guy okay, Gibbon?
 
@@ -99,7 +99,7 @@ We enter the building and I’m already overwhelmed. Gibbon seems to know where 
 
 Suddenly a powerful voice booms at us.
 
-(???) Hello fellow students!
+(Nate|???) Hello fellow students!
 
 (Nate|???, campus, papers, happyMIN|shades, fade, center) Oh, I haven’t seen you around before. Are you a new student?
 
@@ -846,8 +846,8 @@ The park was quite further away from the school than I originally expected, so b
 
 Unfortunately, the park itself is less exciting than I thought it would be, being mostly an empty field of grass and trees. Probably should’ve expected that.
 
-There is that purple forest looking area near the end of the walkway, wonder what that’s about? /n Since it’s the only notable thing in the park, I make my way towards it.
-
+There is that purple forest looking area near the end of the walkway, wonder what that’s about? /n
+Since it’s the only notable thing in the park, I make my way towards it.
 However, it’s only a matter of time before boredom takes over, and like the filthy millennial I am I pull out my phone to check Twitter. I can’t even enjoy a short walk in the park without social media consuming my every thought, how shameful. 
 
 Yet before I can even scroll past the usual stream of liked hentai posts, someone runs into me and we both fall over.
@@ -897,13 +897,13 @@ While I still don’t particularly care for Pokémon Go, I don’t really have a
 [Gibbon leaves]
 We spend the rest of the evening catching Pokémon. Gibbon teaches me quite a few tricks about the game, like how to throw Pokéballs correctly and where to find which Pokémon. 
 It’s strange, the few hours we spent together catching Pokémon were probably the best hours I’ve ever had playing a video game. Is this what being a normie feels like?
-
 [Location: woods]
+[StopMusic]
 [Song: PCPDating_DateTheme]
 
 After Pokémon Going around for a while, we find a nice area to stop for a bit hidden between the trees. Squirrels come and go around us as we lean on one of the massive trees and take a breath. The purple glow emanating from beyond the trees keeps me mildly curious as to their nature, but I decide to figure them out another time.
 
-(Gibbon, campus, grabby, neutral, offright, center)
+(Gibbon, campus, grabby, neutral, offright, slide, center)
 I snatch a quick glance of Gibbon and find him mesmerized by the squirrels.
 
 (PCPG) So I’ve been meaning to ask, why do you carry your plushies around with you?
@@ -967,7 +967,7 @@ As I near closer a figure comes walking out of it, and soon I realize that it’
 
 (PCPG) Hey Mage!
 
-(Mage, casual, 3, happyMIN, offright, center) Oh hey PCPG, what brings you here?
+(Mage, casual, 3, happyMIN, fade, center) Oh hey PCPG, what brings you here?
 
 (PCPG) I don’t know, maybe the literal purple forest that’s right behind you? What were you doing in there anyways?
 
@@ -989,7 +989,7 @@ Did I just admit to being a furry? Fuck.
 
 (PCPG) Wait, why not? After how much you praised it, I’d imagine you’d want more people to see it.
 
-(Mage, casual, 4, angryMED) It’s ... a secret. I don’t think you or anyone should know about it... yet. It’s something I would only share with people I know I can trust.
+(Mage, casual, 4, angryMED) It’s... a secret. I don’t think you or anyone should know about it... yet. It’s something I would only share with people I know I can trust.
 
 I’m taken aback by this sudden change in her attitude. Maybe I should just trust her on this one.
 
@@ -1167,9 +1167,9 @@ That one was definitely directed at me.
 [Song: PCPDating_ClassMemes_Buttchugger]
 [fade from black]
 
-(Munchy|Professor Tinyhats, campus, squatting, shockMAX, left) By the way kids, have you seen all my posters for this slime-based MMORPG that you can play RIGHT NOW in REAL LIFE for FREE?
+(Munchy|Professor Tinyhats, campus, squatting, shockMAX, left+50) By the way kids, have you seen all my posters for this slime-based MMORPG that you can play RIGHT NOW in REAL LIFE for FREE?
 
-Turns out Professor Munchy was the Rowdy Fucker leader all along. That makes.. a lot of sense actually.
+Turns out Professor Munchy was the Rowdy Fucker leader all along. That makes... a lot of sense actually.
 
 (Tom, 4, shockedMIN, right) The free part sounds great and all, but there really isn’t any satisfaction to killing someone if there aren’t any sick combat animations. You gotta feel that slice.
 
@@ -1302,7 +1302,7 @@ It’s probably better not to ask why he’s attempting to live in his car. Seem
 
 (PCPG) You’re in Philosophy too right? I’m sure the prof of that class would love your coinage of that phrase.
 
-(Tom, cider, angryMIN) He definitely would. Nate too, but for different reasons. The whole bifurcation of the Philosophy course is such bullshit.
+(Tom, cider, angryMIN) He definitely would. Both of them, actually, but for different reasons. The whole bifurcation of the Philosophy course is such bullshit.
 
 (PCPG) I mean, I guess there is a point to it. Exposing students to different perspectives and stuff...
 
@@ -1350,11 +1350,11 @@ Tom seems to have forgotten that I was here.
 
 As soon as I enter the Philosophy class something massive tackles my chest sending me to the ground. Its large furry mass weighs heavy on my stomach, winding me of any air.
 
-(???) MAMO!
+(Brunswick|???) MAMO!
 
 (PCPG) he...lp m...e
 
-(???) Woah calm down there buddy, we don’t want to kill off the new student quite yet. Come on, get off of him.
+(Ben|???) Woah calm down there buddy, we don’t want to kill off the new student quite yet. Come on, get off of him.
 
 (Ben, campus, base, neutral)
 (Brunswick, neutral, right)
@@ -1438,12 +1438,12 @@ As I think about whether I should join them in their delinquency, a strange pres
 [Song: PCPDating_Tension]
 (Ben, campus, base, shockMIN)
 (Brunswick, worried, right)
-(???) [i]Beeeen Saaaiiiiint...[/i]
+(Russel|???) [i]Beeeen Saaaiiiiint...[/i]
 
 (PCPG) Uhh, what was that?
 
 (Ben, campus, base, shockMAX)
-(???) [i]Bruuuunswiiiiiick...[/i]
+(Russel|???) [i]Bruuuunswiiiiiick...[/i]
 
 (Brunswick, worried, right) Swine?
 
@@ -1456,7 +1456,7 @@ Suddenly, the room begins to heat up, as a literal portal in spacetime rips itse
 
 (Ben, campus, slouch, sadMIN, left) That must be... Pokémon Hell. So that means...
 
-(Russel|???, base, neutral, offleft, center) It’s been a while, hasn’t it Brunswick?
+(Russel|???, base, neutral) It’s been a while, hasn’t it Brunswick?
 
 (Brunswick, worried, right) Mamo...
 
@@ -1471,11 +1471,10 @@ Suddenly, the room begins to heat up, as a literal portal in spacetime rips itse
 (Brunswick, confused, right)
 Russel then unleashes what looks to be a Confuse Ray at the startled Brunswick, hitting him directly and confusing him.
 
-(Russel, base, neutral, center, slide, center-50)
-Alright Brunswick, now all you need to do is to enter the friendly portal where you can meet up with all of your favourite friends, those who were brutally murdered by your ever so precious Ben Saint.
+(Russel, base, neutral, center, slide, center-50) Alright Brunswick, now all you need to do is to enter the friendly portal where you can meet up with all of your favourite friends, those who were brutally murdered by your ever so precious Ben Saint.
 
 (Brunswick, confused, 1, right, slide, right-50, 10)
-Brunswick in his confusion obeys Russels command and slumbers his way towards the portal.
+Brunswick in his confusion obeys Russel's command and slumbers his way towards the portal.
 
 (Brunswick, confused, 1, right-50, slide, right-100, 10)
 (Ben, campus, exasp, sadMIN) Brunswick! Please snap out of it, you’re better than this! Don’t do this to me!
@@ -1507,9 +1506,9 @@ Somehow this gets to Brunswicks ears, stopping him inches from the portal’s ed
 
 (Lord of Ghosts, happy, blank, right)
 (Brunswick, worried, 1, right-300, slide, right-150, 10)
-Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. After shaking off his confusion he steps away from the portal and lowers himself to let the student’s on top of him off. 
+Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. After shaking off his confusion he steps away from the portal and lowers himself to let off the students on top of him.
 
-(Russel, base, neutral, 1, center-50, slide, center) But do not worry Brunswick, despite not getting you this time, I will bring you back to Pokémon Hell soon enough.
+(Russel, base, neutral, center-50, slide, center) But do not worry Brunswick, despite not getting you this time, I will bring you back to Pokémon Hell soon enough.
 
 (Brunswick, default, worried, center+50) Swine...
 
@@ -1562,7 +1561,7 @@ Oh, well that’s just great. Fuck you Russel. Fuck you.
 [Song: PCPDating_ClassJapanese]
 [fade from black]
 
-While examining the new unfamiliar definitely-not-recycled environment of my Japanese class, I am taken aback by a young man with floofy hair and deep blue eyes staring at me intently, as though he has completely removed the rest of the outside world from his perception.
+While examining the new, unfamiliar, definitely-not-recycled environment of my Japanese class, I am taken aback by a young man with floofy hair and deep blue eyes staring at me intently, as though he has completely removed the rest of the outside world from his perception.
 
 (Davoo, campus, neutral, neutral)
 Sure, I’m the new kid, I get it, but I couldn’t possibly be interesting enough as to warrant this kind of undiluted attention that would usually be reserved for the unprecedentedly fascinating exclusively.
@@ -1632,7 +1631,7 @@ He seems really excited, and he sounds right, so sure, why not.
 
 I just hope he doesn’t ask me what a “Gesamtkunstwerk” is. I’m not even sure how I would write that word.
 
-(Davoo, greeting, neutral) I like you, new kid. A lot of students don’t really appreciate the profs lecture style. What a bunch of IDIOTS. If you ever wanna compare notes or something, just ask.
+(Davoo, greeting, neutral) I like you, new kid. A lot of students don’t really appreciate the prof's lecture style. What a bunch of IDIOTS. If you ever wanna compare notes or something, just ask.
 
 Slipping into that parody voice appears to just be a thing he does. That’s kinda cute. 
 
@@ -1643,8 +1642,8 @@ Oh shit, he seems to consider this the end of our conversation and is about to l
 
 (PCPG) Hey, you still haven’t told me your name! I can’t just call you “powerpoint-guy”.
 
-(Davoo, fidgeting) Oh, I’m the Davoo, but you can just call me Davoo if you want
-.
+(Davoo, fidgeting) Oh, I’m the Davoo, but you can just call me Davoo if you want.
+
 (Davoo, greeting, neutral) Anyways, I’ve got to go now. Important stuff. Bye!
 
 [Slide Davoo offright]
@@ -1687,7 +1686,7 @@ He hands me a piece of paper with nigh illegible handwriting on both sides.
 
 [CHOICE]
 *I’m kind of a piece of shit already, I can’t afford to go full otaku*
-*Months worth of entertainment? I’m in!*
+*Months' worth of entertainment? I’m in!*
 
 *I’m kind of a piece of shit already, I can’t afford to go full otaku*
 
@@ -1706,11 +1705,12 @@ He sounds strangely sincere and kind of sad as he says it.
 [Digi leaves]
 [StopMusic]
 [fade to black]
+[==> Broken Dreams]
 *
 
-*Months worth of entertainment? I’m in!*
+*Months' worth of entertainment? I’m in!*
 
-(PCPG) This... man, this really is a lot
+(PCPG) This... man, this really is a lot.
 
 (Digi|Professor Digibro, Campus, 2, SadMIN) I know, I understand if you don’t-
 
@@ -1724,16 +1724,18 @@ He sounds strangely sincere and kind of sad as he says it.
 
 (Digi|Professor Digibro, Campus, 2, HappyMED) Making lists is just a hobby of mine, though I do get genuinely happy when people appreciate them.
 
-*Library*
+[==> Digibro's 2-Watch-List]
+*
 
+[Scene: Digibro’s 2-Watch-List]
+
+*Library*
 (PCPG) Well, I’ve got to get going now, but I’ll definitely start checking out the things on here later.
 
 [Digi leaves]
 [fade to black]
 [CHANGE Digi fade 1 0.01]
 *
-
-*Other choices*
 
 (Digi|Professor Digibro, Campus, 2, smittenMIN) I could give you a little preview now, if you’re free...
 
@@ -1797,8 +1799,6 @@ But it’s strange. Even though we didn’t talk very much, I still relish in Di
 [StopMusic]
 [Digi leaves]
 [CHANGE Digi fade 1 0.01]
-*
-*
 
 [u][Scene: Broken Dreams][/u]
 
