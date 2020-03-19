@@ -1729,13 +1729,13 @@ He sounds strangely sincere and kind of sad as he says it.
 
 [Scene: Digibro’s 2-Watch-List]
 
-*Library*
+
 (PCPG) Well, I’ve got to get going now, but I’ll definitely start checking out the things on here later.
 
 [Digi leaves]
 [fade to black]
 [CHANGE Digi fade 1 0.01]
-*
+
 
 (Digi|Professor Digibro, Campus, 2, smittenMIN) I could give you a little preview now, if you’re free...
 
@@ -1800,10 +1800,10 @@ But it’s strange. Even though we didn’t talk very much, I still relish in Di
 [Digi leaves]
 [CHANGE Digi fade 1 0.01]
 
-[u][Scene: Broken Dreams][/u]
+[Scene: Broken Dreams]
 
 [Location: memeclass]
-[Music: PCPDating_ClassMemes_03-Simple_and_Clean]
+[Music: PCPDating_ClassMemes_Simple _ Clean]
 [fade from black]
 
 This is the kind of school I’ve always dreamed of! A whole class dedicated to memes? Seems like the internet is finally old enough now to get a break into our educational system.
