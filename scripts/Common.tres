@@ -2459,17 +2459,20 @@ Gibbon gingerly presses his fingers together as he formulates an answer.
 
 *City Park*
 
-(Gibbon, campus, grabby, happyMIN) Well, uh, my offer still stands for you to come visit my place. Say, tonight? I have a few guitars and a drum set, we could jam a little? /n An evening at Gibbontake’s house, huh? That could be fun.
+(Gibbon, campus, grabby, happyMIN) Well, uh, my offer still stands for you to come visit my place. Say, tonight? I have a few guitars and a drum set, we could jam a little?/n
+An evening at Gibbontake’s house, huh? That could be fun.
 *
 
 *Library*
 
-(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little? /n An evening at Gibbontake’s house, huh? That could be fun.
+(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little?/n
+An evening at Gibbontake’s house, huh? That could be fun.
 *
 
 *7/11*
 
-(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little? /n An evening at Gibbontake’s house, huh? That could be fun.
+(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little?/n
+An evening at Gibbontake’s house, huh? That could be fun.
 *
 
 [CHOICE]
@@ -2505,6 +2508,7 @@ The bell tolls, and students all begin filtering back out of the cafeteria.
 
 [Fade to black]
 [StopMusic]
+[Gibbon leaves]
 *
 
 [Scene: Killing Code (and Monsters)]
