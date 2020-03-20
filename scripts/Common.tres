@@ -1724,18 +1724,18 @@ He sounds strangely sincere and kind of sad as he says it.
 
 (Digi|Professor Digibro, Campus, 2, HappyMED) Making lists is just a hobby of mine, though I do get genuinely happy when people appreciate them.
 
-[==> Digibro's 2-Watch-List]
+
 *
 
-[Scene: Digibro’s 2-Watch-List]
 
 
+*Library*
 (PCPG) Well, I’ve got to get going now, but I’ll definitely start checking out the things on here later.
 
 [Digi leaves]
 [fade to black]
 [CHANGE Digi fade 1 0.01]
-
+*
 
 (Digi|Professor Digibro, Campus, 2, smittenMIN) I could give you a little preview now, if you’re free...
 
@@ -1803,7 +1803,7 @@ But it’s strange. Even though we didn’t talk very much, I still relish in Di
 [Scene: Broken Dreams]
 
 [Location: memeclass]
-[Music: PCPDating_ClassMemes_Simple _ Clean]
+[Song: PCPDating_ClassMemes_Simple _ Clean]
 [fade from black]
 
 This is the kind of school I’ve always dreamed of! A whole class dedicated to memes? Seems like the internet is finally old enough now to get a break into our educational system.
@@ -1812,22 +1812,22 @@ This is the kind of school I’ve always dreamed of! A whole class dedicated to 
 
 I think I get it now! Basically, this is Professor Bestman's weekly outlet to tell his students why he’s a genius. Or rather why he thinks he is one.
 
-(PCPG) But what has this all to do with memes? 
+(PCPG) But what has this all got to do with memes? 
 
-(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n So, any further questions regarding the topics for this course?
+(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n
+So, any further questions regarding the topics for this course?
 
-[StopMusic]
-[Song: PCP-AMBIENT_Classroom]
+[SFX: PCP-AMBIENT_Classroom]
 The entire classroom falls into a noisy chaos, pens and books fly through the air, everybody tries to make their opinion or joke heard. Some 4-channers and Redditors get into a violent argument about who has the better memes.
 
 On my left, I hear a quite purple voice trying to speak up.
 
 Suddenly, the door bursts open and the bearded socialist storms into the classroom.
-
+[StopSFX]
+[SFX: PCP-SFX_DoorSlam]
 (Ben, campus, exasp, angryMIN, offright, slide, right) MAGE MAGE SHUT THE FUCK EVERYONE UP MAGE MAGE MAGE WANTS TO SPEAK!
-
-[StopMusic]
-[SLIDE Ben offleft]
+[SLIDE Ben offright]
+[SFX: PCP-SFX_DoorSlam]
 [Ben leaves]
 And before saying anything else, he runs out again. 
 
@@ -1843,8 +1843,8 @@ And before saying anything else, he runs out again.
 
 She sounds very dedicated.
 
-(Nate|Professor Bestman, campus, smoking, confusedMIN|shades) I see what you’re saying. But I still think dreams are an uninteresting topic to the broader classroom demographic. /n What do you think class? Wouldn’t that be incredibly boring?
-
+(Nate|Professor Bestman, campus, smoking, confusedMIN|shades) I see what you’re saying. But I still think dreams are an uninteresting topic to the broader classroom demographic.
+(Nate|Professor Bestman, campus, smoking, confusedMIN|shades) What do you think class? Wouldn’t that be incredibly boring?
 [CHOICE]
 *Stand with Mage*
 *Don’t stand with Mage*
@@ -1861,9 +1861,9 @@ Welp. Seems like I’m still good at ruining the relationship with my teachers r
 
 [SLIDE Mage offright]
 (Nate, campus, papers, shockMIN|shades)
-The professor then goes on for a while about the art of creating reusable meme templates with a green screen, but it sounds pretty stupid and cringeworthy and I don’t care. I hear the school bell with relief.
-
-[SFX: PCPDating_SchoolBell]
+The professor then goes on for a while about the art of creating reusable meme templates with a green screen, but it sounds pretty stupid and cringeworthy and I don’t care.
+[SFX: PCPDating_School_Bell]
+I hear the school bell with relief.
 [SLIDE Nate offleft]
 I pack my stuff as Mage comes up to my table.
 
@@ -2049,7 +2049,7 @@ Professor Munchy decided to end our morning class early today, and soon I found 
 
 (PCPG) Wait, you guys are actually friends? Aren’t you two literally in the middle of a WAR with each other?
 
-(Ben, campus, exasp, confusedMIN) Well yeah, how else are you supposed to show affection for one another if not by brutally murdering each others loyal subjects?
+(Ben, campus, exasp, confusedMIN) Well yeah, how else are you supposed to show affection for one another if not by brutally murdering each other's loyal subjects?
 
 (Munchy, campus, crossing, happyMIN) Yeah, I wouldn’t have it any other way bro.
 
@@ -2093,7 +2093,7 @@ Wait, Endless War is the student council president?! How is this the first time 
 
 Munchy starts whispering into my ear.
 
-(Munchy, campus, crossing, angryMIN) Act natural kid, this is just to draw her out. You don’t think we were gonna let you fucking chicken out while we have the chance, do you?
+(Munchy, campus, crossing, angryMIN) [i]Act natural kid, this is just to draw her out. You don’t think we were gonna let you fucking chicken out while we have the chance, do you?[/i]
 
 (PCPG) ...what?
 
@@ -2158,7 +2158,7 @@ Jesus Christ, first thugs, now amputees?
 
 Two reptilian appendages sprout from his shoulders in a way that words fail to describe, as he also somehow procures a cowboy hat. This metamorphosis is so bizarre that I fail to register that... he has a gun pointed right at me!
 
-(Crocs|???, special outfit) A juvenile, huh. Just what the doctor ordered.
+(Crocs|???, special_outfit) A juvenile, huh. Just what the doctor ordered.
 
 (Munchy, campus, crossing, neutral, right) Wait, hold on, don’t shoot. This guy could prove to be useful. He may even want to join the ranks and become a Rowdy Runt.
 
@@ -2181,7 +2181,7 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 
 (Crocs|???, Neutral) Plus, we’re just more fun-loving and eccentric in general. The amount of artists and loremasters that the Rowdys have ON TOP of us just having more soldiers to send into the line of fire should make the choice obvious. Pretty much every Killer these days is just a retarded goon who has no concept of culture.
 
-(Smearg|???, Neutral, offleft, slide, left-170) (I’m right here, y’know.)
+(Smearg|???, Neutral, offleft, slide, left-170) [i]I’m right here, y’know.[/i]
 
 [SLIDE Smearg offleft]
 [Smearg leaves]
@@ -2216,41 +2216,91 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 [SLIDE Crocs offleft]
 [Crocs leaves]
 [SLIDE Munchy left]
+(Endless War, stand, neutral)
 (Munchy, campus, crossing, neutral) Well, go on, PCPG.
-
 (Ben, campus, base, neutral, right) Take your time.
 
 [CHOICE]
 *Rowdy Fucker for life*
 *Cop Killer, obviously*
-*I don’t want to enlist in the WAR*
+*I don't want to enlist in the WAR*
 *Ask what gang Endless War belongs to*
 
-*Ask what gang Endless War belongs to*
-
-(PCPG) Hey I was wondering for a while now, Endless War you seem pretty gung-ho about this WAR thing and yet I’m not even sure which gang you’re with. Are you a Rowdy Fucker or a Cop Killer?
-
-(Endless War, stand, happyMED) Oh silly juvie, I am far too above all of you to be affiliated with these lowly roles. I never have joined a side and I never will, and I am perfectly fine that way.
-
-(Endless War, knife, shockedMED) Now stop asking questions and just fucking enlist!
-
-[CHOICE]
 *Rowdy Fucker for life*
-*Cop Killer, obviously*
-*I don’t want to enlist in the WAR*
-*
+(PCPG) !enlist rowdys
 
-*Rowdy Fucker for life*
+(Ben|Ben, campus, slouch, neutral) Well, shit.
 
+[Ben Leaves]
+[SLIDE, Munchy, left, center]
+
+[After a few seconds, the screen flashes pink]
+[CG: Pink Effect]
+A whole slew of different shades of pink flash around me, blinding in their intensity. The light is so strong that I feel like I could have a fucking seizure at any moment. Thankfully though, the light dies down after a little bit, and at the same time... I feel relieved. I feel like I may have just stumbled upon a kind of experience I’ll never forget.
+[CG end]
+(Munchy|Munchy, campus, squatting, happyMAX) Fuck YES!! Glad you chose to be on the right side of HISTORY, my man!
+
+(PCPG) Wait, I don’t understand. What the fuck was that all about?
+
+(Munchy|Munchy, campus, crossing, neutral) Well, I hate to break it to you (lol, I don’t), but you’ve just made the semi-irreversible decision of GETTING ROWDY. Maybe if I were a fucking slack-jawed, knuckle-dragging retarded idiot, I’d go off on how this decision impacts you in a way related to some nebulous video game mechanics.
+
+(Munchy|Munchy, campus, squatting, angryMED) But I’m not. This is reality motherfucker. This is feeling. This is touch. After this, there’s no turning back, unless you wanna totally fucking obliterate any chance you have of being on friendly terms with the Rowdys. 
+
+(Munchy|Munchy, campus, default, neutral) And by that I mean, I can pardon you. But hey, you’ve come this far, right? Let’s head over to the lunch table your new cohorts are sitting at first. I’ll introduce you.
+
+(PCPG) Uh, sure.
+
+This is all starting to freak me out a little bit. Feeling? Touch? What is this guy even saying? Is he on DRUGS or something? No, I must calm myself. This is my life now. I made my Rowdy bed, and now I gotta… what do they call it? ‘Thashing’? I think I remember hearing something like that.
+[Fade to black]
+[Munchy leaves]
+[StopMusic]
 [CHANGE Munchy]
 *
 
 *Cop Killer, obviously*
+(PCPG) !enlist killers
 
+(Munchy, campus, default, neutral) I fucking knew it.
+
+[CG: Purple Effect]
+Suddenly a purple light begins to envelop and circle around me and a near infinite amount of memories and experiences suddenly flash before my eyes. The light then calms down again, and at the end of it all, I feel like a changed man.
+[CG end]
+
+(PCPG) So what the fuck just happened?
+
+(Ben, campus, base, neutral) Eh, enlisting does that to you. You just sold your soul to us, so the transaction kinda fucks with you a little. It gives you access to things you’ve never experienced before, allows you to peer into the reality of space and slime. It essentially turns you…
+
+(Munchy, campus, crossing, happyMIN)
+(Endless War, stand, sadMIN)
+(Ben, campus, base, happyMAX|cloud) w o k e
+
+Woah.
+
+(Munchy, campus, default, neutral)
+(Endless War, stand, neutral)
+(Ben, campus, point, neutral) It also sets some restrictions on your actions. As a Killer you can no longer work on a farm and can only dangerously mine at night.
+
+(Munchy|Professor Munchy, campus, crossing, angryMIN) Disgusting.
+
+(Munchy, campus, stand, neutral)
+(Endless War, stand, happyMIN)
+(Ben, campus, point, happyMIN) You are also disposed to excessive murder and violence, so you can get straight fucked if any of that’s not what you were thinking of doing with your life.
+
+(Endless War, stand, neutral)
+(Ben, campus, base, neutral) Anyways, come meet the rest of the Killers at the cafeteria, it’s almost time for lunch anyways. 
+
+[Munchy leaves]
+[EndlessWar leaves]
+[SLIDE, Ben, offright]
+We leave Munchy and Endless War behind and head for the cafeteria. I’m a certified Cop Killer now, I guess? Should I like, go find a cop to murder later or something? I’m not exactly sure how this all works.
+
+[StopMusic]
+[Fade to black]
+[Ben leaves]
 [CHANGE BenSaint]
 *
 
-*I don’t want to enlist into the WAR*
+*I don't want to enlist in the WAR*
 
 (PCPG) You know what, no, I don’t actually care for your WAR. Find another guy to injure himself for the sake of literally nothing.
 
@@ -2264,6 +2314,118 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 I turn away from the group and head to the cafeteria for lunch. It’s just not worth it right now to engage myself with the WAR and all its intricacies. Maybe I’ll consider it another time.
 
 [fade to black]
+[StopMusic]
+[==> The Light of My Bulb]
+*
+
+*Ask what gang Endless War belongs to*
+
+(PCPG) Hey I was wondering for a while now, Endless War you seem pretty gung-ho about this WAR thing and yet I’m not even sure which gang you’re with. Are you a Rowdy Fucker or a Cop Killer?
+
+(Endless War, stand, happyMED) Oh silly juvie, I am far too above all of you to be affiliated with these lowly roles. I never have joined a side and I never will, and I am perfectly fine that way.
+
+(Endless War, knife, shockedMED) Now stop asking questions and just fucking enlist!
+*
+
+[Forget Rowdy Fucker for life]
+[Forget Cop Killer, obviously]
+[Forget I don't want to enlist in the WAR]
+
+[CHOICE]
+*Rowdy Fucker for life*
+*Cop Killer, obviously*
+*I don't want to enlist in the WAR*
+
+*Rowdy Fucker for life*
+(PCPG) !enlist rowdys
+
+(Ben|Ben, campus, slouch, neutral) Well, shit.
+
+[Ben Leaves]
+[SLIDE, Munchy, left, center]
+
+[After a few seconds, the screen flashes pink]
+[CG: Pink Effect]
+A whole slew of different shades of pink flash around me, blinding in their intensity. The light is so strong that I feel like I could have a fucking seizure at any moment. Thankfully though, the light dies down after a little bit, and at the same time... I feel relieved. I feel like I may have just stumbled upon a kind of experience I’ll never forget.
+[CG end]
+(Munchy|Munchy, campus, squatting, happyMAX) Fuck YES!! Glad you chose to be on the right side of HISTORY, my man!
+
+(PCPG) Wait, I don’t understand. What the fuck was that all about?
+
+(Munchy|Munchy, campus, crossing, neutral) Well, I hate to break it to you (lol, I don’t), but you’ve just made the semi-irreversible decision of GETTING ROWDY. Maybe if I were a fucking slack-jawed, knuckle-dragging retarded idiot, I’d go off on how this decision impacts you in a way related to some nebulous video game mechanics.
+
+(Munchy|Munchy, campus, squatting, angryMED) But I’m not. This is reality motherfucker. This is feeling. This is touch. After this, there’s no turning back, unless you wanna totally fucking obliterate any chance you have of being on friendly terms with the Rowdys. 
+
+(Munchy|Munchy, campus, default, neutral) And by that I mean, I can pardon you. But hey, you’ve come this far, right? Let’s head over to the lunch table your new cohorts are sitting at first. I’ll introduce you.
+
+(PCPG) Uh, sure.
+
+This is all starting to freak me out a little bit. Feeling? Touch? What is this guy even saying? Is he on DRUGS or something? No, I must calm myself. This is my life now. I made my Rowdy bed, and now I gotta… what do they call it? ‘Thashing’? I think I remember hearing something like that.
+[Fade to black]
+[Munchy leaves]
+[StopMusic]
+[CHANGE Munchy]
+*
+
+*Cop Killer, obviously*
+(PCPG) !enlist killers
+
+(Munchy, campus, default, neutral) I fucking knew it.
+
+[CG: Purple Effect]
+Suddenly a purple light begins to envelop and circle around me and a near infinite amount of memories and experiences suddenly flash before my eyes. The light then calms down again, and at the end of it all, I feel like a changed man.
+[CG end]
+
+(PCPG) So what the fuck just happened?
+
+(Ben, campus, base, neutral) Eh, enlisting does that to you. You just sold your soul to us, so the transaction kinda fucks with you a little. It gives you access to things you’ve never experienced before, allows you to peer into the reality of space and slime. It essentially turns you…
+
+(Munchy, campus, crossing, happyMIN)
+(Endless War, stand, sadMIN)
+(Ben, campus, base, happyMAX|cloud) w o k e
+
+Woah.
+
+(Munchy, campus, default, neutral)
+(Endless War, stand, neutral)
+(Ben, campus, point, neutral) It also sets some restrictions on your actions. As a Killer you can no longer work on a farm and can only dangerously mine at night.
+
+(Munchy|Professor Munchy, campus, crossing, angryMIN) Disgusting.
+
+(Munchy, campus, stand, neutral)
+(Endless War, stand, happyMIN)
+(Ben, campus, point, happyMIN) You are also disposed to excessive murder and violence, so you can get straight fucked if any of that’s not what you were thinking of doing with your life.
+
+(Endless War, stand, neutral)
+(Ben, campus, base, neutral) Anyways, come meet the rest of the Killers at the cafeteria, it’s almost time for lunch anyways. 
+
+[Munchy leaves]
+[EndlessWar leaves]
+[SLIDE, Ben, offright]
+We leave Munchy and Endless War behind and head for the cafeteria. I’m a certified Cop Killer now, I guess? Should I like, go find a cop to murder later or something? I’m not exactly sure how this all works.
+
+[StopMusic]
+[Fade to black]
+[Ben leaves]
+[CHANGE BenSaint]
+*
+
+*I don't want to enlist in the WAR*
+
+(PCPG) You know what, no, I don’t actually care for your WAR. Find another guy to injure himself for the sake of literally nothing.
+
+(PCPG) This WAR thing just seems so confusing and complicated anyways, not to mention it’s probably pretty time-consuming too.
+
+(Endless War, stand, neutral) I guess some people are just destined to be a gullible juvie their entire lives. How pathetic. I thought you were better than that, but I guess I was wrong.
+
+[Ben leaves]
+[Munchy leaves]
+[EndlessWar leaves]
+I turn away from the group and head to the cafeteria for lunch. It’s just not worth it right now to engage myself with the WAR and all its intricacies. Maybe I’ll consider it another time.
+
+[fade to black]
+[StopMusic]
+[==> The Light of My Bulb]
 *
 
 [Scene: The Light of My Bulb]
