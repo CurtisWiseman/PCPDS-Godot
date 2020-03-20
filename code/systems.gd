@@ -74,7 +74,7 @@ func _ready():
 	# A canvas layer node for keeping things on top such as the dialogue box.
 	canvas = CanvasLayer.new()
 	canvas.name = 'Dialogue Canvas'
-	add_child(canvas)
+	pauseCanvas.add_child(canvas)
 	
 	blackScreen = Sprite.new()
 	blackScreen.name = 'Black Screen'
