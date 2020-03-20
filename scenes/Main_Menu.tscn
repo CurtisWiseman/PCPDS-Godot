@@ -60,6 +60,9 @@ margin_top = 83.7394
 margin_right = 255.487
 margin_bottom = 103.739
 text = "Digibro"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Ben Saint" type="Button" parent="RouteButtons"]
 margin_left = 99.4869

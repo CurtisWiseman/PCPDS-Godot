@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/UI/HistoryPane.gd" type="Script" id=1]
+
+[node name="HistoryPane" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="WindowDialog" parent="."]
+margin_left = 606.956
+margin_top = 66.4418
+margin_right = 1310.96
+margin_bottom = 770.442
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+bbcode_enabled = true
+scroll_following = true
+selection_enabled = true

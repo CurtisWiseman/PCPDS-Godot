@@ -1,6 +1,7 @@
 extends Node
 
 const DialogueBox = preload('res://code/dialoguebox.gd')
+const HistoryPane = preload('res://scenes/UI/HistoryPane.tscn')
 
 # Node names.
 var sound
@@ -15,6 +16,7 @@ var pauseCanvas
 var dialogueBox
 var textBoxBackground
 var blackScreen
+var history
 
 # Load nodes for all game systems.
 func _ready():
@@ -79,7 +81,14 @@ func _ready():
 	blackScreen.centered = false
 	blackScreen.texture = load("res://images/misc/black_screen.png")
 	blackScreen.set_self_modulate(Color(1,1,1,0))
-	canvas.add_child(blackScreen);
+	canvas.add_child(blackScreen)
+	
+	var history_canvas = CanvasLayer.new()
+	history_canvas.name = 'History Canvas'
+	history = HistoryPane.instance()
+	history.name = 'History'
+	history_canvas.add_child(history)
+	add_child(history_canvas)
 	
 # Function to view the dialogue box on a scene and add the pause menu.
 func dialogue(script, index=0, choicesArray=[], inChoiceBool=false, chosenChoicesArray=[], CG=null):
