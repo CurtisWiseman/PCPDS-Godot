@@ -52,6 +52,9 @@ func _physics_prcoess(delta):
 func _input(event):
 	if event.is_action_pressed("pause") and !game.blockInput and not transitioning: #Originally, this was using ui_cancel. I created my own input_map type in Project Settings -> Input Map
 		$buttons/Save.grab_focus() #It is linked to the Escape key and the Start button on controllers
+		var display = global.rootnode.get_node('Systems').display
+		if display.animation != null:
+			display.animation.paused = not visible
 		if visible:
 			menu_out()
 		else:

@@ -457,10 +457,20 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				yield(self, 'mouse_click')
 				global.pause_input = false
 				game.safeToSave = true
-			elif dialogue[index].to_lower().strip_edges() == "[credits]":
+			elif dialogue[index].to_lower().strip_edges().find("[credits") == 0:
 				global.pause_input = true
-				var video_path = 'res://images/credits/Credits scribbled.ogv'
+				systems.textBoxBackground.make_invisible()
+				fadeblackalpha(systems.blackScreen, 'out', 1, 0.01)
+				yield(self, 'transition_finish')
+				systems.sound.stop_music()
+				systems.sound.stop_SFX()
+				var video_path
+				if dialogue[index].to_lower().find("mumkey"):
+					video_path = 'res://images/credits/Credits scribbled.ogv'
+				else:
+					video_path = 'res://images/credits/Credits non-scribbled.ogv'
 				systems.display.animation(video_path)
+				systems.display.animation.volume_db = 0.0
 				yield(systems.display, 'transition_finish')
 				global.pause_input = false
 				get_tree().change_scene("res://scenes/Main_Menu.tscn")
@@ -595,13 +605,14 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var found = null
 				
 				for i in range(0, dialogue.size()):
-					if dialogue[i].find(sceneName) != -1:
+					if dialogue[i].replace("|hidename", "").find(sceneName) != -1:
 						found = i
 						break
 				
 				if found != null:
 					index = found
-					global.current_scene_name = sceneName.strip_edges().substr('[Scene:'.length()).rstrip("]").strip_edges()
+					if dialogue[index].find("|hidename") == -1:
+						global.current_scene_name = sceneName.strip_edges().substr('[Scene:'.length()).rstrip("]").strip_edges()
 #					if found < index:
 #						var loadInChoice = false
 #						var loadChoices = []

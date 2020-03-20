@@ -276,8 +276,11 @@ func hide_animation():
 			yield(ftimer, 'timeout')
 			animation.modulate.a = clamp(time/1.0, 0.0, 1.0)
 			time -= 0.01
+		if animation != null:
+			animation.queue_free()
+			animation = null
 	else:
-		ftimer.start(0.01)
+		ftimer.start(0.01) #our callers won't expect us to emit immediately so always yield a little
 		yield(ftimer, 'timeout')
 			
 	ftimer.queue_free()
