@@ -38,7 +38,7 @@ func _input(event):
 		
 		
 func finish_fades_and_slides():
-	var display = get_node('../../../../Display')
+	var display = global.rootnode.get_node('Systems/Display')
 	global.finish_fading()
 	if display.faders.size() > 0:
 		lock = false
