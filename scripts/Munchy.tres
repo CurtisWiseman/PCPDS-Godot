@@ -1,35 +1,5 @@
-[Scene: Enlisting]
-
-(PCPG) !enlist rowdys
-
-(Ben|Ben, campus, slouch, neutral) Well, shit.
-
-[Ben Leaves]
-[SLIDE, Munchy, left, center]
-
-[After a few seconds, the screen flashes pink]
-
-A whole slew of different shades of pink flash around me, blinding in their intensity. The light is so strong that I feel like I could have a fucking seizure at any moment. Thankfully though, the light dies down after a little bit, and at the same time... I feel relieved. I feel like I may have just stumbled upon a kind of experience I’ll never forget.
-
-(Munchy|Munchy, campus, squatting, happyMAX) Fuck YES!! Glad you chose to be on the right side of HISTORY, my man!
-
-(PCPG) Wait, I don’t understand. What the fuck was that all about?
-
-(Munchy|Munchy, campus, crossing, neutral) Well, I hate to break it to you (lol, I don’t), but you’ve just made the semi-irreversible decision of GETTING ROWDY. Maybe if I were a fucking slack-jawed, knuckle-dragging retarded idiot, I’d go off on how this decision impacts you in a way related to some nebulous video game mechanics.
-
-(Munchy|Munchy, campus, squatting, angryMED) But I’m not. This is reality motherfucker. This is feeling. This is touch. After this, there’s no turning back, unless you wanna totally fucking obliterate any chance you have of being on friendly terms with the Rowdys. 
-
-(Munchy|Munchy, campus, default, neutral) And by that I mean, I can pardon you. But hey, you’ve come this far, right? Let’s head over to the lunch table your new cohorts are sitting at first. I’ll introduce you.
-
-(PCPG) Uh, sure.
-
-This is all starting to freak me out a little bit. Feeling? Touch? What is this guy even saying? Is he on DRUGS or something? No, I must calm myself. This is my life now. I made my Rowdy bed, and now I gotta… what do they call it? ‘Thashing’? I think I remember hearing something like that.
-
 [Scene: !data rowdies]
 
-[CG end]
-
-[StopMusic]
 [Location: dininghall.norowdies, dininghall.table.rowdiesforeground]
 [Song: PCPDating_HomeMorning]
 
@@ -254,6 +224,11 @@ It was a tough choice, but I went with what my heart was telling me.
 
 [Fade to black]
 
+[==> Initiation]
+*
+
+[Scene: Initiation]
+
 I leave the confines of the Rowdy Roughhouse, with Endless War walking just a few feet ahead of me.
 
 [Location: outsidepcpu.night]
@@ -264,10 +239,7 @@ I leave the confines of the Rowdy Roughhouse, with Endless War walking just a fe
 (PCPG) What do you mean by that? What exactly are we gonna ‘create’?
 
 (Endless War|Endless War, knife, neutral) Explaining such concepts to your feeble mind would take ages. With that in mind, I’ll just keep things simple enough for you to understand: do you want to help me or not? Your mission, should you choose to accept it, will be elaborated on later.
-[==> Endless War?]
-*
 
-[Scene: Endless War?]
 [CHOICE]
 *Hell yeah, I want a new age of WAR*
 *Er, I don’t think I’m cut out for this ‘WAR’ thing after all.*

@@ -1357,7 +1357,7 @@ As soon as I enter the Philosophy class something massive tackles my chest sendi
 (Ben|???) Woah calm down there buddy, we don’t want to kill off the new student quite yet. Come on, get off of him.
 
 (Ben, campus, base, neutral)
-(Brunswick, neutral, right)
+(Brunswick, body, neutral, right)
 [fade from black]
 The beast obliges and the enormous weight finally lifts from my body, revealing itself as a Momoswine.
 
@@ -1384,7 +1384,7 @@ The menacing being offers his hand to me, which I accept, and he helps me up.
 
 (Ben|Professor Saint, campus, point, happyMIN|cloud) In other words, he’s our class pet.
 
-(Brunswick, neutral, right) Swine!
+(Brunswick, body, neutral, right) Swine!
 
 (PCPG) Right...
 
@@ -1392,7 +1392,7 @@ The menacing being offers his hand to me, which I accept, and he helps me up.
 
 The class goes silent at the threat. 
 
-(Brunswick, neutral, right) Mamo!
+(Brunswick, body, neutral, right) Mamo!
 
 (Ben|Professor Saint, campus, base, neutral) Okay enough of that bullshit, all of you better sit down and shut the fuck up.
 
@@ -1437,7 +1437,7 @@ As I think about whether I should join them in their delinquency, a strange pres
 
 [Song: PCPDating_Tension]
 (Ben, campus, base, shockMIN)
-(Brunswick, worried, right)
+(Brunswick, body, worried, right)
 (Russel|???) [i]Beeeen Saaaiiiiint...[/i]
 
 (PCPG) Uhh, what was that?
@@ -1445,7 +1445,7 @@ As I think about whether I should join them in their delinquency, a strange pres
 (Ben, campus, base, shockMAX)
 (Russel|???) [i]Bruuuunswiiiiiick...[/i]
 
-(Brunswick, worried, right) Swine?
+(Brunswick, body, worried, right) Swine?
 
 (Ben, campus, exasp, shockMAX) Oh fuck, how the hell did he know Brunswick was here?
 
@@ -1468,24 +1468,24 @@ Suddenly, the room begins to heat up, as a literal portal in spacetime rips itse
 
 (Russel, base, neutral) It’s [i]never[/i] enough.
 
-(Brunswick, confused, right)
+(Brunswick, body, confused, right)
 Russel then unleashes what looks to be a Confuse Ray at the startled Brunswick, hitting him directly and confusing him.
 
 (Russel, base, neutral, center, slide, center-50) Alright Brunswick, now all you need to do is to enter the friendly portal where you can meet up with all of your favourite friends, those who were brutally murdered by your ever so precious Ben Saint.
 
-(Brunswick, confused, 1, right, slide, right-50, 10)
+(Brunswick, body, confused, right, slide, right-50)
 Brunswick in his confusion obeys Russel's command and slumbers his way towards the portal.
 
-(Brunswick, confused, 1, right-50, slide, right-100, 10)
+(Brunswick, body, confused, right-50, slide, right-100)
 (Ben, campus, exasp, sadMIN) Brunswick! Please snap out of it, you’re better than this! Don’t do this to me!
 
-(Brunswick, confused, 1, right-100, slide, right-150, 10)
+(Brunswick, body, confused, right-100, slide, right-150)
 (Ben, campus, slouch, sadMAX) I can’t lose you again!
 
-(Brunswick, confused, 1, right-150, slide, right-250, 10)
+(Brunswick, body, confused, right-150, slide, right-250)
 But despite Ben’s pleas, Brunswick continues slowly towards his doom. Students, seemingly caring more about Brunswick than Ben ever could, sacrifice their own wellbeing by climbing onto his hairy mass to stop him from entering the portal, but all is in vain. Brunswick is simply too massive and strong for their efforts.
 
-(Brunswick, confused, 1, right-250, slide, right-300, 10)
+(Brunswick, body, confused, right-250, slide, right-300)
 Just before Brunswick falls into the portal and is consumed once more by the fire he escaped from, a commanding shout sounds from the classroom door.
 
 [StopMusic]
@@ -1505,12 +1505,12 @@ Somehow this gets to Brunswicks ears, stopping him inches from the portal’s ed
 (Russel, base, worried, center-50) I guess... you are right sir.
 
 (Lord of Ghosts, happy, blank, right)
-(Brunswick, worried, 1, right-300, slide, right-150, 10)
+(Brunswick, body, worried, right-300, slide, right-150)
 Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. After shaking off his confusion he steps away from the portal and lowers himself to let off the students on top of him.
 
 (Russel, base, neutral, center-50, slide, center) But do not worry Brunswick, despite not getting you this time, I will bring you back to Pokémon Hell soon enough.
 
-(Brunswick, default, worried, center+50) Swine...
+(Brunswick, body, default, worried, center+50) Swine...
 
 (Russel, base, neutral) And you, Ben “Max Revive” Saint, don’t you worry either. You won't be separated from your “friends” for too long. In due time I will bring you down there too, and this time, for good.
 
@@ -1522,7 +1522,7 @@ Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. 
 Russel then enters back through the portal and closes it behind him, seemingly returning everything back to normal.
 
 [Song: PCPDating_ClassPhilosophy]
-(Brunswick, worried, 1, center+50, slide, left, 10)
+(Brunswick, body, worried, center+50, slide, left)
 (Ben, campus, base, happyMIN, left, slide, center) Wow, uh thanks for the save Lord of Ghosts. Even though we were previously enemies bent on dominating one another that one time, you helped me out big here.
 
 (Lord of Ghosts|The Lord of Ghosts, blushMED, blank, right) DO NOT MENTION IT, FOR I AM THE LORD OF GHOSTS, THAT IS WHAT I DO.
@@ -1542,7 +1542,7 @@ Nobody replies, obviously.
 
 (Ben, campus, slouch, neutral) Ugh. I guess class is dismissed early today. I need to find a new place for Brunswick before Russel decides to make another visit.
 
-(Brunswick, worried) Mamo...
+(Brunswick, body, worried) Mamo...
 
 [SLIDE Ben offright]
 [SLIDE Brunswick offright]
@@ -1724,10 +1724,7 @@ He sounds strangely sincere and kind of sad as he says it.
 
 (Digi|Professor Digibro, Campus, 2, HappyMED) Making lists is just a hobby of mine, though I do get genuinely happy when people appreciate them.
 
-[==> Digibro's 2-Watch-List]
 *
-
-[Scene: Digibro’s 2-Watch-List]
 
 *Library*
 (PCPG) Well, I’ve got to get going now, but I’ll definitely start checking out the things on here later.
@@ -1800,10 +1797,10 @@ But it’s strange. Even though we didn’t talk very much, I still relish in Di
 [Digi leaves]
 [CHANGE Digi fade 1 0.01]
 
-[u][Scene: Broken Dreams][/u]
+[Scene: Broken Dreams]
 
 [Location: memeclass]
-[Music: PCPDating_ClassMemes_03-Simple_and_Clean]
+[Song: PCPDating_ClassMemes_Simple _ Clean]
 [fade from black]
 
 This is the kind of school I’ve always dreamed of! A whole class dedicated to memes? Seems like the internet is finally old enough now to get a break into our educational system.
@@ -1812,22 +1809,22 @@ This is the kind of school I’ve always dreamed of! A whole class dedicated to 
 
 I think I get it now! Basically, this is Professor Bestman's weekly outlet to tell his students why he’s a genius. Or rather why he thinks he is one.
 
-(PCPG) But what has this all to do with memes? 
+(PCPG) But what has this all got to do with memes? 
 
-(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n So, any further questions regarding the topics for this course?
+(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n
+So, any further questions regarding the topics for this course?
 
-[StopMusic]
-[Song: PCP-AMBIENT_Classroom]
+[SFX: PCP-AMBIENT_Classroom]
 The entire classroom falls into a noisy chaos, pens and books fly through the air, everybody tries to make their opinion or joke heard. Some 4-channers and Redditors get into a violent argument about who has the better memes.
 
 On my left, I hear a quite purple voice trying to speak up.
 
 Suddenly, the door bursts open and the bearded socialist storms into the classroom.
-
+[StopSFX]
+[SFX: PCP-SFX_DoorSlam]
 (Ben, campus, exasp, angryMIN, offright, slide, right) MAGE MAGE SHUT THE FUCK EVERYONE UP MAGE MAGE MAGE WANTS TO SPEAK!
-
-[StopMusic]
-[SLIDE Ben offleft]
+[SLIDE Ben offright]
+[SFX: PCP-SFX_DoorSlam]
 [Ben leaves]
 And before saying anything else, he runs out again. 
 
@@ -1843,8 +1840,8 @@ And before saying anything else, he runs out again.
 
 She sounds very dedicated.
 
-(Nate|Professor Bestman, campus, smoking, confusedMIN|shades) I see what you’re saying. But I still think dreams are an uninteresting topic to the broader classroom demographic. /n What do you think class? Wouldn’t that be incredibly boring?
-
+(Nate|Professor Bestman, campus, smoking, confusedMIN|shades) I see what you’re saying. But I still think dreams are an uninteresting topic to the broader classroom demographic.
+(Nate|Professor Bestman, campus, smoking, confusedMIN|shades) What do you think class? Wouldn’t that be incredibly boring?
 [CHOICE]
 *Stand with Mage*
 *Don’t stand with Mage*
@@ -1861,9 +1858,9 @@ Welp. Seems like I’m still good at ruining the relationship with my teachers r
 
 [SLIDE Mage offright]
 (Nate, campus, papers, shockMIN|shades)
-The professor then goes on for a while about the art of creating reusable meme templates with a green screen, but it sounds pretty stupid and cringeworthy and I don’t care. I hear the school bell with relief.
-
-[SFX: PCPDating_SchoolBell]
+The professor then goes on for a while about the art of creating reusable meme templates with a green screen, but it sounds pretty stupid and cringeworthy and I don’t care.
+[SFX: PCPDating_School_Bell]
+I hear the school bell with relief.
 [SLIDE Nate offleft]
 I pack my stuff as Mage comes up to my table.
 
@@ -2049,7 +2046,7 @@ Professor Munchy decided to end our morning class early today, and soon I found 
 
 (PCPG) Wait, you guys are actually friends? Aren’t you two literally in the middle of a WAR with each other?
 
-(Ben, campus, exasp, confusedMIN) Well yeah, how else are you supposed to show affection for one another if not by brutally murdering each others loyal subjects?
+(Ben, campus, exasp, confusedMIN) Well yeah, how else are you supposed to show affection for one another if not by brutally murdering each other's loyal subjects?
 
 (Munchy, campus, crossing, happyMIN) Yeah, I wouldn’t have it any other way bro.
 
@@ -2093,7 +2090,7 @@ Wait, Endless War is the student council president?! How is this the first time 
 
 Munchy starts whispering into my ear.
 
-(Munchy, campus, crossing, angryMIN) Act natural kid, this is just to draw her out. You don’t think we were gonna let you fucking chicken out while we have the chance, do you?
+(Munchy, campus, crossing, angryMIN) [i]Act natural kid, this is just to draw her out. You don’t think we were gonna let you fucking chicken out while we have the chance, do you?[/i]
 
 (PCPG) ...what?
 
@@ -2158,7 +2155,7 @@ Jesus Christ, first thugs, now amputees?
 
 Two reptilian appendages sprout from his shoulders in a way that words fail to describe, as he also somehow procures a cowboy hat. This metamorphosis is so bizarre that I fail to register that... he has a gun pointed right at me!
 
-(Crocs|???, special outfit) A juvenile, huh. Just what the doctor ordered.
+(Crocs|???, special_outfit) A juvenile, huh. Just what the doctor ordered.
 
 (Munchy, campus, crossing, neutral, right) Wait, hold on, don’t shoot. This guy could prove to be useful. He may even want to join the ranks and become a Rowdy Runt.
 
@@ -2181,7 +2178,7 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 
 (Crocs|???, Neutral) Plus, we’re just more fun-loving and eccentric in general. The amount of artists and loremasters that the Rowdys have ON TOP of us just having more soldiers to send into the line of fire should make the choice obvious. Pretty much every Killer these days is just a retarded goon who has no concept of culture.
 
-(Smearg|???, Neutral, offleft, slide, left-170) (I’m right here, y’know.)
+(Smearg|???, Neutral, offleft, slide, left-170) [i]I’m right here, y’know.[/i]
 
 [SLIDE Smearg offleft]
 [Smearg leaves]
@@ -2216,41 +2213,91 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 [SLIDE Crocs offleft]
 [Crocs leaves]
 [SLIDE Munchy left]
+(Endless War, stand, neutral)
 (Munchy, campus, crossing, neutral) Well, go on, PCPG.
-
 (Ben, campus, base, neutral, right) Take your time.
 
 [CHOICE]
 *Rowdy Fucker for life*
 *Cop Killer, obviously*
-*I don’t want to enlist in the WAR*
+*I don't want to enlist in the WAR*
 *Ask what gang Endless War belongs to*
 
-*Ask what gang Endless War belongs to*
-
-(PCPG) Hey I was wondering for a while now, Endless War you seem pretty gung-ho about this WAR thing and yet I’m not even sure which gang you’re with. Are you a Rowdy Fucker or a Cop Killer?
-
-(Endless War, stand, happyMED) Oh silly juvie, I am far too above all of you to be affiliated with these lowly roles. I never have joined a side and I never will, and I am perfectly fine that way.
-
-(Endless War, knife, shockedMED) Now stop asking questions and just fucking enlist!
-
-[CHOICE]
 *Rowdy Fucker for life*
-*Cop Killer, obviously*
-*I don’t want to enlist in the WAR*
-*
+(PCPG) !enlist rowdys
 
-*Rowdy Fucker for life*
+(Ben|Ben, campus, slouch, neutral) Well, shit.
 
+[Ben Leaves]
+[SLIDE, Munchy, left, center]
+
+[After a few seconds, the screen flashes pink]
+[CG: Pink Effect]
+A whole slew of different shades of pink flash around me, blinding in their intensity. The light is so strong that I feel like I could have a fucking seizure at any moment. Thankfully though, the light dies down after a little bit, and at the same time... I feel relieved. I feel like I may have just stumbled upon a kind of experience I’ll never forget.
+[CG end]
+(Munchy|Munchy, campus, squatting, happyMAX) Fuck YES!! Glad you chose to be on the right side of HISTORY, my man!
+
+(PCPG) Wait, I don’t understand. What the fuck was that all about?
+
+(Munchy|Munchy, campus, crossing, neutral) Well, I hate to break it to you (lol, I don’t), but you’ve just made the semi-irreversible decision of GETTING ROWDY. Maybe if I were a fucking slack-jawed, knuckle-dragging retarded idiot, I’d go off on how this decision impacts you in a way related to some nebulous video game mechanics.
+
+(Munchy|Munchy, campus, squatting, angryMED) But I’m not. This is reality motherfucker. This is feeling. This is touch. After this, there’s no turning back, unless you wanna totally fucking obliterate any chance you have of being on friendly terms with the Rowdys. 
+
+(Munchy|Munchy, campus, default, neutral) And by that I mean, I can pardon you. But hey, you’ve come this far, right? Let’s head over to the lunch table your new cohorts are sitting at first. I’ll introduce you.
+
+(PCPG) Uh, sure.
+
+This is all starting to freak me out a little bit. Feeling? Touch? What is this guy even saying? Is he on DRUGS or something? No, I must calm myself. This is my life now. I made my Rowdy bed, and now I gotta… what do they call it? ‘Thashing’? I think I remember hearing something like that.
+[Fade to black]
+[Munchy leaves]
+[StopMusic]
 [CHANGE Munchy]
 *
 
 *Cop Killer, obviously*
+(PCPG) !enlist killers
 
+(Munchy, campus, default, neutral) I fucking knew it.
+
+[CG: Purple Effect]
+Suddenly a purple light begins to envelop and circle around me and a near infinite amount of memories and experiences suddenly flash before my eyes. The light then calms down again, and at the end of it all, I feel like a changed man.
+[CG end]
+
+(PCPG) So what the fuck just happened?
+
+(Ben, campus, base, neutral) Eh, enlisting does that to you. You just sold your soul to us, so the transaction kinda fucks with you a little. It gives you access to things you’ve never experienced before, allows you to peer into the reality of space and slime. It essentially turns you…
+
+(Munchy, campus, crossing, happyMIN)
+(Endless War, stand, sadMIN)
+(Ben, campus, base, happyMAX|cloud) w o k e
+
+Woah.
+
+(Munchy, campus, default, neutral)
+(Endless War, stand, neutral)
+(Ben, campus, point, neutral) It also sets some restrictions on your actions. As a Killer you can no longer work on a farm and can only dangerously mine at night.
+
+(Munchy|Professor Munchy, campus, crossing, angryMIN) Disgusting.
+
+(Munchy, campus, stand, neutral)
+(Endless War, stand, happyMIN)
+(Ben, campus, point, happyMIN) You are also disposed to excessive murder and violence, so you can get straight fucked if any of that’s not what you were thinking of doing with your life.
+
+(Endless War, stand, neutral)
+(Ben, campus, base, neutral) Anyways, come meet the rest of the Killers at the cafeteria, it’s almost time for lunch anyways. 
+
+[Munchy leaves]
+[EndlessWar leaves]
+[SLIDE, Ben, offright]
+We leave Munchy and Endless War behind and head for the cafeteria. I’m a certified Cop Killer now, I guess? Should I like, go find a cop to murder later or something? I’m not exactly sure how this all works.
+
+[StopMusic]
+[Fade to black]
+[Ben leaves]
 [CHANGE BenSaint]
 *
 
-*I don’t want to enlist into the WAR*
+*I don't want to enlist in the WAR*
 
 (PCPG) You know what, no, I don’t actually care for your WAR. Find another guy to injure himself for the sake of literally nothing.
 
@@ -2264,6 +2311,118 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 I turn away from the group and head to the cafeteria for lunch. It’s just not worth it right now to engage myself with the WAR and all its intricacies. Maybe I’ll consider it another time.
 
 [fade to black]
+[StopMusic]
+[==> The Light of My Bulb]
+*
+
+*Ask what gang Endless War belongs to*
+
+(PCPG) Hey I was wondering for a while now, Endless War you seem pretty gung-ho about this WAR thing and yet I’m not even sure which gang you’re with. Are you a Rowdy Fucker or a Cop Killer?
+
+(Endless War, stand, happyMED) Oh silly juvie, I am far too above all of you to be affiliated with these lowly roles. I never have joined a side and I never will, and I am perfectly fine that way.
+
+(Endless War, knife, shockedMED) Now stop asking questions and just fucking enlist!
+*
+
+[Forget Rowdy Fucker for life]
+[Forget Cop Killer, obviously]
+[Forget I don't want to enlist in the WAR]
+
+[CHOICE]
+*Rowdy Fucker for life*
+*Cop Killer, obviously*
+*I don't want to enlist in the WAR*
+
+*Rowdy Fucker for life*
+(PCPG) !enlist rowdys
+
+(Ben|Ben, campus, slouch, neutral) Well, shit.
+
+[Ben Leaves]
+[SLIDE, Munchy, left, center]
+
+[After a few seconds, the screen flashes pink]
+[CG: Pink Effect]
+A whole slew of different shades of pink flash around me, blinding in their intensity. The light is so strong that I feel like I could have a fucking seizure at any moment. Thankfully though, the light dies down after a little bit, and at the same time... I feel relieved. I feel like I may have just stumbled upon a kind of experience I’ll never forget.
+[CG end]
+(Munchy|Munchy, campus, squatting, happyMAX) Fuck YES!! Glad you chose to be on the right side of HISTORY, my man!
+
+(PCPG) Wait, I don’t understand. What the fuck was that all about?
+
+(Munchy|Munchy, campus, crossing, neutral) Well, I hate to break it to you (lol, I don’t), but you’ve just made the semi-irreversible decision of GETTING ROWDY. Maybe if I were a fucking slack-jawed, knuckle-dragging retarded idiot, I’d go off on how this decision impacts you in a way related to some nebulous video game mechanics.
+
+(Munchy|Munchy, campus, squatting, angryMED) But I’m not. This is reality motherfucker. This is feeling. This is touch. After this, there’s no turning back, unless you wanna totally fucking obliterate any chance you have of being on friendly terms with the Rowdys. 
+
+(Munchy|Munchy, campus, default, neutral) And by that I mean, I can pardon you. But hey, you’ve come this far, right? Let’s head over to the lunch table your new cohorts are sitting at first. I’ll introduce you.
+
+(PCPG) Uh, sure.
+
+This is all starting to freak me out a little bit. Feeling? Touch? What is this guy even saying? Is he on DRUGS or something? No, I must calm myself. This is my life now. I made my Rowdy bed, and now I gotta… what do they call it? ‘Thashing’? I think I remember hearing something like that.
+[Fade to black]
+[Munchy leaves]
+[StopMusic]
+[CHANGE Munchy]
+*
+
+*Cop Killer, obviously*
+(PCPG) !enlist killers
+
+(Munchy, campus, default, neutral) I fucking knew it.
+
+[CG: Purple Effect]
+Suddenly a purple light begins to envelop and circle around me and a near infinite amount of memories and experiences suddenly flash before my eyes. The light then calms down again, and at the end of it all, I feel like a changed man.
+[CG end]
+
+(PCPG) So what the fuck just happened?
+
+(Ben, campus, base, neutral) Eh, enlisting does that to you. You just sold your soul to us, so the transaction kinda fucks with you a little. It gives you access to things you’ve never experienced before, allows you to peer into the reality of space and slime. It essentially turns you…
+
+(Munchy, campus, crossing, happyMIN)
+(Endless War, stand, sadMIN)
+(Ben, campus, base, happyMAX|cloud) w o k e
+
+Woah.
+
+(Munchy, campus, default, neutral)
+(Endless War, stand, neutral)
+(Ben, campus, point, neutral) It also sets some restrictions on your actions. As a Killer you can no longer work on a farm and can only dangerously mine at night.
+
+(Munchy|Professor Munchy, campus, crossing, angryMIN) Disgusting.
+
+(Munchy, campus, stand, neutral)
+(Endless War, stand, happyMIN)
+(Ben, campus, point, happyMIN) You are also disposed to excessive murder and violence, so you can get straight fucked if any of that’s not what you were thinking of doing with your life.
+
+(Endless War, stand, neutral)
+(Ben, campus, base, neutral) Anyways, come meet the rest of the Killers at the cafeteria, it’s almost time for lunch anyways. 
+
+[Munchy leaves]
+[EndlessWar leaves]
+[SLIDE, Ben, offright]
+We leave Munchy and Endless War behind and head for the cafeteria. I’m a certified Cop Killer now, I guess? Should I like, go find a cop to murder later or something? I’m not exactly sure how this all works.
+
+[StopMusic]
+[Fade to black]
+[Ben leaves]
+[CHANGE BenSaint]
+*
+
+*I don't want to enlist in the WAR*
+
+(PCPG) You know what, no, I don’t actually care for your WAR. Find another guy to injure himself for the sake of literally nothing.
+
+(PCPG) This WAR thing just seems so confusing and complicated anyways, not to mention it’s probably pretty time-consuming too.
+
+(Endless War, stand, neutral) I guess some people are just destined to be a gullible juvie their entire lives. How pathetic. I thought you were better than that, but I guess I was wrong.
+
+[Ben leaves]
+[Munchy leaves]
+[EndlessWar leaves]
+I turn away from the group and head to the cafeteria for lunch. It’s just not worth it right now to engage myself with the WAR and all its intricacies. Maybe I’ll consider it another time.
+
+[fade to black]
+[StopMusic]
+[==> The Light of My Bulb]
 *
 
 [Scene: The Light of My Bulb]
@@ -2297,17 +2456,20 @@ Gibbon gingerly presses his fingers together as he formulates an answer.
 
 *City Park*
 
-(Gibbon, campus, grabby, happyMIN) Well, uh, my offer still stands for you to come visit my place. Say, tonight? I have a few guitars and a drum set, we could jam a little? /n An evening at Gibbontake’s house, huh? That could be fun.
+(Gibbon, campus, grabby, happyMIN) Well, uh, my offer still stands for you to come visit my place. Say, tonight? I have a few guitars and a drum set, we could jam a little?/n
+An evening at Gibbontake’s house, huh? That could be fun.
 *
 
 *Library*
 
-(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little? /n An evening at Gibbontake’s house, huh? That could be fun.
+(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little?/n
+An evening at Gibbontake’s house, huh? That could be fun.
 *
 
 *7/11*
 
-(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little? /n An evening at Gibbontake’s house, huh? That could be fun.
+(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little?/n
+An evening at Gibbontake’s house, huh? That could be fun.
 *
 
 [CHOICE]
@@ -2343,6 +2505,7 @@ The bell tolls, and students all begin filtering back out of the cafeteria.
 
 [Fade to black]
 [StopMusic]
+[Gibbon leaves]
 *
 
 [Scene: Killing Code (and Monsters)]
@@ -2398,7 +2561,7 @@ The program compiles.
 
 (PCPG) Well you’re sure as fuck closer to that goal than me. I haven’t even greeted the world of techno babble with a warm “hello,” so color me impressed by whatever this is you’re doing.
 
-(Tom, 1, happyMIN) It’s not that hard, really. I always thought I was too dumb for this shit, and I am, but if you just do it, you’ll eventually get the hang of it. There’s actually this great book called “Learn Python the hard way,” if you’re interested.
+(Tom, 1, happyMIN) It’s not that hard, really. I always thought I was too dumb for this shit, and I am, but if you just do it, you’ll eventually get the hang of it. There’s actually this great book called “Learn Python the Hard Way,” if you’re interested.
 
 (PCPG) Sure, maybe I’ll look into it, but I’m having trouble believing that you are too stupid for anything, mister ex-professor programmer guy.
 
@@ -2552,7 +2715,7 @@ A few attempts, and the occasional frustrated noise from Tom later, I finally ma
 *
 
 [Scene: Autonomous Motivation]
-
+The next day...
 [Location: scienceclass]
 [Song: PCPDating_ClassScience]
 [fade from black]
@@ -2563,7 +2726,7 @@ A few attempts, and the occasional frustrated noise from Tom later, I finally ma
 
 Davoo raises his hand to make one such inquiry. I hadn’t noticed him sitting there.
 
-[SLIDE Ben Left]
+[SLIDE Ben left]
 (Davoo, campus, greeting, confusedMIN) This isn’t about the lecture necessarily, but let’s say there was a kind of particle whose existence was untethered by the laws of physics. With complete sovereignty over its state of be-
 
 What the hell would that even mean?
@@ -2572,7 +2735,7 @@ What the hell would that even mean?
 
 (Davoo, campus, explaining, angryMAX) No, that’s not what I mean, if you’d just fucking let me finish my fucking question that I asked...
 
-Professor Ben, to the students obvious frustration, shows no sign of stopping.
+Professor Ben, to the student's obvious frustration, shows no sign of stopping.
 
 [SLIDE Davoo offright]
 Mumbling something about “not being able to mute people,” Davoo gets up and leaves...
@@ -2606,7 +2769,7 @@ Davoo seems really uncomfortable addressing the issue any further. Something is 
 
 (PCPG) I don’t quite have the funds for that, with my tuition money being funneled to the top of some multi-level marketing operation. I mean, do you get dragged to restaurants frequently?
 
-(Davoo, campus, neutral, neutral) Digi is a strange employer alright.
+(Davoo, campus, neutral, neutral) Digi is a strange employer.
 
 (PCPG) I was just thinking cafeteria. Guess that solves the mystery of why I never see you there.
 
@@ -2650,7 +2813,7 @@ What are they if not “real meat”? The thought of ordering it briefly pops in
 
 We find some seats that aren’t the subject of various territorial disputes between rival gangs, which still isn’t the easiest thing, but I’ve gotten better at it since my first day here.
 
-(Davoo, campus, fidgeting) I haven’t seen you in Digi’s class yesterday.
+(Davoo, campus, fidgeting) I didn’t see you in Digi’s class yesterday.
 
 (Davoo, campus, explaining, happyMIN) He holds a lot of lectures in comparison to the other professors, human content machine and all that, but it’s really worthwhile to listen to all of them to get the bigger picture and get into the mindset to understand where he’s coming from, you know?
 
@@ -2700,7 +2863,7 @@ Maybe I really do need to find a calling of sorts if I want to have a chance of 
 [StopMusic]
 *
 
-*It’s all still a bit overwhelming, but at least filling my entire day with work keeps the boredom at bay. (Oh god, oh fuck, I’m committing to this, aren’t I?)*
+*It’s all still a bit overwhelming, but at least filling my entire day with work keeps the boredom at bay. (Oh God, oh fuck, I’m committing to this, aren’t I?)*
 
 (PCPG) It’s all still a bit overwhelming, but at least filling my entire day with work keeps the boredom at bay.
 
@@ -2744,8 +2907,8 @@ Quicker than the human eye, he scurries up to me and swipes the bar out of my ou
 
 (Jesse|???, special, 5, happyMED) Hoo boy, that sure hit the spot! Not that I’m the biggest fan of these non-food foods. No non-food food is ever gonna beat a food food in this froody foodie’s opinion. But it does make me feel like I'm at least 20% less dead, which is all I ever want these days. See, going back five years or so I'd wanna be 20% cooler instead, but that kiddie stuff went out of style about as hard as crocs...
 
-The first words I hear out of this guy’s mouth, and he's ranting about... crocs? Great, now he's on a whole tangent about footwear. I gave him the Huel bar, that's my good deed for today. /n Maybe I can just slink off...
-
+The first words I hear out of this guy’s mouth, and he's ranting about... crocs? Great, now he's on a whole tangent about footwear. I gave him the Huel bar, that's my good deed for today./n
+Maybe I can just slink off...
 (Jesse|???, special, 1, angryMED) Hey! Where are you going, stranger? Whatever happened to manners?
 
 (Jesse, special, 1, happyMIN|blush) Ah, well, I'm not one to talk, ironic considering I've done nothing but talk and haven't even introduced myself. I'm Jesse, by the way.
@@ -2804,8 +2967,8 @@ He has a point. I've barely met the guy, and already I'm inviting him over to sl
 
 (PCPG) Can't argue with that. How about this then, I'll come back tomorrow morning on the way to school. Deal?
 
-(Jesse, special, 1, happyMED) Now THAT, I can get behind. Catch you later, alligator. /n Thanks for the food and goodnight!
-
+(Jesse, special, 1, happyMED) Now THAT, I can get behind. Catch you later, alligator./n
+Thanks for the food and goodnight!
 [Fade to black]
 [StopMusic]
 [Jesse leaves]
@@ -2829,8 +2992,8 @@ I mean really, don’t I deserve more?
 
 Holy fuck! Did I fall through a trapdoor or something.. into this.. basement?
 
-(Mumkey Jones, offright, slide, center)
-(Geoff|???, neutral, offleft, slide, left) Uhh Mumkey, I’m... I’m not comfortable with this...
+(Mumkey Jones, body, blank, offright, slide, center)
+(Geoff|???, default, neutral, offleft, slide, left) Uhh Mumkey, I’m... I’m not comfortable with this...
 
 (Mumkey Jones) Shut up weeb, we already invested all your precious Naruto Online dollars into these guns. There’s no backing out now!
 
@@ -2850,12 +3013,12 @@ Holy fuck! Did I fall through a trapdoor or something.. into this.. basement?
 
 The monkey man starts telling me his story. It at first just sounds like pathetic whining, but after a while I begin to empathize and even.. sympathize with him.
 
-(Geoff|???, smug2) Or, you know, you could simply take the fact that you were expelled with grace, like me! 
+(Geoff|???, default, smug) Or, you know, you could simply take the fact that you were expelled with grace, like me!
 
 (Mumkey Jones) Well you were kicked just cause you’re just a boring shill. I excelled at the classes, they just didn’t see my true brilliance for what it’s worth, so don’t you dare compare yourself to me!
 
 [SFX: PCP-SFX_Gunshot]
-(Geoff, dead, left, slide, offleft)
+(Geoff, dead, blank, left, slide, offleft)
 (PCPG) Holy shit Mumkey, what the fuck! Wasn’t he your friend?!
 
 (Mumkey Jones) Ah don’t worry about it. He’ll be back soon enough. 

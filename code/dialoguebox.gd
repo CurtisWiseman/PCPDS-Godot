@@ -234,7 +234,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 		
 		print_debug(index, ': ', dialogue[index])
 	
-	#Reacts differently depending on the start of the current line.
+		#Reacts differently depending on the start of the current line.
 		# Load while on first line.
 		if index == start:
 			waitTimer.wait_time = 0.5
@@ -841,6 +841,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			else:
 				noChar = true
 			
+			systems.history.add_line(text, chrName)
+			
 			if say: # If the text is to be said then...
 				
 				lastKeep(index)
@@ -917,6 +919,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			$Nametag.add_color_override("font_color", Color.white)
 			var halt = global.rootnode.scene(dialogue[index], index+1, self) # Send the dialogue to the scene function in the root of the scene.
 			say(dialogue[index], "")
+			systems.history.add_line(dialogue[index], false)
 			emit_signal('sentence_end', dialogue[index])
 			index += 1
 
