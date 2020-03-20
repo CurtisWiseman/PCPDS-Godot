@@ -1,57 +1,81 @@
+[==> !argue nate]
+
 [Scene: !introduce killers]
 
 [Song: PCPDating_ClassPhilosophy]
-[Location: dininghall.full, dininghall.table.mudpuddleforeground]
+[Location: dininghall.demo]
+(Gibbon, campus, default, neutral, left-75)
+[fade from black]
 
-(Gibbon, campus, default, neutral, offleft, slide, left+50)
-We enter the cafeteria and in the corner of my eye I see Gibbon sitting at the mud puddle table. To avoid being awkward and having to explain that I can’t join him today I try to ignore him and quickly join Ben at the line.
+We enter the cafeteria and in the corner of my eye I see Gibbon sitting at the mud puddle table. 
 
-[SLIDE, Gibbon, left+50, offleft]
-(Ben, campus, base, happyMIN, offright, slide, center) Oooh, keto pizza eh? Haven’t seen that on the menu before.
- 
+To avoid being awkward and having to explain that I can’t join him today I try to ignore him and quickly join Ben at the line.
+
+[SLIDE Gibbon offleft]
+(Ben, campus, base, happyMIN, offright)
+[SLIDE Ben center]
+(Ben, campus, base, happyMIN) Oooh, keto pizza eh? Haven’t seen that on the menu before.
+
 (PCPG) Don’t bother. I tried it my first day here and it tasted disgusting.
- 
-(Ben, campus, base, neutral) Well they just don’t know how to make good keto pizza then. I could probably teach this kitchen a thing or two.
- 
-(Ben, campus, point, happyMIN|cloud) You see me and a friend of mine have perfected the keto pizza formula, it’s all in the almond flour baby. I bet we can make keto pizzas selling like hot cakes after we’re done with them!
- 
-(PCPG) Oh no, don’t tell me you’re one of those ketofags Ben?
- 
-(Ben, campus, base, happyMAX) Heh heh heh, hell yeah my dude, ketofag to the bone. Been on it for years now and I’ve lost a ton of weight. It’s super cheap too if you know what your doing, and it isn’t even that hard to stick to. I’d totally recommend it if you wanna lose weight.
- 
-(PCPG) Hmm, but doesn’t keto give you kidney stones or something?
- 
-(Ben, campus, base, angryMIN) Oh my fucking god no it doesn’t. Don’t get pulled into this retarded meme that keto somehow is bad for you. Just because I just so happened to get kidney stones a couple of times for completely unrelated reasons doesn’t prove anything!
- 
-(PCPG) R-right.. yeah...
- 
-[Ben leaves]
-We finish up ordering our food and make our way towards the cloud of vapour that is the Killers table. Ahead of me Ben just walks right into the vapour, and after a moment’s hesitation I do the same and emerge into an almost detached space, separate from the rest of the world.
- 
-[Location: dininghall.nokillers, dininghall.table.killersforeground]
 
-(Cop Killers, cloud, offleft, slide, left)
-(Ben, campus, base, neutral, offright, slide, right) Greetings my dear apostles. Please take care of this new soul for me, for I must attend to my Slime Time.
+(Ben, campus, base, neutral) Well they just don’t know how to make good keto pizza then. I could probably teach this kitchen a thing or two.
+
+(Ben, campus, point, happyMIN) You see me and a friend of mine have perfected the keto pizza formula, it’s all in the almond flour baby. 
+
+(Ben, campus, point, happyMIN) I bet we can make keto pizzas selling like hot cakes after we’re done with them!
+
+(PCPG) Oh no, don’t tell me you’re one of those ketofags Ben?
+
+(Ben, campus, base, happyMAX) Heh heh heh, hell yeah my dude, ketofag to the bone. Been on it for years now and I’ve lost a ton of weight. 
+
+(Ben, campus, base, happyMIN|cloud) It’s super cheap too if you know what your doing, and it isn’t even that hard to stick to. I’d totally recommend it if you wanna lose weight.
+
+(PCPG) Hmm, but doesn’t keto give you kidney stones or something like that?
+
+(Ben, campus, base, angryMIN) Oh my fucking god no it doesn’t. Don’t get pulled into this retarded meme that keto somehow is bad for you. 
+
+(Ben, campus, exasp, angryMIN) Just because I just so happened to get kidney stones a couple of times for completely unrelated reasons doesn’t prove anything!
+
+(PCPG) R-right.. yeah...
+
+(Ben, campus, base, neutral)
+We finish up ordering our food and make our way towards the cloud of vapour that is the Killers table. 
+
+[Ben leaves]
+Ahead of me Ben just walks right into the vapour, and after a moment’s hesitation I do the same and emerge into a completely detached space, separate from the rest of the world.
+
+[Location: dininghall.vape, dininghall.table.killersforeground]
+
+(CopKillers, copkillers1)
+(Ben, campus, base, neutral, offright)
+[SLIDE Ben right+50]
+(Ben, campus, base, neutral, right+50) Greetings my dear apostles. Please take care of this new soul for me, for I must attend to my all important Slime Time.
  
-(Ben, campus, base, neutral, right, slide, offright)
-Ben then quickly exits right back out through the vapour. The rest of the Killers intently watch him leave. Where is he going? Also, didn’t he just order food?
+[SLIDE Ben offright]
+Ben then quickly exits right back out through the vapour. The rest of the Killers intently watch him leave. 
+
+Wait, didn’t he [i]just[/i] order food?
 
 [CopKillers leaves]
-(K1P|K1P, base, offleft, slide, center) Never willing to stick around too long huh Ben?
+(K1P, base) Never willing to stick around too long huh Ben?
  
 [K1P leaves]
-(Schrafft, default, offleft, slide, center) [i]Anyways[/i], @Killers get your ASSES in gear, some introductions are in order. I'm Schrafft, I try to keep things running in this gang while our negligent leader does whatever it is he does.
+(Schrafft, base) [i]Anyways[/i], @Killers get your ASSES in gear, some introductions are in order. 
 
-[Schrafft leaves]
-(Ephraim, default, offright, slide, center)
+(Schrafft, base) I'm Schrafft, I try to keep things running in this gang while our negligent leader does whatever it is he does.
+
+[SLIDE Schrafft offleft]
+(Ephraim, base, offright)
+[SLIDE Ephraim center]
 (Ephraim) lol imagine ever listening to schrafft, could not be me
 
 (Schrafft) This is Ephraim. He's an old guard Killer (and a zoomer).
 
-(Ephraim, dab) nothing like a good cop kill. !dab
+(Ephraim, dab) nothing like a good cop kill !dab
 
-(Ephraim, dab, center, slide, offleft)
-(K1P, dab, offright, slide, center)
+[SLIDE Ephraim offleft]
+(K1P, dab, offright)
+[SLIDE K1P center]
 (K1P) dab!
 
 (K1P) dab!
@@ -65,32 +89,41 @@ Ben then quickly exits right back out through the vapour. The rest of the Killer
 
 (Ephraim) a huge fuckin gameplay goon
 
-(K1P) Aw come on I just care about the game balance.
+(K1P, base) Aw come on I just care about the game balance.
 
-(K1P, base, center, slide, offleft)
-(magicks, default, offright, slide, center)
-(magicks) hah, sure
+[SLIDE K1P offleft]
+(magicks, base, offright)
+[SLIDE magicks center]
+(magicks, base) hah, sure
 
 (Schrafft) This Octoling is magicksRampage, he's a dev, a goon, and uh, a cop?
 
-(magicks) just because I'm a cop killer doesn't mean I can't be a cop
+(magicks, base) just because I'm a cop killer doesn't mean I can't be a cop
 
-(Schrafft) ...and last, Smearg. Hey Smearg you still there?
+(Schrafft) Right..
 
-(magicks, default, center, slide, offleft)
-(Smearg, default, offright, slide, center)
-(Smearg) ...huh? Oh oops yeah, got distracted drawing, sorry.
+(Schrafft) ..and last, Smearg. Hey Smearg you still there?
 
-(Schrafft) That should be all of us, then.
+[SLIDE magicks offleft]
+(Smearg, base, offright)
+[SLIDE Smearg center]
+(Smearg, base) ...huh? Oh oops yeah, got distracted drawing, sorry.
 
-(Smearg, default, center, slide, offleft)
-(Cop Killers, cloud, offleft, center)
-(PCPG) Nice to finally formally meet all of ya. So like, I gotta ask, are there any rules I need to know now that I’m a Killer?
+(Schrafft) That should be all of us then.
 
-(Schrafft) Oh don’t worry, the rules of the Cop Killers are simple. Kill cops, commit sick crimes, and most importantly, !dab. Follow in our lead.
+[SLIDE Smearg offleft]
+(CopKillers, copkillers1)
+(PCPG) Nice to finally meet all of ya. It was kinda hard to say hi back there given how, ehem, [i]rowdy[/i] it was.
+
+The table goes silent at my attempt at a joke. Tough crowd...
+
+(PCPG) So uhh... I guess.. are there any rules I need to follow now that I’m a Killer?
+
+(Schrafft) Oh, don’t worry, the rules of the Cop Killers are simple: /n
+Kill cops, commit sick crimes, but most importantly, !dab. /n
+Follow in our lead.
  
-(Cop Killers|Cop Killers, dabcloud) !dab
- 
+(CopKillers|Cop Killers, dab) !dab
 How should I respond?
 
 [CHOICE]
@@ -99,61 +132,105 @@ How should I respond?
 *Don’t dab with them*
 *!thrash*
 
-*dab*
+*!dab*
+[==> !dabbing]
+*
 
-(Cop Killers|magicks, cloud) are you an idiot? don’t you know how commands work?
+*Don’t dab with them*
+[==> !not dabbing]
+*
+
+*!thrash*
+[==> !thrashing]
+*
+
+(magicks) are you an idiot? don’t you know how commands work?
 
 (PCPG) Uhh, commands?
 
-(Cop Killers|Smearg, cloud) You’ll need the exclamation mark before doing stuff. You don’t kill, you !kill. Similarly, you don’t dab, you !dab.
+(Smearg) You’ll need the exclamation mark before doing stuff. You don’t kill, you !kill. Similarly, you don’t dab, you !dab.
 
-(Cop Killers|magicks, cloud) do it right this time
+(magicks) do it right this time
+
+[Forget !dab]
+[Forget Don’t dab with them]
+[Forget !thrash]
 
 [CHOICE]
 *!dab*
 *Don’t dab with them*
 *!thrash*
-*
 
 *!dab*
- 
-(Cop Killers|Schrafft, cloud) Excellent, you’re on your way to becoming a successful Killer. Meet us later today at Saint Ben’s Cathedral to familiarize yourself with our base and the rest of our members. You should be able to see it’s incredible spire in the midst of the Cop Killtown district. 
- 
-(Cop Killers|Schrafft, cloud) Actually, we also happen to be coordinating an attack on a high profile target this afternoon. While Killers mostly do lone work, this is a rare occasion, so it might be a cool idea to join us and see how the pros handle themselves on the battlefield.
- 
-(PCPG) Sounds sick, I’ll be sure to join. Anything else I would wanna know as a Killer? 
- 
-(Cop Killers|Ephraim, cloud) just be careful around those bustahs, never can be too trusting with them around
- 
-(Cop Killers|Ephraim, cloud) otherwise, just enjoy yourself you know? shoot a few cops, wear a rad beanie, engage in casual genocide. you know, fun stuff
- 
-(PCPG) I see..
+[==> !dabbing]
 *
 
 *Don’t dab with them*
-
-(PCPG) ...
- 
-(Cop Killers|Ephraim, cloud) oh you.. don’t want to !dab with us?
-
-(magicks) that seems kinda rude dude
- 
-The table goes awkwardly quiet at the situation. Maybe I should’ve just played along?
- 
-(Cop Killers|Schrafft, cloud) Anyways, if you want to you can meet us later today at Saint Ben’s Cathedral to familiarize yourself with our base and the rest of our members. You should be able to see it’s incredible spire in the midst of the Cop Killtown district. 
- 
-(Cop Killers|Schrafft, cloud) Actually, we also happen to be coordinating an attack on a high profile target this afternoon. While Killers mostly do lone work, this is a rare occasion, so you could join us and see how the pros handle themselves on the battlefield, if you care to that is.
- 
-(PCPG) Sure, why not. Anything else I would wanna know as a Killer?
- 
-(Cop Killers|Ephraim, cloud) uhh, nah, not really
- 
-(PCPG) Oh.. okay.
+[==> !not dabbing]
 *
 
 *!thrash*
+[==> !thrashing]
+*
 
-(Cop Killers|K1P, cloud) FUCKING goddamn it they got to him first after all.
+[Scene: !dabbing|hidename]
+
+(CopKillers, copkillers1)
+(Schrafft) Excellent, you’re already on your way to becoming a highly successful Killer.
+
+(Schrafft) Meet us later today at Saint Ben’s Cathedral to familiarize yourself with our base and the rest of our members. 
+
+(Schrafft) You should be able to see it’s incredible spire in the midst of the Cop Killtown district. 
+ 
+(Schrafft) Actually, we also happen to be coordinating an attack on a high profile target this afternoon. 
+
+(Schrafft) While Killers mostly do lone work, this is a rare occasion, so it might be a cool idea to join us and see how the pros handle themselves on the battlefield.
+ 
+(PCPG) Sounds cool, I’ll be sure to join. Anything else I would wanna know as a Killer? 
+ 
+(Ephraim) be careful around those bustah rowdies, never can be too trusting with them around
+ 
+(Ephraim) otherwise, just enjoy yourself you know? shoot a few cops, wear a rad beanie, engage in casual genocide. you know, fun stuff
+ 
+(PCPG) I see..
+
+[fade to black]
+[==> !find PPU]
+
+[Scene: !not dabbing|hidename]
+
+(PCPG) ...
+ 
+(CopKillers, copkillers1) 
+(Ephraim) oh you.. don’t want to !dab with us?
+
+(magicks) thats pretty rude dude
+ 
+The table goes awkwardly quiet for the second time at the situation. Maybe I should’ve just played along?
+
+(Schrafft) Anyways, if you care to you can meet us later today at Saint Ben’s Cathedral to see our base and other members.
+
+(Schrafft) You should be able to see it’s spire in the midst of the Cop Killtown district. 
+ 
+(Schrafft) Actually, we also happen to be coordinating an attack on a high profile target this afternoon. 
+
+(Schrafft) While Killers mostly do lone work, this is a rare occasion, so you could join us and see how the pros handle themselves on the battlefield, if you care to that is.
+ 
+(PCPG) Sure, why not. Anything else I would wanna know as a Killer?
+ 
+(Ephraim) uhh, nah, not really
+ 
+(PCPG) Oh, okay..
+
+[fade to black]
+[==> !find PPU]
+
+[Scene: !thrashing|hidename]
+
+(PCPG) !thrash
+
+(CopKillers, copkillers1) 
+(K1P) FUCKING goddamn it they got to him first after all.
 
 (Smearg) Now hold on a second, we don’t know that.
 
@@ -161,7 +238,7 @@ The table goes awkwardly quiet at the situation. Maybe I should’ve just played
 
 (Schrafft) He’s a newbie, maybe he doesn’t know any better.
 
-(K1P) Maybe so, but his silence isn’t helping him out much here. 
+(K1P) Maybe so, but his silence isn’t helping him out here. 
 
 (PCPG) …
 
@@ -169,7 +246,7 @@ The table goes awkwardly quiet at the situation. Maybe I should’ve just played
 
 (Smearg) Wait a second let him explain himself!
 
-(K1P) He’s had plenty of chances! Where’s my fucking katana?!
+(K1P) He’s had plenty of chances! WHERE'S MY FUCKING KATANA?!
 
 (Smearg) No he hasn’t!
 
@@ -182,100 +259,126 @@ magicks then suddenly pulls out a gun and..
 
 (magicks) even if he was a newbie, nobody !thrash’s in front of us and gets away scot free
 
-(Ephraim|Rest of the killers) ...
+(CopKillers|Rest of the Killers) ...
 
-(Ephraim|Rest of the killers) Yeah okay that makes sense.
+(CopKillers|Rest of the Killers) Yeah okay that makes sense.
 
-Soo, why the fuck did I do that again?
-
-[fade to black]
-
-[BAD END]
-*
+(CopKillers|Cop Killers, copkillersdab1) Get !dabbed on bustah.
 
 [fade to black]
+Sooo, why the fuck did I do that again?
+
+[CREDITS]
 
 [Scene: !find PPU]
 
-[Cop Killers leaves]
+[CopKillers leaves]
 [StopMusic]
 [Location: copkilltown]
 [Song: PCPDating_LifeInEndlessWar]
 [fade from black]
  
-Classes end, and so I head on over to the Cop Killtown district to meet up with them. After roaming around the dangerous streets I manage to spot Saint Ben’s Cathedral’s inspiring spires piercing the heavens, and I make my way towards it.
+Classes end, and so I make my way through the Cop Killtown district to meet up with them. 
+
+After roaming the barren streets aimlessly for longer than I would've liked to, I finally spot the inspiring spires of a grand Cathedral nestled in between large clouds of vapour.
+
+I make my way towards it.
  
 [Location: saintbencathedral]
- 
-As I approach the holy site I find the Killers gathered outside, assumably making final preparations for their attack. 
 
-(Cop Killers|Schrafft, default, offleft, center) Okay everyone, we’ll start our strategy meeting now.
+As I approach the holy site I find the Killers gathered outside, assumably making final preparations for the attack. 
+
+(CopKillers, copkillers1)
+(Schrafft) Okay everyone, we’ll start our strategy meeting now.
  
-(PCPG) Wait, isn’t Ben going to join us?
+(PCPG) Wait, Ben isn't here. Shouldn't we wait for him?
  
 (K1P) Nah, Ben doesn’t usually join us for stuff like this.
  
 (PCPG) Why not?
  
-(K1P) He has things that are more important to him, I guess. It’s fine.
+(K1P) He has things that are more important to him I guess. It’s fine.
  
-(magicks) i mean even when he does join us he isn’t that helpful of a member to have
+(magicks) i mean, even when he does join us he isn’t that helpful of a member to have
  
 Nobody disagrees.
  
 (Schrafft) Okay, now that that’s settled, for those of you who don’t know, this is what’s going down…
- 
-Schrafft walks us through the mission. Essentially Turstworthy has been a high profile target for a while now, as apparently he is quite the fearful foe to face. I mean, he’s an elephant, that’s pretty spooky by itself, never mind that his reaction speed is legendary, even by the pros standards. This is the day the Killers combine forces to try and take him down a peg. 
- 
-I mean, I’m not actually going to do anything, given how this is my first day and I’m far too weak to participate in this battle of the gods, but it’s still pretty cool just attending this momentous occasion.
 
-I quickly learn how to !equip a weapon and we all head downtown.
- 
+Schrafft walks us through the mission. Essentially a Rowdy called Turstworthy has been a high profile target for a while now, as apparently he is quite the fearful foe to face.
+
+I mean, he’s an elephant, that’s pretty spooky in of itself, never mind that apparently his reaction speed is legendary, even by the pros standards. 
+
+This is the day the Killers combine thier forces to try and take him down a peg.
+
+I’m probably not actually going to do anything in the attack, given how this [i]is[/i] my first day, but it’s still pretty cool just attending this momentous occasion.
+
+I quickly learn how to !equip a weapon and we begin to head downtown.
+
+[CopKillers leaves]
 [fade to black]
-[StopMusic]
 [Location: copkilltown]
 [fade from black]
  
-While there was more opposition than was expected, we finally succeed at bringing him down, delivering a huge blow to the Rowdies. We head back to the Cathedral to celebrate.
- 
+While there was more opposition than expected, we eventually do succeed at bringing him down, delivering a huge blow to the Rowdies.
+
+We head back to the Cathedral to celebrate.
+
+(CopKillers, copkillers1)
 (PCPG) Holy shit you guys were awesome. I’m surprised this is even considered a WAR, you guys massacred them.
- 
-(Ephraim) i mean, given how based we are, they were guaranteed to have a bad time.
- 
+
+(Ephraim) i mean, given how based we are, they were guaranteed.. 
+
 [SFX: PCP-SFX_Megalovania]
- 
-However despite our easy victory, the day was not quite over yet, for there was a surprise waiting for us when we returned.
+(Ephraim) ..to have a bad time
+
+However, despite our easy victory, the day was not quite over yet, for there was a surprise waiting for us when we returned.
  
 [Cop Killers leaves]
 [Song: PCPDating_SuspiciousFigga]
 [Location: saintbencathedral.pizzaparty]
 
-(PCPG) Woah what happened here? Are these, party supplies? And pizza? /n Were the Rowdies really that salty about their loss?
+[pause]
+
+(PCPG) Woah, what happened here? Are these, party supplies? And pizza? Were the Rowdies really that salty about their loss?
  
-(Cop Killers|Smearg, default, offright, center) No, this isn’t the Rowdies doing. I think we have a pretty good idea who’s behind this. Someone call Ben.
+(Cop Killers, copkillers1)
+(Smearg) No, this isn’t the Rowdies doing. I think we have a pretty good idea who’s behind this. Someone call Ben.
  
 A call and a few minutes later, Ben storms in at the scene.
+
+[SLIDE CopKillers left]
+(Ben, casual, exasp, angryMIN, offright)
+[SLIDE Ben center]
+(Ben, casual, exasp, angryMIN) I CAN’T FUCKING BELIEVE IT! /n
+This is most definitely the work of that elusive group, that eternal foe to all, the one and only...
  
-(Cop Killers, default, center, slide, left)
-(Ben, casual, exasp, angryMIN, offright, slide, center) I CAN’T FUCKING BELIEVE IT! This is most definitely the work of that elusive group, that eternal foe to all, the one and only...
+(Ben, casual, base, angryMAX) Pizza Party University.
+
+(PCPG) The Pizza Party University? 
  
-(Ben, casual, base, angryMIN) Pizza Party University.
+(Ben, casual, base, angryMAX) It’s only the worst university there ever was and ever will be. 
+
+(Ben, casual, point, neutral) Not only do we not know what kind of pizzas or parties they have at this [i]supposed[/i] university, but nobody can even find them to ask. 
+
+(Ben, casual, base, angryMAX|cloud) The only logical conclusion we can take from that is to assume their pizzas and parties must be complete garbage.
  
-(PCPG) Pizza Party University? 
+(Ben, casual, exasp, angryMIN) But they never before resorted to bullshit like this, defacing our beloved Cathedral with their shittiness.
  
-(Ben, casual, base, angryMAX) It’s only the worst university there ever was and ever will be. Not only do we not know what kind of pizzas or parties they have at this [i]supposed[/i] university, but nobody can even find them to ask. The only logical conclusion we can take from that is to assume their pizzas and parties must be complete garbage.
+(PCPG) Wait a second, I remember the Pizza Party University now. /n
+Weren’t these guys found already?
  
-(Ben, casual, base, angryMAX) But they never before resorted to bullshit like this, defacing our beloved Cathedral with their shittiness.
+(Ben, casual, base, neutral) Oh you foolish child, those rumors are all hearsay, for those who “supposedly” found them never provided any definitive proof.
  
-(PCPG) Wait a second, I remember now. Weren’t these guys found already?
+(Ben, casual, base, shockMIN) Though I suppose your memory of them being found might have been caused by another Ben in a different dimension actually finding them.. 
+
+(Ben, casual, point, shockMIN) ..perhaps even attending their classes.. 
+
+(Ben, casual, base, shockMIN|cloud) ..and you are simply experiencing a side effect of the dimensional merge.
  
-(Ben, casual, point, neutral) Oh you foolish child, those rumors are all hearsay, for those who “supposedly” found them never provided any definitive proof.
+(Ben, casual, base, neutral|cloud) But until the day we finally do merge, I guess we will never know.
  
-(Ben, casual, base, shockMIN) Though I suppose your memory of them being found might have been caused by another Ben in a different dimension actually finding them, perhaps even attending their classes, and you are simply experiencing a side effect of the dimensional merge.
- 
-(Ben, casual, base, shockMIN|cloud) But until the day we finally do merge, I guess we will never know.
- 
-Hmm, I mean I guess that does makes some sense. How strange.
+Hmm, I guess that does make some sense. How strange.
  
 (Ben, casual, base, confusedMIN) But where could they even be though? Clearly they need to be situated nearby for them to be able to enact this atrocious deed.
  
@@ -283,83 +386,124 @@ Hmm, I mean I guess that does makes some sense. How strange.
  
 An important question that no one could answer. Not yet.
  
-(Ben, casual, base, angryMAX) Well, since they decided to go on the offensive, I think it’s high time we finally expose the PPU for who they really are. We will start up our search of the Pizza Party University once more!
+(Ben, casual, base, angryMAX|cloud) Well, since they decided to go on the offensive, I think it’s high time we finally expose the PPU for who they really are. 
+
+(Ben, casual, base, angryMIN) We will start up our search of the Pizza Party University once more!
  
-(Cop Killers|Schrafft, default, left) But didn’t our last search end in so many of our comrades gone missing, presumably captured or killed? If we decide to continue our search for them won't that just happen again?
- 
+(magicks) But didn’t our last search end in so many of our comrades gone missing, presumably captured or killed? If we decide to continue our search for them won't that just happen again?
+
+(Ben, casual, base, neutral)
 Ben considers this for a moment, but then quickly lights up with a solution.
  
 (Ben, casual, point, happyMIN) That is true, but perhaps with a new, fresh set of eyes we will have better luck.
  
 Ben faces me.
  
-(Ben, casual, base, neutral) PCPG, I am assigning you, for your first official mission as a Killer, to be FULLY responsible for locating the Pizza Party University. I hope you won't fail me.
+(Ben, casual, base, neutral|cloud) PCPG, for your first official mission as a Killer, I am assigning you to be FULLY responsible for locating the Pizza Party University. I hope you won't fail me.
  
-(PCPG) Woah woah woah, didn’t Schrafft just say those who looked for them disappeared and possibly got killed? I don’t know if I want to risk my life for this.
+(PCPG) Woah woah woah, didn’t magicks just say those who looked for them disappeared and possibly got killed? I don’t know if I want to risk my life for this.
  
 And why would Ben choose me over anyone else? I mean I guess I sorta understand the “fresh set of eyes” point, but I’m like the most unqualified person here!
  
-(Ben, casual, exasp, angryMIN) PCPG, we NEED to find the Pizza Party University. I can’t go another day without knowing they will inevitably suffer for their utter shittiness as an educational institute!
+(Ben, casual, exasp, angryMIN) PCPG we NEED to find the Pizza Party University. I can’t go another day without knowing they will suffer for their utter shittiness as an educational institute!
  
 (PCPG) But how do you even expect [i]me[/i] to find them in the first place?
  
-(Ben, casual, base, neutral) Oh but of course you will have access to the full might of Killerkind at your side, I will spare no expense in finding this heinous group. The Killers will be completely dedicated to finding them alongside you.
+(Ben, casual, base, neutral) Oh but of course you will have access to the full might of Killerkind at your side, I will spare no expense in finding this heinous group. 
+
+(Ben, casual, point, neutral) The Killers will be completely dedicated to finding them alongside you.
  
 [StopMusic]
-As soon as Ben finishes his sentence I feel a familiar terrifying gaze run across my back and onto him.
+As soon as Ben finishes his sentence a familiar terrifying gaze runs across my back and onto Ben.
  
 [Song: PCPDating_LifeInEndlessWar]
-(Endless War|Endless War, knife, angryMIN, offright, slide, right) What the fuck do you mean you will use the Killers for something other than WAR? Killers are for killing, not to fucking jerk off with at pizza parties or whatever the fuck you’re thinking of doing with them.
+
+(EndlessWar, knife, angryMED, offright)
+[SLIDE EndlessWar right]
+(Ben, casual, base, shockedMIN|cloud)
+(EndlessWar|Endless War, knife, angryMED, right) What the fuck do you mean you will use the Killers for something other than WAR?!
+
+(Ben, casual, base, neutral|cloud)
+(EndlessWar|Endless War, stand, angryMIN, right) Killers are for killing, not to fucking jerk off with at pizza parties or whatever the fuck you’re thinking of doing with them.
  
-(Ben, casual, exasp, angryMIN) The Pizza Party University is a threat to us all Endless War, which includes the WAR, can’t you see that?
+(Ben, casual, exasp, angryMIN) The Pizza Party University is a threat to us all Endless War, which includes the WAR, can’t you see that?!
  
-(Ben, casual, base, happyMIN) Also, don’t you worry about the Killers being pulled away from manslaughter, I’m sure there are plenty of students at this supposed university that will help us with that, if you know what I mean, heh heh heh heh.
+(Ben, casual, point, happyMIN) Also, don’t you worry about the Killers being pulled away from manslaughter, I’m sure there are plenty of students at this supposed university that will help us with that.. 
+
+(Ben, casual, base, happyMAX) ..if you know what I mean, heh heh heh heh.
  
-(Endless War|Endless War, knife, angryMED, right) Who gives a SHIT if you genocide a bunch of rando juvies? You need to focus on your true enemy, those Rowdies, if you want to claim victory in the all important WAR! Everything and everyone else is slimeoid shit!
+(EndlessWar|Endless War, knife, angryMED, right) Who gives a SHIT if you genocide a bunch of rando juvies?!
+
+(Ben, casual, base, neutral|cloud)
+(EndlessWar|Endless War, stand, angryMED, right) You need to focus on your true enemy, those Rowdies, if you want to claim victory in the all important WAR! 
+
+(EndlessWar|Endless War, knife, angryMED, right) Everything and everyone else is slimeoid shit!
  
-(Ben, casual, base, angryMIN) While the Rowdies are our true enemy, I just think we can spare them our overwhelming superiority for a while to eliminate the cancer that is the Pizza Party University before their shittiness affects us all!
- 
+(Ben, casual, base, angryMIN) While the Rowdies [i]are[/i] our true enemy, I think we can spare them our overwhelming superiority for a short while to eliminate the cancer that is the Pizza Party University!
+
+(EndlessWar|Endless War, knife, angryMIN, right)
 (Ben, casual, base, neutral) So what will it be PCPG, do you accept your mission? Will you help us find the Pizza Party University?
  
 [CHOICE]
 *Hell yeah, the PPU is going down*
 *No, Endless War has a point*
- 
+
 *Hell yeah, the PPU is going down*
  
 (PCPG) I’m in, let’s take down the Pizza Party University once and for all.
  
 (Ben, casual, base, happyMIN) Excellent. I knew you would see the real threat at hand.
  
-(Endless War|Endless War, knife, angryMED, right) You both are fucking idiots! This is why you always lose at Slimefest Ben!
- 
-(Endless War, knife, angryMED, right, slide, offright)
+(EndlessWar|Endless War, stand, angryMED, right) You both are fucking idiots! This is why you always lose at Slimefest Ben!
+
+[SLIDE EndlessWar offright]
+(Ben, casual, exasp, angryMIN) I always get the moral victory though! /n
+Always!
+
 And with that Endless War furiously leaves as she came. What the hell is a Slimefest?
  
 (Ben, casual, base, shockMIN) Now where were we?
  
-(Ben, casual, point, neutral) Oh right. PCPG, for your PPU search I want regular updates on your progress.
+(Ben, casual, point, neutral) Oh right. PCPG, for your search I want regular updates on your progress.
  
-(Ben, casual, base, neutral) And for the rest of you, feel free to mercilessly kill those bustahs whenever you have the chance, but your first priority is helping PCPG in the search.
+(Ben, casual, base, neutral|cloud) And for the rest of you, feel free to mercilessly kill those bustahs whenever you have the chance, but your first priority is helping PCPG in the search.
+
+(Ben, casual, exasp, angryMIN) Find the fucking Pizza Party University if it’s the last thing you do! 
+
+[SLIDE Ben offright]
+(Ben, casual, base, neutral, offright)
+[SLIDE Ben right]
  
-(Ben, casual, base, angryMIN, center, slide, offright) Find the fucking Pizza Party University if it’s the last thing you do! 
+(Ben, casual, base, neutral) Also clean this place up, it ain’t fit for the Lord.
  
-(Ben, casual, base, neutral, offright, slide, right) Also clean this place up, it ain’t fit for the Lord.
- 
-(Ben, casual, base, angryMIN, right, slide, offright)
-And with that final statement Ben storms out, leaving us scared at the implication if we don’t follow his bidding, on both fronts. I have a feeling this ain’t gonna be easy. 
+[SLIDE Ben offright]
+
+And with that final statement Ben storms out, leaving us spooked at the implication if we don’t follow his bidding, on both fronts. 
+
+I have a feeling this ain’t gonna be easy. 
+
+[fade to black]
+[StopMusic]
+[CopKillers leaves]
+[==> !argue nate]
 *
  
-*No way, Endless War has a point*
- 
+*No, Endless War has a point*
+[==> Initiation]
+*
+
+[Scene: Initiation]
+
 (Ben, casual, base, shockMAX)
 (PCPG) No way, Endless War is right about this, this is just a waste of time and Killer resources. I didn’t sign up to be a Killer just to play hide and seek.
  
-(Endless War|Endless War, stand, neutral, right) Finally someone here understands what’s important. Constant WAR is the only way forward, and this pizza shit is just distracting the Killers from their true goal. 
+(EndlessWar|Endless War, stand, neutral, right) Finally someone here understands what’s important. Constant WAR is the only way forward, and this pizza shit is just distracting the Killers from their true goal. 
  
 (Ben, casual, base, sadMIN) I thought you were better than this PCPG, that you would see the bigger threat at hand, but I guess I was wrong.
  
-(Ben, casual, base, neutral) Endless War, I just have other things more important to me than the WAR, and I guess you will never understand something like that. I’m searching for them whether you like it or not, and nobody will stop me. 
+(Ben, casual, base, neutral) Endless War, I just have other things more important to me than the WAR, and I guess you will never understand something like that. 
+
+(Ben, casual, base, angryMAX) I’m searching for them whether you like it or not, and nobody will stop me. 
  
 Ben then faces the group of Killers surrounding us.
  
@@ -367,84 +511,90 @@ Ben then faces the group of Killers surrounding us.
  
 (Ben, casual, base, angryMAX) And you, PCPG, I better not see you around here anymore. You may technically be a Killer, but you’re no Killer of mine.
  
-[Ben leaves]
-[Cop Killers leaves]
+[SLIDE Ben offright]
+[CopKillers leaves]
 Ben then leaves the Cathedral while the Killers around us head inside.
  
-(Endless War|Endless War, stand, angryMED, right, slide, center) AAARGH! Fuck Ben and his fucking stupid pizza party! The Killers are wasting their goddamn time with this fucking shit!
+(EndlessWar|Endless War, stand, angryMED, right)
+[SLIDE EndlessWar center]
+(EndlessWar|Endless War, stand, angryMED) AAARGH! Fuck Ben and his fucking stupid pizza party! The Killers are wasting their goddamn time with this fucking shit!
  
-(Endless War|Endless War, cross, confusedMIN) However, despite that [i]you[/i] saw to reason..
+(EndlessWar|Endless War, stand, confusedMIN) However, despite that [i]you[/i] saw to reason..
  
-Endless War stops to think for a second. I’m not sure if I should be worried about what she’s thinking about.
+Endless War stops to think for a second. Uhh, should I be worried?
  
-(Endless War|Endless War, cross, neutral) Hmm, I could use you.. 
+(EndlessWar|Endless War, cross, neutral) Hmm, I could use you.. 
  
 Okay now I’m definitely worried.
  
-(Endless War|Endless War, stand, neutral) How would you like to help create a new age of WAR? To move onto the next phase in gang warfare? To truly ascend to a higher plane of violence?
+(EndlessWar|Endless War, stand, neutral) How would you like to help create a new age of WAR? To move it onto the next phase in gang warfare? To truly ascend it to a higher plane of violence?
  
 A new age of WAR? 
  
 (PCPG) What do you mean by that?
  
-(Endless War|Endless War, stand, angryMIN) Just fucking accept the offer you idiot! You don’t get a chance like this in a million lifetimes, to truly matter beyond just a peon!
+(EndlessWar|Endless War, stand, angryMIN) Just fucking accept the offer you idiot! You don’t get a chance like this in a million lifetimes, to truly matter beyond just a peon!
  
-(Endless War|Endless War, knife, angryMIN) Or would you rather [i]not[/i] accept my offer?
- 
+(EndlessWar|Endless War, knife, angryMIN) Or would you rather [i]not[/i] accept my offer?
+
 Should I accept?
- 
+
 [CHOICE]
 *Hell yeah, I want a new age of WAR*
 *I’m not sure..*
- 
+
 *Hell yeah, I want a new age of WAR*
- 
+
 (PCPG) Sign me up, finally a chance to matter!
- 
-(Endless War|Endless War, stand, neutral) Of course. Meet me tomorrow on the school roof at the beginning of lunch. We have much to do before we can truly bring upon this new age..
+
+(EndlessWar|Endless War, stand, neutral) Of course. 
+
+(EndlessWar|Endless War, stand, happyMIN) Meet me tomorrow on the school roof at the beginning of lunch. We have much to do before we can truly bring upon this new age...
  
 [fade to black]
 [StopMusic]
 
-[CHANGE endlesswarminiroute fade]
+[CHANGE endlesswarminiroute fade 0.01]
 *
  
-*I’m not sure…*
+*I’m not sure..*
  
 (PCPG) Eh, I don’t know, I’m not even sure what I’m signing up for here. Sorry, but I’ll have to pass.
  
 [StopMusic]
 Suddenly the area around us goes quiet as a powerful killing aura emanates before me.
  
-(Endless War|Endless War, knife, confusedMAX) Did you just REFUSE my offer?
+(EndlessWar|Endless War, knife, confusedMAX) Did you just REFUSE my offer?
  
-Uh oh, this doesn’t look too good. I may have angered her.
+Uh oh, this doesn’t look too good. I may have fucked up.
+
+[Song: PCPDating_GameOver]
+(EndlessWar|Endless War, knife, angryMAX) You WORTHLESS, RETARDED, FRESH FROM JUVIEHOOD, SHIT refuses MY offer?
  
-(Endless War|Endless War, knife, angryMAX) You WORTHLESS, RETARDED, FRESH FROM JUVIEHOOD, IDIOT refuses MY offer?
- 
-(PCPG) Uh.. uhh…
- 
+(PCPG) Uh.. uhh...
+
 (PCPG) No?
- 
+
+[cut to black]
 [SFX: PCP-SFX_KatanaSlash]
-[Overlay: Blood splatter]
-[fade to black]
- 
-A sharp pain suddenly pierces my stomach before I have a chance to process it. Blood gushes from my wound down as Endless War quickly pulls the knife out. It takes no time for me to collapse on the now red floor. I definitely fucked up.
- 
+
+A sharp pain then pierces my stomach before I have a chance to process the cause. Blood gushes from my wound as Endless War quickly pulls her knife out.
+
+(Endless War) Oh right, I never did infuse you with slime. All [i]you've[/i] got is this useless icky sticky blood.
+
+[SFX: body fall]
+It takes no time for me to collapse on the now red floor. 
+
+I look up to find Endless War standing over me, her knife dripping with my blood.
+
 (Endless War) The only thing more worthless than a juvie is a staydead. 
- 
+
 (Endless War) No potential.
 
-[Remove Overlay]
-And then everything went black.
- 
+I definitely fucked up.
+
 [CREDITS]
 *
-*
-
-[fade to black]
-[StopMusic]
 
 [Scene: !argue nate]
  
@@ -452,34 +602,50 @@ And then everything went black.
 [Song: PCPDating_HomeMorning]
 [fade from black]
  
-It turns out finding them was even harder than I thought. In the couple of hours I spent asking around the only two pieces of information I could gather were unfounded rumors of the university being associated with Hillary Clinton in a “pizza gate,” and that Momocon is somehow implicated in the whole ordeal. Not very useful at all. 
+It turns out finding them was even harder than I thought. 
+
+In the couple of hours I spent asking around the only two pieces of information I could gather were unfounded rumors of the university being associated with Hillary Clinton in a “pizza gate,” and that Momocon is somehow implicated in the whole ordeal. 
+
+Not very useful at all. 
  
-I decided to stay late investigating the scene of the crime before it was cleaned up,  but in doing so I stayed up quite late and am now late for my morning class. Hopefully I can catch the end of it and get the gist of the lecture, it’s not like the stuff they teach at this place is ever oozing with useful information anyways.
+I decided to stay late investigating the scene of the crime before it was cleaned up,  but in doing so I stayed up quite late and am now late for my morning class. 
+
+Hopefully I can catch the end of it and get the gist of the lecture, it’s not like the stuff they teach at this place is ever oozing with useful information anyways.
  
 [Location: philosophyclass.b]
  
-(Nate|Professor Bestman, campus, papers, sadMIN|shades, offright, center)  Uhh, yeah you kinda missed the entire lecture dude, everyone else left. I do hope this won't be a regular occurence PCPG, especially after last time. I expected better from you.
+(Nate|Professor Bestman, campus, papers, sadMIN|shades)  Uhh, yeah you kinda missed the entire lecture dude, everyone else left. I do hope this won't be a regular occurence PCPG, especially after last time. I expected better from you.
  
 (PCPG) Sorry professor, I was fairly busy last night with work so I didn’t get much sleep.
  
-(Nate|Professor Bestman, campus, papers, confusedMIN|shades) Work? What in this school could possibly be taking so much of your time? I’m the only professor in this place that actually expects from students anything remotely close to work.
+(Nate|Professor Bestman, campus, smoking, confusedMIN|shades) Work? What in this school could possibly be taking so much of your time? 
+
+(Nate|Professor Bestman, campus, papers, confusedMIN|shades) I’m the only professor in this place that actually expects from students anything remotely close to work.
  
-(PCPG) Well, as my first mission as a Cop Killer Ben told me to search for the Pizza Party University, and it’s been way more difficult than I imagined. You wouldn’t happen to know anything about them would you?
+(PCPG) Well, as my first mission as a Cop Killer Ben told me to search for the Pizza Party University, and it’s been way more difficult than I imagined. 
+
+(PCPG) You wouldn’t happen to know anything about them would you professor?
  
 (Nate|Professor Bestman, campus, smoking, angryMIN|shades) Oh of course, I should have known. Ben Saint is the only one despicable enough to sabotage my students of anything actually important. 
  
 (Nate|Professor Bestman, campus, smoking, happyMED|shades) He should stop fucking around with the PPU and continue making me those big bucks off of the WAR babyyy.
  
-(Nate|Professor Bestman, campus, standing, neutral|shades) Listen, I want to find the Pizza Party University as much as the next guy, but actually locating them is simply a lost cause. Many better people before you have tried and failed, and people after you will continue to do so until we all reach Starfleet. Just cut your losses short now and don’t jeoperdize your future for fucking Ben Saint.
+(Nate|Professor Bestman, campus, standing, neutral|shades) Listen, I want to find the Pizza Party University as much as the next guy, but doing so is simply a lost cause.
+
+(Nate|Professor Bestman, campus, smoking, neutral|shades) Many better people before you have tried and failed, and people after you will continue to do so until we all reach Starfleet. 
+
+(Nate|Professor Bestman, campus, smoking, angryMED|shades) Just cut your losses short now and don’t jeoperdize your future for fucking Ben Saint.
  
-(PCPG) Uh, professor do you have a personal grudge against Ben?
+(PCPG) Uhh, professor, do you have some personal grudge against Ben?
  
-(Nate|Professor Bestman, campus, standing, neutral|shades) Oh of course, ever since the day I was born my young student. The only person I can’t possibly stand more is our dad.
+(Nate|Professor Bestman, campus, standing, neutral|shades) Oh of course, ever since the day I was born. The only person I can’t possibly stand more is our dad.
  
-(PCPG) Wait, so you guys are brothers?
+(PCPG) Wait, you guys are brothers?
  
-(Nate, campus, standing, neutral|shades, center, slide, left)
-(Ben, campus, base, angryMAX, offright, slide, right) We sure are, and what is this talk about not looking for the PPU Nate? We have let their shittiness gone on for too long and NOW is the time to finally stop them!
+[SLIDE Nate left]
+(Ben, campus, base, angryMAX, offright)
+[SLIDE Ben right]
+(Ben, campus, base, angryMAX, right) We sure are, and what is this talk about not looking for the PPU Nate? We have let their shittiness gone on for too long and NOW is the time to finally stop them!
  
 (Nate|Professor Bestman, campus, smoking, neutral|shades, left) Oh come on Ben, what are even going to do when you find them?
  
