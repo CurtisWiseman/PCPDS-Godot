@@ -1,5 +1,3 @@
-[==> !argue nate]
-
 [Scene: !introduce killers]
 
 [Song: PCPDating_ClassPhilosophy]
@@ -598,46 +596,50 @@ I definitely fucked up.
 
 [Scene: !argue nate]
  
-[Location: hallway1.antbully]
+[Location: outsidepcpu.day]
 [Song: PCPDating_HomeMorning]
 [fade from black]
  
 It turns out finding them was even harder than I thought. 
 
-In the couple of hours I spent asking around the only two pieces of information I could gather were unfounded rumors of the university being associated with Hillary Clinton in a “pizza gate,” and that Momocon is somehow implicated in the whole ordeal. 
+In the couple of hours I spent asking around the only two tangible pieces of information about the PPU that I could gather were unfounded rumors of the university being associated with Hillary Clinton in a “pizza gate,” and that Momocon is somehow implicated in the whole ordeal.
 
 Not very useful at all. 
- 
-I decided to stay late investigating the scene of the crime before it was cleaned up,  but in doing so I stayed up quite late and am now late for my morning class. 
 
-Hopefully I can catch the end of it and get the gist of the lecture, it’s not like the stuff they teach at this place is ever oozing with useful information anyways.
+[Location: hallway1.antbully]
+
+I decided to stay late investigating the scene of the crime while we were cleaning it up, but in doing so I stayed up too late and am now late for my morning class. 
+
+Hopefully I can just catch the end of it and get the gist of the lecture. It’s not like the stuff they teach at this place is ever oozing with meaningful information anyways.
  
 [Location: philosophyclass.b]
  
-(Nate|Professor Bestman, campus, papers, sadMIN|shades)  Uhh, yeah you kinda missed the entire lecture dude, everyone else left. I do hope this won't be a regular occurence PCPG, especially after last time. I expected better from you.
- 
-(PCPG) Sorry professor, I was fairly busy last night with work so I didn’t get much sleep.
- 
+(Nate|Professor Bestman, campus, papers, sadMIN|shades)  Uhh, yeah you kinda missed the entire lecture dude, everyone else left.
+
+(Nate|Professor Bestman, campus, smoking, sadMIN|shades) I do hope this won't be a regular occurence PCPG, considering this is now the second time you are late to my class. I expected better from you.
+
+(PCPG) Sorry professor, I was fairly busy last night with some work so I didn’t get much sleep.
+
 (Nate|Professor Bestman, campus, smoking, confusedMIN|shades) Work? What in this school could possibly be taking so much of your time? 
 
 (Nate|Professor Bestman, campus, papers, confusedMIN|shades) I’m the only professor in this place that actually expects from students anything remotely close to work.
  
 (PCPG) Well, as my first mission as a Cop Killer Ben told me to search for the Pizza Party University, and it’s been way more difficult than I imagined. 
 
-(PCPG) You wouldn’t happen to know anything about them would you professor?
- 
+(PCPG) You wouldn’t happen to know anything about them, would you professor?
+
 (Nate|Professor Bestman, campus, smoking, angryMIN|shades) Oh of course, I should have known. Ben Saint is the only one despicable enough to sabotage my students of anything actually important. 
  
 (Nate|Professor Bestman, campus, smoking, happyMED|shades) He should stop fucking around with the PPU and continue making me those big bucks off of the WAR babyyy.
  
 (Nate|Professor Bestman, campus, standing, neutral|shades) Listen, I want to find the Pizza Party University as much as the next guy, but doing so is simply a lost cause.
 
-(Nate|Professor Bestman, campus, smoking, neutral|shades) Many better people before you have tried and failed, and people after you will continue to do so until we all reach Starfleet. 
+(Nate|Professor Bestman, campus, standing, angryMIN|shades) Many better people before you have tried and failed, and people after you will continue to do so until we all reach Starfleet. 
 
 (Nate|Professor Bestman, campus, smoking, angryMED|shades) Just cut your losses short now and don’t jeoperdize your future for fucking Ben Saint.
  
-(PCPG) Uhh, professor, do you have some personal grudge against Ben?
- 
+(PCPG) Uhh professor, do you, perhaps, have some personal grudge against Ben?
+
 (Nate|Professor Bestman, campus, standing, neutral|shades) Oh of course, ever since the day I was born. The only person I can’t possibly stand more is our dad.
  
 (PCPG) Wait, you guys are brothers?
@@ -649,80 +651,95 @@ Hopefully I can catch the end of it and get the gist of the lecture, it’s not 
  
 (Nate|Professor Bestman, campus, smoking, neutral|shades, left) Oh come on Ben, what are even going to do when you find them?
  
-(Ben, campus, point, neutral, right) Fucking murder them of course.
+(Ben, campus, point, happyMIN, right) Fucking murder them of course.
  
-(Nate|Professor Bestman, campus, standing, shockMIN, left) Really now? That seems like a perfectly reasonable response to the situation at hand.
+(Nate|Professor Bestman, campus, standing, shockMIN|shades, left) Really now? That seems like a perfectly reasonable response to the situation at hand.
  
-(Ben, campus, base, neutral, right) Oh don’t fucking give me this “reasonable response” shit.  I guess the “reasonable response” would be to call the cops on them or [i]whatever.[/i]
+(Ben, campus, base, neutral|cloud, right) Oh don’t fucking give me this “reasonable response” shit.  I guess the “reasonable response” would be to call the cops on them or [i]whatever.[/i]
  
 (Nate|Professor Bestman, campus, standing, neutral|shades, left) Well [i]that[/i] is just clearly an effective use of the police force. Why not just call the cops on everything that you find shitty huh?
  
 (Ben, campus, base, angryMIN, right) Maybe I WILL Nate, what do you say to that HUH?
  
-(Nate|Professor Bestman, campus, smoking, angryMIN|shades, left) Oh of course, I forgot you were such an authoritarian Ben, you’d totally be down for that. Shouldn’t we just allow the Pizza Party University the freedom to be shitty as they please and see where that takes them?
+(Nate|Professor Bestman, campus, smoking, angryMIN|shades, left) Oh of course, I forgot you were such an authoritarian Ben, you’d totally be down for that. 
+
+(Nate|Professor Bestman, campus, papers, angryMIN|shades, left) Shouldn’t we just allow the Pizza Party University the freedom to be shitty as they please and see where that takes them?
  
-(Ben, campus, point, neutral|cloud, right) First of all, holy shit I’m not a fucking Marxist Nate, I was clearly being sarcastic.
+(Ben, campus, point, neutral, right) First of all, holy shit I’m not a fucking Marxist Nate, I was clearly being sarcastic.
  
 (Ben, campus, base, neutral|cloud, right) Second, their shittiness is a shame to our great city of Boston, and if they continue to exist shittily others will be inspired to act just like them. 
  
-(Ben, campus, exasp, sadMIN, right) Imagine if everything is as difficult to find as the Pizza Party University. I wouldn’t be able to get those unbeatable prices at Aldi without having to get lost for hours trying to find the place, now wouldn’t that be ridiculous?
+(Ben, campus, base, sadMIN|cloud, right) Imagine if everything is as difficult to find as the Pizza Party University. 
+
+(Ben, campus, exasp, sadMIN, right) I wouldn’t be able to get those unbeatable prices at Aldi without having to get lost for hours trying to find the place, now wouldn’t that be ridiculous?
  
-(Nate|Professor Bestman, campus, smoking, confusedMIN|shades, left) Well did you consider that maybe the reason they don’t want to be found is because they are afraid of people like you out looking to harm them? Shouldn't they have the right to not be found?
+(Nate|Professor Bestman, campus, pointing, confusedMIN|shades, left) Well did you consider that maybe the reason they don’t want to be found is because they are afraid of people like you out looking to harm them? 
+
+(Nate|Professor Bestman, campus, pointing, confusedMIN|shades, left) Shouldn't they have the right to not be found?
  
-(Ben, campus, exasp, angryMIN, right) Oh my god Nate you are actually retarded. Do you not see what’s wrong with that?
+(Ben, campus, exasp, angryMIN, right) Oh my god Nate you are actually retarded! Do you not see what’s wrong with that!
  
 (Nate|Professor Bestman, campus, standing, angryMIN|shades, left) No Ben, I don’t see. Honestly, you’re the one whose acting retarded here.
  
 (PCPG) Uh guys this isn’t really going anywhere.
  
-(Ben, campus, exasp, angryMIN, right) Shut the fuck up PCPG. Nate, please tell me how I’m the one acting retarded here.
+(Ben, campus, exasp, angryMIN, right) Shut the fuck up PCPG! Nate, please tell me how I’m the one acting retarded here.
  
-(Nate|Professor Bestman, campus, standing, neutral|shades, left) You know, PCPG has a point, maybe we can just leave this for later. I do have another class coming up I need to prepare for.
+(Nate|Professor Bestman, campus, standing, sadMIN|shades, left) You know, PCPG has a point, maybe we can just leave this for later. I do have another class coming up I need to prepare for.
  
-(Ben, campus, slouch, neutral, right) God damn it, okay fine. We’ll finish this during club time.
+(Ben, campus, base, neutral, right) God damn it, okay fine. We’ll finish this during club time.
  
 (PCPG) Club time? You’re both in a club?
  
-(Ben, campus, base, neutral, right) Yeah we just recently started a debate club called “Two Best Brothers Bitch About Philosophy.” I got the idea from one of our students, but we haven’t had much success in recruiting members for it.
- 
+(Ben, campus, base, neutral, right) Yeah we just recently started a debate club called “Two Best Brothers Bitch About Philosophy.” 
+
+(Ben, campus, point, neutral, right) I got the idea from one of our students, but we haven’t had much success in recruiting members for it.
+
+(Ben, campus, base, neutral|cloud, right)
 (Nate|Professor Bestman, campus, papers, neutral|shades, left) Mage actually has been asking about that recently, told me we have a week to get five total members before she axes the whole thing. We better get on that.
- 
-(Nate|Professor Bestman, campus, smoking, happyMIN|shades, left) Speaking of, wanna join our club PCPG? It would be a great help to us, and you would be able to experience [i]riveting[/i] debates like the one we just had all the time.
+
+(Ben, campus, base, neutral, right)
+(Nate|Professor Bestman, campus, smoking, confusedMIN|shades, left) Speaking of, wanna join our club PCPG? It would be of great help to us, and you would be able to experience [i]riveting[/i] debates like the one we just had all the time.
  
 [CHOICE]
 *Uhh, well...*
 *Hell no*
  
-*Uhh, well…*
+*Uhh, well...*
  
 (PCPG) Uhh.. yeah um, sorry but I don’t think I’ll uhh... have the time for it?
  
-(Nate|Professor Bestman, campus, papers, neutral|shades, left) Totally understandable, but feel free to inform us if you change your mind. We are always looking for members.
+(Nate|Professor Bestman, campus, papers, neutral|shades, left) Totally understandable, but feel free to inform us if you ever change your mind. We are always looking for new members.
  
-(Nate|Professor Bestman, campus, standing, neutral|shades, left, slide, offright) Anyways, I gotta go prepare for this class, so see ya.
+(Nate|Professor Bestman, campus, standing, neutral|shades) Anyways, I gotta go prepare for this class, so see ya.
+
+[SLIDE Nate offright]
+[SLIDE Ben center]
+(Ben, campus, base, neutral) You better continue looking for the Pizza Party University PCPG, it’s far more important than anything else you might accomplish in this god forsaken school.
  
-(Ben, campus, base, neutral, right, slide, center) You better continue looking for the Pizza Party University PCPG, it’s far more important than anything else you might accomplish in this god forsaken university.
- 
-(Ben, campus, base, neutral, center, slide, offright)
-And with that final remark Ben leaves too. I guess that means I better get back to finding a lead on them.
+[SLIDE Ben offright]
+And with that final remark Ben leaves too. I guess that means I better get back to finding a lead on the PPU.
 *
  
 *Hell no*
  
-(PCPG) Fuck, that. I could barely stand to listen to you guys right now. You both have no
-idea what you’re even talking about.
- 
+(PCPG) Fuck, that. I could barely stand to listen to you guys right now. You both have no idea about what you’re even talking about.
+
 (Ben, campus, exasp, angryMIN, right) Oh yeah? And you do I guess?
- 
-(Ben, campus, base, neutral, right)
+
 (Nate|Professor Bestman, campus, papers, neutral|shades, left) That’s enough Ben, if he doesn’t want to join the club that’s fine. We’ll just have to be better at convincing people in the future.
 
-(Nate|Professor Bestman, campus, standing, neutral|shades, left, slide, offright) Anyways, I gotta go prepare for this class, so see ya.
+(Ben, campus, base, neutral, right)
+(Nate|Professor Bestman, campus, standing, neutral|shades, left) Anyways, I gotta go prepare for this class, so see ya.
+
+[SLIDE Nate offright]
+[SLIDE Ben center]
+(Ben, campus, base, angryMAX) I swear, don’t you dare stop looking for the Pizza Party University PCPG, or else there will be consequences.
  
-(Ben, campus, base, angryMAX, right, slide, center) I swear, don’t you dare stop looking for the Pizza Party University PCPG, or else there will be consequences.
- 
-(Ben, campus, base, angryMAX, center, slide, offright)
-And with that final threat Ben leaves too, and I get the feeling he really wasn’t joking there. I better find a lead on them quick.
+[SLIDE Ben offright]
+And with that final threat Ben leaves too. 
+
+I get the feeling he really wasn’t joking there. I better find a lead on them quick, before I find out what these consequences might entail.
 *
 
 [fade to black]
@@ -734,130 +751,157 @@ And with that final threat Ben leaves too, and I get the feeling he really wasn�
 (Ben, casual, exasp, angryMIN)
 [fade from black]
  
-On this fine morning a late, undressed, hungover Ben Saint still has the gall to lecture us like we were the ones who fucked up.
+On this fine morning the class finds itself being berated by a late, undressed, and hungover Ben Saint who still has the gall to lecture us like we were the ones who fucked up.
  
-(Ben, casual, exasp, angryMIN) Shut up class, shut the hell up and no interruptions! If you interrupt me I will personally destroy you like the savage I am!
+(Ben, casual, exasp, angryMIN) Shut up class, shut the hell up and no interruptions! If you interrupt me again I will personally destroy you like the savage I am!
 
 [StopMusic]
+The class quiets down.
  
 (Ben, casual, base, neutral) Good. Now, uhh… so…
  
 (Ben, casual, base, sadMIN)
 Ben looks down at the various papers on his desk and shuffles them around. 
  
-(Ben, casual, base, happyMIN) Okay here. So uh, since I didn’t quite get to finish what I was saying in our last Philosophy class, I thought I could just use this class for that. Everyone’s cool with that right?
+(Ben, casual, base, neutral) Okay here. So uh, since I didn’t quite get to finish what I was saying in our last Philosophy class, I thought I could just use this class for that.
+
+(Ben, casual, point, happyMIN) Everyone’s cool with that right?
  
 The class collectively groans. A few emphatic “No’s” are heard from the back.
  
-(Ben, casual, slouch, sadMIN) Well shit. Uh, well, uh... I didn’t really plan anything else for today…
+(Ben, casual, slouch, sadMIN|cloud, center+50) Well shit. Uh, well, uh... I didn’t really plan anything else for today...
  
 An awkward silence fills the room. Why couldn’t I have just been late for this class instead of Nate’s?
- 
-(Ben, casual, point, happyMIN) Oh I know! Since this is science class we can just talk about how dumb religious people are for not believing in scientific fact, right? I mean, fuck God, am I right zoomers?
+
+(Ben, casual, point, happyMIN, center) Oh I know! Since this is science class we can just talk about how dumb religious people are for not believing in scientific fact, right? I mean, fuck God, am I right zoomers?
  
 [StopMusic]
 [Song: PCPDating_Holy]
 Suddenly a strange presence fills the room and a commanding voice sounds from all around us.
- 
+
+(Ben, casual, point, sadMIN)
 (God) [b]How dare thee insult me again oh Saint Ben! This was thy last chance you scum of the earth![/b]
- 
-(Ben, casual, base, neutral) Oh fuck. Well hey there God, been a while huh? Are you gonna finally end it all and just kill me already? 
+
+(Ben, casual, base, neutral|cloud) Well fuck. 
+
+(Ben, casual, base, happyMIN|cloud) Hey there God, been a while huh? Are you gonna finally end it all and just kill me already? 
  
 (PCPG) God? Wait, you’re actually real?
  
-(God) [b]Don’t worry oh Saint Ben, death is far too lax a punishment for your crimes. Instead, I will take away from you what you love the most![/b]
- 
+(God) [b]Don’t worry oh Saint Ben, death is far too lax a punishment for your crimes.[/b]
+
+(God) [b]Instead, I will take away from you what you love the most![/b]
+
+(Ben, casual, base, sadMIN)
 The room begins to reverberate with power as God’s(?) energy pours into it.
  
 [StopMusic]
 [SFX: PCP-SFX_KetoDeleto_voiced]
-(God) [b]K E T O[/b] /n [b]D E L E T O[/b]
+(God) [b]K E T O[/b] /n
+[b]D E L E T O[/b]
 
+(Ben, casual, exasp, shockedMAX)
 [Ben leaves]
 [Location: white]
 
-All of a sudden the ketones in Ben’s body literally burst out of his pores in beams of pure plasma, creating this sick light show effect. Some of the students get caught in the crossfire of these beams, which cleanly cuts through their soft bodies. Most of them don’t survive the encounter, God rest their souls..
+All of a sudden the ketones in Ben’s body literally burst out of his pores in beams of pure plasma, creating this sick light show effect. 
 
-Or not, I guess.
+Some of the students get caught in the crossfire of these beams, which cleanly cuts through their soft bodies. Most of them don’t survive the encounter, God rest their souls..
+
+..or not, I guess.
  
 [Location: scienceclass]
 
+(Ben, casual, fat, sadMIN)
 After the light show ends I look up and find Ben on the floor and God's(?) presence gone. I rush over to see if he’s alright.
  
-(Ben, casual, fat, sadMIN, offright, center)
-Wait, is he a bit chubbier now? I know this isn’t the time for this, but the size difference between his body now and the one a couple of moments ago is significant enough that it’s almost like he’s a different person. A fat Ben...
+Wait, isn't he a bit chubbier now? 
+
+I know this isn’t the time for this, but the size difference between his body now and the one a couple of moments ago is significant enough to be noticable. A fat Ben...
  
 Disgusting.
  
-As I revolt over the new unexplained weight gain of my teacher, he starts talking to me.
+As I'm revolting over the new unexplained weight gain of my teacher, Ben starts talking to me.
  
 (Ben, casual, fat, sadMIN) PCPG?
  
 (PCPG) Yes?
 
-(Ben, casual, slouch, sadMAX) Just.. end me. There’s no hope for me now.
+(Ben, casual, fat, sadMAX) Just.. end me. There’s no hope for me now.
  
 (PCPG) What do you mean? Are you dying?
  
-(Ben, casual, exasp, sadMAX) No, and that’s the problem. I don’t have anything else other than keto, literally that's all my personality boils down to, so without it, what's the point of even living?
+(Ben, casual, fat, sadMAX) No, and that’s the problem. I don’t have anything else other than keto, literally that's all my personality boils down to, so without it, what's even the point of living?
  
 (PCPG) I mean, can’t you just start up keto again?
  
-(Ben, casual, slouch, shockMIN) And be a pathetic worthless human being in the meantime? 
+(Ben, casual, fat, shockMIN) And be a pathetic worthless human being in the meantime?
  
 He ponders on this for a moment.
 
-(Ben, casual, slouch, neutral) I mean, I guess that doesn’t sound too bad. 
+(Ben, casual, fat, neutral) I mean, I guess that doesn’t sound too bad. 
  
 Huh, he recovered from that pretty quickly.
  
-(Ben, casual, fat, happyMIN) Hey you know what, being off keto for a bit might not be that bad after all.
+(Ben, casual, fat, happyMIN) Hey you know what, being off keto for a bit might not be that bad after all!
 
 (Ben, casual, fat, happyMAX) Uh, class dismissed, or something. I’m really in the mood for a FUCK ENERGY right about now.
  
-(Ben, casual, fat, happyMAX, center, slide, offright, 10)
-Ben then limps out of the class cheerfully. I’m kinda worried about him, he seemed to take being off keto well. Too well..
+[SLIDE Ben offleft]
+Ben then limps out of the class cheerfully. /n
+Hmm, he seemed to take being off keto well. Too well..
  
-On the other hand, maybe this is actually a good thing and he will finally stop being such a ketofag. I decide to stop worrying about it and make my way to the cafeteria for lunch.
+On the other hand, maybe this is actually a good thing and he will finally stop being such a ketofag.
 
+I decide to forget about it and make my way to the cafeteria for lunch.
+
+[fade to black]
 [Song: PCP-AMBIENCE_War]
-[Location: dininghall.full, dininghall.table.mudpuddleforeground]
+[Location: dininghall.demo]
+[fade from black]
 
-As I enter I find the cafeteria in chaos, another WAR clash perhaps? Why did I not hear about this? Hopefully I can still catch the end of it right now.
+As I enter I find the cafeteria in chaos, another WAR clash perhaps? How did I not hear about this? Hopefully I can still catch some of the action before its over.
 
-I find Munchy in the midst of it all, seemingly directing the chaos, as he should. He notices me enter the cafeteria and approaches me.
- 
-(Munchy, campus, default, sadMIN, offleft, center) Please tell me you know where Ben is.
- 
-(PCPG) Ben? I just saw him leave class looking for a FUCK ENERGY. Why do you ask?
- 
-(Munchy, campus, crossing, neutral) It's a disaster. The cafeteria suddenly stopped offering anything but keto compliant foods, it’s like they ran out of the normal stuff or something. I need a keto expert on the scene pronto.
- 
+(Munchy, campus, squatting, angryMED)
+I find Munchy in the midst of it all, appropriately directing the chaos from within. He notices me enter the cafeteria and approaches me.
+
+(Munchy, campus, default, sadMIN) Please tell me you know where Ben is.
+
+(PCPG) Ben? I just saw him leave class early looking for a FUCK ENERGY. Why do you ask?
+
+(Munchy, campus, crossing, neutral) It's a disaster. The cafeteria suddenly stopped offering anything but keto compliant foods, it’s like they ran out of the normal stuff. I need a keto expert on the scene pronto.
+
 (PCPG) Heh, funny you say that since he’s off keto now.
- 
-(Munchy, campus, default, shockedMIN) Wait, he’s off keto? 
- 
+
+(Munchy, campus, default, shockedMIN) Wait, Ben's off keto? 
 (PCPG) Ye-
- 
-(Munchy, campus, squatting, shockedMED) Of course! That explains everything! This isn’t the cafeteria’s fault, instead the universe’s keto levels are imbalanced by the loss of Ben’s keto status and is trying desperately to counterbalance it back by removing any non-keto foods from existence.
+
+(Munchy, campus, squatting, shockedMIN) Of course! That explains everything! This isn’t the cafeteria’s fault!
+
+(Munchy, campus, squatting, shockedMED) The universe’s keto levels are just imbalanced by the loss of Ben’s keto status and is trying desperately to counterbalance it back by removing any non-keto foods from existence.
  
 (Munchy, campus, squatting, shockedMAX) If we don’t get Ben back on keto soon we may never be able to enjoy any normal food ever again!
- 
+
 (PCPG) Oh shit.
- 
-(Munchy, campus, crossing, angryMIN) Oh shit is right. Okay no time for chatting, I’ll search inside, you take a look outside and see if he wandered off somewhere. Inform everyone you see to look for Ben. We need to find him as soon as possible!
+
+(Munchy, campus, crossing, angryMIN) Oh shit is right. Okay no time for chatting, I’ll search inside, you take a look outside and see if he wandered off somewhere. 
+
+(Munchy, campus, default, angryMED) Inform everyone you see to look for Ben. We need to find him as soon as possible!
  
 (Munchy, campus, default, shockedMIN) Or else we all become ketofags.
- 
+
+(Munchy, campus, default, angryMIN)
 [StopMusic]
 [Location: hallway1]
  
-(Munchy, campus, default, shockedMIN, center, slide, offleft, 25)
-The professor then runs off in a hurry down the hallway and I quickly make my way outside to the front of the building, informing students to look for him as I pass them by.
+[SLIDE Munchy offleft]
+The professor then runs off in a hurry down the hallway and I quickly make my way outside to the front of the building, informing students to look for him along the way.
  
 [Location: outsidepcpu.day]
- 
-I look around the front of the building and notice a bunch of students gathered in front of something on the ground. Most of them seem to be cheering happily at it, while a small minority silently cry among their cheering classmates.
+
+I look around the front of the building and find a group of students gathered in front of something on the ground. 
+
+Most of them seem to be cheering happily at it, while a small minority silently cry among their cheering classmates.
  
 As I make my way towards them I notice what they are gathered in front of.
  
@@ -866,41 +910,51 @@ As I make my way towards them I notice what they are gathered in front of.
 
 [pause]
 
-Wait, so, Ben is dead? But, if he’s dead, then he’s never going to be able to be on keto again? Or is it the opposite? Ah whatever, it doesn’t matter. Ben Saint is dead.
+Wait, so, Ben is dead? But, if he’s dead, then he’s never going to be able to be on keto again? Or is it the opposite? 
+
+Ah whatever, it doesn’t matter. Ben Saint is dead!
 
 Was he not able to withstand not being on keto after all? Or did one of his enemies find the moment opportune to end him? I guess we will never know...
  
 Oh man, I’m actually tearing up. Am I really gonna cry over Ben fucking Saint’s death here?! I mean how could this even happen? Why did God have to deleto his keto?
- 
+
 Damn you God, damn you.
- 
-Before I am able to utter God's name in vain any further and suffer his very real wrath, I notice, in the corner of my eye, something moving behind the tombstone. I walk around and find...
+
+Before I am able to utter God's name in vain any further and suffer his very real wrath, I notice, in the corner of my eye, something moving behind the tombstone. 
+
+I walk around and find...
  
 [CG end]
 [StopMusic]
 [Song: PCPDating_Drugz]
-(Ben, casual, fruit, offleft, center)
+(Ben, casual, fruit, center)
 ...none other than a very much alive Ben Saint, gorging himself on what appears to be an array of exotic fruit while tears gush from his eyes.
  
 (PCPG) ...Ben?
  
-(Ben, casual, fruit) I’m so sorry I couldn’t help myself, these fruits are so damn delicious, and I was deprived of them for so long.
+(Ben, casual, fruit) I’m so sorry, I couldn’t help myself. These fruits are so damn delicious, and I was deprived of them for so long.
  
 (Ben, casual, fruit) I mean right over here you got the soursop, the voatango melon, and the langsat, and over here you got the abiu fruit, the loquat, and the cempedak. So much delicious goodness!
  
-(Ben, casual, fruit) I’ve been stockpiling these fruits for when I finally stopped keto, but once I realized that being off of it meant the universe would be ketoicly off balance, I knew that I had to hide and eat them quickly before I was subject to a life without them!
+(Ben, casual, fruit) I’ve been stockpiling these fruits for when I finally stopped keto, but once I realized that being off of it meant the universe would be ketoicly off balance.. 
+
+(Ben, casual, fruit) ..I knew that I had to hide and eat them quickly before I was subject to a life without them!
  
 (PCPG) But aren’t you... dead?
  
 I point to the tombstone, my eyes drying of their tears.
  
-(Ben, casual, fruit) Oh this thing? I just found it here as I was looking for a place to eat these. I think someone made it as a joke? I’m not sure, but it was the perfect thing to hide behind.
+(Ben, casual, fruit) Oh, this thing? I just found it here as I was looking for a place to eat these. I think someone made it as a joke? I’m not sure, but it was the perfect thing to hide behind.
  
-My confusion slowly turns to anger, and in the moment I find the words “!kill Ben Saint” touching the edge of my lips, but I manage to hold myself before I blasphemize against all of Killerkind.
+My confusion slowly turns to anger, and in the moment I find the words “!kill Ben Saint” touching the edge of my lips..
+
+..but before I am able to blasphemize against all of Killerkind, Munchy comes storming in at the scene.
  
-(Munchy, campus, default, happyMED, offleft, slide, left) Oh shit you found him, hell yeah. 
+(Munchy, campus, default, happyMED, offleft) 
+[SLIDE Munchy left]
+(Munchy, campus, default, happyMED, left) Oh shit you found him, hell yeah!
  
-(Munchy, campus, crossing, angryMIN, left) Ben stop fucking eating those fruits. Here, down this bottle of coconut oil and this stick of butter.
+(Munchy, campus, crossing, angryMED, left) Ben stop fucking eating those fruits! Here, down this bottle of coconut oil and this stick of butter.
  
 (Ben, casual, fruit) NOOOOO!!!!!
  
@@ -909,13 +963,17 @@ My confusion slowly turns to anger, and in the moment I find the words “!kill 
 [Ben leaves]
 [Munchy leaves]
  
-But despite Ben’s rejections, Munchy eventually forced him back onto ketosis, and the universe returned to normal, mostly. 
+Despite Ben’s rejections, Munchy eventually forced him back onto ketosis, and the universe returned to normal, mostly. 
 
 The cafeteria unfortunately never really recovered from it’s ketofication. Anything non-keto they brought into the kitchen would be immediately ketofied, and soon it was forced to close down since no one but ketofags were willing to buy anything from them, making the venture unsustainable.
  
-Eventually Ben returned to his old ways, and I somehow found myself forgiving him for almost fucking us all over, for tricking us into thinking he was dead. I’m not sure why though? 
+Eventually Ben returned to his usual self, and I somehow found myself forgiving him for almost fucking us all over, for tricking us into thinking he was dead.
+
+I’m not sure why though?
  
-Maybe some small part of me, some unimaginably tiny portion of my heart, actually managed to sympathize with Ben Saint. Just maybe...
+Maybe some small part of me, some unimaginably tiny portion of my heart, actually managed to sympathize with Ben Saint..
+
+Just maybe...
 
 [Scene: !befriend PCPG]
 
