@@ -51,10 +51,22 @@ var mask_out_head_overlap = """
 shader_type canvas_item;
 
 uniform sampler2D head;
+uniform sampler2D afl1;
+uniform sampler2D afl2;
+uniform sampler2D afl3;
 
 void fragment() {
 	vec4 color = texture(TEXTURE, UV);
 	if (texture(head, UV).a > 0.99) {
+		color.a = 0.0;
+	}
+	if (texture(afl1, UV).a > 0.99) {
+		color.a = 0.0;
+	}
+	if (texture(afl2, UV).a > 0.99) {
+		color.a = 0.0;
+	}
+	if (texture(afl2, UV).a > 0.99) {
 		color.a = 0.0;
 	}
 	COLOR = color;
@@ -209,7 +221,9 @@ func image(imgpath, z):
 	imgnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
 	imgnode.material.shader.code = mask_out_head_overlap # Set the shader's code to code.
 	imgnode.material.shader.set_default_texture_param("head", load("res://images/blank.png"))
-	
+	imgnode.material.shader.set_default_texture_param("afl1", load("res://images/blank.png"))
+	imgnode.material.shader.set_default_texture_param("afl2", load("res://images/blank.png"))
+	imgnode.material.shader.set_default_texture_param("afl3", load("res://images/blank.png"))
 	
 	nodelayers(info[1]) # Put the node into the appropriate spot based on z.
 
@@ -396,6 +410,9 @@ func face(facepath, body, x=0, y=0, type='face'):
 		if !layers[index].has('AFL'):
 			layers[index]['AFL'] = []
 		layers[index]['AFL'].append({'node':facenode, 'position':Vector2(x,y), 'type':type, 'path':facepath}) # Add the accessory, blush, or whatever to AFL.
+		
+		if layers[index]['AFL'].size() < 4:
+			layers[index]['node'].material.set_shader_param("afl"+str(layers[index]['AFL'].size()), facenode.texture)
 		
 		# Set below the character if of type below.
 		if type == 'below': 

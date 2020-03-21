@@ -82,7 +82,7 @@ func get_prefix(character):
 		return get_prefix("mumkey")
 	elif char_id == "hussiefox":
 		return get_prefix("v")
-	elif char_id == "god" or char_id == "artsofartso":
+	elif char_id == "god" or char_id == "artsofartso" or char_id == "silent_god":
 		return "res://images/UI/Text box/artsofartso/artsofartso_"
 	elif char_id == "jesse" or char_id == "thoth":
 		return "res://images/UI/Text box/jesse/text box 8 - jesse_"
@@ -107,7 +107,7 @@ func get_voice_path(character):
 	if character == null:
 		return null
 	var char_id = character.to_lower().replace(" ", "-")
-	if char_id == "" or char_id == "pcpg" or character == global.playerName:
+	if char_id == "" or char_id == "player" or char_id == "pcpg" or character == global.playerName.to_lower() or char_id == "silent_god":
 		return null
 	elif char_id == "9/11":
 		return get_voice_path("911")

@@ -263,8 +263,8 @@ var gibbon = {'campus': {
 'blush': ['res://images/characters/Gibbon/AFL/gibbon_face_blushies.png'], 
 	'body':['res://images/characters/Gibbon/gibbon_special1_default.png', 'res://images/characters/Gibbon/gibbon_special2_clenched.png', 'res://images/characters/Gibbon/gibbon_special3_grabby.png', 'res://images/characters/Gibbon/gibbon_special4_handsup.png', 'res://images/characters/Gibbon/gibbon_special5_press.png']
 },
-'newgle':{'body':['res://images/characters/Gibbon/gibbon_newgle.png']}
-		}
+'newgle':{'body':['res://images/characters/Gibbon/gibbon_newgle.png']},
+'afl': ['res://images/characters/Gibbon/AFL/gibbon_afl_campus1_default.png', 'res://images/characters/Gibbon/AFL/gibbon_afl_campus4_handsup.png', 'res://images/characters/Gibbon/AFL/gibbon_afl_campus5_press.png']}
 
 	#res://images/characters/Mage/Faces_Campus/mage_face_campus_happy1
 	#used mage_face_campus_blush1,2,3 for smitten.

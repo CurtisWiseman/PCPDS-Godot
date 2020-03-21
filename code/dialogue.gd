@@ -125,7 +125,7 @@ func _process(delta):
 	#global.turbo_crash_mode = Input.is_key_pressed(KEY_P) #Dev testing purposes only 
 		
 
-func say(text, voice=null):
+func say(text):
 	text = text.strip_edges()
 	set_visible_characters(0) # Remove current line
 	
@@ -133,14 +133,6 @@ func say(text, voice=null):
 	if isCompartmentalized == false && text.length() >= charMAX:
 		compartmentalise(text)
 # 	Display new line if of appropriate length
-	elif text != "" and voice != null:
-		#speech = AudioStreamPlayer.new()
-		#speech.stream = load("res://sounds/speech/pcp-voice_brunswick.ogg")
-		#speech.bus = 'SFX'
-		#speech.volume_db = 0
-		#speech.play()
-		#add_child(speech)
-		set_bbcode(text)
 	else:
 		set_bbcode(text)
 	return text
