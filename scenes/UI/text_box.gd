@@ -36,7 +36,7 @@ func _ready():
 	#check_all_texboxes()
 	
 func check_all_texboxes():
-	var all_speakers = ['???', '9/11', 'action giraffe', 'adelram', 'announcer', 'artsofartso', 'azumi', 'ben', 'ben and munchy', 'ben & jesse', 'brunswick', 'bush', 'cafeteria lady', 'cerise', 'cider', 'clara', 'colt corona', 'connor', 'copkillers', 'cop killers', 'crocs', 'davoo', 'davoo collective', 'digi', 'donatello', 'drug dealer', 'drunken man', 'endlesswar', 'endless war', 'ephraim', 'geoff', 'gibbon', 'god', 'gungirl', 'hussiefox', 'indigo interlopers', 'interlopers', 'jesse', 'k1p', 'kazee', 'lethal', 'lord of ghosts', 'magda', 'mage', 'magicks', 'may', 'maygib', 'michelle', 'mumkey jones', 'munchy', 'nate', 'pcpg', 'phone', 'redman', 'russel', 'schrafft', 'smearg', 'snob', 'sophia', 'thoth', 'tom', 'uwupedy', 'v', 'vincent', 'voice from downstairs']
+	var all_speakers = ['???', '9/11', 'action giraffe', 'adelram', 'announcer', 'artsofartso', 'azumi', 'ben', 'ben and munchy', 'ben and jesse', 'brunswick', 'bush', 'cafeteria lady', 'cerise', 'cider', 'clara', 'colt corona', 'connor', 'copkillers', 'cop killers', 'crocs', 'davoo', 'davoo collective', 'digi', 'donatello', 'drug dealer', 'drunken man', 'endlesswar', 'endless war', 'ephraim', 'geoff', 'gibbon', 'god', 'gungirl', 'hussiefox', 'indigo interlopers', 'interlopers', 'jesse', 'k1p', 'kazee', 'lethal', 'lord of ghosts', 'magda', 'mage', 'magicks', 'may', 'maygib', 'michelle', 'mumkey jones', 'munchy', 'nate', 'pcpg', 'phone', 'redman', 'russel', 'schrafft', 'smearg', 'snob', 'sophia', 'thoth', 'tom', 'uwupedy', 'v', 'vincent', 'voice from downstairs']
 	var f = File.new()
 	for s in all_speakers:
 		if not f.file_exists(get_prefix(s)+"000.png"):
@@ -56,7 +56,7 @@ func get_prefix(character):
 		return "res://images/UI/Text box/"+char_id+"/text box 2 - "+char_id+"_"
 	elif char_id == "benandmunchy":
 		return get_prefix("lethal")
-	elif char_id == "ben&jesse":
+	elif char_id == "benandjesse":
 		return get_prefix("v")
 	elif char_id == "cider":
 		return get_prefix("kazee")
@@ -147,6 +147,8 @@ func get_voice_path(character):
 		return "res://sounds/voices/pcp-voice_K1P.ogg"
 	elif char_id == "snob":
 		return get_voice_path("that-anime-snob")
+	elif char_id == "endless-war":
+		return "res://sounds/voices/pcp-voice_endlesswar.ogg"
 	elif char_id == "v":
 		return get_voice_path("gwllvbin")
 	else:
@@ -262,7 +264,7 @@ func _process(delta):
 		while timer > FRAME_TIME:
 			cur_frame = (cur_frame+1)%105
 			timer -= FRAME_TIME
-		if (current_char == "gibbon" and cur_frame == 49) or (current_char == "ben" and cur_frame == 93):
+		if ((current_char == "gibbon" or current_char == "voice from downstairs") and cur_frame == 49) or (current_char == "ben" and cur_frame == 93):
 			cur_frame += 1
 		show_frame()
 	timer += delta

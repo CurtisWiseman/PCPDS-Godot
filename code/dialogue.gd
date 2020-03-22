@@ -54,6 +54,11 @@ func advance_text():
 	if lock:
 		return
 	lock = true
+	
+	var hist = global.rootnode.get_node('Systems').history
+	if hist.visible:
+		return
+	
 	finish_fades_and_slides()
 	
 	# Stop camera movment if it is moving
