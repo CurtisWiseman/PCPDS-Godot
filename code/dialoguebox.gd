@@ -66,7 +66,7 @@ func _ready():
 
 
 #Nametag is the label above the textbox, dialogue's say is what updates the textbox.
-func say(words, character = "", character_identifier = "", voice = null):
+func say(words, character = "", character_identifier = ""):
 	if words.strip_edges() == "":
 		$Nametag.text = ""
 		systems.textBoxBackground.make_invisible()
@@ -83,7 +83,7 @@ func say(words, character = "", character_identifier = "", voice = null):
 		
 		systems.textBoxBackground.swap_character(character_identifier.to_lower(), special_voice)
 		systems.textBoxBackground.make_visible()
-	$Dialogue.say(words, voice)
+	$Dialogue.say(words)
 	
 # Function to calculate the number of unseen choices.
 func choice_calc(choice):
@@ -803,8 +803,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			
 			var chrName = info[0] # Set the chrName to info[0].
 			
-			var voice = null
-			
 #			# Do stuff depending on the current speaker
 #			match info[0]:
 #				"Tom":
@@ -847,7 +845,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				lastKeep(index)
 				var halt = global.rootnode.scene(dialogue[index], index+1, self) # Send the dialogue to the scene function in the root of the scene.
-				say(text, chrName, info[0], voice)
+				say(text, chrName, info[0])
 				get_node("Dialogue").isCompartmentalized = false #Set so next line can be compartmentalized
 #				emit_signal('sentence_end', dialogue[index])
 				index += 1
@@ -1182,6 +1180,19 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		parse_position(info, 'systems.display.image('+body+', 1)', body, i, pos)
 		return
 		
+	#Quick hack for gib, I believe just to make sure certain things always appear over his face.
+	if parsedInfo == "gibbon.campus":
+		match bodyType:
+			"default":
+				AFL += '\n\tsystems.display.face(characterImages.gibbon.afl[0], '+body+', 0, 0, "gib_def")'
+			"handsup":
+				AFL += '\n\tsystems.display.face(characterImages.gibbon.afl[1], '+body+', 0, 0, "gib_handsup")'
+			"press":
+				AFL += '\n\tsystems.display.face(characterImages.gibbon.afl[2], '+body+', 0, 0, "gib_press")'
+			_:
+				#Other poses don't need it
+				pass
+		
 	if info[0].to_lower() == "ben":
 		for e in info:
 			if e.to_lower() == "point":
@@ -1215,6 +1226,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 #			blush = true
 #		elif tmp[1] == 'shades':
 #			shades = true
+	
+	
 	
 	if blush:
 		var blushFace = search('return characterImages.'+parsedInfo+'.blush', info[i]) + 1
