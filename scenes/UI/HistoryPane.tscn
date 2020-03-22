@@ -1,25 +1,31 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/UI/HistoryPane.gd" type="Script" id=1]
+[ext_resource path="res://images/misc/black_screen.png" type="Texture" id=2]
 
 [node name="HistoryPane" type="Control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 1
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Popup" type="WindowDialog" parent="."]
-margin_left = 606.956
-margin_top = 66.4418
-margin_right = 1310.96
-margin_bottom = 770.442
+[node name="black" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.760784 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 2 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Popup"]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-focus_mode = 2
+margin_left = 480.0
+margin_top = 80.0
+margin_right = -480.0
+margin_bottom = -79.9999
+mouse_filter = 1
 bbcode_enabled = true
 scroll_following = true
-selection_enabled = true

@@ -1,18 +1,29 @@
 extends Control
 
-onready var popup = $Popup
-onready var label = $Popup/RichTextLabel
+onready var label = $RichTextLabel
+
+var lines = PoolStringArray()
 
 func _ready():
 	label.bbcode_text = "--- BEGINNING OF HISTORY ---"
+	label.add_font_override("normal_font", global.defaultFont)
+	label.add_font_override("bold_font", global.defaultFontBold)
+	label.add_font_override("italics_font", global.defaultFontItalic)
+	label.add_font_override("bold_italics_font", global.defaultFontBoldItalic)
 
 func add_line(text, speaker):
 	var new_history_line = ""
 	if speaker:
 		new_history_line += "(" + speaker + ") "
-	new_history_line += text
+	if text != null: #This happened to me once?
+		new_history_line += text.replace("/n", "")
+		
+	lines.append(new_history_line)
 	
-	label.bbcode_text += "\n" + new_history_line
+	while lines.size() > 100:
+		lines.remove(0)
+	
+	label.bbcode_text = lines.join("\n")
 
 func _process(delta):
 	if game.blockInput:
@@ -21,9 +32,9 @@ func _process(delta):
 		_toggle_history_visible()
 
 func _toggle_history_visible():
-	if popup.visible:
-		popup.hide()
+	if visible:
+		hide()
 		global.pause_input = false
 	else:
-		popup.popup_centered_ratio()
+		show()
 		global.pause_input = true
