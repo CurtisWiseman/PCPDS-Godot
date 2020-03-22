@@ -168,7 +168,9 @@ We reach the music classroom and Gibbon and I find seats next to each other. A s
 
 (Digi|???, Campus, 3, happyMAX, offright, slide, center) Heyyy everybody! Welcome to music class!
 
-(Digi|Professor Digibro, Campus, 3, happyMAX) I’m Professor Digibro, and well, I have no plans for this lesson whatsoever, but I guess you’re all here for the authentic After Dark experience, so LET’S GOOOOO!
+(Digi|Professor Digibro, Campus, 3, happyMAX) I’m Professor Digibro, and well, I have no plans for this lesson whatsoever, 
+
+(Digi|Professor Digibro, Campus, 3, happyMAX) but I guess you’re all here for the authentic After Dark experience, so LET’S GOOOOO!
 
 The Professor takes an elongated swig of his beverage then slams it down on his desk.
 
@@ -193,9 +195,13 @@ Digibro rubs his chin, deep in thought.
 [ActionGiraffe leaves]
 (Digi|Professor Digibro, Campus, 5, happyMIN) Anyway, I’ve listed my bandcamp in the course outline sheet, so I highly recommend y’all check it out.
 
-(Digi|Professor Digibro, Campus, 1, confusedMIN) Hopefully you’ve all heard of Sturgeon’s Revelation, but for those of you who remain uninformed, it states that 90 percent of everything is crap. Luckily, I consider my music to be in that gifted 10 percent...
+(Digi|Professor Digibro, Campus, 1, confusedMIN) Hopefully you’ve all heard of Sturgeon’s Revelation, but for those of you who remain uninformed, it states that 90 percent of everything is crap. 
 
-Professor Digibro went on and on for what felt like hours. Most of what he was saying didn’t even seem like it was about music. In fact, he mostly talked about anime soundtrack composers, youtube marketing and about being an autistic “Devilman.” I soon find my mind drifting off...
+(Digi|Professor Digibro, Campus, 1, confusedMIN) Luckily, I consider my music to be in that gifted 10 percent...
+
+Professor Digibro went on and on for what felt like hours. Most of what he was saying didn’t even seem like it was about music. 
+
+In fact, he mostly talked about anime soundtrack composers, youtube marketing and about being an autistic “Devilman.” I soon find my mind drifting off...
 
 [fade to black]
 
@@ -209,7 +215,9 @@ I snap back to reality. Great. It’s my first day and I’m already zoning out 
 
 (PCPG) Yeah. Music and stuff right?
 
-(Digi|Professor Digibro, Campus, 1, happyMAX) Good. There’s gonna be a quiz on all that stuff I just told you next Friday. Your homework is to watch ten Anthony Fantano videos, to get a gist of what music reviews look like. Class dismissed.
+(Digi|Professor Digibro, Campus, 1, happyMAX) Good. There’s gonna be a quiz on all that stuff I just told you next Friday. 
+
+(Digi|Professor Digibro, Campus, 1, happyMAX) Your homework is to watch ten Anthony Fantano videos, to get a gist of what music reviews look like. Class dismissed.
 
 (Digi|Professor Digibro, Campus, 4, neutral) See you in the next one!
 
@@ -227,15 +235,21 @@ I approach Digi. The closer I get to him, the more details I can see of his slov
 
 (PCPG) Yeah it was... interesting.
 
-(Digi|Professor Digibro, Campus, 2, happyMAX) Well if you found that interesting you’re really going to like those Fantano videos I assigned you for homework. You know, it’s nice to have someone who actually takes an interest in my class. 
+(Digi|Professor Digibro, Campus, 2, happyMAX) Well if you found that interesting you’re really going to like those Fantano videos I assigned you for homework. 
+
+(Digi|Professor Digibro, Campus, 2, happyMAX) You know, it’s nice to have someone who actually takes an interest in my class. 
 
 (Digi|Professor Digibro, Campus, 1, angryMED) Some people say I "unnecessarily insert my opinion into things." I don’t really see the point of "objective" teaching to begin with.
 
-(Digi|Professor Digibro, Campus, 3, happyMIN) Anyway, I’ve got motherfuckin’ shit to do that’s bigger than yo’ kiddie pool. If you want to talk more, I’ll be in the library after school. Nice meeting ya, new kid.
+(Digi|Professor Digibro, Campus, 3, happyMIN) Anyway, I’ve got motherfuckin’ shit to do that’s bigger than yo’ kiddie pool. If you want to talk more, I’ll be in the library after school. 
+
+(Digi|Professor Digibro, Campus, 3, happyMIN) Nice meeting ya, new kid.
 
 [SLIDE Digi offright]
 [Digi leaves]
-At first I thought Digi was a self centered guy, but now that I’ve talked to him, I’m starting to realize that that doesn’t matter so much and he’s still a pretty sweet dude. I think I’ll enjoy this class.
+At first I thought Digi was a self centered guy, but now that I’ve talked to him, I’m starting to realize that that doesn’t matter so much and he’s still a pretty sweet dude. 
+
+I think I’ll enjoy this class.
 
 (Gibbon|Gib, campus, default, neutral, offleft, slide, center) It’s getting pretty close to lunch, we should get going.
 
@@ -254,14 +268,18 @@ At first I thought Digi was a self centered guy, but now that I’ve talked to h
 
 (PCPG) Well, it was... interesting.
 
-(Gibbon|Gib, campus, handsup, happyMIN) Yeah, most people tend to feel that way at first. But don’t worry, you’ll warm up to the folk here eventually. They’re like prickly pears: Hard on the outside, but if you crack ‘em open they’re full of juicy red bits.
+(Gibbon|Gib, campus, handsup, happyMIN) Yeah, most people tend to feel that way at first. But don’t worry, you’ll warm up to the folk here eventually. 
+
+(Gibbon|Gib, campus, handsup, happyMIN) They’re like prickly pears: Hard on the outside, but if you crack ‘em open they’re full of juicy red bits.
 
 (Gibbon|Gib, campus, grabby, confusedMIN) If you wanna know more about Professor Digibro, he usually hangs out in the library after school. I dunno what he actually [i]does[/i] there though.
 
 (Gibbon|Gib, campus, default, neutral, center, slide, offright) Anyway, it’s getting pretty close to lunch, we should get going.
 
 [Gibbon leaves]
-I was kind of afraid of this whole university thing at first. It’s good to know that someone as nice as Gibbon is here to guide me. I think I’ll enjoy my time in this place after all.
+I was kind of afraid of this whole university thing at first. It’s good to know that someone as nice as Gibbon is here to guide me. 
+
+I think I’ll enjoy my time in this place after all.
 
 [fade to black]
 [StopMusic]
@@ -627,13 +645,21 @@ Hmm, now what? School is done, so where should I spend the afternoon?
 [Song: PCPDating_LibraryTheme]
 [fade from black]
 
-I enter the library, and am immediately overwhelmed by rows of books, manga, and games as far as the eye can see. But all of these forms of media mean nothing to me. I immediately find the aisle that is far more familiar to me: Light novels.
+I enter the library, and am immediately overwhelmed by rows of books, manga, and games as far as the eye can see. 
 
-I peruse the books for a bit before one catches my eye. It’s titled The Asterisk War. I begin reading the book on the spot and soon get really invested in it, but then suddenly am overwhelmed by the scent of weed looming over me.
+But all of these forms of media mean nothing to me. I immediately find the aisle that is far more familiar to me: 
+
+Light novels.
+
+I peruse the books for a bit before one catches my eye. It’s titled The Asterisk War. 
+
+I begin reading the book on the spot and soon get really invested in it, but then suddenly am overwhelmed by the scent of weed looming over me.
 
 (Digi|Professor Digibro, casual, 2, HappyMED, offright, slide, center) Watcha reading?
 
-My eyes start burning as Professor Digibro takes a hit of his dab pen and proceeds to exhale marijuana smoke directly onto my face. Once the smoke clears, I catch a glimpse of them; Digi’s titillating round sunglasses.
+My eyes start burning as Professor Digibro takes a hit of his dab pen and proceeds to exhale marijuana smoke directly onto my face. 
+
+Once the smoke clears, I catch a glimpse of them; Digi’s titillating round sunglasses.
 
 (PCPG) Is smoking allowed in here?
 
@@ -643,13 +669,19 @@ Digibro snatches the book out of my hands. He looks at the novel and almost imme
 
 (Digi|Professor Digibro, casual, 2, smittenMAX) I can’t believe someone as cool as you would consume such garbage.
 
-Digibro tosses The Asterisk War away with such vigor that, upon colliding with the wall, it disintegrates instantly. He pulls another light novel out of his pocket, which I failed to notice due to the immense baggy spaciousness of his robe.
+Digibro tosses The Asterisk War away with such vigor that, upon colliding with the wall, it disintegrates instantly. 
+
+He pulls another light novel out of his pocket, which I failed to notice due to the immense baggy spaciousness of his robe.
 
 (Digi|Professor Digibro, casual, 4, smittenMIN) Here, try this!
 
-Digibro shoves the small book into my arms. For a brief moment, I feel Digi’s soft tender skin brushing up against mine. I look this new light novel over. It is titled Boogiepop and Others.
+Digibro shoves the small book into my arms. For a brief moment, I feel Digi’s soft tender skin brushing up against mine. 
 
-(Digi|Professor Digibro, casual, 3, HappyMAX) Boogiepop and Others is really fuckin good, it’s easily my favorite light novel! You’re lucky I got here in time before you were subjected to the utter garbage that is Ass War. Here, sit down with me.
+I look this new light novel over. It is titled Boogiepop and Others.
+
+(Digi|Professor Digibro, casual, 3, HappyMAX) Boogiepop and Others is really fuckin good, it’s easily my favorite light novel! 
+
+(Digi|Professor Digibro, casual, 3, HappyMAX) You’re lucky I got here in time before you were subjected to the utter garbage that is Ass War. Here, sit down with me.
 
 We sit down between the stuffed bookshelves and Digi motions for me to read the light novel he gave me. He pulls out what appears to be a manga and starts reading it.
 
@@ -673,13 +705,13 @@ We sit down between the stuffed bookshelves and Digi motions for me to read the 
 
 (PCPG) What audience? What are you talking about?
 
-(Digi|Professor Digibro, casual, 5, angryMED) THIS BOOK. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This [i]book[/i]. This book. This book? This book. This book. This book. This book. This book. This book. This book... This book. This book. This book. This book. This book. This book. This boOK. 
+(Digi|Professor Digibro, casual, 5, angryMED) THIS BOOK. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This [i]book[/i]. This book. This book? This book. This book. This book. This book. This book. [i]This [/i]book. This book. This book. This book.
 
-(Digi|Professor Digibro, casual, 2, happyMED) This book. This book. This book. This book. This book?! This book. This book. This book. This book! This book!. This book. THIS BOOK. This book. [i]This [/i]book. This book. This book. This book. This book... This book. This book. This book. This book. This book. [i]This book[/i]. This book. This book. This book. THIS book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book.
+(Digi|Professor Digibro, casual, 3, happyMAX) This book! This book. This book. This book. This book. This book. This book. This BOOK. This book. This book. This book. This book. This book. This book. This b o o k. This book. This book. This BooK. This book. This book? This book. This book. This book. This book. This book. [i]This book[/i]. This book. This bookkk This book.
 
-(Digi|Professor Digibro, casual, 3, happyMAX) This book! This book. This book. This book. This book. This book. This book. This BOOK. This book. This book. This book. This book. This book. This book. This b o o k. This book. This book. This BooK. This book. This book? This book. This book. This book. This book. This book. This book. This book. This book. This book. This book. This book!! This book. This book ... This book. This book. This book. This book; This book. 
+Utterly confused by what’s going on I just begin reading Boogiepop, and after a while Digi finally stops. 
 
-Utterly confused by what’s going on I just begin reading Boogiepop, and after a while Digi finally stops. He’s now just watching me as I slowly turn the pages, which doesn’t feel as creepy as I thought it would. After finishing a chapter Digi speaks up.
+He’s now just watching me as I slowly turn the pages, which doesn’t feel as creepy as I thought it would. After finishing a chapter Digi speaks up.
 
 (Digi|Professor Digibro, casual, 2, happyMIN) So, what do you think of Boogiepop and Others?
 
@@ -695,7 +727,9 @@ Utterly confused by what’s going on I just begin reading Boogiepop, and after 
 
 (Digi|Professor Digibro, casual, 1, happyMIN) I was thinking that maybe you and I could hang again sometime. I... I could recommend you some more books... an... and maybe I could get to know you some more...
 
-My heart is pounding out of my chest. Have I finally found someone I can call a friend or maybe even... something more? I look Digi in the eyes and see my reflection in his sunglasses.
+My heart is pounding out of my chest. Have I finally found someone I can call a friend or maybe even... something more? 
+
+I look Digi in the eyes and see my reflection in his sunglasses.
 
 (PCPG) Y... yeah, I’d like that.
 
@@ -703,7 +737,9 @@ My heart is pounding out of my chest. Have I finally found someone I can call a 
 
 I feel myself being enraptured by the warmth in Digi’s smile. My face feels warm as it begins to redden like a tomato.
 
-An awkward tension fills the air and we go back to reading for a few hours. We take occasional respites to discuss literature, but other than that, most of our time together was spent in silence. 
+An awkward tension fills the air and we go back to reading for a few hours. 
+
+We take occasional respites to discuss literature, but other than that, most of our time together was spent in silence. 
 
 But it’s strange. Even though we didn’t talk very much, I still relish in Digi’s company.
 
@@ -1279,9 +1315,11 @@ He throws the can and I catch it.
 
 *Roll with it*
 
-Apart from the fact that this is clearly a practical lesson on accepting strange shit, only a complete fool would out themselves as terminally uncool in front of a new classmate, by getting hung up on pedantic details like what category of drink something belongs to.
+Apart from the fact that this is clearly a practical lesson on accepting strange shit, 
 
-I take the cider and clink my bottleneck on his, as though we were holding wine glasses.
+only a complete fool would out themselves as terminally uncool in front of a new classmate, by getting hung up on pedantic details like what category of drink something belongs to.
+
+I take the cider and clink the rim of my can on his, as though we were holding wine glasses.
 
 (PCPG) À ta santé.
 
@@ -1306,23 +1344,31 @@ It’s probably better not to ask why he’s attempting to live in his car. Seem
 
 (PCPG) I mean, I guess there is a point to it. Exposing students to different perspectives and stuff...
 
-(Tom, 4, shockedMAX) Oh for sure, if they didn’t spend half the time making passive aggressive comments about each other. They could teach the entire class in a debate format. “Two Best Brothers Bitch About Philosophy” or something like that would be sick. 
+(Tom, 4, shockedMAX) Oh for sure, if they didn’t spend half the time making passive aggressive comments about each other. 
+
+(Tom, 4, shockedMAX) They could teach the entire class in a debate format. “Two Best Brothers Bitch About Philosophy” or something like that would be sick. 
 
 (Tom, cider, confusedMIN) As it stands, you’re probably better off reading stuff for yourself.
 
 (PCPG) You sure don’t seem all that enthusiastic about the PCPU.
 
-(Tom, cider, drunkMIN) Well it is kind of fucking depressing, you know? To attend the classes of people you used to teach with every day... Cause they found a new field and you didn’t, or at least not in time.
+(Tom, cider, drunkMIN) Well it is kind of fucking depressing, you know? To attend the classes of people you used to teach with every day... 
+
+(Tom, cider, drunkMIN) Cause they found a new field and you didn’t, or at least not in time.
 
 (PCPG) What do you mean “teach with them”?
 
-(Tom, cider, drunkMIN) Oh, this university used to specialize in only one field of study: Equine media analysis. We were the go-to school for anyone who thought gender studies was too useful a major. Digi and I mostly ran the place. 
+(Tom, cider, drunkMIN) Oh, this university used to specialize in only one field of study: Equine media analysis. 
+
+(Tom, cider, drunkMIN) We were the go-to school for anyone who thought gender studies was too useful a major. Digi and I mostly ran the place. 
 
 (Tom, cider, happyMIN) That is until the autism scandal of course.
 
 He takes a long sip from his beverage.
 
-(Tom, 3, drunkMAX) We had a huge rebranding after that. More or less the same people are still in charge, we kicked out all the old students though. I tried to find something new to teach, tried out a bunch of shit actually. 
+(Tom, 3, drunkMAX) We had a huge rebranding after that. More or less the same people are still in charge, we kicked out all the old students though. 
+
+(Tom, 3, drunkMAX) I tried to find something new to teach, tried out a bunch of shit actually. 
 
 (Tom, cider, drunkMIN) Now I’m a code-boi but all my relevance is gone. All I have is this dumb-ass scholarship, and I’m pretty sure they’ll take that away soon. 
 
@@ -1561,10 +1607,14 @@ Oh, well that’s just great. Fuck you Russel. Fuck you.
 [Song: PCPDating_ClassJapanese]
 [fade from black]
 
-While examining the new, unfamiliar, definitely-not-recycled environment of my Japanese class, I am taken aback by a young man with floofy hair and deep blue eyes staring at me intently, as though he has completely removed the rest of the outside world from his perception.
+While examining the new, unfamiliar, definitely-not-recycled environment of my Japanese class, I am taken aback by a young man with floofy hair and deep blue eyes staring at me intently, 
+
+as though he has completely removed the rest of the outside world from his perception.
 
 (Davoo, campus, neutral, neutral)
-Sure, I’m the new kid, I get it, but I couldn’t possibly be interesting enough as to warrant this kind of undiluted attention that would usually be reserved for the unprecedentedly fascinating exclusively.
+Sure, I’m the new kid, I get it, 
+
+but I couldn’t possibly be interesting enough as to warrant this kind of undiluted attention that would usually be reserved for the unprecedentedly fascinating exclusively.
 
 He understands me, he KNOWS me, he...
 
@@ -1585,7 +1635,9 @@ I decide to alert him to my presence with a tap on the shoulder.
 
 He does a silly, lower pitched, voice, implying that he’s at least partially joking... I’m just not sure how much.
 
-(Davoo, explaining, happyMAX) Anyways, as part of my assistant duties, I am obliged to ask you what you think of the lecture. So, what do you think? And don’t just answer, ruminate on it, really understand why you feel the way you do.
+(Davoo, explaining, happyMAX) Anyways, as part of my assistant duties, I am obliged to ask you what you think of the lecture. 
+
+(Davoo, explaining, happyMAX) So, what do you think? And don’t just answer, ruminate on it, really understand why you feel the way you do.
 
 [CHOICE]
 *It is eh*
@@ -1595,11 +1647,19 @@ He does a silly, lower pitched, voice, implying that he’s at least partially j
 
 The question is... not all that simple to answer. While Digi’s point was clear and there was sick looking anime footage on screen, I’m not sure I... relate? 
 
-I can appreciate his appreciation of less talked about aspects of visual storytelling, but the deeper understanding of meta-narrative intricacies doesn’t benefit me unless they were contributing factors to my enjoyment of media in the first place, making it easier for me to seek out those specific qualities. 
+I can appreciate his appreciation of less talked about aspects of visual storytelling, 
 
-The lecture essentially only taught me how to find media which Digibro would enjoy, thereby exemplifying his skill with regards to this type of communication quite nicely but not being useful to me in the slightest. 
+but the deeper understanding of meta-narrative intricacies doesn’t benefit me unless they were contributing factors to my enjoyment of media in the first place, 
 
-This isn’t “How to appreciate Digibro”-class after all, right? We should learn about the subject through the lens provided by our professor, not learn about the professor through the lens provided by the subject. 
+making it easier for me to seek out those specific qualities. 
+
+The lecture essentially only taught me how to find media which Digibro would enjoy, 
+
+thereby exemplifying his skill with regards to this type of communication quite nicely but not being useful to me in the slightest. 
+
+This isn’t “How to appreciate Digibro”-class after all, right? 
+
+We should learn about the subject through the lens provided by our professor, not learn about the professor through the lens provided by the subject. 
 
 What did any of this even have to do with Japanese?
 *
@@ -1608,22 +1668,34 @@ What did any of this even have to do with Japanese?
 
 The question is... not all that simple to answer. It probably was a bad Japanese lesson, right? 
 
-No, It definitely was a bad Japanese lesson, I didn’t learn jack shit about the language apart from some technical terms regarding animation and the otaku subculture, which I’m pretty sure he didn’t pronounce correctly. 
+No, It definitely was a bad Japanese lesson, I didn’t learn jack shit about the language apart from some technical terms regarding animation and the otaku subculture, 
 
-But that’s more of a plus in a way. I was kind of worried this was gonna be legit language class and that sounds boring, so I’m actually really glad that it turned out to be media analysis interspersed with deep dives into the menacing mind of a madman. 
+which I’m pretty sure he didn’t pronounce correctly. 
+
+But that’s more of a plus in a way. I was kind of worried this was gonna be legit language class and that sounds boring, 
+
+so I’m actually really glad that it turned out to be media analysis interspersed with deep dives into the menacing mind of a madman. 
 
 Pretty standard fare for this school as I’ve come to expect. 
 
-Besides, whenever the topic did bore me a little, I could just enjoy the sakuga being projected onto the wall behind our ranting profs legitimately baller PowerPoint-Style tbh. So yeah, I think I liked it.
+Besides, whenever the topic did bore me a little, I could just enjoy the sakuga being projected onto the wall behind our ranting profs legitimately baller PowerPoint-Style tbh. 
+
+So yeah, I think I liked it.
 *
 
 (PCPG) I guess I...
 
-(Davoo, thinking) The point about abstraction was really interesting, especially when you extend it to other mediums, so I added some examples where the concept can be applied to video games especially in the powerpoint to really drive it home.
+(Davoo, thinking) The point about abstraction was really interesting, especially when you extend it to other mediums, 
+
+(Davoo, thinking) so I added some examples where the concept can be applied to video games especially in the powerpoint to really drive it home.
 
 I admit to my verbal assailant that, without the powerpoint presentation, I likely wouldn’t have grasped half as much as I did of the lecture.
 
-(Davoo, explaining, happyMIN) Yeah, exactly. I mean, that’s the point of having the friggin visual aid, right? To layer sensory inputs, in order to kind of divide the information up for different regions of the brain to analyze synchronously. To form a Gesamtkunstwerk if you will.
+(Davoo, explaining, happyMIN) Yeah, exactly. I mean, that’s the point of having the friggin visual aid, right? 
+
+(Davoo, explaining, happyMIN) To layer sensory inputs, in order to kind of divide the information up for different regions of the brain to analyze synchronously. 
+
+(Davoo, explaining, happyMIN) To form a Gesamtkunstwerk if you will.
 
 He seems really excited, and he sounds right, so sure, why not.
 
@@ -1631,7 +1703,9 @@ He seems really excited, and he sounds right, so sure, why not.
 
 I just hope he doesn’t ask me what a “Gesamtkunstwerk” is. I’m not even sure how I would write that word.
 
-(Davoo, greeting, neutral) I like you, new kid. A lot of students don’t really appreciate the prof's lecture style. What a bunch of IDIOTS. If you ever wanna compare notes or something, just ask.
+(Davoo, greeting, neutral) I like you, new kid. A lot of students don’t really appreciate the prof's lecture style. What a bunch of IDIOTS. 
+
+(Davoo, greeting, neutral) If you ever wanna compare notes or something, just ask.
 
 Slipping into that parody voice appears to just be a thing he does. That’s kinda cute. 
 
@@ -1660,7 +1734,9 @@ With that, he storms out of the classroom, assumably to tend to one of the many 
 
 (PCPG) Just his dedication or is he like some kind of expert?
 
-(Digi|Professor Digibro, Campus, 5, ConfusedMIN) Maybe in some respects, but he didn’t know jack shit about anime before he started this class. Being a sucker for the analytical aspect naturally drew him here, I guess.
+(Digi|Professor Digibro, Campus, 5, ConfusedMIN) Maybe in some respects, but he didn’t know jack shit about anime before he started this class. 
+
+(Digi|Professor Digibro, Campus, 5, ConfusedMIN) Being a sucker for the analytical aspect naturally drew him here, I guess.
 
 Huh.
 
@@ -1682,7 +1758,9 @@ He hands me a piece of paper with nigh illegible handwriting on both sides.
 
 (PCPG) Yeah I can see that but a list of what?
 
-(Digi|Professor Digibro, Campus, 4, HappyMAX) Media recommendations. I’m not forcing you to consume all of that, of course. Not sure I’d even be allowed to, but you really should have a look at every single thing on that list. It’s some great shit.
+(Digi|Professor Digibro, Campus, 4, HappyMAX) Media recommendations. I’m not forcing you to consume all of that, of course. 
+
+(Digi|Professor Digibro, Campus, 4, HappyMAX) Not sure I’d even be allowed to, but you really should have a look at every single thing on that list. It’s some great shit.
 
 [CHOICE]
 *I’m kind of a piece of shit already, I can’t afford to go full otaku*
@@ -1692,7 +1770,9 @@ He hands me a piece of paper with nigh illegible handwriting on both sides.
 
 (PCPG) Look, you’re a really interesting teacher by way of how you present yourself, but I’m not gonna become the kind of weirdo who’s THIS into anime.
 
-(Digi|Professor Digibro, Campus, 3, AngryMAX) What do you mean “weirdo”? How can one even be [i]too[/i] into something? How could you possibly cast judgement upon the entire medium of animation as a whole?
+(Digi|Professor Digibro, Campus, 3, AngryMAX) What do you mean “weirdo”? How can one even be [i]too[/i] into something? 
+
+(Digi|Professor Digibro, Campus, 3, AngryMAX) How could you possibly cast judgement upon the entire medium of animation as a whole?
 
 (PCPG) I don’t know man, maybe I’m just not the right kind of autistic for it.
 
@@ -1756,7 +1836,9 @@ Digi gives an approving nod as though me slacking off on my academic duties does
 
 (PCPG) So what? I start reading and you just sit there? Even if it’s a light novel, reading the whole thing will take a while.
 
-(Digi|Professor Digibro, Campus, 1, smittenMED) I could read it to you...? All of the dialogue is permanently etched into my mind anyways and years of lecturing have definitely improved my delivery.
+(Digi|Professor Digibro, Campus, 1, smittenMED) I could read it to you...? 
+
+(Digi|Professor Digibro, Campus, 1, smittenMED) All of the dialogue is permanently etched into my mind anyways and years of lecturing have definitely improved my delivery.
 
 (PCPG) I’m not a child.
 
@@ -1811,8 +1893,7 @@ I think I get it now! Basically, this is Professor Bestman's weekly outlet to te
 
 (PCPG) But what has this all got to do with memes? 
 
-(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n
-So, any further questions regarding the topics for this course?
+(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n So, any further questions regarding the topics for this course?
 
 [SFX: PCP-AMBIENT_Classroom]
 The entire classroom falls into a noisy chaos, pens and books fly through the air, everybody tries to make their opinion or joke heard. Some 4-channers and Redditors get into a violent argument about who has the better memes.
@@ -2518,7 +2599,9 @@ On my way through the endless, confusing web of corridors that the PCPU consists
 
 The bright green and purple piece of paper announces the upcoming student council election but doesn’t give much information beyond that.
 
-It’s not like I’m expecting a full-fledged campaign, but the fact that I don’t even know who’s running is kind of odd. Wasn’t Mage the vice president? Maybe I should ask her about the candidates.
+It’s not like I’m expecting a full-fledged campaign, but the fact that I don’t even know who’s running is kind of odd. 
+
+Wasn’t Mage the vice president? Maybe I should ask her about the candidates.
 
 The door sign ahead of me reads “Computer Lab,” and inside I see a familiar silhouette clacking away at a keyboard.
 
@@ -2561,19 +2644,27 @@ The program compiles.
 
 (PCPG) Well you’re sure as fuck closer to that goal than me. I haven’t even greeted the world of techno babble with a warm “hello,” so color me impressed by whatever this is you’re doing.
 
-(Tom, 1, happyMIN) It’s not that hard, really. I always thought I was too dumb for this shit, and I am, but if you just do it, you’ll eventually get the hang of it. There’s actually this great book called “Learn Python the Hard Way,” if you’re interested.
+(Tom, 1, happyMIN) It’s not that hard, really. I always thought I was too dumb for this shit, and I am, but if you just do it, you’ll eventually get the hang of it. 
+
+(Tom, 1, happyMIN) There’s actually this great book called “Learn Python the hard way,” if you’re interested.
 
 (PCPG) Sure, maybe I’ll look into it, but I’m having trouble believing that you are too stupid for anything, mister ex-professor programmer guy.
 
 Tom, unwilling to just accept the compliment, reaches for his milkshake-looking drink again.
 
-(Tom, 4, sadMIN) That’s really nothing to be impressed by. You pretty much just have to be at the right place at the right time and maybe not completely braindead to become a professional ponyfag. 
+(Tom, 4, sadMIN) That’s really nothing to be impressed by. 
+
+(Tom, 4, sadMIN) You pretty much just have to be at the right place at the right time and maybe not completely braindead to become a professional ponyfag. 
 
 (Tom, huel, angryMIN) There’s enough fuckers on the spectrum who will eat that shit up.
 
-(PCPG) I really feel like you’re being too hard on yourself, but sure, if you don’t want credit for that, I’ll shut up about it. What is that Huel-stuff you’re drinking by the way? And don’t tell me it’s wine.
+(PCPG) I really feel like you’re being too hard on yourself, but sure, if you don’t want credit for that, I’ll shut up about it. 
 
-(Tom, huel, confusedMIN) Nah, only alcoholic beverages are wine, this is post-food lunch. Besides, people look at you weirdly, when you tell them that you’re substituting meals with wine.
+(PCPG) What is that Huel-stuff you’re drinking by the way? And don’t tell me it’s wine.
+
+(Tom, huel, confusedMIN) Nah, only alcoholic beverages are wine, this is post-food lunch. 
+
+(Tom, huel, confusedMIN) Besides, people look at you weirdly, when you tell them that you’re substituting meals with wine.
 
 (PCPG) I’m guessing this is more weird transhumanism.
 
@@ -2599,7 +2690,9 @@ I lean back in my chair, suddenly realizing that I still don’t exactly know wh
 
 (Tom, 2, confusedMAX) Wait, I didn’t even tell you? Fuck, this is marketing 101: Tell people what you’re making and what your deal is twenty-four fucking seven. 
 
-(Tom, 2, angryMIN) And second of all, how dare you insult me by implying that this is some derivative bullshit like a mod? I’m working on a 100% genuine one-man indie game here and it’s fucking dope.
+(Tom, 2, angryMIN) And second of all, how dare you insult me by implying that this is some derivative bullshit like a mod? 
+
+(Tom, 2, angryMIN) I’m working on a 100% genuine one-man indie game here and it’s fucking dope.
 
 (PCPG) Should I just abandon that front all together, or is this something you’ll accept compliments for at least?
 
@@ -2607,11 +2700,15 @@ I lean back in my chair, suddenly realizing that I still don’t exactly know wh
 
 (PCPG) So what’s your game about? Sell me on it.
 
-(Tom, 1, happyMAX) It’s an action platformer, centered around a cute raccoon-ninja-girl and her bloodthirsty sword slicing up monsters and generally being edgy, but in the cool way, hopefully. 
+(Tom, 1, happyMAX) It’s an action platformer, centered around a cute raccoon-ninja-girl and her bloodthirsty sword slicing up monsters and generally being edgy, 
+
+(Tom, 1, happyMAX) but in the cool way, hopefully. 
 
 (Tom, 2, happyMIN) Wanna check it out?
 
-I want to say yes, but a quick glance at the clock reveals that I really should be heading to class right about now. Academia or video games: A moral quandary as old as time itself.
+I want to say yes, but a quick glance at the clock reveals that I really should be heading to class right about now. 
+
+Academia or video games: A moral quandary as old as time itself.
 
 [CHOICE]
 *Go to class. How could it possibly have any far reaching significance for me to play this game right now?*
@@ -2694,11 +2791,15 @@ A few attempts, and the occasional frustrated noise from Tom later, I finally ma
 
 (PCPG) Yeah, well fuck academia. You obviously don’t give a shit and you made all of this. So honestly, what good is this school really?
 
-(Tom, 3, shockedMAX) Don’t put me in a position where I have to defend this shit, but the connections are useful for one thing. There’s a reason why I’m trying not to get kicked out of this place after all.
+(Tom, 3, shockedMAX) Don’t put me in a position where I have to defend this shit, but the connections are useful for one thing. 
+
+(Tom, 3, shockedMAX) There’s a reason why I’m trying not to get kicked out of this place after all.
 
 (PCPG) They won’t kick you, if you make yourself big enough of a deal, and without trying to blow smoke up your ass or anything: Azumi is big deal material.
 
-(Tom, 1, shockedMIN) Still, that takes a shitload of marketing for anyone who isn’t an insane genius or ridiculously lucky. I’m neither and I have to work on my project, learn the skills to complete it, and market it simultaneously, which is just... 
+(Tom, 1, shockedMIN) Still, that takes a shitload of marketing for anyone who isn’t an insane genius or ridiculously lucky. 
+
+(Tom, 1, shockedMIN) I’m neither and I have to work on my project, learn the skills to complete it, and market it simultaneously, which is just... 
 
 (Tom, 1, sadMAX) ...a lot. Especially if time is running out.
 
@@ -2727,7 +2828,9 @@ The next day...
 Davoo raises his hand to make one such inquiry. I hadn’t noticed him sitting there.
 
 [SLIDE Ben left]
-(Davoo, campus, greeting, confusedMIN) This isn’t about the lecture necessarily, but let’s say there was a kind of particle whose existence was untethered by the laws of physics. With complete sovereignty over its state of be-
+(Davoo, campus, greeting, confusedMIN) This isn’t about the lecture necessarily, but let’s say there was a kind of particle whose existence was untethered by the laws of physics. 
+
+(Davoo, campus, greeting, confusedMIN) With complete sovereignty over its state of be-
 
 What the hell would that even mean?
 
@@ -2761,13 +2864,17 @@ Well, class is over anyways, so I might as well see what’s up.
 
 (Davoo, campus, fidgeting) Sure, if I find the article again, I’ll show it to you. Anyways, where are you heading?
 
-Davoo seems really uncomfortable addressing the issue any further. Something is definitely going on, but it’s probably in the best interest of our developing friendship to restrain my curiosity for now.
+Davoo seems really uncomfortable addressing the issue any further. 
+
+Something is definitely going on, but it’s probably in the best interest of our developing friendship to restrain my curiosity for now.
 
 (PCPG) I could go for some food right about now. Wanna come grab a bite?
 
 (Davoo, campus, neutral, confusedMIN) Sure, well, depends. You’re not gonna drag me to some restaurant, right?
 
-(PCPG) I don’t quite have the funds for that, with my tuition money being funneled to the top of some multi-level marketing operation. I mean, do you get dragged to restaurants frequently?
+(PCPG) I don’t quite have the funds for that, with my tuition money being funneled to the top of some multi-level marketing operation. 
+
+(PCPG) I mean, do you get dragged to restaurants frequently?
 
 (Davoo, campus, neutral, neutral) Digi is a strange employer.
 
@@ -2799,11 +2906,17 @@ Judging from her facial expression, Davoo’s explanation was of no help whatsoe
 
 This doesn’t seem like the kind of place where you would tip people, though from how Davoo said it, it’s pretty clear that he believes the nature of [i]the premium [/i]to be self-evident.
 
-I step forward to order, and as my gaze wanders across the array of absurd to absurdly normal offerings, I become momentarily transfixed by the gigantuan chunk of raw, bloody beef called the “real meat”. 
+I step forward to order, and as my gaze wanders across the array of absurd to absurdly normal offerings, 
 
-Not sure if anyone actually eats this stuff or if it’s more of an art exhibit. If it serves any purpose whatsoever, that purpose is to call the nature of all other animal products on the menu into question. 
+I become momentarily transfixed by the gigantuan chunk of raw, bloody beef called the “real meat”. 
 
-What are they if not “real meat”? The thought of ordering it briefly pops into my mind before being drowned out by much more sensible thoughts about not being able to afford it and not being willing to, nor capable of devouring five pounds of uncooked beef. 
+Not sure if anyone actually eats this stuff or if it’s more of an art exhibit. 
+
+If it serves any purpose whatsoever, that purpose is to call the nature of all other animal products on the menu into question. 
+
+What are they if not “real meat”? The thought of ordering it briefly pops into my mind before being drowned out by much more sensible thoughts 
+
+about not being able to afford it and not being willing to, nor capable of devouring five pounds of uncooked beef. 
 
 (Cafeteria Lady) If you’re not going to order, step aside.
 
@@ -2813,9 +2926,11 @@ What are they if not “real meat”? The thought of ordering it briefly pops in
 
 We find some seats that aren’t the subject of various territorial disputes between rival gangs, which still isn’t the easiest thing, but I’ve gotten better at it since my first day here.
 
-(Davoo, campus, fidgeting) I didn’t see you in Digi’s class yesterday.
+(Davoo, campus, fidgeting) I haven’t seen you in Digi’s class yesterday.
 
-(Davoo, campus, explaining, happyMIN) He holds a lot of lectures in comparison to the other professors, human content machine and all that, but it’s really worthwhile to listen to all of them to get the bigger picture and get into the mindset to understand where he’s coming from, you know?
+(Davoo, campus, explaining, happyMIN) He holds a lot of lectures in comparison to the other professors, human content machine and all that, 
+
+(Davoo, campus, explaining, happyMIN) but it’s really worthwhile to listen to all of them to get the bigger picture and get into the mindset to understand where he’s coming from, you know?
 
 (PCPG) Turns out that taking every single course at a university, and actually attending all classes is physically impossible, so I have to skip out on a few.
 
