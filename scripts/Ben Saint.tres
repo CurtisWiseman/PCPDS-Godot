@@ -981,20 +981,23 @@ Just maybe...
 [Song: PCPDating_LifeInEndlessWar]
 [fade from black]
  
-I’m due for my weekly report to Ben on my progress in finding the Pizza Party University, but so far I have no actual leads. Finding any meaningful knowledge on them, let alone actually finding them seems nigh impossible with how much unreliable information is out there.
+I’m due for my weekly report to Ben on my search of the Pizza Party University, but so far I unfortunately have no actual leads. 
+
+Finding any meaningful knowledge on them, let alone actually locating the university seems nigh impossible with how much unreliable information is out there.
  
 Schrafft also sent out a cap call for a zone recently, a nice diversion from this search, so I’ll probably go join them afterwards.
  
 [Location: saintbencathedral]
+(Ben, casual, base, neutral)
 I find Ben alone on the steps in front of the Cathedral.
  
-(Ben, casual, base, neutral, offleft, center) Hey PCPG, got a dead cop on ya?
+(Ben, casual, point, happyMIN) Hey PCPG, got a dead cop on ya?
  
 (PCPG) Uhh, no? Should I?
  
-(Ben, casual, point, neutral) Well, I mean that does make me think less of you, but it’s okay.
+(Ben, casual, base, neutral|cloud) Well, I mean that does make me think less of you, but that's fine.
  
-(Ben, casual, base, neutral|cloud) Anyways, any leads on the Pizza Party University?
+(Ben, casual, base, happyMIN|cloud) Anyways, any leads on the Pizza Party University?
  
 Uh oh. I’m not sure how he’s gonna take me being empty handed.
  
@@ -1003,50 +1006,58 @@ Uh oh. I’m not sure how he’s gonna take me being empty handed.
 (Ben, casual, base, neutral)
 Ben tenses up for a second, then relaxes.
  
-(Ben, casual, base, sadMIN) I guess I do owe you one now, so I’ll let you off the hook this time.
- 
-Huh, I guess he does feel kinda bad about jeopardizing the world. Honestly, I didn’t expect that.
- 
+(Ben, casual, base, sadMIN) I guess I do owe you one, so I’ll let you off the hook this time.
+
+Huh, I guess he does feel kinda bad about nearly jeopardizing the fate of the world. Honestly, I didn’t expect that.
+
 (Ben, casual, base, neutral) Anyways, I’m not even sure why I waited for you cause I actually gotta go somewhere, so see you later.
  
-(Ben, casual, base, neutral, center, slide, offright-100, 25)
-(PCPG) Wait a sec, why not join the zone cap with us? You got the call too right?
- 
+[SLIDE Ben right+200]
+(PCPG) Wait a second, why not join the zone cap with us? You got the call too right?
+
 He hesitates at the question.
+
+(Ben, casual, base, shockMIN, right+200) Oh, well I’m pretty busy right now, so I’ll probably sit this one out.
  
-(Ben, casual, base, shockMIN, offright-100) Oh, well I’m pretty busy right now, so I’ll probably sit this one out.
- 
-(PCPG) Don’t you sit every one of them out? Why are you never present for most of the WAR anyways? What could be so important that you just leave your gang members alone to fend for themselves?
- 
-[StopMusic]
+(PCPG) Don’t you sit every one of them out? Why are you never present for most of the WAR anyways? 
+
+(PCPG) What could be so important that you just leave your gang members alone to fend for themselves?
+
+(Ben, casual, base, neutral)
 Ben goes quiet for a moment, then in a calm voice replies.
- 
-(Ben, casual, base, sadMIN, offright-100, slide, center, 10) I guess you do deserve some kinda explanation.
+
+[StopMusic]
+[SLIDE Ben center]
+(Ben, casual, base, sadMIN) I guess you do deserve some kinda explanation.
  
 [Song: PCPDating_ProCrastinatorShortLoop]
-(Ben, casual, base, neutral) So, back when I was younger, I went to college and got myself a degree that I thought was really worth something. I used it for a while working random jobs, and even though that time I spent wasn’t all bad, it never really felt like what I really wanted to do with my life. 
- 
-(Ben, casual, base, happyMIN) That’s when I picked up drawing comics, and to this day, it’s where my real passion lies.
- 
-(Ben, casual, point, neutral) Even this professor job is just a side gig I do to pay the bills while hanging out with my friends. It’s not all bad, but it’s definitely not my main focus in life.
- 
-(Ben, casual, base, sadMIN) And don’t get me wrong, I love participating in the WAR, but it doesn’t feel as important to me right now as working on my comics. 
+(Ben, casual, base, neutral) So, back when I was younger, I went to college and got myself a degree that I thought was really worth something. 
 
-(Ben, casual, base, sadMIN) I’m sorry I’m not around the Killers as much, but I do actually appreciate you guys. I just have other responsibilities that need to be done first. I promise I will try to join you guys more often when I finish what I’m working on.
+(Ben, casual, base, sadMIN) I used it for a while working random jobs, and even though that time I spent wasn’t all bad, it never really felt like what I really wanted to do with my life. 
  
+(Ben, casual, point, happyMIN) That’s when I picked up drawing comics, and to this day, it’s where my real passion lies.
+ 
+(Ben, casual, base, neutral|cloud) Even this professor job is just a side gig I do to pay the bills while hanging out with my friends. It’s not all bad, but it’s definitely not my main focus in life.
+ 
+(Ben, casual, base, sadMIN|cloud) And don’t get me wrong, I love participating in the WAR, but it doesn’t feel as important to me right now as working on my comics. 
+
+(Ben, casual, base, sadMIN) I’m sorry I’m not around the Killers as much, but I do actually appreciate you guys. I just have other responsibilities that need to be done first. 
+
+(Ben, casual, point, neutral) I promise I will try to join you guys more often when I finish what I’m working on.
+
 [StopMusic]
 (PCPG) ...
- 
-(PCPG) Wow, I’m not even sure if that was sincere or not, impressive.
- 
-(Ben, casual, base, happyMIN) Oh don’t fucking patronize me.
- 
-(PCPG) I guess I never knew you draw comics. Are they any good?
- 
-(Ben, casual, point, happyMIN) You doubt my ability to draw huh? Why don’t you come over to my place after your zone cap and I’ll show you how it’s done.
- 
+
+(PCPG) Wow, I’m not even sure if you were being sincere there or not, impressive.
+
+(Ben, casual, base, happyMIN|cloud) Oh don’t you fucking patronize me.
+
+(PCPG) Huh, I guess I never knew you draw comics. Are they any good?
+
+(Ben, casual, base, happyMIN|cloud) You doubt my ability to draw huh? Why don’t you come over to my place after your zone cap and I’ll show you how it’s done. You can watch me work on my next page. 
+
 (PCPG) Sure, sounds good. Maybe if I’m impressed enough I’ll even buy a copy.
- 
+
 (Ben, casual, base, happyMIN) Sounds like a free sale to me.
  
 [fade to black]
@@ -1061,16 +1072,19 @@ After the successful zone cap I make my way over to Ben's place. He greets me at
 (Ben, casual, base, neutral, left) So yeah, welcome to-
  
 [StopMusic]
+(Brunswick, neutral, offright)
 (Ben, casual, base, shockMAX)
-(Brunswick, neutral, offright, slide, right) Mamo?
+[SLIDE Brunswick right]
+(Brunswick, neutral, right) Mamo?
  
 Uh oh.
- 
-(Brunswick, neutral, right, slide, left) SWINE!
+
+[SLIDE Brunswick center]
+(Brunswick, neutral) SWINE!
  
 [SFX: PCP-SFX_PokeballReturn]
 [Brunswick leaves]
-But before Brunswick has a chance to trample us and destroy Ben’s room in the process, Ben pulls out a Pokéball and returns him to it.
+But before Brunswick has a chance to trample both us and the room, Ben pulls out a Pokéball and returns him to it.
 
 [Song: PCPDating_DateTheme]
 (Ben, casual, base, happyMIN) Whew, that was a close one. Sorry about that, forgot Brunswick was here.
@@ -1081,21 +1095,27 @@ But before Brunswick has a chance to trample us and destroy Ben’s room in the 
  
 Fair point.
  
-With Brunswick out of the way I take a better look at the room. Seems pretty on brand if you ask me, though weirdly enough the room smells a lot better than I expected. Don’t know why I thought it would smell bad, but I just kinda assumed so? There does seem to be way more energy drink cans in here than reasonable for one person though. 
+With Brunswick out of the way I take a better look at the room. 
+
+Seems pretty on brand if you ask me, though there does seem to be way more energy drink cans in here than reasonable for one person.
+
+Weirdly enough the room smells a lot better than I expected. Don’t know why I thought it would smell bad, I guess I just kinda assumed so?  
  
-(Ben, casual, base, neutral, center, slide, right)
-Ben sits down at his desk in front of his tablet and gets to work. Careful of the various orbs strewn about, I take a seat on his bed and watch him.
+[SLIDE Ben right]
+Ben sits down in front of his tablet on his desk and gets to work. Careful of the various orbs strewn about, I take a seat on his bed and watch him.
  
 (PCPG) So this is where you spend most of your time, by yourself. Doesn’t it get lonely?
  
-(Ben, casual, point, neutral, right) God you’re such a normie. Of course it does, but so does everyone like all the time. I mean, I tried not being lonely a couple times before, didn’t work out too great.
+(Ben, casual, base, neutral, right) God you’re such a normie. Of course it does, but so does everyone like all the time. I mean, I tried not being lonely a couple times before, didn’t work out too great.
+
+The room goes silent as Ben continues tapping away at his tablet. He keeps trying to draw a line, undoing it, and trying again to no avail.
+
+(Ben, casual, slouch, sadMIN, right+50)
+After a couple of frustrating tries of this he puts down his stylus and faces me.
  
-(Ben, casual, base, neutral, right)
-The room goes silent as Ben continues tapping away at his tablet. He keeps trying to draw a line, undoing it, and trying again to no avail. He gives this up after a couple tries, puts down his stylus, and faces me.
+(Ben, casual, base, neutral, right) Hey, so like, not to be rude, but I've noticed that lately you've had a sort of, [i]interest[/i], in me. It’s not like I hate it, but I don’t really get it.
  
-(Ben, casual, slouch, neutral, right) Hey, so like, not to be rude, but like, why do you even follow me around and talk to me anyways? It’s not like I hate it, but I don’t really get it.
- 
-(PCPG) Oh, I mean, I kinda resonate with you you know? It’s weird, I don’t really know how to describe it..
+(PCPG) Oh, I mean, I guess I kinda resonate with you you know? It’s weird, I don’t really know how to describe it...
  
 (PCPG) I.. I guess I just like the cut of your jib.
  
@@ -1104,16 +1124,24 @@ Ben ponders on this for a moment.
  
 (Ben, casual, base, shockMIN, right) Honestly, that sounds kinda gay dude.
  
-Huh, I guess it does.
+I.. I guess it does...
  
-Maybe I [i]am[/i] gay for Ben Saint. I mean, that sounds fucking awful, and also my gender is deliberately ambiguos so I’m not even sure if it’s technically gay or not, but it makes sense, in a way. I did forgive him that one time when I really shouldn’t have.
- 
-Maybe one of these days I should try and ask him out to that fabled RadProm that everyone is talking about...
- 
+Maybe I [i]am[/i] gay for Ben Saint. 
+
+I mean, that sounds fucking awful, and also my gender is deliberately ambiguous so I’m not even sure if it’s technically gay or not, but it makes sense, in a way.
+
+Hmm, maybe one of these days I could even try and ask him out to that fabled RadProm that everyone is talking about.. /n
+See what that would be like...
+
+(Ben, casual, base, neutral, right)
 Ben turns around to face his monitor again, but before he picks up his stylus he suddenly stops.
  
-(Ben, casual, base, neutral, right) Hey, how would you like it if we went to this gaming club I sometimes go to? They usually meet up around this time in the library on campus, and I really don’t feel like drawing right now. We could also just stay here and vape together if that sounds more your speed.
- 
+(Ben, casual, base, happyMIN, right) Hey so, how would you like it if we went to this gaming club I sometimes go to? 
+
+(Ben, casual, base, neutral, right) I really don’t feel like drawing right now, and they usually meet up around this time in the library on campus.
+
+(Ben, casual, base, happyMIN, right) We could also just stay here and vape together if that sounds more your speed.
+
 What should I say?
  
 [CHOICE]
@@ -1126,163 +1154,182 @@ What should I say?
 (PCPG) Sure, let’s go check out this club.
 
 [Ben leaves]
-We head out and walk on over to campus.
- 
-[StopMusic]
+We head on out and walk over to campus.
+
+[fade to black]
 [Location: outsidepcpu.night]
+[fade from black]
  
 (PCPG) Soo, what’s this club like?
- 
-(Ben, casual, base, neutral, offright, center) Eh, honestly it's mostly weird autistic people. Some of them are bearable, most are not. I’ll introduce you to some of the bearable ones.
 
-[Ben leaves]
-[Location: library]
+(Ben) Eh, honestly it's mostly weird autistic people. Some of them are bearable, most are not. I’ll introduce you to some of the bearable ones.
+
+[StopMusic]
 [Song: PCPDating_Library]
+[Location: library]
 
 We enter the library and after a quick scan of the room Ben starts walking towards a group seated at a game near the back.
  
-(Vincent, neutral, offleft, left)
-(Sophia|Sophia, angry, offleft, center) Can you stop cheating already? This is the third game where it's been pretty obvious you’ve cheated.
+(Vincent, blank, neutral, left+150)
+(Sophia, blank, angry, right-150) Can you stop cheating already? This is the third game where it's been pretty obvious you’ve cheated.
  
-(Vincent|Vincent, angry, left) I did no such thing you troglodyte. Why would I care enough about this silly game to cheat?
+(Vincent, blank, angry, left+150) I did no such thing you troglodyte. Why would I care enough about this silly game to cheat?
  
-(Sophia|Sophia, angry) I don’t know why, but I know you did.
+(Sophia, blank, angry, right-150) I don’t know why, but I know you did.
  
-(Vincent|Vincent, neutral, left) Ugh, just be quiet and be glad you are even worthy of my presence you dolt.
+(Vincent, blank, neutral, left+150) Ugh, just be quiet and be glad you are even worthy of my presence you dolt.
+
+[SLIDE Vincent left]
+[SLIDE Sophia center]
+(Ben, casual, base, happyMIN, offright)
+[SLIDE Ben right]
+
+(Ben, casual, base, happyMIN, right) Hey guys, what's up?
  
-(Ben, casual, base, happyMIN, offright, slide, right) Hey guys, what's up?
- 
-(Sophia|Sophia, happy) Vincent’s being a cheating asshole again, but that isn’t news, who’s the friend?
- 
+(Sophia, blank, happy) Vincent’s being a cheating asshole again, but that isn’t news, who’s the friend?
+
 (Ben, casual, base, happyMIN, right) This is PCPG, a new face at the school. Little bit of a normie, but otherwise alright.
  
-(PCPG) Hey, I’m not that normie, right? Anyways, what do you guys do here?
+(PCPG) Hey, I’m not that normie, right? /n
+Anyways, what do you guys do here?
  
-(Vincent|Vincent, angry, left) What do you think people do at a gaming club you churl?
+(Vincent, blank, angry, left) What do you think people do at a gaming club you churl?
  
-(PCPG) Oh, uh, yeah..
+(PCPG) Oh, uh, right..
  
-(Sophia, neutral)
-(Vincent, neutral, left)
+(Sophia, blank, neutral)
+(Vincent, blank, neutral, left)
 (Ben, casual, base, neutral, right) Anyways, let's just start a new game.
  
-We sit down and start playing Catan with them. Seems like Sophia is pretty into it, Vincent less so. Ben takes a middle ground between the two, though he doesn’t seem to be any good at it compared to them.
+We sit down and start playing Catan with them. Seems like Sophia is pretty into it, Vincent less so. 
+
+Ben takes a middle ground between the two, though he doesn’t seem to be any good at the game compared to them.
  
-(Ben, casual, base, neutral, right) Magda ain’t coming today Vincent?
+(Ben, casual, point, neutral, right) Magda ain’t coming today Vincent?
  
 Vincent grunts in what appears to be agreement, though I suppose it could be interpreted either way.
  
 (Ben, casual, base, neutral|cloud, right)
-(Sophia|Sophia, sad) I mean at least she is probably doing something far more fulfilling than bitching about this game. Kinda jealous to be honest.
+(Sophia, blank, sad) At least she is probably doing something far more fulfilling than bitching about this game. Kinda jealous to be honest.
  
-(Sophia|Sophia, blush) I just love her art. The way she draws Poobahs with so much expression, almost human-like, is pretty inspiring. 
- 
-(Ben, casual, base, neutral, right)
+(Sophia, blank, smitten) I just love her art. The way she draws Poobahs with so much expression, almost human-like, is pretty inspiring. 
+
 (PCPG) Poobahs huh? I’d love to see them sometime, I’m a big fan of the games.
- 
-(Sophia, confused)
-(Vincent, shocked, left)
+
+(Ben, casual, base, neutral, right)
+(Sophia, blank, confused)
+(Vincent, blank, shocked, left)
 Vincent’s eyes light up at my remark.
  
-(Sophia|Sophia, neutral) Oh jeez here we go again.
+(Sophia, blank, neutral) Oh jeez here we go again.
 
-(Vincent|Vincent, happy, left) So you’re a Poobah fan huh? You may be interested to know that I myself am a lifelong devotee of the Poobah fandom. As a tender youth I was weaned on the Saturday morning cartoon, a program which, while noticeably hurt by budgetary limitations, nevertheless holds an undeniable nostalgic charm to this very day, In my adolescence I graduated to more mature fare, specifically the critically acclaimed, always boundary pushing and occasionally subversive TV-PG Poobah series reboot....
+(Vincent, blank, happy, left) So you’re a Poobah fan huh? You may be interested to know that I myself am a lifelong devotee of the Poobah fandom. As a tender youth I was weaned on the Saturday morning cartoon, a program which, while noticeably hurt by budgetary limitations, nevertheless holds an undeniable nostalgic charm to this very day, In my adolescence I graduated to more mature fare, specifically the critically acclaimed, always boundary pushing and occasionally subversive TV-PG Poobah series reboot....
  
 We let Vincent run his mouth as Sophia urges us to continue playing the game.
  
-(Vincent|Vincent, happy, left)  ...as a fan of both video games as a medium and of Poobah as an I.P., naturally I have procured emulated versions of many, if not most of these. Furthermore, if it be your pleasure, you need only say the word, and I would-
+(Vincent, blank, happy, left) ..naturally I have procured emulated versions of many, if not most of these. Furthermore, if it be your pleasure, you need only say the word, and I would-
 
 (Ben, casual, base, neutral|cloud, right)
-(Sophia|Sophia, happy) Okay, let me stop you right there. I thought you only did this spiel for cute girls you wanted to “woo” or whatever. Are you trying to hit on him?
- 
-(PCPG) No no, that was interesting to listen to. I didn’t know you were into Poobahs that much. 
+(Sophia, blank, happy) Okay, let me stop you right there. I thought you only did this spiel for cute girls you wanted to “woo” or whatever. Are you trying to hit on him?
 
-(Ben, casual, base, neutral, right)
-(Vincent, blush, left)
+(PCPG) No no, that was interesting to listen to. I didn’t know you were into Poobahs that much.
+
+(Vincent, blank, smitten, left)
 (PCPG) Maybe I’ll take you up on that offer for those emulated games, I definitely want to experience more Poobah related stuff.
 
-(Vincent, neutral, left)
-(Ben, casual, base, neutral, right) Okay this interaction is getting a little too gay for my liking, we should probably focus on the game now.
- 
-We continue playing and eventually Vincent wins.
- 
-(Sophia|Sophia, angry) I’m telling you he’s cheating. How else does he win every time?
- 
-(Vincent|Vincent, angry, left) Maybe I’m simply better than you at these trivial tactical scenarios you dunce.
- 
-(Sophia|Sophia, angry) Insult me with another weird word and I will vaporize you.
+(Ben, casual, base, neutral, right) Okay this interaction is getting a little too gay for my liking, we should probably focus on the game again.
 
-(Vincent, neutral)
-(Sophia|Sophia, neutral) Anyways I better get going. I leave early for Crown City tomorrow.
+(Vincent, blank, neutral, left)
+We continue playing and eventually Vincent wins.
+
+(Sophia, blank, angry) I’m telling you he’s cheating. How else does he win every time?
+
+(Vincent, blank, angry, left) Maybe I’m simply better than you at these trivial tactical scenarios you dunce.
+ 
+(Sophia, blank, angry) Insult me with another weird word and I will vaporize you.
+
+(Sophia, blank, neutral)
+Sophia then sighs and stands up from the table.
+
+(Vincent, blank, neutral)
+(Sophia, blank, neutral) Anyways I better get going. I leave early for Crown City tomorrow.
  
 (Ben, casual, point, shockMIN, right) Oh yeah, your dad found you a job there right?
- 
-(Ben, casual, base, shockMIN|cloud, right)
-(Sophia|Sophia, happy) Yeah, still don’t really know too much about it. I’ll probably be able to come back every so often to play with you guys though, so you won't be rid of me that easily.
- 
+
+(Sophia|Sophia, blank, happy) Yeah, still don’t really know too much about it. I’ll probably be able to come back every so often to play with you guys though, so you won't be rid of me that easily.
+
 (Ben, casual, base, neutral|cloud, right) Well good luck with that. I guess this is goodbye for now.
  
-(Ben, casual, base, neutral, right)
-(Sophia|Sophia, happy) Hopefully not for too long. Make sure you guys remember me while I’m gone, okay?
+(Sophia, blank, happy) Hopefully not for too long. Make sure you guys remember me while I’m gone, okay?
 
+(Ben, casual, base, neutral, right)
 Ben hesitantly nods while Vincent ignores her.
 
-(Sophia|Sophia, neutral, center, offright) Alright, see ya.
+(Sophia, blank, neutral) Alright, see ya guys later.
 
-(Vincent, neutral, left, offright)
-With Sophia gone Vincent stands up and leaves us without saying anything. Concluding that no one else at the club is worth hanging out with we decide to leave as well.
+[SLIDE Sophia offright]
+As soon as Sophia leaves Vincent also silently stands up and makes his way to the library door.
+
+[SLIDE Vincent offright]
+After Ben gives a cursory glance to the rest of the club members, he concludes that no one else at the club is worth hanging out with, and so we decide to leave as well.
+
+[fade to black]
+[StopMusic]
+[==> !showoff art]
 *
  
 *Let’s vape it up here*
- 
+*
+
 (PCPG) I don’t do gatherings that well, lets just vape and chill here.
- 
+
 (Ben, casual, base, neutral, right) Vape and chill? Again, kinda gay dude.
- 
+
 Ben pulls out a couple of juuls from his desk and throws me one. He shows me a couple pod flavours.
- 
-(Ben, casual, base, shockMIN, right) So, which flavour do you want?
- 
+
+(Ben, casual, point, neutral, right) So, which flavour do you want?
+
 [CHOICE]
- 
+
 *Pick Mango*
 *Pick Grape*
 *Pick Creme Brûlée*
- 
+
 *Pick Mango*
- 
+
 (PCPG) Mango, it's my favourite.
- 
-(Ben, casual, base, happyMAX) Hey, same man. Clearly you know your way around the vaping arts. 
+
+(Ben, casual, base, happyMAX, right) Hey, same man. Clearly you know your way around the vaping arts. 
 *
- 
+
 *Pick Grape*
- 
+
 (PCPG) Uh, I guess Grape.
- 
-(Ben, casual, base, neutral) Sure, I got a whole bunch of these by accident from my vape guy.
+
+(Ben, casual, base, neutral|cloud, right) Sure, I got a whole bunch of these by accident from my vape guy.
 *
- 
+
 *Pick Creme Brûlée*
- 
-(PCPG) Give me Creme Brûlée
- 
-(Ben, casual, base, shockMIN) I mean, I personally don’t like it that much, but you do you man. I really only have one cause of a roommate, so I’m kinda glad you're taking it off my hands. 
+
+(PCPG) Give me Creme Brûlée.
+
+(Ben, casual, base, shockMIN|cloud, right) I mean, I don’t like this flavour that much, but you do you man. I really only have it on me cause of a roommate, so I’m kinda glad you're taking it off my hands.
 *
 
-(Ben, casual, base, neutral|cloud, right) 
 [Ben leaves]
-[Location: benroomvape.day]
+[Location: BenRoomVape.day]
 
-After loading it up and taking a hit, the room begins to slowly fog up with vapour. Soon enough visibility gets bad enough that we lose each other in the fog, and only a faint hiss every few seconds indicates the passage of time.
+After loading it up and taking a hit, the room begins to slowly fog up with vapour. 
 
-Hmm, I should strike up a conversation, but what should we talk about?
+Soon enough visibility gets bad enough that we lose each other in the fog, with the only indication of another person in the room being faint hisses sounding every few seconds.
+
+Hmm, I shoulod probably strike up a conversation of sorts, but what should we talk about?
 
 [CHOICE]
-*Ask him about his travels when he was younger*
+*Ask him about his travels*
 *Ask him about his love life*
 
-*Ask him about his travels when he was younger*
+*Ask him about his travels*
 
 (PCPG) So, any interesting stories from when you were abroad?
  
@@ -1291,11 +1338,15 @@ Hmm, I should strike up a conversation, but what should we talk about?
 A faint vape hiss is heard from Ben’s side of the room.
  
 (Ben) Ah, I have one from when I was in Berlin.
- 
+
 (Ben) So I met up with this weird bi dude outside of a club who invited me over to a party, and along the way he told me about his lifelong dream.
  
-(Ben) All he wanted to accomplish before he died, his dying wish mind you, was to marry two girls, have a child with each, and then adopt ten other children, put em all on a boat, and go pirating with them.
- 
+(Ben) All he wanted to accomplish before he died.. 
+
+(Ben) ..his dying wish mind you.. 
+
+(Ben) ..was to marry two girls, have a child with each, adopt ten other children, put em all on a boat, and then of all things go pirating with them.
+
 (PCPG) Huh.
  
 (Ben) Yeah, it was definitely a very strange conversation. He even gave his band of pirates a name, the White… uhh… something. 
@@ -1307,41 +1358,49 @@ A faint vape hiss is heard from Ben’s side of the room.
  
 *Ask him about his love life*
 
-(PCPG) Hey, so, I was wondering. You uh, you got anyone [i]special[/i]? You know, a [i]Mrs. Saint[/i]?
+(PCPG) Hey, so, I was wondering. You uh, you got anyone [i]special[/i]? You know, a [i]Mrs. Saint[/i] by your side?
 
-(Ben) Uhhh, why do you wanna know?
+(Ben) Uhh, uhhh, why do you wanna know?
 
 (PCPG) I was just curious. A man like yourself must have all kinda people flocking to your side.
 
 (Ben) Hehehe, I wish...
 
-(Ben) I mean just the other day I was out shopping and I see this nice girl, and so naturally I say, “Hey, you look nice.”
+(Ben) I mean just the other day I was out shopping and I see this nice girl, and so naturally I just say, “Hey, you look nice.”
 
-Yikes, big mistake [i]already[/i] Benny boy. 
+Yikes, big mistake Benny boy. 
 
-(Ben) But she was really flustered about it, so I was just gonna leave her off with fat rip of my vape, but then she stopped me and was like, “Hey, uhh, you know like, vaping’s bad for you, right?”
+(Ben) But she was really flustered about it, so I was just gonna leave her off with a fat rip of my vape, like the gentleman I am.
 
-oof. That’s what I like to call an irl cringepost.
+(PCPG) Of course.
+
+(Ben) But then she stopped me and was like, “Hey, uhh, you know like, vaping’s bad for you, right?”
+
+Oof. That’s what I like to call an irl cringepost.
 
 (Ben) So of course I pull out my GUN and slide it into her fat gaping yapper and say, “You know.. BULLETS are bad for you, right?”  
 
-(Ben) And then, not a moment later, I give her the fattest rip of a lifetime, literally. An explosive red mushroom cloud if you know what I’m saying.
+(Ben) And then, not a moment later, I give her the fattest rip of a lifetime, literally. A big ass red mushroom cloud if you know what I’m saying.
 
-Holy shit. I mean, I guess she [i]did[/i] deserve it.
+Holy shit! I mean, I guess she [i]did[/i] deserve it.
 
 (Ben) So yeah, I don’t have the greatest luck with all of that romance shit. Just haven’t found the right one I guess.
 
-(PCPG) Don’t worry, I’m sure you’ll find the right one sooner than you think.
+(PCPG) Don’t worry, I’m sure the right one is closer to you than you think.
 
 (Ben) If you say so..
 *
 
-[Location: benroomvape.night]
-We then continue to vape in silence as the sun goes down and the room gets darker and darker. You know, this is actually really nice, sitting in Ben’s room, vaping together, enjoying each others company. I wouldn’t mind doing this more often.
+[Location: BenRoomVape.night]
+We then continue to vape in silence as the sun goes down and the room gets darker and darker. 
 
-Eventually the room darkens enough that I figure I should probably go home now.
+You know, this is actually really nice, sitting in Ben’s room, vaping together, shooting the shit, enjoying each others company. 
+
+I wouldn’t mind doing this more often.
+
+Eventually the room darkens enough that I figure I should probably go home.
  
-(PCPG) Well I better get going then, it was nice chilling out with you. Hopefully we can do so again.
+(PCPG) Well I better get going then, it was nice chilling out with you today. Hopefully we can do so again.
  
 (Ben) Hell yeah, come over anytime. We can play some video games next time or something.
  
@@ -1352,199 +1411,241 @@ I stumble around in the vapour until I find the door.
 (PCPG) Nah I’m good, I found the door.
  
 (Ben) Cool. See you tomorrow then, normie.
-*
 
 [fade to black]
 [StopMusic]
- 
+
 [Scene: !showoff art]
 
-(Ben, casual, exasp, angryMIN)
-[Location: philosophyclass.d]
 [Song: PCPDating_ClassPhilosophy]
+[Location: philosophyclass.d]
+(Ben, campus, exasp, angryMIN, center)
 [fade from black]
  
-(Ben, campus, exasp, angryMIN) So basically that’s why capitalism is fucked, Bernie will be our savior, and we should all just hail our new commie overlords. The tides are changing students, and the future is no longer right or left, it’s forward. Are you ready for it?
+(Ben, campus, exasp, angryMIN) So that’s why capitalism is fucked, Bernie will be our savior, and we should all just hail our new commie overlords. 
+
+(Ben, campus, exasp, angryMIN) The tides are changing students, and the future is no longer right or left, it’s forward. Are you ready for it?
+
+(Ben, campus, base, neutral) Okay, class dismissed. Make sure to watch all the videos I talked about in class today, some real good stuff in there, and definitely make sure to #VOTEBERNIEWEARYANG.
  
-(Ben, campus, base, neutral) Okay that’s class dismissed. Make sure to watch all the videos I talked about in class today, some real good stuff in there, and definitely make sure to #VOTEBERNIEWEARYANG.
- 
-As the term continued, these rants have become more and more bearable, dare I say even somewhat entertaining, but despite that it's still pretty draining being so w o k e for a whole class, so I’m kinda glad it’s over. I better leave before my brain is Yang Gang banged, or more like, Bernie burned any further.
+As the term continued, these rants have become more and more bearable, dare I say even somewhat entertaining. 
+
+Yet despite that it's still pretty draining being so w o k e for a whole class, so I’m kinda glad it’s over.
+
+I better leave before my brain is Yang Gang banged, or more like, Bernie burned any further.
  
 (Ben, campus, point, neutral) Hey PCPG, a moment?
  
-Oh no. I begrudgingly make my way over to his desk.
- 
+Shit. /n
+I begrudgingly make my way over to his desk.
+
 (PCPG) Uh, so what’s up?
- 
-(Ben, campus, base, happyMIN) So today is actually the physical release of my newest comic, and well, I thought it would be neat if you came to check it out with me.
- 
-(Ben, campus, point, happyMIN) I mean, considering you weren’t able to see me actually draw anything last time, I still want to show you my stuff somehow, and this is like, a good opportunity, right?
- 
-Ben’s comics have physical releases? Now I’m curious how good an artist he actually is.
- 
+
+(Ben, campus, base, happyMIN|cloud) So today is actually the physical release of my newest comic, and well, I thought it would be neat if you came to check it out with me.
+
+(Ben, campus, point, happyMIN|cloud) I mean, considering you weren’t able to see me actually draw anything last time, I still want to show you my stuff somehow, and this is like, a good opportunity, right?
+
+Ben’s comics have physical releases? Now I’m curious how good of an artist he actually is.
+
 (PCPG) Hell yeah, I’m in.
- 
-(Ben, campus, base, happyMIN) Okay sick. Meet me after school and we’ll head over to the comic book store together.
- 
+
+(Ben, campus, base, happyMIN|cloud) Okay sick. Meet me after school and we’ll head on over to the comic book store together.
+
 [fade to black]
 [Ben leaves]
 [StopMusic]
 [Location: comicstore.empty]
 [Song: PCPDating_HomeMorning]
+(Ben, campus, base, happyMIN)
 [fade from black]
  
-After school I find myself at the local comic book store with Ben, though the store looks deserted. There isn’t even any staff here. Maybe they are out on a break?
+After school I find myself at the local comic book store at the mall with Ben, though the store looks deserted. There isn’t even any staff here. Maybe they are out on a break?
 
-(Ben, campus, base, happyMIN, offleft, slide, right)
+[SLIDE Ben right-200]
 Ben leads me to a large section to the side labeled “SAINTCOMIX.COM” and I notice Ben’s name written all over the shelf of comics.
  
 (PCPG) Woah, is this all your work? Damn, I didn’t realize how successful a comic book artist you were.
  
-(Ben, campus, base, neutral) Eh, I’d say like half of these probably aren’t all that great, a whole buncha uninspired sequels if I’m being honest. I’m definitely way more proud of this most recent one.
+(Ben, campus, base, neutral, right-200) Eh, I’d say like half of these probably aren’t all that great, a whole buncha uninspired sequels if I’m being honest. I’m definitely way more proud of this most recent one.
  
 Ben then picks up a comic off of the shelf and pushes it into my hand. I read a few pages at his discretion and find it to be a pretty entertaining read.
  
 (PCPG) This is actually really cool. You got such dynamic framing, and the black and white aesthetic really suits that artstyle.
  
-(Ben, campus, base, happyMIN) Aww, thanks man. I put a lot of work into it so I appreciate the compliment.
+(Ben, campus, base, happyMIN, right-200) Aww, thanks man. I put a lot of work into it so I appreciate the compliment.
  
 (PCPG) You know what, you’ve already convinced me. I’m going to buy myself a copy.
  
-(Ben, campus, base, shockMIN, right) Really? I mean you could’ve just asked me for a copy for free, I probably would have given you one, but hey I ain’t complaining.
+(Ben, campus, base, shockMIN, right-200) Really? I mean you could’ve just asked me for a copy for free, I probably would have given you one, but hey I ain’t complaining.
  
-(Ben, campus, point, shockMIN, right) I mean we also could just walk out with this copy right now. It’s technically mine and there’s nobody around to catch us.
+(Ben, campus, point, shockMIN, right-200) I mean we also could just walk out with this copy right now. It’s technically mine and there’s nobody around to catch us.
  
 (PCPG) Nah, I’m impressed enough that I want to actually buy it, to feel like it was worth something you know?
  
-(Ben, campus, base, smittenMIN, right) Well, thanks. That’s pretty cool of you.
+(Ben, campus, base, smittenMIN|cloud, right-200) Well, thanks. That’s pretty cool of you.
  
-*Let’s go to this club*
- 
+*Let's go to this club*
+
 As we make our way to the counter the door opens and two people walk in, one of them a familiar face.
- 
-(Ben, campus, base, neutral, right)
-(Vincent, neutral, offleft, slide, left)
-(Magda, neutral, blank, offleft-100, slide, left-100)
+
+(Vincent, blank, neutral, offleft)
+(Magda, neutral, blank, offleft)
+[SLIDE Vincent center-200]
+[SLIDE Magda left]
+(Ben, campus, base, neutral, right-200)
 (PCPG) Oh hey Vincent, fancy seeing you here.
- 
+
 [Vincent leaves]
 [Magda leaves]
-Vincent, seemingly ignoring us, and the girl he came in with continue walking into the store, and make their way to the “new releases” section. They stop near the middle of the shelf, and after a quick scan, their eyes stop and stare at a particular section of the shelf.
+Vincent, who outright ignores us, and the girl he came in with continue walking into the store, and make their way to the “new releases” section. 
+
+They stop near the middle of the shelf, and after a quick scan, their eyes stop and stare at a particular section of the shelf.
  
 (PCPG) Uhh, Vincent?
  
-After a few seconds of staring they both walk around the store aimlessly for a few seconds only to finally come to a stop at the front desk. Vincent rings the bell on the desk a few times frustratingly, and only after a few seconds of waiting does he decide to address us.
- 
-(Magda, neutral, blank, offleft, center-100)
-(Vincent, confused, offleft, center) Where’s the... the desk girl?
+After a few seconds of staring they both walk around the store aimlessly for a few seconds only to finally come to a stop at the front desk.
+
+(Vincent, blank, neutral, center-200)
+(Magda, neutral, blank, left)
+Vincent rings the bell on the desk a few times frustratingly, and only after a few seconds of waiting does he decide to address us.
+
+(Vincent, blank, confused, center-200) Where’s the... the desk girl?
  
 (PCPG) Uh.. do you mean the receptionist? We don’t know, nobody seems to be manning the store.
  
-(Vincent, sad)
+(Vincent, blank, sad, center-200)
 Vincent gives out a long sigh.
  
-(Vincent, neutral)
-(Ben, campus, point, neutral, right) Hey Vincent, Magda. What brings you two to this ol’ place?
- 
+(Ben, campus, point, neutral, right-200) Hey Vincent, Magda. What brings you two to this ol’ place?
+
+(Vincent, blank, neutral, center-200)
 The girl named Magda speaks up.
  
-(Magda, neutral, blank, center-100) New “Poobah Adventures” issue.
+(Magda, neutral, blank, left) New “Poobah Adventures” issue.
  
-(Ben, campus, base, neutral, right) Ah, I see.
- 
-The room then becomes awkwardly quiet as no one finds anything to talk about. I guess I could ask Vincent about this Poobah comic he’s here for, given how I’ve never heard of it before, but I get the feeling he isn’t in the mood for talking right now.
+(Ben, campus, base, neutral|cloud, right-200) Ah, I see.
+
+(Magda, worried, blank, left)
+The room then becomes awkwardly quiet as no one finds anything to talk about. 
+
+I guess I could ask Vincent about this Poobah comic he’s here for, given how I’ve never heard of it before, but I get the feeling he isn’t in the mood for talking right now.
 *
- 
-*Let’s just vape it up here*
+
+*Let’s vape it up here*
  
 As we make our way to the counter the door opens and two people walk in. 
  
-(Vincent, neutral, offleft, slide, left)
-(Magda, neutral, blank, offleft-100, slide, left-100)
-(Ben, campus, base, neutral, right) Hey Vincent, Magda. What’s up?
+(Vincent, blank, neutral, offleft)
+(Magda, neutral, blank, offleft)
+[SLIDE Vincent center-200]
+[SLIDE Magda left]
+(Ben, campus, base, neutral, right-200) Hey Vincent, Magda. What’s up?
  
 Friends of Ben? I guess they fit the profile, except for maybe not wearing any left leaning political shirts.
  
 [Vincent leaves]
 [Magda leaves]
-Despite Ben apparently knowing them they completely ignore him and continue walking into the store and make their way to the “new releases” section. They stop in the middle of the shelf, and after a quick scan their eyes stop and stare at a particular section of the shelf.
+Despite Ben apparently knowing them they completely ignore him and continue walking into the store and make their way to the “new releases” section. 
+
+They stop in the middle of the shelf, and after a quick scan their eyes stop and stare at a particular section of the shelf.
  
-After a few seconds of staring they leave the shelf and both walk around the store aimlessly for a few seconds only to finally come to a stop at the front desk. The guy Ben called Vincent frustratingly rings the bell on the desk a few times, but he eventually gives up and decides to finally address us.
- 
-(Magda, neutral, blank, offleft, center-100)
-(Vincent, confused, offleft, center) Where’s the... the desk girl?
+After a few seconds of staring they leave the shelf and both walk around the store aimlessly for a few seconds only to finally come to a stop at the front desk. 
+
+(Vincent, blank, neutral, center-200)
+(Magda, neutral, blank, left)
+The guy Ben called Vincent frustratingly rings the bell on the desk a few times, but he eventually gives up and decides to finally address us.
+
+(Vincent, blank, confused, center-200) Where’s the... the desk girl?
  
 (PCPG) Uh, do you mean the receptionist? We don’t know, nobody seems to be manning the store.
  
-(Vincent, sad)
+(Vincent, blank, sad, center-200)
 Vincent gives out a long sigh.
  
-(Ben, campus, point, neutral, right) So, what brings you two to this ol’ place anyways?
- 
+(Ben, campus, point, neutral, right-200) So, what brings you two to this ol’ place anyways?
+
+(Vincent, blank, neutral, center-200)
 The girl named Magda speaks up.
- 
-(Magda, neutral, blank, center-100) New “Poobah Adventures” issue.
- 
-(Ben, campus, base, neutral, right) Ah, I see.
- 
+
+(Magda, neutral, blank, left) New “Poobah Adventures” issue.
+
+(Ben, campus, base, neutral|cloud, right-200) Ah, I see.
+
+(Magda, worried, blank, left)
 The room then becomes awkwardly quiet as no one finds anything to talk about. Shouldn’t Ben like, introduce us or something?
 *
  
-(Magda, worried, blank, center-100, slide, offleft, 5)
-...
- 
+[SLIDE Magda offleft]
+(Magda) ...
+
+(Ben, campus, base, neutral, right-200)
 (PCPG) Is she.. okay? Should we go after her?
+
+(Vincent, blank, neutral, center-200) No.
  
-(Vincent, neutral, center) No.
- 
-(PCPG) Uhh.. so is that an answer to the first or the second question?
+(PCPG) Uhh.. so, is that an answer to the first or to the second question?
  
 Vincent doesn’t respond.
  
-(Vincent, sad, center, slide, offleft, 10)
+[SLIDE Vincent offleft]
 The awkward silence continues as it had before, until Vincent can also no longer take it and silently leaves us as well.
 
 [StopMusic]
 [Song: PCPDating_ProCrastinatorShortLoop]
+
+[SLIDE Ben center]
+And then there were two. Ben and I diligently wait for someone, even though I’m pretty sure I could just pay Ben for the comic. This isn’t all too bad though. 
  
-And then there were two. Ben and I diligently wait for someone, even though I’m pretty sure I could just buy the comic from Ben himself. This isn’t all too bad though. 
- 
-The clean scent of new comic paper combined with Ben’s energy drink musk he carries around with him gives the air in the store a unique smell. This isn’t too bad at all.
- 
-(Ben, campus, base, sadMIN, right, slide, center)
+The clean scent of new comic paper combined with Ben’s usual energy drink musk gives the air in the store a unique smell. /n
+This isn’t too bad at all.
+
+(Ben, campus, base, sadMIN)
 I look over to Ben and find him awkwardly looking around. I decide to finally break the silence.
  
 (PCPG) The term’s almost over huh? It feels like just yesterday a portal to Pokémon Hell was opened up in your classroom.
  
-(Ben, campus, point, smittenMIN) Yeah, this term felt like it took forever to finish, but it definitely wasn’t as bad as most. I think some of the students, well, one in particular, made it more bearable than usual.
+(Ben, campus, point, happyMIN) Yeah, this term felt like it took forever to finish, but it definitely wasn’t as bad as most. 
+
+(Ben, campus, base, smittenMIN|cloud) I think some of the students, well, one in particular, made it more bearable than usual.
  
-Ben then gives me a wink, unironically. I guess this means the rumors were true. Despite Ben’s attitude on the subject, he’s totally gay. And given that one time he had a tombstone, he’s totally dead too. He’s both gay and dead.
+Ben then gives me a wink, [i]unironically[/i]. 
+
+I guess this means the rumors were true. 
+
+Despite Ben’s attitude on the subject, he’s totally gay. /n
+And given that one time he had a tombstone, he’s totally dead too. He’s both gay and dead.
  
 Well if that’s the case, if he ain’t gonna come out and say it like the bitch he is, it’s time for me to make him admit it. 
 
-In other words, I need to #GetBenToGoGay. After all, everything’s better with a hashtagged catchphrase.
+In other words, I need to #GetBenToGoGay. /n
+After all, everything’s better with a hashtagged catchphrase.
 
-This is also a perfect chance to finally ask him my burning question, right after he’s hinted at his true sexuality to me. This is my moment to ask Ben Saint to RadProm.
- 
+This is also my perfect chance to finally ask him my burning question, right after he’s hinted at his true sexuality to me.
+
 (PCPG) Hey... so I was wondering. Would you like to, like, uh,[i] accompany[/i] me to RadProm?
 
+(Ben, campus, base, shockedMIN)
 Ben hesitates at the question.
  
-(Ben, campus, base, shockMIN) You mean, like, in a gay way?
+(Ben, campus, base, sadMIN) You mean, like, in a gay way?
  
 (PCPG) Oh no no I would never suggest [i]that[/i]. More like in a mentor disciple kinda way. You know, just showing me the ropes kinda way.
 
 (Ben, campus, base, smittenMIN) Oh, well if that’s the case, then, uh, yeah, okay. I’d totally not be gay for you bro.
 
-(PCPG) I wouldn’t have it any other way.
+(PCPG) I wouldn’t have it any other way, bro.
 
-The awkward silence then resumed, but my heart was going crazy. I’m actually going to RadProm with Ben Saint himself, truly a dream come true. Finally a chance to engage in some forbidden love, to #GetBenToGoGay despite his wishes. What a truly magical moment!
+The awkward silence then resumed, but my heart was going crazy. I’m actually going to RadProm with Ben Saint himself, truly a dream come true. 
+
+Finally a chance to engage in some forbidden love, to #GetBenToGoGay despite his wishes. What a truly magical moment!
 
 [fade to black]
+
+After about ten minutes of waiting we give up and leave, and I ended up just buying a copy of the comic from his place. 
+
+From this day forward, I will treasure it as the catalyst to our love.
+
 [Ben leaves]
-
-After about ten minutes of waiting we give up and leave. I ended up just buying a copy of the comic from his place. From this day forward, I will treasure it as the catalyst to our love.
-
 [StopMusic]
 
 [Scene: !decide fate]
@@ -1552,47 +1653,59 @@ After about ten minutes of waiting we give up and leave. I ended up just buying 
 [Location: copkilltown]
 [fade from black]
  
-RadProm is only a few hours away, and I have everything prepared to make it a magical night. All I need now is to ask for the help of my fellow Killers in the art of seduction. I mean, Smearg has style for miles, surely they would know something on how to style oneself for such a night.
- 
+RadProm is only a few hours away, and I have everything prepared to make it a magical night. All I need now is to ask my fellow Killers for help in the art of seduction.
+
+I mean, Smearg has style for miles, surely they would know something on how to style oneself for such a night.
+
 However, as I reach the Cathedral, I am unfortunately greeted by a familiar sight.
- 
-[Location: saintbencathedral.pizzaparty]
+
 [Song: PCPDating_SuspiciousFigga]
+[Location: saintbencathedral.pizzaparty]
 
 [pause]
+
+(Russel, base, neutral, right) Heh heh heh.
+
+[SLIDE Russel offright]
+
+Huh? What was that purple blur? 
+
+Could that have been the infamous Magi-chan? Was he actually the one responsible for the Cathedral’s vandalism after all?
  
-(Russel, base, neutral, offright, right)
-(Russel|Russel, base, neutral, right, slide, offright, 30) Heh heh heh.
- 
-Huh? What was that purple blur? Could that have been the infamous Magi-chan? Was he actually the one responsible for the Cathedral’s vandalism after all?
- 
-(Cop Killers, default, offleft, left)
-(Ben, casual, exasp, angryMIN, offleft, center) I CAN’T FUCKING BELIEVE IT! FUCK THE PIZZA PARTY UNIVERSITY TO THE ENDS OF THE UNIVERSE AND BACK!!!
+(CopKillers, copkillers1, left)
+(Ben, casual, exasp, angryMIN, center) I CAN’T FUCKING BELIEVE IT! FUCK THE PIZZA PARTY UNIVERSITY TO THE ENDS OF THE UNIVERSE AND BACK!!!
  
 Ben, in a complete outrage, bursts into an anger filled spiel just as I arrive.
  
-(Ben, casual, exasp, angryMIN) Surely. SURELY we have a single lead on where they could be, right?
+(Ben, casual, exasp, angryMIN) Surely, SURELY we have a single lead on where they could be, right?
  
 His gaze slides across the Killers until it rests on me.
  
 (Ben, casual, exasp, angryMAX) PCPG! You of all people must know! I demand an answer now, and I better like it!
  
 (Ben, casual, base, angryMAX) WHERE is the Pizza Party University?
- 
-Shit. In my deep love for the man I have forsaken his original request of me, and now I am officially in [i]deep shit[/i], since I really have no idea where the PPU is. What do I say?
- 
+
+Shit. In my deep love for the man I have forsaken his original request of me, and now I am officially in [i]deep shit[/i], since I really have no idea where the PPU is. 
+
+What do I say?
+
 [CHOICE]
- 
+
 *Well, I don’t know, but..*
 *Maybe the real Pizza Party University was..*
  
 *Well, I don’t know, but..*
 
-(PCPG) Well, to be honest, I don’t know where the Pizza Party University is. It seems that nobody does, and all my leads on them are mere speculation or lies made by people who want their five minutes of fame.
+(PCPG) Well, to be honest, I don’t know where the Pizza Party University is. 
+
+(PCPG) It seems that nobody does, and all my leads on them are mere speculation or lies made by people who want their five minutes of fame.
+
+(Ben, casual, base, neutral)
+(PCPG) But during my investigations, I’ve thought about why the PPU would come after our base like that, despite them being so secretive and subtle otherwise.
+
+(PCPG) Why would they jeopardize their secrecy?
  
-(PCPG) But during my investigations, I’ve thought about why the PPU would come after our base like that, despite them being so secretive and subtle otherwise. Why would they jeopardize their secrecy?
- 
-(PCPG) The only logical explanation is that whoever vandalized the Cathedral was not the PPU, but someone else merely framing the PPU for the attack.
+(PCPG) The only way it all makes sense is that whoever vandalized the Cathedral was not the PPU, but someone else merely framing the PPU for the attack.
  
 (Ben, casual, base, confusedMIN)
 (PCPG) So really, maybe we don’t actually need to find the PPU after all. Or maybe, given all of this, maybe there never was a Pizza Party University in the first place.
@@ -1607,9 +1720,11 @@ Shit. In my deep love for the man I have forsaken his original request of me, an
 (PCPG) No that’s not wh-
  
 [Song: PCPDating_ShatteredGlass]
-(Ben, casual, exasp, angryMIN) SHUT THE FUCK UP PCPG! You simply just don’t know what you’re talking about huh?
+(Ben, casual, exasp, angryMIN) SHUT THE FUCK UP PCPG! You just don’t know what you’re talking about huh?
  
-(Ben, casual, exasp, angryMAX) I trusted you to find an enemy to us all, to help fight against evil, and all you want to do is to simply ignore the problem, but no not even that, to hope it doesn’t even exist so you don’t have to deal with it.
+(Ben, casual, base, angryMAX) I trusted you to find an enemy to us all, to help fight against evil, and all you want to do is to simply ignore the problem. 
+
+(Ben, casual, base, angryMIN) But no not even that, to hope it doesn’t even exist so you don’t have to deal with it!
  
 (Ben, casual, base, angryMAX) Shame on you PCPG. I thought you were better than that. I thought you were different than the rest of the sheeples of this fucking world.
  
@@ -1617,26 +1732,35 @@ Shit. In my deep love for the man I have forsaken his original request of me, an
  
 (Ben, casual, base, neutral) My fellow apostles, grab him.
  
-(Cop Killers|Cop Killers, default, left, offright) Yes my Kingpin.
- 
+(CopKillers|Cop Killers, default, left) Yes my Kingpin.
+
+[CopKillers leaves]
 The Killers surround me and hold me in place with ease.
  
 (PCPG) Wait, what are you going to do with me?!
  
-(Ben, casual, point, neutral) I’m sorry PCPG, but I cannot allow this ignorant attitude to continue to exist, it will ultimately ruin the human race. I must take every measure to cleanse this world of it’s sins, like the Saint I am.
+(Ben, casual, point, neutral) I’m sorry PCPG, but I cannot allow this ignorant attitude to continue to exist, it will ultimately ruin the human race. 
+
+(Ben, casual, base, neutral|cloud) I must take every measure to cleanse this world of it’s sins, like the Saint I am.
 
 (Ben, casual, base, angryMAX)
-Ben pulls out a pistol out of his clusterpunk styled pants and points it at me.
+Ben then  pulls out a pistol out of his clusterpunk styled pants and points it at me.
  
 (PCPG) Woah woah woah, think about this for a second. I swear I didn’t mean what you think I meant.
  
-(Ben, casual, point, angryMAX) It doesn’t matter now, you have shown your true colours to me PCPG, and that is all that matters. There is no reconciliation now.
+(Ben, casual, base, angryMIN) It doesn’t matter now, you have shown your true colours to me PCPG, and that is all that matters. There is no reconciliation now.
  
 (Ben, casual, base, angryMAX) Any last words, sinner?
  
-How could this have happened? What happened to everything we did together? Didn’t our time together make us friends? Or almost lovers?
+How could this have happened? What happened to everything we did together? 
+
+Didn’t our time together make us friends?
+
+Or almost lovers?
  
-(Ben, casual, base, sadMIN) I guess that’s a no. Goodbye, normie.
+(Ben, casual, base, neutral) I guess that’s a no. 
+
+(Ben, casual, base, sadMIN) Goodbye, normie.
 
 [StopMusic]
 [SFX: PCP-SFX_Gunshot]
@@ -1644,44 +1768,49 @@ How could this have happened? What happened to everything we did together? Didn�
 
 [fade to black]
 
-As the gunshot echoes across the Cathedral walls and the world started to fade to black all I could think of was what RadProm together would have been like. I bet he would’ve looked.. uh.. what’s the word?
+As the gunshot echoes across the Cathedral walls and my world starts to fade to black, all I could think of was what RadProm together would have been like. 
+
+I bet he would’ve looked.. uh.. what’s the word?
  
 Oh, it doesn’t even matter.
- 
-[BAD END]
+
+[Ben leaves]
 
 [Scene: !regret decision]
 
-[Location: sewers]
+[pause]
+
 [Song: PCPDating_BotBustah]
+[Location: sewers]
+[fade from black]
  
 I suddenly wake up in shock and find myself in a radioactive sewers of sorts. How did I even end up here? Is this hell?
- 
-(Endless War|Endless War, cross, shockMIN, offleft, center) Well well well.
+
+(EndlessWar|Endless War, cross, shockMIN) Well well well.
  
 Oh god it is.
 
-(Endless War|Endless War, stand, neutral) Ugh, I can’t fucking believe I’m actually gonna revive you, despite you following Ben’s retarded pizza bullshit.
+(EndlessWar|Endless War, stand, neutral) Ugh, I can’t fucking believe I’m actually gonna revive you, despite you following Ben’s retarded pizza bullshit.
 
 (PCPG) Revive?
  
-(Endless War|Endless War, knife, angryMIN) Yeah you fucking retard, I revive people, [i]obviously[/i]. How the fuck else do you think this bloody WAR happens for so long with just our small student population?
+(EndlessWar|Endless War, stand, angryMIN) Yeah you fucking retard, I revive people [i]obviously[/i]. How the fuck else do you think this bloody WAR happens for so long with just our small student population?
 
 (PCPG) I.. guess I never really thought about it too hard.
 
-(Endless War|Endless War, stand, angryMED) Fucking typical. Man, I really need to find a way to automate this process, I just can’t handle it sometimes.
+(EndlessWar|Endless War, stand, angryMED) Fucking typical. Man, I really need to find a way to automate this process, I just can’t handle it sometimes.
 
-(Endless War|Endless War, cross, neutral) Anyways, yada yada yada there may be unintended side effects like losing your sense of self and memory and boring other shit like that, you get the idea.
+(EndlessWar|Endless War, cross, neutral) Anyways, yada yada yada there may be unintended side effects like losing your sense of self and your memory and boring other shit like that, you get the idea.
 
-(Endless War|Endless War, cross, neutral) Reviving may also [i]*yawn*[/i] fuck with your personal timeline of sorts, so you’ll probably end up reviving before you were ever killed in the first place, like a sort of time travel.
+(EndlessWar|Endless War, cross, neutral) Reviving may also [i]*yawn*[/i] fuck with your personal timeline of sorts, so you’ll probably end up reviving before you were ever killed, like a sort of time travel.
 
 (PCPG) Wow that's like, uh, extremely convenient.
 
-(Endless War|Endless War, stand, neutral) Yeah sure whatever. Now to get you back to life you’ll need to say !revive, that simple enough for your pea brain?
+(EndlessWar|Endless War, stand, neutral) Yeah sure whatever. Now to get you back to life you’ll need to say !revive, that simple enough for your small pea brain?
 
 (PCPG) Yeah.. I think so.
 
-(Endless War|Endless War, knife, angryMIN) Now get the fuck out of here already, and don’t come back. This ain’t a charity.
+(EndlessWar|Endless War, knife, angryMIN) Now get the fuck out of here already, and don’t come back. This ain’t a charity.
 
 [CHOICE]
 *!revive*
@@ -1691,6 +1820,7 @@ Oh god it is.
 
 [fade to black]
 [StopMusic]
+[EndlessWar leaves]
 [Forget Well, I don’t know, but..]
 [Forget Maybe the real Pizza Party University was..]
 [==> !decide fate]
