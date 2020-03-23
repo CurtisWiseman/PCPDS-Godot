@@ -3,22 +3,29 @@
 [Location: gibbonroom]
 [Song: PCPDating_HomeNight]
 [fade from black]
-We enter the room and immediately I see a bunch of cool shit, including a guitar, some plushies I haven’t seen before, and an impressive suit of armour crafted out of paper plates and paper clips. It’s a good thing that Bang Energy cured my pet allergies, because there’s even a cute cat and an even cuter dog sitting on and beside his bed. 
-(Gibbon|Gibbon, casual, default, happyMIN, offright, slide, center) Hey Alley-Oop how’s it going? 
+We enter the room and immediately I see a bunch of cool shit, including a guitar, some plushies I haven’t seen before, and an impressive suit of armour crafted out of paper plates and paper clips. 
+
+It’s a good thing that Bang Energy cured my pet allergies, because there’s even a cute cat and an even cuter dog sitting on and beside his bed. 
+
+(Gibbon|Gibbon, campus, default, happyMIN, offright, slide, center) Hey Alley-Oop how’s it going? 
 But nothing replies. Is he trying to talk to one of his plushies? 
-(Gibbon|Gibbon, casual, default, neutral) Alley-Oop’s not real, sadly. She’s definitely one of my faaavourites though. Wouldn’t it be great if I could actually talk to her?
-(Gibbon|Gibbon, casual, clenched, sadMIN) Like, why can there exist in real life a talking Giraffe, actual Pokémon, and even straight up comic characters, but my Bailjape girls can’t be real...
+(Gibbon|Gibbon, campus, default, neutral) Alley-Oop’s not real, sadly. She’s definitely one of my faaavourites though. Wouldn’t it be great if I could actually talk to her?
+(Gibbon|Gibbon, campus, clenched, sadMIN) Like, why can there exist in real life a talking Giraffe, actual Pokémon, and even straight up comic characters, but my Bailjape girls can’t be real...
 (PCPG) Yeah, I don’t know what kind of cruel person would do such a thing, especially if they had the power to do so.
-(Gibbon|Gibbon, casual, grabby, smittenMED|blush) Oh but the worst one of all, the one I want to be real the most…
+(Gibbon|Gibbon, campus, grabby, smittenMED|blush) Oh but the worst one of all, the one I want to be real the most…
 [CG: VriskaPlush]
-(Gibbon) ...is Vriska herself. Imagine if one day she would introduce herself as a transfer student like in those Japanese animes, now that would be in-credible. I wonder if anybody felt that way when I transferred in?
-(Gibbon, casual, press, neutral)
+(Gibbon) ...is Vriska herself. Imagine if one day she would introduce herself as a transfer student like in those Japanese animes, now that would be in-credible. 
+
+(Gibbon) I wonder if anybody felt that way when I transferred in?
+(Gibbon, campus, press, neutral)
 [CG end]
 (PCPG) Oh, you’re not originally from here?
-(Gibbon|Gibbon, casual, press, happyMIN) The accent not give it away? England, born and raised. I used to take the PCPU’s online courses for a couple years, but once Brexit happened and England joined the US as the 51st state, I could fly out here and attend personally. 
-(Gibbon|Gibbon, casual, grabby, happyMED) I kinda miss the old days, with the Queen and her fancy teacups and stuff, but I also really like hanging out with my friends now.
+(Gibbon|Gibbon, campus, press, happyMIN) The accent not give it away? England, born and raised. 
+
+(Gibbon) I used to take the PCPU’s online courses for a couple years, but once Brexit happened and England joined the US as the 51st state, I could fly out here and attend personally. 
+(Gibbon|Gibbon, campus, grabby, happyMED) I kinda miss the old days, with the Queen and her fancy teacups and stuff, but I also really like hanging out with my friends now.
 (PCPG) Woah, I didn’t even realize that this happened. I don’t care much about politics to be honest.
-(Gibbon|Gibbon, casual, default, smittenMIN) Well then I hope you don’t attend the Philosophy classes.
+(Gibbon|Gibbon, campus, default, smittenMIN) Well then I hope you don’t attend the Philosophy classes.
 (PCPG) Tell me about it..
 [CG: GibbonGuitar]
 Gibbon pulls out a guitar from beside the bed and starts lightly strumming.
@@ -32,51 +39,65 @@ Gibbon pulls out a guitar from beside the bed and starts lightly strumming.
 [StopSFX]
 [CG end]
 [Song: PCPDating_HomeNight]
-(Gibbon|Gibbon, casual, press, happyMIN|blush) So, uh, what do you think?
+(Gibbon|Gibbon, campus, press, happyMIN|blush) So, uh, what do you think?
 (PCPG) Uhh, well, that was very... interesting, I guess.
-(Gibbon|Gibbon, casual, clenched, sadMED) Oh, you don’t have to sugarcoat it, you didn’t like it, huh?
+(Gibbon|Gibbon, campus, clenched, sadMED) Oh, you don’t have to sugarcoat it, you didn’t like it, huh?
 (PCPG) No no! It just… wasn’t what I was expecting, is all.
 (PCPG) And I mean, not only can you draw, but you can animate, make funny jokes, AND play the guitar? You seem pretty talented my dude.
-(Gibbon|Gibbon, casual, handsup, sadMIN) I mean, I know how to do all those things kinda well, but not too great though. Like who cares that I am able to do all those things if I can’t do one thing REALLY well, you know?
-(Gibbon|Gibbon, casual, press, sadMIN) I guess I feel like I don’t have something specific to me that I can do that nobody else can. I just kinda do something for a while, get bored of it, then move onto the next thing and never git gud at any one thing.
+(Gibbon|Gibbon, campus, handsup, sadMIN) I mean, I know how to do all those things kinda well, but not too great though. 
+
+(Gibbon) Like who cares that I am able to do all those things if I can’t do one thing REALLY well, you know?
+(Gibbon|Gibbon, campus, press, sadMIN) I guess I feel like I don’t have something specific to me that I can do that nobody else can. 
+
+(Gibbon) I just kinda do something for a while, get bored of it, then move onto the next thing and never git gud at any one thing.
 (PCPG) I think managing to do all of the things you do is pretty impressive though.
-(Gibbon|Gibbon, casual, default, smittenMAX) I mean, thanks, but I don’t think it’s that impressive. 
-(Gibbon|Gibbon, casual, default, confusedMED) ...
-(Gibbon|Gibbon, casual, clenched, angryMAX) Agh, I don’t know!
-I’m not sure what to say to him, but I definitely feel like I should try and help him out. After a prolonged moment of silence, he snaps out of his slump and returns to his usual self.
-(Gibbon|Gibbon, casual, default, neutral)
+(Gibbon|Gibbon, campus, default, smittenMAX) I mean, thanks, but I don’t think it’s that impressive. 
+(Gibbon|Gibbon, campus, default, confusedMED) ...
+(Gibbon|Gibbon, campus, clenched, angryMAX) Agh, I don’t know!
+I’m not sure what to say to him, but I definitely feel like I should try and help him out. 
+After a prolonged moment of silence, he snaps out of his slump and returns to his usual self.
+(Gibbon|Gibbon, campus, default, neutral)
 He hands me the guitar and goes on to show me a few basic chords. We eventually jam for a bit, taking turns playing and singing out more nonsense lyrics all the while.
 [fade to black]
 [fade from black]
 (PCPG) Oh, it’s getting kinda late. I better get going.
-(Gibbon|Gibbon, casual, grabby, happyMED) Well, thanks for coming over, hopefully you had a good time.
+(Gibbon|Gibbon, campus, grabby, happyMED) Well, thanks for coming over, hopefully you had a good time.
 (PCPG) Oh definitely, it was real fun hanging out with you and meeting all your new plushies.
-(Gibbon|Gibbon, casual, handsup, happyMED|blush) Ohh I’m glad to hear that. Please, feel free to come over anytime you want. Maybe we can build you a paperclip armour too!
+(Gibbon|Gibbon, campus, handsup, happyMED|blush) Ohh I’m glad to hear that. Please, feel free to come over anytime you want. Maybe we can build you a paperclip armour too!
 (PCPG) That would be awesome!
-(Gibbon|Gibbon, casual, default, happyMIN) Well, see you tomorrow at school then!
-That was pretty fun, though I guess Gibbon seems to doubt himself a lot. I should do something about that. I mean, Gibbon has been so helpful to me these past couple days, I’m gonna give back to him and try to help him out too.
+(Gibbon|Gibbon, campus, default, happyMIN) Well, see you tomorrow at school then!
+That was pretty fun, though I guess Gibbon seems to doubt himself a lot. I should do something about that. 
+
+I mean, Gibbon has been so helpful to me these past couple days, I’m gonna give back to him and try to help him out too.
 [fade to black]
+[Gibbon leaves]
 [StopMusic]
 [Scene: Waifu Drawing 101]
 [Location: artclass]
 [Song: PCPDating_ClassScience]
 [fade from black]
-(Munchy|Munchy, campus, crossing, happyMIN, fade) Alright class, today we have a very special lesson brought to you by one of our top students, Gibbon! Please give him a hearty round of applause!
+(Munchy|Munchy, campus, crossing, happyMIN, fade) Alright class, today we have a very special lesson brought to you by one of our top students, Gibbon! 
+
+(Munchy) Please give him a hearty round of applause!
 A meager few claps sound from the class.
 (Munchy|Munchy, campus, squatting, angryMED) Seriously? That’s the best you can do on a dime?
 (Munchy|Munchy, campus, crossing, angryMIN) Ugh. Never trust anyone.
 [SLIDE, Munchy, offleft]
 [SFX: Applause]
-Quick as a flash, Munchy types a few lines of code on his computer. The moment he hits the Enter key, the class erupts into a roaring, yet synthetic, applause blasting from the various computer speakers around the class.
+Quick as a flash, Munchy types a few lines of code on his computer. 
+The moment he hits the Enter key, the class erupts into a roaring, yet synthetic, applause blasting from the various computer speakers around the class.
 (Gibbon, campus, default, neutral, offright, slide, center)
-As the computers clap, Gibbon enters through the classroom door pushing what looks like one of those game show wheels with all the fancy lights and thingamabobs. A gaudy panel held above the wheel reads “The Wheel of Waifu.”
+As the computers clap, Gibbon enters through the classroom door pushing what looks like one of those game show wheels with all the fancy lights and thingamabobs. 
+A gaudy panel held above the wheel reads “The Wheel of Waifu.”
 (Gibbon|Gibbon, campus, handsup, happyMED) Hello and welcome to the first ever “Drawing Your Waifu As If It Was Vriska!”
 (Gibbon|Gibbon, campus, grabby, happyMIN) As the resident expert on Vriska and therefore waifus, I am here to show you the ways of the draw, by showing you how to turn YOUR waifu into the BEST waifu.
 [SFX: PCP-AMBIENT_Classroom]
-The class slowly begins to rile up, as they argue amongst themselves about which waifu truly can be called the best. Students are beginning to get heated on the subject, and soon are threatening each other with attempts at “lewding” their waifus.
+The class slowly begins to rile up, as they argue amongst themselves about which waifu truly can be called the best. 
+Students are beginning to get heated on the subject, and soon are threatening each other with attempts at “lewding” their waifus.
 Somebody better stop this madness before it becomes a full on waifu war!
 [SLIDE, Gibbon, right]
-(Munchy|Munchy, campus, squatting, angryMAX, offleft, slide, left) OH MY GOD SHUT THE FUCK UP! Nobody cares about which 2D dyke bitch you want sucking your dick, bitches! This class is about doing ART, so can we PUH-LEASE get back to the topic at hand?
+(Munchy|Munchy, campus, squatting, angryMAX, offleft, slide, left) OH MY GOD SHUT THE FUCK UP! Nobody cares about which 2D dyke slut you want sucking your dick, bitches! 
+(Munchy) This class is about doing ART, so can we PUH-LEASE get back to the topic at hand?
 [StopSFX]
 [SLIDE, Munchy, offleft]
 (Gibbon|Gibbon, campus, default, confusedMIN) Ahem, yes so as I was saying, it’s time to turn your waifu into the best waifu.
@@ -113,8 +134,11 @@ Come on, I don’t want any of these 2D weeb-bait bitches! I want a real 3D 日�
 … or we could get Fa Mulan. Well, at least she’s not an anime teen.
 *
 (Gibbon|Gibbon, campus, handsup, happyMAX) Excellent! Well, now we have our waifu, it’s time to make her Vriska. So, like, draw her… but also Vriska.
-A mildly confused murmuring can be heard permeating through the class. Professor Munchy looks uninterested in helping, already feverishly drawing on his own sketchbook. I guess he couldn’t help but join in.
-(Gibbon|Gibbon, campus, grabby, angryMIN) I don’t know how to explain it, alright? You just... do it. This exercise is supposed to teach you to appreciate the details of character design, and put them together. Kinda like a fusion, I guess? But not really. It’s mostly Vriska. You all know what Vriska looks like so, uhh, get on with it.
+A mildly confused murmuring can be heard permeating through the class. Professor Munchy looks uninterested in helping, already feverishly drawing on his own sketchbook. 
+I guess he couldn’t help but join in.
+(Gibbon|Gibbon, campus, grabby, angryMIN) I don’t know how to explain it, alright? You just... do it. 
+(Gibbon) This exercise is supposed to teach you to appreciate the details of character design, and put them together. Kinda like a fusion, I guess? But not really. It’s mostly Vriska. 
+(Gibbon) You all know what Vriska looks like so, uhh, get on with it.
 I suppose I’d better hop to it. Now, if I remember right, Vriska’s the one with the horns…
 [fade to black]
 …
@@ -131,7 +155,8 @@ Gib skips around the class looking very pleased. He stops by his own desk, which
 [SLIDE, Munchy, offleft]
 [SLIDE, Gibbon, center]
 Not wanting to press the issue, Gib comes over to my desk and looks my “art” over.
-(Gibbon|Gibbon, campus, handsup, happyMED) Hey, good work! It’s like, the lineart isn’t perfect, but y’know, perfect lineart is gay anyway, this has real heart and effort put into it. It’s better than I could draw, that’s for sure…
+(Gibbon|Gibbon, campus, handsup, happyMED) Hey, good work! It’s like, the lineart isn’t perfect, but y’know, perfect lineart is gay anyway, this has real heart and effort put into it. 
+(Gibbon) It’s better than I could draw, that’s for sure…
 (PCPG) Oh thanks dude, but don’t put yourself down like that. This drawing took everything out of me, but I bet you could do it in half the time.
 (Gibbon|Gibbon, campus, default, smittenMIN) Maaaaaaaan, all these cool drawings of Vriska... 
 His voice lowers to a whisper.
@@ -140,7 +165,8 @@ Gib gets a glint of wistfulness in his eyes, then quickly turns back to the clas
 (Gibbon|Gibbon, campus, handsup, happyMED) Well, that wraps up Drawing Your Waifu As If It Was Vriska, everybody! I hope you all enjoyed it and maybe even learned how to do an art along the way.
 [SLIDE, Gibbon, offright]
 [Gibbon leaves]
-(Munchy|Munchy, campus, standing, angryMIN, offleft, slide, center) Yeah yeah whatever, this student class thing was a terrible idea anyway. Next lesson, I’m gonna teach you peons about the third valid art form that I forgot to mention the other day: Sculpting! Bring your own chisels, I’ll provide the hammers.
+(Munchy|Munchy, campus, default, angryMIN, offleft, slide, center) Yeah yeah whatever, this student class thing was a terrible idea anyway.
+(Munchy) Next lesson, I’m gonna teach you peons about the third valid art form that I forgot to mention the other day: Sculpting! Bring your own chisels, I’ll provide the hammers.
 (Munchy|Munchy, campus, squatting, angryMAX) CLASS... DISMISSED!
 [fade to black]
 [StopMusic]
@@ -155,43 +181,53 @@ Similar to my first day here, I have the same schedule as Gibbon today, so after
 (PCPG) He sure knows how to make an entrance, huh?
 (Gibbon|Gibbon, campus, default, happyMIN) Yeah. It’s a lot like how Endless War jumps out of nowhere when you least expect her.
 At that moment I really was expecting her to jump out at us, but she never came. I guess we were expecting it then.
-[Location: musicclass]
+[Location: musicclass, musicclass.foreground]
 [Song: PCPDating_ClassJapanese]
 We enter the music class and sit down while we wait for Professor Digi.
 (PCPG) What’s the deal with you and Endless War anyway? I don’t mean to pry, but it seems like you two have a bit of… history?
-(Gibbon|Gibbon, campus, grabby, confusedMED) Well, nothing major. We did try dating for a short while, but… I’m more fascinated by her than anything. Don’t get me wrong, she’s a pain in the behind, but she’s so dedicated to the whole WAR thing. It’s pretty admirable.
+(Gibbon|Gibbon, campus, grabby, confusedMED) Well, nothing major. We did try dating for a short while, but… I’m more fascinated by her than anything. 
+(Gibbon) Don’t get me wrong, she’s a pain in the behind, but she’s so dedicated to the whole WAR thing. It’s pretty admirable.
 I won’t admit it to his face, but I feel a twinge of jealousy hearing Gib talk about someone else so passionately. It’s different when he’s talking about Vriska, because she’s not-
 [SLIDE, Gibbon, offleft]
 (Digi|Digi, campus, 4, happyMIN, offright, slide, center) Eyo hombres, sorry I’m late, again. There’s a good reason though, I was welcoming our new transfer student!
 He gestures over to the door. We wait with bated breath. After eight agonizing seconds, she walks in.
-[SLIDE, Digi, left]
-(V, 1, neutral, offright, slide, right)
+(V, 1, neutral, offleft, slide, left)
 Instantly, Gib’s jaw drops so hard it practically impales his collarbone. I don’t necessarily share his reaction, but I do understand it. This girl is the spitting image of Vriska! 
 Well, almost. There is one significant detail missing..
 (Digi|Digi, campus, 2, confusedMED) Welcome to music class Miss, uhh… what was your name again?
 (V|V, 2, confused) GWLLVBIN. If it is too difficult to pronounce, just call me V. Even my own family has trouble with my name sometimes.
-[SLIDE, Digi, offleft]
-[SLIDE, V, left]
-(Gibbon, campus, grabby, smittenMED|blush, offright)
-[SLIDE, Gibbon, right]
-She has a thick Russian accent but a kind voice. Not entirely what I was expecting. Gib has moved on from slack-jawed shock and is now making attentive puppy-dog eyes at her. Great...
+[SLIDE, Digi, offright]
+[SLIDE, V, center]
+(Gibbon, campus, grabby, smittenMED|blush)
+[SLIDE, Gibbon, left]
+She has a thick Russian accent but a kind voice. Not entirely what I was expecting. 
+Gib has moved on from slack-jawed shock and is now making attentive puppy-dog eyes at her. Great...
 (V|V, 3, angry) Hello everyone, it is nice to meet you all. I have some trouble fitting in, but I hope to conquer the friendship hierarchy with great speed!
 With that declaration out of the way, the new student sways over and around desks, eventually coming to a stop two desks to my right. Gib in the middle of us.
 (V, 3, smitten|blush)
-As Digi begins the lesson, V glances over to Gibbon, who is still thoroughly enamored. She blinks. She blinks again. Realizing she’s getting no reaction, she takes off her one-side-dark-one-side-clear glasses to reveal she was winking, with just one eye.
-Speaking of one eye, I get a weird feeling like someone’s staring at me, or through me. Sure enough, Endless War is standing outside the window, with her flat triangular face pressed up against the glass, giving V the most “back off, he’s mine” glare imaginable.
-I guess she isn’t off the table for Gib after all, and here I was thinking maybe I had a chance with him. That dream seems definitively crushed, if these two powerhouses are my opponents. Heck, I don’t even know if Gib’s into guys!
+As Digi begins the lesson, V glances over to Gibbon, who is still thoroughly enamored. She blinks. She blinks again. 
+Realizing she’s getting no reaction, she takes off her one-side-dark-one-side-clear glasses to reveal she was winking, with just one eye.
+Speaking of one eye, I get a weird feeling like someone’s staring at me, or through me. 
+Sure enough, Endless War is standing outside the window, with her flat triangular face pressed up against the glass, giving V the most “back off, he’s mine” glare imaginable.
+I guess she isn’t off the table for Gib after all, and here I was thinking maybe I had a chance with him. 
+That dream seems definitively crushed, if these two powerhouses are my opponents. Heck, I don’t even know if Gib’s into guys!
 [fade to black]
 [V leaves]
-(Gibbon, campus, default, neutral, right)
+(Gibbon, campus, default, neutral)
 [fade from black]
-Class took a lot longer than I had the patience for. As we’re packing up, I notice Gib talking with V, but I can’t make out what they’re saying without getting closer. V then dive bombs out of the door while making finger guns and pew pew noises. Something ain’t right about that girl.
-(Gibbon|Gibbon, campus, handsup, happyMAX) Oh boy oh man oh boy, you gotta talk to V some time! You know, when she first walked in, no joke, I thought for a moment that she was THE Vriska Serket, in real life.
+Class took a lot longer than I had the patience for. As we’re packing up, I notice Gib talking with V, but I can’t make out what they’re saying without getting closer. 
+V then dive bombs out of the door while making finger guns and pew pew noises. Something ain’t right about that girl.
+(Gibbon|Gibbon, campus, handsup, happyMAX) Oh boy oh man oh boy, you gotta talk to V some time! 
+(Gibbon) You know, when she first walked in, no joke, I thought for a moment that she was THE Vriska Serket, in real life.
 (PCPG) Yeah, I can uhh… see the resemblance.
-(Gibbon|Gibbon, campus, clenched, happyMED) But it turns out she’s not like Vriska at all! Looks aside, that is. She’s actually really sweet and goofy, and funny too! Not just in like a “haha foreigner doesn’t understand our customs” kind way, like she tells real jokes and stuff.
+(Gibbon|Gibbon, campus, clenched, happyMED) But it turns out she’s not like Vriska at all! 
+(Gibbon) Looks aside, that is. She’s actually really sweet and goofy, and funny too! 
+(Gibbon) Not just in like a “haha foreigner doesn’t understand our customs” kind way, like she tells real jokes and stuff.
 (Gibbon|Gibbon, campus, grabby, smittenMIN|blush) Honestly, I think I might be developing… feelings for her. Ah, don’t tell Endless War I said that!
-(Gibbon|Gibbon, campus, default, confusedMIN) I got some real big boy thinking to do. Like, I only just met V but she’s really cool! But I still kinda like Endless War, and she is pretty smart, and reliable… 
-(Gibbon|Gibbon, campus, press, confusedMIN) I guess I better decide before the all too important RadProm. I don’t want to be hanging around and missing my chance to take someone special there.
+(Gibbon|Gibbon, campus, default, confusedMIN) I got some real big boy thinking to do. Like, I only just met V but she’s really cool! 
+(Gibbon) But I still kinda like Endless War, and she is pretty smart, and reliable… 
+(Gibbon|Gibbon, campus, press, confusedMIN) I guess I better decide before the all too important RadProm. 
+(Gibbon) I don’t want to be hanging around and missing my chance to take someone special there.
 (PCPG) Yeah, just... make sure you aren’t overlooking anything, or anyone, right?
 (Gibbon|Gibbon, campus, handsup, happyMIN) Of course! Hey, I’ll see you later okay? I’m gonna go get a head start on that big think.
 [SLIDE, Gibbon, offright]
@@ -200,7 +236,8 @@ He… he didn’t even consider me. After inviting me to his house and everythin
 ...
 …outside the obvious.
 Am I not trying hard enough? Am I not on his radar because I haven’t… explicitly asked him out? Then again, he only just met V…
-(Digi|Digi, campus, 4, smittenMIN, offleft, slide, center) Hey newbie - actually, I can’t call you that anymore, can I? Hey… average guy. Class is over and I’m boutta smoke up this joint, ya feel? So I suggest you hurry along outta here unless you wanna join me.
+(Digi|Digi, campus, 4, smittenMIN, offleft, slide, center) Hey newbie - actually, I can’t call you that anymore, can I? Hey… average guy. 
+(Digi) Class is over and I’m boutta smoke up this joint, ya feel? So I suggest you hurry along outta here unless you wanna join me.
 I decide to leave.
 [fade to black]
 [Digi leaves]
@@ -208,7 +245,8 @@ I decide to leave.
 [Scene: Bloody Advice]
 [Location: hallway2]
 [fade from black]
-I’m on my way to the next class, lost in my own thoughts. I don’t know how to feel about this entire Gibbontake situation. I thought I was supposed to be the one helping Gib out with his problems, not developing ones of my own.
+I’m on my way to the next class, lost in my own thoughts. I don’t know how to feel about this entire Gibbontake situation. 
+I thought I was supposed to be the one helping Gib out with his problems, not developing ones of my own.
 [Song: PCPDating_BotBustah]
 (Redman|???, smittenMIN, fade) ♫ Hey Juve, don’t be sad! Today’s a hard day, but don’t give up yet! ♫
 (PCPG) Ah!! What are y- I mean, who are you?
@@ -216,8 +254,10 @@ I’m on my way to the next class, lost in my own thoughts. I don’t know how t
 (Redman|Redman, neutral) Nah I’m just kidding, don’t be scared. I’m not gonna take your blood, not yet. I just wanted to cheer you up because you looked so sad. 
 (PCPG) That.. that’s actually really nice, thank you! I just have some stuff to think about.
 (Redman|Redman, smittenMED) Oh, let me guess: Is it about love? Trust me, I’m an expert in all heart matters, you could say.
-(PCPG) Well, I have this friend, but I kinda want him to become more than a friend I guess. And he’s into these two girls in our class and can’t decide which one he should care for more, but the only one who he clearly doesn’t consider an option is me.
-(Redman|Redman, confused) Dude, just tell him about it. The earlier the better. It’s only gonna get harder with time. Try not to get your blood boiling by these two girls. Just show him why he should care more about you!
+(PCPG) Well, I have this friend, but I kinda want him to become more than a friend I guess. 
+(PCPG) And he’s into these two girls in our class and can’t decide which one he should care for more, but the only one who he clearly doesn’t consider an option is me.
+(Redman|Redman, confused) Dude, just tell him about it. The earlier the better. It’s only gonna get harder with time. 
+(Redman) Try not to get your blood boiling by these two girls. Just show him why he should care more about you!
 (PCPG) Wow, thanks Redman, that seems to be some good advice! Kinda obvious if you think about it huh? I’ll try to follow it.
 (Redman|Redman, happy) No problem, little Juve, whenever you have a problem, I’m here for y-
 (Redman|Redman, shock)
@@ -251,64 +291,73 @@ I’m confused.
 Well, that was weird. It’s a surprise this school hasn’t been shot up already with her walking about. That would definitely be the worst possible ending for me.
 [fade to black]
 [StopMusic]
+
+
 [Scene: Gay for A Day]
 [Location: gibbonroom]
 [Song: PCPDating_HomeNight]
 [fade from black]
-Since V arrived at the school I thought I’d lost the chance to hang out with Gib again, but surprisingly he invited me back over to his place. In fact, strangely enough, lately he seems to be hanging around me more than usual. Did something change?
+Since V arrived at the school I thought I’d lost the chance to hang out with Gib again, but surprisingly he invited me back over to his place. 
+In fact, strangely enough, lately he seems to be hanging around me more than usual. Did something change?
 Gibbon pulls out his guitar and strums it a few times.
-(Gibbon|Gibbon, casual, default, happyMIN, fade) Hey dude, remember when we first were hanging out, I played you a song and you didn’t like it that much?
+(Gibbon|Gibbon, campus, default, happyMIN, fade) Hey dude, remember when we first were hanging out, I played you a song and you didn’t like it that much?
 (PCPG) I never said I didn’t like it!
-(Gibbon|Gibbon, casual, handsup, happyMED|blush) Well, here’s another one, but this one is more gooder!
+(Gibbon|Gibbon, campus, handsup, happyMED|blush) Well, here’s another one, but this one is more gooder!
 [StopMusic]
 [CG: GibbonGuitar]
 [SFX: PCP-Gibbontake_BitchIdiots]
 ♫
-(Gibbon, casual, default, neutral)
 [StopSFX]
 [CG end]
+(Gibbon, campus, default, neutral)
 (Voice from downstairs) Wow, that was really nice Gibbon!
 (PCPG) Yeah, that was lovely. I relate to the lyrics so much… tell me if this sounds narcissistic, but did you write that for me?
-(Gibbon|Gibbon, casual, grabby, smittenMED|blush) Ooooh, uh, oh, eh, yeah, uh, totally.
+(Gibbon|Gibbon, campus, grabby, smittenMED|blush) Ooooh, uh, oh, eh, yeah, uh, totally.
 (PCPG) Well thanks, I really liked it. That voice downstairs, was that your brother?
-(Gibbon|Gibbon, casual, press, happyMED) Yeah, that’s HGBGuy. Me and him used to be in a band, actually, along with Munchy.
+(Gibbon|Gibbon, campus, press, happyMED) Yeah, that’s HGBGuy. Me and him used to be in a band, actually, along with Munchy.
 (PCPG) Wait, Munchy? As in, Professor Munchy? Professor Munchausen? 
-(Gibbon|Gibbon, casual, default, confusedMIN) Yeah, he’s actually young as shit. Younger than you or I by a good few years. Before he became a teacher we hung out, and of course, like I said, we had the band: Sleep Tight.
+(Gibbon|Gibbon, campus, default, confusedMIN) Yeah, he’s actually young as shit. Younger than you or I by a good few years. 
+(Gibbon) Before he became a teacher we hung out, and of course, like I said, we had the band: Sleep Tight.
 [SFX: PCP-SFX_Nuke]
 Suddenly the wall to my left bursts open in a cacophony of noise unnatural to the size of the explosion, and an imposing figure wearing a burger-themed hoodie steps through.
 [SLIDE, Gibbon, right]
 [Song: PCPDating_ActionFun]
 (Munchy|Munchy, special, crossing, shockMAX, offleft, slide, left) Did somebody say… SLEEP TIGHT?
-(Gibbon|Gibbon, casual, clenched, happyMED) Oh hey Munchy! Speak of the devil-
+(Gibbon|Gibbon, campus, clenched, happyMED) Oh hey Munchy! Speak of the devil-
 (Munchy|Munchy, special, default, happyMAX) -and the devil will get the band back together! Where’s HGBGuy? Let’s have a reunion party RIGHT NOW!
 (PCPG) H-hey there, professor…
 (Munchy|Munchy, special, default, smittenMAX) Well well well, if it isn’t the little pissy baby new student!
-(Gibbon|Gibbon, casual, default, neutral) Nah it’s cool Munchy, he’s pretty chill. Honestly, now’s not the best time for a reunion. Besides, it’s not like we don’t see each other.
-(Munchy|Munchy, special, default, angryMIN) Dude, come the fuck on. It’s not about seeing each other, it’s about hanging out. When was the last time we jammed? The last time we jived? The last time we broke the sound barrier wide open and took a dump in it?
-(Gibbon|Gibbon, casual, press, shockMIN) Well, when you put it like that, I guess it’s been a while. Look, HGBGuy’s downstairs. How about you go catch up with him while we finish up here? I’ll be down in a bit.
+(Gibbon|Gibbon, campus, default, neutral) Nah it’s cool Munchy, he’s pretty chill. Honestly, now’s not the best time for a reunion. 
+(Gibbon) Besides, it’s not like we don’t see each other.
+(Munchy|Munchy, special, default, angryMIN) Dude, come the fuck on. It’s not about seeing each other, it’s about hanging out. When was the last time we jammed? 
+(Munchy) The last time we jived? The last time we broke the sound barrier wide open and took a dump in it?
+(Gibbon|Gibbon, campus, press, shockMIN) Well, when you put it like that, I guess it’s been a while. Look, HGBGuy’s downstairs. 
+(Gibbon) How about you go catch up with him while we finish up here? I’ll be down in a bit.
 (Munchy|Munchy, special, default, happyMIN) Well don’t be a stranger, I’ve only got 3 more hours until the FBI arrest me for being an interstellar WMD on legs!
 [Munchy leaves]
 [StopMusic]
-(Gibbon|Gibbon, casual, press, smittenMED) Heh, it’s been a while since I “hung out” with those guys, too…
+(Gibbon|Gibbon, campus, press, smittenMED) Heh, it’s been a while since I “hung out” with those guys, too…
+
+
 [Scene: Flash-BacK-On!]
 (PCPG) What? What are you thinking about?
 [Song: PCPDating_ProCrastinatorShortLoop]
-(Gibbon|Gibbon, casual, press, smittenMED) Nothing. This is just reminding me of that one day at the light music club
+(Gibbon|Gibbon, campus, press, smittenMED) Nothing. This is just reminding me of that one day at the light music club
 (PCPG) There’s a light music club? Since when..? I kind of assumed all the clubs at school were for dumb bullshit
-(Gibbon|Gibbon, casual, press, confusedMIN) It was kind of stupid, and no one seemed like they really gave a shit, despite their great performance at the school festival.
-(Gibbon|Gibbon, casual, default, confusedMED) They were just lazing about and eating sweets, while I was way too caught up in this perception of myself as a music guy. 
-(Gibbon|Gibbon, casual, default, confusedMED) The club was really more about actually ENJOYING to make music for its own sake and spending time with friends…
+(Gibbon|Gibbon, campus, press, confusedMIN) It was kind of stupid, and no one seemed like they really gave a shit, despite their great performance at the school festival.
+(Gibbon|Gibbon, campus, default, confusedMED) They were just lazing about and eating sweets, while I was way too caught up in this perception of myself as a music guy. 
+(Gibbon|Gibbon, campus, default, confusedMED) The club was really more about actually ENJOYING to make music for its own sake and spending time with friends…
 (PCPG) Sorry, I’m lost. Who are “they”?
-[Gibbon leaves]
 [fade to black]
+[Gibbon leaves]
 (PCPG) Is this a fucking flashback?
 [StopMusic]
-[Location: musicclass]
+[Location: musicclass, musicclass.foreground]
 [Song: PCPDating_HappyOrSomething]
 [fade from black]
-(Digi, campus, 1, neutral, left)$
-(Gibbon, campus, default, neutral, fade)$
-(Jesse, campus, 3, neutral, right)$
+(Digi, campus, 1, neutral, left-220)
+(Gibbon, campus, default, neutral, left+100)
+(Jesse, campus, 3, neutral, right-670)
 (Gibbon|Azusa, campus, grabby, shockMED) This- This concert, was it all for me?
 (Jesse|Yui, campus, 1, happyMED) Who else would it be for, you dumbass? We spent all that time working on this song.
 (Digi|Mugi, campus, 3, smittenMAX) *sob* Did you like it?
@@ -318,19 +367,25 @@ Suddenly the wall to my left bursts open in a cacophony of noise unnatural to th
 (Jesse|Yui, campus, 2, shockMIN) But you could be with us, with the light music club, where you belong.
 (Digi|Mugi, campus, 1, sadMIN) We can’t leave you behind like that, so we made the song.
 (Jesse|Yui, campus, 5, smittenMED|blush) We fucking love you, Azusa, you came into our lives and made them suck less and we love you.
-(Gibbon|Azusa, campus, clenched, sadMED) Well, I guess that’s what it’s like when you’re like the little guy and everyone around you is doing projects and always moving forward, while you still haven’t outpaced your old brony channel.
+(Gibbon|Azusa, campus, clenched, sadMED) Well, I guess that’s what it’s like when you’re like the little guy and everyone around you is doing projects and always moving forward, 
+(Gibbon|Azusa) while you still haven’t outpaced your old brony channel.
 (Digi|Mugi, campus, 2, shockMED) You’re not though. You found something new and you are progressing.
 (Jesse|Yui, campus, 4, sadMAX) *sob* Just fucking wait, we’ll bring you here no matter what. No matter if it’s not profitable.
 (Gibbon|Azusa, campus, clenched, sadMAX) But why? You can make music without me. You have made music without me. I’m just an extra.
-(Jesse|Yui, campus, 5, angryMED) Don’t you dare say that. I’m coming unzipped with all of these emotions I thought I couldn’t feel anymore. I believed to be dead inside and now I’m falling apart. 
-(Jesse|Yui, campus, 4, confusedMIN) None of this is even real. It’s a set. A farce. A past that never happened and yet it is more real than any reality. How could you do this to me?!
+(Jesse|Yui, campus, 5, angryMED) Don’t you dare say that. I’m coming unzipped with all of these emotions I thought I couldn’t feel anymore. 
+(Jesse|Yui) I believed to be dead inside and now I’m falling apart. 
+(Jesse|Yui, campus, 4, confusedMIN) None of this is even real. It’s a set. A farce. A past that never happened and yet it is more real than any reality. 
+(Jesse|Yui) How could you do this to me?!
 (Gibbon|Azusa, campus, default, sadMIN) I’m just saying that it would be cheaper to not have me there. For me to stay in England.
 (Digi|Mugi, campus, 2, sadMIN) That’s not the point. The point was never to be profitable, or good. We’re fucking idiots, remember? 
-(Digi|Mugi, campus, 2, sadMIN) You’re the only smart person around here. We simply want to sit around and have fun while making songs. We don’t NEED you for that, but it wouldn’t be worth anything if you weren’t there.
+(Digi|Mugi, campus, 2, sadMIN) You’re the only smart person around here. We simply want to sit around and have fun while making songs.
+(Digi|Mugi) We don’t NEED you for that, but it wouldn’t be worth anything if you weren’t there.
 (Gibbon|Azusa, campus, grabby, smittenMAX) That’s…wow. 
-(Gibbon|Azusa, campus, grabby, smittenMAX) I guess I’ll have to make sure to find something to put my soul into and become as great as you guys for when you come to get me. So we can still be friends.
+(Gibbon|Azusa, campus, grabby, smittenMAX) I guess I’ll have to make sure to find something to put my soul into and become as great as you guys for when you come to get me. 
+(Gibbon|Azusa) So we can still be friends.
 (Jesse|Yui, campus, 1, happyMED) Always!
-(Digi|Mugi, campus, 3, happyMED) Just you wait. There’ll be a school here when you’re ready. For everyone to find their creative spark and to have fun with their friends. We’ll get you here.
+(Digi|Mugi, campus, 3, happyMED) Just you wait. There’ll be a school here when you’re ready. For everyone to find their creative spark and to have fun with their friends. 
+(Digi|Mugi) We’ll get you here.
 (Jesse|Yui, campus, 1, happyMAX|blush) And don’t ever be so down about yourself again. Never give uppu!
 (Digi|Mugi, campus, 2, happyMAX) You’re the best musician in this group already, I can only imagine what it’s gonna be like in a year.
 (Jesse|Yui, campus, 3, happyMED) Yeah, you won’t want to have anything to do with us.
@@ -343,26 +398,29 @@ Suddenly the wall to my left bursts open in a cacophony of noise unnatural to th
 [Location: gibbonroom]
 [Song: PCPDating_HomeNight]
 [fade from black]
-(Gibbon, casual, default, neutral, fade)
+(Gibbon, campus, default, neutral, fade)
 (PCPG) Wait, did that really happen? Who are Hirasawa Yui and Kotobuki Tsumugi, and why did they call you Azusa?
-(Gibbon, casual, press, confusedMIN) I may have taken some liberties, but it’s essentially what happened. They were wrong though. They did outpace me. 
-(Gibbon, casual, press, confusedMIN) I thought music was this one thing I could really be good at, that I could dedicate my life to and make friends through. But it’s just not.
+(Gibbon, campus, press, confusedMIN) I may have taken some liberties, but it’s essentially what happened. They were wrong though. They did outpace me. 
+(Gibbon, campus, press, confusedMIN) I thought music was this one thing I could really be good at, that I could dedicate my life to and make friends through. But it’s just not.
 (PCPG) Gib…
-(Gibbon, casual, press, sadMED) Like, I’m okay. 
-(Gibbon, casual, press, sadMED) I can pull a guitar string and it makes a sound that I want. But It’s not what I WANT to be. 
-(Gibbon, casual, press, sadMED) I like making music sometimes, but I don’t just want to be a musician. It’s a thing I’ve done all my life and grew up around, but that doesn’t make it ME.
+(Gibbon, campus, press, sadMED) Like, I’m okay. 
+(Gibbon, campus, press, sadMED) I can pull a guitar string and it makes a sound that I want. But It’s not what I WANT to be. 
+(Gibbon, campus, press, sadMED) I like making music sometimes, but I don’t just want to be a musician. 
+(Gibbon) It’s a thing I’ve done all my life and grew up around, but that doesn’t make it ME.
 (PCPG) I don’t know who these people are, but maybe they’re right about the confidence-thing. You are good.
-(Gibbon, casual, default, sadMIN) Or maybe I’m like Azusa. Maybe I just can’t catch up. 
-(Gibbon, casual, default, sadMIN, center, slide, offright) This is stupid. I have to get out of here.
+(Gibbon, campus, default, sadMIN) Or maybe I’m like Azusa. Maybe I just can’t catch up. 
+(Gibbon, campus, default, sadMIN, center, slide, offright) This is stupid. I have to get out of here.
 [Gibbon leaves]
 And with that he marches out of his own bedroom, just kind of leaving me here alone. Uhhh, should I… go?
 [fade to black]
 [StopMusic]
+
 [Scene: Mean Girls]
 [Location: 7eleven.day]
 [Song: PCPDating_MoveMe]
 [fade from black]
-With this class schedule, I’m slowly starting to get used to the fact that there are long stretches of time where I don’t get see Gib all that often. Whenever I do though he has a new burning passion to drive him forward in life.
+With this class schedule, I’m slowly starting to get used to the fact that there are long stretches of time where I don’t get see Gib all that often. 
+Whenever I do though he has a new burning passion to drive him forward in life.
 It’s probably refreshing for him each time, though maybe not that healthy? To keep crashing and rising from the ashes again? He-
 [Screen shake]
 (Kazee|???, body3, face1, left) Hey, look where you’re going, shithead.
@@ -371,8 +429,10 @@ It’s probably refreshing for him each time, though maybe not that healthy? To 
 (Michelle|???, body2, face5, fade) What? Existing? In MY presence?
 (PCPG) What? No, I just didn’t want to run into her..
 Wait a second, have I met this girl before? She seems awfully familiar..
-(Michelle|???, body2, face4) Oh but you did run into her, didn’t you?/n Full frontal collision. 
-(Michelle|???, body2, face2) Her pussy fucking POPPED cause of it./n It’s just a mush of blood and bones down there.
+(Michelle|???, body2, face4) Oh but you did run into her, didn’t you?/n
+Full frontal collision. 
+(Michelle|???, body2, face2) Her pussy fucking POPPED cause of it./n
+It’s just a mush of blood and bones down there.
 (PCPG) I don’t think it..
 (PCPG) ..Gib?
 (Michelle|???, body3, face5) Who’s “Gib” you worthless degenerate? Are you worshipping a false god? Cause that sends you straight to the sin bin.
@@ -385,15 +445,18 @@ Wait a second, have I met this girl before? She seems awfully familiar..
 (PCPG) So what? Music wasn’t fulfilling enough and you’re a delinquent now?
 (MayGib|“May”) Yeah, but I’m also a cute girl, so it’s like cool, you know? Like Vriska. She’s cool and mean and she does stuff and is okay with that.
 (PCPG) That’s probably more a matter of mindset than of imitating the aesthetic.
-(Michelle|Michelle, body1, face4) Are you calling us fake?/n I have never used a filter in my life. 
+(Michelle|Michelle, body1, face4) Are you calling us fake?/n
+I have never used a filter in my life. 
 (Michelle|Michelle, body1, face3) I don’t even know what that is, and your insinuation that I do is an insult to the lord’s creation. I am naturally this beautiful!
 (MayGib|“May”) I know that. Like, it’s pretty obvious that this isn’t the way to becoming more confident and assertive, but it’s still fun in a roleplay kind of way. 
 (MayGib|“May”) If I can play the character then maybe I can utilize it when I need to. You know; fake it till you make it.
 (PCPG) I guess? This whole confidence thing really fucked you up, huh?
-(MayGib|“May”) It’s not even really confidence. I can somewhat do that. I can go “No” and people mostly respect it. It’s more of the general search for… I can’t fucking thing of the word…. 
+(MayGib|“May”) It’s not even really confidence. I can somewhat do that. I can go “No” and people mostly respect it. 
+(MayGib|“May”) It’s more of the general search for… I can’t fucking thing of the word…. 
 (MayGib|“May”) Like a purpose but MORE. Something that is kind of destined to be your role. Something that will fulfill you.
 (PCPG) Like a calling?
-(MayGib|“May”) Maybe. Reminiscing about that day in the light music club just got me thinking about why it’s so difficult for me to stay invested in a thing and how I can change the way I do things. 
+(MayGib|“May”) Maybe. Reminiscing about that day in the light music club just got me thinking about why it’s so difficult for me to stay invested in a thing 
+(MayGib|“May”) and how I can change the way I do things. 
 (MayGib|“May”) I don’t fucking know. It’s very possible that this won’t work out, but I’ll try it.
 (PCPG) Good luck then. Just please come back to school at some point.
 (MayGib|“May”) I won’t. Formal education is like gay and for literal babies who need to have information spoon-fed to them. I’m May, suck my clit.
@@ -412,42 +475,54 @@ And with that the group along with Gib strut away.
 Hopefully this is just a phase or something.
 [fade to black]
 [StopMusic]
+
+
 [Scene: Poke Him On]
 [Location: hallway2]
 [fade from black]
-About a week has passed since I last saw Gib with those girls, and at this point, I’m not sure if he will even come back to school. My usual day to day life at PCPU continues, but despite that I can’t stop thinking about him and if he’s alright.
+About a week has passed since I last saw Gib with those girls, and at this point, I’m not sure if he will even come back to school. 
+My usual day to day life at PCPU continues, but despite that I can’t stop thinking about him and if he’s alright.
 What could he possibly be doing instead anyways?
 [Location: scienceclass]
 I arrive at my next class and find it completely empty except for a single piece of paper on the teachers desk. 
-“No class today due to Pokémon Tournament. Come watch me destroy the competition with Brunswick at the City Park. /n - Ben Saint”
+“No class today due to Pokémon Tournament. Come watch me destroy the competition with Brunswick at the City Park. /n
+- Ben Saint”
 A Pokémon Tournament? I mean, I guess I have nothing else to do, so I might as well see if Ben and Brunswick are any good at battling.
 [fade to black]
 [Location: citypark.bleachers]
 [Song: PCPDating_ActionFun]
 [SFX: PCP-AMBIENT_Classroom]
 [fade from black]
-I arrive at the park and find huge stands erected all around, assumably for the event. The place is completely packed with competitors, Pokémon, and audience members, and I can notice quite a few PCPU students among them. An announcer’s voice sounds from the various speakers placed about but the crowd is so loud you can barely make out what they’re saying.
+I arrive at the park and find huge stands erected all around, assumably for the event. 
+The place is completely packed with competitors, Pokémon, and audience members, and I can notice quite a few PCPU students among them. 
+An announcer’s voice sounds from the various speakers placed about but the crowd is so loud you can barely make out what they’re saying.
 Among the crowd I notice Brunswick’s hairy mass next to Ben in the distance and make my way towards them. It seems like Ben is talking to some of the other competitors.
-(Brunswick, left)
+(Brunswick, Brunswick, neutral, left)
 (Ben, casual, base, neutral, center)
 (Nate, casual, standing, neutral|kaminashades, right)
 (Ben|Ben, casual, slouch, angryMIN) I can’t fucking believe the tournament is following Pokémon Bloom and Doom rules, it’s like the worst fucking one yet.
 (Nate|Nate, casual, papers, happyMED|kaminashades) Oh come on I don’t think it’s THAT bad. I mean, I think Jumbofusioning is honestly pretty fun to use.
 (PCPG) Hey guys, whats up?
-(Ben|Ben, casual, exasp, angryMAX) It’s overpowered and you know it Nate, it literally allows you to OHKO anything no matter the type or stats and there’s nothing you can really do about it!
+(Ben|Ben, casual, exasp, angryMAX) It’s overpowered and you know it Nate, 
+(Ben) it literally allows you to OHKO anything no matter the type or stats and there’s nothing you can really do about it!
 [SLIDE, Nate, offright]
-(Digi|Digi, casual, 5, neutral, offright, slide, right) Okay, but surely it’s better than using Pokémon Slime and Goo rules, like having the only two types being Slimed and Not Slimed kinda ruins the whole point of Pokémon right?
-(Ben|Ben, casual, base, neutral) No fuck you, Pokémon Slime and Goo was cool since it was so different from everything else. At least those games had some semblance of a soul to them.
+(Digi|Digi, casual, 5, neutral, offright, slide, right) Okay, but surely it’s better than using Pokémon Slime and Goo rules, 
+(Digi) like having the only two types being Slimed and Not Slimed kinda ruins the whole point of Pokémon right?
+(Ben|Ben, casual, base, neutral) No fuck you, Pokémon Slime and Goo was cool since it was so different from everything else. 
+(Ben) At least those games had some semblance of a soul to them.
 (Announcer) Competitors, please make your way to your designated arenas as the tournament will start shortly.
 [SLIDE, Brunswick, offleft]
 [SLIDE, Ben, left]
 [SLIDE, Nate, center]
 [SLIDE, Digi, offright]
 [StopSFX]
-(Mage|Mage, casual, 1, shockMED, offright, slide, right) I mean I think just using the most recent games makes the most sense though. I personally thought Bloom and Doom were the best of the series.
+(Mage|Mage, casual, 1, shockMED, offright, slide, right) I mean I think just using the most recent games makes the most sense though. 
+(Mage) I personally thought Bloom and Doom were the best of the series.
 (PCPG) Uhh, guys?
-(Ben|Ben, casual, point, happyMIN) I mean, okay, they aren’t actually that bad, but they don’t come anywhere close to being like the glory days of Pokémon Rowdy and Killer. Now THAT was peak Pokémon right there.
-(Nate|Nate, casual, smoking, angryMIN|kaminashades) Oh please Ben, the only reason you liked them was cause of the name. I mean the gang mechanic was cool and all, but in the end it was just another gimmick.
+(Ben|Ben, casual, point, happyMIN) I mean, okay, they aren’t actually that bad, but they don’t come anywhere close to being like the glory days of Pokémon Rowdy and Killer. 
+(Ben) Now THAT was peak Pokémon right there.
+(Nate|Nate, casual, smoking, angryMIN|kaminashades) Oh please Ben, the only reason you liked them was cause of the name. 
+(Nate) I mean the gang mechanic was cool and all, but in the end it was just another gimmick.
 (PCPG) HEY!
 (Mage|Mage, casual, 3, happyMED) Oh hey there, didn’t notice you. What’s up?
 (PCPG) Uh, I think the tournament is about to start, like right now.
@@ -461,22 +536,30 @@ Among the crowd I notice Brunswick’s hairy mass next to Ben in the distance an
 [Digi leaves]
 [Nate leaves]
 [Mage leaves]
-Noticing how the crowd is already making their way towards the tournament, everyone rushes to pocket all of their Pokémon into Pokéballs and follow along. At first I decide to follow Ben, but then unexpectedly I notice a familiar face walking beside us.
+Noticing how the crowd is already making their way towards the tournament, everyone rushes to pocket all of their Pokémon into Pokéballs and follow along. 
+At first I decide to follow Ben, but then unexpectedly I notice a familiar face walking beside us.
 (Gibbon, casual, default, neutral, fade)
 (PCPG) Hey Gib! How are you.. doing?
 (Gibbon|Gibbon, casual, handsup, happyMED|blush) Ohh you know me, I’m just trying to become the very best like noone ever was.
 (PCPG) So you’re joining the tournament then?
-(Gibbon|Gibbon, casual, default, happyMIN) Yeah I’ve been training for a while for this, trying to find something I can do better than anyone else! I’m going to win this tournament and become the big boy, the champion, then I can… uhh what does a Pokémon champion even dooo on a day to day basis? Hmm..
+(Gibbon|Gibbon, casual, default, happyMIN) Yeah I’ve been training for a while for this, trying to find something I can do better than anyone else! 
+(Gibbon) I’m going to win this tournament and become the big boy, the champion, then I can… uhh what does a Pokémon champion even dooo on a day to day basis? Hmm..
 (PCPG) Well, I’m glad you’re at least out of your previous slump.
 (PCPG) We better hurry though, you wouldn’t want to be late now. I’ll be cheering you on from the sidelines, so be sure to do your best.
 [Gibbon leaves]
 [StopMusic]
 [Song: PCPDating_ActionSerious]
-As Gib heads over to his battle arena I head up the stands, making sure I don’t lose sight of Gibbon among the other competitors down below. I also manage to find the PCPU teachers and Mage among the competitors too. Soon enough the brackets start, along with the fights.
-Mage and Digi unceremoniously lose their first rounds, while Ben, Nate, and Gib move on to the next. Gibbon seems to have really trained up and prepared for this, since he had no trouble winning that first round.
-Ben’s Typhlosion and Ampharos make quick work of his opponent, but Nate’s Lopunny was most definitely the star of the show as she managed to both carry her team and show off her stuff, if you know what I mean.
+As Gib heads over to his battle arena I head up the stands, making sure I don’t lose sight of Gibbon among the other competitors down below. 
+I also manage to find the PCPU teachers and Mage among the competitors too. Soon enough the brackets start, along with the fights.
+Mage and Digi unceremoniously lose their first rounds, while Ben, Nate, and Gib move on to the next. 
+Gibbon seems to have really trained up and prepared for this, since he had no trouble winning that first round.
+Ben’s Typhlosion and Ampharos make quick work of his opponent, 
+but Nate’s Lopunny was most definitely the star of the show as she managed to both carry her team and show off her stuff, if you know what I mean.
 [StopMusic]
-Before the next round starts I decide to head down to meet Gib and congratulate him on his win. After a quick scan I find him sitting on a bench by himself near the back of the arena. Hmm, maybe I shouldn’t bother him for now, he seems deep in thought.
+Before the next round starts I decide to head down to meet Gib and congratulate him on his win. 
+After a quick scan I find him sitting on a bench by himself near the back of the arena. 
+Hmm, maybe I shouldn’t bother him for now, he seems deep in thought.
+
 [CHOICE]
 *Meet up with him anyways*
 *Let him be for now*
@@ -488,7 +571,8 @@ Gibbon doesn’t reply, still deep in thought.
 (PCPG) Gibbontake? Hellooo?
 (Gibbon|Gibbon, casual, grabby, shockMIN) Huh? Oh, right yeah thanks.
 (PCPG) What’s up?
-(Gibbon|Gibbon, casual, grabby, sadMIN) Oh I don’t know. While I was battling back there I wasn’t feeeling it you know? Like it wasn’t a special moment or anything. I like my Pokémon and all, but maybe I don’t care that much about the competitive side of it.
+(Gibbon|Gibbon, casual, grabby, sadMIN) Oh I don’t know. While I was battling back there I wasn’t feeeling it you know? 
+(Gibbon) Like it wasn’t a special moment or anything. I like my Pokémon and all, but maybe I don’t care that much about the competitive side of it.
 (PCPG) Hmm..
 Honestly I don’t really think this Pokémon Champion thing will go anywhere, but I don’t really want to discourage him from pursuing this to its conclusion.
 (PCPG) Well, how about finishing the tournament first and seeing how you feel about it then. No use pondering over it now right?
@@ -504,20 +588,26 @@ Yeah, I think letting him focus for now would be best. Wouldn’t want to distra
 [Song: PCPDating_ActionSerious]
 After a few seconds he gets up and makes his way to his second opponent as the second round of matches get started.
 *
-Clearly the first round weeded out many of the weaker competitors, as Ben and Nate now find themselves in trouble against their new opponents. Ben especially seems in dire straights after an opponent Wobbuffet countered his Ice Fang, causing Brunswick to faint.
-I look over to Gib and find him in a similarly troublesome situation. The opponent has a Blissey out and Gib can’t manage to break through its overwhelming defenses. With a held Leftovers and a constant use of Softboiled, the Blissey manages to outheal any amount of damage Gib’s Pokémon deal, and can retaliate with no concern. 
-Gib tries his best to break through, but his opponent seems to be ahead of him at every turn, and eventually with luck being against him he slowly, very slowly, ends up losing. Ben and Nate both make it onto the next round, though just barely. It seems likely they won't make it much further into the tournament either.
+Clearly the first round weeded out many of the weaker competitors, as Ben and Nate now find themselves in trouble against their new opponents. 
+Ben especially seems in dire straights after an opponent Wobbuffet countered his Ice Fang, causing Brunswick to faint.
+I look over to Gib and find him in a similarly troublesome situation. The opponent has a Blissey out and Gib can’t manage to break through its overwhelming defenses. 
+With a held Leftovers and a constant use of Softboiled, the Blissey manages to outheal any amount of damage Gib’s Pokémon deal, and can retaliate with no concern. 
+Gib tries his best to break through, but his opponent seems to be ahead of him at every turn, and eventually with luck being against him he slowly, very slowly, ends up losing. 
+Ben and Nate both make it onto the next round, though just barely. It seems likely they won't make it much further into the tournament either.
 [StopMusic]
 [Song: PCPDating_HomeNight]
 *Meet up with him anyways*
-I decide to meet up with him again to see what he plans to do now. Hopefully he won't disappear again after this, given how uncertain he was of this beforehand.
+I decide to meet up with him again to see what he plans to do now. 
+Hopefully he won't disappear again after this, given how uncertain he was of this beforehand.
 *
 *Let him be for now*
-I decide I probably should now meet up with him. Maybe I should have talked to him beforehand, gave him a bit of encouragement or support? Not sure if that would have helped regardless.
+I decide I probably should now meet up with him. 
+Maybe I should have talked to him beforehand, gave him a bit of encouragement or support? Not sure if that would have helped regardless.
 *
 (Gibbon|Gibbon, casual, clenched, angryMAX, fade) Facking bullshit is what I call that!
 (PCPG) Yeah, it seemed pretty rough out there.
-(Gibbon|Gibbon, casual, default, angryMED) I mean, fuck that guy you know? And fuck the tournament for making that a legitimate strategy that works. I hope that guy literally dies, like he gets his head chopped off or something.
+(Gibbon|Gibbon, casual, default, angryMED) I mean, fuck that guy you know? And fuck the tournament for making that a legitimate strategy that works. 
+(Gibbon) I hope that guy literally dies, like he gets his head chopped off or something.
 (PCPG) Uhhh..
 (Gibbon|Gibbon, casual, press, shockMED|blush) But not really though… unless?
 (Gibbon|Gibbon, casual, press, angryMIN) Anyways that was a huge waste of time, I guess I’ll just go back to school for now, though I still don’t really know what to do...
@@ -529,31 +619,41 @@ With no easy solution to his problem I decide to stay quiet. Man, helping Gibbon
 [Location: outsidepcpu.day]
 [Song: PCPDating_HomeMorning]
 [fade from black]
-It’s the end of a long day and all I can think about is getting home and getting some R&R. Well, at least Gib is now back to attending class regularly and seems to be feeling better about stuff in general. 
+It’s the end of a long day and all I can think about is getting home and getting some R&R. 
+Well, at least Gib is now back to attending class regularly and seems to be feeling better about stuff in general. 
 As I reach the gates I see the man himself at them looking around for something, or someone. As soon as he spots me he runs up to talk.
-(Gibbon|Gibbon, campus, press, smittenMIN, fade) Hey there! Um, so I don’t know if I told you about this already, but Professor Bestman and I are doing this pirate roleplay thing tonight. Actually, we do it every week. And well, our last two swabbies walked the plank and quit on us, so we’re looking for some new crew members…?
+(Gibbon|Gibbon, campus, press, smittenMIN, fade) Hey there! Um, so I don’t know if I told you about this already, but Professor Bestman and I are doing this pirate roleplay thing tonight. 
+(Gibbon) Actually, we do it every week. And well, our last two swabbies walked the plank and quit on us, so we’re looking for some new crew members…?
 (PCPG) Pirate… roleplay? I’m not sure I follow.
-(Gibbon|Gibbon, campus, handsup, happyMIN) Okay, so it’s a thing called LARPing, Live-Action-Role-Playing. We dress up like pirates and follow a quest to find the One Piece, you know, like in the manga. Our OG (that stands for Ocean God, the equivalent of a Dungeon Master) sets the rules and manages stuff like random events and enemy ships and stuff. 
+(Gibbon|Gibbon, campus, handsup, happyMIN) Okay, so it’s a thing called LARPing, Live-Action-Role-Playing. 
+(Gibbon) We dress up like pirates and follow a quest to find the One Piece, you know, like in the manga. 
+(Gibbon) Our OG (that stands for Ocean God, the equivalent of a Dungeon Master) sets the rules and manages stuff like random events and enemy ships and stuff. 
 (Gibbon|Gibbon, campus, handsup, happyMED) Fancy trying it out? We start right after school, so like right now, and your first session is free.
 (PCPG) Uhh, well sure, what’s the harm? If I don’t like it, I’m not committed to keep playing, right?
 Gib’s face lights up.
-(Gibbon|Gibbon, campus, clenched, happyMAX) Nice! Oh, we’ll have to stop by the Gamer’s Tavern first though. I left my costume at home and you don’t have one yet, so we’ll have to pick something out from their bargain bin. Let’s go!
+(Gibbon|Gibbon, campus, clenched, happyMAX) Nice! Oh, we’ll have to stop by the Gamer’s Tavern first though. 
+(Gibbon) I left my costume at home and you don’t have one yet, so we’ll have to pick something out from their bargain bin. Let’s go!
 [fade to black]
 (Gibbon, campus, default, neutral)
 [StopMusic]
 [Location: gamerstavern]
 [Song: PCPDating_SuspiciousFigga]
 [fade from black]
-We enter the musty, dusty, and somehow rusty wooden shack that is the Gamer’s Tavern. Gibbon leads me to the back, and squats down to sift through a large box labelled “LARP gear: $2.99 per item”
+We enter the musty, dusty, and somehow rusty wooden shack that is the Gamer’s Tavern. 
+Gibbon leads me to the back, and squats down to sift through a large box labelled “LARP gear: $2.99 per item”
 (PCPG) Say, didn’t this place open just a few weeks ago? It’s a total dump!
 Gib rises back to his feet, holding a black and red ensemble and a worryingly real-looking axe.
-(Gibbon|Gibbon, campus, handsup, happyMIN) Don’t worry, we’ll be in and out before you know it. Go ahead and look through the box, there’s not much pirate stuff in there so just pick what you think looks good.
+(Gibbon|Gibbon, campus, handsup, happyMIN) Don’t worry, we’ll be in and out before you know it. 
+(Gibbon) Go ahead and look through the box, there’s not much pirate stuff in there so just pick what you think looks good.
 [Gibbon leaves]
 With that, and after paying the bartender for his things, he ducks into the men’s room to change. 
-I rummage around and pick out the only thing that is even close to my size: a japanese schoolgirl uniform. Well, I’d be lying if I said I hadn’t imagined wearing one of these. I make sure to also pick up some supportive-looking skinny shorts to keep my junk in place under that skirt. 
+I rummage around and pick out the only thing that is even close to my size: a japanese schoolgirl uniform. 
+Well, I’d be lying if I said I hadn’t imagined wearing one of these. 
+I make sure to also pick up some supportive-looking skinny shorts to keep my junk in place under that skirt. 
 Don’t want to have a clothing malfunction during a LARP or whatever… or do I…?
 (Gibbon, special, handsup, neutral, fade)
-Snapped out of my daydream by Gibbon’s return, I realise that he, too, is wearing something resembling a schoolgirl uniform. Hehe, both of us in skirts and bare midriffs… ah, focus!
+Snapped out of my daydream by Gibbon’s return, I realise that he, too, is wearing something resembling a schoolgirl uniform. 
+Hehe, both of us in skirts and bare midriffs… ah, focus!
 I grab a shitty plastic sword, pay for the lot, and bolt into the changing room before Gib has the chance to comment on my gawking face.
 (Gibbon|Gibbon, special, default, shockMED) Hey, uh… oh, he’s gone to change clothes.
 [fade to black]
@@ -565,7 +665,8 @@ I turn as red as the trim on Gib’s seifuku.
 (Gibbon|Gibbon, special, handsup, shockMIN) Oh, I didn’t tell you? We do our LARP sessions on the beach!
 My heart sinks, but my face holds an awkward smile.
 (PCPG) Th-the PUBLIC beach… huh…?
-Going to the beach dressed like this?! It’s bad enough in this sweaty bar, but at least everyone here is too drunk to remember me five minutes after I’m gone. The absolute humiliation! Me and Gib, dressed so shamelessly around all those beach-goers…!
+Going to the beach dressed like this?! It’s bad enough in this sweaty bar, but at least everyone here is too drunk to remember me five minutes after I’m gone. 
+The absolute humiliation! Me and Gib, dressed so shamelessly around all those beach-goers…!
 This is gonna be hot as hell.
 [fade to black]
 [Gibbon leaves]
@@ -582,15 +683,19 @@ This is gonna be hot as hell.
 (Nate|Nate, casual, papers, shockMAX|shades, left, fade) Captain, the map indicates that the One Piece is buried somewhere on this island.
 (Jesse|Jesse, special, 4, angryMIN, right, fade) Buried? Here? A true pirate would never bury his treasures on land. A true pirate has never even seen land. 
 (Jesse|Jesse, special, 5, happyMIN) That’s what the eyepatches are for: To avoid sullying their minds with the sight of sediment, never to observe it, let alone go there.
-Honestly? At first I wasn’t that into this whole larping thing. Seemed a bit silly. But after weeks at sea with only rats and vinegar for food, the pirate life doesn’t feel like playacting anymore. 
+Honestly? At first I wasn’t that into this whole larping thing. Seemed a bit silly. 
+But after weeks at sea with only rats and vinegar for food, the pirate life doesn’t feel like playacting anymore. 
 It slowly becomes real and exciting, though maybe that’s just the scurvy dissolving my brain.
-(Nate|Nate, casual, smoking, shockMED|shades) Can you believe this is the end of One Piece? This is where everything is decided; what all these years of meticulously planned out storytelling culminate in.
+(Nate|Nate, casual, smoking, shockMED|shades) Can you believe this is the end of One Piece? This is where everything is decided; 
+(Nate) what all these years of meticulously planned out storytelling culminate in.
 (Gibbon|Gibbon, special, default, happyMIN) Eh, I’m sure it’ll be good
 (Nate|Nate, casual, standing, angryMIN) You can’t know that. Doesn’t the thought of everything going to shit here terrify you?
-(Gibbon|Gibbon, special, grabby, confusedMIN) Not really. Why would it suddenly turn bad now? I’m also way too busy having a fun adventure with my friends for anticlimactic storytelling to really be a concern. 
+(Gibbon|Gibbon, special, grabby, confusedMIN) Not really. Why would it suddenly turn bad now? 
+(Gibbon) I’m also way too busy having a fun adventure with my friends for anticlimactic storytelling to really be a concern. 
 (Gibbon|Gibbon, special, grabby, confusedMIN) We’re not gonna find it anyways.
 (PCPG) What do you mean we’re not gonna find it? The map says it’s here.
-(Gibbon|Gibbon, special, handsup, happyMAX) It’s a misdirect. It’s gotta be. This is an epic journey that’s been going on for decades after all. The one piece isn’t just going to be in a place that we can find. Savvy?
+(Gibbon|Gibbon, special, handsup, happyMAX) It’s a misdirect. It’s gotta be. This is an epic journey that’s been going on for decades after all. 
+(Gibbon) The one piece isn’t just going to be in a place that we can find. Savvy?
 (Gibbon|Gibbon, special, handsup, happyMAX) It’s all about what happens on the way, not where it leads.
 (PCPG) Savvy?
 (Gibbon|Gibbon, special, default, happyMIN) No, I’m asking you, ya silly goose.
@@ -604,26 +709,31 @@ It slowly becomes real and exciting, though maybe that’s just the scurvy disso
 (Jesse|Jesse, special, 4, angryMAX) And who’s fault is that?!
 Maybe I should have just stayed home today...
 (PCPG) Where is this island anyway?
-(Nate|Nate, casual, papers, confusedMIN|shades) Somewhere in the pacific I would presume./n Here, where the X is. 
+(Nate|Nate, casual, papers, confusedMIN|shades) Somewhere in the pacific I would presume./n
+Here, where the X is. 
 (Nate|Nate, casual, papers, confusedMIN|shades) Laugh Tale probably, unless there’s some kind of twist.
 (PCPG) Right, but where exactly. How do we get back if the One Piece isn’t here?
-(Nate|Nate, casual, papers, angryMIN|shades) Kek, I don’t fucking know. This would scarcely be an interesting treasure hunt if the map was useful at all. What? Do you need more hand holding in your games?
+(Nate|Nate, casual, papers, angryMIN|shades) Kek, I don’t fucking know. This would scarcely be an interesting treasure hunt if the map was useful at all. 
+(Nate) What? Do you need more hand holding in your games?
 (PCPG) N-No.
 (Gibbon|Gibbon, special, clenched, angryMED) Everyone shut up. I found something!
 (Jesse|Jesse, special, 2, happyMAX) What is it? Gemstones? The elements of harmony?
 (Gibbon|Gibbon, special, default, shockMIN) A big-ass “X”
 (Nate|Nate, casual, pointing, happyMAX|shades) Now that’s what I’m talking about.
 (Gibbon|Gibbon, special, press, shockMIN) There’s also a sign-
-(Nate|Nate, casual, standing, angryMED|shades) What?! You don’t mark treasures with a sign. That’s baby-shit. It’s barely even fucking hidden if there’s a sign on top of the “X”.
+(Nate|Nate, casual, standing, angryMED|shades) What?! You don’t mark treasures with a sign. That’s baby-shit. 
+(Nate) It’s barely even fucking hidden if there’s a sign on top of the “X”.
 I begin to read the sign out loud.
 (PCPG) “Beware all pirates, all scoundrels and scum of the seven seas who tread here. Beneath this dirt lies the vast treasure of the Pirate King Gol D. Roger…”
 (Nate|Nate, casual, pointing, happyMED|shades) What are we waiting for? Let’s get to digging!
-(PCPG) “…but it is not only a treasure beyond comprehension. It is also the end of a journey that has undoubtedly changed those who undertook it as people. It is an object of catharsis and pure unmitigated conclusion...”
+(PCPG) “…but it is not only a treasure beyond comprehension. 
+(PCPG) It is also the end of a journey that has undoubtedly changed those who undertook it as people. It is an object of catharsis and pure unmitigated conclusion...”
 (Jesse|Jesse, special, 3, angryMIN) What’s that supposed to mean?
 (PCPG) Would you just let me read the whole thing? As far as I can remember, I’m the only guy who decided to put any points into that skill.
 (Jesse|Jesse, special, 4, angryMED) Pirates don’t need to read!
 (Jesse|Gibbon Nate & Jesse) Arrr!
-(PCPG) “So anyone who dares retrieve this booty without having completed all the character arcs that paved their way, romantic and tragic alike shall perish on the spot and spend the rest of eternity haunting the souls of unsuspecting seafarers.”
+(PCPG) “So anyone who dares retrieve this booty without having completed all the character arcs that paved their way, 
+(PCPG) romantic and tragic alike shall perish on the spot and spend the rest of eternity haunting the souls of unsuspecting seafarers.”
 (Jesse|Jesse, special, 1, shockMIN) We’ve definitely done the tragedy part.
 We nod silently.
 (Jesse|Jesse, special, 3, sadMIN) I will never forget that innocent face Colt made when he asked why they were called the “Horse latitudes”.
@@ -637,7 +747,8 @@ Jesse starts sobbing.
 Oh god, please.
 (PCPG) It’s a box. How would it know?
 (Gibbon|Gibbon, special, grabby, smittenMED) Can’t turn back now, I guess.
-And so, with waves crashing onto the shore behind us, Gib and I decide to share a kiss in the setting sun, both knowing that our lives may very well depend on it. If this doesn’t constitute the conclusion of a character arc, I don’t know what does.
+And so, with waves crashing onto the shore behind us, Gib and I decide to share a kiss in the setting sun, both knowing that our lives may very well depend on it. 
+If this doesn’t constitute the conclusion of a character arc, I don’t know what does.
 (Nate|Nate, casual, standing, confusedMIN|shades) Enough of the gay shit, can we finally dig it up now?
 It doesn’t take too much work to unearth the vaunted chest, which is probably a good thing, seeing how groundwater is barely a meter deep around here. 
 Nate and Gibbon proceed to open the chest.
@@ -646,11 +757,14 @@ Nate and Gibbon proceed to open the chest.
 (PCPG) Can’t be what...? Guys?
 (Gibbon|Gibbon, special, default, happyMED) Heh, that’s pretty funny.
 (Nate|Nate, special, papers, angryMAX|shades) No! It can’t just be this! It can’t just be a literal one-piece swimsuit! This isn’t what we were promised Oda!
-(Jesse|Jesse, special, 5, happyMED) You call that “just a one-piece”? This shit looks like a fucking superhero outfit. You could join the Justice League in that thing and no one would even question it.
+(Jesse|Jesse, special, 5, happyMED) You call that “just a one-piece”? This shit looks like a fucking superhero outfit. 
+(Jesse) You could join the Justice League in that thing and no one would even question it.
 (Nate|Nate, special, maniacal) It has to have some power, RIGHT?! It has to! I’m losing my mind here, Gib, say something.
-(Gibbon|Gibbon, special, handsup, happyMAX) What? We found a thing. We went out here, partook in some shenanigans and found an actual physical thing. That’s pretty cool right?
+(Gibbon|Gibbon, special, handsup, happyMAX) What? We found a thing. We went out here, partook in some shenanigans and found an actual physical thing. 
+(Gibbon) That’s pretty cool right?
 (Nate|Nate, special, pointing, sadMAX|shades) Jesse, please! Be with me on this one!
-(Jesse|Jesse, special, 3, sadMED) Life sucks. That’s why pirates are insane drunkards in the first place. Also, that’s still Captain Horseshoe for you, matey. Now pass me my rum, we have a ship to repair.
+(Jesse|Jesse, special, 3, sadMED) Life sucks. That’s why pirates are insane drunkards in the first place. 
+(Jesse) Also, that’s still Captain Horseshoe for you, matey. Now pass me my rum, we have a ship to repair.
 (Nate|Nate, special, maniacal) AAAAAAaaaahhhhhhhhh!
 [Nate leaves]
 [Jesse leaves]
@@ -664,33 +778,43 @@ After a few seconds of awkward silence we quickly head back to help a cursing Ca
 [Gibbon leaves]
 [fade to black]
 [StopMusic]
+
+
 [Scene: Wholesome Cactus]
 [Location: outsidepcpu.day]
 [Song: PCPDating_HomeMorning]
 [fade from black]
-It’s weird to return to everyday school life after the whole treasure hunt and the various character arcs we had to have had because of it. I still find sand in my underwear from time to time.
+It’s weird to return to everyday school life after the whole treasure hunt and the various character arcs we had to have had because of it. 
+I still find sand in my underwear from time to time.
 [Location: hallway1]
-Speaking of adventure, Gib this morning asked me out of the blue to be his “second” in another tournament he's attending, about drawing this time, or something like that. I think that means I won’t be the one drawing though. Damn.
-Too bad, I did take a liking in the craftsmanship of the pencil, ever since Prof. Tinyhats told me to fucking kill myself in art class. I didn’t do it, but the order kinda changed my perspective on life and art on the whole.
+Speaking of adventure, Gib this morning asked me out of the blue to be his “second” in another tournament he's attending, 
+about drawing this time, or something like that. I think that means I won’t be the one drawing though. Damn.
+Too bad, I did take a liking in the craftsmanship of the pencil, ever since Prof. Tinyhats told me to fucking kill myself in art class. 
+I didn’t do it, but the order kinda changed my perspective on life and art on the whole.
 The education model at this school is what I would call “hard love.”
-(Gungirl|Gungirl, 1, offright, center) Oh, you again! Walking around like an idiot, breathing my air away!
+(Gungirl|Gungirl, 1, offright, slide, center) Oh, you again! Walking around like an idiot, breathing my air away!
 (PCPG) I also wish you a good morning Gungirl. Shoot anyone interesting today?
 (Gungirl|Gungirl, 7) ARGGGHH NO! Out of ammo!
 (PCPG) Gungirl is out of ammo? That seems awfully out of character for you.
 (Gungirl|Gungirl, 5) Don’t get fucking analytical on me, nerd! I know how ridiculous this sounds!
 She seems even more distressed than usual.
 (PCPG) What’s the matter? 
-(Gungirl|Gungirl, 3) They took it away! All my bullets, all the magazines! For some dumb sport event, Prof. Bestfag said. That’s an enormous disgrace! I would tell the other Cop Killers about it, but THE Cop Killer and even THE Rowdy Fucker seem to be involved as well. I wanna fucking shoot them all!
+(Gungirl|Gungirl, 3) They took it away! All my bullets, all the magazines! For some dumb sport event, Prof. Bestfag said. 
+(Gungirl) That’s an enormous disgrace! I would tell the other Cop Killers about it, but THE Cop Killer and even THE Rowdy Fucker seem to be involved as well. 
+(Gungirl)I wanna fucking shoot them all!
 (PCPG) Yeah, but you can’t. Well, did you consider that maybe you can just be a regular girl now?
 (Gungirl|girl, 1) What are you saying? A.. just a.. girl?
-(PCPG) I think it’s never too late to stop shooting people and start helping people! Come back girl. I know you didn’t want to become what you are today. You could even start raising a child or something, make some real meaningful connections you know?
+(PCPG) I think it’s never too late to stop shooting people and start helping people! Come back girl. 
+(PCPG) I know you didn’t want to become what you are today. You could even start raising a child or something, make some real meaningful connections you know?
 (Gungirl|girl, 2) You.. think so?
-(Gungirl|Shootgirl, 9) NAH, that’s fucking gay dude. If I can’t shoot with my gun anymore, I’ll get a bow and arrow, or I shoot stones. Really, only the shooting part is essential!
+(Gungirl|Shootgirl, 9) NAH, that’s fucking gay dude. If I can’t shoot with my gun anymore, I’ll get a bow and arrow, or I shoot stones. 
+(Gungirl|Shootgirl) Really, only the shooting part is essential!
 (PCPG) Well, if you think that you’re gonna be happier that way..
 (Gungirl|Shootgirl, 6) Hell yeah I’ll be! Thanks for making me realize that! Maybe you’re not quite as pathetic as I thought!
 [Gungirl leaves]
 I guess I already made a positive impact on someone today.. in some way.
-Wait, didn’t she just shoot her guns right now?? /n Well, whatever.
+Wait, didn’t she just shoot her guns right now?? /n
+Well, whatever.
 I get to the art classroom where the event is supposed to take place, enter and…
 [StopMusic]
 [Location: quickdrawtown]
@@ -702,49 +826,57 @@ Holy shit! I’m.. outside? I feel a warm wind in my hair, it smells like horses
 (PCPG) Neat indeed! So, what exactly is my job here?
 (Gibbon|Gibbon, casual, press, smittenMIN) Eh, just make sure that everything goes according to the rules and nobody tries to cheat on me. 
 (PCPG) Isn’t this basically just a drawing contest? How do you even cheat here?
-(Gibbon|Gibbon, casual, default, smittenMED) Yeah, I actually don’t need a second here, but I wanted you to see the show for free. SlimeCorp Entertainment is selling overpriced tickets, and I’m sure you don’t want to afford their streaming service Slime+.
+(Gibbon|Gibbon, casual, default, smittenMED) Yeah, I actually don’t need a second here, but I wanted you to see the show for free. 
+(Gibbon) SlimeCorp Entertainment is selling overpriced tickets, and I’m sure you don’t want to afford their streaming service Slime+.
 [Gibbon leaves]
-(Prof. Digibro) Welcome to...
-(Prof. Bestman) Ten..
-(Prof. Digibro) Paces..
-(Prof. Bestman) And..
-(Prof. Digibro) DRAW!
-I soon learn that the two professors on the balcony are the hosts and judges of this show, in which the combatants have to interpret a given theme visually on a small piece of shitty printer paper. 
+(Digi|Prof. Digibro) Welcome to...
+(Nate|Prof. Bestman) Ten..
+(Digi|Prof. Digibro) Paces..
+(Nate|Prof. Bestman) And..
+(Digi|Prof. Digibro) DRAW!
+I soon learn that the two professors on the balcony are the hosts and judges of this show, 
+in which the combatants have to interpret a given theme visually on a small piece of shitty printer paper. 
 Oh, yeah, and I guess they have to walk ten paces away from the table before a round starts. That surely justifies building all the elaborate western environment..
 Soon enough, the contestants finish drawing and now it's time to see who won.
 (Ben, casual, dab, offright, slide, right)
-(Digi|Prof. Digibro, campus, 5, neutral) Ben, I appreciate your subtle messaging with the little hammer and scythe in the background! But I don’t know how this and all the slimeoids you drew represent this rounds prompt, “Iron Will”.
+(Digi|Prof. Digibro) Ben, I appreciate your subtle messaging with the little hammer and scythe in the background! 
+(Digi|Prof. Digibro) But I don’t know how this and all the slimeoids you drew represent this rounds prompt, “Iron Will”.
 (Ben|Ben, casual, point, happyMAX|cloud) Well you see, an iron will is what we’re gonna need to bring the bourgeoisie down!
-(Digi|Prof. Digibro, campus, 5, neutral) Well, this propaganda didn’t convince me, so I don’t care! You can fuck right off.
+(Digi|Prof. Digibro) Well, this propaganda didn’t convince me, so I don’t care! You can fuck right off.
 [SFX: PCP-SFX_Gunshot]
-[SLIDE, Ben, right, offleft]
+[SLIDE, Ben, right, offright]
 [Ben leaves]
 Everytime a combatant is dimissed by the judges, they shoot at them with a fucking gun. I guess I now see why Shootgirl’s entire ammo stash was needed.
 (Mage, campus, 1, neutral, offright, slide, right)
-(Nate|Prof. Bestman, campus, papers, angryMIN|kaminashades) Mage, the topic was Iron Will, and you drew a fucking purple gayboy again? Are you serious?
+(Nate|Prof. Bestman) Mage, the topic was Iron Will, and you drew a fucking purple gayboy again? Are you serious?
 (Mage|Mage, campus, 2, angryMED) How dare you to insult my baby! He’s precious and stubborn and totally has an iron will, I promise!
-(Nate|Prof. Bestman, campus, papers, angryMIN|kaminashades) I guess I don’t believe ya. Your out!
+(Nate|Prof. Bestman) I guess I don’t believe ya. Your out!
 [SFX: PCP-SFX_Gunshot]
-[SLIDE, Mage, right, offleft]
+[SLIDE, Mage, right, offright]
 [Mage leaves]
 (Munchy, special, crossing, neutral, offright, slide, right)
-(Digi|Prof. Digibro, campus, 2, angryMED) Munchy, I do like your interpretation of the topic a lot, but still, I have to ask: WHERE IS STEALING YOUR DAD!!? I want that assignment on my desk by Monday at the latest! You’re out!
+(Digi|Prof. Digibro) Munchy, I do like your interpretation of the topic a lot, but still, I have to ask: WHERE IS STEALING YOUR DAD!!? 
+(Digi|Prof. Digibro) I want that assignment on my desk by Monday at the latest! You’re out!
 [SFX: PCP-SFX_Gunshot]
-(Munchy|Munchy, special, crossing, neutral, offleft) Do not fear children, I will return! /n ...after finishing my homework...even though I’m a professor and it’s bullshit I have homework..
+(Munchy|Munchy, special, crossing, neutral,right, slide, offright) Do not fear children, I will return! /n
+...after finishing my homework
+...even though I’m a professor and it’s bullshit I have homework..
 (Gibbon, casual, default, neutral, offright, slide, right)
-(Digi|Prof. Digibro, campus, 1, happyMED) Gib, you did well in this round. The pun made me laugh, which is more than I can say about these other losers.
+(Digi|Prof. Digibro) Gib, you did well in this round. The pun made me laugh, which is more than I can say about these other losers.
 (Gibbon, casual, press, happyMAX|blush) You know, sometimes you just have to rape the cat!
 [SFX: Ba dum tss]
 [pause]
-(Digi|Prof. Digibro, campus, 1, neutral) Still not good enough though.
+(Digi|Prof. Digibro) Still not good enough though.
 [SFX: PCP-SFX_Gunshot]
-[SLIDE, Gibbon, right, offleft]
+[SLIDE, Gibbon, right, offright]
 [Gibbon leaves]
 (Tom, 1, neutral, offright, slide, right)
-(Nate|Prof. Bestman, campus, pointing, happyMED|kaminashades) You know Tom, you clearly didn’t have the greatest performance today, but despite that, you appeared so depressed lately that the concerned Student Council has given us hard cash to let you win for your own wellbeing. That’s why we’re obligated to let you win this year's 10 PACES AND DRAW!
-(Nate|Prof. Bestman, campus, smoking, happyMIN|kaminashades) (and yes, we are that corrupt)
+(Nate|Prof. Bestman) You know Tom, you clearly didn’t have the greatest performance today, 
+(Nate|Prof. Bestman) but despite that, you appeared so depressed lately that the concerned Student Council has given us hard cash to let you win for your own wellbeing. 
+(Nate|Prof. Bestman) That’s why we’re obligated to let you win this year's 10 PACES AND DRAW!
+(Nate|Prof. Bestman) (and yes, we are that corrupt)
 (Tom, 4, happyMAX) Fuck yeah! My depression is good for something at last!
-[SLIDE, Tom, right, offleft]
+[SLIDE, Tom, right, offright]
 [Tom leaves]
 Well, that was quick. Definitely a quick draw.
 (Gibbon, casual, default, sadMIN, right) Well, I guess I was never gonna be that good at drawing anyways. Writing the jokes is what I liked more about the process anyways.
@@ -759,18 +891,22 @@ Gib turns to me.
 As Gibbon walks away with Mr. Hussiefox, I wonder what a living legend like Toby Lee o’Hussiefox would want from Gibbon…
 I guess I’ll just be able to ask Gib later outside. Right now I need to somehow find an exit to this weird pocket dimension and actually get outside.
 [fade to black]
+[Hussiefox leaves]
+[Gibbon leaves]
 [StopMusic]
 [Scene: Blood and Tears]
 [Location: outsidepcpu.night]
 [Song: PCPDating_HomeNight]
 [fade from black]
-(Gibbon|Gibbon, casual, default, neutral, fade)
+(Gibbon|Gibbon, casual, default, neutral)
 (PCPG) So, what did Toby want from you?
-(Gibbon|Gibbon, casual, press, smittenMED|blush) Well uhh.. he liked my performance at 10 Paces, especially the weird little puns and jokes I made sooo.. It’s pretty exciting and weird and I don’t know how to feel about this but.. 
+(Gibbon|Gibbon, casual, press, smittenMED|blush) Well uhh.. he liked my performance at 10 Paces, especially the weird little puns and jokes I made sooo.. 
+(Gibbon) It’s pretty exciting and weird and I don’t know how to feel about this but.. 
 (Gibbon|Gibbon, casual, press, smittenMAX|blush) Toby Lee o’Hussiefox offered me a job, as a writer for his new animated movie!
 (PCPG) Woah! Gib that’s awesome! What a great opportunity!
 (Gibbon|Gibbon, casual, handsup, smittenMAX) Yeah I know! I could finally graduate from being a Pro-Crastinator and become a Pro-Fessional!
-(Gibbon|Gibbon, casual, press, sadMED) But, the thing is.. I would have to leave the city to take this job. I would have to leave everything behind, and I don’t know if I want to do that..
+(Gibbon|Gibbon, casual, press, sadMED) But, the thing is.. I would have to leave the city to take this job. 
+(Gibbon) I would have to leave everything behind, and I don’t know if I want to do that..
 (PCPG) Oh.
 [CHOICE]
 *Encourage him forwards*
@@ -779,14 +915,17 @@ I guess I’ll just be able to ask Gib later outside. Right now I need to someho
 *Encourage him forwards*
 (PCPG) Well Gib, it’s your decision. But I think you should try it out. Who knows, maybe this will be your “one thing” to do in life!
 (Gibbon|Gibbon, casual, grabby, sadMIN|blush) Well, maybe.. But what if it sucks tho? Is it really worth the risk?
-(PCPG) Or actually, maybe it won’t be your one thing. Maybe there was never one thing in the first place. We’re still so young and there are still so many options! Try things out! If you don’t try, you’ll never know!
+(PCPG) Or actually, maybe it won’t be your one thing. Maybe there was never one thing in the first place. We’re still so young and there are still so many options! 
+(PCPG) Try things out! If you don’t try, you’ll never know!
 (Gibbon|Gibbon, casual, grabby, sadMIN|blush) …
 (Gibbon|Gibbon, casual, clenched, happyMED|blush) Okay! I’ll take the job! 
 (Gibbon|Gibbon, casual, grabby, sadMED) Though, I guess this means we’ll have to say goodbye to each other soon…
-And then the realization hit me. All I wanted was for him to become happy, but I didn’t realize it would mean he will also have to leave me behind too. But maybe, he won't have to leave me behind for long..
+And then the realization hit me. All I wanted was for him to become happy, but I didn’t realize it would mean he will also have to leave me behind too. 
+But maybe, he won't have to leave me behind for long..
 (PCPG) Don’t worry Gib, I’ll follow you! Through attending Prof Munchy's art class I finally know what I’m passionate about.
 (PCPG) Drawing stupid shit! I’ll git gud and one day, and then we can work together on cool stuff!
-(Gibbon|Gibbon, casual, handsup, happyMAX|blush) That would be great! I promise you I will be there, waiting for you! And It’s not like we have to stop talking. Maybe we could meet online and make a weekly podcast show about our artistic endeavors or something like that.
+(Gibbon|Gibbon, casual, handsup, happyMAX|blush) That would be great! I promise you I will be there, waiting for you! And It’s not like we have to stop talking. 
+(Gibbon) Maybe we could meet online and make a weekly podcast show about our artistic endeavors or something like that.
 (PCPG) I would really like that.
 (Gibbon|Gibbon, casual, grabby, smittenMED|blush) Don’t worry, we’ll stay in contact. You’ve become way too important to me, more than I could ever imagine.
 (Gibbon|Gibbon, casual, grabby, smittenMAX|blush) You’re my dude, my pal, my boy..
@@ -818,21 +957,24 @@ Gibbon hesitates for a moment before continuing.
 [Song: PCPDating_Feed]
 [fade from black]
 I try to make my way back home after what just happened, but I still can’t process it all. 
-I sit down against a building and rest my head onto my knees as I think back to how it ended up this way. Isn’t this where I first met Gibbon on my first day at this school? How times have changed..
-(Redman|Redman, blush1, offleft, center) Hey Juve! Stand up for me!
+I sit down against a building and rest my head onto my knees as I think back to how it ended up this way. 
+Isn’t this where I first met Gibbon on my first day at this school? How times have changed..
+(Redman|Redman, blush1, offleft, slide, center) Hey Juve! Stand up for me!
 Oh, it’s the nice red boy, maybe he can brighten my mood again. I comply and stand up.
 (Redman|Redman, sad) I’m sorry to break it to you little friend, but I don’t see any other option for me. I need your blood. I need it now.
 (PCPG) What do you mean?
 (Redman|Redman, angry) I’ve run out of blood and, well, Redman can’t run out of blood you see, it’s just not good for him. I’m very sorry about this.
 (PCPG) Hey man, that’s okay. I understand.
 (Redman, normal)
-(PCPG) Honestly, you were always so nice to me, and lately I haven’t been all too helpful with the people around me, so I’ll gladly give you what you need. It’s the least I can do..
+(PCPG) Honestly, you were always so nice to me, and lately I haven’t been all too helpful with the people around me, so I’ll gladly give you what you need. 
+(PCPG) It’s the least I can do..
 (PCPG) Take it all, as much as you need.
-(Redman|Redman, normal) You don’t deserve this PCPG, and I don’t deserve you. /n Thank you..
+(Redman|Redman, normal) You don’t deserve this PCPG, and I don’t deserve you. /n
+Thank you..
 (Redman|Redman, blush2) ..and goodbye.
-[CG, RedmanSuck]
-[pause]
+[CG: RedmanSuck]
+(Redman|Redman) SLUUUUUURP
 [fade to black]
 [CG end]
 [Stop Music]
-[BAD END]
+[Credits]
