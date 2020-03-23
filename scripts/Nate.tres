@@ -941,7 +941,7 @@ Nate is looking down at the floor in a ponderous and reserved contemplation…
 
 [Scene: Dance at the Gym]
 
-[Song: PCPDating_Radcon]
+[Song: PCPDating_RADCON]
 
 [Location: gym]
 
@@ -1081,7 +1081,9 @@ I swear that he hadn’t noticed me arrive, but obviously he did.
 
 With a bit more tonal context, I take another glance at the scene Nate is focusing on.
 
-The young woman appears to be struggling to set up and use the machine. The [i]Smith[/i] machine as Nate calls it. She’s very obviously new to the gym as she seems out of place and largely uncomfortable. 
+The young woman appears to be struggling to set up and use the machine. The [i]Smith[/i] machine as Nate calls it.
+
+She’s very obviously new to the gym as she seems out of place and largely uncomfortable. 
 
 (Nate, casual, standing, angryMED|shades)
 
@@ -1327,11 +1329,11 @@ This is important.
 
 [StopMusic]
 
-[Song: PCPDating_PurpleForest]
-
 [Location: 7eleven.night]
 
 [fade from black]
+
+[Song: PCPDating_PurpleForest]
 
 I know what I need to do. I need to see him as soon as possible.
 
@@ -1665,7 +1667,7 @@ Tomorrow’s another day full of possibility and opportunity!
 
 Suddenly, I get a text. It’s from Nate. Shouldn’t he be asleep?
 
-[i]Hey...[/i]
+The text reads: [i]Hey...[/i]
 
 Hey! He’s stealing my minimalist approach!
 
@@ -1869,27 +1871,27 @@ He’s back to the same ol’ Nate!
 
 In all the excitement, Nate goes through a series of bodybuilding poses as a physical manifestation of his extreme passion; Complete with catchphrases!
 
-(Nate|Nate, casual, pointing, happyMIN|shades) [i]Ha![/i]
+(Nate|Nate, casual, pointing, happyMIN|shades) [i][b]Ha![/b][/i]
 
-(Nate|Nate, casual, papers, smittenMIN|shades) [i]Take this![/i]
+(Nate|Nate, casual, papers, smittenMIN|shades) [i][b]Take this![/b][/i]
 
-(Nate|Nate, casual, pointing, confusedMIN|shades) [i]This is it![/i]
+(Nate|Nate, casual, pointing, confusedMIN|shades) [i][b]This is it![/b][/i]
 
-(Nate|Nate, casual, smoking, confusedMED|shades) [i]See ya![/i]
+(Nate|Nate, casual, smoking, confusedMED|shades) [i][b]See ya![/b][/i]
 
-(Nate|Nate, casual, papers, confusedMAX|shades) [i]Here![/i]
+(Nate|Nate, casual, papers, confusedMAX|shades) [i][b]Here![/b][/i]
 
-(Nate|Nate, casual, pointing, smittenMIN|shades) [i]Take that![/i]
+(Nate|Nate, casual, pointing, smittenMIN|shades) [i][b]Take that![/b][/i]
 
-(Nate|Nate, casual, maniacal) [i]Come on![/i]
+(Nate|Nate, casual, maniacal) [i][b]Come on![/b][/i]
 
-(Nate|Nate, casual, pointing, smittenMED|shades) [i]It's over![/i]
+(Nate|Nate, casual, pointing, smittenMED|shades) [i][b]It's over![/b][/i]
 
 First the [i]Side Chest[/i] and then the [i]Front Double Bicep[/i].
 
 I’ve learned a lot about bodybuilding from my time with Nate.
 
-(Nate|Nate, casual, maniacal) [i][b]Yeah baby![/b][/i]
+(Nate|Nate, casual, maniacal) [i][b]YEAH BABY![/b][/i]
 
 He ends with the [i]Most Muscular[/i], the same pose as Ronnie Coleman in the picture on the wall behind him.
 
@@ -2861,7 +2863,7 @@ It’s impossible to describe exactly, but I often encounter the same scent when
 
 I decide not to investigate and instead scurry by.
 
-(Jesse, campus, 3, neutral, offleft, left)
+(Jesse, campus, 3, neutral, offleft, slide, left)
 
 I notice Jesse out of the corner of my eye. 
 
