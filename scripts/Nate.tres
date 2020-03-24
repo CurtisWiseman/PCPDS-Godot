@@ -226,7 +226,7 @@ I finished another Soy Bang Energy that I got from the 7-Eleven. Yet again, ther
 *[i]You’re Gonna Carry That Can[/i]*
 
 *Toss the can on the ground.*
-With a cavalier attitude, I toss the can on the ground beside me, and continue walking toward Nate’s apartment..
+With a cavalier attitude, I toss the can on the ground beside me, and continue walking toward Nate’s apartment.
 
 ...
 
@@ -397,7 +397,7 @@ He proceeds to deftly open the two cans with little trouble. It takes seven seco
 
 (Nate|Professor Bestman, casual, smoking, happyMAX|shades) Hahahaha! 
 
-Upon hearing the professor laugh, I find myself relaxing into my seat and my face easing of it’s tension.
+Upon hearing the professor laugh, I find myself relaxing into my seat and the tension on my face easing up.
 
 (Nate, casual, smoking, happyMIN|shades)
 
@@ -563,11 +563,11 @@ He reaches into a backpack on the floor and pulls out some papers.
 
 He gently hands me a single piece.
 
-[b]Handout Get![/b]
+[i][b]Handout Get![/b][/i]
 
 (Nate|Professor Bestman, casual, smoking, shockMIN|shades) Look, I know it’s already very late. I know the assignment is due tomorrow.
 
-I look at my watch and see that it is now a little past nine. Two hours have passed since I first arrived.
+I look at my watch and see that it is now half past eight. A little over an hour has passed since I first arrived.
 
 (Nate|Professor Bestman, casual, standing, neutral|shades) Don’t worry about turning in the assignment tomorrow. Just give it to me next Monday.
 
@@ -579,7 +579,7 @@ I look at my watch and see that it is now a little past nine. Two hours have pas
 
 (Nate, casual, standing, happyMED|shades)
 
-The profess-- [i][b]Nate[/b][/i] is smiling. Confident and happy as ever.
+The profess--... [i][b]Nate[/b][/i] is smiling. Confident and happy as ever.
 
 (Nate, casual, standing, neutral|shades, center, slide, offleft)
 
@@ -609,7 +609,7 @@ I didn’t expect a full night’s sleep tonight.
 
 [Song: PCPDating_HomeNight]
 
-(Nate, campus, standing, neutral|shades, offright, center)
+(Nate, campus, standing, neutral|shades, offright, slide, center)
 
 Some time has passed since I had that incredible event with Nate at his apartment.
 
@@ -629,11 +629,11 @@ I’ve slowly made the habit of arriving to his class on time, and my grades are
 
 Ever since I started getting to class on time, I’ve noticed that Nate likes to begin by reading the [i]Urban Dictionary[/i] entry for whatever topic he is discussing that day.
 
-(Tom, 1, angryMAX, offright, slide, right, 5)
+(Tom, 1, angryMAX, offright, slide, right, 2)
 
 Tom is shambling to the front of the classroom with the encyclopedia volume.
 
-(Tom, 1, angryMAX, right, slide, center, 5)
+(Tom, 1, angryMAX, right, slide, center, 2)
 
 He requires two appendages to schlep that huge, leather-clad book from the shelf in the back.
 
@@ -1022,6 +1022,10 @@ They’ve both got those athletic earphones that wrap around the ear and that ca
 
 I’m sure some [i]Bebop OP[/i] would really fuel my [i]light jog[/i] right now.
 
+[fade to black]
+
+[fade from black]
+
 I complete around twelve minutes worth of running before I decide it’s good enough, then awkwardly stumble off the treadmill trying to bring the machine to a stationary pace.
 
 The maneuver wasn’t quite as graceful and easy as Nate made it look earlier.
@@ -1045,6 +1049,10 @@ There’s only two other people on the track with me, and both are in a strong g
 They’ve both got those athletic earphones that wrap around the ear and that can withstand their quick and heavy strides. Dang, I should have brought some music.
 
 I’m sure some [i]2nd GIG OP[/i] would really fuel my [i]light jog[/i] right now.
+
+[fade to black]
+
+[fade from black]
 
 I finish about five or six laps before I lope off the track to my right.
 *
@@ -1088,6 +1096,8 @@ She’s very obviously new to the gym as she seems out of place and largely unco
 (Nate, casual, standing, angryMED|shades)
 
 She eventually turns visibly flustered and her sudden frustration triggers Nate to jump up from the bench.
+
+(Nate, casual, standing, angryMIN|shades)
 
 Nate’s mouth tightens and his eyes close slightly to match his now [i]piercing[/i] gaze. Nate’s right hand is closing into a fist in tension.
 
@@ -1133,7 +1143,7 @@ He continues his tacit, intense, stasis.
 
 (PCPG) Nate…
 
-(Nate|Nate, casual, standing, neutral|shades) Alright…
+(Nate|Nate, casual, standing, neutral|shades) Alright!...
 
 Nate takes a deep breath, exhales, relaxes, and starts a gentle shuffle towards the inciting scene of [i]the woman and the Smith machine[/i].
 
@@ -1671,9 +1681,7 @@ The text reads: [i]Hey...[/i]
 
 Hey! He’s stealing my minimalist approach!
 
-Before I can send a response, he sends another text.
-
-[i]Can you come over? Door’s unlocked.[/i]
+Before I can send a response, he sends another text: [i]Can you come over? Door’s unlocked.[/i]
 
 This is bizarre behavior for Nate. He doesn’t usually text me all nonspecific like this. He usually makes it clear what he has in mind.
 
@@ -2481,7 +2489,7 @@ You’d rather [i]kill yourself[/i] than live this way.
 
 (Tom, 2, confusedMAX)
 
-Tom seems to notice your increasing restlessness and fatigue as response to the slowly-increasing culture shock to all this new information. He changes the subject.
+Tom notices your increasing restlessness and fatigue as response to the slowly-increasing culture shock to all this new information. He changes the subject.
 
 (Tom|Tom, 3, happyMIN) So... how’s school going for you?
 
@@ -2771,13 +2779,17 @@ He’s playing what appears to be a high fantasy rpg with orcs, magic spells, an
 
 (PCPG) Oh yeah. I think I heard about something like that. I wonder why they would release an older version of their product?
 
-(Gibbon|Gibbon, campus, default, shockMIN) The game has changed a lot over the past decade and a half. The gamefeel and audience are completely different now.
+(Gibbon|Gibbon, campus, default, shockMIN) Well the game as it was in 2004-2006, when it first released, is [i]much[/i] different than it is now in [i]current year[/i].
 
-(Gibbon|Gibbon, campus, clenched, angryMED) It’s similar to a mobile game in some ways. 
+(Gibbon|Gibbon, campus, default, angryMIN) The gamefeel and audience are completely different now, a decade and a half later.
 
-(Gibbon|Gibbon, campus, clenched, angryMED) In the modern [i]WoW[/i], everyone wins, everyone is powerful, and you don’t have to work particularly hard to get anything in the game.
+(Gibbon|Gibbon, campus, clenched, angryMED) It’s now similar to a mobile game in some ways. 
 
-(Gibbon|Gibbon, campus, default, confusedMIN) That’s all different in [i]Classic WoW[/i]. In [i]Classic[/i], everything is a pain in the ass.
+(Gibbon|Gibbon, campus, clenched, angryMED) In the [i]WoW[/i] of modern times, everyone wins, everyone is powerful, and you don’t have to work particularly hard to get anything in the game.
+
+(Gibbon|Gibbon, campus, default, confusedMIN) That’s all different in [i]Classic WoW[/i], which is basically an exact recreation of the game as it was 15 years ago. 
+
+(Gibbon|Gibbon, campus, default, shockMIN) In [i]Classic[/i], everything is a pain in the ass.
 
 (Gibbon|Gibbon, campus, clenched, angryMIN) It takes three hundred hours just to get to max level, every monster can kill you, and you have to work together with people just to complete the most mundane of quests.
 
@@ -2811,7 +2823,7 @@ Suddenly, I’m approached by someone.
 
 (Jesse|???, campus, 1, shockMIN) Pretty lame party, am I right or what?!
 
-(PCPG) uhhhhhhhhh…
+(PCPG) [i]Uhhhhhhhhh…[/i]
 
 Isn’t this guy the sewer priest?
 
@@ -3027,9 +3039,9 @@ Nate is up on stage. Mage is standing before the audience, about to speak.
 
 (Mage|Mage, campus, 4, happyMAX) The first presenter is someone you all should recognize. He’s a tenured professor of philosophy at the local university and has degrees and accreditations from various prestigious academic institutions. He’s also had papers and articles published in a variety of reputable journals and books.--
 
-(Nate, campus, standing, smittenMED|shades, right, slide, center)$
+(Mage, campus, 5, happyMIN, center, slide, offleft)$
 
-(Mage, campus, 1, happyMED, center, slide, offleft)
+(Nate, campus, standing, smittenMED|shades, right, slide, center)
 
 Mage finishes the introduction and Nate moves closer to the microphone.
 
@@ -3315,7 +3327,7 @@ At least you don’t feel the pain anymore...
 
 [CG end]
 
-You’re so tired…
+I'm so tired…
 
 [Song: PCPDating_MichellesTheme]
 
