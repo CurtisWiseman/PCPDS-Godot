@@ -55,6 +55,7 @@ button_num = 4
 [node name="RouteButtons" type="CanvasLayer" parent="."]
 
 [node name="Digibro" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 99.4869
 margin_top = 83.7394
 margin_right = 255.487
@@ -65,6 +66,7 @@ __meta__ = {
 }
 
 [node name="Ben Saint" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 99.4869
 margin_top = 115.739
 margin_right = 255.487
@@ -72,6 +74,7 @@ margin_bottom = 135.739
 text = "Ben Saint"
 
 [node name="Davoo" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 99.4869
 margin_top = 146.739
 margin_right = 255.487
@@ -79,6 +82,7 @@ margin_bottom = 166.739
 text = "Davoo"
 
 [node name="Endless War Miniroute" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 99.4869
 margin_top = 178.252
 margin_right = 255.487
@@ -86,6 +90,7 @@ margin_bottom = 198.252
 text = "Endless War Miniroute"
 
 [node name="Gibbon" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 100.0
 margin_top = 209.739
 margin_right = 256.0
@@ -93,6 +98,7 @@ margin_bottom = 229.739
 text = "Gibbon"
 
 [node name="Jesse" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 99.4869
 margin_top = 241.739
 margin_right = 255.487
@@ -100,13 +106,18 @@ margin_bottom = 261.739
 text = "Jesse"
 
 [node name="Mage" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 99.4869
 margin_top = 274.684
 margin_right = 255.487
 margin_bottom = 294.684
 text = "Mage"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Munchy" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 99.4869
 margin_top = 308.875
 margin_right = 255.487
@@ -114,6 +125,7 @@ margin_bottom = 328.875
 text = "Munchy"
 
 [node name="Nate" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 99.0688
 margin_top = 341.875
 margin_right = 255.069
@@ -121,6 +133,7 @@ margin_bottom = 361.875
 text = "Nate"
 
 [node name="Tom" type="Button" parent="RouteButtons"]
+visible = false
 margin_left = 99.4869
 margin_top = 375.739
 margin_right = 255.487
