@@ -28,6 +28,7 @@ var playerName = "PlayerName"
 var pauseScreen = null
 var voicesOn = true
 var current_scene_name = ""
+var devmode = false
 
 # Signal to say a that a scene is done loading.
 signal finished_loading
@@ -242,4 +243,5 @@ func save_settings():
 	config.set_value("audio", "master", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	config.set_value("audio", "music", AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
 	config.set_value("audio", "voice", global.voicesOn)
+	config.set_value("misc", "dev", global.devmode)
 	config.save("user://settings.cfg")
