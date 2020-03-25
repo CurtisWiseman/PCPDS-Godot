@@ -22,7 +22,7 @@ But nothing replies. Is he trying to talk to one of his plushies?
 (PCPG) Oh, you’re not originally from here?
 (Gibbon|Gibbon, campus, press, happyMIN) The accent not give it away? England, born and raised. 
 
-(Gibbon) I used to take the PCPU’s online courses for a couple years, but once Brexit happened and England joined the US as the 51st state, I could fly out here and attend personally.
+(Gibbon) I used to take the PCPU’s online courses for a couple years, but once Brexit happened and England joined the US as the 51st state, I could fly out here and attend personally. 
 (Gibbon|Gibbon, campus, grabby, happyMED) I kinda miss the old days, with the Queen and her fancy teacups and stuff, but I also really like hanging out with my friends now.
 (PCPG) Woah, I didn’t even realize that this happened. I don’t care much about politics to be honest.
 (Gibbon|Gibbon, campus, default, smittenMIN) Well then I hope you don’t attend the Philosophy classes.
@@ -83,7 +83,7 @@ A meager few claps sound from the class.
 (Munchy|Munchy, campus, squatting, angryMED) Seriously? That’s the best you can do on a dime?
 (Munchy|Munchy, campus, crossing, angryMIN) Ugh. Never trust anyone.
 [SLIDE, Munchy, offleft]
-[SFX: PCP-SFX_Applause]
+[SFX: Applause]
 Quick as a flash, Munchy types a few lines of code on his computer. 
 The moment he hits the Enter key, the class erupts into a roaring, yet synthetic, applause blasting from the various computer speakers around the class.
 (Gibbon, campus, default, neutral, offright, slide, center)
@@ -934,7 +934,7 @@ Gibbon hesitates for a moment before continuing.
 (Gibbon|Gibbon, casual, grabby, smittenMIN|blush) ..friend.
 [fade to black]
 [StopMusic]
-[Credits]
+[CREDITS]
 *
 *Hold him back*
 (PCPG) Dude, make sure you know what you’re doing
@@ -977,4 +977,4 @@ Thank you..
 [fade to black]
 [CG end]
 [Stop Music]
-[Credits]
+[CREDITS]
