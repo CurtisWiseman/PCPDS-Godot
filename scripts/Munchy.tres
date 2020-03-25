@@ -73,13 +73,14 @@ At first I didn’t realize what Crocs meant by that, but after not too long it 
 [StopMusic]
 [Location: rowdyroughhouse]
 [Fade from black]
-[Song: PCPDating_LifeinEndlessWar]
+
+[Song: PCPDating_LifeInEndlessWar]
 
 When I enter into the depths, my senses are assaulted on all fronts by the disruptive aura this place oozes and radiates. The halls and walls, floors and ceilings, no spot is left unpainted or undyed. It fucking reeks in here, and what’s more, there are speakers left and right, all with the label ‘LIL D00P’ plastered on them. Close by, there's a digital jukebox that’s running through a playlist called ‘the-rowdy-themes’. Looking at the queue, it’s just a repeat of the same song for hours - ‘YMCA reworked to Minor Key’.
 
-Sure doesn't sound like the YMCA song, minor or not.
+Sure doesn't sound like the YMCA song, minor tonality or not. If I squint my ears though, I can hear a couple “YOUNG MAN”s and “Y! M! C! A!”s.
 
-After wandering around for a little while, I heard some commotion coming from a nearby room, loud enough to overpower the clangorous “YOUNG MAN”s and “Y! M! C! A!”s.
+After wandering around for a little while, I heard some commotion coming from a nearby room, loud enough to overpower the clangorous jukebox track.
 
 (Connor|BLUE WHALE, angry, left, fade) ah! fuck! damnit crocs! why do you always want to play with items on!
 
@@ -282,7 +283,7 @@ Before I know it, I’ve got a hole in my gut. I fucked up, big time. Using the 
 [Fade from black]
 [Song: PCPDating_GameOver]
 
-(PCPG) M-Munchy. You’ve got to help me… Endless War, she… I... cough, cough...
+(PCPG) M-Munchy. You’ve got to help me… Endless War, she… I... [i]cough[/i], [i]cough[/i]...
 
 (Munchy|Munchy, casual, crossing, angryMIN, center, fade) …
 
@@ -306,8 +307,7 @@ No…
 No!!
 NOOOOOOOOOOOOOO!!!
 
-[BAD END]
-[credits]
+[ENDING]
 *
 
 [Scene: Artisan]
@@ -434,6 +434,8 @@ We don’t waste any time rushing through the lunch line. I’m shaking in antic
 *So we can uh… kill them and make Munchy, proud, I think?*
 
 [SFX: PCP-SFX_Gunshot]
+
+(Crocs, special)
 
 (Connor|BLUE WHALE, disappointed, center, fade) jesus fucking christ, crocs!
 
@@ -971,11 +973,11 @@ Munchy starts staring over at the Rowdys, and Ben at the Killers. For whatever r
 [SLIDE, Ben, left, offleft]
 [SLIDE, Munchy, right, offleft]
 
-(Crocs, special outfit, offright, slide, left) Hey kid, catch!
+(Crocs, special, offright, slide, left) Hey kid, catch!
 
 Out of nowhere, Crocs hands me one of his spare pistols.
 
-(Crocs, special outfit) One big iron is enough to kill anything that moves. Better familiarize yourself with how it works, you don’t have much time to prepare.
+(Crocs, special) One big iron is enough to kill anything that moves. Better familiarize yourself with how it works, you don’t have much time to prepare.
 
 (PCPG) What do you mean?
 
@@ -1008,11 +1010,11 @@ The lunchroom immediately descends into chaos. Bullets are flying by left and ri
 
 (Schrafft) You can’t hide forever, PCPG. Once I heard you went over to their side, that was when you became my enemy.
 
-(Crocs, special outfit, right) Don’t listen to him. He’s just trying to annoy and bait the shit out of you. I guarantee there’s two or three more Killers just waiting for us.
+(Crocs, special, right) Don’t listen to him. He’s just trying to annoy and bait the shit out of you. I guarantee there’s two or three more Killers just waiting for us.
 
 (PCPG) So then what do we do.
 
-(Crocs, special outfit) Only thing we can do: face bloodshed.
+(Crocs, special) Only thing we can do: face bloodshed.
 
 (Connor|BLUE WHALE, neutral, left) ...well, i don’t know what crocs means but, let’s just kill them. they don’t have that much slime compared to us.
 
@@ -1020,20 +1022,20 @@ The lunchroom immediately descends into chaos. Bullets are flying by left and ri
 
 (Connor|BLUE WHALE, angry) fucking 3tards, i swear. anyways, let’s just go.
 
-(Crocs, special outfit) Got it. On three.
+(Crocs, special) Got it. On three.
 
 (Connor|BLUE WHALE, neutral) one…
 
 (PCPG) two…
 
-(Crocs, special outfit) GO!
+(Crocs, special) GO!
 
 (PCPG) Wha-
 
 [SLIDE, Crocs, right, center]
 [SLIDE, Crocs, center, right]
 
-Crocs pushes over the table with one kick. Flashes of smoke and fire zoom out of his revolver, laying waste to the other Killers across the room
+Crocs pushes over the table with one kick. Flashes of smoke and fire zoom out of his revolver, laying waste to the other Killers across the room.
 
 [SFX: PCP-SFX_Gunshot]
 
@@ -1057,11 +1059,11 @@ Out of nowhere, this weird amphibian with a katana in its mouth zips across the 
 
 [SLIDE, crocs, right, center]
 
-(Crocs, special outfit) Leave him behind. Only two more left to go.
+(Crocs, special) Leave him behind. Only two more left to go.
 
 (PCPG) But…
 
-(Crocs, special outfit) You’ll understand later. Just make good use of that gun, I don’t want it to fall into the wrong hands.
+(Crocs, special) You’ll understand later. Just make good use of that gun, I don’t want it to fall into the wrong hands.
 
 It didn’t hit me until now, but my hands are shaking. The cold, metal grip in my palms is covered in sweat. I don’t wanna die… I don’t wanna die!
 
@@ -1071,7 +1073,7 @@ It didn’t hit me until now, but my hands are shaking. The cold, metal grip in 
 
 [SLIDE, Crocs, center, right]
 
-(Crocs, special outfit) Holy shit, watch where you’re pointing that thing bro!
+(Crocs, special) Holy shit, watch where you’re pointing that thing bro!
 
 [SFX: PCP-SFX_Gunshot]
 
@@ -1081,7 +1083,7 @@ I just start firing at random, hoping to land some hits on the guy with the VR h
 
 (K1P, Neutral) Gah! Fucking RNG bullshit!
 
-(Crocs, special outfit) hehe, DIE K1P!
+(Crocs, special) hehe, DIE K1P!
 
 [K1P leaves]
 
@@ -1091,11 +1093,11 @@ I just start firing at random, hoping to land some hits on the guy with the VR h
 
 The VR headset begins to flash bright red. With a gun in his hand, his arm jerks back and forth, like it’s trying to lock on to me and Crocs.
 
-(Crocs, special outfit) Botting huh? Not surprising coming from you.
+(Crocs, special) Botting huh? Not surprising coming from you.
 
 (Schrafft, Neutral) All’s fair in the endless WAR. Die, buster.
 
-(Crocs, special outfit) Enough with the hard R’s, kraker. Draw.
+(Crocs, special) Enough with the hard R’s, kraker. Draw.
 
 [SFX: PCP-SFX_Gunshot]
 [SLIDE, Crocs, left, left+100]
@@ -1112,9 +1114,9 @@ The distance between them closes, and the gun being fired runs out of bullets. C
 
 [SLIDE, Crocs, left+300, left]
 
-(Crocs, special outfit) Hey… PCPG...
+(Crocs, special) Hey… PCPG...
 
-(Crocs, special outfit) This one’s on me. You’ve earned it.
+(Crocs, special) This one’s on me. You’ve earned it.
 
 With slime on his face, the man on the ground starts staring at me. What do I do?
 
@@ -1132,7 +1134,7 @@ With slime on his face, the man on the ground starts staring at me. What do I do
 
 [Schrafft leaves]
 
-(Crocs, special outfit) Fucking epic dude.
+(Crocs, special) Fucking epic dude.
 
 (Munchy|Munchy, campus, crossing, smittenMED, offright, slide, right) I can’t believe it. You’ve become a real Rowdy right in front of my eyes, PCPG. I would congratulate you, but the best is yet to come.
 
@@ -1156,7 +1158,7 @@ Out of nowhere, Endless War walks slowly into the lunchroom.
 [SLIDE, Ben, center, left+350]
 [SLIDE, Munchy, right, right-350]
 
-(Endless War|Endless War, cross, neutral, offright, slide, right+150, 10) Don’t worry about him, or anyone who may have perished here for that matter. Because of our glorious slime, I’ll always revive those who engage in some good old fashioned WAR, if they so wish. In a WAR of slime, no one is truly gone for good.
+(Endless War|Endless War, cross, neutral, offright, slide, right+150, 2) Don’t worry about him, or anyone who may have perished here for that matter. Because of our glorious slime, I’ll always revive those who engage in some good old fashioned WAR, if they so wish. In a WAR of slime, no one is truly gone for good.
 
 (PCPG) People can come back to life… with slime?
 
@@ -1183,17 +1185,17 @@ The lunchroom goes dead quiet as everyone files out. When Crocs asked for his gu
 
 (PCPG) I hate to admit it, but you’re right. I can’t take your life in good conscience, even if it’s something I feel like I’ve wanted to do ever since I enlisted. It’s just not who I-
 
-(Crocs, special outfit) You fucking fool. I don’t want to hear one word come out of your mouth. I’ll finish him off instead.
+(Crocs, special) You fucking fool. I don’t want to hear one word come out of your mouth. I’ll finish him off instead.
 
 Just as crocs was about to fire off a bullet into his head, the guy with the VR headset starts doing something strange.
 
-(Schrafft, Neutral) ...hack it…
+(Schrafft, Neutral) [i]...hack it…[/i]
 
 The sprinklers above start spraying above, leaving an intense, stinging sensation on my skin. Isn’t this just water? Why does it hurt so much?
 
 (Schrafft, Neutral) Taste the rain, dickheads.
 
-(Crocs, special outfit) Damn, bicarbonate rain! It’s the natural enemy of slime, used to genocide our people in the old days…
+(Crocs, special) Damn, bicarbonate rain! It’s the natural enemy of slime, used to genocide our people in the old days…
 
 The pain only grows with each minute. Looking down at my hands, I notice they’re washed down to the bone! I’m gonna die if I don’t get out of here!
 
@@ -1201,7 +1203,7 @@ The pain only grows with each minute. Looking down at my hands, I notice they’
 
 (Schrafft, Neutral) Not my fault your lackey didn’t kill me when he had the chance.
 
-(Crocs, special outfit) PCPG... if I were you I would just lie down and let it pass. See you on the other side.
+(Crocs, special) PCPG... if I were you I would just lie down and let it pass. See you on the other side.
 
 (PCPG) Taking everyone down with you, even your Kingpin… How could you do this?
 
@@ -1220,7 +1222,7 @@ What were once gangsters are now almost entirely skeletons. It isn’t long befo
 
 (Connor|BLUE WHALE, disappointed, left, fade) i take it things didn’t go so well, huh.
 
-(Crocs, special outfit, right, fade) We almost had them, until this FAKE ROWDY went and ruined everything. I was wrong about you, PCPG. A real Rowdy would have NEVER gone soft on the battlefield like that.
+(Crocs, special, right, fade) We almost had them, until this FAKE ROWDY went and ruined everything. I was wrong about you, PCPG. A real Rowdy would have NEVER gone soft on the battlefield like that.
 
 (Munchy|Munchy, campus, default, sadMIN, center, fade) Yeah what the fuck man, how are we gonna do Slimefest now? All the slime’s been fucking obliterated. Consider yourself banished.
 
@@ -1323,18 +1325,22 @@ What a godsend, I finally get to rest after all the shit I’ve been through tod
 
 Even though being in a gang can be fun, it seems like it brings out the worst in people as well. Hopefully I don’t turn out that way...
 
-ZZZzzz…
+[i][b]ZZZzzz…[/b][/i]
 
 [Fade to black]
 [StopMusic]
+[Location: black]
 [Song: PCPDating_TomsLot]
+[fade from black]
 
 …
 
-(Thoth) Disappointing… perhaps you are not who I perceived you to be.
+(Thoth|Thoth, offright, slide, center) Disappointing… perhaps you are not who I perceived you to be.
 
 (PCPG) ?!
 
+[fade to black]
+[Thoth leaves]
 [Location: pcpgroom]
 [Fade from black]
 
@@ -1404,44 +1410,50 @@ With controller in hand, I manage to toughen my way through the signals that my 
 [Fade to black]
 [Fade from black]
 [Fade to black]
-
-ZZZzzz...
+[Munchy leaves]
+[i][b]ZZZzzz...[/b][/i]
 
 [StopMusic]
 [Song: PCPDating_Holy]
 
+[Location: black]
+[fade from black]
+
 …
 
-(Thoth) Hahaha, it really is you after all, my son.
+(Thoth|Thoth, offright, slide, center) Hahaha, it really is you after all, my son.
 
 (PCPG) Wait... What’s happening? Who are you?
 
-(Thoth) It does not matter who I am. What matters is who you are, and your place in this sacred realm.
+(Thoth|Thoth) It does not matter who I am. What matters is who you are, and your place in this sacred realm.
 
-(Thoth) Long have I waited for your reincarnation in the third dimension, and at last I have found you.
+(Thoth|Thoth) Long have I waited for your reincarnation in the third dimension, and at last I have found you.
 
 (PCPG) I feel like I’ve seen you somewhere before, somehow.
 
 (PCPG) Wait a minute, that’s right! You’re-
 
-(Thoth) Yes, I am Thoth, king of Atlantis, and the indirect founder of the Tat brotherhood. That is all irrelevant now, however. I have come with a small request, my child.
+(Thoth|Thoth) Yes, I am Thoth, king of Atlantis, and the indirect founder of the Tat brotherhood. That is all irrelevant now, however. I have come with a small request, my child.
 
 (PCPG) Huh?
 
-(Thoth) For thousands of years, my brothers and I have been manifesting many sacred sites on the planet into the third dimension. The place you call the ‘Rowdy Roughhouse’ is just one of those many locations I have brought into being, and it is the last node on the Christ Consciousness grid yet to be activated.
+(Thoth|Thoth) For thousands of years, my brothers and I have been manifesting many sacred sites on the planet into the third dimension. The place you call the ‘Rowdy Roughhouse’ is just one of those many locations I have brought into being, and it is the last node on the Christ Consciousness grid yet to be activated.
 
-(Thoth) PCPG, your destiny, your purpose on this almost-dying world, is to prime that sacred site, and activate its true potential! This I am most certain of.
+(Thoth|Thoth) PCPG, your destiny, your purpose on this almost-dying world, is to prime that sacred site, and activate its true potential! This I am most certain of.
 
 (PCPG) I don’t understand. What do you want me to do?
 
-(Thoth) It is not something you are capable of comprehending, I am afraid. All that I ask is that you stay by the side of your friends, and cherish them. You will know what is required of you when the time comes. Afterwards, this world as we know it will prosper, and it will all be thanks to you.
+(Thoth|Thoth) It is not something you are capable of comprehending, I am afraid. All that I ask is that you stay by the side of your friends, and cherish them. You will know what is required of you when the time comes. Afterwards, this world as we know it will prosper, and it will all be thanks to you.
 
 (PCPG) I still don’t get it! What the fuck even is ‘Christ Consciousness’? What’s so special about the Rowdy Roughhouse?
 
-(Thoth) Fool that you are, you of all people need not ask such a question. I take my leave, and I hope the best for you come the day of your king’s victory. Awaken!
+(Thoth|Thoth) Fool that you are, you of all people need not ask such a question. I take my leave, and I hope the best for you come the day of your king’s victory. Awaken!
 
 (PCPG) !!!
 
+[fade to black]
+[Thoth leaves]
+(Munchy, casual, crossing, confusedMIN, offright, slide, center)
 [Location: rowdyroughhouse]
 [Fade from black]
 [StopMusic]
@@ -1475,14 +1487,14 @@ Ah, what am I saying! Ben’s never won a Slimefest, and he never will! The batt
 [Fade to black]
 [StopMusic]
 
-ZZZzzz…
+[i][b]ZZZzzz…[/b][/i]
 
 [Location: pcpgroom]
 [Fade from black]
 
 [SFX: PCP-SFX_AlarmClock]
 
-...yawn...
+[i]...yawn...[/i]
 
 Wait a minute, I don’t remember setting an alarm when I got home last night…
 
@@ -1612,7 +1624,7 @@ A trail of smoke billows into the room. It can only mean one thing, that the sam
 
 [SLIDE, Crocs, left, offleft]
 
-Right off the bat, my eardrums and heart are pounding, as munchy starts building around his intelligence, just like I taught him. 
+Right off the bat, my eardrums and heart are pounding, as Munchy starts building around his intelligence, just like I taught him. 
 
 (Munchy|Munchy, special, crossing, smittenMAX, right, fade) Good luck breaking through this one, Ben.
 
@@ -1775,6 +1787,10 @@ He hands me a scroll with a grey ribbon binding it together.
 
 [CG: PCPG Consort]
 
+[hidetext]
+
+[pause]
+
 (PCPG) …
 
 (PCPG) No fucking way…
@@ -1810,6 +1826,8 @@ Now that I’m surrounded by true friends, true comrades in the WAR...
 I’m content with just letting the days go by for all eternity.
 
 !THRASH
+
+[fade to black]
 
 [CG end]
 
