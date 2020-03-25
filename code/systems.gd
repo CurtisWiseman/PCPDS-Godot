@@ -33,7 +33,8 @@ func _ready():
 			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), config.get_value("audio", "master"))
 		if config.has_section_key("audio", "voice"):
 			global.voicesOn = config.get_value("audio", "voice")
-	
+		if config.has_section_key("misc", "dev"):
+			global.devmode = config.get_value("misc", "dev")
 	# Set the global rootnode to the root of the current scene.
 	global.rootnode = get_node('..')
 	
