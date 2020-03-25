@@ -229,6 +229,7 @@ The table goes awkwardly quiet for a second time. Maybe I should’ve just playe
 
 (PCPG) !thrash
 
+[StopMusic]
 (CopKillers, copkillerscloud) 
 (K1P) FUCKING goddamn it they got to him first after all.
 
@@ -269,7 +270,7 @@ Sooo, why the fuck did I do that again?
 
 [fade to black]
 
-[CREDITS]
+[ENDING]
 
 [Scene: !find PPU]
 
@@ -599,7 +600,7 @@ I look up to find Endless War standing over me, her knife dripping with my blood
 
 I definitely fucked up.
 
-[CREDITS]
+[ENDING]
 *
 
 [Scene: !argue nate]
@@ -1771,14 +1772,14 @@ Ben points to his chest.
  
 (Ben, casual, point, neutral) ..maybe the Pizza Party University was within here all along.
  
-[SFX: Applause]
+[SFX: PCP-SFX_Applause]
 (CopKillers, copkillersdab1, left)
 The Killers around us applause to the speech, and I find myself shedding a tear on how unironically sincere this all is.
 
 (CopKillers, copkillers1, left)
 (Ben, casual, base, happyMIN|cloud)
 Ben then gives me what looks to be an actual genuine smile, for real this time. I didn’t think such a thing was possible. 
-
+[StopSFX]
 (CopKillers, copkillers1, left)
 (Ben, casual, base, neutral) Okay enough of that GAY shit. Get started on cleaning this fucking place up while I go get myself a cold Rockstar XDurance Marshmellow.
 

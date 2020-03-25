@@ -94,8 +94,12 @@ Fuck!
 (PCPG) What social media? 
 
 (PCPG) You have to listen to me, she…
+
+[SFX: PCPDating_School_Bell]
  
 The bell rings
+
+[StopSFX]
  
 (Digi|Professor Digibro, Campus, 2, HappyMAX) Well, that’s that for this rant./n
 Thanks for your contribution to the Digibro-niche-art-foundation.
@@ -621,7 +625,7 @@ I’m still fucking wasted.
 
 [fade from black]
 
-[credits]
+[ENDING]
 *
 
 *Get something to eat*
@@ -1589,7 +1593,7 @@ my options of doing anything against it while locked up are limited though.
 Oh well, I guess I’ll just lean against these bars and… Fuck! Are those snakes?!
 
 [StopMusic]
-[Credits]
+[ENDING]
 *
 
 *Destroy the boomer*
@@ -2001,7 +2005,7 @@ I may have made a colossal mistake.
 
 [StopMusic]
 
-[credits]
+[CREDITS]
 *
 
 *Go all in*
@@ -2155,5 +2159,5 @@ All of the Digi-echs ten laserguns fire at once, leaving no trace of Mother’s 
 
 (PCPG) Nah, that’d ruin the moment.
 [StopMusic]
-[Credits]
+[CREDITS]
 *
