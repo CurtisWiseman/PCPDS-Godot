@@ -40,6 +40,8 @@ var transitioning = false
 
 var last_black_fade_dir = null
 
+var lock = false
+
 func _ready(): 
 	systems = global.rootnode.get_node("Systems") # Assign the systems no to systems.
 
@@ -52,7 +54,7 @@ func _ready():
 	while not f.eof_reached():
 		dialogue.push_back(f.get_line())
 	f.close()
-	self.connect("empty_line", self, "_on_Dialogue_has_been_read")
+	self.connect("empty_line", self, "_on_Dialogue_has_been_read_deferred")
 	start = index
 	
 	# Define a wait timer.
@@ -223,10 +225,17 @@ func things_sliding():
 			return true
 	return false
 	
+func _on_Dialogue_has_been_read_deferred():
+	call_deferred("_on_Dialogue_has_been_read", [])
+	
 # The main dialogue function.
 func _on_Dialogue_has_been_read(setIndex=false):
 	if displayingChoices or things_sliding() or waiting_for_player_name:
 		return
+	
+	if lock:
+		return
+	lock = true
 		
 	if index < dialogue.size(): #Checks to see if end of document has been reached
 		while dialogue[index].length() == 0:
@@ -385,7 +394,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				
 				#var locIndex = global.locationNames.find(loc)
 				var path = "res://images/backgrounds/" + loc + ".png"
-				if ResourceLoader.exists(path):
+				var file_check = File.new()
+				if ResourceLoader.exists(path) or file_check.file_exists(path):
 					global.pause_input = true
 					systems.display.background(path, 'image')
 					
@@ -414,12 +424,11 @@ func _on_Dialogue_has_been_read(setIndex=false):
 								ovr[i] = arr[0]
 								ovrLayer[i] = int(arr[1])
 								
-
 						for i in range(0, ovr.size()):
 						#	var ovrIndex = global.locationNames.find(ovr[i])
 						#	if ovrIndex != -1:
 							var fore_path = "res://images/backgrounds/" + ovr[i] + ".png"
-							if ResourceLoader.exists(fore_path):
+							if ResourceLoader.exists(fore_path) or file_check.file_exists(fore_path):
 								if old_overlays_to_remove.find(fore_path) == -1:
 									systems.display.image(fore_path, ovrLayer[i])
 									systems.display.fade(fore_path, Color(0, 0, 0, 0), Color(1, 1, 1, 1), fade_time)
@@ -505,11 +514,12 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var old_cg = null
 				if CG != null:
 					old_cg = CG
-				
+					
+				CG = imagePath
 				systems.display.image(imagePath, 10)
 				systems.display.fade(imagePath, Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1.0)
 				#Remove the previous CG:
-				CG = imagePath
+				
 				yield(systems.display, 'transition_finish')
 				if old_cg != null:
 					systems.display.remove_name(old_cg)
@@ -598,6 +608,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('==>') != -1:
 				if global.turbo_mode and global.turbo_crash_mode:
 					index += 1
+					lock = false
 					return
 				global.pause_input = true
 				inChoice = false
@@ -647,6 +658,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('CHANGE') != -1:
 				if global.turbo_mode and global.turbo_crash_mode:
 					index += 1
+					lock = false
 					return
 				global.pause_input = true
 				game.safeToSave = false
@@ -687,7 +699,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			waitTimer.wait_time = 0.01
 			waitTimer.start()
 			yield(waitTimer, "timeout")
-			
 			var halt = global.rootnode.scene(dialogue[index], index+1, self)
 			index += 1
 			emit_signal('empty_line')
@@ -696,6 +707,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 		elif dialogue[index].begins_with("*"):
 			if global.turbo_mode and global.turbo_crash_mode:
 				index += 1
+				lock = false
 				return
 			# Deal with the end of a choice.
 			if inChoice:
@@ -703,6 +715,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 					inChoice = false
 				index += 1
 				emit_signal('empty_line')
+				lock = false
 				return
 			
 			var choice  = dialogue[index].lstrip('*')
@@ -715,6 +728,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				chosenChoices.erase(choice.substr(5, choice.length()))
 				index += 1
 				emit_signal('empty_line')
+				lock = false
 				return
 			
 			# Determine if the choice has been seen before.
@@ -748,6 +762,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				displayingChoices = true
 				choice_calc(choice)
 				yield(self, 'choiceChosen')
+				lock = false
 				return
 			index += 1
 			emit_signal('empty_line')
@@ -897,6 +912,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				if string.length() == 0:
 					index += 1
 					emit_signal('empty_line')
+					lock = false
 					return
 			
 			lastKeep(index)
@@ -920,7 +936,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			systems.history.add_line(dialogue[index], false)
 			emit_signal('sentence_end', dialogue[index])
 			index += 1
-
+	lock = false
+	
 # Generates function calls to the image system by parsing the script.
 func parse_info(info):
 	match info[0]:

@@ -273,7 +273,8 @@ func animation(vidpath):
 		yield(ftimer, 'timeout')
 		vidnode.modulate.a = 1.0 - clamp(time/1.0, 0.0, 1.0)
 		time -= 0.01
-		
+	vidnode.modulate.a = 1.0
+	
 	yield(vidnode, "finished")
 	
 	emit_signal('transition_finish')
@@ -878,12 +879,11 @@ func nodupelayername(path):
 	return layname # Return the name.
 
 
-
 # A function to do the repetitive tasks needed when adding a new layer.
 func layersetup(path, z):
 	
 	# If the file doesn't exist then say so, let the user fix the rest.
-	if not ResourceLoader.exists(path):
+	if not ResourceLoader.exists(path) and not model.file_exists(path):
 		print('Error: The given content ' + path + ' does not exist!')
 	
 	var content = load(path) # Load the content using it's path.
