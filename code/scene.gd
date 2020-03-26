@@ -22,7 +22,7 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 	cur_scene = scenechange
 	# Variables for directory manipulation.
 	#These folders don't exist in exported projects!
-	var scenes = ["Ben Saint", "Mage", "Gibbon", "Jesse", "Tom", "Digi", "Munchy", "Davoo", "Endless War Miniroute", "Nate", "Common"]
+	var scenes = ["Ben Saint", "Mage", "Gibbon", "Jesse", "Tom", "Digi", "Munchy", "Davoo", "Endless War Miniroute", "Nate", "Common", "Main_Menu"]
 #	var scene
 #
 #	# Open the directory as dir.
@@ -82,8 +82,7 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 	# Print error if scene was not found.
 	if !found:
 		print("Error: '" + scenechange + "' is not a scene!!!")
-	else:
-		emit_signal('scene_changed')
+	emit_signal('scene_changed')
 
 
 

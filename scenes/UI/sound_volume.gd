@@ -20,7 +20,7 @@ func _process(delta):
 		grab_knob_pt = $knob.position
 	if (not Input.is_action_pressed("advance_text")) or not Input.is_action_pressed("advance_text"):
 		grabbed = false
-	if not visible:
+	if not is_visible_in_tree():
 		grabbed = false
 	if grabbed:
 		var desired_move_pt = Vector2(grab_knob_pt.x+(p-grab_mouse_pt).x, grab_knob_pt.y)

@@ -672,7 +672,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				else: print('Invalid number of commands for CHANGE on line ' + str(index) + '!')
 			
 			elif dialogue[index].findn('ENDING') != -1:
+				
+				say("", "")
 				scene.change('main_menu', 'fadeblack', 1, 0.01)
+				yield(scene, "scene_changed")
 			elif dialogue[index].find('ZOOM') == 1:
 				global.pause_input = true
 				var line = dialogue[index].strip_edges()

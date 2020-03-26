@@ -1,12 +1,11 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://scenes/UI/Pause_Screen.gd" type="Script" id=1]
-[ext_resource path="res://images/UI/In-game menus/Pause menu/Intro/pause menu exporter_00009.png" type="Texture" id=2]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Save game/Unhover/Save Game Comp 1_00021.png" type="Texture" id=3]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Main menu/Unhover/Main Menu Comp 1_00023.png" type="Texture" id=4]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Main menu/Unhover/Main Menu Comp 1_00025.png" type="Texture" id=5]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Main menu/Unhover/Main Menu Comp 1_00021.png" type="Texture" id=6]
-[ext_resource path="res://scenes/UI/pause_background.gd" type="Script" id=7]
+[ext_resource path="res://scenes/UI/generic_menu_background.gd" type="Script" id=7]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Save game/Unhover/Save Game Comp 1_00023.png" type="Texture" id=8]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Save game/Unhover/Save Game Comp 1_00025.png" type="Texture" id=9]
 [ext_resource path="res://images/UI/In-game menus/Pause menu buttons/Load game/Unhover/Load Game Comp 1_00025.png" type="Texture" id=10]
@@ -50,9 +49,17 @@ __meta__ = {
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 1450, 6.021 )
-texture = ExtResource( 2 )
 centered = false
 script = ExtResource( 7 )
+base_prefix = "res://images/UI/In-game menus/Pause menu/"
+idle_prefix = "Loop/pause menu exporter_"
+in_prefix = "Intro/pause menu exporter_"
+out_prefix = "Outro/"
+idle_duration = 447
+in_duration = 10
+out_duration = 10
+idle_offset = 13
+out_digits = 0
 
 [node name="buttons" type="Control" parent="."]
 margin_left = 50.0
