@@ -7,6 +7,10 @@ var loadscreen # Load screen instance.
 var input_locked = false
 func _ready():
 	systems = $Systems # Load systems with the Systems node.
+	
+	for b in $RouteButtons.get_children():
+		b.visible = global.devmode
+	
 	game.safeToSave = false
 	
 	# Display the main menu background and play the main menu music.

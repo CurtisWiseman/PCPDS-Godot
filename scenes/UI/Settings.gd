@@ -19,6 +19,7 @@ func menu_in():
 	$sfx_volume.visible = false
 	$voices_button.visible = false
 	$background.menu_in()
+	yield($background, "frame_changed")
 	visible = true
 	$close_button.visible = false
 	yield($background, "intro_finished")
