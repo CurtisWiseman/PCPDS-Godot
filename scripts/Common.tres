@@ -1893,7 +1893,8 @@ I think I get it now! Basically, this is Professor Bestman's weekly outlet to te
 
 (PCPG) But what has this all got to do with memes? 
 
-(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n So, any further questions regarding the topics for this course?
+(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n
+So, any further questions regarding the topics for this course?
 
 [SFX: PCP-AMBIENT_Classroom]
 The entire classroom falls into a noisy chaos, pens and books fly through the air, everybody tries to make their opinion or joke heard. Some 4-channers and Redditors get into a violent argument about who has the better memes.
@@ -2118,7 +2119,7 @@ I should probably go home, I am clearly [i]way[/i] too tired right now.
 (Munchy, campus, default, neutral)
 [fade from black]
 
-Professor Munchy decided to end our morning class early today, and soon I found myself conversing with the two of the most powerful people in the school.
+Professor Munchy decided to end our morning class early today, and soon I found myself conversing with two of the most powerful people in the school.
 
 (Munchy, campus, default, happyMIN, center, slide, right)
 (Ben, campus, base, neutral, left) Yo Munchy, done with your class for today?
@@ -2310,6 +2311,7 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 (Ben|Ben, campus, slouch, neutral) Well, shit.
 
 [Ben Leaves]
+[EndlessWar leaves]
 [SLIDE, Munchy, left, center]
 
 [After a few seconds, the screen flashes pink]
@@ -2420,6 +2422,7 @@ I turn away from the group and head to the cafeteria for lunch. It’s just not 
 (Ben|Ben, campus, slouch, neutral) Well, shit.
 
 [Ben Leaves]
+[EndlessWar leaves]
 [SLIDE, Munchy, left, center]
 
 [After a few seconds, the screen flashes pink]
