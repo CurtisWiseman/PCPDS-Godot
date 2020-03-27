@@ -215,7 +215,7 @@ I actually managed to get here a few minutes early! That’s pretty rare for me,
 
 (Mage|Mage, casual, 1, happyMIN, offleft, slide, center) Oh! You are already here! Sorry if you had to wait.
 
-(PCPG) Well, this park is beautiful on the evening. Not a bad place to wait at all.
+(PCPG) Well, this park is beautiful in the evening. Not a bad place to wait at all.
 
 (Mage|Mage, casual, 2, happyMIN) I love the park too! It’s the closest thing to a forest I can get in this crowded city.
 
@@ -285,7 +285,8 @@ My parents were surprisingly unconcerned about me going out, considering the cir
 (Mage) The Thistle Thugs..
 (Mage) ..but the Indigo Interlopers were the worst.
 
-(Mage) Maybe I didn’t start the conflict, but it is my fault that it escalated. The thought of making a peace treaty didn’t even cross our minds. We could have put aside our differences and worked together to help our city and repair the war-torn streets, but the bloodlust was too strong in us.
+(Mage) Maybe I didn’t start the conflict, but it is my fault that it escalated. The thought of making a peace treaty didn’t even cross our minds.
+(Mage) We could have put aside our differences and worked together to help our city and repair the war-torn streets, but the bloodlust was too strong in us.
 
 (PCPG) I guess this didn’t end well?
 
@@ -386,7 +387,8 @@ I leave Mage alone and head to the comic store.
 [Location: comicstore.full]
 [fade from black]
 
-Opening the door, the familiar smell of weebs and nerds welcomes me. There are only a few people in the store though, but probably too many for her given her reaction. Waiting next to the Pokemon shelf, I squint outside the window to see if Mage decides to follow.
+Opening the door, the familiar smell of weebs and nerds welcomes me. There are only a few people in the store though, but probably too many for her given her reaction.
+Waiting next to the Pokemon shelf, I squint outside the window to see if Mage decides to follow.
 
 (Mage|Mage, campus, 2, happyMAX, offright, slide, right) I’m here! I’m finally here! Now let’s get the plushie and go!
 
@@ -398,7 +400,7 @@ She studies the Pokemon shelf, undecided.
 
 (PCPG) Which one is your favourite?
 
-(Mage|Mage, campus, 5, sadMIN) Mhmhm I can’t decide! They don’t have a Houndoom or a Sableye, and I can’t choose between Mareep and Wooloo!
+(Mage|Mage, campus, 5, sadMIN) Just look at these fluffy boys! I just can’t choose between Mareep and Wooloo!
 
 (Mage, campus, 1, sadMIN)
 
@@ -436,7 +438,9 @@ A pink haired girl bumps into me.
 
 (Mage|Mage, campus, 2, happyMIN) If we see him, I promise we’ll tell him he can find you here, ok?
 
-(Adelram|???, body, face 1) Hrrmmm okay! But I warn you! If I don’t find him, my wrath will be felt by every lowly human being in this city! But you're not a human, huh, purple girl? Are those demon horns I see?
+(Adelram|???, body, face 1) Hrrmmm okay! But I warn you! If I don’t find him, my wrath will be felt by every lowly human being in this city! But you're not a human, huh, purple girl?
+
+(Adelram|???, body, face 1) Are those demon horns I see?
 
 (Mage|Mage, campus, 5, happyMED) Mage horns, to be accurate! Don’t worry, I’m sure you’ll find him!
 
@@ -452,7 +456,7 @@ The demon boy stomps away, leaving Mage and me.
 
 (PCPG) Yeah, let’s go to the cash-
 
-[Clara, offright, slide, center]
+(Clara, clara, offright, slide, center)
 
 An automatic cashier machine appears before us.
 
@@ -460,7 +464,7 @@ An automatic cashier machine appears before us.
 
 (Mage|Mage, campus, 1, happyMED) Nah, it’s ok. I know her.
 
-(Clara|Cashier Robot, clara, offleft, slide, center) Welcome to our shop! Please put your products on the scanner!
+(Clara|Cashier Robot, clara) Welcome to our shop! Please put your products on the scanner!
 
 We follow the instructions.
 
@@ -749,7 +753,8 @@ Suddenly the street is filled with purple characters, some hooded, some masked, 
 
 (Endless War|Endless War, knife, happyMAX) The Cop Killer!
 
-(Ben|Cop Killer, casual, point, happyMAX) After the dimensional merge, we will all be one and the same anyways, doesn’t matter what you call me! Cop Killer, Phantom Horn, Professor Saint? Mere facettes of the same genius mind!
+(Ben|Cop Killer, casual, point, happyMAX) After the dimensional merge, we will all be one and the same anyways, doesn’t matter what you call me! Cop Killer, Phantom Horn, Professor Saint?
+(Ben|Cop Killer, casual, point, happyMAX) Mere facettes of the same genius mind!
 
 (Ben|Cop Killer, casual, base, shockMIN ) And you guys!
 
@@ -928,7 +933,7 @@ Mage steps forward.
 
 (Lethal|Lethal, 2, smugMIN) Now it’s my time to shine!
 
-She looks so different… but this is clearly still Mage. Only, I smell a thick and heavy fragrance of Violence, making it hard to breathe.
+She looks so different… but this is clearly still Mage. Only, I smell a thick and heavy fragrance of violets, making it hard to breathe.
 
 (Lethal|Lethal, 4, happyMIN) Just a superior version of Mage! Created out of her hearts deepest desires.
 (Lethal|Lethal, 4, happyMIN) Unrestrained by her stupid insecurities and hang-ups!
@@ -989,7 +994,8 @@ RadProm day has come! I’ve never been to any proms in my old life, mainly beca
 
 (PCPG) You heard of that?
 
-(Gibbon|Gib, casual, handsup, confusedMED) Well, I’m friends with a famous detective you know? He told me that Mage lost control and slew a bunch of ruffians near Yang Street. The biggest massacre since the bicarbonate rain!
+(Gibbon|Gib, casual, handsup, confusedMED) Well, I’m friends with a famous detective you know? He told me that Mage lost control and slew a bunch of ruffians near Yang Street.
+(Gibbon|Gib, casual, handsup, confusedMED) The biggest massacre since the bicarbonate rain!
 
 (PCPG) It was self-defense! And anyway, since then she seems way more happy and confident. It’s like she finally got closure on her horrible past.
 

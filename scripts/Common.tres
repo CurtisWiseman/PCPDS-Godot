@@ -1391,28 +1391,30 @@ Tom seems to have forgotten that I was here.
 [Location: philosophyclass.d]
 [Song: PCPDating_ClassPhilosophy]
 [fade from black]
-[SFX: body fall]
-[cut to black]
 
-As soon as I enter the Philosophy class something massive tackles my chest sending me to the ground. Its large furry mass weighs heavy on my stomach, winding me of any air.
+As soon as I enter the Philosophy class something massive tackles my chest sending me to the ground. 
+
+[cut to black]
+[SFX: body fall]
 
 (Brunswick|???) MAMO!
+
+Its large furry mass weighs heavy on my stomach, winding me of any air.
 
 (PCPG) he...lp m...e
 
 (Ben|???) Woah calm down there buddy, we don’t want to kill off the new student quite yet. Come on, get off of him.
 
-(Ben, campus, base, neutral)
-(Brunswick, body, neutral, right)
+(Ben, campus, base, neutral, left)
+(Brunswick, body, neutral, center+100)
 [fade from black]
 The beast obliges and the enormous weight finally lifts from my body, revealing itself as a Momoswine.
 
-(Ben|???, campus, base, neutral) Sorry about that, but Brunswick here just loves to charge 
-right in, to a fault really.
+(Ben|???, campus, base, neutral) Sorry about that, but Brunswick here just loves to charge right in, to a fault really.
 
-The menacing being offers his hand to me, which I accept, and he helps me up. 
+The bearded being offers his hand to me, which I accept, and he helps me up. 
 
-(Ben|Ben Saint, campus, base, happyMIN|cloud) The name’s Ben Saint by the way, your teacher for this class.
+(Ben|Ben Saint, campus, base, happyMIN) The name’s Ben Saint by the way, your teacher for this class.
 
 (PCPG) Thanks, uh, Professor Saint, but why is there a Mamoswine in the classroom anyways?
 
@@ -1424,29 +1426,35 @@ The menacing being offers his hand to me, which I accept, and he helps me up.
 
 (PCPG) Uh, yeah, I would?
 
-(Ben|Professor Saint, campus, base, sadMIN) Oh, right. I guess I [i]can[/i] just tell you.
+(Ben|Professor Saint, campus, base, sadMIN|cloud) Oh, right. I guess I [i]can[/i] just tell you.
 
-(Ben|Professor Saint, campus, base, neutral) Brunswick here, an old friend of mine who bravely died in the line of duty during our travels, escaped covertly from Pokémon Hell to battle in the well known third PCP Royal Rumble in order to buy out his freedom from a certain evil spectre, but unfortunately he lost the Rumble to a literal arm and now has to live out the rest of his numbered days in hiding to avoid being dragged back down to his fiery abode.
+(Ben|Professor Saint, campus, base, neutral|cloud) Brunswick here, an old friend of mine who bravely died in the line of duty during our travels, escaped covertly from Pokémon Hell to battle in the well known third PCP Royal Rumble in order to buy out his freedom from a certain evil spectre, but unfortunately he lost the Rumble to a literal arm and now has to live out the rest of his numbered days in hiding to avoid being dragged back down to his fiery abode.
 
-(Ben|Professor Saint, campus, point, happyMIN|cloud) In other words, he’s our class pet.
+(Ben|Professor Saint, campus, point, happyMIN) In other words, he’s our class pet.
 
-(Brunswick, body, neutral, right) Swine!
+(Brunswick, body, neutral) Swine!
 
 (PCPG) Right...
 
-(Ben|Professor Saint, campus, base, angryMAX) And is very important to me, so you all better treat him with extreme care. If any of you FUCKS dare let anyone else know he’s here, you will experience a fate far worse than Pokémon Hell, I’ll guarantee you that.
+(Ben|Professor Saint, campus, base, angryMAX|cloud) And is very important to me, so you all better treat him with extreme care. 
+
+(Ben|Professor Saint, campus, base, angryMAX|cloud) If any of you FUCKS dare let anyone else know he’s here, you will experience a fate far worse than Pokémon Hell, I’ll guarantee you that.
 
 The class goes silent at the threat. 
 
-(Brunswick, body, neutral, right) Mamo!
+(Brunswick, body, neutral) Mamo!
 
 (Ben|Professor Saint, campus, base, neutral) Okay enough of that bullshit, all of you better sit down and shut the fuck up.
 
+[SLIDE Brunswick right+100]
+[SLIDE Ben center]
 (Ben|Professor Saint, campus, base, neutral) For those of you who don’t know me yet, Ben Saint at your service, your Science and, for this class, the ONLY worthwhile Philosophy teacher.
 
 (Ben|Professor Saint, campus, dab) But more importantly, your resident and confirmed best Kingpin, THE Cop Killer, ready to !dab on all the haters! !dab !dab !dab
 
-Suddenly half of the class gets up from their seats and !dabs along with him aggressively. So this is the Cop Killers leader huh?
+Suddenly half of the class gets up from their seats and !dabs along with him aggressively, while the other half disapprovingly shake thier bodies about in response.
+
+So this is the Cop Killers leader huh?
 
 (Ben|Professor Saint, campus, dab) Be sure to also check out patreon.com/bensaint and give me money so I can keep on dabbing forever, bitch. !dab !dab !dab
 
@@ -1454,15 +1462,21 @@ He seems pretty cool.
 
 (Ben|Professor Saint, campus, base, neutral) Okay alright settle down, we unfortunately have to get back to the boring school bullshit now.
 
-(Ben|Professor Saint, campus, base, neutral|cloud) I mostly don’t really give a shit what you do during class, just don’t interrupt me while I’m talking and we’ll have a swell old time. I do hand out nuggets of wisdom from time to time, so do watch out for those if you’re interested.
+(Ben|Professor Saint, campus, base, neutral) I mostly don’t really give a shit what you do during class, just don’t interrupt me while I’m talking and we’ll have a swell old time. 
 
-(Ben|Professor Saint, campus, point, happyMIN|cloud) And you know what, as a special treat to start today's lesson off I’ll hand out one of those nuggets for free. 
+(Ben|Professor Saint, campus, base, neutral) I do hand out nuggets of wisdom from time to time though, so do watch out for those if you’re interested.
 
-(Ben|Professor Saint, campus, point, neutral) Consider this, anything you ever think about consuming is nothing but a lie placed before you by the capitalist hierarchy in order to siphon power away from you and towards the upper echelon.
+(Ben|Professor Saint, campus, point, happyMIN) And you know what, as a special treat to start today's lesson off I’ll hand out one of those nuggets for free. Consider this.
+
+(Ben|Professor Saint, campus, base, neutral|cloud) Anything you ever think about consuming is nothing but a lie placed before you by the capitalist hierarchy in order to siphon power away from you and towards the upper echelon.
 
 Oh god, not again.
 
-(Ben|Professor Saint, campus, exasp, angryMIN) And if you do nothing to oppose that system, if you choose not to stand by the people who oppose it, then all you are doing is endorsing the status quo. You might as well be siphoning that power yourself!
+(Ben|Professor Saint, campus, exasp, angryMIN) And if you do nothing to oppose that system, if you choose not to stand by the people who oppose it, then all you are doing is endorsing the status quo. 
+
+(Ben|Professor Saint, campus, exasp, angryMIN) You might as well be siphoning that power yourself!
+
+Thats it, I've had enough of this.
 
 (PCPG) Uh, Professor Saint?
 
@@ -1470,41 +1484,45 @@ Oh god, not again.
 
 (PCPG) Uh, okay. Ben, what in the fuck does this have to do with Philosophy? You’re taking a real hard left turn here.
 
-(Ben, campus, base, confusedMIN) Huh? Why the fuck else are people depressed if not for this shitty system fucking them over? This is clearly foundational stuff I need to teach in order to understand why we are doomed and fucked and how we can change that.
+(Ben, campus, base, confusedMIN) Huh? Why the fuck else are people depressed if not for this shitty system fucking them over? 
+
+(Ben, campus, exasp, angryMIN) This is clearly foundational stuff I need to teach in order to understand why we are doomed and fucked and how we can change that!
 
 (PCPG) Uhh, I mean I guess so...
 
 (Ben, campus, base, neutral) Okay, so as I was saying...
 
-I automatically tune out the rest of Ben’s lecture as my ears flood with all kinds of political jargon, and frankly, I really don’t want to hear any of that right now. It seems like I am not alone in this stance as I notice several other students nodding off at their desks. A few students even just straight up leave as he’s talking.
+I automatically tune out the rest of Ben’s lecture as my ears flood with all kinds of political jargon, and frankly, I really don’t want to hear any of that right now. 
 
-[StopMusic]
+It seems like I am not alone in this stance as I notice several other students nodding off at their desks. A few students even just straight up leave as he’s talking.
+
 As I think about whether I should join them in their delinquency, a strange presence holds me to my seat.
 
+[StopMusic]
 [Song: PCPDating_Tension]
+
 (Ben, campus, base, shockMIN)
-(Brunswick, body, worried, right)
 (Russel|???) [i]Beeeen Saaaiiiiint...[/i]
 
 (PCPG) Uhh, what was that?
 
+(Brunswick, body, worried)
 (Ben, campus, base, shockMAX)
 (Russel|???) [i]Bruuuunswiiiiiick...[/i]
 
-(Brunswick, body, worried, right) Swine?
+(Brunswick, body, worried) Swine?
 
 (Ben, campus, exasp, shockMAX) Oh fuck, how the hell did he know Brunswick was here?
 
-(Ben, campus, exasp, shockMAX, center, slide, left)
 [Location: philosophyclass.d.portal]
 
-Suddenly, the room begins to heat up, as a literal portal in spacetime rips itself open before my eyes, consuming some of the classes desks and chairs, and revealing within it a fiery inferno.
+Suddenly, the room begins to heat up, as a literal portal in spacetime rips itself open before my eyes, revealing within it a fiery inferno.
 
-(Ben, campus, slouch, sadMIN, left) That must be... Pokémon Hell. So that means...
+(Ben, campus, slouch, sadMIN, center+50) That must be... Pokémon Hell. So that means...
 
-(Russel|???, bigboi, neutral) It’s been a while, hasn’t it Brunswick?
+(Russel|???, bigboi, neutral, left-100) It’s been a while, hasn’t it Brunswick?
 
-(Brunswick, worried, right) Mamo...
+(Brunswick, body, worried) Mamo...
 
 (Russel|???, bigboi, neutral) It’s time for you to say goodbye to your “friend” here and come back down to Pokémon Hell, where you truly belong.
 
@@ -1514,53 +1532,74 @@ Suddenly, the room begins to heat up, as a literal portal in spacetime rips itse
 
 (Russel, bigboi, neutral) It’s [i]never[/i] enough.
 
-(Brunswick, body, confused, right)
 Russel then unleashes what looks to be a Confuse Ray at the startled Brunswick, hitting him directly and confusing him.
 
-(Russel, bigboi, neutral, center, slide, center-50) Alright Brunswick, now all you need to do is to enter the friendly portal where you can meet up with all of your favourite friends, those who were brutally murdered by your ever so precious Ben Saint.
+[Ben leaves]
+(Brunswick, body, confused)
+(Russel, bigboi, neutral) Alright Brunswick, now all you need to do is to enter the friendly portal where you can meet up with all of your lovely friends. 
 
-(Brunswick, body, confused, right, slide, right-50)
+(Russel, bigboi, neutral) Those who were brutally murdered by your ever so precious Ben Saint.
+
+[SLIDE Brunswick right]
 Brunswick in his confusion obeys Russel's command and slumbers his way towards the portal.
 
-(Brunswick, body, confused, right-50, slide, right-100)
-(Ben, campus, exasp, sadMIN) Brunswick! Please snap out of it, you’re better than this! Don’t do this to me!
+[SLIDE Brunswick right-100]
+(Ben) Brunswick! Please snap out of it, you’re better than this! Don’t do this to me!
 
-(Brunswick, body, confused, right-100, slide, right-150)
-(Ben, campus, slouch, sadMAX) I can’t lose you again!
+[SLIDE Brunswick right-200]
+(Ben) I can’t lose you again!
 
-(Brunswick, body, confused, right-150, slide, right-250)
-But despite Ben’s pleas, Brunswick continues slowly towards his doom. Students, seemingly caring more about Brunswick than Ben ever could, sacrifice their own wellbeing by climbing onto his hairy mass to stop him from entering the portal, but all is in vain. Brunswick is simply too massive and strong for their efforts.
+[SLIDE Brunswick right-300]
+But despite Ben’s pleas, Brunswick continues slowly towards his doom. 
 
-(Brunswick, body, confused, right-250, slide, right-300)
+[SLIDE Brunswick right-400]
+Students, seemingly caring more about Brunswick than Ben ever could, climb onto his hairy mass to stop him from entering the portal, but all is in vain. 
+
+[SLIDE Brunswick right-500]
+Brunswick is simply too massive and strong for their efforts.
+
+[SLIDE Brunswick right-600]
 Just before Brunswick falls into the portal and is consumed once more by the fire he escaped from, a commanding shout sounds from the classroom door.
 
 [StopMusic]
-(Lord of Ghosts|???, shock, blank, offright, slide, right) STOP!
+(Lord of Ghosts|???, shock, blank, offright, slide, right+100) STOP!
 
-(Lord of Ghosts, neutral, blank, right)
 Somehow this gets to Brunswicks ears, stopping him inches from the portal’s edge.
 
-(Russel, bigboi, worried, center-50) The Lord of Ghosts himself? But sir what are you doing here?
+(Lord of Ghosts, neutral, blank)
+(Russel, bigboi, worried) The Lord of Ghosts himself? But sir what are you doing here?
 
-(Lord of Ghosts|The Lord of Ghosts, angry, blank, right) I WANT YOU TO LET GO OF THAT POKÉMON.
+(Lord of Ghosts|The Lord of Ghosts, angry, blank) I WANT YOU TO LET GO OF THAT POKÉMON.
 
-(Russel, bigboi, worried, center-50) B-but sir, he belongs in Pokémon Hell! I made a whole campaign to #LetRusselWrestle in order to defeat and capture him at the third PCP Royal Rumble, but I unfortunately missed my chance. This is now my time to drag him down to where he belongs!
+(Russel, bigboi, worried) B-but sir, he belongs in Pokémon Hell! 
 
-(Lord of Ghosts|The Lord of Ghosts, neutral, blank, right) I DO NOT CARE. I AM THE LORD OF GHOSTS AND SO ALL GHOSTS MUST OBEY ME. THAT’S HOW IT WORKS.
+(Russel, bigboi, worried) I made a whole campaign to #LetRusselWrestle in order to defeat and capture him at the third PCP Royal Rumble, but I unfortunately missed my chance. 
 
-(Russel, bigboi, worried, center-50) I guess... you are right sir.
+(Russel, bigboi, worried) This is now my time to drag him down to where he belongs!
 
-(Lord of Ghosts, happy, blank, right)
-(Brunswick, body, worried, right-300, slide, right-150)
-Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. After shaking off his confusion he steps away from the portal and lowers himself to let off the students on top of him.
+(Lord of Ghosts|The Lord of Ghosts, neutral, blank) I DO NOT CARE. I AM THE LORD OF GHOSTS AND SO ALL GHOSTS MUST OBEY ME. THAT’S HOW IT WORKS.
 
-(Russel, bigboi, neutral, center-50, slide, center) But do not worry Brunswick, despite not getting you this time, I will bring you back to Pokémon Hell soon enough.
+(Russel, bigboi, worried) But..
 
-(Brunswick, body, default, worried, center+50) Swine...
+(Lord of Ghosts|The Lord of Ghosts, neutral, blank) NO BUTS.
 
-(Russel, bigboi, neutral) And you, Ben “Max Revive” Saint, don’t you worry either. You won't be separated from your “friends” for too long. In due time I will bring you down there too, and this time, for good.
+(Russel, bigboi, worried) I guess... you are right sir.
 
-(Ben, campus, base, happyMIN, left) I’d like to see you try you literal fart gas.
+(Lord of Ghosts, happy, blank)
+Russel reluctantly snaps his fingers and Brunswick finally comes back to his senses. 
+
+(Brunswick, body, neutral)
+After shaking off his confusion he steps away from the portal and lowers himself to let off the students on top of him.
+
+(Russel, bigboi, neutral) But do not worry Brunswick, despite not getting you this time, I will bring you back to Pokémon Hell soon enough.
+
+(Brunswick, body, worried) Swine...
+
+(Russel, bigboi, neutral) And you, Ben “Max Revive” Saint, don’t you worry either. You won't be separated from your “friends” for too long. 
+
+(Russel, bigboi, neutral) In due time I will bring you down there too, and this time, for good.
+
+(Ben) I’d like to see you try you literal fart gas.
 
 [Russel leaves]
 [Location: philosophyclass.d]
@@ -1568,17 +1607,21 @@ Russel reluctantly snaps his fingers and Brunswick finally comes to his senses. 
 Russel then enters back through the portal and closes it behind him, seemingly returning everything back to normal.
 
 [Song: PCPDating_ClassPhilosophy]
-(Brunswick, body, worried, center+50, slide, left)
-(Ben, campus, base, happyMIN, left, slide, center) Wow, uh thanks for the save Lord of Ghosts. Even though we were previously enemies bent on dominating one another that one time, you helped me out big here.
 
-(Lord of Ghosts|The Lord of Ghosts, blushMED, blank, right) DO NOT MENTION IT, FOR I AM THE LORD OF GHOSTS, THAT IS WHAT I DO.
+(Brunswick, body, neutral)
+[SLIDE Brunswick left]
+(Ben, campus, base, happyMIN, center+100) Wow, uh thanks for the save Lord of Ghosts. Even though we were previously enemies bent on destroying one another, you helped me out big here.
 
-(Lord of Ghosts|The Lord of Ghosts, neutral, blank, right) I HOWEVER MUST GO NOW, SO BYE BYE...
+(Lord of Ghosts|The Lord of Ghosts, blush2, blank) DO NOT MENTION IT, FOR I AM THE LORD OF GHOSTS, THAT IS WHAT I DO.
 
-(Lord of Ghosts, neutral, blank, right, slide, offright)
-Unlike Russel, the Lord of Ghosts uses the classroom door to leave us, a far more considerate exit for those who are easily spooked. That Lord of Ghosts guy must be a real samaritan though, helping Brunswick out like that out of the blue. 
+(Lord of Ghosts|The Lord of Ghosts, neutral, blank) I HOWEVER MUST GO NOW, SO BYE BYE...
 
-His voice sounded awfully familiar. Have I met him before?
+[SLIDE LordofGhosts offright]
+Unlike Russel, the Lord of Ghosts uses the classroom door to leave us, a far more considerate exit for those who are easily spooked. 
+
+That Lord of Ghosts guy must be a real samaritan though, helping Brunswick out like that out of the blue. 
+
+His voice sounded awfully familiar too. Have I met him before?
 
 (Ben, campus, exasp, angryMIN) Okay, so which one of you FUCKS tattled about Brunswick being here?
 
@@ -1586,13 +1629,15 @@ Nobody replies, obviously.
 
 (Ben, campus, base, angryMAX) Fucking typical. Whoever you are, I will find you, and you [i]will[/i] suffer my wrath.
 
-(Ben, campus, slouch, neutral) Ugh. I guess class is dismissed early today. I need to find a new place for Brunswick before Russel decides to make another visit.
+(Ben, campus, slouch, neutral, center+150) Ugh. I guess class is dismissed early today. I need to find a new place for Brunswick before Russel decides to make another visit.
 
 (Brunswick, body, worried) Mamo...
 
 [SLIDE Ben offright]
 [SLIDE Brunswick offright]
-Ben and Brunswick leave the class, and soon after students start to file out too. Man, this class sure did take one hell of a turn. Good thing it all worked out for the better in the end though.
+Ben and Brunswick leave the class, and soon after students start to file out too.
+
+Man, this class sure did take one hell of a turn. Good thing it all worked out for the better in the end though.
 
 Wait, where’s my bag? I’m sure I left it next to my desk where the portal ope-
 
@@ -1893,8 +1938,7 @@ I think I get it now! Basically, this is Professor Bestman's weekly outlet to te
 
 (PCPG) But what has this all got to do with memes? 
 
-(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n
-So, any further questions regarding the topics for this course?
+(Nate|Professor Bestman, campus, pointing, happyMIN|shades) Oh, dear student, that’s easy: Where do you think most of my memes come from! From being a legendary fitboy! Obviously. /n So, any further questions regarding the topics for this course?
 
 [SFX: PCP-AMBIENT_Classroom]
 The entire classroom falls into a noisy chaos, pens and books fly through the air, everybody tries to make their opinion or joke heard. Some 4-channers and Redditors get into a violent argument about who has the better memes.
@@ -2119,7 +2163,7 @@ I should probably go home, I am clearly [i]way[/i] too tired right now.
 (Munchy, campus, default, neutral)
 [fade from black]
 
-Professor Munchy decided to end our morning class early today, and soon I found myself conversing with two of the most powerful people in the school.
+Professor Munchy decided to end our morning class early today, and soon I found myself conversing with the two of the most powerful people in the school.
 
 (Munchy, campus, default, happyMIN, center, slide, right)
 (Ben, campus, base, neutral, left) Yo Munchy, done with your class for today?
@@ -2308,10 +2352,9 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 *Rowdy Fucker for life*
 (PCPG) !enlist rowdys
 
-(Ben|Ben, campus, slouch, neutral) Well, shit.
+(Ben|Ben, campus, base, neutral) Well, shit.
 
 [Ben Leaves]
-[EndlessWar leaves]
 [SLIDE, Munchy, left, center]
 
 [After a few seconds, the screen flashes pink]
@@ -2422,7 +2465,6 @@ I turn away from the group and head to the cafeteria for lunch. It’s just not 
 (Ben|Ben, campus, slouch, neutral) Well, shit.
 
 [Ben Leaves]
-[EndlessWar leaves]
 [SLIDE, Munchy, left, center]
 
 [After a few seconds, the screen flashes pink]
