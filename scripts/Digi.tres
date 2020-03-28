@@ -1789,13 +1789,16 @@ HOW?!
 
 (PCPG) Digi, why can she do that?
 
+[Michelle leaves]
 
 (Digi) Do I really have to explain the long and storied history of mahou shoujo to you?/n
 Weren’t you paying attention in class?
 
+[Geoff leaves]
 
 (May) Yeah, why do you waste your time on this uncultured piece of shit, Digi?
 
+[Digi leaves]
 
 (May) Do you really think I WANT to work with Geoff to get you all to myself?/n
 These are desperate times!
@@ -1804,16 +1807,13 @@ These are desperate times!
 
 Huh, so she really is jealous.
 
+[May leaves]
+[cut to black]
 
 (Geoff) Can we cut this pointless bullshit already?/n
 It’s time to settle who the real top anime academic is once and for all.
 
-[cut to black]
 [CG end]
-[Geoff leaves]
-[Digi leaves]
-[Michelle leaves]
-[May leaves]
 [StopMusic]
 [Song: PCPDating_ActionSerious]
 [Location: outsidemech]
@@ -2088,9 +2088,11 @@ Oh.
 We continue to hop through dimensions while recruiting Digis, each more insane than the last, before finally returning to the mech.
 
 [fade to black]
+[Location: insidemech.empty]
 (Digi|Digi, Campus, 5, ShockMAX, left)
 
 (ArtsoFartso|Artso Fartso, special, 1, HappyMAX, right)
+[fade from black]
 
 (PCPG) Digi, open the com-channel!
 
@@ -2148,16 +2150,17 @@ All of the Digi-echs ten laserguns fire at once, leaving no trace of Mother’s 
 
 [fade to black]
 [StopMusic]
+[Digi leaves]
 [Location: radprom1]
 [Song: PCPDating_RADCON]
-(Digi|Digi, Special, 2, SmittenMED|blush2) 
+(Digi|Digi, casual, 2, SmittenMIN) 
 [fade from black]
 
 (PCPG) Come to think of it: That’s two assholes with garbage opinions on anime down now. How many are even left?
 
-(Digi|Digi, Special, 2, SmittenMIN|blush2) You wanna see the list?
+(Digi|Digi, casual, 2, SmittenMAX) You wanna see the list?
 
 (PCPG) Nah, that’d ruin the moment.
 [StopMusic]
-[CREDITS]
+[Credits]
 *
