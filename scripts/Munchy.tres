@@ -306,7 +306,7 @@ What is this place? Is it heaven? Is it hell?
 No…
 No!!
 NOOOOOOOOOOOOOO!!!
-
+[fade to black]
 [ENDING]
 *
 
@@ -948,7 +948,7 @@ In the corner of my eye, I can see Munchy and Ben having a heated discussion in 
 
 (Munchy|Munchy, campus, default, angryMIN) You’d understand if you’d just give it a fucking chance.
 
-(Ben|Ben, campus, base, shockMIN) No, I refuse. If it’s so good then we just record an episode for it instead, or something. Shoving it into Slimefest is nonsense.
+(Ben|Ben, campus, base, shockMIN) No, I refuse. If it’s so good then we can just record an episode for it instead, or something. Shoving it into Slimefest is nonsense.
 
 (Munchy|Munchy, campus, crossing, neutral) It’s unlike anything we’ve ever done for a Slimefest before. This is the perfect opportunity to shake things up a bit.
 
@@ -1240,7 +1240,7 @@ What were once gangsters are now almost entirely skeletons. It isn’t long befo
 The phantoms of my former comrades all dissipate one by one as they rise up through the sewers. I wanna join them, but…
 
 I just don’t have the heart to. Maybe the life of a ghost is a better fit for someone as worthless as me. Goodbye WAR. Goodbye… Rowdys…
-
+[fade to black]
 [BAD END]
 [credits]
 *
@@ -1331,11 +1331,14 @@ Even though being in a gang can be fun, it seems like it brings out the worst in
 [StopMusic]
 [Location: black]
 [Song: PCPDating_TomsLot]
-[fade from black]
 
 …
 
-(Thoth|Thoth, offright, slide, center) Disappointing… perhaps you are not who I perceived you to be.
+(Thoth|Thoth, offright, slide, center) Disappointing… 
+
+[fade from black]
+
+(Thoth|Thoth) Perhaps you are not who I perceived you to be.
 
 (PCPG) ?!
 
@@ -1388,7 +1391,7 @@ The guilt begins to pile up in my head. How could I let this happen? Not only wa
 To feel ashamed is an understatement. Even being in this room feels wrong. I can’t call myself a Rowdy anymore, not after what happened today. Even showing my face around Munchy feels like a goddamn violation of the faith he had in me. It’s all so goddamn tiresome. Goodbye, Rowdy Roughhouse. I didn’t know you for long, but it was fun while it lasted.
 
 (PCPG) !renounce
-
+[fade to black]
 [BAD END]
 [credits]
 *
@@ -1417,11 +1420,12 @@ With controller in hand, I manage to toughen my way through the signals that my 
 [Song: PCPDating_Holy]
 
 [Location: black]
-[fade from black]
 
 …
 
 (Thoth|Thoth, offright, slide, center) Hahaha, it really is you after all, my son.
+
+[fade from black]
 
 (PCPG) Wait... What’s happening? Who are you?
 
@@ -1649,7 +1653,7 @@ Ben plows through the dirt covering up Munchy’s intel with ease, taking it all
 
 (Munchy|Munchy, special, crossing, angryMIN) Whoa, hey now, cool it with the anti-Rowdy remarks.
 
-Munchy starts tunneling like his life depended on it. My guess is that he got a good look at where Ben’s intel was located thanks to the split screen view. After a long while, he digs his way up, only to meet face to face with ben. The gunfire rings through the speakers once again.
+Munchy starts tunneling like his life depended on it. My guess is that he got a good look at where Ben’s intel was located thanks to the split screen view. After a long while, he digs his way up, only to meet face to face with Ben. The gunfire rings through the speakers once again.
 
 (Ben|Ben, casual, exasp, shockedMAX) FUCK!
 
@@ -1662,7 +1666,7 @@ Munchy takes Ben’s intel all the way back through the tunnel and into his base
 (Ben|Ben, casual, base, neutral|cloud)
 Ben takes out his vape and blows another huge cloud of smog all over the room! It piles up near the ceiling, conveniently covering up the top half of the split screen view. Munchy can’t see a thing!
 
-(Munchy|Munchy, special, suatting, angryMAX) Ben, what the FUCK.
+(Munchy|Munchy, special, squatting, angryMAX) Ben, what the FUCK.
 
 (Ben|Ben, casual, point, happyMAX|cloud) Chill out man, I’m just taking the edge off.
 
