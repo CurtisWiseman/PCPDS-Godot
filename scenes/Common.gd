@@ -17,8 +17,8 @@ func _ready():
 # Where all non-script processing of a scene takes place.
 func scene(lineText, index, dialogueNode):
 	# Use the index to match what line to make something happen on.
-	match(index):
-		26:	# Take User Input
+	if index < 100:
+		if lineText.find("Well, nice to meet you Gibbon. I’m") > -1:
 			game.blockInput = true
 			global.pause_input = true
 			global.dialogueBox.waiting_for_player_name = true
@@ -43,10 +43,11 @@ func scene(lineText, index, dialogueNode):
 			dialogueNode.emit_signal('empty_line')
 			systems.canvas.remove_child(input)
 		
-		30: # Read the player name
+		elif lineText.find("[If the player inputs") > -1:
 			if global.playerName.to_lower().replace(" ", "").find('bradgarlinghouse') == -1 :
-				dialogueNode.index = 43
-	
+				for i in range(index, index+300):
+					if dialogueNode.dialogue[i].find("[placeholder]") > -1:
+						dialogueNode.index = i
 	return true
 
 
