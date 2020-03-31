@@ -15,7 +15,7 @@ The classes in this school may be exhausting, but they are definitely way more i
 [Location: hallway2.dream]
 [Song: PCPDating_Tension]
 
-(PCPG) Huh…? What the fuck?
+(PCPG) Huh...? What the fuck?
 
 I’m... in the university? But it seems... different. Something is clearly wrong here.
 
@@ -23,7 +23,7 @@ I’m... in the university? But it seems... different. Something is clearly wron
 
 (PCPG) Mage! Where are we? And how did we get here?
 
-(Mage|Mage, campus, 3, confusedMIN) We’re in your dream silly! Or maybe we’re in my dream… I don’t exactly remember how this all works, but I think it’s a mix!
+(Mage|Mage, campus, 3, confusedMIN) We’re in your dream silly! Or maybe we’re in my dream... I don’t exactly remember how this all works, but I think it’s a mix!
 
 (PCPG) Are you inceptioning me!?
 
@@ -45,7 +45,7 @@ I’m... in the university? But it seems... different. Something is clearly wron
 
 (Mage|Mage, campus, 4, happyMIN) I have an old friend who lives here, I’m sure that she can help us! Come with me!
 
-We start running down the hallway until it just… ends?
+We start running down the hallway until it just... ends?
 [Location: dreamforest]
 
 Ok, this is most definitely not the real university. The professors all hate nature for different reasons, and would never let a forest grow wild on campus.
@@ -93,7 +93,7 @@ Oh, good. It really was only a dream. I guess my mind had a lot of things to wor
  
 This wacky university is like a world I never knew I wanted. A weird amalgam of unique personalities that have found a place where they belong.
 
-It's like a… it really is like a dream come true.
+It's like a... it really is like a dream come true.
 
 [fade to black]
 [StopMusic]
@@ -118,9 +118,9 @@ Oh, Mage is already waiting for me.
 
 (PCPG) I do not think so.
 
-(Mage|Mage, campus, 3, happyMED) Of course… Anyway, I’m glad you’re here! Did you bring your dream diary?
+(Mage|Mage, campus, 3, happyMED) Of course... Anyway, I’m glad you’re here! Did you bring your dream diary?
 
-(PCPG) Yes, but it’s pretty empty… I… I just started it yesterday.
+(PCPG) Yes, but it’s pretty empty... I... I just started it yesterday.
 
 (Mage|Mage, campus, 4, happyMAX) Just because I asked you to bring one?
 
@@ -356,7 +356,7 @@ I catch how Mage looks longingly to the comic book store.
 
 (Mage|Mage, campus, 5, confusedMED) Actually, I go to this store a lot, just to look inside. They have a whole board of Pokémon Plushies! I always wanted one, they didn’t have those back in Lithuania.
 
-(PCPG) So… why don’t you go inside then?
+(PCPG) So... why don’t you go inside then?
 
 Mage turns to me, with fear in her eyes.
 
@@ -376,7 +376,7 @@ Hmm...
 
 (PCPG) What if I go in there first, looking for comics or something, and then you can come in a moment later and pretend that we wanted to meet there?! That way you don’t have to feel weird!
 
-(Mage|Mage, campus, 5, shockMIN) Guess we can try that…
+(Mage|Mage, campus, 5, shockMIN) Guess we can try that...
 
 (PCPG) Okay, see you in a few minutes!
 
@@ -404,7 +404,7 @@ She studies the Pokemon shelf, undecided.
 
 (Mage, campus, 1, sadMIN)
 
-(PCPG) They kinda look like they belong together! How about …
+(PCPG) They kinda look like they belong together! How about ...
 
 (PCPG) How about we each get one, and exchange them from time to time?
 
@@ -422,7 +422,7 @@ A pink haired girl bumps into me.
 
 (Adelram|???, body, face 2) Do I look like a girl to you?
 
-(PCPG) Ehm… honestly-
+(PCPG) Ehm... honestly-
 
 (Mage|Mage, campus, 3, happyMIN) Of course not, you look like a handsome demon boy to me!
 
@@ -480,9 +480,9 @@ We follow the instructions.
 
 (Mage|Mage, campus, 3, happyMED) Yeah, why not? I think she’s cute!
 
-No you are… 
+No you are... 
 
-(PCPG) …fair
+(PCPG) ...fair
 
 Where did that stray thought even come from? After scanning everything again, we grab our stuff and head out into the warm evening.
 
@@ -500,7 +500,7 @@ Where did that stray thought even come from? After scanning everything again, we
 
 [Song: PCPDating_GameOver]
 
-(Endless War) Hey … don’t be afraid … you might be dead … slurp it down …
+(Endless War) Hey ... don’t be afraid ... you might be dead ... slurp it down ...
 
 [Location: 7eleven.nightmare]
 
@@ -508,13 +508,13 @@ Where did that stray thought even come from? After scanning everything again, we
 
 (Munchy|Professor Tinyhats, casual, squatting, angryMAX) HAVE YOU SEEN DAN SOFTTOILETSEATS ANYWHERE? I HAVE TO TELL HIM...
 
-(Munchy|Professor Tinyhats, casual, squatting, happyMAX) … THAT I STOLE HIS DAD!
+(Munchy|Professor Tinyhats, casual, squatting, happyMAX) ... THAT I STOLE HIS DAD!
 
 [Munchy leaves]
 
 [Location: mageforest.nightmare]
 
-(PCPG) How… how did I get here?
+(PCPG) How... how did I get here?
 
 (Lethal, silouette) Hehehehehehe ...
 
@@ -541,9 +541,9 @@ The creature that reminds me of Mage laughs again, it sends shivers down my spin
 
 She comes closer 
 
-and…
+and...
 
-No…!
+No...!
 
 [Location: mageforest.nightmare, overlay.bloodsplatter]
 [Lethal leaves]
@@ -593,7 +593,7 @@ I yawn myself back to sleep.
 
 My heart makes a little jump. 
 
-(PCPG) Sooo… would you like it if I came with you?
+(PCPG) Sooo... would you like it if I came with you?
 (Mage, campus, 1, smittenMED)
 
 Mage looks relieved.
@@ -620,11 +620,11 @@ The girl in the front grins.
 
 Wait! The - their colour! they are all clothed in the same shade of blue!
 
-(PCPG) Are… are these guys the Blue Barbarians!?
+(PCPG) Are... are these guys the Blue Barbarians!?
 
 (Indigo Interlopers|???) What? Who? Are you stupid or what? Do we look blue to you?
 
-(PCPG) Ehm… yeah!
+(PCPG) Ehm... yeah!
 
 (Indigo Interlopers|???) We are obviously Indigo, dickhead! We are the Indigo Interlopers!
 
@@ -871,7 +871,7 @@ We walk outside the hall, down the terrace into the garden.
 
 (Mage|Mage, casual, 4, happyMIN) You really are a great friend, PCPG.
 
-(Lethal|???) Ughh… you guys are so cheesy.
+(Lethal|???) Ughh... you guys are so cheesy.
 
 (Mage|Mage, casual, 4, happyMED) Come on Lethal. Just let us have this moment.
 
@@ -929,11 +929,11 @@ Mage steps forward.
 
 (Lethal|Lethal, 4, happyMAX) huahuauhhauahuhuhuhhuaahahaha!
 
-(Lethal|Lethal, 5, crazyMIN) Finally… Finally free! 
+(Lethal|Lethal, 5, crazyMIN) Finally... Finally free! 
 
 (Lethal|Lethal, 2, smugMIN) Now it’s my time to shine!
 
-She looks so different… but this is clearly still Mage. Only, I smell a thick and heavy fragrance of violets, making it hard to breathe.
+She looks so different... but this is clearly still Mage. Only, I smell a thick and heavy fragrance of violets, making it hard to breathe.
 
 (Lethal|Lethal, 4, happyMIN) Just a superior version of Mage! Created out of her hearts deepest desires.
 (Lethal|Lethal, 4, happyMIN) Unrestrained by her stupid insecurities and hang-ups!
@@ -945,7 +945,7 @@ She looks so different… but this is clearly still Mage. Only, I smell a thick 
 (Interlopers) Everyone, get ready for battle!
 
 
-(Lethal|Lethal, 4, crazyMIN) Hehe… Hehehe! Your answer was… wrong!
+(Lethal|Lethal, 4, crazyMIN) Hehe... Hehehe! Your answer was... wrong!
 (Lethal|Lethal, 4, crazyMIN) I would have liked to play with you for a while, but you already started annoying me when I had to listen to your stupid, petty drama you had with Mage!
 
 One of the Indigo interlopers tries to say something, but Lethal cuts him off
@@ -982,7 +982,7 @@ RadProm day has come! I’ve never been to any proms in my old life, mainly beca
 
 (PCPG) I’m supposed to meet with Mage, but I haven’t seen her yet.
 
-(Gibbon|Gib, casual, press, angryMIN) Oh, Mage... Have you seen her lately? She seems… different.
+(Gibbon|Gib, casual, press, angryMIN) Oh, Mage... Have you seen her lately? She seems... different.
 
 (PCPG) Are you talking about her fashion change?
 
@@ -1020,7 +1020,7 @@ Excited I turn around.
 
 (Lethal) Aww, you think so? What am I saying, of course you think so. You can't let your eyes off me since I took this new form.
 
-(PCPG) Well… can you blame me?
+(PCPG) Well... can you blame me?
 
 (Lethal) Of course I can’t. I would have chosen any other appearance if I wanted another reaction.
 
@@ -1046,7 +1046,7 @@ I don’t really get her reasoning, but I guess that’s a no.
 
 (PCPG) What do you want to do about it?
 
-(Lethal|Lethal, 3, smugMIN) Punish them, hehehehehe! Remind them how powerless they truly are, kill their ego… and not only that.
+(Lethal|Lethal, 3, smugMIN) Punish them, hehehehehe! Remind them how powerless they truly are, kill their ego... and not only that.
 
 (PCPG) Hehe hell yeah!
 
@@ -1063,7 +1063,7 @@ Leaving the festive hall, Mage clings to my arm. She is very close, her skin fee
 [Song: PCPDating_PurpleForest]
 [Location: radprom3]
 
-I can’t hold it in any longer. Mage is acting weird lately, and my guess is that she is trying to send signals. This romantic night might be the best chance I’ll get… to ask her what might become of us.
+I can’t hold it in any longer. Mage is acting weird lately, and my guess is that she is trying to send signals. This romantic night might be the best chance I’ll get... to ask her what might become of us.
 
 (PCPG) Mage, I wanted to ask you something...
 
@@ -1103,7 +1103,7 @@ I’m feeling dizzy. Lethal steps closer. The scent of violets is overwhelming.
 [Scene: Revival]
 [Song: PCPDating_BotBustah]
 
-Huh…?
+Huh...?
 
 Where am I? How did I get here?
 
@@ -1116,11 +1116,11 @@ Hehehehehe!
 
 (PCPG) What do you mean?
 
-I’m confused… but my memories are slowly coming back… Mage… I made a mistake…
+I’m confused... but my memories are slowly coming back... Mage... I made a mistake...
 
 (Endless War|Endless War, stand, smittenMED) I told you, you fucking idiot. You need a weapon to defend yourself in this merciless city! And to !equip a weapon, what do you have to do first?
 
-(PCPG) Eh… e-enlist?
+(PCPG) Eh... e-enlist?
 
 (Endless War|Endless War, knife, angryMIN|blushMED) Not e-enlist?, say !enlist, baka! Don’t you know how commands work?
 

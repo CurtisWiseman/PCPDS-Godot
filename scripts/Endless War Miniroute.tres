@@ -256,11 +256,11 @@ And with that we make our way out of the classroom. Never a dull moment with End
 
 (PCPG) Maybe we could, oh I don’t know, grab a coffee together or something?
 
-(EndlessWar|Endless War, stand, confusedMIN) …
+(EndlessWar|Endless War, stand, confusedMIN) ...
 
 (EndlessWar|Endless War, stand, confusedMED) Are you.. trying to hit on me?
 
-(PCPG) Uhh…
+(PCPG) Uhh...
 
 I mean, I wasn’t considering it at first, but now I definitely am. Endless War [i]is[/i] quite attractive.
 
@@ -339,7 +339,7 @@ The air crackles with energy as both girls stare each other down. I better stop 
 
 (EndlessWar|Endless War, stand, happyMED) Ooh, I like that as a compromise. How about it, [i]vice president Mage[/i]?
 
-(Mage, campus, 5, angryMIN) …
+(Mage, campus, 5, angryMIN) ...
 
 (Mage, campus, 4, neutral) Fine, but this is not looking good for you with the student council election so close now.
 
@@ -390,7 +390,7 @@ I decide to strike up a conversation to occupy us as we head on the next class o
 
 (PCPG) Not to say you couldn’t have just been stricken with inspiration out of the blue, but it all seems pretty elaborate for that to be the case.
 
-(EndlessWar|Endless War, cross, sadMIN) It’s…
+(EndlessWar|Endless War, cross, sadMIN) It’s...
 
 Endless War pauses for a moment. I didn’t expect her to consider my question so seriously, so this deliberation catches me off guard.
 
@@ -874,7 +874,7 @@ Ben and Munchy alongside their gangs promptly chase after Davoo. Endless War the
 [SLIDE EndlessWar center]
 (EndlessWar|Endless War, knife, angryMIN) So after everything we did together, you decide now is when you’ll try and stop me?
 
-(PCPG) …
+(PCPG) ...
 
 (EndlessWar|Endless War, knife, angryMED) You think you’re so smart right now huh? What do you honestly think is going to happen next though? Did you somehow think you could stop my glorious plan?
 
@@ -916,7 +916,7 @@ Suddenly the machine gives in and explodes, knocking us both to the ground.
 (EndlessWar, stand, sadMIN)
 [fade from black]
 
-I open my eyes and find Endless War already up, staring down at the smoking pile of ooze, metal, and electronics. She seems almost… sad. 
+I open my eyes and find Endless War already up, staring down at the smoking pile of ooze, metal, and electronics. She seems almost... sad. 
 
 I try and stand up.
 
