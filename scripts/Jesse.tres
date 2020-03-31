@@ -37,7 +37,8 @@ I honestly can’t even tell where the jokes begin and the real shit ends anymor
 [fade from black]
 Turns out getting here late worked in our favor; everyone’s in class, so the hallways are clear.
 (Jesse, special, 3, neutral, offright, slide, center)
-(PCPG) Alright Jesse, here’s the plan. I’ll go to class so they don’t suspect me of anything. You grab as much food as you can carry, then bolt it outta here the same way we came in. Got it?
+(PCPG) Alright Jesse, here’s the plan. I’ll go to class so they don’t suspect me of anything. You grab as much food as you can carry, then bolt it outta here the same way we came in. 
+(PCPG) Got it?
 (Jesse, special, 5, confusedMIN) Got what?
 (Jesse, special, 2, happyMIN|blush) Nah I’m just messin’ with ya. Go ahead, before your teacher and classmates start worrying. I’m gonna grab me some chicken n’ tea, then absorb some of the Zoomer energy emanating from this wretched establishment, so I can get out the door faster than The Flash wearing Sonic’s speed shoes.
 [SLIDE Jesse offleft]
@@ -84,10 +85,11 @@ Two days later...
 [Location: philosophyclass.b]
 [Song: PCPDating_ClassPhilosophy]
 [fade from black]
-(Nate|Professor Bestman, campus, pointing, happyMIN|shades, fade, right-100) ...and that’s why the only way to achieve long-term happiness is by setting yourself goals and working towards them every day. Be the chads you wanna see! Any questions? Colt Corona?
+(Nate|Professor Bestman, campus, pointing, happyMIN|shades, fade, right-100) ...and that’s why the only way to achieve long-term happiness is by setting yourself goals and working towards them every day. Be the chads you wanna see! Any questions? 
+(Nate|Professor Bestman) Colt Corona?
 (Colt Corona|Colt Corona, cani, angryMIN, fade, left+50) Mr Bestman I dont wanna set goals they make me feel poopy for not doing them /n
-Its a genetic thing for reverse centaurs dontcha know I cant help it/n
-Youre not being very inclusive to folks who are equinally challenged
+Its a genetic thing for reverse centaurs dontcha know I cant help it
+(Colt Corona) Youre not being very inclusive to folks who are equinally challenged
 (Nate|Professor Bestman, campus, papers, shockMIN|shades) Colt, we’ve been over this. There’s nothing wrong with you, you have a human brain inside that stallion’s head of yours. You can achieve great things just like anyone else!
 (Colt Corona|Colt Corona, thisvideo, angryMIN) But Im retaaaaaaaaardeeeeeeeed
 (Nate|Professor Bestman, campus, standing, angryMIN|shades) Oh that’s no excuse, some of the most influential minds in history were considered retarded by their peers. All they had to do was believe in themselves and use their talents to the fullest. What’s your special talent, my little horseboy?
@@ -394,7 +396,8 @@ I find myself turning beet red - he wants me to take charge?
 (PCPG) Um, well, uh, V... m-maybe it’s just that this school, you know, isn’t on the map because it’s, uh, so underground! B-but anyways, it’s on Newgle Maps...
 (V|V, 3, shock) Ugh, do you know how much data Newgle collects without your permission? They probably know where you live, what you had for breakfast this morning and the last time you called your mother.
 (V|V, 1, neutral) Anyway, the whole reason I came in here is because I need help fitting in with the other students. I don’t want to draw too much attention for being foreign and weird. Can you help me with that or not?
-I turn a yet brighter shade of crimson as I try to think of a witty retort like Jesse would - no, I need to be thinking about how I would do things, not him... gah, why is this so hard?
+I turn a yet brighter shade of crimson as I try to think of a witty retort like Jesse would - no, I need to be thinking about how I would do things, not him... 
+gah, why is this so hard?
 (Jesse, campus, 3, happyMIN)
 As if he were reading my thoughts - or more likely, reading my tomato-cheeked expression - Jesse gently places his hand on my shoulder. It’s warm... and comforting. I breathe deep and my anxiety and fear disappear.
 (PCPG) Okay, well, I think what you need to do is stop focusing on what other people think of you. Hmm. Uh, in this school, you’ll find, you’re never gonna be the weirdest one in the room. Everyone’s different and nobody cares. If you try too hard to fit in, that’s what’ll make you stand out!
@@ -536,7 +539,8 @@ Before I can chime in with my own thoughts, we’re greeted by an all-too-famili
 What a shitty disguise. Does he really think it’s enough to fool anyone? He didn’t even change his jacket.
 (PCPG) Okay... well, what’s on your mind, Mr. Horn? Oh, and please take a seat.
 (Ben|Phantom Horn, campus, base, neutral|horn) Please, Mr. Horn was my father. Wait no he wasn’t, he was Gold Standard, shit! Either way, call me Phantom.
-“Phantom” dramatically flops onto the therapist couch that’s been here the whole time but I never really noticed until now. One arm draped daintily over his forehead, he continues:
+“Phantom” dramatically flops onto the therapist couch that’s been here the whole time but I never really noticed until now. 
+One arm draped daintily over his forehead, he continues:
 (Ben|Phantom Horn, campus, slouch, sadMIN|horn) My troubles begin and end with a certain sect of the population, specifically the younger generation of today. I’m talkin’ ZOOMERS!
 No sooner had Jesse settled into the plush back of his chair than he pricked back up again, awakened from his drowse by Phantom’s diatribe.
 (Ben|Phantom Horn, campus, exasp, angryMAX|horn) These fuckin’ Gen-Z nerds are always taking life way too fast, they never slow down and think about what they’re doing. Makes life hard for us millennials, those of us who actually respect other people’s human rights and personal space! It really sours my patch, kid. I feel like I’m being incoherent. Am I making sense to you?
@@ -624,7 +628,8 @@ Thankfully, Jesse’s house wasn’t far.
 (PCPG) I hate to be a bother, but do you have a towel I can use?
 (Jesse, campus, 5, shockMIN) Oh! Of course. Lemme go grab you one.
 [Jesse leaves]
-I take a moment to survey the clinic, taking a proper look at it despite the dim lighting. It’s small and a little cluttered, but still far better than the alleyway he was living in before. The shelves are adorned with anime figures, and the walls are all covered with some form of poster or another. How much of this was left over from Digi’s secretary, I wonder?
+I take a moment to survey the clinic, taking a proper look at it despite the dim lighting. It’s small and a little cluttered, but still far better than the alleyway he was living in before. The shelves are adorned with anime figures, and the walls are all covered with some form of poster or another. 
+How much of this was left over from Digi’s secretary, I wonder?
 (Jesse) Hey buddy, can you turn on the space heater? It’s behind the couch, by the raven. Mind your step, it’s leaky!
 “Leaky”? Does he mean the heater, the couch, or the raven...?
 (PCPG) Oh, uh, sure.

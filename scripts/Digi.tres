@@ -323,7 +323,7 @@ Will it affect my autism score?
 
 He raises his own can and toasts me.
 
-(PCPG) alright then
+(PCPG) Alright then...
 
 [Choice]
 
@@ -338,7 +338,7 @@ It simply flows down your throat without being watery or boring.
 It just tastes like beer,/n
 damn good beer. 
 
-(Digi|Professor Digibro, Casual, 2, ShockMIN) So, whatcha think
+(Digi|Professor Digibro, Casual, 2, ShockMIN) So, whatcha think?
 
 (PCPG) I can only imagine how dangerous this stuff is in combination with a couch and something to watch.
 
@@ -354,7 +354,7 @@ He throws me another can.
 He seems like the kind of guy who would appreciate some snobby pretentious bullshit,/n
 so let's give it to him. 
 
-(Digi|Professor Digibro, Casual, 2, ShockMIN) so, whatcha think.
+(Digi|Professor Digibro, Casual, 2, ShockMIN) So, whatcha think?
 
 (PCPG) It's okay I guess, but the flavor profile could really be more interesting.
 
@@ -364,16 +364,16 @@ so let's give it to him.
 
 Digi shoots me a look that every child could interpret as "oh, you're one of those people." 
 
-(Digi|Professor Digibro, Casual, 5, AngryMED) Sadly, I'm out of arrogant Bastards 
+(Digi|Professor Digibro, Casual, 5, AngryMED) Sadly, I'm out of arrogant Bastards.
 
 He pulls out another can and cracks it open in a practiced motion. 
 
-(Digi|Professor Digibro, Casual, 5, Neutral) Well, this is the last can anyways
+(Digi|Professor Digibro, Casual, 5, Neutral) Well, this is the last can anyways.
 *
 
 (PCPG) How many of these have you had?
 
-(Digi|Professor Digibro, Casual, 5, ConfusedMIN) About half a case
+(Digi|Professor Digibro, Casual, 5, ConfusedMIN) About half a case...
 
 He shrugs.
 
@@ -428,8 +428,8 @@ at their home?
 
 (Cider) It’s the place where you wake up in the morning with little recollection of the previous days./n
 And I for one like having some ale nearby in those instances.
-
-Before I can properly respond to the strangely inspirational musings of an alcoholic bartender, there’s a crash outside.
+[SFX: PCP-SFX_Gunshot]
+Before I can properly respond to the strangely inspirational musings of an alcoholic bartender, there’s a gunshot outside.
 
 (Cider) Ay, first one of the day and it’s...
 
@@ -440,9 +440,9 @@ He looks at his watch.
 (PCPG) Shouldn’t we check if they’re alright?
 
 (Cider) Would’ve come in here covered in blood already if they survived./n
-The road outside here is a deathtrap.
+The street outside here is a deathtrap.
 
-I look over to Digi to get some hits as to whether that was a joke or not.
+I look over to Digi to get some hint as to whether that was a joke or not.
 
 (Digi|Professor Digibro, Casual, 1, SadMIN) You can check on the corpse if you want to, but it’s gonna sour your buzz.
 
@@ -474,19 +474,18 @@ Digi retrieves the laptop from his bag and stats typing again.
 (PCPG) And why exactly are you writing a light novel?/n
 Don’t get me wrong, it’s cool and all, but most of these things kind of suck.
 
-(Digi|Professor Digibro, Casual, 5, ShockMIN) Most/n
-yeah, sure.
+(Digi|Professor Digibro, Casual, 5, ShockMIN) Most, yeah, sure.
 
 (Digi|Professor Digibro, Casual, 1, AngryMED) But that’s not a problem with the format./n
 It’s a problem with lazy uninspired hacks.
 
 (Digi|Professor Digibro, Casual, 1, AngryMED) So the same as with all things.
 
-(Digi|Professor Digibro, Casual, 1, Neutral) The point is mainly to prove that I can write fiction that is at least palatable 
+(Digi|Professor Digibro, Casual, 1, Neutral) The point is mainly to prove that I can write fiction that is at least palatable,
 
 (Digi|Professor Digibro, Casual, 1, Neutral) along with the standard self-indulgence which lies at the core of all writing.
 
-(PCPG) Okay, I get that/n
+(PCPG) Okay, I get that./n
 But why does it have to be in a day?
 
 (PCPG) That does sound kind of hacky.
@@ -550,6 +549,8 @@ Digi seems like he’s also still too drunk to properly process anything. Instea
 
 I look over at his screen, the word document is empty.
 
+(Digi|Professor Digibro, Casual, 1, ShockMED) I was passed out on the backspace key...
+
 (PCPG) Have you tried reversing your last changes?
 
 (Digi|Professor Digibro, Casual, 2, ShockMAX) That only works a certain number of times.
@@ -605,8 +606,8 @@ We lean over the edge...
 [StopMusic]
 [Digi leaves]
 [Song: PCPDating_GameOver]
-
-... And fall. 
+[Location: black, overlay.bloodsplatter|3]
+... and fall. 
 
 With his long fluffy coat, he looks like he could just glide away into the sunrise if he wanted to,/n
 but instead it just makes a flapping noise as we accelerate toward the ground. 
@@ -617,13 +618,11 @@ I can’t remember.
 I’m still fucking wasted.
 
 [SFX: PCP-SFX_FallDamage]
-[Overlay: bloodsplatter]
+[fade from black]
 [StopMusic]
-[Remove Overlay]
+
 
 ~Lovers suicide end~
-
-[fade from black]
 
 [ENDING]
 *
@@ -652,7 +651,7 @@ I’m still fucking wasted.
 (Digi|Professor Digibro, Casual, 2, HappyMIN) I’ve been dragging my friends there for years, but it really is that good.
 
 (Digi|Professor Digibro, Casual, 2, HappyMIN) 10/10 on my list of the best restaurants in America./n
-I’ve been to a shitton.
+I’ve been to a shit-ton.
 
 (Digi|Professor Digibro, Casual, 2, HappyMIN) You will cry.
 
@@ -672,7 +671,7 @@ I’ve been to a shitton.
 
 We’re served lavish portions of meats and veggies by a waitress who seems used to late night visits by drunk students and Digi in particular.
 
-(Digi|Professor Digibro, Casual, 3, HappyMED) So, how do you like it.
+(Digi|Professor Digibro, Casual, 3, HappyMED) So, how do you like it?
 
 (PCPG) It’s...
 
@@ -683,7 +682,7 @@ I wonder if the professor’s alone in his unfaltering adoration for the food he
 
 (PCPG) It’s the best meal I have ever had in my life.
 
-(PCPG) Admittedly, I’ve mostly had cup ramen and my own shitty attempts at poor boy cooking, but Wow this must be what drugs feel like./n
+(PCPG) Admittedly, I’ve mostly had cup ramen and my own shitty attempts at poor boy cooking, but [i]wow[i/] this must be what drugs feel like./n
 I think I can die now.
 
 (Digi|Professor Digibro, Casual, 5, SmittenMAX) “What drugs feel like”?/n
@@ -746,17 +745,17 @@ I've got to get that phone away from him by pretending to
 
 *Save him from social media*
 
-In a motion so lacking in terms of swiftness, that only someone similarly drunk could fail to react to it, I snatch the phone out of his hand
+In a motion so lacking in terms of swiftness, that only someone similarly drunk could fail to react to it, I snatch the phone out of his hand...
 
-And break it in half.
+... and break it in half.
 
 (Digi|Digi, Casual, 1, ShockMED) The fuck’s wrong with you, I have notes on that thing!
 
-(PCPG) You also have shittons of notebooks, so I’m sure you won’t run out of ideas.
+(PCPG) You also have shit-tons of notebooks, so I’m sure you won’t run out of ideas.
 
 (PCPG) Don’t you see that all of this vapid fucking about on platforms designed to waste your time can never properly substitute human connections and will only keep you from achieving your true potential?
 
-(Digi|Digi, Casual, 1, AngryMIN) I don’t even use it that much, and can we not look over the fact that you just destroyed my phone?
+(Digi|Digi, Casual, 1, AngryMIN) I don’t even use it that much! And can we not overlook the fact that you just destroyed my fucking phone?
 
 (PCPG) It was for the greater good.
 *
@@ -795,18 +794,20 @@ I throw his phone out of the window.
 
 (PCPG) “Hey, that’s the contrarian asshole who made like five billion videos incessantly shitting on the asterisk war.”
 
-(Digi|Digi, Casual, 2, ConfusedMIN) I didn’t hear any yelling
+(Digi|Digi, Casual, 2, ConfusedMIN) I didn’t hear any yelling-
 
-(PCPG) Well, maybe he didn’t “yell” exactly, but he seemed intense is what I’m getting at.
+(PCPG) Well, maybe he didn’t “yell” exactly, but he seemed intense is what I’m getting at!
 
 (PCPG) He probably got spooked when I saw him and warned you, so he just stole your phone and ran.
 
 (Digi|Digi, Casual, 3, AngryMAX) Some fuck with a katana stole my phone?/n
-This better not be used in the new batch of Digibro-exposed videos.
+This better not be used in the new batch of "Digibro Exposed!" videos.
 *
 
-(Digi|Digi, Casual, 2, Neutral) Anyways, we should probably head to PCPU./n
-The sun is rising. 
+(Digi|Digi, Casual, 2, sadMED) Well that sucks. Gonna leave a phone-sized dent in the Digi coffers.
+
+(Digi|Digi, Casual, 2, Neutral) Anyways, besides all that, we should probably head back to PCPU./n
+The sun is rising.
 
 (PCPG) Sounds reasonable.
 
@@ -823,7 +824,7 @@ The sun is rising.
 (Ben|Professor Saint, campus, base, neutral)
 [fade from black]
 
-(Ben|Professor Saint, campus, base, neutral) ...and of course, corporate funded science has nothing better to do than indulge the vanity of capital, even when there are multiple global crisis to be averted. 
+(Ben|Professor Saint, campus, base, neutral) ...and of course, corporate funded science has nothing better to do than indulge the vanity of capital, even when there are multiple global crises to be averted. 
 
 So, we’ve got this shit.
 
@@ -854,7 +855,7 @@ Being in a gang and such.
 (Ben|Professor Saint, campus, base, happyMIN) Well gee, if you say so, I guess I will humbly accept the compliment./n
 I have been described as “radical”.
 
-(PCPG) Then you wouldn’t happen to know where one can get premium psychedelic herbs around these parts.
+(PCPG) Then, you wouldn’t happen to know where one can get premium psychedelic herbs around these parts?
 
 (PCPG) You know, stuff whose quality has been avowed by connoisseurs.
 
@@ -877,20 +878,18 @@ Anyways, thanks.
 Ha, that was easy./n
 I can handle a transaction involving illicit substances! 
 
-[Ben leaves]
-
 Digi will be heads over heels for me if I get him the best weed in town./n
+
 PCPG, you did it again!
 
 [fade to black]
+[Ben leaves]
 [StopMusic]
 [Location: musicclass, musicclass.foreground]
 [Song: PCPDating_ClassJapanese]
 (Digi|Digi, Campus, 3, HappyMED)
 (Nate|Professor Bestman, Campus, Pointing, HappyMAX|shades, left)
 [fade from black]
-
-(Digi|Digi, Campus, 3, HappyMED)
 
 (Nate|Professor Bestman, Campus, Pointing, HappyMAX|shades) You did it, you absolute madman!/n
 You showed that little bitch Masamune how it’s done.
@@ -909,7 +908,7 @@ Why is he so intent on getting his pathetic light novel author dick into the wor
 
 (Nate|Professor Bestman, Campus, Smoking, ConfusedMAX|shades) She’s not even that hot.
 
-(Nate|Professor Bestman, Campus, Smoking, AngryMED|shades) His piece of shit not-blood-related-I-swear-you-guys-Imouto is distracting him from the far superior option of dating Elf, an actually functioning human being 
+(Nate|Professor Bestman, Campus, Smoking, AngryMED|shades) His piece of shit not-blood-related-I-swear-you-guys-imouto is distracting him from the far superior option of dating Elf, an actually functioning human being,
 
 (Nate|Professor Bestman, Campus, Smoking, AngryMED|shades) and leaving Sagiri to fend for herself.
 
@@ -974,7 +973,7 @@ It’s not that cold...
 (PCPG) The- the coat?/n
 Are you sure?
 
-(Digi|Digi, Casual, 2, HappyMED) yeah, as I said, I’m fine.
+(Digi|Digi, Casual, 2, HappyMED) Yeah, like I said, I’m fine.
 
 (PCPG) And why the fuck do you carry multiple coats?
 
@@ -1115,7 +1114,7 @@ Wait, did she just call it “faggy”?
 *Admit to being a furry*
 
 (PCPG) Hell yeah I’m a furry, a chosen hero of the anthropologically inclined and I wear it with pride./n
-What do you say now, huh?.
+What do you say now, huh?
 
 (Michelle|Michelle, body3, face2) Disgraceful, you clearly haven’t been bullied enough./n
 I might have to throw up.
@@ -1138,7 +1137,7 @@ Do you want to spend a night in the locker again?
 (PCPG) It’s PCPG.
 
 (Michelle|Michelle, body3, face2) May, put that on the list for when we cleanse the world of furfag scum./n
-I’ve got to pee now
+I’ve got to pee now!
 
 [SLIDE, May, offright]
 
@@ -1217,9 +1216,9 @@ I high poor n****, bitches, so now answer me...
 (PCPG) What? No N-bombs?
 
 (Digi|Digi, Casual, 1, ConfusedMED) Not with lines this atrocious./n
-I was kind of assuming you had at least heard rap-music at some point in your life.
+I was kind of assuming you had at least heard rap music at some point in your life.
 
-(PCPG) I’ve listened to Drake
+(PCPG) I’ve listened to Drake...
 
 (Digi|Digi, Casual, 1, AngryMED) Drake fucking sucks.
 
@@ -1241,22 +1240,19 @@ You’re right.
 
 (Michelle|Michelle, body2, face4) But call May, or you won’t get away so easily next time.
 
-
 [SLIDE, Michelle, offright]
-
 [SLIDE, Kazee, offright]
+[SLIDE, May, offright]
 
-[Michelle leaves]
-
-[Kazee leaves]
-
-[May leaves]
 [StopMusic]
 
 After some more teasing regarding my majority-of-the-annual-anitube-rap-cypher-tier performance by the white Kanye West, we both return home.
 
 [fade to black]
 
+[Michelle leaves]
+[Kazee leaves]
+[May leaves]
 [Digi leaves]
 *
 
