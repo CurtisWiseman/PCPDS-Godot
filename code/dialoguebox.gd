@@ -1192,6 +1192,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	var ben_point = false
 	var ben_cloud = false
 	var ben_horn = false
+	var tom_mask = false
 	var AFL = ''
 	var blushNum
 	var num
@@ -1237,6 +1238,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 				ben_cloud = true
 			elif tmp[k] == 'horn':
 				ben_horn = true
+			elif tmp[k] == 'antifa-mask':
+				tom_mask = true
 #		if tmp.size() == 3:
 #			blushNum = int(parse_expnum(info[i], parsedInfo)[0]);
 #			blush = true
@@ -1265,7 +1268,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		AFL += '\n\tsystems.display.face(characterImages.ben.afl[0], '+body+', 0, 0, "below")'
 	if ben_horn:
 		AFL += '\n\tsystems.display.face(characterImages.ben.afl[1], '+body+', 0, 0, "horn")'
-		
+	if tom_mask:
+		AFL += '\n\tsystems.display.face(characterImages.tom.pose1.afl[0], '+body+', 0, 0, "antifa-mask")'
 	var useDefault = false
 	if "happy".is_subsequence_of(info[i]):
 		useDefault = true
