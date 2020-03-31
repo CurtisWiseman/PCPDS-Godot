@@ -66,7 +66,7 @@ Professor Digi’s face lights up at the word. Gibbon had told me stories about 
 (Jesse|Dr. Horseshoes, special, 3, happyMED) See, I like you, you understand me already. Now, if you have any relevant data on the students, including but not limited to their mothers’ phone numbers, I’ll take that and be on my way...
 (Digi|Professor Digibro, campus, 3, smittenMAX) Oh no, you aren’t getting away that easily!
 Uh-oh. Did he figure Jesse out? I have to admit, his clothes aren’t half as convincing as his acting. Looks like the jig is up for Donnie Horseshoes...
-(Digi|Professor Digibro, campus, 3, happyMAX) A real-life psychiatrist, who wants to study MY students’ autism! No way buddy, I’m making sure you stick around as long as possible.
+(Digi|Professor Digibro, campus, 3, happyMAX) A real-life psychologist, who wants to study MY students’ autism! No way buddy, I’m making sure you stick around as long as possible.
 (Digi|Professor Digibro, campus, 2, happyMED) You know, I could pull a few strings, get you a job here. Then you can get data straight from the source! I’m thinking... 
 (Digi|Professor Digibro, campus, 2, happyMED) Ooh! A guidance counsellor! That would be perfect. Students can come to you with their problems and hang-ups, and you can use your Doctorate smarts to help them out, while at the same time taking notes on their situations and lives to further your research!
 (Jesse|Dr. Horseshoes, special, 1, smittenMIN) Well, I wasn’t exactly planning on staying long, I’m just passing through town on my way to, uhh... Sakura Con?
@@ -350,15 +350,17 @@ A gust of wind blows up a storm of leaves, and when it passes she's gone.
 (Jesse, casual, 5, neutral) ...some people defy all explanation. Let’s make like Miss Purple-Pants and leaf. Might as well go the way she told us to. We aren’t finding our own way out, after all...
 [Jesse leaves]
 [Location: nexusofalllife]
-We reach a small clearing landmarked by two out-of-place trees. One is stark white, a contrast against the darkness of what is quickly becoming a dusk-lit scene. The other is gnarled and pitted, and seems to drain the color from the leaves all around its base.
+We reach a small clearing landmarked by two out-of-place trees. One is stark white, a contrast against the dim hues of the surrounding greenery. The other is gnarled and pitted, and seems to drain the color from the leaves all around its base.
 (Jesse, casual, 2, shockMED, fade, right-100) Whoah, this place is crazy... hey it’s like, this is the nexus of all life! The white tree and the cursed tree, the energies of the whole planet course between them. You stand right here in the middle and just let the vibes of mother nature imbue your soul with all five of Captain Planet’s elements...
 (PCPG) You know, this place does feel kinda magical. I wonder how many people know about it?
 (Jesse, casual, 2, shockMED) Probably not a whole lot. This sort of holy ground would only reveal itself to people as cool as us. It’s a Fortress of Solitude hidden in a Batcave and locked behind the Riddler’s most devious puzzles. Oh my god, there’s even a chair with a hole cut in it for when you wanna take a crap in the woods! This place has it all!
-As I watch Jesse saunter over to the rusty-legged plastic chair, I notice how his chiseled face reflects the distant glow of street lamps and lights up the night. Wait, night? Holy shit, how long have we been here?
+As I watch Jesse saunter over to the rusty-legged plastic chair, I notice how his chiseled face reflects the distant glow of street lamps as they activate for the early evening.
+Wait, evening? Holy shit, how long have we been here?
 (PCPG) Aw man, I gotta get going, dude. Got a bunch of homework due tomorrow. I think the exit is just over there, where those street lamps are. So umm, did this day out clear your head? Feeling better?
 (Jesse, casual, 3, happyMED|blush) Hell yeah. Cleared the static in my attic, that’s for sure. I think I’ll chill by these cool trees for a bit longer then head home. You haven’t seen my place yet, have you? I’ll have to show you sometime. Stay safe on the way back to your own place, y’hear?
 (Jesse, casual, 2, shockMAX) OH! Wait, before you go, I have something for you!
-He digs around in his jacket pockets, and pulls out a piece of cloth that looks far too large to fit inside. He holds it up to me with a look of sincere joy on his face. It’s getting hard to see in the dark, but I can see the silhouette of a t-shirt and vaguely make out the lettering on the front, spelling “Gamer’s Tavern”.
+He digs around in his jacket pockets, and pulls out a piece of cloth that looks far too large to fit inside. He holds it up to me with a look of sincere joy on his face.
+As it unfurls into the shape of a t-shirt, I can vaguely make out the poorly-printed lettering on the front, spelling “Gamer’s Tavern”.
 (Jesse, casual, 1, happyMIN|blush) It’s uh, an apology for acting up at the bar. I tend to get a bit... impassioned about things from my childhood, like Evangelion. I think it’s because I had a pretty dang cool childhood and it made me the man I am today, so I want others to benefit from that experience as much as I did. But I also don’t think too much about how it comes off to people who aren’t used to it...
 (PCPG) Calm down Dr. Horseshoes, no need for the psychoanalysis here, haha. It’s alright, I forgive you. Honestly I should be the one apologizing, I left without telling you or making sure you could get home safe. So, sorry dude.
 (Jesse, casual, 5, smittenMIN|blush) I guess we break even on the apologies then, huh? But I still wanna give you this shirt... let’s call it a thank you gift, for taking me here today. And... for sticking by me when I needed it most.
@@ -367,7 +369,8 @@ My heart races. At first I thought he was just thanking me for the day out, but 
 (PCPG) Th-thanks Jesse, um, see you tomorrow at s-school, yeah? Okay bye!
 [fade to black]
 [Jesse leaves]
-I skedaddle right outta there and only look back once... to see a warm smile that melts the frigid air of the night.
+I skedaddle right outta there and only look back once...
+... to see a warm smile that melts the frigid air of the evening.
 [StopMusic]
 [Scene: Out of This World]
 Two weeks later...
@@ -436,17 +439,17 @@ She kicks off from the chair and electric slides straight into the door, not rea
 Friday, 2:16 PM
 [Location: scienceclass]
 [Song: PCPDating_ClassScience]
-(Ben|Professor Saint, campus, base, angryMIN)
+(Ben|Ben, campus, base, angryMIN)
 [fade from black]
-(Ben|Professor Saint, campus, base, angryMIN) Alright class, we’ll be taking a break from our usual timetable. I know you were all dying to learn about the physiological effects of prolonged ketosis and how it has NO relation to kidney stones, but alas I have been told, incorrectly I might add, that the lesson plan wasn’t approved. So I gotta haul all this paperwork up the chain of command.
-(Ben|Professor Saint, campus, point, neutral) So while I do that, you guys are gonna do some chemistry experiments. Split off into pairs, whoever’s sitting next to you will do. There’s bottles of all sorts of shit in the cupboards, mix them up and examine the results. I’ll be back later to check up on you.
+(Ben|Ben, campus, base, angryMIN) Alright class, we’ll be taking a break from our usual timetable. I know you were all dying to learn about the physiological effects of prolonged ketosis and how it has NO relation to kidney stones, but alas I have been told, incorrectly I might add, that the lesson plan wasn’t approved. So I gotta haul all this paperwork up the chain of command.
+(Ben|Ben, campus, point, neutral) So while I do that, you guys are gonna do some chemistry experiments. Split off into pairs, whoever’s sitting next to you will do. There’s bottles of all sorts of shit in the cupboards, mix them up and examine the results. I’ll be back later to check up on you.
 [Ben leaves]
 Professor Saint is already halfway out the door by the time I reply. 
 (PCPG) Wait, professor! Uh, shouldn’t we have a bit more instruction? Like, to make sure we don’t blow up the school or something?
-(Ben|Professor Saint, campus, point, shockMIN, fade, center) Of course not, think about it...
+(Ben|Ben, campus, point, shockMIN, fade, center) Of course not, think about it...
 He scoffs at me, vape pen clenched between his teeth and arms full of a clutter of documents and comic manuscripts.
 [Ben leaves]
-(Ben|Professor Saint) It wouldn’t be an experiment if you were just following a script!
+(Ben|Ben) It wouldn’t be an experiment if you were just following a script!
 [SFX: PCP-SFX_DoorSlam]
 ... and he’s gone. Well, better pair up. Looks like Action Giraffe on my right already has a partner, so that leaves...
 (Davoo, campus, explaining, happyMED, offleft, slide, left) I was born for this! Are you ready?
@@ -476,25 +479,25 @@ I look over at the other table to see if they’re faring any better. Not that I
 I have no idea what they’re talking about.
 [ActionGiraffe leaves]
 [LordofGhosts leaves]
-(Ben|Professor Saint, campus, slouch, angryMIN, offright, slide, right-100) Okay, let’s get this over with. Time to judge your work.
+(Ben|Ben, campus, slouch, angryMIN, offright, slide, right-100) Okay, let’s get this over with. Time to judge your work.
 When did he get back? Not one to announce his presence like Mr. Bestman, I guess.
-(Ben|Professor Saint, campus, base, angryMIN) Davoo, and kid whose name I can’t remember, whatcha got there?
+(Ben|Ben, campus, base, angryMIN) Davoo, and kid whose name I can’t remember, whatcha got there?
 (Davoo, campus, explaining, happyMAX, offleft, slide, left) Well professor, it’s an all-purpose cleaning fluid called-
-(Ben|Professor Saint, campus, point, happyMIN) Slime, huh? I like it! It’s got a good gelatinous consistency to it, and it’s the perfect shade of green. Can I take a look at your experiment notes?
+(Ben|Ben, campus, point, happyMIN) Slime, huh? I like it! It’s got a good gelatinous consistency to it, and it’s the perfect shade of green. Can I take a look at your experiment notes?
 Davoo hands Mr. Saint the school-grade lined paper we wrote down all the ingredients and observations on. He looks over it with uncharacteristically feverish curiosity, before casually stuffing the sheet into his jacket pocket.
-(Ben|Professor Saint, campus, point, happyMAX) Excellent work you two, you each get one Yang dollar as a reward. But I’m out of cash right now, so you can redeem it as a discount when you buy one of my “I’m just being cool” t-shirts.
+(Ben|Ben, campus, point, happyMAX) Excellent work you two, you each get one Yang dollar as a reward. But I’m out of cash right now, so you can redeem it as a discount when you buy one of my “I’m just being cool” t-shirts.
 [Davoo leaves]
 [StopMusic]
-(Ben, campus, dab) Moving on!
+(Ben|Ben, campus, dab) Moving on!
 [SLIDE, Ben, left]
 He dabs over to the other table with a little more spring in his step than usual. However, his mood immediately sours once he approaches Action Giraffe and the ghost’s pungent brew.
 (Action Giraffe, gesture2, sad, fade, center)
 (Lord of Ghosts, sad, blank, fade, right)
 [Song: PCPDating_ActionFun]
-(Ben|Professor Saint, campus, exasp, shockMIN) Eugh, god, what is that? It reeks!
+(Ben|Ben, campus, exasp, shockMIN) Eugh, god, what is that? It reeks!
 (Action Giraffe, gesture3, sad) I Have AIDS.
 He picks up the flask of “I Have AIDS” to take a closer look.
-(Ben|Professor Saint, campus, exasp, shockMAX) AAAHHH! Hot!!
+(Ben|Ben, campus, exasp, shockMAX) AAAHHH! Hot!!
 ...only to hurriedly slam it back down on the table, which spills some of the corrosive liquid on the Lord of Ghosts.
 [SFX: PCP-SFX_DemonScreetch]
 (Lord of Ghosts, shock) WAAAIIIIIIIIIIEEEEEEEEIIIIII!!! MY GHOSTLY ESSENCE FUCK OW OWIE
@@ -504,16 +507,16 @@ Burning holes in his, uh, skin, the concoction gives off a visible smoke trail t
 [SFX: PCP-SFX_DoorSlam]
 [LordofGhosts leaves]
 Panicking, he rushes out the door so quickly that he knocks over the flask and spills it all over Professor Saint’s jacket!
-(Ben|Professor Saint, campus, exasp, angryMAX) Gah! Get back here you specter of torment!
-(Ben|Professor Saint, campus, slouch, angryMIN) ...bleh. If he hadn’t zoomed around so recklessly, my jacket would be fine goddammit...
-(Ben|Professor Saint, campus, exasp, angryMAX) Rage quit! That’s it, class is over. Everybody go home.
+(Ben|Ben, campus, exasp, angryMAX) Gah! Get back here you specter of torment!
+(Ben|Ben, campus, slouch, angryMIN) ...bleh. If he hadn’t zoomed around so recklessly, my jacket would be fine goddammit...
+(Ben|Ben, campus, exasp, angryMAX) Rage quit! That’s it, class is over. Everybody go home.
 [SLIDE ActionGiraffe offleft]
 [SLIDE Ben center]
 [ActionGiraffe leaves]
 [StopMusic]
 Class filters out, but on my way to the door I stop to talk with Mr. Saint.
 (PCPG) Hey, professor? I know your jacket’s gonna need some patching up. Gibbon told me a few days ago, there’s this great fabricsman named Dan who has a shop set up downtown. He’ll get that jacket looking better than new. Oh, but just make sure you don’t let him sell you a new toilet seat. He’s REALLY pushy about it for some reason.
-(Ben|Professor Saint, campus, base, neutral) Hrrrrr... thanks kid...
+(Ben|Ben, campus, base, neutral) Hrrrrr... thanks kid...
 [fade to black]
 [Ben leaves]
 Since class ended early, I still have a little while until school ends. Might as well go see Jesse. I don’t normally get to help out on a Friday afternoon, after all.
