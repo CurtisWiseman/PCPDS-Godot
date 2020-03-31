@@ -1008,7 +1008,7 @@ func parse_special_digi(info, parsedInfo, i, pos):
 	var video = 'characterImages.'+parsedInfo+'.special.body[' + str(num) + ']'
 	var mask = 'characterImages.'+parsedInfo+'.special.mask[' + str(num) + ']'
 	var still = 'characterImages.'+parsedInfo+'.special.still[' + str(num) + ']'
-	var expression_num_stuff = parse_expnum(info[i+2], parsedInfo)
+	var expression_num_stuff = parse_expnum(info[i+2], parsedInfo+'.special')
 	var face_num = expression_num_stuff[0]
 	var faceType = expression_num_stuff[1]
 	#STUPID HACK! People keep swapping between these two in the scripts...
