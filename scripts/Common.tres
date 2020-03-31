@@ -2170,7 +2170,7 @@ I should probably go home, I am clearly [i]way[/i] too tired right now.
 (Munchy, campus, default, neutral)
 [fade from black]
 
-Professor Munchy decided to end our morning class early today, and soon I found myself conversing with the two of the most powerful people in the school.
+Professor Munchy decided to end our morning class early today, and soon I found myself conversing with two of the most powerful people in the school.
 
 (Munchy, campus, default, happyMIN, center, slide, right)
 (Ben, campus, base, neutral, left) Yo Munchy, done with your class for today?
@@ -2362,6 +2362,7 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 (Ben|Ben, campus, base, neutral) Well, shit.
 
 [Ben Leaves]
+[EndlessWar leaves]
 [SLIDE, Munchy, left, center]
 
 [After a few seconds, the screen flashes pink]
@@ -2472,6 +2473,7 @@ I turn away from the group and head to the cafeteria for lunch. It’s just not 
 (Ben|Ben, campus, slouch, neutral) Well, shit.
 
 [Ben Leaves]
+[EndlessWar leaves]
 [SLIDE, Munchy, left, center]
 
 [After a few seconds, the screen flashes pink]

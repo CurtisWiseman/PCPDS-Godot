@@ -270,9 +270,9 @@ It was a tough choice, but I went with what my heart was telling me.
 *
 
 [Scene: Initiation]
-
+[StopMusic]
 I leave the confines of the Rowdy Roughhouse, with Endless War walking just a few feet ahead of me.
-
+[Song: PCPDating_Holy]
 [Location: outsidepcpu.night]
 [Fade from black]
 
@@ -296,7 +296,7 @@ I leave the confines of the Rowdy Roughhouse, with Endless War walking just a fe
 
 [fade to black]
 [EndlessWar leaves]
-
+[StopMusic]
 [CHANGE endlesswarminiroute fade]
 *
 
