@@ -118,7 +118,9 @@ Suddenly a powerful voice booms at us.
 
 The professor steps closer to me. All of a sudden his once captivating muscles become intimidating, and his voice shifts to a serious tone.
 
-(Nate|???, campus, standing, angryMED|shades) Do you plan to excel at this university? As a teacher, I want to see all my students become the greatest version of themselves. And I will do everything in my power to see that through to the end.
+(Nate|???, campus, standing, angryMED|shades) Do you plan to excel at this university? As a teacher, I want to see all my students become the greatest version of themselves. 
+
+(Nate|???, campus, standing, angryMED|shades) And I will do everything in my power to see that through to the end.
 
 Suddenly flashbacks run through my mind of my last school. I cannot help but remember all the unfinished homework assignments, all the failed tests...
 
@@ -226,7 +228,7 @@ I snap back to reality. Great. It’s my first day and I’m already zoning out 
 
 (Digi|Professor Digibro, Campus, 1, happyMAX) Your homework is to watch ten Anthony Fantano videos, to get a gist of what music reviews look like. Class dismissed.
 
-(Digi|Professor Digibro, Campus, 4, neutral) See you in the next one!
+(Digi|Professor Digibro, Campus, 4, neutral) See you in the next one and check out the "every university lecture featuring Digibro"-playlist!
 
 Finally, class is over. Hmm... Looks like I have a few minutes before lunch. Who should I talk to?
 
@@ -409,7 +411,9 @@ Careful of the “mud puddle,” I sit down in front of Gibbon and pop some blue
 
 A new female voice replies from behind me, and this one doesn’t sound so happy to see me. I look back and see her gesturing to the cafeteria table enveloped by vapor.
 
-As I look over I see a blob of slime shoot out of the vapor and splash onto the nearby table of rowdy students who were shaking about. They don’t look pleased at the donation and begin to retaliate with their own slime.
+As I look over I see a blob of slime shoot out of the vapor and splash onto the nearby table of rowdy students who were shaking about. 
+
+They don’t look pleased at the donation and begin to retaliate with their own slime.
 
 (Endless War|???, stand, happyMIN) Hello there Gibbon, or perhaps I should call you-
 
@@ -449,7 +453,9 @@ Using her middle finger she points to the rowdy table, now menacingly looking ov
 
 She moves her finger to the vapor table, where the vapor is starting to clear up, revealing students holding guns of various sizes.
 
-(Endless War) Ugh, guns are such an impersonal way to kill, don’t you think? They just scream to me that you don’t actually [i]enjoy[/i] killing, which I assume is how most of the “gang members” here actually feel. 
+(Endless War) Ugh, guns are such an impersonal way to kill, don’t you think? 
+
+(Endless War) They just scream to me that you don’t actually [i]enjoy[/i] killing, which I assume is how most of the “gang members” here actually feel. 
 
 (Endless War) I have a good feeling that will change soon... VERY soon...
 
@@ -460,7 +466,9 @@ She moves her finger to the vapor table, where the vapor is starting to clear up
 
 (Endless War, knife, smittenMIN|blushMIN, slide, center)
 (Gibbon, campus, grabby, neutral, slide, left)
-Gunshots fill the hall as the fight truly breaks out between them. The rest of the students rush out of the hall, though they don’t seem too scared of the violence, almost as if it’s a common occurrence.
+Gunshots fill the hall as the fight truly breaks out between them. 
+
+The rest of the students rush out of the hall, though they don’t seem too scared of the violence, almost as if it’s a common occurrence.
 
 (PCPG) We should probably leave too, Gibbon.
 
@@ -1659,11 +1667,12 @@ Oh, well that’s just great. Fuck you Russel. Fuck you.
 [Song: PCPDating_ClassJapanese]
 [fade from black]
 
-While examining the new, unfamiliar, definitely-not-recycled environment of my Japanese class, I am taken aback by a young man with floofy hair and deep blue eyes staring at me intently, 
+While examining the new, unfamiliar, definitely-not-recycled environment of my Japanese class, I am taken aback by a young man with floofy hair and deep blue eyes
 
-as though he has completely removed the rest of the outside world from his perception.
+staring at me intently, as though he has completely removed the rest of the outside world from his perception.
 
 (Davoo, campus, neutral, neutral)
+
 Sure, I’m the new kid, I get it, 
 
 but I couldn’t possibly be interesting enough as to warrant this kind of undiluted attention that would usually be reserved for the unprecedentedly fascinating exclusively.
@@ -1730,7 +1739,7 @@ so I’m actually really glad that it turned out to be media analysis interspers
 
 Pretty standard fare for this school as I’ve come to expect. 
 
-Besides, whenever the topic did bore me a little, I could just enjoy the sakuga being projected onto the wall behind our ranting profs legitimately baller PowerPoint-Style tbh. 
+Besides, whenever the topic did bore me a little, I could just enjoy the sakuga being projected onto the wall behind our ranting prof. Legitimately baller PowerPoint-style tbh. 
 
 So yeah, I think I liked it.
 *
@@ -1950,7 +1959,7 @@ I think I get it now! Basically, this is Professor Bestman's weekly outlet to te
 [SFX: PCP-AMBIENT_Classroom]
 The entire classroom falls into a noisy chaos, pens and books fly through the air, everybody tries to make their opinion or joke heard. Some 4-channers and Redditors get into a violent argument about who has the better memes.
 
-On my left, I hear a quite purple voice trying to speak up.
+On my left, I hear a quiet purple voice trying to speak up.
 
 Suddenly, the door bursts open and the bearded socialist storms into the classroom.
 [StopSFX]
@@ -2187,7 +2196,9 @@ Professor Munchy decided to end our morning class early today, and soon I found 
 
 (PCPG) I see...
 
-I thought these two were out for each other’s throats, but I guess it’s more about fucking each other over in some kind of high-minded game of chess, with each gang member serving as their pawns. Interesting...
+I thought these two were out for each other’s throats, but I guess it’s more about fucking each other over in some kind of high-minded game of chess, 
+
+with each gang member serving as their pawns. Interesting...
 
 The atmosphere gets awkward for a second so I try and strike something up.
 
@@ -2213,7 +2224,9 @@ The atmosphere gets awkward for a second so I try and strike something up.
 
 They both get close to one another, and after about a minute of whispering, Munchy starts to speak.
 
-(Munchy, campus, crossing, smittenMAX) AHEM. Speaking of Endless War, you know there was a moment in my life where I thought I went gay for good, but when I first saw her run for student council president, that all changed.
+(Munchy, campus, crossing, smittenMAX) AHEM. Speaking of Endless War, you know there was a moment in my life where I thought I went gay for good, 
+
+(Munchy, campus, crossing, smittenMAX) but when I first saw her run for student council president, that all changed.
 
 Wait, Endless War is the student council president?! How is this the first time I hear of this?
 
@@ -2242,7 +2255,9 @@ Munchy starts whispering into my ear.
 [Song: PCPDating_BotBustah]
 (Endless War, stand, neutral) Anyways, any new blood worthy of participating in the WAR?
 
-(Munchy, campus, crossing, neutral) Nah, most of these new students can’t possibly fathom anything better than actually studying at this school, and then failing to do so. This kid right here though? He’s got potential.
+(Munchy, campus, crossing, neutral) Nah, most of these new students can’t possibly fathom anything better than actually studying at this school, and then failing to do so. This kid right here though? 
+
+(Munchy, campus, crossing, neutral) He’s got potential.
 
 (Endless War, stand, confusedMIN) Wait a second, you’re that pathetic fuck that ran away from the WAR a couple days ago. Have you finally decided to leave behind your purposeless life and join the cause?
 
@@ -2296,7 +2311,9 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 
 [Crocs leaves]
 [Munchy leaves]
-(Schrafft|???, Neutral, center) Aaannnyywayyys, back to the main point of discussion here. Join the Killers. I’m begging you. We’re so low on reserves, I have to fucking cheat just to get by every once in a while.
+(Schrafft|???, Neutral, center) Aaannnyywayyys, back to the main point of discussion here. Join the Killers. I’m begging you. 
+
+(Schrafft|???, Neutral, center) We’re so low on reserves, I have to fucking cheat just to get by every once in a while.
 
 (Magicks|???, Neutral) no, you really don’t.
 
@@ -2423,7 +2440,9 @@ Woah.
 [Munchy leaves]
 [EndlessWar leaves]
 [SLIDE, Ben, offright]
-We leave Munchy and Endless War behind and head for the cafeteria. I’m a certified Cop Killer now, I guess? Should I like, go find a cop to murder later or something? I’m not exactly sure how this all works.
+We leave Munchy and Endless War behind and head for the cafeteria. I’m a certified Cop Killer now, I guess? Should I like, go find a cop to murder later or something? 
+
+I’m not exactly sure how this all works.
 
 [StopMusic]
 [Fade to black]
@@ -2442,7 +2461,9 @@ We leave Munchy and Endless War behind and head for the cafeteria. I’m a certi
 [Ben leaves]
 [Munchy leaves]
 [EndlessWar leaves]
-I turn away from the group and head to the cafeteria for lunch. It’s just not worth it right now to engage myself with the WAR and all its intricacies. Maybe I’ll consider it another time.
+I turn away from the group and head to the cafeteria for lunch. It’s just not worth it right now to engage myself with the WAR and all its intricacies. 
+
+Maybe I’ll consider it another time.
 
 [fade to black]
 [StopMusic]
@@ -2451,7 +2472,9 @@ I turn away from the group and head to the cafeteria for lunch. It’s just not 
 
 *Ask what gang Endless War belongs to*
 
-(PCPG) Hey I was wondering for a while now, Endless War you seem pretty gung-ho about this WAR thing and yet I’m not even sure which gang you’re with. Are you a Rowdy Fucker or a Cop Killer?
+(PCPG) Hey I was wondering for a while now, Endless War you seem pretty gung-ho about this WAR thing and yet I’m not even sure which gang you’re with. 
+
+(PCPG) Are you a Rowdy Fucker or a Cop Killer?
 
 (Endless War, stand, happyMED) Oh silly juvie, I am far too above all of you to be affiliated with these lowly roles. I never have joined a side and I never will, and I am perfectly fine that way.
 
@@ -2587,23 +2610,28 @@ Gibbon gingerly presses his fingers together as he formulates an answer.
 
 (Gibbon, campus, default, happyMAX|blush) But enough about me! Do you have any favourite classes yet?
 
-(PCPG) Honestly, I was kinda surprised with how much I’m enjoying music class. I’m still not sure about the teacher, but I never really considered music before, and it’s pretty fun so far.
+(PCPG) Honestly, I was kinda surprised with how much I’m enjoying music class. 
+
+(PCPG) I’m still not sure about the teacher, but I never really considered music before, and it’s pretty fun so far.
 
 *City Park*
 
-(Gibbon, campus, grabby, happyMIN) Well, uh, my offer still stands for you to come visit my place. Say, tonight? I have a few guitars and a drum set, we could jam a little?/n
+(Gibbon, campus, grabby, happyMIN) Well, uh, my offer still stands for you to come visit my place. Say, tonight? I have a few guitars and a drum set, we could jam a little?
+
 An evening at Gibbontake’s house, huh? That could be fun.
 *
 
 *Library*
 
-(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little?/n
+(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little?
+
 An evening at Gibbontake’s house, huh? That could be fun.
 *
 
 *7/11*
 
-(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little?/n
+(Gibbon, campus, grabby, happyMIN) Well, uh, would you like to come visit my place, say, tonight? I have a few guitars and a drum set, we could jam a little?
+
 An evening at Gibbontake’s house, huh? That could be fun.
 *
 
@@ -2696,7 +2724,9 @@ The program compiles.
 
 (Tom, 3, happyMIN) Upload me to the cloud any day, I wanna be a cyber god.
 
-(PCPG) Well you’re sure as fuck closer to that goal than me. I haven’t even greeted the world of techno babble with a warm “hello,” so color me impressed by whatever this is you’re doing.
+(PCPG) Well you’re sure as fuck closer to that goal than me. I haven’t even greeted the world of techno babble with a warm “hello,” 
+
+(PCPG) so color me impressed by whatever this is you’re doing.
 
 (Tom, 1, happyMIN) It’s not that hard, really. I always thought I was too dumb for this shit, and I am, but if you just do it, you’ll eventually get the hang of it. 
 
@@ -2805,7 +2835,7 @@ The game starts up with lightning flashing and a 3d model of the titular racoon-
 
 (PCPG) Whoa, who made that intro model?
 
-(Tom, huel, confusedMIN) I take offense to your assumption that I didn’t make all of this myself. Which admittedly I didn’t, the music was outsourced.
+(Tom, huel, confusedMIN) I take offense with your assumption that I didn’t make all of this myself. Which admittedly I didn’t, the music was outsourced.
 
 (PCPG) I guess I just don’t assume that everyone’s a weird art-polymath.
 
@@ -2958,7 +2988,9 @@ The woman doesn’t respond beyond a confused look.
 
 Judging from her facial expression, Davoo’s explanation was of no help whatsoever, but she hands him his meal anyway. 
 
-This doesn’t seem like the kind of place where you would tip people, though from how Davoo said it, it’s pretty clear that he believes the nature of [i]the premium [/i]to be self-evident.
+This doesn’t seem like the kind of place where you would tip people, 
+
+though from how Davoo said it, it’s pretty clear that he believes the nature of [i]the premium [/i]to be self-evident.
 
 I step forward to order, and as my gaze wanders across the array of absurd to absurdly normal offerings, 
 
@@ -2978,7 +3010,9 @@ about not being able to afford it and not being willing to, nor capable of devou
 
 [Location: dininghall.demo, dininghall.table.mudpuddleforeground]
 
-We find some seats that aren’t the subject of various territorial disputes between rival gangs, which still isn’t the easiest thing, but I’ve gotten better at it since my first day here.
+We find some seats that aren’t the subject of various territorial disputes between rival gangs, which still isn’t the easiest thing, 
+
+but I’ve gotten better at it since my first day here.
 
 (Davoo, campus, fidgeting) I haven’t seen you in Digi’s class yesterday.
 
