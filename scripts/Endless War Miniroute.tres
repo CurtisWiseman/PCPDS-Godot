@@ -278,7 +278,7 @@ Hmm... do I even dare try it?
 (PCPG) No, I would n-
 *
 
-(Endless War|Endless War, stand, angryMIN) First off, thats fucking disgusting, why would I ever !date [i]you[/i]? That would be one hell of a timeline when that happens.
+(Endless War|Endless War, stand, angryMIN) First off, thats fucking disgusting, why would I ever !date [i]you[/i]? Better luck in your dreams 3tard.
 
 (Endless War|Endless War, cross, angryMIN) Secondly, a fucking coffee? What kind of boring shitty ideas do you have in there? At least ask for a bomb ass milkshake or something like that, that’s way more romantic.
 
@@ -656,7 +656,7 @@ We arrive at the monument and find Endless War excitedly waiting for us in front
  
 She looks at Munchy.
 
-(EndlessWar|Endless War, stand, happyMIN) Imagine if you can take all of your pent up anger and frustration and display it to the world with no reprecussions.
+(EndlessWar|Endless War, stand, happyMIN) Imagine if you can take all of your pent up anger and frustration and display it to an endless stream of Killers ready to be !killed at your command.
 
 (Munchy, campus, default, happyMIN)
 She turns to face Ben.
@@ -668,12 +668,16 @@ Ben and Munchy salivate at her propositions.
  
 (Ben, casual, point, happyMIN) Well, what are you suggesting then?
 
-(EndlessWar|Endless War, stand, neutral) You see, to truly engage in WAR, we need to first fully forgo our useless mortal bodies in preference of something.. slimier.
+(EndlessWar|Endless War, stand, neutral) You see, to truly engage in WAR, absolutely everyone needs to first forgo thier useless mortal bodies in preference of something.. slimier.
 
 (Ben, casual, base, happyMIN|cloud)
+(EndlessWar|Endless War, stand, angryMIN) But of course I get fucking stuck with the task to infuse slime into everyone, and you know how much fucking work that is?
+
+Endless War takes a deep sigh.
+
 (EndlessWar|Endless War, knife, happyMIN) We secondly need to indoctrinate everyone to the violence and bloodshed. To leave no person without the instinct to kill. No child without a deadly weapon and the will to use it.
 
-(EndlessWar|Endless War, knife, happyMED) I wish for a world with no society, no schools, no rules. A world where the only thing that matters is kill or be killed, a world where the only thing on people’s mind is WAR. 
+(EndlessWar|Endless War, knife, happyMED) I wish for a world with no society, no schools, no rules. A world where the only thing that matters is kill or be killed, a world where the only thing on people’s mind is WAR.
 
 Huh, that sounds a lot like that ever so popular branch of politics, anarcho-facism™.
 
@@ -739,10 +743,10 @@ She chuckles at this final remark and pulls out a complicated looking remote wit
 (EndlessWar|Endless War, stand, happyMED) With a singular flip, the world will be changed, nay improved into something far greater, but of course, I will not do it without the consent of both the gang leaders.
 
 (Davoo, neutral, shockedMIN)
-(Endless War|Endless War, stand, happyMED) Munchy. Ben. Are you both ready for a new age of WAR? Are you ready for ENDLESS WAR?
-
 (Ben, casual, base, happyMIN)
 (Munchy, campus, default, happyMED)
+(Endless War|Endless War, stand, happyMED) Munchy. Ben. Are you both ready for a new age of WAR? Are you ready for ENDLESS WAR?
+
 Munchy and Ben look at each other, each with a devious glint in their eyes. Seems like they are down for ENDLESS WAR, but am I?
  
 [CHOICE]
@@ -881,7 +885,6 @@ Ben and Munchy alongside their gangs promptly chase after Davoo. Endless War the
 (EndlessWar|Endless War, knife, angryMIN) I'll tell you what will happen next. Davoo will soon be captured again, I will manage to fix my remote, and the new age of WAR will then begin anew.
 
 [StopMusic]
-
 (EndlessWar|Endless War, knife, angryMAX) The only difference now is that you won't get to see it!
 
 [Song: PCP-AMBIENT_Earthquake]
@@ -926,17 +929,20 @@ I try and stand up.
 She then quickly turns around and runs straight at me, but before I can react she..
 
 [SFX: PCP-SFX_KatanaSlash]
-(Endless War, knife, angryMAX)
 [Song: PCPDating_GameOver]
+(Endless War, knife, angryMAX)
+[Location: Bunker Hill Monument, overlay.bloodsplatter]
+
 ..stabs me in the stomach. She then pulls her knife back out and I fall onto the floor, my blood mixing with the burnt radioactive ooze. 
 
-(EndlessWar|Endless War, knife, angryMIN) Oh right, I never did end up infusing you with slime. All [i]you've[/i] got is this useless blood.
+[Location: Bunker Hill Monument]
+(EndlessWar|Endless War, knife, angryMAX) Oh right, I never did end up infusing you with slime. All [i]you've[/i] got is this useless fucking blood.
 
 Well, this is the end of the road for me, hopefully Davoo managed to escape or hide somewhere by now.
 
-(EndlessWar|Endless War, stand, sadMIN) PCPG, you must understand, there is no stopping true progress, you can only halt it. 
+(EndlessWar|Endless War, stand, angryMIN) PCPG, you must understand, there is no stopping true progress, you can only halt it. 
 
-(EndlessWar|Endless War, stand, sadMED) ENDLESS WAR will happen, it has to, with or without you.
+(EndlessWar|Endless War, stand, angryMED) ENDLESS WAR will happen! It has to! With or without you.
 
 (EndlessWar|Endless War, knife, sadMED) Hopefully you will instead enjoy this final death of yours, you’ll be one of the final few who do.
 
@@ -944,9 +950,9 @@ Well, this is the end of the road for me, hopefully Davoo managed to escape or h
 [SFX: PCP-SFX_KatanaSlash]
 Endless War then brings her knife down on me one more time, and the world goes black.
 
-This was the right thing to do, right?
+This [i]was[/i] the right thing to do, right?
 
 [StopMusic]
-[CREDITS]
+[ENDING]
 *
 

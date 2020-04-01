@@ -69,7 +69,6 @@ This conversation is somehow already more uncomfortable than getting chased by z
 [SLIDE, Mage, left, offleft]
 [SLIDE, Cerise, center, offright]
 
-[StopMusic]
 [CG: Cerise CG]
 [SFX: PCP-SFX_DemonScreetch]
 
@@ -78,12 +77,12 @@ Wings grow out of the demon girl’s back, seeming to form giant claws, which st
 I feel nauseous.
 
 (Mage) PCPG? Are you ok?
+
 [Mage leaves]
 [cerise leaves]
-[CG end]
-
 [Location: pcpgroom]
 [StopMusic]
+[CG end]
 
 AHHH!
 
@@ -98,15 +97,13 @@ It's like a... it really is like a dream come true.
 [fade to black]
 [StopMusic]
 
-
 [Scene: Shadows of the Past]
-[Location: roof.day]
+
 [Song: PCPDating_DateTheme]
+[Location: roof.day]
 [fade from black]
 
-I meet up with Mage on the roof during lunch and, wow, this is just like in my japanese animes! The perfect place to hang out with friends, eat your lunch alone when you’re bullied,
-
-or jump if you’ve been bullied for too long. Student accessible school roofs are the reason people are dying!
+I meet up with Mage on the roof during lunch and, wow, this is just like in my japanese animes! The perfect place to hang out with friends, eat your lunch alone when you’re bullied, or jump if you’ve been bullied for too long. Student accessible school roofs are the reason people are dying!
 
 Oh, Mage is already waiting for me.
 
@@ -155,15 +152,17 @@ Suddenly, someone enters the school roof.
 
 Mage looks away and doesn’t bother to answer their advances. She seems distressed, making a similar expression to when Tom and Munchy questioned her.
 
-(Endless War|Endless War, knife, angryMED) Oh, by the way Juvie: You haven’t made a choice yet either... 
+(Endless War|Endless War, knife, angryMED) Oh, hey juvie. The offer to join a gang still stands for you too, if you care to change your mind.
 
 (Mage|Mage, campus, 5, shockMIN) Don't listen to her!
 
 The triangular girl’s fierce glare petrifies me. 
 
-(Endless War|Endless War, cross, shockedMED) If you don’t !enlist soon, you’ll have no way to !equip a weapon and protect your precious skin from any dangers you might face. Make no mistake, they will come, but I guess it's your choice ultimately. 
+(Endless War|Endless War, cross, shockedMED) If you don’t !enlist soon, you’ll have no way to !equip a weapon and protect your precious skin from any dangers you might face. 
 
-(Endless War|Endless War, stand, confusedMED) Let’s go Cop Killer. Your men still have some slime to mine.
+(Endless War|Endless War, cross, shockedMED) Make no mistake, they will come, but I guess it's your choice ultimately.
+
+(Endless War|Endless War, stand, confusedMED) Let’s go Cop Killer. Your men still have some slime to !mine.
 
 (Ben|Ben, campus, base, sadMIN) Yeah, it’s already getting late, and I’m definitely known as someone who’s never late! See you around Violet!
 
@@ -200,16 +199,17 @@ Mage isn’t laughing with me.
 
 (PCPG) I’ll be there! This will be a better afternoon activity than doing Prof. Digibro’s homework assignments.
 
-We head back to our classes
+We head back to our classes.
+
 [SLIDE Mage offright]
 [fade to black]
 [StopMusic]
  
 [Scene: Violent Trees]
 
+[Song: PCPDating_HomeMorning]
 [Location: citypark.day]
 [fade from black]
-[Song: PCPDating_HomeMorning]
 
 I actually managed to get here a few minutes early! That’s pretty rare for me, but I am fairly curious what Mage wants to tell me about.
 
@@ -220,7 +220,6 @@ I actually managed to get here a few minutes early! That’s pretty rare for me,
 (Mage|Mage, casual, 2, happyMIN) I love the park too! It’s the closest thing to a forest I can get in this crowded city.
 
 (PCPG) Are you even from around here, Mage? Since you have a bit of an accent.
-
 
 (Mage|Mage, casual, 5, neutral) Ah, you noticed!  No, I’m from Lithuania!
 
@@ -250,7 +249,9 @@ All the leaves and even the barks are purple. The grass and the dirt under the t
 
 (Mage|Mage, casual, 1, angryMIN, offright, slide, center) I grew up in the turbulent times of the post-cold-war years. Crime and violence were ruling the streets of Lithuania.
 
-(Mage|Mage, casual, 1, angryMIN) My parents were surprisingly unconcerned about me going out, considering the circumstances. Like, I wasn’t allowed to leave my neighborhood, but the neighborhood was pretty big. My parents thought I was a well-behaved kid...
+(Mage|Mage, casual, 1, neutral) My parents were surprisingly unconcerned about me going out, considering the circumstances. Like, I wasn’t allowed to leave my neighborhood, but the neighborhood was pretty big.
+ 
+(Mage|Mage, casual, 1, sadMIN) My parents thought I was a well-behaved kid...
 
 [CG: Mage CG1]
 
@@ -261,13 +262,16 @@ All the leaves and even the barks are purple. The grass and the dirt under the t
 (Mage) I was a fighter, not because I needed to be one, but because I wanted to. As the feared gang leader known as Violet Violence, I protected my neighborhood from our enemies.
 
 (Mage) My gang consisted of kids from my school, friends and useful allies, united in their trust in me.
+
 (Mage) They called us Tigers, first to annoy us, but we adopted the nickname and wore it with pride.
 
 (PCPG) Your enemies? Do you mean school bullies or what?
 
 [CG: Mage CG2]
  
-(Mage) The gang called the Indigo Interlopers. Older kids, ruffians and school delinquents who had a problem with a seven year old Mage claiming a part of their city. And I hated them, of course, because of their colour. 
+(Mage) The gang called the Indigo Interlopers. Older kids, ruffians and school delinquents who had a problem with a seven year old Mage claiming a part of their city. 
+
+(Mage) And I hated them, of course, because of their colour. 
 
 (Mage) They weren't are only opposing gang. We also fought:
 (Mage) The Red Ruffians
@@ -303,11 +307,14 @@ All the leaves and even the barks are purple. The grass and the dirt under the t
 (Mage) I lost all my friends on that day. As the only one escaping, I ran as far as I could, unable to face the loss of my friends and the idea that it was all my fault. 
 
 (Mage) After months, I found myself in America, and my new friends found me. The teachers and students of the University. I actually named the University, you know?
+
 (Mage) It had another name first, “Horseshoe University” or something like that, but when I first became Student Council President, I decided on a more fitting name.
 
 [CG end]
 
-(Mage) I came here and turned this forest purple as a living memorial for my fallen friends. Every tree here is named after one of my Tigers. I burned their names into the bark with purple magic, without hurting the trees of course.
+(Mage) I came here and turned this forest purple as a living memorial for my fallen friends. Every tree here is named after one of my Tigers. 
+
+(Mage) I burned their names into the bark with purple magic, without hurting the trees of course.
 
 (Mage) This place is mine, it belongs only to me and my fallen friends. For them, I will always be the paladin of purple, and share my love for this colour with the world!
 
@@ -374,7 +381,9 @@ Mage turns to me, with fear in her eyes.
 
 Hmm...
 
-(PCPG) What if I go in there first, looking for comics or something, and then you can come in a moment later and pretend that we wanted to meet there?! That way you don’t have to feel weird!
+(PCPG) What if I go in there first, looking for comics or something, and then you can come in a moment later and pretend that we wanted to meet there?! 
+
+(PCPG) That way you don’t have to feel weird!
 
 (Mage|Mage, campus, 5, shockMIN) Guess we can try that...
 
@@ -388,6 +397,7 @@ I leave Mage alone and head to the comic store.
 [fade from black]
 
 Opening the door, the familiar smell of weebs and nerds welcomes me. There are only a few people in the store though, but probably too many for her given her reaction.
+
 Waiting next to the Pokemon shelf, I squint outside the window to see if Mage decides to follow.
 
 (Mage|Mage, campus, 2, happyMAX, offright, slide, right) I’m here! I’m finally here! Now let’s get the plushie and go!
@@ -480,9 +490,9 @@ We follow the instructions.
 
 (Mage|Mage, campus, 3, happyMED) Yeah, why not? I think she’s cute!
 
-No you are... 
+No you are. 
 
-(PCPG) ...fair
+(PCPG) ...fair enough.
 
 Where did that stray thought even come from? After scanning everything again, we grab our stuff and head out into the warm evening.
 
@@ -516,7 +526,7 @@ Where did that stray thought even come from? After scanning everything again, we
 
 (PCPG) How... how did I get here?
 
-(Lethal, silouette) Hehehehehehe ...
+(Lethal|???, silouette) Hehehehehehe ...
 
 (PCPG) AH!
 
@@ -539,7 +549,7 @@ Who is she? She seems familiar, but at the same time I’m sure that I’ve neve
 
 The creature that reminds me of Mage laughs again, it sends shivers down my spine. Is that her... evil twin sister?
 
-She comes closer 
+She comes closer..
 
 and...
 
@@ -557,6 +567,7 @@ AHHHHHHHH!
 
 Oh my god.
 
+[Song: PCPDating_HomeNight]
 Hehe. Just a nightmare. Of course.
 
 I yawn myself back to sleep.
@@ -566,12 +577,13 @@ I yawn myself back to sleep.
 [Scene: You Can’t Run Away]
 
 [Location: waytoschool.nojesse]
+[StopMusic]
 [Song: PCPDating_HomeMorning]
 [fade from black]
 
 (Mage|Mage, campus, 3, happyMIN, offleft, slide, right) And, how are you doing in your classes? 
 
-(PCPG) Eh, don’t ask. Ben Saint still tries to explain the Dimensional Merge in detail to us, but honestly I don’t understand most of what he’s saying. 
+(PCPG) Eh, don’t ask. Ben is still trying to explain the Dimensional Merge in detail to us, but honestly I don’t understand most of what he’s saying. 
 
 (PCPG) And Bestman isn’t better, he told us WEEKS ago that he would do a lecture about the anime Ghost in the Shell, which sounds awesome, but nothing has happened since then. 
 
@@ -583,7 +595,9 @@ I yawn myself back to sleep.
 
 (PCPG) I have heard about it, but I’m not sure what it actually is.
 
-(Mage|Mage, campus, 4, shockMIN) It’s just your typical cliché american school prom, but with lectures, arena fights, a royal rumble and stuff like that. I don’t really care about all of this, but the house where it happens has a beautiful botanical garden with rare plants and animals I wanna see!
+(Mage|Mage, campus, 4, shockMIN) It’s just your typical cliché american school prom, but with lectures, arena fights, a royal rumble and stuff like that. 
+
+(Mage|Mage, campus, 4, shockMIN) I don’t really care about all of this, but the house where it happens has a beautiful botanical garden with rare plants and animals I wanna see!
 
 (PCPG) You heard? Are you saying that you’ve never been to the prom?
 
@@ -650,7 +664,9 @@ Wait! The - their colour! they are all clothed in the same shade of blue!
 
 Mage takes an angry step forwards and I hold her back.
 
-(Indigo Interlopers) Aww, you think you can fight us? Stupid Violet! We’re gonna overwhelm and capture you! We’re bringing you back to Lithuania, and executing you publicly, for all our enemies to see! After that, nobody will question our authority anymore!
+(Indigo Interlopers) Aww, you think you can fight us? Stupid Violet! We’re gonna overwhelm and capture you! 
+
+(Indigo Interlopers) We’re bringing you back to Lithuania, and executing you publicly, for all our enemies to see! After that, nobody will question our authority anymore!
 
 The Interlopers are drawing knives, swords, swinging clubs and morning stars, I even see one or two firearms. How did they get this stuff over the border?
 
@@ -720,12 +736,11 @@ Mage opens her mouth, I step forward, trying to deescalate the situation, but th
 [StopMusic]
 [Song: PCPDating_LifeInEndlessWar]
 
-
-(CopKillers|???) !dab  !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab
+(CopKillers|???) !dab !dab !dab !dab !dab...
 
 A distant, swelling chant makes the gang stop. It’s a cacophony of voices, probably a few streets away.
 
-(CopKiller|???)  !dab  !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab
+(CopKillers|???) !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab..
 
 (Indigo Interlopers) What is this? Is this a trap or something?
 
@@ -733,7 +748,7 @@ A distant, swelling chant makes the gang stop. It’s a cacophony of voices, pro
 
 (PCPG) Listen! They are coming closer!
 
-(CopKillers|???)  !dab  !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab
+(CopKillers|???) !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab !dab
 
 [CG end]
 
@@ -777,8 +792,7 @@ The Cop Killer turns to the Indigo Interlopers.
 [EndlessWar leaves]
 [CopKillers leaves]
 [Mage leaves]
-[fade to black]
-[CG end]
+[SFX: PCP-SFX_KatanaSlash]
 
 It’s a complete slaughterfest, but a short one. After the first few Interlopers drop on the ground, the rest of the bunch starts running away.
 
@@ -786,8 +800,9 @@ The purple gangsters have eradicated the blue ones.
 
 Mage looks upon the violence with sadness in her eyes. Arm in arm, we leave the horrific scene.
 
+[fade to black]
+[CG end]
 [StopMusic]
-
 
 [Scene: RadProm]
 
@@ -893,7 +908,9 @@ We walk outside the hall, down the terrace into the garden.
 
 [Song: PCPDating_Misato]
 
-A few weeks after Radprom, Mage graduated from PCP University. To her relief, Tom was elected the new Student Council President.Now, Mage has much more free time and can focus on her personal projects. The first one being to change up her living situation:
+A few weeks after Radprom, Mage graduated from PCP University. To her relief, Tom was elected the new Student Council President.
+
+Now, Mage has much more free time and can focus on her personal projects. The first one being to change up her living situation:
 
 [CG: Happy End Mage]
 [fade from black]
@@ -910,6 +927,7 @@ I know I’m supposed to be doing homework, but I’m just really happy right no
 
 Life couldn’t possibly be much better for us.
 
+[fade to black]
 [StopMusic]
 [credits]
 
@@ -926,7 +944,6 @@ Mage steps forward.
 [Mage Leaves]
 [CG ends]
 
-
 (Lethal|Lethal, 4, happyMAX) huahuauhhauahuhuhuhhuaahahaha!
 
 (Lethal|Lethal, 5, crazyMIN) Finally... Finally free! 
@@ -940,25 +957,24 @@ She looks so different... but this is clearly still Mage. Only, I smell a thick 
 
 (Lethal|Lethal, 3, lewdMIN) So, we have some pitiful humans to get rid off I see! Interlopers, are you ready to die?
 
-
-
 (Interlopers) Everyone, get ready for battle!
-
 
 (Lethal|Lethal, 4, crazyMIN) Hehe... Hehehe! Your answer was... wrong!
 (Lethal|Lethal, 4, crazyMIN) I would have liked to play with you for a while, but you already started annoying me when I had to listen to your stupid, petty drama you had with Mage!
 
-One of the Indigo interlopers tries to say something, but Lethal cuts him off
+One of the Indigo interlopers tries to say something, but Lethal cuts him off.
 
 (Lethal, 1, smugMAX) Hush now, your time has come.
 
 [CG: Indigo Interlopers Death]
 [Lethal leaves]
+[SFX: PCP-SFX_KatanaSlash]
 [pause]
-[fade to black]
-[CG end]
 
 Shocked about the slaughterfest Mage made, I flee the scene.
+
+[fade to black]
+[CG end]
 
 [StopMusic]
 
@@ -1046,7 +1062,7 @@ I don’t really get her reasoning, but I guess that’s a no.
 
 (PCPG) What do you want to do about it?
 
-(Lethal|Lethal, 3, smugMIN) Punish them, hehehehehe! Remind them how powerless they truly are, kill their ego... and not only that.
+(Lethal|Lethal, 3, smugMIN) Punish them, hehehehehe! Remind them how powerless they truly are, kill their ego... and not just that.
 
 (PCPG) Hehe hell yeah!
 
@@ -1058,12 +1074,13 @@ That was just some edgy joke.. right?
 
 Leaving the festive hall, Mage clings to my arm. She is very close, her skin feeling unusually hot. Maybe she has a fever?
 
-[StopMusic]
-
-[Song: PCPDating_PurpleForest]
 [Location: radprom3]
+[StopMusic]
+[Song: PCPDating_PurpleForest]
 
-I can’t hold it in any longer. Mage is acting weird lately, and my guess is that she is trying to send signals. This romantic night might be the best chance I’ll get... to ask her what might become of us.
+I can’t hold it in any longer. Mage is acting weird lately, and my guess is that she is trying to send signals. 
+
+This romantic night might be the best chance I’ll get... to ask her what might become of us.
 
 (PCPG) Mage, I wanted to ask you something...
 
@@ -1132,13 +1149,15 @@ I’m confused... but my memories are slowly coming back... Mage... I made a mis
 
 I am baffled. Is Endless War-chan supposed to be the god who judges me?
 
-(Endless War|Endless War, cross, happyMAX) Don’t worry Juve’, you’ll get a second chance. That’s basically my job, I provide second chances. And third chances. Actually, an infinite number of chances! You could say, as long as I remain in this city, no-one's ever really gone.
+(Endless War|Endless War, cross, happyMAX) Don’t worry Juve’, you’ll get a second chance. That’s basically my job, I provide second chances. And third chances. Actually, an infinite number of chances! 
+
+(Endless War|Endless War, cross, happyMAX) You could say, as long as I remain in this city, no-one's ever really gone.
 
 (PCPG) You would send me back?
 
 (Endless War|Endless War, stand, confusedMED) Unless you wanna join those communist staydeads and just roam the sewers, yes. You just have to say !revive.
 
-(PCPG) That sound kinda cool, but I have to fix some mistakes up there. Thanks for giving me this chance Endless War.
+(PCPG) That sounds kinda cool, but I do have to fix some mistakes up on the surface. Thanks for giving me this chance Endless War.
 
 (Endless War|Endless War, cross, happyMAX|blushMAX) Good luck, and remember that you now owe me a favour! Now say it!
 
