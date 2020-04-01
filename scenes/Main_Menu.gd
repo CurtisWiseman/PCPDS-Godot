@@ -8,8 +8,6 @@ var input_locked = false
 func _ready():
 	systems = $Systems # Load systems with the Systems node.
 	
-	global.turbo_crash_mode = false
-	global.turbo_mode = false
 		
 	for b in $RouteButtons.get_children():
 		b.visible = global.devmode
