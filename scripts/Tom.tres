@@ -18,7 +18,7 @@ Stupid.
 
 Guess that’s just the effect that cool things have; You want them to be appreciated, 
 
-you want others to share your amazement and you ruin your relationship with the creator by being a fucking Idiot. 
+you want others to share your amazement and you ruin your relationship with the creator by being a fucking idiot.
 
 A dolt.
  
@@ -198,9 +198,9 @@ She’s the one they can talk to.
 (PCPG) I guess that’s my first job then: Finding out what these sheep even want from their leader./n
 Tom Oliver – Man of the People... I like the ring of that.
 
-(Tom, 3, smittenMAX) It might be a bit much... Just a taaaaaad cliche, don’t you think?
+(Tom, 3, smittenMAX) It might be a bit much... Just a taaaaaad cliché, don’t you think?
 
-(PCPG) You’re the one who left a literal, physical, hand written note in my locker, so cliche really shouldn’t be a problem for you.
+(PCPG) You’re the one who left a literal, physical, hand-written note in my locker, so cliche really shouldn’t be a problem for you.
 
 (Tom, whisky, confusedMAX) What are you expecting here? Social competence?
 
@@ -448,6 +448,8 @@ Who better to ask than the guidance counselor? This is where students come with 
 (Munchy|Professor Tinyhats, Campus, Crossing, AngryMED) Oh, and they HAVE to be able to draw, because people who can’t draw: Literally not real people, actually not even real.
  
 (PCPG) Young and able to draw, got it.
+
+(Munchy|Professor Tinyhats, Campus, Crossing, Neutral)
  
 (Gibbon|Gibbon, campus, default, ShockMIN, offright, slide, right) So are you actually serious about this whole student council thing?
  
@@ -518,7 +520,7 @@ I’m sure we can figure something out as a team. We have data now, that’s a s
 
 *Just fucking tell him*
 
-Here goes nothing
+Here goes nothing.
 
 (PCPG) Tom, I have no Idea how to tell you this, but running for office at this school is impossible.
 
@@ -592,7 +594,7 @@ Fuck fuck fuck fuck fuck.
  
 (PCPG) You really wanna go with “equality and manslaughter, that’s what we stand for”?
  
-(Tom, 2, angryMIN) God no, that’s way to specific. But both those things play really nicely into some kind of revolutionary aesthetic that we could use.
+(Tom, 2, angryMIN) God no, that’s way too specific. But both those things play really nicely into some kind of revolutionary aesthetic that we could use.
 
 (Tom, 2, sadMIN) This is a university after all, what could possibly be more attractive than rebellion?
  
@@ -951,7 +953,7 @@ The political significance of the matchup isn’t lost on attentive audience mem
  
 (Tom, 1, shockedMIN) Are they buying T-shirts?
  
-(PCPG) Like there’s no tomorrow
+(PCPG) Like there’s no tomorrow.
  
 (Tom, 2, happyMAX) Great, any other news?
  
@@ -1181,7 +1183,7 @@ Fuck.
  
 (Tom, 3, confusedMAX) I doubted you for a second there, hope you’re not too disappointed.
  
-(PCPG) Don’t worry, I doubted myself. I guess I let the whole election thing get to my head a little.
+(PCPG) Don’t worry, I doubted myself too. I guess I let the whole election thing get to my head a little.
  
 (Tom, 2, happyMIN) It happens. If you ask me, you made the right choice.
 
@@ -1323,10 +1325,10 @@ The heartfelt moment is interrupted by a sudden shift in his expression.
  
 ~Bad End~
  
-[CG end]
+
 [StopMusic]
 [CREDITS]
- 
+[CG end]
  
 
 [Scene: The New Sincerity]
@@ -1486,9 +1488,9 @@ A joyless philistine, that’s who.
  
 (Azumi, Campus, confusedMIN) ...
 
-(Azumi|Sword, Campus, smittenMIN) Well fuck, his story checks out. Welcome on board, kid.
+(Azumi|Sword, Campus, smittenMIN) Well fuck, his story checks out. Welcome aboard, kid.
  
-Hell fucking yes
+Hell fucking yes.
  
 (Azumi, Campus, neutral) We should get going then, the next wave is coming soon.
 
@@ -1619,21 +1621,23 @@ and it’s even easier if it’s half empty because a large swath of the student
 [Location: radprom2]
 [fade from black]
 
-(Nate, Campus, Papers, Neutral) Hello puny students, before the festivities commence, let’s get the technicalities out of the way. 
+(Nate, Campus, Papers, Neutral|shades) Hello puny students, before the festivities commence, let’s get the technicalities out of the way. 
 
-(Nate, Campus, Papers, Neutral) By that, I of course mean the position of student council president, which unsurprisingly once more goes to...
+(Nate, Campus, Papers, Neutral|shades) By that, I of course mean the position of student council president, which unsurprisingly once more goes to...
  
 Nate folds a small piece of paper open and pauses for a moment. 
 
-The Auditorium is dead silent.
+The auditorium is dead silent.
  
-(Nate, Campus, Papers, ConfusedMAX) ...Tom... Oliver... this can’t be right.
+(Nate, Campus, Papers, ConfusedMAX|shades) ...Tom... Oliver... this can’t be right.
  
 Without a moment of hesitation, we rush onto the stage.
 
 [SLIDE, Nate, center, left]
  
 (Tom, 1, happyMAX, offright, slide, center) I’m sorry, I haven’t really prepared a speech, which is like the lamest statement you could possibly start a speech with.
+
+(Nate, Campus, Papers, Neutral|shades)
 
 (Tom, 2, angryMIN) What kind of hack needs a stupid script to get their genuine thoughts across./n
 Just grab some wine and rant into a microphone like any other asshole!
