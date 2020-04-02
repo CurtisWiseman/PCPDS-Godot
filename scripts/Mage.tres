@@ -39,7 +39,7 @@ I’m... in the university? But it seems... different. Something is clearly wron
 
 (PCPG) There are zombies here?
 
-(Mage|Mage, campus, 4, shockMED) Ye. We’re in the middle of a zombie apocalypse silly! Most of my dreams are like that!
+(Mage|Mage, campus, 4, shockMED) Ye. We’re in the middle of a zombie apocalypse! Most of my dreams are like that!
 
 (PCPG) How do we escape?
 
@@ -273,7 +273,7 @@ All the leaves and even the barks are purple. The grass and the dirt under the t
 
 (Mage) And I hated them, of course, because of their colour. 
 
-(Mage) They weren't are only opposing gang. We also fought:
+(Mage) They weren't the only opposing gang. We also fought:
 (Mage) The Red Ruffians
 (Mage) The Blue Barbarians
 (Mage) The Mocha Marauders
@@ -1103,7 +1103,7 @@ No! This can’t be true! How could I let this happen?
 
 (Lethal|Lethal, 2, crazyMAX) What she didn't realize was that I would grow larger, darker and more powerful than her tiny little mind could ever imagine!
 
-I just needed a trigger to finally break out! And that trigger turned out to be you, little one!
+(Lethal|Lethal, 2, crazyMAX) I just needed a trigger to finally break out! And that trigger turned out to be you, little one!
 
 I’m feeling dizzy. Lethal steps closer. The scent of violets is overwhelming.
 
