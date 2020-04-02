@@ -479,7 +479,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				else:
 					video_path = 'res://images/credits/Credits non-scribbled.ogv'
 				systems.display.animation(video_path)
-				systems.display.animation.volume_db = 0.0
+				systems.display.animation.volume_db = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
 				yield(systems.display, 'transition_finish')
 				global.pause_input = false
 				get_tree().change_scene("res://scenes/Main_Menu.tscn")

@@ -452,10 +452,10 @@ As soon as Ben finishes his sentence a familiar terrifying gaze runs across my b
  
 [CHOICE]
 *Hell yeah, the PPU is going down*
-*No, Endless War has a point*
+*[color=#7bff00]No, Endless War has a point[/color]*
 
 *Hell yeah, the PPU is going down*
- 
+
 (PCPG) I’m in, let’s take down the Pizza Party University once and for all.
  
 (Ben, casual, base, happyMIN) Excellent. I knew you would see the real threat at hand.
@@ -496,11 +496,11 @@ I have a feeling this ain’t gonna be easy.
 [==> !argue nate]
 *
  
-*No, Endless War has a point*
+*[color=#7bff00]No, Endless War has a point[/color]*
 [==> Initiation]
 *
-[StopMusic]
 [Scene: Initiation]
+[StopMusic]
 [Song: PCPDating_Holy]
 (Ben, casual, base, shockMAX)
 (PCPG) No way, Endless War is right about this, this is just a waste of time and Killer resources. I didn’t sign up to be a Killer just to play hide and seek.
@@ -561,7 +561,7 @@ Should I accept?
 [fade to black]
 [StopMusic]
 
-[CHANGE endlesswarminiroute fade 0.01]
+[CHANGE endlesswarminiroute fade]
 *
  
 *I’m not sure..*

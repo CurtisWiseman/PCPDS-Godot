@@ -1825,7 +1825,7 @@ He hands me a piece of paper with nigh illegible handwriting on both sides.
 
 [CHOICE]
 *I’m kind of a piece of shit already, I can’t afford to go full otaku*
-*Months' worth of entertainment? I’m in!*
+*[color=#bd00ff]Months' worth of entertainment? I’m in![/color]*
 
 *I’m kind of a piece of shit already, I can’t afford to go full otaku*
 
@@ -1849,7 +1849,7 @@ He sounds strangely sincere and kind of sad as he says it.
 [==> Broken Dreams]
 *
 
-*Months' worth of entertainment? I’m in!*
+*[color=#bd00ff]Months' worth of entertainment? I’m in![/color]*
 
 (PCPG) This... man, this really is a lot.
 
@@ -1986,10 +1986,10 @@ She sounds very dedicated.
 (Nate|Professor Bestman, campus, smoking, confusedMIN|shades) I see what you’re saying. But I still think dreams are an uninteresting topic to the broader classroom demographic.
 (Nate|Professor Bestman, campus, smoking, confusedMIN|shades) What do you think class? Wouldn’t that be incredibly boring?
 [CHOICE]
-*Stand with Mage*
+*[color=#ff89f0]Stand with Mage[/color]*
 *Don’t stand with Mage*
 
-*Stand with Mage*
+*[color=#ff89f0]Stand with Mage[/color]*
 
 (PCPG) I don’t see what’s so bad about dreams Prof. Bestman. Aren’t they able to tell us things about ourselves that we are too cowardly to think about? Aren’t dreams an important tool for self-improvement? So that we can self-reflect on our inner well-being?
 
@@ -2125,10 +2125,10 @@ Like is any of this for real...
 (Michelle|???, body2, face1) So can you help me out?
 
 [CHOICE]
-*Help Nate*
+*[color=#7bff00]Help Nate[/color]*
 *Go back to school*
 
-*Help Nate*
+*[color=#7bff00]Help Nate[/color]*
 
 (PCPG) Alright... I’ll help you out... 
 
@@ -2369,12 +2369,12 @@ Two reptilian appendages sprout from his shoulders in a way that words fail to d
 (Ben, campus, base, neutral, right) Take your time.
 
 [CHOICE]
-*Rowdy Fucker for life*
-*Cop Killer, obviously*
+*[color=#ff80d4]Rowdy Fucker for life[/color]*
+*[color=#bd00ff]Cop Killer, obviously[/color]*
 *I don't want to enlist in the WAR*
 *Ask what gang Endless War belongs to*
 
-*Rowdy Fucker for life*
+*[color=#ff80d4]Rowdy Fucker for life[/color]*
 (PCPG) !enlist rowdys
 
 (Ben|Ben, campus, base, neutral) Well, shit.
@@ -2406,7 +2406,7 @@ This is all starting to freak me out a little bit. Feeling? Touch? What is this 
 [CHANGE Munchy]
 *
 
-*Cop Killer, obviously*
+*[color=#bd00ff]Cop Killer, obviously[/color]*
 (PCPG) !enlist killers
 
 (Munchy, campus, default, neutral) I fucking knew it.
@@ -2482,19 +2482,19 @@ Maybe I’ll consider it another time.
 (Endless War, knife, shockedMED) Now stop asking questions and just fucking enlist!
 *
 
-[Forget Rowdy Fucker for life]
-[Forget Cop Killer, obviously]
+[paddingline]
+[paddingline]
 [Forget I don't want to enlist in the WAR]
 
 [CHOICE]
-*Rowdy Fucker for life*
-*Cop Killer, obviously*
+*[color=#ff80d3]Rowdy Fucker for life[/color]*
+*[color=#bd00fe]Cop Killer, obviously[/color]*
 *I don't want to enlist in the WAR*
 
-*Rowdy Fucker for life*
+*[color=#ff80d3]Rowdy Fucker for life[/color]*
 (PCPG) !enlist rowdys
 
-(Ben|Ben, campus, slouch, neutral) Well, shit.
+(Ben|Ben, campus, base, neutral) Well, shit.
 
 [Ben Leaves]
 [EndlessWar leaves]
@@ -2523,7 +2523,7 @@ This is all starting to freak me out a little bit. Feeling? Touch? What is this 
 [CHANGE Munchy]
 *
 
-*Cop Killer, obviously*
+*[color=#bd00fe]Cop Killer, obviously[/color]*
 (PCPG) !enlist killers
 
 (Munchy, campus, default, neutral) I fucking knew it.
@@ -2637,10 +2637,10 @@ An evening at Gibbontake’s house, huh? That could be fun.
 *
 
 [CHOICE]
-*Yeah, I’m down*
+*[color=#7bd3ff]Yeah, I’m down[/color]*
 *Sorry, maybe another time*
 
-*Yeah, I’m down*
+*[color=#7bd3ff]Yeah, I’m down[/color]*
 
 (Gibbon, campus, handsup, smittenMAX) Oh, cool! Ooh, I can show you my other plushies, and my pets too! Meet you out front after school? We can walk together from there.
 
@@ -2797,7 +2797,7 @@ Academia or video games: A moral quandary as old as time itself.
 
 [CHOICE]
 *Go to class. How could it possibly have any far reaching significance for me to play this game right now?*
-*Who the fuck am I kidding, I AM games, when have I ever chosen any differently?*
+*[color=#ff5d5c]Who the fuck am I kidding, I AM games, when have I ever chosen any differently?[/color]*
 
 *Go to class. How could it possibly have any far reaching significance for me to play this game right now?*
 
@@ -2826,7 +2826,7 @@ With that, I sprint out into the hallway, before realizing that I don’t have a
 [StopMusic]
 *
 
-*Who the fuck am I kidding, I AM games, when have I ever chosen any differently?*
+*[color=#ff5d5c]Who the fuck am I kidding, I AM games, when have I ever chosen any differently?[/color]*
 
 (PCPG) Sure, fuck it. Do I need a controller?
 
@@ -3043,7 +3043,7 @@ Fuck it.
 
 [CHOICE]
 *Nah, I’m honestly just taking all the courses to meet people and get laid.*
-*It’s all still a bit overwhelming, but at least filling my entire day with work keeps the boredom at bay. (Oh God, oh fuck, I’m committing to this, aren’t I?)*
+*[color=#6782ff]It’s all still a bit overwhelming, but at least filling my entire day with work keeps the boredom at bay. (Oh God, oh fuck, I’m committing to this, aren’t I?)[/color]*
 
 *Nah, I’m honestly just taking all the courses to meet people and get laid.*
 
@@ -3067,7 +3067,7 @@ Maybe I really do need to find a calling of sorts if I want to have a chance of 
 [StopMusic]
 *
 
-*It’s all still a bit overwhelming, but at least filling my entire day with work keeps the boredom at bay. (Oh God, oh fuck, I’m committing to this, aren’t I?)*
+*[color=#6782ff]It’s all still a bit overwhelming, but at least filling my entire day with work keeps the boredom at bay. (Oh God, oh fuck, I’m committing to this, aren’t I?)[/color]*
 
 (PCPG) It’s all still a bit overwhelming, but at least filling my entire day with work keeps the boredom at bay.
 
@@ -3135,7 +3135,7 @@ If he just cleaned up... and got some new clothes...
 
 [CHOICE]
 *Wish him well and ditch*
-*Invite him over to stay for the night*
+*[color=#ffe300]Invite him over to stay for the night[/color]*
 
 *Wish him well and ditch*
 
@@ -3151,7 +3151,7 @@ Who knows?
 [StopMusic]
 *
 
-*Invite him over to stay for the night*
+*[color=#ffe300]Invite him over to stay for the night[/color]*
 
 (PCPG) Hey, do you have a place to stay tonight?
 
