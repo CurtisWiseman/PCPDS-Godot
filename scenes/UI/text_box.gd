@@ -20,6 +20,7 @@ var current_voice = null
 
 #So they don't get ARC'd
 var old_frames = {}
+var old_frames_order = PoolStringArray()
 
 const FRAME_TIME = 1.0/30.0
 var timer = 0.0
@@ -202,8 +203,12 @@ func load_single_frame_into_sprite(sprite, num, prefix):
 	var texture = load(get_texture_path(num, prefix))
 	if texture == null:
 		prints("Missing frame", prefix, num)
-	else:
-		old_frames[texture.resource_path] = texture
+	elif not old_frames.has(texture.resource_path):
+			old_frames[texture.resource_path] = texture
+			while old_frames_order.size() > 600:
+				old_frames.erase(old_frames_order[0])
+				old_frames_order.remove(0)
+			old_frames_order.push_back(texture.resource_path)
 	sprite.texture = texture
 	#sprite.name = "frame_" + str(num)
 	
