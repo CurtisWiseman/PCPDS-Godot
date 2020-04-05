@@ -500,8 +500,8 @@ I have a feeling this ain’t gonna be easy.
 [==> Initiation]
 *
 [Scene: Initiation]
-[StopMusic]
-[Song: PCPDating_Holy]
+
+
 (Ben, casual, base, shockMAX)
 (PCPG) No way, Endless War is right about this, this is just a waste of time and Killer resources. I didn’t sign up to be a Killer just to play hide and seek.
  
@@ -522,7 +522,7 @@ Ben then faces the group of Killers surrounding us.
 [SLIDE Ben offright]
 [CopKillers leaves]
 Ben then leaves the Cathedral while the Killers around us head inside.
-
+[StopMusic]
 [SLIDE EndlessWar center]
 (EndlessWar|Endless War, stand, angryMED) AAARGH! Fuck Ben and his fucking stupid pizza party! The Killers are wasting their goddamn time with this fucking shit!
  
@@ -533,7 +533,7 @@ Endless War stops to think for a second. Uhh, should I be worried?
 (EndlessWar|Endless War, cross, neutral) Hmm, I could use you.. 
  
 Okay now I’m definitely worried.
- 
+[Song: PCPDating_Holy]
 (EndlessWar|Endless War, stand, neutral) How would you like to help create a new age of WAR? To move it onto the next phase in gang warfare? To truly ascend it to a higher plane of violence?
  
 A new age of WAR? 
@@ -758,7 +758,7 @@ I get the feeling he really wasn’t joking there. I better find a lead on them 
 
 [Location: scienceclass]
 [Song: PCP-AMBIENT_Classroom]
-(Ben, casual, exasp, angryMIN)
+(Ben, casual, exasp, angryMIN, center)
 [fade from black]
  
 On this fine morning the class finds itself being berated by a late, undressed, and hungover Ben Saint who still has the gall to lecture us like we were the ones who fucked up.
@@ -874,7 +874,7 @@ I decide to forget about it and make my way to the cafeteria for lunch.
 
 As I enter I find the cafeteria in chaos, another WAR clash perhaps? How did I not hear about this? Hopefully I can still catch some of the action before its over.
 
-(Munchy, campus, squatting, angryMED)
+(Munchy, campus, squatting, angryMED, center-100)
 I find Munchy in the midst of it all, appropriately directing the chaos from within. He notices me enter the cafeteria and approaches me.
 
 (Munchy, campus, default, sadMIN) Please tell me you know where Ben is.
@@ -971,9 +971,9 @@ My confusion slowly turns to anger, and in the moment I find the words “!kill 
 (Ben, casual, fruit) NOOOOO!!!!!
  
 [fade to black]
-[StopMusic]
 [Ben leaves]
 [Munchy leaves]
+[StopMusic]
  
 Despite Ben’s rejections, Munchy eventually forced him back onto ketosis, and the universe returned to normal, mostly. 
 
@@ -1076,8 +1076,8 @@ Ben goes quiet for a moment, then in a calm voice replies.
  
 After the successful zone cap I make my way over to Ben's place. He greets me at the door and we head up to his room.
  
-[Location: benroom.day]
 [Song: PCPDating_DateTheme]
+[Location: benroom.day]
 (Ben, casual, base, neutral, left)
 [fade from black]
  
@@ -1537,7 +1537,7 @@ The girl named Magda speaks up.
  
 (Ben, campus, base, neutral|cloud, right-200) Ah, I see.
 
-[StopMusic]
+
 (Magda, worried, blank, left)
 The room then becomes awkwardly quiet as no one finds anything to talk about. 
 
@@ -1584,7 +1584,7 @@ The girl named Magda speaks up.
 
 (Ben, campus, base, neutral|cloud, right-200) Ah, I see.
 
-[StopMusic]
+
 (Magda, worried, blank, left)
 The room then becomes awkwardly quiet as no one finds anything to talk about. Shouldn’t Ben like, introduce us or something?
 *
@@ -1603,7 +1603,7 @@ Vincent doesn’t respond.
  
 [SLIDE Vincent offleft]
 The awkward silence continues as it had before, until Vincent can also no longer take it and silently leaves us as well.
-
+[StopMusic]
 [Song: PCPDating_ProCrastinatorShortLoop]
 
 [SLIDE Ben center]
@@ -1678,7 +1678,7 @@ However, as I reach the Cathedral, I am unfortunately greeted by a familiar sigh
 
 [pause]
 
-(Russel, base, neutral, right) Heh heh heh.
+(Russel, bigboi, neutral, right) Heh heh heh.
 
 [SLIDE Russel offright]
 
@@ -1744,11 +1744,11 @@ Maybe the thing we needed to find, or the problem we needed to solve wasn’t wi
 Another moment of silence passes and regret for what I said starts to settle in. 
 
 What was I thinking? Friendship? Relationships? Who cares about any of that? Who would seriously consider such childish thoughts? 
-
+[Song: PCPDating_HappyOrSomething]
 (Ben, casual, base, happyMIN)
 I was supposed to find the PPU, not come up with some kumbaya bullshit. Ben’s obviously not gonna fucking accept this.
  
-[Song: PCPDating_HappyOrSomething]
+
 (Ben, casual, point, happyMIN) Yeah.. Yeah! I think I get what you mean!
 
 (PCPG) Wait, you do?
@@ -1896,7 +1896,7 @@ Oh, it doesn’t even matter.
  
 I suddenly wake up in a shock and find myself in a very bright sewers of sorts. How did I end up here? Is this hell?
 
-(EndlessWar|Endless War, cross, neutral) Well well well.
+(EndlessWar|Endless War, cross, neutral, center) Well well well.
  
 Oh god it is.
 
@@ -2104,5 +2104,7 @@ So yeah, I never actually #GotBenToGoGay, but I also don’t think I necessarily
 
 Ben Saint is totally fucking gay.
 
+[Ben leaves]
+[CopKillers leaves]
 [StopMusic]
 [CREDITS]
