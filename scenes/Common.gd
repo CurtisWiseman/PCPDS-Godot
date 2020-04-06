@@ -50,11 +50,9 @@ func scene(lineText, index, dialogueNode):
 						dialogueNode.index = i
 	return true
 
-
-
 func HandleMyInput(value, passed):
 	if passed:
-		playerName = value;
+		playerName = value.rstrip(" ");
 		emit_signal("MyInput_Handled")
 	else :
 		print('Do something about failure')
