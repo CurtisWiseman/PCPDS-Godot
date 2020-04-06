@@ -8,10 +8,12 @@ var placeholder = null;
 var position = null;
 var blink = false;
 
+var blocking_input_because_skip = false
 
 func _ready():
+	blocking_input_because_skip = global.turbo_mode
+	editable = not blocking_input_because_skip
 	connect("text_changed", self, "_sanitize_name")
-	
 	self.add_font_override("normal_font", global.defaultFont)
 	
 	if node == null:
@@ -23,6 +25,11 @@ func _ready():
 	if placeholder != null: placeholder_text = placeholder
 	if blink: caret_blink = true;
 
+func _process(delta):
+	if blocking_input_because_skip:
+		blocking_input_because_skip = global.turbo_mode
+		editable = not blocking_input_because_skip
+		
 func _sanitize_name(new_text):
 	var res = ""
 	var cursor_pos = caret_position
@@ -34,7 +41,7 @@ func _sanitize_name(new_text):
 	caret_position = min(cursor_pos, text.length())
 	
 func _input(event):
-	if Input.is_key_pressed(KEY_ENTER) and text != "":
+	if Input.is_key_pressed(KEY_ENTER) and text != "" and not blocking_input_because_skip:
 		if regex != null:
 			if (text.match(regex)):
 				emit_signal("return_signal", text, true)

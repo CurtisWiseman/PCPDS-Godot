@@ -674,7 +674,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif dialogue[index].findn('ENDING') != -1:
 				
 				say("", "")
-				scene.change('main_menu', 'fadeblack', 1, 0.01)
+				get_tree().change_scene("res://scenes/Main_Menu.tscn")
 				yield(scene, "scene_changed")
 			elif dialogue[index].find('ZOOM') == 1:
 				global.pause_input = true
@@ -857,10 +857,8 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			else:
 				noChar = true
 			
-			systems.history.add_line(text, chrName)
-			
 			if say: # If the text is to be said then...
-				
+				systems.history.add_line(text, chrName)
 				lastKeep(index)
 				var halt = global.rootnode.scene(dialogue[index], index+1, self) # Send the dialogue to the scene function in the root of the scene.
 				say(text, chrName, info[0])
