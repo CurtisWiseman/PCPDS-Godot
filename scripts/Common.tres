@@ -556,7 +556,7 @@ Huh? What is that even supposed to mean?
 (Mage, campus, 5, sadMIN)
 [SLIDE Mage offleft]
 [Mage leaves]
-(Munchy, campus, 3, angryMED) You IDIOTS, I’m talking about MUSIC! Ever heard of Sleep Tight, THE greatest band of our generation? No? Well, fuck you.
+(Munchy, campus, 3, angryMED) You IDIOTS, I’m talking about MUSIC! I was LYING when I said music isn't real art. And not ONE of you peons called me out on it! Ever heard of Sleep Tight, THE greatest band of our generation? No? Well, fuck you.
 (Munchy, campus, 1, neutral) How about cooking, then, maybe that’s more appealing to you goddamn Neanderthals. Most people, aka retards, would not agree with me that it’s an art form, but I think it’s a perfectly valid form of creation.
 (Munchy, campus, 3, happyMED) What’s better than making art, and not only that, being able to eat it, too?
 
@@ -1423,7 +1423,7 @@ Its large furry mass weighs heavy on my stomach, winding me of any air.
 (Ben, campus, base, neutral, left)
 (Brunswick, body, neutral, center+100)
 [fade from black]
-The beast obliges and the enormous weight finally lifts from my body, revealing itself as a Momoswine.
+The beast obliges and the enormous weight finally lifts from my body, revealing itself as a Mamoswine.
 
 (Ben|???, campus, base, neutral) Sorry about that, but Brunswick here just loves to charge right in, to a fault really.
 
@@ -1467,7 +1467,7 @@ The class goes silent at the threat.
 
 (Ben|Professor Saint, campus, dab) But more importantly, your resident and confirmed best Kingpin, THE Cop Killer, ready to !dab on all the haters! !dab !dab !dab
 
-Suddenly half of the class gets up from their seats and !dabs along with him aggressively, while the other half disapprovingly shake thier bodies about in response.
+Suddenly half of the class gets up from their seats and !dabs along with him aggressively, while the other half disapprovingly shake their bodies about in response.
 
 So this is the Cop Killers leader huh?
 
@@ -1579,7 +1579,7 @@ Just before Brunswick falls into the portal and is consumed once more by the fir
 [StopMusic]
 (Lord of Ghosts|???, shock, blank, offright, slide, right+100) STOP!
 
-Somehow this gets to Brunswicks ears, stopping him inches from the portal’s edge.
+Somehow this gets to Brunswick's ears, stopping him inches from the portal’s edge.
 
 (Lord of Ghosts, neutral, blank)
 (Russel, bigboi, worried) The Lord of Ghosts himself? But sir what are you doing here?
@@ -1824,10 +1824,10 @@ He hands me a piece of paper with nigh illegible handwriting on both sides.
 (Digi|Professor Digibro, Campus, 4, HappyMAX) Not sure I’d even be allowed to, but you really should have a look at every single thing on that list. It’s some great shit.
 
 [CHOICE]
-*I’m kind of a piece of shit already, I can’t afford to go full otaku*
+*[color=#bd00ff]I’m kind of a piece of shit already, I can’t afford to go full otaku[/color]*
 *[color=#bd00ff]Months' worth of entertainment? I’m in![/color]*
 
-*I’m kind of a piece of shit already, I can’t afford to go full otaku*
+*[color=#bd00ff]I’m kind of a piece of shit already, I can’t afford to go full otaku[/color]*
 
 (PCPG) Look, you’re a really interesting teacher by way of how you present yourself, but I’m not gonna become the kind of weirdo who’s THIS into anime.
 
@@ -1987,7 +1987,7 @@ She sounds very dedicated.
 (Nate|Professor Bestman, campus, smoking, confusedMIN|shades) What do you think class? Wouldn’t that be incredibly boring?
 [CHOICE]
 *[color=#ff89f0]Stand with Mage[/color]*
-*Don’t stand with Mage*
+*[color=#ff89f0]Don’t stand with Mage[/color]*
 
 *[color=#ff89f0]Stand with Mage[/color]*
 
@@ -2040,7 +2040,7 @@ A menacing shadow appears behind us.
 [CHANGE Mage fade 1 0.01]
 *
 
-*Don’t stand with Mage*
+*[color=#ff89f0]Don’t stand with Mage[/color]*
 
 (PCPG) I agree Prof. Bestman. The contents of our dreams are only ever interesting to ourselves and extremely boring to everyone else.
 
@@ -2126,7 +2126,7 @@ Like is any of this for real...
 
 [CHOICE]
 *[color=#7bff00]Help Nate[/color]*
-*Go back to school*
+*[color=#7bff00]Go back to school[/color]*
 
 *[color=#7bff00]Help Nate[/color]*
 
@@ -2146,7 +2146,7 @@ Like is any of this for real...
 [CHANGE Nate fade 1 0.01]
 *
 
-*Go back to school*
+*[color=#7bff00]Go back to school[/color]*
 
 (PCPG) This all sounds like a pain in the ass, so I don’t want to get involved.
 
@@ -2638,7 +2638,7 @@ An evening at Gibbontake’s house, huh? That could be fun.
 
 [CHOICE]
 *[color=#7bd3ff]Yeah, I’m down[/color]*
-*Sorry, maybe another time*
+*[color=#7bd3ff]Sorry, maybe another time[/color]*
 
 *[color=#7bd3ff]Yeah, I’m down[/color]*
 
@@ -2656,7 +2656,7 @@ The bell tolls, and students begin filtering back out of the cafeteria.
 [CHANGE Gibbon fade 1 0.01]
 *
 
-*Sorry, maybe another time*
+*[color=#7bd3ff]Sorry, maybe another time[/color]*
 
 (Gibbon, campus, default, smittenMED) Well, yeah I guess we’ve got a whole school year to do everything. I hope you can come over sooner rather than later, though.
 
@@ -2796,10 +2796,10 @@ I want to say yes, but a quick glance at the clock reveals that I really should 
 Academia or video games: A moral quandary as old as time itself.
 
 [CHOICE]
-*Go to class. How could it possibly have any far reaching significance for me to play this game right now?*
+*[color=#ff5d5c]Go to class. How could it possibly have any far reaching significance for me to play this game right now?[/color]*
 *[color=#ff5d5c]Who the fuck am I kidding, I AM games, when have I ever chosen any differently?[/color]*
 
-*Go to class. How could it possibly have any far reaching significance for me to play this game right now?*
+*[color=#ff5d5c]Go to class. How could it possibly have any far reaching significance for me to play this game right now?[/color]*
 
 (PCPG) I’d love to, that sounds cool as hell, but I really have to make a run for the classroom if I don’t want Professor Bestman to dismantle me on atomic level.
 
@@ -3042,10 +3042,10 @@ Fake it till I make it?
 Fuck it.
 
 [CHOICE]
-*Nah, I’m honestly just taking all the courses to meet people and get laid.*
+*[color=#6782ff]Nah, I’m honestly just taking all the courses to meet people and get laid.[/color]*
 *[color=#6782ff]It’s all still a bit overwhelming, but at least filling my entire day with work keeps the boredom at bay. (Oh God, oh fuck, I’m committing to this, aren’t I?)[/color]*
 
-*Nah, I’m honestly just taking all the courses to meet people and get laid.*
+*[color=#6782ff]Nah, I’m honestly just taking all the courses to meet people and get laid.[/color]*
 
 (PCPG) Nah, I’m honestly just taking all the courses to meet people and get laid.
 
@@ -3134,10 +3134,10 @@ This guy sure knows a lot, and talks as much too. I'm surprised he hasn't got a 
 If he just cleaned up... and got some new clothes...
 
 [CHOICE]
-*Wish him well and ditch*
+*[color=#ffe300]Wish him well and ditch[/color]*
 *[color=#ffe300]Invite him over to stay for the night[/color]*
 
-*Wish him well and ditch*
+*[color=#ffe300]Wish him well and ditch[/color]*
 
 (PCPG) Well dude, it sounds like you’ve got it all under control. Best of luck with finding that Donatello guy. See ya around?
 
