@@ -2,6 +2,7 @@ extends Node
 
 signal scene_changed
 var directory = 'res://scenes/'
+var mod_scenes_dir = 'res://mod/scripts/'
 var current
 var last
 var cur_scene = null
@@ -23,24 +24,27 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 	# Variables for directory manipulation.
 	#These folders don't exist in exported projects!
 	var scenes = ["Ben Saint", "Mage", "Gibbon", "Jesse", "Tom", "Digi", "Munchy", "Davoo", "Endless War Miniroute", "Nate", "Common", "Main_Menu"]
+	var is_mod_scene = {}
 #	var scene
 #
 #	# Open the directory as dir.
-#	var dir = Directory.new()
-#	dir.open(directory)
-#	dir.list_dir_begin()
+	var dir = Directory.new()
+	dir.open(mod_scenes_dir)
+	dir.list_dir_begin()
 #
 #	# Until the end of the directory is reached append to scenes.
-#	while true:
-#		# Get the next scene in the directory.
-#		scene = dir.get_next()
-#
-#		# If scene exists then append it to scenes, else break.
-#		if scene != "" :
-#			if !dir.dir_exists(scene) and scene.findn('.gd') == -1:
-#				scenes.append(scene.left(len(scene) - 5))
-#		else:
-#			break
+	while true:
+		# Get the next scene in the directory.
+		var scene = dir.get_next()
+
+		# If scene exists then append it to scenes, else break.
+		if scene != "" :
+			if !dir.dir_exists(scene) and scene.findn('.tres') != -1:
+				scene = scene.left(len(scene) - 5)
+				scenes.append(scene)
+				is_mod_scene[scene] = true
+		else:
+			break
 #	
 #	dir.list_dir_end() # End the directory.
 	var found = false # Directory has not yet been found.
@@ -53,6 +57,15 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 			found = true
 			last = current
 			
+			var target_tscn
+			
+			if is_mod_scene.get(scenes[i], false):
+				global.destination_script = mod_scenes_dir + scenes[i] + ".tres"
+				target_tscn = directory + "Generic.tscn"
+			else:
+				target_tscn = directory + scenes[i] + '.tscn'
+			
+			
 			if transition != null:
 				display = global.rootnode.get_node('Systems')
 				display = display.blackScreen
@@ -60,8 +73,8 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 					_transition(display, transition, 'out', speed, time)
 					yield(self, 'transition_finish')
 				
-				get_tree().change_scene(directory + scenes[i] + '.tscn')
-				current = directory + scenes[i] + '.tscn'
+				get_tree().change_scene(target_tscn)
+				current = target_tscn
 				yield(global, 'finished_loading')
 				
 				display = global.rootnode.get_node('Systems')
@@ -70,8 +83,8 @@ func change(scenechange, transition=null, speed=10, time=0.5):
 				yield(self, 'transition_finish')
 				
 			else:
-				get_tree().change_scene(directory + scenes[i] + '.tscn')
-				current = directory + scenes[i] + '.tscn'
+				get_tree().change_scene(target_tscn)
+				current = target_tscn
 				yield(global, 'finished_loading')
 			
 			break

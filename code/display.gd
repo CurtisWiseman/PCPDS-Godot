@@ -389,15 +389,17 @@ func face(facepath, body, x=0, y=0, type='face'):
 			index = i
 			break
 	
+	var final_path = global.get_content_path(facepath)
 	# If index not found then print an error and return.
 	if index == null:
-		print("Error: No body named " + body + " exists for face " + facepath + " to use!")
+		print("Error: No body named " + body + " exists for face " + final_path + " to use!")
 		return
+		
 	
 	var facenode = Sprite.new() # Create a new sprite node.
-	facenode.set_name(layernames(facepath)) # Give the sprite node the face name for a node name.
+	facenode.set_name(layernames(final_path)) # Give the sprite node the face name for a node name.
 	facenode.centered = false # Uncenter the node.
-	facenode.texture = load(facepath) # Set the node's texture to the face image.
+	facenode.texture = load(final_path) # Set the node's texture to the face image.
 	facenode.position = Vector2(x,y) # Set the face's position to x and y.
 	layers[index]['node'].add_child(facenode) # Add as a child of the body node.
 	#facenode.self_modulate = layers[index]['node'].self_modulate
@@ -410,7 +412,7 @@ func face(facepath, body, x=0, y=0, type='face'):
 	else:
 		if !layers[index].has('AFL'):
 			layers[index]['AFL'] = []
-		layers[index]['AFL'].append({'node':facenode, 'position':Vector2(x,y), 'type':type, 'path':facepath}) # Add the accessory, blush, or whatever to AFL.
+		layers[index]['AFL'].append({'node':facenode, 'position':Vector2(x,y), 'type':type, 'path': final_path}) # Add the accessory, blush, or whatever to AFL.
 		
 		if layers[index]['AFL'].size() < 4:
 			layers[index]['node'].material.set_shader_param("afl"+str(layers[index]['AFL'].size()), facenode.texture)
@@ -881,20 +883,21 @@ func nodupelayername(path):
 
 # A function to do the repetitive tasks needed when adding a new layer.
 func layersetup(path, z):
+	var final_path = global.get_content_path(path)
 	
 	# If the file doesn't exist then say so, let the user fix the rest.
-	if not ResourceLoader.exists(path) and not model.file_exists(path):
-		print('Error: The given content ' + path + ' does not exist!')
+	if not ResourceLoader.exists(final_path) and not model.file_exists(final_path):
+		print('Error: The given content ' + final_path + ' does not exist!')
 	
-	var content = load(path) # Load the content using it's path.
+	var content = load(final_path) # Load the content using it's path.
 	var cname = '' # The name of the content
 	
 	if z == 0:
 		cname = 'BG' # If z is zero set cname as BG.
 	else:
-		cname = layernames(path) # Get a unique name using the content name.
+		cname = layernames(final_path) # Get a unique name using the content name.
 	
-	var layer = {"name": cname, "path": path, "content": content, "layer": z, "position": Vector2(0,0)} # Make a dictionary of content information.
+	var layer = {"name": cname, "path": final_path, "content": content, "layer": z, "position": Vector2(0,0)} # Make a dictionary of content information.
 	
 	layers.append(layer) # Append the dictionary to the layers array.
 	var index = layers.size() - 1 # Get the index of the insertion.

@@ -1,5 +1,8 @@
 extends Node
 
+const MAJOR_VERSION = 1
+const MINOR_VERSION = 2
+
 # Variables to be used across all files.
 var size
 var rootnode
@@ -48,6 +51,17 @@ var tom = {'color': Color('f00000')}
 var locations = []
 var locationNames = []
 
+#hacked in very quick for loading custom scripts for mods
+var destination_script = null
+
+var mod_characters_textboxes = {}
+var mod_characters_afl = {}
+var mod_name = ""
+var mod_characters_voices = {}
+
+var mod_load_error = null
+
+var character
 func _pause_input_set(v):
 	#slap a breakpoint on this if you want to debug pause-locking
 	pause_input = v
@@ -55,6 +69,90 @@ func _pause_input_set(v):
 # Set dynamic variables + do startup functions.
 func _ready():
 	
+	#Load mod content
+	
+	#Most mod content just works seemlessly in various loading contexts.
+	#Here's some exceptions: 
+	#load all characterImages, 
+	#load textbox information for those characters
+	#load AFL information
+	#load the mod name
+	
+	var mod_json_file = File.new()
+	if mod_json_file.file_exists("res://mod/mod.json"):
+		mod_json_file.open("res://mod/mod.json", File.READ)
+		var mod_json = mod_json_file.get_as_text()
+		var mod_info = parse_json(mod_json)
+		mod_name = mod_info["name"].left(100).strip_edges()
+		
+		var version_chunks = mod_info["version_req"].split(".")
+		
+		var version_fine = false
+		
+		if version_chunks.size() > 1:
+			var major = version_chunks[0].to_int()
+			var minor = version_chunks[1].to_int()
+			
+			if major > MAJOR_VERSION or (major == MAJOR_VERSION and minor >= MINOR_VERSION):
+				version_fine = true
+				
+		if not version_fine:
+			mod_load_error = "Failed to load mod: Bad PCPDS Version"
+			
+		if mod_name != "" and version_fine:
+			game.SAVE_FOLDER += "/" + mod_name
+		
+			var dir = Directory.new()
+			dir.open("res://mod/chars/")
+			dir.list_dir_begin()
+		
+			while true:
+				var def = dir.get_next()
+				
+				if def != "" :
+					if !dir.dir_exists(def) and def.findn('.json') != -1:
+						var def_file = "res://mod/chars/" + def
+						var file = File.new()
+						file.open(def_file, File.READ)
+						var content = file.get_as_text()
+						var char_def = parse_json(content)
+						var char_id = char_def["char_id"].to_lower()
+						
+						
+						var bad = false
+						if detect_forbidden_mod_contents(char_id):
+							prints("ERROR: CHARACTER " + char_id + " USED FORBIDDEN TEXT IN IT'S NAME'")
+							
+						for cur in char_def["imgs"]["body"]:
+							var last_chunk = cur.substr(cur.find_last("/")+1)
+							if not last_chunk.begins_with(char_id):
+								prints("ERROR: CHARACTER " + char_id  +" HAD A BODY THAT DID NOT START WITH THE LOWER CASE CHARID!", last_chunk)
+								bad = true
+						
+						var search_space = [char_def["imgs"]]
+						while search_space.size() > 0:
+							var cur = search_space.pop_front()
+							var cur_type = typeof(cur)
+							
+							if cur_type == TYPE_ARRAY:
+								for v in cur:
+									search_space.append(v)
+							elif cur_type == TYPE_DICTIONARY:
+								for v in cur.values():
+									search_space.append(v)
+							elif cur_type == TYPE_STRING:
+								if detect_forbidden_mod_contents(cur):
+									prints("ERROR: FORBIDDEN TEXT IN IMAGE PATH:", cur)
+									bad = true
+									
+						if not bad:
+							characterImages.imgs[char_id] = char_def["imgs"]
+							mod_characters_textboxes[char_id] = char_def["text_box"]
+							mod_characters_afl[char_id] = char_def["imgs"].get("afl", {})
+							mod_characters_voices[char_id] = char_def.get("voice", null)
+				else:
+					break
+			
 	OS.window_fullscreen = true # Force fullscreen resolution.
 	
 	
@@ -245,3 +343,21 @@ func save_settings():
 	config.set_value("audio", "voice", global.voicesOn)
 	config.set_value("misc", "dev", global.devmode)
 	config.save("user://settings.cfg")
+
+#quick hack for mod support
+func get_content_path(path) -> String:
+	var trimmed = path
+	if trimmed.begins_with("res://"):
+		trimmed = trimmed.substr(6)
+	var file = File.new()
+	if file.file_exists("res://mod/" + trimmed):
+		return "res://mod/" + trimmed
+	return "res://" + trimmed
+
+
+func detect_forbidden_mod_contents(string) -> bool:
+	var forbidden = ['\n', '(', ')', '[', ']', ':', '"', '\'']
+	for f in forbidden:
+		if string.find(f) > -1:
+			return true
+	return false

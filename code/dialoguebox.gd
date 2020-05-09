@@ -139,7 +139,7 @@ func choice_display(text, top, bot):
 	
 	var choice = TextureRect.new()
 	choice.name = text
-	choice.texture = load('res://images/dialoguebox/choiceButton.png')
+	choice.texture = load(global.get_content_path('images/dialoguebox/choiceButton.png'))
 	choice.margin_top = top
 	choice.margin_bottom = bot
 	choice.margin_left = 0
@@ -203,8 +203,8 @@ func choice_pressed(choice, button):
 	emit_signal('empty_line')
 
 # Functions to change color when hovered/unhovered.
-func choice_hovered(choiceNode): choiceNode.texture = load('res://images/dialoguebox/choiceButtonHovered.png')
-func choice_unhovered(choiceNode): choiceNode.texture = load('res://images/dialoguebox/choiceButton.png')
+func choice_hovered(choiceNode): choiceNode.texture = load(global.get_content_path('images/dialoguebox/choiceButtonHovered.png'))
+func choice_unhovered(choiceNode): choiceNode.texture = load(global.get_content_path('images/dialoguebox/choiceButton.png'))
 
 
 # Function to keep items from the last spoken line.
@@ -351,13 +351,13 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var track = dialogue[index].lstrip('[')
 				track = track.rstrip(']')
 				track = track.substr(6,dialogue[index].length()-1)
-				systems.sound.music("res://sounds/music/" + track + ".ogg", true)
+				systems.sound.music(global.get_content_path("sounds/music/" + track + ".ogg"), true)
 			
 			elif dialogue[index].findn('SFX:') != -1:
 				var sfx = dialogue[index].lstrip('[')
 				sfx = sfx.rstrip(']')
 				sfx = sfx.substr(5,dialogue[index].length()-1)
-				systems.sound.sfx("res://sounds/sfx/" + sfx + ".ogg")
+				systems.sound.sfx(global.get_content_path("sounds/sfx/" + sfx + ".ogg"))
 			
 			elif dialogue[index].findn('StopMusic') != -1:
 				systems.sound.stop_music()
@@ -393,7 +393,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var fade_time = 0.75
 				
 				#var locIndex = global.locationNames.find(loc)
-				var path = "res://images/backgrounds/" + loc + ".png"
+				var path = global.get_content_path("images/backgrounds/" + loc + ".png")
 				var file_check = File.new()
 				if ResourceLoader.exists(path) or file_check.file_exists(path):
 					global.pause_input = true
@@ -427,7 +427,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 						for i in range(0, ovr.size()):
 						#	var ovrIndex = global.locationNames.find(ovr[i])
 						#	if ovrIndex != -1:
-							var fore_path = "res://images/backgrounds/" + ovr[i] + ".png"
+							var fore_path = global.get_content_path("images/backgrounds/" + ovr[i] + ".png")
 							if ResourceLoader.exists(fore_path) or file_check.file_exists(fore_path):
 								if old_overlays_to_remove.find(fore_path) == -1:
 									systems.display.image(fore_path, ovrLayer[i])
@@ -468,16 +468,16 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				game.safeToSave = true
 			elif dialogue[index].to_lower().strip_edges().find("[credits") == 0:
 				global.pause_input = true
-				systems.textBoxBackground.make_invisible()
+				say("", "")
 				fadeblackalpha(systems.blackScreen, 'out', 1, 0.01)
 				yield(self, 'transition_finish')
 				systems.sound.stop_music()
 				systems.sound.stop_SFX()
 				var video_path
 				if dialogue[index].to_lower().find("mumkey"):
-					video_path = 'res://images/credits/Credits scribbled.ogv'
+					video_path = global.get_content_path('images/credits/Credits scribbled.ogv')
 				else:
-					video_path = 'res://images/credits/Credits non-scribbled.ogv'
+					video_path = global.get_content_path('images/credits/Credits non-scribbled.ogv')
 				systems.display.animation(video_path)
 				systems.display.animation.volume_db = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
 				yield(systems.display, 'transition_finish')
@@ -492,7 +492,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				video_name = video_name.rstrip(']')
 				video_name = video_name.substr(7, dialogue[index].length()-1)
 				
-				var video_path = 'res://images/CG/' + video_name + '.ogv'
+				var video_path = global.get_content_path('images/CG/' + video_name + '.ogv')
 				
 				systems.display.animation(video_path)
 				yield(systems.display, 'transition_finish')
@@ -509,7 +509,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				imageName = imageName.rstrip(']')
 				imageName = imageName.substr(4,dialogue[index].length()-1)
 				
-				var imagePath = 'res://images/CG/' + imageName + '.png'
+				var imagePath = global.get_content_path('images/CG/' + imageName + '.png')
 				
 				var old_cg = null
 				if CG != null:
@@ -536,7 +536,7 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				imageName = imageName.rstrip(']')
 				imageName = imageName.substr(8,dialogue[index].length()-1)
 				
-				var imagePath = 'res://images/CG/' + imageName + '.png'
+				var imagePath = global.get_content_path('images/CG/' + imageName + '.png')
 				
 				systems.display.image(imagePath, 10)
 				CG = imagePath
@@ -950,14 +950,14 @@ func parse_info(info):
 		"Redman":
 			remove_dupes('redman', info)
 			yield(self, 'dupeCheckFinished')
-			var num = str(search('return characterImages.redman.body', info[1]))
-			var body = 'characterImages.redman.body['+str(num)+']'
+			var num = str(search('return characterImages.imgs.redman.body', info[1]))
+			var body = 'characterImages.imgs.redman.body['+str(num)+']'
 			if notsame[0]: parse_position(info, 'systems.display.image('+body+', 1)', body, 2, notsame[1])
 		"Gungirl":
 			remove_dupes('gungirl', info)
 			yield(self, 'dupeCheckFinished')
-			var num = str(search('return characterImages.gungirl.body', info[1]))
-			var body = 'characterImages.gungirl.body['+str(num)+']'
+			var num = str(search('return characterImages.imgs.gungirl.body', info[1]))
+			var body = 'characterImages.imgs.gungirl.body['+str(num)+']'
 			if notsame[0]: parse_position(info, 'systems.display.image('+body+', 1)', body, 2, notsame[1])
 		"Tom":
 			info[0] = 'tom'
@@ -973,7 +973,7 @@ func parse_info(info):
 				if tom_poses.find(next) != -1:
 					if next == "whisky":
 						next = "whiskey"
-					var bodies = characterImages.tom["pose"+str(poseNum)].body
+					var bodies = characterImages.imgs.tom["pose"+str(poseNum)].body
 					for j in range(bodies.size()):
 						var bod = bodies[j]
 						if bod.find(next) != -1:
@@ -982,7 +982,7 @@ func parse_info(info):
 							break
 			remove_dupes('tom', info)
 			yield(self, 'dupeCheckFinished')
-			if notsame[0]: parse_expression(info, 'tom.pose' + str(poseNum), 'characterImages.tom.pose' + str(poseNum) +'.body['+str(bodyNum)+']', i, 'null', notsame[1])
+			if notsame[0]: parse_expression(info, 'tom.pose' + str(poseNum), 'characterImages.imgs.tom.pose' + str(poseNum) +'.body['+str(bodyNum)+']', i, 'null', notsame[1])
 		"Colt Corona":
 			var charName = info[0].to_lower();
 			charName = charName.replace(' ', '');
@@ -1002,10 +1002,10 @@ func parse_info(info):
 			if notsame[0]: parse_outfit(info, charName, 1, notsame[1])
 	
 func parse_special_digi(info, parsedInfo, i, pos):
-	var num = str(search('return characterImages.'+parsedInfo+'.special.body', info[i+1]))
-	var video = 'characterImages.'+parsedInfo+'.special.body[' + str(num) + ']'
-	var mask = 'characterImages.'+parsedInfo+'.special.mask[' + str(num) + ']'
-	var still = 'characterImages.'+parsedInfo+'.special.still[' + str(num) + ']'
+	var num = str(search('return characterImages.imgs.'+parsedInfo+'.special.body', info[i+1]))
+	var video = 'characterImages.imgs.'+parsedInfo+'.special.body[' + str(num) + ']'
+	var mask = 'characterImages.imgs.'+parsedInfo+'.special.mask[' + str(num) + ']'
+	var still = 'characterImages.imgs.'+parsedInfo+'.special.still[' + str(num) + ']'
 	var expression_num_stuff = parse_expnum(info[i+2], parsedInfo+'.special')
 	var face_num = expression_num_stuff[0]
 	var faceType = expression_num_stuff[1]
@@ -1013,7 +1013,7 @@ func parse_special_digi(info, parsedInfo, i, pos):
 	if faceType == "shocked":
 		faceType = "shock"
 	var forced_mask_name = mask#"/"+parsedInfo +'_special_' + str(num)
-	var face = '\n\tsystems.display.face(characterImages.'+parsedInfo+'.special.'+faceType+'['+face_num+'], '+forced_mask_name+')'
+	var face = '\n\tsystems.display.face(characterImages.imgs.'+parsedInfo+'.special.'+faceType+'['+face_num+'], '+forced_mask_name+')'
 	parse_position(info, 'systems.display.mask(' + mask + ', ' + video + ', ' + still + ', "video", 1, false, ' + forced_mask_name + ')' + face, forced_mask_name, i+3, pos)
 	return
 	
@@ -1103,12 +1103,18 @@ func parse_outfit(info, parsedInfo, i, pos):
 		parsedInfo += '.knife'
 	
 	if info[i] == "base" and parsedInfo == "russel":
-		parse_expression(info, parsedInfo+'.base', 'characterImages.'+parsedInfo+'.base.body[0]', i+1, info[i+1], pos)
+		parse_expression(info, parsedInfo+'.base', 'characterImages.imgs.'+parsedInfo+'.base.body[0]', i+1, info[i+1], pos)
+		return
+		
+	#Quick hack for mod support
+	if global.mod_characters_afl.has(parsedInfo):
+		num = str(search('return characterImages.imgs.'+parsedInfo+'.body', info[i]))
+		parse_expression(info, parsedInfo + "." + info[i], 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
 		return
 		
 	match info[i]:
 		"campus":
-			num = str(search('return characterImages.'+parsedInfo+'.campus.body', info[i+1]))
+			num = str(search('return characterImages.imgs.'+parsedInfo+'.campus.body', info[i+1]))
 			if num == '-1' or num == '-2':
 				num = '0'
 				next = 1
@@ -1116,10 +1122,10 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 2
 			parsedInfo += '.campus'
 			var extra = ''
-			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
-			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
+			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.imgs.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
+			parse_expression(info, parsedInfo+extra, 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"casual":
-			num = str(search('return characterImages.'+parsedInfo+'.casual.body', info[i+1]))
+			num = str(search('return characterImages.imgs.'+parsedInfo+'.casual.body', info[i+1]))
 			if num == '-1' or num == '-2':
 				num = '0'
 				next = 1
@@ -1127,10 +1133,10 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 2
 			parsedInfo += '.casual'
 			var extra = ''
-			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
-			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
+			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.imgs.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
+			parse_expression(info, parsedInfo+extra, 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"cross":
-			num = str(search('return characterImages.'+parsedInfo+'.cross.body', info[i+1]))
+			num = str(search('return characterImages.imgs.'+parsedInfo+'.cross.body', info[i+1]))
 			if num == '-1' or num == '-2':
 				num = '0'
 				next = 1
@@ -1138,17 +1144,17 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 2
 			parsedInfo += '.cross'
 			var extra = ''
-			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
-			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
+			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.imgs.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
+			parse_expression(info, parsedInfo+extra, 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"special":
 			
 			#Crocs is another weird case
 			if (info[0].to_lower() == "crocs"):
-				num = str(search('return characterImages.'+parsedInfo+'.body', info[i]))
-				parse_expression(info, parsedInfo, 'characterImages.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
+				num = str(search('return characterImages.imgs.'+parsedInfo+'.body', info[i]))
+				parse_expression(info, parsedInfo, 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
 				return
 			
-			num = str(search('return characterImages.'+parsedInfo+'.special.body', info[i+1]))
+			num = str(search('return characterImages.imgs.'+parsedInfo+'.special.body', info[i+1]))
 			if num == '-1' or num == '-2':
 				num = '0'
 				next = 1
@@ -1156,14 +1162,14 @@ func parse_outfit(info, parsedInfo, i, pos):
 				next = 2
 			parsedInfo += '.special'
 			var extra = ''
-			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
-			parse_expression(info, parsedInfo+extra, 'characterImages.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
+			if info[0].to_lower() == "munchy" and 'squat'.is_subsequence_ofi(execreturn('return characterImages.imgs.'+parsedInfo+'.body['+num+']')): extra += '.squatting'
+			parse_expression(info, parsedInfo+extra, 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+next, info[i+1], pos)
 		"newgle":
 			#GIBB IS THE ONLY NEWGLE CASE! ANd ITS VERY SIMPLE!
-			var body = "characterImages.gibbon.newgle.body[0]"
+			var body = "characterImages.imgs.gibbon.newgle.body[0]"
 			parse_position(info, 'systems.display.image('+body+', 1)', body, 2, notsame[1])
 		"bigboi":
-			parse_expression(info, parsedInfo+'.bigboi', 'characterImages.'+parsedInfo+'.bigboi.body[0]', i+1, info[i+1], pos)
+			parse_expression(info, parsedInfo+'.bigboi', 'characterImages.imgs.'+parsedInfo+'.bigboi.body[0]', i+1, info[i+1], pos)
 		"hazmat":
 			var expression = info[i+1]
 			var expNum = parse_expnum(expression, parsedInfo+'.hazmat')[0]
@@ -1174,11 +1180,11 @@ func parse_outfit(info, parsedInfo, i, pos):
 			elif "shock".is_subsequence_of(expression): expression = 'shock'
 			elif "smitten".is_subsequence_of(expression): expression = 'smitten'
 			
-			var body = 'characterImages.'+parsedInfo+'.hazmat.'+expression+'['+expNum+']'
+			var body = 'characterImages.imgs.'+parsedInfo+'.hazmat.'+expression+'['+expNum+']'
 			parse_position(info, 'systems.display.image('+body+', 1)', body, i+2, pos)
 		_:
-			num = str(search('return characterImages.'+parsedInfo+'.body', info[i]))
-			parse_expression(info, parsedInfo, 'characterImages.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
+			num = str(search('return characterImages.imgs.'+parsedInfo+'.body', info[i]))
+			parse_expression(info, parsedInfo, 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
 
 # Parses the characters expression.
 func parse_expression(info, parsedInfo, body, i, bodyType, pos):
@@ -1195,6 +1201,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	var blushNum
 	var num
 	
+	var mod_afl = []
+	
 	if i == info.size(): # Don't use an expression if none is given.
 		parse_position(info, 'systems.display.image('+body+', 1)', body, i, pos)
 		return
@@ -1203,11 +1211,11 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	if parsedInfo == "gibbon.campus":
 		match bodyType:
 			"default":
-				AFL += '\n\tsystems.display.face(characterImages.gibbon.afl[0], '+body+', 0, 0, "gib_def")'
+				AFL += '\n\tsystems.display.face(characterImages.imgs.gibbon.afl[0], '+body+', 0, 0, "gib_def")'
 			"handsup":
-				AFL += '\n\tsystems.display.face(characterImages.gibbon.afl[1], '+body+', 0, 0, "gib_handsup")'
+				AFL += '\n\tsystems.display.face(characterImages.imgs.gibbon.afl[1], '+body+', 0, 0, "gib_handsup")'
 			"press":
-				AFL += '\n\tsystems.display.face(characterImages.gibbon.afl[2], '+body+', 0, 0, "gib_press")'
+				AFL += '\n\tsystems.display.face(characterImages.imgs.gibbon.afl[2], '+body+', 0, 0, "gib_press")'
 			_:
 				#Other poses don't need it
 				pass
@@ -1221,6 +1229,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	if info[i].find('|') != -1:
 		var tmp = info[i].split('|', false)
 		info[i] = tmp[0]
+		
+		var mod_character_afl = global.mod_characters_afl.get(info[0].to_lower(), {})
 		
 		for k in range(1, tmp.size()):
 			if 'blush'.is_subsequence_ofi(tmp[k]):
@@ -1238,6 +1248,8 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 				ben_horn = true
 			elif tmp[k] == 'antifa-mask':
 				tom_mask = true
+			elif mod_character_afl.has(tmp[k]):
+				mod_afl.append(mod_character_afl[tmp[k]])
 #		if tmp.size() == 3:
 #			blushNum = int(parse_expnum(info[i], parsedInfo)[0]);
 #			blush = true
@@ -1251,23 +1263,27 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 	
 	
 	if blush:
-		var blushFace = search('return characterImages.'+parsedInfo+'.blush', info[i]) + 1
+		var blushFace = search('return characterImages.imgs.'+parsedInfo+'.blush', info[i]) + 1
 		if blushFace != -1 and blushFace != -2: blushNum = blushNum -1 + blushFace
-		AFL += '\n\tsystems.display.face(characterImages.'+parsedInfo+'.blush['+str(blushNum)+'], '+body+', 0, 0, "blush")'
+		AFL += '\n\tsystems.display.face(characterImages.imgs.'+parsedInfo+'.blush['+str(blushNum)+'], '+body+', 0, 0, "blush")'
 	if kamina_shades:
-		AFL += '\n\tsystems.display.face(characterImages.nate.afl[1], '+body+', 0, 0, "kamina_shades")'
+		AFL += '\n\tsystems.display.face(characterImages.imgs.nate.afl[1], '+body+', 0, 0, "kamina_shades")'
 	if shades:
-		AFL += '\n\tsystems.display.face(characterImages.nate.afl[0], '+body+', 0, 0, "shades")'
+		AFL += '\n\tsystems.display.face(characterImages.imgs.nate.afl[0], '+body+', 0, 0, "shades")'
 	if beard:
-		AFL += '\n\tsystems.display.face(characterImages.nate.afl[2], '+body+', 0, 0, "shades")'
+		AFL += '\n\tsystems.display.face(characterImages.imgs.nate.afl[2], '+body+', 0, 0, "shades")'
 	if ben_point:
-		AFL += '\n\tsystems.display.face(characterImages.ben.afl[2], '+body+', 0, 0, "point")'
+		AFL += '\n\tsystems.display.face(characterImages.imgs.ben.afl[2], '+body+', 0, 0, "point")'
 	if ben_cloud:
-		AFL += '\n\tsystems.display.face(characterImages.ben.afl[0], '+body+', 0, 0, "below")'
+		AFL += '\n\tsystems.display.face(characterImages.imgs.ben.afl[0], '+body+', 0, 0, "below")'
 	if ben_horn:
-		AFL += '\n\tsystems.display.face(characterImages.ben.afl[1], '+body+', 0, 0, "horn")'
+		AFL += '\n\tsystems.display.face(characterImages.imgs.ben.afl[1], '+body+', 0, 0, "horn")'
 	if tom_mask:
-		AFL += '\n\tsystems.display.face(characterImages.tom.pose1.afl[0], '+body+', 0, 0, "antifa-mask")'
+		AFL += '\n\tsystems.display.face(characterImages.imgs.tom.pose1.afl[0], '+body+', 0, 0, "antifa-mask")'
+	for each_afl in mod_afl:
+		AFL += '\n\tsystems.display.face("' + each_afl + '", '+body+', 0, 0, "mod-afl")'
+	
+	
 	var useDefault = false
 	if "happy".is_subsequence_of(info[i]):
 		useDefault = true
@@ -1299,7 +1315,7 @@ func parse_expression(info, parsedInfo, body, i, bodyType, pos):
 		#	var path = execreturn("return " + body)
 		#	if path.find("squatting") > -1:
 		#		parsedInfo += ".squatting"
-		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.'+parsedInfo+'.'+faceType+'['+num+'], '+body+')'+AFL, body, i+1, pos)
+		parse_position(info, 'systems.display.image('+body+', 1)\n\tsystems.display.face(characterImages.imgs.'+parsedInfo+'.'+faceType+'['+num+'], '+body+')'+AFL, body, i+1, pos)
 
 # Determines the correct face number for an epxression, returns
 #[face_type, number]
@@ -1322,7 +1338,7 @@ func parse_expnum(expression, parsedInfo):
 		elif "sad".is_subsequence_of(expression): expression = 'sad'
 		elif "shock".is_subsequence_of(expression): expression = 'shock'
 		elif "smitten".is_subsequence_of(expression): expression = 'smitten'
-		var num = execreturn('return characterImages.'+parsedInfo+'.'+expression.rstrip('max')+'.size()')
+		var num = execreturn('return characterImages.imgs.'+parsedInfo+'.'+expression.rstrip('max')+'.size()')
 		if num == 3:
 			return ['2', expression.rstrip('max')]
 		else:
@@ -1334,13 +1350,13 @@ func parse_expnum(expression, parsedInfo):
 func parse_911(info, parsedInfo, i, pos):
 	
 	if 'pew'.is_subsequence_ofi(info[i]):
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[2], characterImages.'+parsedInfo+'.video[2], characterImages.'+parsedInfo+'.still[2], "video", 1)', 'characterImages.'+parsedInfo+'.body[2]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.imgs.'+parsedInfo+'.body[2], characterImages.imgs.'+parsedInfo+'.video[2], characterImages.imgs.'+parsedInfo+'.still[2], "video", 1)', 'characterImages.imgs.'+parsedInfo+'.body[2]', 2, pos)
 	elif 'boi' == info[i]:
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[0], characterImages.'+parsedInfo+'.video[0], characterImages.'+parsedInfo+'.still[0], "video", 1)', 'characterImages.'+parsedInfo+'.body[0]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.imgs.'+parsedInfo+'.body[0], characterImages.imgs.'+parsedInfo+'.video[0], characterImages.imgs.'+parsedInfo+'.still[0], "video", 1)', 'characterImages.imgs.'+parsedInfo+'.body[0]', 2, pos)
 	elif 'standin'.is_subsequence_ofi(info[i]):
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[3], characterImages.'+parsedInfo+'.video[3], characterImages.'+parsedInfo+'.still[3], "video", 1)', 'characterImages.'+parsedInfo+'.body[3]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.imgs.'+parsedInfo+'.body[3], characterImages.imgs.'+parsedInfo+'.video[3], characterImages.imgs.'+parsedInfo+'.still[3], "video", 1)', 'characterImages.imgs.'+parsedInfo+'.body[3]', 2, pos)
 	elif 'concern' == info[i]:
-		parse_position(info, 'systems.display.mask(characterImages.'+parsedInfo+'.body[1], characterImages.'+parsedInfo+'.video[1], characterImages.'+parsedInfo+'.still[1], "video", 1)', 'characterImages.'+parsedInfo+'.body[1]', 2, pos)
+		parse_position(info, 'systems.display.mask(characterImages.imgs.'+parsedInfo+'.body[1], characterImages.imgs.'+parsedInfo+'.video[1], characterImages.imgs.'+parsedInfo+'.still[1], "video", 1)', 'characterImages.imgs.'+parsedInfo+'.body[1]', 2, pos)
 
 # Parses the position for a character.
 func parse_position(info, parsedInfo, body, i, pos):
@@ -1542,14 +1558,14 @@ func get_body(info, i=1):
 	var body
 	match info[i]:
 		"campus":
-			num = str(search('return characterImages.'+info[0]+'.campus.body', info[i+1]))
-			body = 'characterImages.'+info[0]+'.campus.body['+num+']'
+			num = str(search('return characterImages.imgs.'+info[0]+'.campus.body', info[i+1]))
+			body = 'characterImages.imgs.'+info[0]+'.campus.body['+num+']'
 		"casual":
-			num = str(search('return characterImages.'+info[0]+'.casual.body', info[i+1]))
-			body = 'characterImages.'+info[0]+'.casual.body['+num+']'
+			num = str(search('return characterImages.imgs.'+info[0]+'.casual.body', info[i+1]))
+			body = 'characterImages.imgs.'+info[0]+'.casual.body['+num+']'
 		_:
-			num = str(search('return characterImages.'+info[0]+'.body', info[i]))
-			body = 'characterImages.'+info[0]+'.body['+num+']'
+			num = str(search('return characterImages.imgs.'+info[0]+'.body', info[i]))
+			body = 'characterImages.imgs.'+info[0]+'.body['+num+']'
 	
 	body = execreturn('return ' + body)
 	if info[0] == 'nine11': body = body.rstrip('png') + 'ogv'

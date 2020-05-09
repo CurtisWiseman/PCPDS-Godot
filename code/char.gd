@@ -604,6 +604,11 @@ var davoo = {
 			}
 		}
 
+#all images get copies into here, quick change to enable mod support
+#more code crimes
+var imgs = {}
+
+
 # Function to load duplicates.
 func _ready():
 	azumi.casual.angry = azumi.campus.angry
@@ -645,6 +650,10 @@ func _ready():
 	davoo.drunkdrool = davoo.campus.drunkdrool
 	davoo.catboy = davoo.campus.catboy
 	#check_all_character_art_exists()
+	
+	
+	for c in ['nine11', 'ephraim', 'k1p', 'magicks', 'schrafft', 'smearg', 'copkillers', 'kazee', 'may', 'michelle', 'actiongiraffe', 'digi', 'artsofartso', 'adelram', 'azumi', 'brunswick', 'cerise', 'coltcorona', 'connor', 'crocs', 'drugdealer', 'geoff', 'gungirl', 'lethal', 'lordofghosts', 'magda', 'mumkeyjones', 'pcpguy', 'redman', 'russel', 'snob', 'sophia', 'hussiefox', 'v', 'vincent', 'clara', 'maygib', 'thoth', 'gibbon', 'mage', 'munchy', 'nate', 'jesse', 'tom', 'endlesswar', 'ben', 'davoo']:
+		imgs[c] = self.get(c)
 	
 func check_all_character_art_exists():
 	var file = File.new()
