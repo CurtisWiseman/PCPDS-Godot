@@ -139,7 +139,7 @@ func choice_display(text, top, bot):
 	
 	var choice = TextureRect.new()
 	choice.name = text
-	choice.texture = load(global.get_content_path('images/dialoguebox/choiceButton.png'))
+	choice.texture = global.load_content(global.get_content_path('images/dialoguebox/choiceButton.png'))
 	choice.margin_top = top
 	choice.margin_bottom = bot
 	choice.margin_left = 0
@@ -203,8 +203,8 @@ func choice_pressed(choice, button):
 	emit_signal('empty_line')
 
 # Functions to change color when hovered/unhovered.
-func choice_hovered(choiceNode): choiceNode.texture = load(global.get_content_path('images/dialoguebox/choiceButtonHovered.png'))
-func choice_unhovered(choiceNode): choiceNode.texture = load(global.get_content_path('images/dialoguebox/choiceButton.png'))
+func choice_hovered(choiceNode): choiceNode.texture = global.load_content(global.get_content_path('images/dialoguebox/choiceButtonHovered.png'))
+func choice_unhovered(choiceNode): choiceNode.texture = global.load_content(global.get_content_path('images/dialoguebox/choiceButton.png'))
 
 
 # Function to keep items from the last spoken line.
@@ -351,6 +351,10 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				var track = dialogue[index].lstrip('[')
 				track = track.rstrip(']')
 				track = track.substr(6,dialogue[index].length()-1)
+				
+				var v = global.get_content_path("sounds/music/" + track + ".ogg")
+				prints("SDFSDF ", v)
+				
 				systems.sound.music(global.get_content_path("sounds/music/" + track + ".ogg"), true)
 			
 			elif dialogue[index].findn('SFX:') != -1:

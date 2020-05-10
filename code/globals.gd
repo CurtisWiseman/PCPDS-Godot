@@ -103,7 +103,7 @@ func _ready():
 			game.SAVE_FOLDER += "/" + mod_name
 		
 			var dir = Directory.new()
-			dir.open("res://mod/chars/")
+			dir.open("mod/chars/")
 			dir.list_dir_begin()
 		
 			while true:
@@ -111,7 +111,7 @@ func _ready():
 				
 				if def != "" :
 					if !dir.dir_exists(def) and def.findn('.json') != -1:
-						var def_file = "res://mod/chars/" + def
+						var def_file = "mod/chars/" + def
 						var file = File.new()
 						file.open(def_file, File.READ)
 						var content = file.get_as_text()
@@ -154,7 +154,6 @@ func _ready():
 					break
 			
 	OS.window_fullscreen = true # Force fullscreen resolution.
-	
 	
 	size = OS.get_screen_size() # Get the size of the screen.
 	
@@ -350,8 +349,8 @@ func get_content_path(path) -> String:
 	if trimmed.begins_with("res://"):
 		trimmed = trimmed.substr(6)
 	var file = File.new()
-	if file.file_exists("res://mod/" + trimmed):
-		return "res://mod/" + trimmed
+	if file.file_exists("mod/" + trimmed):
+		return "mod/" + trimmed
 	return "res://" + trimmed
 
 
@@ -361,3 +360,41 @@ func detect_forbidden_mod_contents(string) -> bool:
 		if string.find(f) > -1:
 			return true
 	return false
+
+#This exists to get around issues with loading mod contents
+#basically, load() only loads imported resources, anything else we gotta go through the LONG way
+#In order to avoid redundant loads (I have no idea how good this thing is at caching non-resources)
+#any mod stuff loaded goes into this map:
+var mod_content_cache = {}
+
+func load_content(path: String):
+	if path.begins_with("mod/"):
+		var res = null
+		
+		if mod_content_cache.has(path):
+			var cached = mod_content_cache[path]
+			res = cached.get_ref()
+			
+		if res == null:
+			if path.ends_with(".png"):
+				var img = Image.new()
+				var err = img.load(path)
+				if err == OK:
+					res = ImageTexture.new()
+					res.create_from_image(img)
+			elif path.ends_with(".ogv"):
+				res = VideoStreamTheora.new()
+				res.set_file(path)
+				return res
+			elif path.ends_with(".ogg"):
+				var ogg_file = File.new()
+				ogg_file.open(path, File.READ)
+				var bytes = ogg_file.get_buffer(ogg_file.get_len())
+				res = AudioStreamOGGVorbis.new()
+				res.data = bytes
+			
+		mod_content_cache[path] = weakref(res)
+			
+		return res
+	else:
+		return load(path)

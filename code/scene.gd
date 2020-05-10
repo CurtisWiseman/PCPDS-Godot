@@ -2,7 +2,7 @@ extends Node
 
 signal scene_changed
 var directory = 'res://scenes/'
-var mod_scenes_dir = 'res://mod/scripts/'
+var mod_scenes_dir = 'mod/scripts/'
 var current
 var last
 var cur_scene = null

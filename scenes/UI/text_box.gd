@@ -205,7 +205,7 @@ func get_texture_path(num, prefix):
 	return prefix+num_text+".png"
 		
 func load_single_frame(parent, num, prefix):
-	var texture = load(get_texture_path(num, prefix))
+	var texture = global.load_content(get_texture_path(num, prefix))
 	var spr = Sprite.new()
 	spr.texture = texture
 	spr.name = "frame_" + str(num)
@@ -215,7 +215,7 @@ func load_single_frame(parent, num, prefix):
 	parent.add_child(spr)
 	
 func load_single_frame_into_sprite(sprite, num, prefix):
-	var texture = load(get_texture_path(num, prefix))
+	var texture = global.load_content(get_texture_path(num, prefix))
 	if texture == null:
 		prints("Missing frame", prefix, num)
 	elif not old_frames.has(texture.resource_path):
@@ -245,7 +245,7 @@ func swap_character(character, special_voice=null):
 		vpath = get_voice_path(special_voice)
 		current_voice = special_voice
 	if vpath != null:
-		$voice.stream = load(vpath)
+		$voice.stream = global.load_content(vpath)
 	else:
 		$voice.stream = null
 		
