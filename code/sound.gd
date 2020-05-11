@@ -11,7 +11,7 @@ func music(path, loop=false, volume=0):
 		if m["path"] == path:
 			return
 	var music = AudioStreamPlayer.new() # Create a new AudioSteamPlayer node.
-	music.stream = load(path) # Set the steam to path.
+	music.stream = global.load_content(path) # Set the steam to path.
 	#Doing some stupid hacks out the moment using SFX/Music interchangably, so we set this based on path
 	if path.find("sounds/sfx") > -1:
 		music.bus = 'SFX' # Set the bus to SFX.
@@ -36,7 +36,7 @@ func music(path, loop=false, volume=0):
 func sfx(path, volume=0):
 	
 	var sfx = AudioStreamPlayer.new() # Create a new AudioSteamPlayer node.
-	sfx.stream = load(path) # Set the steam to path.
+	sfx.stream = global.load_content(path) # Set the steam to path.
 	#Doing some stupid hacks out the moment using SFX/Music interchangably, so we set this based on path
 	if path.find("sounds/sfx") > -1:
 		sfx.bus = 'SFX' # Set the bus to SFX.

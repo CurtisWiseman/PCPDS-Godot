@@ -79,7 +79,7 @@ func advance_text():
 			speech = null
 		
 		# In middle of longer sentence - progress through sentence
-		if currentSubstring < longTextParts.size(): 
+		if currentSubstring < longTextParts.size():
 			emit_signal("substring_has_been_read")
 #				# At end of document - signal to do stuff
 		elif (currentLine == get_parent().dialogue.size() - 1):

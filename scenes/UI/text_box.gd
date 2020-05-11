@@ -48,13 +48,20 @@ func check_all_texboxes():
 func get_prefix(character):
 	if character == null:
 		return get_prefix("blank")
+		
+	if global.mod_characters_textboxes.has(character):
+		if typeof(global.mod_characters_textboxes[character]) == TYPE_STRING:
+			return global.get_content_path(global.mod_characters_textboxes[character])
+		if typeof(global.mod_characters_textboxes[character]) == TYPE_ARRAY:
+			return get_prefix(global.mod_characters_textboxes[character][0])
+			
 	var char_id = character.to_lower().replace(" ", "")
 	if char_id == "":
 		return get_prefix("blank")
 	elif char_id == "player" or global.playerName.to_lower() == character or char_id == "phone" or char_id == "???" or char_id == "announcer" or char_id == "bush" or char_id == "cafeterialady" or char_id == "drunkenman":
 		return get_prefix("pcpg")
 	if char_id == "digi":
-		return "res://images/UI/Text box/"+char_id+"/text box 2 - "+char_id+"_"
+		return global.get_content_path("images/UI/Text box/"+char_id+"/text box 2 - "+char_id+"_")
 	elif char_id == "benandmunchy":
 		return get_prefix("lethal")
 	elif char_id == "benandjesse":
@@ -84,30 +91,38 @@ func get_prefix(character):
 	elif char_id == "hussiefox":
 		return get_prefix("v")
 	elif char_id == "god" or char_id == "artsofartso" or char_id == "silent_god":
-		return "res://images/UI/Text box/artsofartso/artsofartso_"
+		return global.get_content_path("images/UI/Text box/artsofartso/artsofartso_")
 	elif char_id == "jesse" or char_id == "thoth":
-		return "res://images/UI/Text box/jesse/text box 8 - jesse_"
+		return global.get_content_path("images/UI/Text box/jesse/text box 8 - jesse_")
 	elif char_id == "nate" or char_id == "donatello":
-		return "res://images/UI/Text box/nate/text box 7 - nate_"
+		return global.get_content_path("images/UI/Text box/nate/text box 7 - nate_")
 	elif char_id == "mage":
-		return "res://images/UI/Text box/mage/text box 4 - mage_"
+		return global.get_content_path("images/UI/Text box/mage/text box 4 - mage_")
 	elif char_id == "gibbon" or char_id == "voicefromdownstairs":
-		return "res://images/UI/Text box/gibbon/text box 6 - gibbon_"
+		return global.get_content_path("images/UI/Text box/gibbon/text box 6 - gibbon_")
 	elif char_id == "davoo" or char_id == "davoocollective":
-		return "res://images/UI/Text box/davoo/text box 5 - davoo_"
+		return global.get_content_path("images/UI/Text box/davoo/text box 5 - davoo_")
 	elif char_id == "copkillers" or char_id == "ephraim" or char_id == "k1p" or char_id == "magicks" or char_id == "smearg" or char_id == "schrafft":
 		return get_prefix("magicksrampage") 
 	elif char_id == "ben":
-		return "res://images/UI/Text box/ben/text box 9 - ben_"
+		return global.get_content_path("images/UI/Text box/ben/text box 9 - ben_")
 	elif char_id == "munchy" or char_id == "connor":
-		return "res://images/UI/Text box/munchy/text box 3 - munchy_"
+		return global.get_content_path("images/UI/Text box/munchy/text box 3 - munchy_")
 	else:
-		return "res://images/UI/Text box/" + char_id + "/textbox_" + char_id + "_"
+		return global.get_content_path("images/UI/Text box/" + char_id + "/textbox_" + char_id + "_")
 		
 func get_voice_path(character):
 	if character == null:
 		return null
+		
+	if global.mod_characters_voices.has(character.to_lower()):
+		var path = global.mod_characters_voices[character.to_lower()]
+		if path == null:
+			return null
+		return global.get_content_path(path)
+		
 	var char_id = character.to_lower().replace(" ", "-")
+	
 	if char_id == "" or char_id == "player" or char_id == "pcpg" or character == global.playerName.to_lower() or char_id == "silent_god":
 		return null
 	elif char_id == "9/11":
@@ -153,7 +168,7 @@ func get_voice_path(character):
 	elif char_id == "v":
 		return get_voice_path("gwllvbin")
 	else:
-		return "res://sounds/voices/pcp-voice_" + char_id + ".ogg"
+		return global.get_content_path("sounds/voices/pcp-voice_" + char_id + ".ogg")
 		
 #Unused ATM
 func load_all_characters_frames(character):
@@ -190,7 +205,7 @@ func get_texture_path(num, prefix):
 	return prefix+num_text+".png"
 		
 func load_single_frame(parent, num, prefix):
-	var texture = load(get_texture_path(num, prefix))
+	var texture = global.load_content(get_texture_path(num, prefix))
 	var spr = Sprite.new()
 	spr.texture = texture
 	spr.name = "frame_" + str(num)
@@ -200,7 +215,7 @@ func load_single_frame(parent, num, prefix):
 	parent.add_child(spr)
 	
 func load_single_frame_into_sprite(sprite, num, prefix):
-	var texture = load(get_texture_path(num, prefix))
+	var texture = global.load_content(get_texture_path(num, prefix))
 	if texture == null:
 		prints("Missing frame", prefix, num)
 	elif not old_frames.has(texture.resource_path):
@@ -230,9 +245,20 @@ func swap_character(character, special_voice=null):
 		vpath = get_voice_path(special_voice)
 		current_voice = special_voice
 	if vpath != null:
-		$voice.stream = load(vpath)
+		$voice.stream = global.load_content(vpath)
 	else:
 		$voice.stream = null
+		
+	var char_id = character.to_lower().replace(" ", "")
+	var colour = Color(1.0 , 1.0, 1.0, 1.0)
+	if global.mod_characters_textboxes.has(char_id):
+		if typeof(global.mod_characters_textboxes[char_id]) == TYPE_ARRAY:
+			var colour_code = global.mod_characters_textboxes[char_id][1]
+			if typeof(colour_code) == TYPE_STRING:
+				colour = Color(colour_code)
+				
+	self_modulate = colour
+		
 	#Just wait until next frame!
 	#load_single_frame_into_sprite(sprite, cur_frame, get_prefix(character))
 	

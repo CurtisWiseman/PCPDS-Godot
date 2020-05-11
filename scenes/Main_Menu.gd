@@ -6,6 +6,12 @@ var loadscreen # Load screen instance.
 
 var input_locked = false
 func _ready():
+	if global.mod_load_error != null:
+		$mod_name.text = global.mod_load_error
+	else:
+		$mod_name.text = global.mod_name
+	$version_label.text = "Version " + str(global.MAJOR_VERSION) + "." + str(global.MINOR_VERSION)
+	
 	systems = $Systems # Load systems with the Systems node.
 	
 		

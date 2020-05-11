@@ -120,7 +120,7 @@ func background(bg, type):
 		#Characters are added as children of of the BG, so if we scale the bg, it'll mess
 		#with characters, by scaling a separate gfx child, we're fine
 		var gfx = Sprite.new()
-		gfx.texture = load(bg)
+		gfx.texture = global.load_content(bg)
 		gfx.centered = false
 		
 		gfx.scale.x = 1920.0/gfx.texture.get_width()
@@ -135,7 +135,7 @@ func background(bg, type):
 	elif type == 'video':
 		bgnode = VideoPlayer.new() # Create a new videoplayer node.
 		bgnode.set_name('BG') # Give it the name BG.
-		bgnode.stream = load(bg) # Make the background the video.
+		bgnode.stream = global.load_content(bg) # Make the background the video.
 		bgnode.rect_size = Vector2(1920,1080) # Set the size to 1920x1080.
 		bgnode.connect("finished", self, "loopvideo", [bgnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		bgtype = type # Save the background type.
@@ -256,7 +256,7 @@ func animation(vidpath):
 	var node_name = layernames(vidpath)
 	var vidnode = VideoPlayer.new()
 	vidnode.set_name(node_name)
-	vidnode.stream = load(vidpath)
+	vidnode.stream = global.load_content(vidpath)
 	vidnode.rect_size = Vector2(1920, 1080)
 	vidnode.volume_db = -1000 # Mute the video.
 	vidnode.modulate.a = 0
@@ -330,7 +330,7 @@ func mask(mask, path, still, type, z, fade_in=false, force_name=null):
 		imgnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
 		imgnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
 		imgnode.material.shader.code = mask_shader_code # Set the shader's code to code.
-		imgnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
+		imgnode.material.shader.set_default_texture_param('mask_texture', global.load_content(mask)) # Give the shader 'mask' as the image to mask with.
 		
 		# Check for a mesh.
 		if model.file_exists('res://models/' + maskname + '.tres'):
@@ -357,10 +357,10 @@ func mask(mask, path, still, type, z, fade_in=false, force_name=null):
 		vidnode.material = ShaderMaterial.new() # Create a new ShaderMaterial.
 		vidnode.material.shader = Shader.new() # Give a new Shader to ShaderMaterial.
 		vidnode.material.shader.code = mask_shader_code # Set the shader's code to code.
-		vidnode.material.shader.set_default_texture_param('mask_texture', load(mask)) # Give the shader 'mask' as the image to mask with.
+		vidnode.material.shader.set_default_texture_param('mask_texture', global.load_content(mask)) # Give the shader 'mask' as the image to mask with.
 		vidnode.material.set_shader_param('use_still', true)
 		vidnode.material.shader.set_default_texture_param("head", load("res://images/blank.png"))
-		vidnode.material.shader.set_default_texture_param('still', load(still))
+		vidnode.material.shader.set_default_texture_param('still', global.load_content(still))
 		vidnode.connect("finished", self, "loopvideo", [vidnode]) # Use the finished signal to run the loopvideo() function when the video finishes playing.
 		vids_to_swap_stills[vidnode] = 0.2
 		
@@ -389,15 +389,17 @@ func face(facepath, body, x=0, y=0, type='face'):
 			index = i
 			break
 	
+	var final_path = global.get_content_path(facepath)
 	# If index not found then print an error and return.
 	if index == null:
-		print("Error: No body named " + body + " exists for face " + facepath + " to use!")
+		print("Error: No body named " + body + " exists for face " + final_path + " to use!")
 		return
+		
 	
 	var facenode = Sprite.new() # Create a new sprite node.
-	facenode.set_name(layernames(facepath)) # Give the sprite node the face name for a node name.
+	facenode.set_name(layernames(final_path)) # Give the sprite node the face name for a node name.
 	facenode.centered = false # Uncenter the node.
-	facenode.texture = load(facepath) # Set the node's texture to the face image.
+	facenode.texture = global.load_content(final_path) # Set the node's texture to the face image.
 	facenode.position = Vector2(x,y) # Set the face's position to x and y.
 	layers[index]['node'].add_child(facenode) # Add as a child of the body node.
 	#facenode.self_modulate = layers[index]['node'].self_modulate
@@ -410,7 +412,7 @@ func face(facepath, body, x=0, y=0, type='face'):
 	else:
 		if !layers[index].has('AFL'):
 			layers[index]['AFL'] = []
-		layers[index]['AFL'].append({'node':facenode, 'position':Vector2(x,y), 'type':type, 'path':facepath}) # Add the accessory, blush, or whatever to AFL.
+		layers[index]['AFL'].append({'node':facenode, 'position':Vector2(x,y), 'type':type, 'path': final_path}) # Add the accessory, blush, or whatever to AFL.
 		
 		if layers[index]['AFL'].size() < 4:
 			layers[index]['node'].material.set_shader_param("afl"+str(layers[index]['AFL'].size()), facenode.texture)
@@ -446,21 +448,21 @@ func switch(content, new, type, face=false, x=0, y=0):
 	# If image then change the face or image texture.
 	if type == 'image':
 		if face:
-			layers[index]['face'].texture = load(new)
+			layers[index]['face'].texture = global.load_content(new)
 			if position: layers[index]['face'].position = Vector2(x,y)
 		else:
-			layers[index]['node'].texture = load(new)
+			layers[index]['node'].texture = global.load_content(new)
 			if position: position(content, x, y)
 	
 	# If video then change the stream and play it.
 	elif type == 'video':
-		layers[index]['node'].stream = load(new)
+		layers[index]['node'].stream = global.load_content(new)
 		layers[index]['node'].play()
 		if position: position(content, x, y)
 	
 	# Else change the mask of image/video being masked.
 	else:
-		layers[index]['node'].material.shader.set_default_texture_param('mask_texture', load(new))
+		layers[index]['node'].material.shader.set_default_texture_param('mask_texture', global.load_content(new))
 		if position: position(content, x, y)
 
 # Remove a layer based on it's name.
@@ -881,20 +883,21 @@ func nodupelayername(path):
 
 # A function to do the repetitive tasks needed when adding a new layer.
 func layersetup(path, z):
+	var final_path = global.get_content_path(path)
 	
 	# If the file doesn't exist then say so, let the user fix the rest.
-	if not ResourceLoader.exists(path) and not model.file_exists(path):
-		print('Error: The given content ' + path + ' does not exist!')
+	if not ResourceLoader.exists(final_path) and not model.file_exists(final_path):
+		print('Error: The given content ' + final_path + ' does not exist!')
 	
-	var content = load(path) # Load the content using it's path.
+	var content = global.load_content(final_path) # Load the content using it's path.
 	var cname = '' # The name of the content
 	
 	if z == 0:
 		cname = 'BG' # If z is zero set cname as BG.
 	else:
-		cname = layernames(path) # Get a unique name using the content name.
+		cname = layernames(final_path) # Get a unique name using the content name.
 	
-	var layer = {"name": cname, "path": path, "content": content, "layer": z, "position": Vector2(0,0)} # Make a dictionary of content information.
+	var layer = {"name": cname, "path": final_path, "content": content, "layer": z, "position": Vector2(0,0)} # Make a dictionary of content information.
 	
 	layers.append(layer) # Append the dictionary to the layers array.
 	var index = layers.size() - 1 # Get the index of the insertion.
