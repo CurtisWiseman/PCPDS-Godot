@@ -122,6 +122,7 @@ func _ready():
 						var bad = false
 						if detect_forbidden_mod_contents(char_id):
 							prints("ERROR: CHARACTER " + char_id + " USED FORBIDDEN TEXT IN IT'S NAME'")
+							bad = true
 							
 						for cur in char_def["imgs"]["body"]:
 							var last_chunk = cur.substr(cur.find_last("/")+1)
@@ -348,6 +349,8 @@ func get_content_path(path) -> String:
 	var trimmed = path
 	if trimmed.begins_with("res://"):
 		trimmed = trimmed.substr(6)
+	if trimmed.begins_with("mod/"):
+		return trimmed
 	var file = File.new()
 	if file.file_exists("mod/" + trimmed):
 		return "mod/" + trimmed
@@ -355,7 +358,7 @@ func get_content_path(path) -> String:
 
 
 func detect_forbidden_mod_contents(string) -> bool:
-	var forbidden = ['\n', '(', ')', '[', ']', ':', '"', '\'']
+	var forbidden = ['\n', '(', ')', '[', ']', ':', '"', '\'', ',', ';']
 	for f in forbidden:
 		if string.find(f) > -1:
 			return true

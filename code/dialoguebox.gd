@@ -857,7 +857,15 @@ func _on_Dialogue_has_been_read(setIndex=false):
 			elif !say: say("", "")
 			
 			if info.size() > 1:
-				parse_info(info); # Parse the info so that is displays a character.
+				var all_safe = true
+				
+				for i in info:
+					if global.detect_forbidden_mod_contents(i):
+						prints("ERROR: FORBIDDEN CHARACTERS IN CHARACTER DIALOGUE INFO", info)
+						all_safe = false
+						break
+				if all_safe:
+					parse_info(info); # Parse the info so that is displays a character.
 			else:
 				noChar = true
 			
