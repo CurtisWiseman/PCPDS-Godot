@@ -20,7 +20,8 @@ run/main_scene="res://scenes/Main_Menu.tscn"
 boot_splash/image="res://images/logo.png"
 boot_splash/bg_color=Color( 1, 1, 1, 1 )
 config/icon="res://images/logo.png"
-config/version="0.4.0.0"
+config/windows_native_icon="res://images/logo.ico"
+config/version="1.3"
 
 [autoload]
 
