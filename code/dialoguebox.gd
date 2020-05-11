@@ -353,7 +353,6 @@ func _on_Dialogue_has_been_read(setIndex=false):
 				track = track.substr(6,dialogue[index].length()-1)
 				
 				var v = global.get_content_path("sounds/music/" + track + ".ogg")
-				prints("SDFSDF ", v)
 				
 				systems.sound.music(global.get_content_path("sounds/music/" + track + ".ogg"), true)
 			
