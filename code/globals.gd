@@ -147,10 +147,17 @@ func _ready():
 									bad = true
 									
 						if not bad:
-							characterImages.imgs[char_id] = char_def["imgs"]
-							mod_characters_textboxes[char_id] = char_def["text_box"]
+							if characterImages.imgs.has(char_id):
+								merge_dict(characterImages.imgs[char_id], char_def["imgs"])
+							else:
+								characterImages.imgs[char_id] = char_def["imgs"]
+							
+							if not characterImages.base_game_char_ids.has(char_id) or char_def.has("text_box"):
+								mod_characters_textboxes[char_id] = char_def["text_box"]
+							
 							mod_characters_afl[char_id] = char_def["imgs"].get("afl", {})
-							mod_characters_voices[char_id] = char_def.get("voice", null)
+							if not characterImages.base_game_char_ids.has(char_id) or char_def.has("voice"):
+								mod_characters_voices[char_id] = char_def.get("voice", null)
 				else:
 					break
 			
@@ -401,3 +408,14 @@ func load_content(path: String):
 		return res
 	else:
 		return load(path)
+		
+static func merge_dict(target, patch):
+	for key in patch:
+		if target.has(key):
+			var tv = target[key]
+			if typeof(tv) == TYPE_DICTIONARY:
+				merge_dict(tv, patch[key])
+			else:
+				target[key] = patch[key]
+		else:
+			target[key] = patch[key]
