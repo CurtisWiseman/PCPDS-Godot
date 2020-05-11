@@ -609,6 +609,8 @@ var davoo = {
 var imgs = {}
 
 
+var base_game_char_ids = ['nine11', 'ephraim', 'k1p', 'magicks', 'schrafft', 'smearg', 'copkillers', 'kazee', 'may', 'michelle', 'actiongiraffe', 'digi', 'artsofartso', 'adelram', 'azumi', 'brunswick', 'cerise', 'coltcorona', 'connor', 'crocs', 'drugdealer', 'geoff', 'gungirl', 'lethal', 'lordofghosts', 'magda', 'mumkeyjones', 'pcpguy', 'redman', 'russel', 'snob', 'sophia', 'hussiefox', 'v', 'vincent', 'clara', 'maygib', 'thoth', 'gibbon', 'mage', 'munchy', 'nate', 'jesse', 'tom', 'endlesswar', 'ben', 'davoo']
+
 # Function to load duplicates.
 func _ready():
 	azumi.casual.angry = azumi.campus.angry

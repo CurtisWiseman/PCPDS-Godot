@@ -1118,7 +1118,7 @@ func parse_outfit(info, parsedInfo, i, pos):
 		return
 		
 	#Quick hack for mod support
-	if global.mod_characters_afl.has(parsedInfo):
+	if global.mod_characters_afl.has(parsedInfo) and not characterImages.base_game_char_ids.has(parsedInfo):
 		num = str(search('return characterImages.imgs.'+parsedInfo+'.body', info[i]))
 		parse_expression(info, parsedInfo + "." + info[i], 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
 		return
