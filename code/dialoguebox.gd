@@ -1118,10 +1118,36 @@ func parse_outfit(info, parsedInfo, i, pos):
 		return
 		
 	#Quick hack for mod support
-	if global.mod_characters_afl.has(parsedInfo) and not characterImages.base_game_char_ids.has(parsedInfo):
-		num = str(search('return characterImages.imgs.'+parsedInfo+'.body', info[i]))
-		parse_expression(info, parsedInfo + "." + info[i], 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
-		return
+	if global.mod_characters_imgs.has(parsedInfo):
+		var use_new_semantics = false
+		
+		#regardless of if it's a mod character or not, if we can find a mod body with that exact name (minus extension) 
+		#then use now use mod semantics
+		if global.mod_characters_imgs[parsedInfo].has("body"):
+			var bodies = global.mod_characters_imgs[parsedInfo]["body"]
+			
+			if typeof(bodies) == TYPE_ARRAY:
+				var body_i = 0
+				for body in bodies:
+					var trimmed = body
+					var last_slash = trimmed.rfind("/")
+					
+					if last_slash != -1:
+						trimmed = trimmed.substr(last_slash+1)
+					
+					if trimmed == parsedInfo + "_" + info[i].to_lower() + ".png":
+						num = str(body_i)
+						use_new_semantics = true
+						break
+					body_i += 1
+					
+		if not use_new_semantics and not characterImages.base_game_char_ids.has(parsedInfo):
+			num = '-2' #I'm just copying the weird behaviour of search here
+			use_new_semantics = true #always new semantics for new characters
+			
+		if use_new_semantics:
+			parse_expression(info, parsedInfo + "." + info[i], 'characterImages.imgs.'+parsedInfo+'.body['+num+']', i+1, info[i], pos)
+			return
 		
 	match info[i]:
 		"campus":
@@ -1536,7 +1562,7 @@ func search(body, info):
 		if body[i].findn(info) != -1:
 			return i
 	
-	return -2
+	return -2 #?????
 
 # Function to execute code and return a result.
 func execreturn(parsedInfo):
