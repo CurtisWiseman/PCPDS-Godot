@@ -58,6 +58,10 @@ var mod_characters_textboxes = {}
 var mod_characters_afl = {}
 var mod_name = ""
 var mod_characters_voices = {}
+#A set of just content provided by the mods, not base game
+var mod_characters_imgs = {}
+
+
 
 var mod_load_error = null
 
@@ -68,7 +72,8 @@ func _pause_input_set(v):
 	
 # Set dynamic variables + do startup functions.
 func _ready():
-	
+	#Gotta do the character images populate before we try to load mod content
+	characterImages.do_some_populate_junk()
 	#Load mod content
 	
 	#Most mod content just works seemlessly in various loading contexts.
@@ -123,12 +128,6 @@ func _ready():
 						if detect_forbidden_mod_contents(char_id):
 							prints("ERROR: CHARACTER " + char_id + " USED FORBIDDEN TEXT IN IT'S NAME'")
 							bad = true
-							
-						for cur in char_def["imgs"]["body"]:
-							var last_chunk = cur.substr(cur.find_last("/")+1)
-							if not last_chunk.begins_with(char_id):
-								prints("ERROR: CHARACTER " + char_id  +" HAD A BODY THAT DID NOT START WITH THE LOWER CASE CHARID!", last_chunk)
-								bad = true
 						
 						var search_space = [char_def["imgs"]]
 						while search_space.size() > 0:
@@ -139,6 +138,12 @@ func _ready():
 								for v in cur:
 									search_space.append(v)
 							elif cur_type == TYPE_DICTIONARY:
+								if cur.has("body") and typeof(cur["body"]) == TYPE_ARRAY:
+									for v in cur["body"]:
+										var last_chunk = v.substr(v.find_last("/")+1)
+										if not last_chunk.begins_with(char_id):
+											prints("ERROR: CHARACTER " + char_id  +" HAD A BODY THAT DID NOT START WITH THE LOWER CASE CHARID!", last_chunk)
+											bad = true
 								for v in cur.values():
 									search_space.append(v)
 							elif cur_type == TYPE_STRING:
@@ -151,7 +156,9 @@ func _ready():
 								merge_dict(characterImages.imgs[char_id], char_def["imgs"])
 							else:
 								characterImages.imgs[char_id] = char_def["imgs"]
-							
+								
+							mod_characters_imgs[char_id] = char_def["imgs"]
+								
 							if not characterImages.base_game_char_ids.has(char_id) or char_def.has("text_box"):
 								mod_characters_textboxes[char_id] = char_def["text_box"]
 							
@@ -366,8 +373,17 @@ func get_content_path(path) -> String:
 
 func detect_forbidden_mod_contents(string) -> bool:
 	var forbidden = ['\n', '(', ')', '[', ']', ':', '"', '\'', ',', ';']
+	
+	#A quick dumb hack, if you provide some text that starts with res:// or user:// that's fine
+	var trimmed = string
+	
+	if trimmed.begins_with("res://"):
+		trimmed = trimmed.substr(6)
+	elif trimmed.begins_with("user://"):
+		trimmed = trimmed.substr(7)
+	
 	for f in forbidden:
-		if string.find(f) > -1:
+		if trimmed.find(f) > -1:
 			return true
 	return false
 
@@ -415,6 +431,9 @@ static func merge_dict(target, patch):
 			var tv = target[key]
 			if typeof(tv) == TYPE_DICTIONARY:
 				merge_dict(tv, patch[key])
+			elif typeof(tv) == TYPE_ARRAY and typeof(patch[key]) == TYPE_ARRAY:
+				for v in patch[key]:
+					target[key].append(v)
 			else:
 				target[key] = patch[key]
 		else:
