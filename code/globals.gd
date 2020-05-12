@@ -68,7 +68,8 @@ func _pause_input_set(v):
 	
 # Set dynamic variables + do startup functions.
 func _ready():
-	
+	#Gotta do the character images populate before we try to load mod content
+	characterImages.do_some_populate_junk()
 	#Load mod content
 	
 	#Most mod content just works seemlessly in various loading contexts.
@@ -151,7 +152,7 @@ func _ready():
 								merge_dict(characterImages.imgs[char_id], char_def["imgs"])
 							else:
 								characterImages.imgs[char_id] = char_def["imgs"]
-							
+								
 							if not characterImages.base_game_char_ids.has(char_id) or char_def.has("text_box"):
 								mod_characters_textboxes[char_id] = char_def["text_box"]
 							
@@ -415,6 +416,9 @@ static func merge_dict(target, patch):
 			var tv = target[key]
 			if typeof(tv) == TYPE_DICTIONARY:
 				merge_dict(tv, patch[key])
+			elif typeof(tv) == TYPE_ARRAY and typeof(patch[key]) == TYPE_ARRAY:
+				for v in patch[key]:
+					target[key].append(v)
 			else:
 				target[key] = patch[key]
 		else:

@@ -613,6 +613,9 @@ var base_game_char_ids = ['nine11', 'ephraim', 'k1p', 'magicks', 'schrafft', 'sm
 
 # Function to load duplicates.
 func _ready():
+	pass
+	
+func do_some_populate_junk():
 	azumi.casual.angry = azumi.campus.angry
 	azumi.casual.confused = azumi.campus.confused
 	azumi.casual.happy = azumi.campus.happy
